@@ -1,0 +1,33 @@
+# ADQA
+
+> ADQA (Ingeniería y Suministros Profesionales, S.L.) es una empresa TIC y operador de telecomunicaciones con licencia propia de Vilanova i la Geltrú que gestiona, con un único equipo, la informática, las redes, las telecomunicaciones, el cloud y la ciberseguridad de empresas e instituciones públicas.
+
+Datos clave:
+
+- Más de 30 años de experiencia.
+- Certificado de calidad ISO 9001:2015.
+- Primera empresa del Garraf con certificación del Esquema Nacional de Seguridad (ENS) en categoría ALTA.
+- Operador de telecomunicaciones propio, Anxanet, con licencia propia (no revendedor). Conexiones a Internet de hasta 10 Gb.
+- Datacenter propio y de proximidad.
+- Equipo propio de instaladores, acreditado en trabajos en altura, espacios confinados y Telco 2.
+- Extranet de ticketing propia para gestionar incidencias y actuaciones en tiempo real.
+- Partner oficial de Google. Ruckus es su marca representada en WiFi.
+- Encuesta de satisfacción: el 87 % valora el tiempo de respuesta como bueno o muy bueno, el 97 % el conocimiento del servicio técnico y el 95 % recomendaría ADQA por su capacidad de integración.
+- Claim: «Tocamos todas las teclas».
+- Sede: C. Masia d'en Notari 23, Nave 3, Polígono Masia d'en Frederic, 08800 Vilanova i la Geltrú (Barcelona). Teléfono: +34 938 147 380. E-mail: info@adqa.com.
+
+## Servicios
+
+- [Ciberseguridad](https://adqa.com/ciberseguridad/): auditoría, pentesting, firewall, MFA, XDR, seguridad endpoint y e-mail seguro en telecomunicaciones, informática y cloud.
+- [Redes informáticas y WiFi](https://adqa.com/redes/): diseño, cableado estructurado, fibra óptica, WiFi en entornos complejos y certificación de redes con equipo propio de instaladores.
+- [Telecomunicaciones y networking](https://adqa.com/telecomunicaciones/): Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión de sedes, centralitas IP y telefonía con el operador propio Anxanet.
+- [Sistemas y cloud a medida](https://adqa.com/sistemas-cloud/): servidores físicos y virtuales en el CPD del cliente o en el datacenter propio y de proximidad de ADQA, backup y migración.
+- [Soporte y mantenimiento informático](https://adqa.com/soporte-it/): departamento IT externo o refuerzo del equipo interno, mantenimiento preventivo, reparaciones in situ, asistencia remota y suministro de hardware y software.
+- [Diseño web y software a medida](https://adqa.com/diseno-y-programacion-web/): diseño y programación web, software a medida, mantenimiento web, dominios, alojamiento y correo.
+- [Google Workspace y Microsoft 365](https://adqa.com/google-workspace/): implantación, licencias y licenciamiento mixto, soporte a administradores y formación a usuarios, como partner oficial de Google.
+
+## Empresa
+
+- [Inicio](https://adqa.com/): presentación de ADQA como proveedor TIC integral con un único punto de contacto.
+- [Quiénes somos](https://adqa.com/quienes-somos/): quién es ADQA, qué la hace distinta, medios propios, certificaciones y sede.
+- [Casos de éxito](https://adqa.com/casos-de-exito/): proyectos reales para el Consorci Sanitari Alt Penedès-Garraf, Iberpotash, KUKA Robots Iberia, Granier, PIMEC, HITECSA, MIDBAN, el Consell Comarcal del Garraf y el Ajuntament de Vilanova i la Geltrú.
