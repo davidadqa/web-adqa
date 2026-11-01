@@ -1,0 +1,201 @@
+{#- Componentes reutilizables. Uso en una página: {% import "macros.njk" as m %} -#}
+
+{#- Migas de pan visibles. El JSON-LD BreadcrumbList sale solo del front matter `breadcrumbs`. -#}
+{% macro crumbs(items) %}
+<nav class="crumbs wrap fade-in" style="--d:1.2s" aria-label="Ruta de navegación">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+    {%- for b in items %}
+    {%- if loop.last %}
+    <li><span aria-current="page">{{ b.name }}</span></li>
+    {%- else %}
+    <li><a href="{{ b.url }}">{{ b.name }}</a></li>
+    {%- endif %}
+    {%- endfor %}
+  </ol>
+</nav>
+{% endmacro %}
+
+{#- FAQ a dos columnas. Lee `faq.manager` y `faq.tecnico` del front matter; el FAQPage JSON-LD sale de los mismos datos. -#}
+{% macro faqSection(faq, title="Preguntas frecuentes", eyebrow="Preguntas frecuentes", id="faq") %}
+<section class="sec" id="{{ id }}" aria-labelledby="h-{{ id }}" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h2 id="h-{{ id }}">{{ title }}</h2>
+    </div>
+    <div class="faq">
+      {%- if faq.manager and faq.manager.length %}
+      <div class="rv">
+        <h3>Para el manager</h3>
+        {%- for q in faq.manager %}
+        <details{% if loop.first %} open{% endif %}><summary>{{ q.q }} <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if faq.tecnico and faq.tecnico.length %}
+      <div class="rv" style="--s:1">
+        <h3>Para el responsable técnico</h3>
+        {%- for q in faq.tecnico %}
+        <details><summary>{{ q.q }} <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if faq.items and faq.items.length %}
+      <div class="rv">
+        {%- for q in faq.items %}
+        <details{% if loop.first %} open{% endif %}><summary>{{ q.q }} <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{#- Imagen provisional, muy visible, hasta tener la definitiva. -#}
+{% macro placeholder(label, ratio="16/10", cls="") %}
+<figure class="ph {{ cls }}" style="aspect-ratio:{{ ratio }}" role="img" aria-label="Imagen provisional: {{ label }}">
+  <span class="ph-badge">Imagen provisional · cal substituir</span>
+  <svg aria-hidden="true"><use href="#i-image"/></svg>
+  <figcaption>{{ label }}</figcaption>
+</figure>
+{% endmacro %}
+
+{#- Bloque de contacto con formulario. `area` preselecciona el área de interés. -#}
+{% macro contactBlock(title="Cuéntanos qué necesitas", text="", eyebrow="¿Podemos ayudarte?", area="", id="contacto") %}
+<section class="sec" id="{{ id }}" aria-labelledby="h-{{ id }}" style="padding-top:0">
+  <div class="wrap contact">
+    <div class="contact-info rv">
+      <span class="eyebrow eyebrow-on-pink">{{ eyebrow }}</span>
+      <h2 id="h-{{ id }}">{{ title }}</h2>
+      {%- if text %}
+      <p>{{ text | safe }}</p>
+      {%- endif %}
+      <div class="ways">
+        <a href="tel:{{ site.phoneE164 }}"><svg><use href="#i-phone"/></svg>{{ site.phone }}</a>
+        <a href="mailto:{{ site.email }}"><svg><use href="#i-mail"/></svg>{{ site.email }}</a>
+        <div><svg><use href="#i-pin"/></svg><span style="font-weight:500">{{ site.address.short }}</span></div>
+      </div>
+    </div>
+    <form class="form rv" style="--s:1" action="/contacto/" method="post" novalidate>
+      <div class="field"><label for="{{ id }}-nombre">Nombre <i>*</i></label><input id="{{ id }}-nombre" name="nombre" autocomplete="name" required></div>
+      <div class="field"><label for="{{ id }}-empresa">Empresa</label><input id="{{ id }}-empresa" name="empresa" autocomplete="organization"></div>
+      <div class="field"><label for="{{ id }}-email">E-mail <i>*</i></label><input id="{{ id }}-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="{{ id }}-tel">Teléfono</label><input id="{{ id }}-tel" name="telefono" type="tel" autocomplete="tel"></div>
+      <div class="field full"><label for="{{ id }}-area">Área de interés</label>
+        <select id="{{ id }}-area" name="area">
+          <option value="">Selecciona una opción</option>
+          {%- for o in ["Soporte y mantenimiento IT", "Redes y WiFi", "Telecomunicaciones", "Sistemas y cloud", "Ciberseguridad", "Web y software", "Google Workspace / Microsoft 365", "Hardware y software", "Varias / no lo sé"] %}
+          <option{% if o == area %} selected{% endif %}>{{ o }}</option>
+          {%- endfor %}
+        </select></div>
+      <div class="field full"><label for="{{ id }}-msg">¿Qué necesitas?</label><textarea id="{{ id }}-msg" name="mensaje"></textarea></div>
+      <input class="hp" name="linkedin" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="check"><input type="checkbox" name="consentimiento" required> <span>He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>. <i class="req">*</i></span></label>
+      <button class="btn btn-primary" type="submit">Enviar <svg><use href="#i-arrow"/></svg></button>
+      <p class="form-ok" role="status">Gracias. Hemos recibido tu mensaje y te responderemos muy pronto.</p>
+    </form>
+  </div>
+</section>
+{% endmacro %}
+
+{#- Tarjeta de un proyecto con nombre (datos en _data/projects.json). -#}
+{% macro projectCard(p) %}
+<article class="proj" id="proj-{{ p.id }}"><figure><img src="/assets/proyectos/{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></figure><div class="body"><span class="kind">{{ p.kind }}</span><h3>{{ p.name }}</h3><p>{{ p.summary }}</p><div class="hl"><svg><use href="#{{ p.icon }}"/></svg>{{ p.highlight }}</div></div></article>
+{% endmacro %}
+
+{#- Carril de proyectos con nombre. `ids`: lista de ids de _data/projects.json (vacío = todos). -#}
+{% macro projectsRail(ids=[], title="Proyectos reales", eyebrow="Casos", id="proyectos") %}
+<section class="sec" id="{{ id }}" aria-labelledby="h-{{ id }}" style="padding-top:0">
+  <div class="wrap proj-head">
+    <div class="sec-head rv" style="margin:0">
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h2 id="h-{{ id }}">{{ title }}</h2>
+    </div>
+    <div class="proj-nav rv"><button type="button" data-rail="-1" aria-label="Proyecto anterior"><svg><use href="#i-left"/></svg></button><button type="button" data-rail="1" aria-label="Proyecto siguiente"><svg><use href="#i-arrow"/></svg></button></div>
+  </div>
+  <div class="rail" id="rail" tabindex="0" aria-label="{{ title }}">
+    {%- for p in projects %}{% if not ids.length or p.id in ids %}
+    {{ projectCard(p) }}
+    {%- endif %}{% endfor %}
+  </div>
+</section>
+{% endmacro %}
+
+{#- Caso anónimo heredado del WordPress (pendiente de decidir si se queda: data-origen="wp"). -#}
+{% macro anonCase(title, sector, challenge, solution, results=[]) %}
+<article class="card case-anon" data-origen="wp">
+  <span class="kind">{{ sector }}</span>
+  <h3>{{ title }}</h3>
+  <p><strong>Reto:</strong> {{ challenge }}</p>
+  <p><strong>Solución:</strong> {{ solution }}</p>
+  {%- if results.length %}
+  <ul class="case-kpis">{% for r in results %}<li>{{ r }}</li>{% endfor %}</ul>
+  {%- endif %}
+</article>
+{% endmacro %}
+
+{#- Muro de logos de clientes con pestañas. -#}
+{% macro clientWall(title="Confían en nosotros", eyebrow="Referencias", id="clientes") %}
+<section class="sec" id="{{ id }}" aria-labelledby="h-{{ id }}" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h2 id="h-{{ id }}">{{ title }}</h2>
+    </div>
+    <div class="wall-tabs rv" role="tablist" aria-label="Tipo de cliente">
+      <button type="button" role="tab" aria-selected="true" aria-controls="wall-emp" id="tab-emp">Empresas</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="wall-pub" id="tab-pub">Instituciones públicas</button>
+    </div>
+    <ul class="wall rv" id="wall-emp" role="tabpanel" aria-labelledby="tab-emp">
+      {%- for c in clients.empresas %}
+      <li><img src="/assets/clientes/{{ c.file }}" alt="{{ c.name }}" loading="lazy"></li>
+      {%- endfor %}
+    </ul>
+    <ul class="wall" id="wall-pub" role="tabpanel" aria-labelledby="tab-pub" hidden>
+      {%- for c in clients.publicas %}
+      <li><img src="/assets/clientes/{{ c.file }}" alt="{{ c.name }}" loading="lazy"></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{% endmacro %}
+
+{#- Partners y sellos. -#}
+{% macro partnersBlock(id="partners") %}
+<section class="sec" aria-labelledby="h-{{ id }}" style="padding-top:0">
+  <div class="wrap partners">
+    <div class="card rv">
+      <h3 id="h-{{ id }}">Somos partners de</h3>
+      <ul class="pills">{% for p in brands.partners %}<li>{{ p }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card rv" style="--s:1">
+      <h3>Nos avalan</h3>
+      <div class="seals">
+        <a href="/certificado-ens/"><img src="/assets/sellos/ens-alta.jpg" alt="Certificación de conformidad con el Esquema Nacional de Seguridad, categoría ALTA" loading="lazy"></a>
+        <a href="/certificado-bsi/"><img src="/assets/sellos/iso-9001-bsi.png" alt="BSI ISO 9001:2015 Quality Management" loading="lazy"></a>
+        <p class="s-txt">Certificado de calidad ISO 9001:2015 y certificación ENS en categoría ALTA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{#- Métricas de la encuesta de satisfacción. -#}
+{% macro surveyMetrics(title="Lo dicen nuestros clientes", eyebrow="Encuesta de satisfacción", id="satisfaccion") %}
+<section class="sec" id="{{ id }}" aria-labelledby="h-{{ id }}">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h2 id="h-{{ id }}">{{ title }}</h2>
+    </div>
+    <div class="metrics">
+      <div class="metric rv" style="--s:0"><b><span data-count="{{ site.survey.response }}">0</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.response }}"></i></div><p>valoran nuestro <strong>tiempo de respuesta</strong> como bueno o muy bueno.</p></div>
+      <div class="metric rv" style="--s:1"><b><span data-count="{{ site.survey.knowledge }}">0</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.knowledge }}"></i></div><p>valoran el <strong>conocimiento de nuestro equipo técnico</strong> como bueno o muy bueno.</p></div>
+      <div class="metric rv" style="--s:2"><b><span data-count="{{ site.survey.recommend }}">0</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.recommend }}"></i></div><p>recomendarían ADQA por su <strong>capacidad de integración</strong> tecnológica.</p></div>
+    </div>
+    <p class="note-src rv">{{ site.survey.source }}.</p>
+  </div>
+</section>
+{% endmacro %}

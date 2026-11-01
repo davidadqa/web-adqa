@@ -1,0 +1,92 @@
+[
+ {
+  "id": "consorci-sanitari",
+  "name": "Consorci Sanitari Alt Penedès-Garraf",
+  "image": "consorci-sanitari-hospital.webp",
+  "alt": "Hospital del Consorci Sanitari Alt Penedès-Garraf",
+  "kind": "Proyecto y mantenimiento 24/7 · IT y telecom",
+  "summary": "Interconexión de los hospitales mediante enlaces licenciados de muy alta capacidad y fibra oscura MUX-DEMUX, y redes WiFi en todos los centros para pacientes y usuarios.",
+  "highlight": "100 Gb/s entre sedes",
+  "icon": "i-signal"
+ },
+ {
+  "id": "iberpotash",
+  "name": "Iberpotash, Mines de Súria",
+  "image": "iberpotash-mina.webp",
+  "alt": "Galería de la mina de Súria",
+  "kind": "Fibra óptica · Servicios telecom",
+  "summary": "Fibra óptica para las comunicaciones de servicio dentro de la mina, con soluciones propias resistentes a la explotación minera y diseño de una red WiFi Ruckus con geolocalización.",
+  "highlight": "Trabajos a 1.000 m de profundidad",
+  "icon": "i-pin"
+ },
+ {
+  "id": "kuka",
+  "name": "KUKA Robots Iberia",
+  "image": "kuka-robots.webp",
+  "alt": "Robots industriales KUKA",
+  "kind": "Dirección TI · Ciberseguridad · Telecom",
+  "summary": "Asumimos la dirección del servicio TIC de esta multinacional alemana de robótica: red Ruckus en la central de España e implantación dirigida en delegaciones como Argentina y País Vasco.",
+  "highlight": "Firewall y networking internacional",
+  "icon": "i-shield"
+ },
+ {
+  "id": "granier",
+  "name": "Granier",
+  "image": "granier-tienda.webp",
+  "alt": "Tienda Granier",
+  "kind": "Instalaciones · Mantenimiento · Telecom · Cloud",
+  "summary": "Informática y telecomunicaciones de la nueva sede central, redes de oficinas, fábricas y tiendas, cloud para aplicaciones corporativas y centralita virtual entre sedes.",
+  "highlight": "Gestión de Google Workspace y formación",
+  "icon": "i-grid"
+ },
+ {
+  "id": "pimec",
+  "name": "PIMEC",
+  "image": "pimec-sede.webp",
+  "alt": "Auditorio de la sede de PIMEC",
+  "kind": "Instalaciones · Cloud · Ciberseguridad",
+  "summary": "Mantenimiento integral, telecomunicaciones y WiFi Ruckus, nuevo CPD de última generación, networking, seguridad, interconexión de sedes y suministro continuado.",
+  "highlight": "Nuevo CPD de última generación",
+  "icon": "i-cloud"
+ },
+ {
+  "id": "hitecsa",
+  "name": "HITECSA",
+  "image": "hitecsa-fabrica.webp",
+  "alt": "Vista aérea de la fábrica de HITECSA",
+  "kind": "Software a medida · Cloud · Networking",
+  "summary": "Gestión integral de su infraestructura informática, de telecomunicaciones y cloud, WiFi Ruckus en su fábrica de Vilanova i la Geltrú y programas de gestión a medida.",
+  "highlight": "Software de gestión a medida",
+  "icon": "i-code"
+ },
+ {
+  "id": "consell-comarcal-garraf",
+  "name": "Consell Comarcal del Garraf",
+  "image": "consell-comarcal-garraf.webp",
+  "alt": "Sede del Consell Comarcal del Garraf",
+  "kind": "Mantenimiento · Networking · Ciberseguridad",
+  "summary": "Mantenimiento de sistemas, gestión activa de la seguridad, red interna y radioenlace entre las dos sedes administrativas, y gestión de Google Workspace.",
+  "highlight": "Más de 15 años trabajando juntos",
+  "icon": "i-clock"
+ },
+ {
+  "id": "midban",
+  "name": "MIDBAN",
+  "image": "midban-makro.webp",
+  "alt": "Instalaciones logísticas del sector HORECA",
+  "kind": "Instalaciones · Mantenimiento · Telecom",
+  "summary": "Solución WiFi Ruckus Resilience en las cámaras frigoríficas de Congelats Romero, además de telecomunicaciones, networking y microinformática.",
+  "highlight": "WiFi en cámaras frigoríficas",
+  "icon": "i-signal"
+ },
+ {
+  "id": "ajuntament-vilanova",
+  "name": "Ajuntament de Vilanova i la Geltrú",
+  "image": "web-vilanova.webp",
+  "alt": "Web del Ajuntament de Vilanova i la Geltrú",
+  "kind": "Web · Telecom · Instalaciones",
+  "summary": "Ordenación del contenido, funcionalidades, diseño gráfico y programación HTML y CSS de la web municipal. Varias empresas municipales nos confían telecom e instalaciones.",
+  "highlight": "Diseño y programación de la web",
+  "icon": "i-code"
+ }
+]

@@ -1,0 +1,31 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# ADQA
+
+> ADQA ({{ site.legalName | safe }}) es una empresa TIC y operador de telecomunicaciones propio en Barcelona que se ocupa, con un mismo equipo, de la informática, las redes, las telecomunicaciones, el cloud, el desarrollo web y la ciberseguridad de empresas e instituciones públicas.
+
+Datos clave:
+
+- Más de 30 años de experiencia.
+- Certificación del Esquema Nacional de Seguridad (ENS) en categoría ALTA.
+- Certificado de calidad ISO 9001:2015.
+- Operador de telecomunicaciones propio, Anxanet. Conexiones a Internet de hasta 10 Gb.
+- Datacenter propio y de proximidad en Barcelona.
+- Equipo propio de instaladores, acreditado en trabajos en altura, espacios confinados y Telco 2.
+- Extranet de ticketing propia para gestionar incidencias en tiempo real.
+- Partner oficial de Google. Ruckus es su marca representada en WiFi. Expertos en Microsoft 365.
+- {{ site.survey.source }}: el {{ site.survey.response }} % valora el tiempo de respuesta como bueno o muy bueno, el {{ site.survey.knowledge }} % el conocimiento del equipo técnico y el {{ site.survey.recommend }} % recomendaría ADQA por su capacidad de integración.
+- Claim: «{{ site.claimFull }}».
+- Sede: {{ site.address.street | safe }}, {{ site.address.postalCode }} {{ site.address.locality }} ({{ site.address.region }}). Teléfono: {{ site.phone }}. E-mail: {{ site.email }}.
+{%- set serviceUrls = [] %}
+{%- for g in nav.groups %}{% for l in g.links %}{% set serviceUrls = (serviceUrls.push(l.url), serviceUrls) %}{% endfor %}{% endfor %}
+
+## Servicios
+{% for p in collections.all | sort(false, false, "url") %}{% if p.url in serviceUrls and not p.data.noindex %}
+- [{{ (p.data.llmsTitle or p.data.title) | replace(' | ADQA','') | replace('ADQA · ','') | safe }}]({{ p.url | absUrl }}): {{ p.data.description | safe }}{% endif %}{% endfor %}
+
+## Empresa
+{% for p in collections.all | sort(false, false, "url") %}{% if not (p.url in serviceUrls) and not p.data.noindex and not (p.url | startsWith("/recursos/")) %}
+- [{{ (p.data.llmsTitle or p.data.title) | replace(' | ADQA','') | replace('ADQA · ','') | safe }}]({{ p.url | absUrl }}): {{ p.data.description | safe }}{% endif %}{% endfor %}

@@ -1,0 +1,36 @@
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img class="logo" src="/assets/logo-adqa-blanco.svg" alt="ADQA" width="134" height="22">
+        <p>{{ site.legalName }}<br>{{ site.address.street }}<br>{{ site.address.postalCode }} {{ site.address.locality }} · {{ site.address.region }}</p>
+        <p style="margin-top:12px"><a href="tel:{{ site.phoneE164 }}">{{ site.phone }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+      <nav aria-label="Servicios"><h4>Servicios</h4><ul>
+        {%- for s in nav.services %}
+        <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.label }}</a></li>
+        {%- endfor %}
+      </ul></nav>
+      <nav aria-label="Empresa"><h4>ADQA</h4><ul>
+        <li><a href="/quienes-somos/">Quiénes somos</a></li>
+        <li><a href="/casos-de-exito/">Casos de éxito</a></li>
+        <li><a href="/recursos/">Recursos</a></li>
+        <li><a href="/trabaja-con-nosotros/">Trabaja con nosotros</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/certificado-ens/">Certificado ENS</a></li>
+        <li><a href="/certificado-bsi/">Certificado ISO 9001</a></li>
+      </ul></nav>
+      <nav aria-label="Clientes"><h4>Clientes</h4><ul>
+        <li><a href="{{ site.extranet }}">Área de clientes</a></li>
+        <li><a href="{{ site.extranet }}">Asistencia remota</a></li>
+        <li><a href="{{ site.anxanet }}" rel="noopener">Anxanet, nuestro operador</a></li>
+      </ul></nav>
+    </div>
+    <p class="claim-big" aria-hidden="true">Tocamos todas<br>las <span>teclas</span>.</p>
+    <p class="claim-sub">{{ site.claimFull }}.</p>
+    <div class="legal">
+      <span>© {{ "" | year }} ADQA · {{ site.legalName }}</span>
+      <nav aria-label="Legal"><a href="/aviso-legal/">Aviso legal</a><a href="/politica-de-privacidad/">Privacidad</a><a href="/politica-de-seguridad/">Política de seguridad</a></nav>
+    </div>
+  </div>
+</footer>

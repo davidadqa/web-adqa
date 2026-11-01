@@ -1,0 +1,150 @@
+{
+ "empresas": [
+  {
+   "file": "kuka.png",
+   "name": "KUKA"
+  },
+  {
+   "file": "granier.png",
+   "name": "Granier"
+  },
+  {
+   "file": "pimec.png",
+   "name": "PIMEC"
+  },
+  {
+   "file": "iberpotash.png",
+   "name": "Iberpotash"
+  },
+  {
+   "file": "cie-automotive.png",
+   "name": "CIE Automotive"
+  },
+  {
+   "file": "hitecsa.png",
+   "name": "HITECSA"
+  },
+  {
+   "file": "baxi.png",
+   "name": "BAXI"
+  },
+  {
+   "file": "inpost.png",
+   "name": "InPost"
+  },
+  {
+   "file": "le-coq-sportif.png",
+   "name": "Le Coq Sportif"
+  },
+  {
+   "file": "eurostars.png",
+   "name": "Eurostars"
+  },
+  {
+   "file": "vila-viniteca.png",
+   "name": "Vila Viniteca"
+  },
+  {
+   "file": "ikks.png",
+   "name": "IKKS"
+  },
+  {
+   "file": "icr-iberica.png",
+   "name": "ICR Ibérica"
+  },
+  {
+   "file": "findirect.png",
+   "name": "Findirect"
+  },
+  {
+   "file": "valira.png",
+   "name": "Valira"
+  },
+  {
+   "file": "juguettos.png",
+   "name": "Juguettos"
+  }
+ ],
+ "publicas": [
+  {
+   "file": "consorci-sanitari-apg.png",
+   "name": "Consorci Sanitari Alt Penedès-Garraf"
+  },
+  {
+   "file": "consell-comarcal-garraf.png",
+   "name": "Consell Comarcal del Garraf"
+  },
+  {
+   "file": "ajuntament-vilanova.png",
+   "name": "Ajuntament de Vilanova i la Geltrú"
+  },
+  {
+   "file": "cttc.png",
+   "name": "CTTC"
+  },
+  {
+   "file": "sjd-hospital.png",
+   "name": "Sant Joan de Déu Barcelona Hospital"
+  },
+  {
+   "file": "biblioteques-barcelona.png",
+   "name": "Biblioteques de Barcelona"
+  },
+  {
+   "file": "ajuntament-sitges.png",
+   "name": "Ajuntament de Sitges"
+  },
+  {
+   "file": "ajuntament-vilafranca.png",
+   "name": "Ajuntament de Vilafranca del Penedès"
+  },
+  {
+   "file": "ajuntament-sant-pere-ribes.png",
+   "name": "Ajuntament de Sant Pere de Ribes"
+  },
+  {
+   "file": "ajuntament-cubelles.png",
+   "name": "Ajuntament de Cubelles"
+  },
+  {
+   "file": "ajuntament-canyelles.png",
+   "name": "Ajuntament de Canyelles"
+  },
+  {
+   "file": "ajuntament-olivella.png",
+   "name": "Ajuntament d'Olivella"
+  },
+  {
+   "file": "ajuntament-cunit.png",
+   "name": "Ajuntament de Cunit"
+  },
+  {
+   "file": "ajuntament-sentmenat.png",
+   "name": "Ajuntament de Sentmenat"
+  },
+  {
+   "file": "ajuntament-roses.png",
+   "name": "Ajuntament de Roses"
+  },
+  {
+   "file": "ajuntament-alzira.png",
+   "name": "Ajuntament d'Alzira"
+  },
+  {
+   "file": "mancomunitat-penedes-garraf.png",
+   "name": "Mancomunitat Penedès-Garraf"
+  },
+  {
+   "file": "node-garraf.png",
+   "name": "Node Garraf"
+  },
+  {
+   "file": "aissa.png",
+   "name": "AISSA, Assistència Integral Social i Sanitària"
+  },
+  {
+   "file": "istituto-italiano-cultura.png",
+   "name": "Istituto Italiano di Cultura"
+  }
+ ]
+}

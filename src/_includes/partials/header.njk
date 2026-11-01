@@ -1,0 +1,57 @@
+{%- macro navLink(url, label, external=false) -%}
+<a href="{{ url }}"{% if page.url == url %} aria-current="page"{% endif %}{% if external %} rel="noopener"{% endif %}>{{ label }}</a>
+{%- endmacro -%}
+<header class="nav-shell" id="top">
+  <nav class="nav" aria-label="Principal">
+    <a class="nav-logo" href="/" aria-label="ADQA, inicio"><img src="/assets/logo-adqa.svg" alt="ADQA" width="134" height="22"></a>
+    <ul class="nav-links">
+      <li><button type="button" aria-expanded="false" aria-controls="mega-servicios" data-mega>Servicios <svg class="chev"><use href="#i-chev"/></svg></button></li>
+      {%- for l in nav.main %}
+      <li>{{ navLink(l.url, l.label) }}</li>
+      {%- endfor %}
+    </ul>
+    <div class="nav-cta">
+      <a class="link" href="{{ site.extranet }}">Área clientes</a>
+      <a class="btn btn-primary" href="/contacto/"{% if page.url == '/contacto/' %} aria-current="page"{% endif %}>Hablemos <svg><use href="#i-arrow"/></svg></a>
+      <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mega" id="mega-servicios" role="region" aria-label="Servicios">
+    <div class="mega-grid">
+      {%- for g in nav.groups %}
+      {%- if g.wide %}
+      <div class="mega-col mega-wide"><h4><span class="ico"><svg><use href="#{{ g.icon }}"/></svg></span>{{ g.title }}</h4><ul>{% for l in g.links %}<li>{{ navLink(l.url, l.label, l.external) }}</li>{% endfor %}</ul></div>
+      {%- else %}
+      <div class="mega-col"><h4><span class="ico"><svg><use href="#{{ g.icon }}"/></svg></span>{{ g.title }}</h4><ul>{% for l in g.links %}<li>{{ navLink(l.url, l.label, l.external) }}</li>{% endfor %}</ul></div>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    <aside class="mega-feature">
+      <div style="display:grid;gap:10px">
+        <h5>Certificación ENS categoría ALTA</h5>
+        <p>El nivel más exigente del Esquema Nacional de Seguridad: preparados para trabajar con la administración pública.</p>
+        <a href="/ciberseguridad/certificado-ens/">Qué significa para ti <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="tel">¿Prefieres llamar?<strong><a href="tel:{{ site.phoneE164 }}">{{ site.phone }}</a></strong></div>
+    </aside>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <details><summary>Servicios <svg width="14" height="14"><use href="#i-chev"/></svg></summary>
+      <div class="sub">
+        {%- for s in nav.services %}
+        {{ navLink(s.url, s.label) }}
+        {%- endfor %}
+      </div>
+    </details>
+    {%- for l in nav.main %}
+    {{ navLink(l.url, l.label) }}
+    {%- endfor %}
+    {{ navLink("/contacto/", "Contacto") }}
+    <div class="m-cta">
+      <a class="btn btn-primary" href="/contacto/">Hablemos <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="{{ site.extranet }}">Área clientes</a>
+    </div>
+  </div>
+</header>
