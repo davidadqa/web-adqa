@@ -1,32 +1,39 @@
 ---
-title: "Google Workspace y Microsoft 365 para empresas | ADQA"
-description: "Partner oficial de Google y expertos en Microsoft 365: implantación, licencias y licenciamiento mixto, soporte a administradores y formación a usuarios."
+title: "Google Workspace para empresas en Barcelona | ADQA"
+description: "Gestión de Google Workspace para empresas en Barcelona: licencias, licenciamiento mixto, migración y soporte de primer nivel, con un partner oficial de Google."
+keyword: "Google Workspace para empresas en Barcelona"
+breadcrumbs:
+  - { name: "Google Workspace" }
+service:
+  name: "Gestión de Google Workspace para empresas"
+  serviceType: "Google Workspace"
+faq:
+  manager:
+    - q: "¿Qué incluye la gestión de Google Workspace de ADQA?"
+      a: "Incluye la gestión de las licencias, también en licenciamiento mixto, las altas, bajas y cambios de plan, la configuración inicial del dominio y de la seguridad, la migración desde el sistema anterior, la administración continuada, el soporte técnico de primer nivel y la formación a los usuarios. Si una incidencia necesita a Google, ADQA abre el caso y lo sigue por ti."
+    - q: "¿Qué aporta trabajar con un partner oficial de Google?"
+      a: "Un interlocutor que conoce tu dominio y tu configuración, en lugar de un soporte genérico. Con un partner puedes combinar ediciones distintas de Google Workspace en el mismo dominio (licenciamiento mixto), delegar las altas, bajas y renovaciones, y tener a quien llamar cuando algo no funciona. ADQA es partner oficial de Google (Google Cloud Partner)."
+    - q: "¿Qué pasa con mis correos y archivos si migramos a Google Workspace?"
+      a: "Se migran el correo, los calendarios, los contactos y los archivos. La migración se planifica por fases, empezando por un grupo piloto, y el sistema anterior sigue funcionando mientras tanto. El cambio de los registros del correo se hace al final, cuando todo está verificado, para que cada persona encuentre su información el primer día."
+    - q: "¿Podemos tener Google Workspace y Microsoft 365 en la misma empresa?"
+      a: "Sí. Hay empresas que mantienen unos usuarios en Google Workspace y otros en Microsoft 365 según el departamento, y otras que usan Google Workspace para todos y licencian las aplicaciones de escritorio de Microsoft solo para quien las necesita. Se puede hacer con el mismo dominio, configurando el enrutamiento del correo. En general recomendamos unificar, porque simplifica la administración, salvo que haya un motivo claro para combinar."
+  tecnico:
+    - q: "¿Cómo se migra a Google Workspace desde Microsoft 365 u otro servidor de correo sin perder datos?"
+      a: "Con herramientas de migración de Google y un proceso por fases. Primero se inventarían buzones, calendarios, contactos y archivos; después se migra un grupo piloto, luego el resto de usuarios, y se verifica la integridad de cada bloque antes de seguir. Los registros MX se cambian en el último paso, con una sincronización final para recoger lo más reciente."
+    - q: "¿Qué registros DNS hay que configurar al implantar Google Workspace?"
+      a: "Un registro TXT para verificar el dominio y los registros del correo: MX, que indica a qué servidores llega el correo; SPF, que declara qué servidores pueden enviar en nombre del dominio; DKIM, que firma digitalmente los mensajes; y DMARC, que define qué hacer con los mensajes que no superan esas comprobaciones."
+    - q: "¿Se puede integrar Google Workspace con nuestro ERP, CRM o inicio de sesión corporativo?"
+      a: "Sí. Google Workspace tiene APIs abiertas que permiten integrarlo con CRM, ERP y sistemas de ticketing, y admite inicio de sesión único (SSO) para que los usuarios entren con sus credenciales corporativas. Lo configuramos durante la implantación o más adelante, cuando haga falta."
+    - q: "¿Cómo se protegen las cuentas de Google Workspace?"
+      a: "Con verificación en dos pasos para todos los usuarios, políticas de acceso y de uso compartido de archivos por unidad organizativa, una revisión de quién tiene permisos de administrador, la gestión de los dispositivos desde la consola y la autenticación del correo. Si hace falta, se refuerza el correo con una solución de correo seguro como Hornetsecurity."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
 {% block head %}
 <style>
-/* Google Workspace: piezas propias (los componentes de página interior están en site.css) */
-.cmp .fine{font-size:.86rem;color:var(--muted);margin-top:20px}
-.vs{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.vs table{width:100%;border-collapse:collapse;text-align:left}
-.vs th,.vs td{padding:18px 24px;vertical-align:top;font-size:.97rem;color:var(--gray);border-top:1px solid var(--line)}
-.vs thead th{border-top:0;background:var(--surface-2);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.vs thead th+th{color:var(--ink)}
-.vs tbody th{width:22%;font-weight:600;color:var(--ink)}
-.vs tr.fit th,.vs tr.fit td{background:var(--pink-50);color:var(--ink)}
+/* Google Workspace (hub): orden alterno de .split y rejilla de casos heredados */
 @media (min-width:1061px){.split.rev .txt{order:2}}
-@media (max-width:720px){
-  .vs thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .vs table,.vs tbody,.vs tr,.vs th,.vs td{display:block;width:auto}
-  .vs tr{padding:18px 20px;border-top:1px solid var(--line)}
-  .vs tbody tr:first-child{border-top:0}
-  .vs th,.vs td{border:0;padding:0}
-  .vs tbody th{width:auto;margin-bottom:10px;font-size:1.02rem}
-  .vs td+td{margin-top:10px}
-  .vs td::before{content:attr(data-l);display:block;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pink-600);margin-bottom:2px}
-  .vs tr.fit{background:var(--pink-50)}
-}
+.cases-wp{margin-top:14px}
 </style>
 {% endblock %}
 {% block content %}
@@ -35,337 +42,278 @@ description: "Partner oficial de Google y expertos en Microsoft 365: implantaci�
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.05s">Partner oficial de Google · Expertos en Microsoft 365</span>
-    <h1 id="h-hero" data-words>Google Workspace y Microsoft 365 para tu empresa, con <span class="accent">quien conoce las dos suites</span></h1>
-    <p class="lead fade-in" style="--d:.8s">Te ayudamos a elegir, implantar y sacar partido a tu suite de productividad: licencias ajustadas a cada persona, soporte a tus administradores y formación para tus usuarios. Y si tu equipo necesita lo mejor de cada una, las combinamos.</p>
+    <span class="eyebrow fade-in" style="--d:.05s">Partner oficial de Google · Más de 30 años · ISO 9001:2015</span>
+    <h1 id="h-hero" data-words>Google Workspace para tu empresa, <span class="accent">gestionado por quien lo conoce</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Licencias, altas y bajas, soporte del día a día y, cuando hace falta, la gestión con Google. Nos ocupamos de todo eso para empresas e instituciones de Barcelona y de toda Cataluña, y tu equipo solo tiene que trabajar.</p>
     <div class="hero-ctas fade-in" style="--d:.95s">
-      <a class="btn btn-primary" href="#contacto">Cuéntanos tu caso <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#comparativa">Comparar las dos suites</a>
+      <a class="btn btn-primary" href="#contacto">Explícanos tu caso <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="/google-workspace/licenciamiento-mixto-google-workspace/">Ver el licenciamiento mixto</a>
     </div>
     <div class="trust fade-in" style="--d:1.1s">
       <span><svg><use href="#i-check"/></svg>Google Cloud Partner</span>
-      <span><svg><use href="#i-check"/></svg>Licenciamiento mixto</span>
-      <span><svg><use href="#i-check"/></svg>Soporte a administradores y formación</span>
+      <span><svg><use href="#i-check"/></svg>Primer nivel de soporte</span>
+      <span><svg><use href="#i-check"/></svg>ENS categoría ALTA</span>
     </div>
   </div>
 </section>
 
-<nav class="crumbs wrap fade-in" style="--d:1.2s" aria-label="Ruta de navegación">
-  <ol>
-    <li><a href="/">Inicio</a></li>
-    <li><span aria-current="page">Google Workspace y Microsoft 365</span></li>
-  </ol>
-</nav>
+{{ m.crumbs(breadcrumbs) }}
 
-<!-- ============ EN RESUMEN (answer-first) ============ -->
+<!-- ============ EN RESUMEN ============ -->
 <section class="sec" id="en-resumen" aria-labelledby="h-sum" style="padding:clamp(56px,7vw,88px) 0 0">
   <div class="wrap intro">
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
-      <h2 id="h-sum" class="sr">¿Qué ofrece ADQA en Google Workspace y Microsoft 365?</h2>
-      <p class="tldr"><strong>ADQA es partner oficial de Google (Google Cloud Partner) y experta en Microsoft 365.</strong> Implanta Google Workspace y Microsoft 365 en empresas e instituciones, gestiona sus licencias, también en licenciamiento mixto, da soporte a sus administradores y forma a sus usuarios, con el mismo equipo que puede llevar su soporte IT, su cloud y su ciberseguridad. Suma más de 30 años de experiencia.</p>
+      <h2 id="h-sum" class="sr">¿Qué hace ADQA con Google Workspace?</h2>
+      <p class="tldr"><strong>ADQA es partner oficial de Google (Google Cloud Partner) y gestiona Google Workspace para empresas e instituciones de Barcelona y Cataluña.</strong> Se ocupa de las licencias, también en licenciamiento mixto, de las altas y bajas, de la configuración, de la migración y del soporte de primer nivel, y hace de interlocutor con Google. Es el mismo equipo que puede llevar su soporte IT, su cloud y su ciberseguridad.</p>
     </div>
     <div class="stats">
-      <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en cada una de nuestras áreas de negocio</span></div>
-      <div class="stat rv" style="--s:1"><b>Partner</b><span>oficial de Google (Google Cloud Partner) y expertos en Microsoft 365</span></div>
-      <div class="stat rv" style="--s:2"><b><span data-count="15">0</span><small>+</small></b><span>años trabajando con el Consell Comarcal del Garraf, que también nos confía su Google Workspace</span></div>
-      <div class="stat rv" style="--s:3"><b>ALTA</b><span>primera empresa del Garraf con certificación ENS en categoría ALTA</span></div>
+      <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en informática y telecomunicaciones</span></div>
+      <div class="stat rv" style="--s:1"><b>Partner</b><span>oficial de Google (Google Cloud Partner)</span></div>
+      <div class="stat rv" style="--s:2"><b><span data-count="15">0</span><small>+</small></b><span>años con el Consell Comarcal del Garraf, que también nos confía su Google Workspace</span></div>
+      <div class="stat rv" style="--s:3"><b>Nivel 1</b><span>de soporte: nos llamas a nosotros y, si hace falta, vamos nosotros a Google</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ QUÉ HACEMOS POSIBLE (pain points en positivo) ============ -->
+<!-- ============ QUÉ HACEMOS POSIBLE ============ -->
 <section class="sec" aria-labelledby="h-pos">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Lo que cambia en tu día a día</span>
-      <h2 id="h-pos">¿Qué hacemos posible con tu suite de productividad?</h2>
-      <p class="lead">Una suite bien implantada no se nota: el correo llega, los documentos se comparten sin fricción y cada persona tiene justo lo que necesita para trabajar.</p>
+      <h2 id="h-pos">Google Workspace, sin tener que administrarlo tú</h2>
+      <p class="lead">Muchas empresas tienen Google Workspace contratado. Pocas tienen a alguien que lo lleve de verdad. Esto es lo que cambia cuando lo hacemos nosotros.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Cada persona, con la licencia que necesita</h3><p>Asignamos a cada usuario el plan que corresponde a su uso real y combinamos ediciones o suites cuando tiene sentido.</p></div>
-      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-cloud"/></svg></span><h3>Tu equipo trabaja igual esté donde esté</h3><p>Correo, calendario, documentos y reuniones en la nube, desde la oficina, desde casa o desde el móvil.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-tool"/></svg></span><h3>Tus administradores tienen a quién preguntar</h3><p>Damos soporte a quien gestiona la consola: altas y bajas, permisos, políticas y configuraciones que no son del día a día.</p></div>
-      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-award"/></svg></span><h3>Tus usuarios sacan partido a las herramientas</h3><p>Formamos a tu equipo para que use la suite con soltura y aproveche lo que ya tiene contratado.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Cada persona, con el plan que usa</h3><p>Quien solo trabaja con el correo y Drive no paga lo mismo que quien necesita seguridad avanzada o más almacenamiento.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3>Una llamada cuando algo falla</h3><p>Conocemos tu dominio y cómo trabaja tu empresa. Lo resolvemos aquí y, si hay que ir a Google, vamos nosotros.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Altas y bajas sin entrar en la consola</h3><p>Nos dices quién entra, quién se va o quién cambia de puesto. Nosotros dejamos su cuenta y su licencia listas.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-award"/></svg></span><h3>Tu equipo saca partido a lo que ya paga</h3><p>Formación práctica: compartir sin enviar adjuntos, editar a la vez el mismo documento y organizar agenda y reuniones.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ GOOGLE WORKSPACE ============ -->
-<section class="sec" id="google-workspace" aria-labelledby="h-gw" style="padding-top:0">
+<!-- ============ MODELO DE SOPORTE ============ -->
+<section class="sec" id="soporte" aria-labelledby="h-sop" style="padding-top:0">
   <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 id="h-sop">¿Quién atiende tu Google Workspace cuando algo falla?</h2>
+      <p>Nosotros. Somos el primer nivel de soporte y el interlocutor entre tu empresa y Google. Resolvemos directamente la mayoría de incidencias, porque ya conocemos tu configuración: quién tiene qué licencia, cómo están montados los grupos y qué se comparte con quién.</p>
+      <p>Cuando un problema necesita a Google, abrimos el caso y lo seguimos hasta el final. Tú no tienes que tratar con Google si no quieres.</p>
+      <p>El precio de cada licencia es el mismo si la compras a Google o a través de un partner. Lo que cambia es todo lo demás: quién la gestiona, quién te atiende y si puedes combinar ediciones.</p>
+    </div>
+    <ol class="steps rv" style="--s:1">
+      <li><b>Nos llamas a nosotros</b><p>Una persona de tu equipo nos explica el problema, por teléfono o desde la extranet de soporte.</p></li>
+      <li><b>Lo resolvemos en primer nivel</b><p>Accesos, licencias, correo que no llega, permisos de Drive o configuración de la consola.</p></li>
+      <li><b>Si hace falta, escalamos a Google</b><p>Abrimos el caso con Google, aportamos el diagnóstico y te mantenemos al día.</p></li>
+      <li><b>Revisamos y proponemos mejoras</b><p>Con revisiones periódicas del dominio, te proponemos ajustes de licencias y de configuración.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ QUÉ ES GOOGLE WORKSPACE ============ -->
+<section class="sec" id="que-es" aria-labelledby="h-gw" style="padding-top:0">
+  <div class="wrap split rev">
     <div class="txt rv">
       <span class="eyebrow">Google Workspace</span>
       <h2 id="h-gw">¿Qué es Google Workspace y qué aporta a tu empresa?</h2>
-      <p>Google Workspace es la suite de productividad en la nube de Google. Reúne el correo con tu propio dominio (Gmail), el calendario, el almacenamiento de archivos (Drive), los editores de documentos, hojas de cálculo y presentaciones (Docs, Sheets y Slides), las videollamadas (Meet) y la mensajería (Chat), todo gestionado desde una única consola de administración.</p>
-      <p>Está pensada para trabajar desde el navegador: varias personas editan el mismo documento a la vez, siempre sobre la última versión, sin instalar aplicaciones de escritorio. Por eso encaja especialmente bien en equipos repartidos entre sedes, remotos o híbridos.</p>
-      <p>Como <strong>partner oficial de Google</strong>, te acompañamos desde la elección de la edición hasta el día a día: licencias, configuración, soporte a tus administradores y formación a tus usuarios.</p>
+      <p>Google Workspace es la suite de productividad en la nube de Google. Reúne el correo con tu dominio, el calendario, los archivos, los documentos, las videollamadas y el chat, y se administra desde una sola consola.</p>
+      <p>Está pensada para trabajar desde el navegador: varias personas editan el mismo documento a la vez, siempre sobre la última versión. Por eso encaja bien en equipos repartidos entre sedes, tiendas o fábricas, o que trabajan en remoto.</p>
+      <p>Se contrata por ediciones (Business Starter, Standard, Plus y Enterprise) y, con un partner, se pueden combinar en el mismo dominio.</p>
       <p><a class="txt-link" href="/recursos/google-workspace-para-equipos-remotos-e-hibridos/">Google Workspace para equipos remotos e <span class="nw">híbridos<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
     </div>
     <div class="cmp good rv" style="--s:1">
       <h3>Lo que reúne Google Workspace</h3>
       <ul>
         <li><svg><use href="#i-check"/></svg><span><strong>Gmail:</strong> correo profesional con tu dominio.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Drive:</strong> archivos personales y de equipo en la nube.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Drive y unidades compartidas:</strong> archivos personales y de equipo.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Docs, Sheets y Slides:</strong> edición simultánea desde el navegador.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Meet y Chat:</strong> videollamadas y mensajería integradas.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Calendar:</strong> agendas compartidas y reserva de salas.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Consola de administración:</strong> usuarios, dispositivos y seguridad en un solo lugar.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Consola de administración:</strong> usuarios, dispositivos y seguridad.</span></li>
       </ul>
-      <p class="fine">Las funciones disponibles dependen de la edición contratada.</p>
+      <p class="note-src">Las funciones disponibles dependen de la edición contratada.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ MICROSOFT 365 ============ -->
-<section class="sec" id="microsoft-365" aria-labelledby="h-ms" style="padding-top:0">
-  <div class="wrap split rev">
-    <div class="txt rv">
-      <span class="eyebrow">Microsoft 365</span>
-      <h2 id="h-ms">¿Qué es Microsoft 365 y cuándo encaja mejor?</h2>
-      <p>Microsoft 365 es la suite de productividad de Microsoft. Combina el correo y el calendario de Exchange Online (Outlook), la comunicación de Teams, el almacenamiento en OneDrive y SharePoint y, según el plan, las aplicaciones de escritorio de Word, Excel y PowerPoint, junto con la gestión de identidades de Microsoft Entra ID.</p>
-      <p>Su punto fuerte es la continuidad con el entorno Windows y con las aplicaciones de escritorio: encaja con equipos que trabajan con hojas de cálculo complejas, macros o plantillas de Office, y con organizaciones que ya gestionan sus usuarios en un directorio de Microsoft.</p>
-      <p>Somos <strong>expertos en Microsoft 365</strong>: lo implantamos, ajustamos las licencias de cada usuario a lo que de verdad utiliza y damos soporte a tus administradores.</p>
-      <p><a class="txt-link" href="/recursos/licencias-de-microsoft-365/">Licencias de Microsoft <span class="nw">365<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
-    </div>
-    <div class="cmp good rv" style="--s:1">
-      <h3>Lo que reúne Microsoft 365</h3>
-      <ul>
-        <li><svg><use href="#i-check"/></svg><span><strong>Outlook y Exchange Online:</strong> correo y calendario con tu dominio.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Teams:</strong> chat, reuniones y trabajo en equipo.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>OneDrive y SharePoint:</strong> archivos personales, de equipo y de empresa.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Word, Excel y PowerPoint:</strong> en la web y, según el plan, en escritorio.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Microsoft Entra ID:</strong> identidades, accesos y verificación en dos pasos.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Centro de administración:</strong> usuarios, licencias y políticas.</span></li>
-      </ul>
-      <p class="fine">Las funciones disponibles dependen del plan contratado.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ COMPARATIVA ============ -->
-<section class="sec" id="comparativa" aria-labelledby="h-vs" style="padding-top:0">
+<!-- ============ TRES DECISIONES (subpáginas) ============ -->
+<section class="sec" id="decidir" aria-labelledby="h-dec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head center rv">
-      <span class="eyebrow">Comparativa</span>
-      <h2 id="h-vs">Google Workspace o Microsoft 365: ¿cuál le conviene a tu empresa?</h2>
-      <p class="lead">Las dos suites resuelven lo esencial con garantías: correo, calendario, archivos, documentos y reuniones. La diferencia está en cómo trabaja tu equipo.</p>
+    <div class="sec-head rv">
+      <span class="eyebrow">Antes de decidir</span>
+      <h2 id="h-dec">Tres preguntas que nos hacen a menudo</h2>
+      <p class="lead">Cada una tiene su página, con el detalle técnico, ejemplos y preguntas frecuentes.</p>
     </div>
-    <div class="vs rv">
-      <table>
-        <caption class="sr">Comparativa entre Google Workspace y Microsoft 365</caption>
-        <thead><tr><th scope="col">Aspecto</th><th scope="col">Google Workspace</th><th scope="col">Microsoft 365</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Enfoque</th><td data-l="Google Workspace">Nativa de la nube: se trabaja desde el navegador, sin instalar nada.</td><td data-l="Microsoft 365">Nube y escritorio: aplicaciones web y, según el plan, de escritorio.</td></tr>
-          <tr><th scope="row">Documentos y hojas de cálculo</th><td data-l="Google Workspace">Docs, Sheets y Slides, que también abren y editan archivos de Office.</td><td data-l="Microsoft 365">Word, Excel y PowerPoint, con todas sus funciones avanzadas en la versión de escritorio.</td></tr>
-          <tr><th scope="row">Colaboración</th><td data-l="Google Workspace">Edición simultánea muy fluida sobre un único documento en la nube.</td><td data-l="Microsoft 365">Coautoría en la web y en escritorio, con los archivos en OneDrive o SharePoint.</td></tr>
-          <tr><th scope="row">Comunicación</th><td data-l="Google Workspace">Meet y Chat, integrados en Gmail y Calendar.</td><td data-l="Microsoft 365">Teams como espacio central de chat, reuniones y trabajo en equipo.</td></tr>
-          <tr><th scope="row">Identidad y dispositivos</th><td data-l="Google Workspace">Cuentas de Google y gestión de dispositivos desde la consola de administración.</td><td data-l="Microsoft 365">Microsoft Entra ID y, según el plan, Intune, muy integrados con Windows.</td></tr>
-          <tr><th scope="row">Administración</th><td data-l="Google Workspace">Una consola única, sencilla de gestionar.</td><td data-l="Microsoft 365">Varios centros de administración, con muchas opciones de configuración avanzada.</td></tr>
-          <tr class="fit"><th scope="row">Suele encajar mejor con</th><td data-l="Google Workspace">Equipos distribuidos o que priorizan la colaboración en tiempo real y una gestión sencilla.</td><td data-l="Microsoft 365">Entornos Windows, uso intensivo de Excel o de aplicaciones de escritorio y directorio de Microsoft.</td></tr>
-        </tbody>
-      </table>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/google-workspace/licenciamiento-mixto-google-workspace/"><span class="cat">Licenciamiento mixto</span><h3>¿Puedo pagar un plan distinto para cada persona?</h3><p>Sí, con un partner oficial y en el mismo dominio. El ahorro habitual está entre un 20% y un 40% de la factura de licencias, y no hay que migrar nada.</p></a>
+      <a class="card rv" style="--s:1" href="/google-workspace/google-workspace-vs-microsoft-365/"><span class="cat">Comparativa</span><h3>¿Google Workspace o Microsoft 365?</h3><p>No hay una opción mejor para todos. Comparamos las dos en siete aspectos y te contamos cuándo encaja cada una.</p></a>
+      <a class="card rv" style="--s:2" href="/microsoft-365/"><span class="cat">Microsoft 365</span><h3>¿Y si mi empresa trabaja con Microsoft 365?</h3><p>También lo llevamos: licencias por uso real, migración por fases, copias de seguridad y soporte de primer nivel.</p></a>
     </div>
-    <p class="note rv"><strong>¿Y el precio?</strong> Depende de la edición, del número de usuarios y de las condiciones de cada fabricante, así que no lo comparamos aquí: te preparamos una propuesta con las licencias que realmente necesitas. Y si parte de tu equipo encaja mejor con una suite y parte con la otra, existe el <a class="txt-link" href="#licenciamiento-mixto">licenciamiento <span class="nw">mixto<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
-    <p class="note rv"><a class="txt-link" href="/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/">Cuándo tiene sentido cambiar de Microsoft 365 a Google Workspace (o al <span class="nw">revés)<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
   </div>
 </section>
 
-<!-- ============ LICENCIAMIENTO MIXTO ============ -->
-<section class="sec" id="licenciamiento-mixto" aria-labelledby="h-mix" style="padding-top:0">
-  <div class="wrap split">
-    <div class="txt rv">
-      <span class="eyebrow">Licenciamiento mixto</span>
-      <h2 id="h-mix">¿Qué es el licenciamiento mixto y cuándo te conviene?</h2>
-      <p>El licenciamiento mixto consiste en asignar a cada usuario la licencia que corresponde a su uso real, en lugar de dar a todo el equipo la misma. Es la forma de que cada persona tenga lo que necesita, ni más ni menos.</p>
-      <p>Se puede aplicar dentro de una misma suite, combinando ediciones cuando el fabricante lo permite, o entre suites: por ejemplo, el correo y la colaboración en Google Workspace para todo el equipo y las aplicaciones de escritorio de Microsoft solo para quien trabaja a fondo con Excel.</p>
-      <p>Las combinaciones posibles dependen de las condiciones de cada fabricante, así que las revisamos contigo antes de proponer nada.</p>
-    </div>
-    <ol class="steps rv" style="--s:1">
-      <li><b>Inventario de usuarios y usos</b><p>Quién usa qué: correo, documentos, almacenamiento, reuniones o aplicaciones de escritorio.</p></li>
-      <li><b>Perfiles de licencia</b><p>Agrupamos a las personas por lo que necesitan de verdad para trabajar, no por su cargo.</p></li>
-      <li><b>Propuesta de combinación</b><p>Las ediciones y suites que encajan con cada perfil, compatibles entre sí y con tu dominio.</p></li>
-      <li><b>Ajuste con cada cambio</b><p>Altas, bajas y cambios de puesto: adaptamos las licencias para que sigan reflejando a tu equipo.</p></li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============ IMPLANTACIÓN (sección oscura) ============ -->
-<section class="sec dark-sec" id="implantacion" aria-labelledby="h-imp">
+<!-- ============ MIGRACIÓN (sección oscura) ============ -->
+<section class="sec dark-sec" id="migracion" aria-labelledby="h-mig">
   <div class="wrap strengths">
     <div class="sticky rv">
-      <span class="eyebrow">Implantación y acompañamiento</span>
-      <h2 id="h-imp">¿Cómo implantamos tu suite, paso a paso?</h2>
-      <p class="lead" style="color:#bdbdbd">Una buena implantación empieza antes de crear el primer usuario y no termina el día del cambio. Así trabajamos, tanto en Google Workspace como en Microsoft 365.</p>
-      <div><a class="btn btn-primary" href="#contacto">Habla con un especialista <svg><use href="#i-arrow"/></svg></a></div>
+      <span class="eyebrow">Implantación y migración</span>
+      <h2 id="h-mig">¿Cómo pasamos tu empresa a Google Workspace?</h2>
+      <p class="lead" style="color:#bdbdbd">Por fases, con el sistema anterior funcionando hasta el final. Vengas de Microsoft 365, de un servidor de correo propio o de otro proveedor, el orden es el mismo.</p>
+      <div><a class="btn btn-primary" href="#contacto">Planifica tu migración <svg><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="stack">
       <article class="st" style="--n:0">
         <span class="num">01 · ANÁLISIS</span>
-        <h3>Entendemos cómo trabaja tu equipo</h3>
-        <p>Revisamos tu correo, tus archivos y tus herramientas actuales, quién trabaja desde dónde y qué necesita cada perfil. Con eso te recomendamos la suite y las licencias que encajan.</p>
+        <h3>Qué hay que mover y quién usa qué</h3>
+        <p>Inventariamos buzones, calendarios, contactos y carpetas compartidas, y vemos qué necesita cada perfil. Con eso proponemos la edición de cada persona.</p>
       </article>
       <article class="st" style="--n:1">
-        <span class="num">02 · DOMINIO Y CORREO</span>
+        <span class="num">02 · DOMINIO Y CONSOLA</span>
         <h3>Tu dominio, bien configurado</h3>
-        <p>Verificamos el dominio y configuramos los registros DNS del correo para que tus mensajes se entreguen y se autentiquen correctamente.</p>
-        <ul><li>MX: a qué servidores llega tu correo</li><li>SPF: qué servidores pueden enviar en tu nombre</li><li>DKIM: la firma digital de tus mensajes</li><li>DMARC: qué hacer con los mensajes no autenticados</li></ul>
+        <p>Verificamos el dominio y preparamos los registros que dicen a dónde llega tu correo y quién puede enviar en tu nombre. Creamos usuarios, grupos y unidades organizativas.</p>
       </article>
       <article class="st" style="--n:2">
-        <span class="num">03 · MIGRACIÓN</span>
-        <h3>Correo, calendarios y archivos, en su sitio</h3>
-        <p>Planificamos el traslado de buzones, contactos, calendarios y documentos con un periodo de convivencia entre el sistema actual y el nuevo, y hacemos el cambio en el momento acordado contigo.</p>
+        <span class="num">03 · GRUPO PILOTO</span>
+        <h3>Primero, unas pocas personas</h3>
+        <p>Migramos a un grupo reducido y comprobamos con ellos que el correo, la agenda y los archivos están donde deben antes de seguir.</p>
       </article>
       <article class="st" style="--n:3">
-        <span class="num">04 · SEGURIDAD</span>
-        <h3>Seguridad desde el primer día</h3>
-        <p>Activamos la verificación en dos pasos (MFA), definimos las políticas de acceso y de uso compartido y, si lo necesitas, reforzamos el correo con soluciones de e-mail seguro.</p>
+        <span class="num">04 · MIGRACIÓN POR FASES</span>
+        <h3>El resto del equipo, bloque a bloque</h3>
+        <p>Copiamos los datos con herramientas de migración de Google mientras todos siguen trabajando, y verificamos cada bloque. Las carpetas compartidas pasan a unidades compartidas con sus permisos.</p>
       </article>
       <article class="st" style="--n:4">
-        <span class="num">05 · FORMACIÓN</span>
-        <h3>Formación a tus usuarios</h3>
-        <p>Para que el cambio sea fácil: cómo se comparte, cómo se colabora sobre un mismo documento y cómo se organizan el correo, la agenda y las reuniones.</p>
+        <span class="num">05 · CAMBIO DEL CORREO</span>
+        <h3>El cambio, al final y en el momento acordado</h3>
+        <p>Cuando todo está verificado, apuntamos el correo a Google y hacemos una última sincronización para recoger lo más reciente.</p>
       </article>
       <article class="st" style="--n:5">
-        <span class="num">06 · SOPORTE</span>
-        <h3>Soporte a tus administradores</h3>
-        <p>Después de la implantación seguimos a tu lado: resolvemos las dudas de tus administradores, gestionamos altas, bajas y licencias, y atendemos las incidencias con el mismo equipo que conoce tu empresa.</p>
+        <span class="num">06 · SEGURIDAD Y FORMACIÓN</span>
+        <h3>Listos para trabajar desde el primer día</h3>
+        <p>Activamos la verificación en dos pasos y las políticas de uso compartido, y formamos a tu equipo en lo que va a usar.</p>
+        <ul><li>Cómo compartir sin enviar adjuntos</li><li>Edición simultánea y comentarios</li><li>Agenda, salas y videollamadas</li></ul>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ GRAELLA DE SERVICIOS ============ -->
+<!-- ============ SERVICIOS ============ -->
 <section class="sec" id="servicios" aria-labelledby="h-serv">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Servicios de Google Workspace y Microsoft 365</span>
-      <h2 id="h-serv">¿Qué incluye nuestro servicio de Google Workspace y Microsoft 365?</h2>
-      <p class="lead">Todo lo que necesita tu suite de productividad, de la primera licencia al soporte diario, con un único equipo.</p>
+      <span class="eyebrow">Servicios de Google Workspace</span>
+      <h2 id="h-serv">Qué incluye nuestro servicio de Google Workspace</h2>
+      <p class="lead">De la primera licencia al soporte de cada día, con el mismo equipo.</p>
     </div>
     <div class="services">
-      <a class="card svc rv" href="#google-workspace" style="--s:0">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-file"/></svg></span>
+        <h3>Gestión de licencias</h3>
+        <p>Altas, bajas, cambios de plan y renovaciones de todas las licencias de tu dominio, sin que tengas que tratar con Google.</p>
+        <ul class="tags"><li>Altas y bajas</li><li>Renovaciones</li></ul>
+      </div>
+      <a class="card svc rv" href="/google-workspace/licenciamiento-mixto-google-workspace/" style="--s:1">
         <span class="ico"><svg><use href="#i-grid"/></svg></span>
-        <h3>Implantación de Google Workspace</h3>
-        <p>Elección de la edición, configuración de la consola, dominio, usuarios y grupos, como partner oficial de Google.</p>
-        <ul class="tags"><li>Google Cloud Partner</li><li>Consola</li><li>Dominio</li></ul>
-        <span class="more">Google Workspace <svg><use href="#i-arrow"/></svg></span>
+        <h3>Licenciamiento mixto</h3>
+        <p>Business Starter, Standard o Plus para cada usuario, según lo que usa, dentro del mismo dominio.</p>
+        <ul class="tags"><li>Por perfiles</li><li>Mismo dominio</li></ul>
+        <span class="more">Licenciamiento mixto <svg><use href="#i-arrow"/></svg></span>
       </a>
-      <a class="card svc rv" href="#microsoft-365" style="--s:1">
-        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
-        <h3>Implantación de Microsoft 365</h3>
-        <p>Exchange Online, Teams, OneDrive y SharePoint configurados para tu organización, con identidades y políticas.</p>
-        <ul class="tags"><li>Exchange Online</li><li>Teams</li><li>SharePoint</li></ul>
-        <span class="more">Microsoft 365 <svg><use href="#i-arrow"/></svg></span>
-      </a>
-      <a class="card svc rv" href="#implantacion" style="--s:2">
+      <a class="card svc rv" href="#migracion" style="--s:2">
         <span class="ico"><svg><use href="#i-arrow"/></svg></span>
-        <h3>Migración entre suites</h3>
-        <p>Desde un servidor de correo propio, de Microsoft 365 a Google Workspace o al revés: correo, calendarios, contactos y archivos.</p>
-        <ul class="tags"><li>Correo</li><li>Calendarios</li><li>Archivos</li></ul>
+        <h3>Migración a Google Workspace</h3>
+        <p>Correo, calendarios, contactos y archivos desde Microsoft 365 o cualquier sistema anterior, por fases y sin parar el trabajo.</p>
+        <ul class="tags"><li>Grupo piloto</li><li>Por fases</li></ul>
         <span class="more">Cómo lo hacemos <svg><use href="#i-arrow"/></svg></span>
       </a>
       <div class="card svc rv" style="--s:0">
-        <span class="ico"><svg><use href="#i-check"/></svg></span>
-        <h3>Gestión de licencias</h3>
-        <p>Altas, bajas y cambios de plan para que cada usuario tenga la licencia que corresponde a su uso, sin pagar por lo que no se utiliza.</p>
-        <ul class="tags"><li>Altas y bajas</li><li>Cambios de plan</li></ul>
+        <span class="ico"><svg><use href="#i-tool"/></svg></span>
+        <h3>Configuración inicial</h3>
+        <p>Dominio, políticas de seguridad, grupos, permisos e integraciones con tus sistemas, como el acceso con las credenciales corporativas (SSO).</p>
+        <ul class="tags"><li>Dominio</li><li>Seguridad</li><li>SSO</li></ul>
       </div>
-      <a class="card svc rv" href="#licenciamiento-mixto" style="--s:1">
-        <span class="ico"><svg><use href="#i-net"/></svg></span>
-        <h3>Licenciamiento mixto</h3>
-        <p>Ediciones o suites combinadas según los perfiles de tu equipo, dentro de las condiciones de cada fabricante.</p>
-        <ul class="tags"><li>Por perfiles</li><li>Ediciones</li><li>Suites</li></ul>
-        <span class="more">Licenciamiento mixto <svg><use href="#i-arrow"/></svg></span>
-      </a>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-server"/></svg></span>
+        <h3>Administración continuada</h3>
+        <p>Mantenemos el entorno al día, aplicamos los cambios que pidas y te proponemos ajustes cuando la empresa cambia.</p>
+        <ul class="tags"><li>Consola</li><li>Revisiones periódicas</li></ul>
+      </div>
       <div class="card svc rv" style="--s:2">
-        <span class="ico"><svg><use href="#i-mail"/></svg></span>
-        <h3>Correo y dominios</h3>
-        <p>Soluciones de e-mail, gestión de dominios y configuración de los registros del correo: MX, SPF, DKIM y DMARC.</p>
-        <ul class="tags"><li>E-mail</li><li>Dominios</li><li>DNS</li></ul>
+        <span class="ico"><svg><use href="#i-phone"/></svg></span>
+        <h3>Soporte técnico</h3>
+        <p>Primer nivel de soporte para cualquier incidencia de Google Workspace. Si hay que escalar a Google, lo hacemos nosotros.</p>
+        <ul class="tags"><li>Primer nivel</li><li>Escalado a Google</li></ul>
       </div>
       <div class="card svc wide rv" style="--s:0">
-        <span class="ico"><svg><use href="#i-tool"/></svg></span>
-        <h3>Soporte a administradores</h3>
-        <p>Un equipo al que consultar la configuración de la consola, los permisos, las políticas y las dudas del día a día, como hacemos con los administradores de Granier.</p>
-        <ul class="tags"><li>Consola</li><li>Permisos</li><li>Políticas</li><li>Incidencias</li></ul>
-      </div>
-      <div class="card svc wide rv" style="--s:1">
         <span class="ico"><svg><use href="#i-award"/></svg></span>
-        <h3>Formación a usuarios</h3>
-        <p>Para que tu equipo trabaje con soltura: compartir archivos, colaborar en tiempo real y organizar el correo, la agenda y las reuniones.</p>
-        <ul class="tags"><li>Colaboración</li><li>Correo</li><li>Reuniones</li></ul>
+        <h3>Formación a usuarios y administradores</h3>
+        <p>Para tu equipo, lo que va a usar cada día. Para quien administra la consola, un apoyo al que consultar permisos, políticas y configuraciones poco habituales, como hacemos con los administradores de Granier.</p>
+        <ul class="tags"><li>Usuarios</li><li>Administradores</li></ul>
       </div>
+      <a class="card svc wide rv" href="/microsoft-365/" style="--s:1">
+        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
+        <h3>¿Trabajáis con Microsoft 365?</h3>
+        <p>Somos expertos en Microsoft 365: licencias ajustadas al uso, migraciones por fases, copias de seguridad y soporte de primer nivel.</p>
+        <ul class="tags"><li>Expertos en Microsoft 365</li></ul>
+        <span class="more">Microsoft 365 <svg><use href="#i-arrow"/></svg></span>
+      </a>
     </div>
 
-    <h3 class="sub-head rv">Servicios que completan tu suite</h3>
+    <h3 class="sub-head rv">Servicios que completan tu Google Workspace</h3>
     <div class="res">
-      <a class="card rv" style="--s:0" href="/soporte-it/"><span class="cat">Soporte IT</span><h4>Tu departamento IT externo</h4><p>Consultoría, mantenimiento preventivo, reparaciones in situ y asistencia remota para los equipos desde los que trabajas.</p></a>
-      <a class="card rv" style="--s:1" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Tus aplicaciones, en nuestro datacenter</h4><p>Servidores virtuales y aplicaciones corporativas en nuestro datacenter propio y de proximidad, junto a tu suite.</p></a>
-      <a class="card rv" style="--s:2" href="/ciberseguridad/"><span class="cat">Ciberseguridad</span><h4>Cuentas y correo protegidos</h4><p>MFA, e-mail seguro y cloud seguro, con la certificación ENS en categoría ALTA como garantía.</p></a>
+      <a class="card rv" style="--s:0" href="/soporte-it/"><span class="cat">Soporte IT</span><h4>Los equipos desde los que trabajas</h4><p>Mantenimiento preventivo, asistencia remota y reparaciones in situ de ordenadores, portátiles y periféricos.</p></a>
+      <a class="card rv" style="--s:1" href="/ciberseguridad/"><span class="cat">Ciberseguridad</span><h4>Cuentas y correo protegidos</h4><p>Correo seguro con Hornetsecurity, protección de los equipos y revisión de accesos, junto a tu suite.</p></a>
+      <a class="card rv" style="--s:2" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Lo que no vive en Google</h4><p>Tu ERP y tus aplicaciones corporativas, en nuestro datacenter propio y de proximidad en Barcelona.</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ ENCAJE DE CLIENTE ============ -->
+<!-- ============ PARA QUIÉN ============ -->
 <section class="sec" aria-labelledby="h-aud" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Para quién</span>
-      <h2 id="h-aud">¿Para quién es este servicio?</h2>
-      <p class="lead">Para empresas e instituciones que quieren que su suite de productividad funcione sin fricciones, tengan o no equipo técnico propio.</p>
+      <h2 id="h-aud">¿A quién le encaja este servicio?</h2>
+      <p class="lead">A empresas e instituciones que quieren que Google Workspace funcione sin pensar en él, tengan o no equipo técnico propio.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Empresas que eligen su primera suite</h3><p>O que vienen de un servidor de correo propio y quieren dar el paso a la nube con criterio.</p></div>
-      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Organizaciones que se plantean cambiar de suite</h3><p>Con una razón concreta para hacerlo y la necesidad de migrar sin interrumpir el trabajo.</p></div>
-      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Equipos con perfiles muy distintos</h3><p>Oficinas, fábricas y tiendas, o quien solo usa el correo junto a quien vive en Excel: terreno del licenciamiento mixto.</p></div>
-      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Instituciones y equipos IT internos</h3><p>Administradores que quieren un apoyo experto en la consola y un proveedor certificado en ENS categoría ALTA.</p></div>
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Compráis las licencias directamente a Google</h3><p>Y queréis a alguien que las gestione, las ajuste y os atienda cuando algo falla.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Vuestros usuarios no trabajan igual</h3><p>Oficina, tienda y fábrica; quien solo usa el correo y quien vive en Drive y Meet. Terreno del licenciamiento mixto.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Venís de otro sistema</h3><p>Un servidor de correo propio, Microsoft 365 u otro proveedor, y queréis cambiar sin parar el trabajo.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Tenéis administradores internos</h3><p>Que quieren un apoyo experto para la consola, las políticas y las situaciones poco habituales.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ============ CASOS ============ -->
-<section class="sec" id="proyectos" aria-labelledby="h-proj" style="padding-top:0">
+<section class="sec" id="casos" aria-labelledby="h-proj" style="padding-top:0">
   <div class="wrap">
     <div class="proj-head" style="padding:0">
       <div class="sec-head rv" style="margin:0">
         <span class="eyebrow">Casos de éxito</span>
         <h2 id="h-proj">Google Workspace que ya funciona</h2>
       </div>
-      <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="proj-grid two">
-      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Servicios de Google · Soporte · Formación</span><h3>Granier</h3><p>Gestión de los servicios de Google, soporte a los administradores y formación a los usuarios, dentro de un servicio integral que incluye la informática y las telecomunicaciones de su nueva sede central, las redes de oficinas, fábricas y tiendas y el alojamiento cloud de aplicaciones corporativas.</p><div class="hl"><svg><use href="#i-grid"/></svg>Servicios de Google, soporte y formación</div></div></article>
-      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/consell-comarcal-garraf.webp" alt="Sede del Consell Comarcal del Garraf" loading="lazy" width="1333" height="1000"></figure><div class="body"><span class="kind">Google Workspace · Mantenimiento · Ciberseguridad</span><h3>Consell Comarcal del Garraf</h3><p>Esta institución trabaja con ADQA desde hace más de 15 años. Gestionamos sus servicios de Google Workspace, además del mantenimiento de sus sistemas informáticos, la resolución de incidencias, la gestión activa de la seguridad informática y las telecomunicaciones: la red interna y el radioenlace entre sus dos sedes administrativas.</p><div class="hl"><svg><use href="#i-clock"/></svg>Más de 15 años trabajando juntos</div></div></article>
+      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Google Workspace · Soporte · Formación</span><h3>Granier</h3><p>Gestionamos sus servicios de Google, damos soporte a sus administradores y formamos a sus usuarios. Forma parte de un servicio que incluye la informática y las telecomunicaciones de su sede central, las redes de oficinas, fábricas y tiendas y el cloud de sus aplicaciones corporativas.</p><div class="hl"><svg><use href="#i-grid"/></svg>Gestión de Google Workspace y formación</div></div></article>
+      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/consell-comarcal-garraf.webp" alt="Sede del Consell Comarcal del Garraf" loading="lazy" width="1333" height="1000"></figure><div class="body"><span class="kind">Google Workspace · Mantenimiento · Ciberseguridad</span><h3>Consell Comarcal del Garraf</h3><p>Trabajamos juntos desde hace más de 15 años. Gestionamos su Google Workspace, el mantenimiento de sus sistemas, la seguridad, la red interna y el radioenlace entre sus dos sedes administrativas.</p><div class="hl"><svg><use href="#i-clock"/></svg>Más de 15 años trabajando juntos</div></div></article>
+    </div>
+    <div class="cases-wp rv">
+      {{ m.anonCase(
+        "De Microsoft 365 a Google Workspace, con cada persona en su plan",
+        "Empresa de servicios · 35 usuarios",
+        "La empresa pagaba licencias completas de Microsoft 365 para todo el equipo, aunque la mayoría usaba sobre todo el correo y algún documento compartido.",
+        "Auditamos el uso real y propusimos licenciamiento mixto de Google Workspace: Business Starter para la mayoría y Business Standard para dirección y el equipo comercial. Migramos sin interrumpir el servicio y la gestión quedó centralizada en ADQA.",
+        ["-30% en licencias", "Ahorro desde el primer mes", "Migración sin interrupción"]
+      ) }}
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section class="sec" id="faq" aria-labelledby="h-faq" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Preguntas frecuentes</span>
-      <h2 id="h-faq">Preguntas frecuentes sobre Google Workspace y Microsoft 365</h2>
-    </div>
-    <div class="faq">
-      <div class="rv">
-        <h3>Para el manager</h3>
-        <details open><summary>¿Qué servicios ofrece ADQA para Google Workspace y Microsoft 365? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>ADQA implanta Google Workspace y Microsoft 365, migra el correo, los calendarios y los archivos, gestiona las licencias, también en licenciamiento mixto, da soporte a los administradores y forma a los usuarios. Es partner oficial de Google (Google Cloud Partner) y experta en Microsoft 365.</p></details>
-        <details><summary>¿Qué es mejor para mi empresa, Google Workspace o Microsoft 365? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Depende de cómo trabaja tu equipo. Google Workspace encaja con equipos que colaboran en tiempo real desde el navegador y valoran una gestión sencilla. Microsoft 365 encaja con entornos Windows, uso intensivo de Excel o de aplicaciones de escritorio y organizaciones con directorio de Microsoft. Analizamos tu caso y te recomendamos la opción más adecuada.</p></details>
-        <details><summary>¿Qué es el licenciamiento mixto? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Es asignar a cada usuario la licencia que corresponde a su uso real, en lugar de la misma para todo el equipo, combinando ediciones de una suite o incluso las dos suites cuando las condiciones de cada fabricante lo permiten. Así cada persona tiene lo que necesita y no pagas por funciones que nadie utiliza.</p></details>
-        <details><summary>¿Qué aporta trabajar con un partner oficial de Google? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Un interlocutor con experiencia en Google Workspace y capacidad para resolver necesidades específicas: elegir la edición, configurar la consola, gestionar las licencias, dar soporte a tus administradores y formar a tus usuarios. Es lo que hacemos, por ejemplo, en Granier, donde gestionamos los servicios de Google, damos soporte a los administradores y formamos a los usuarios.</p></details>
-      </div>
-      <div class="rv" style="--s:1">
-        <h3>Para el responsable técnico</h3>
-        <details><summary>¿Cómo se migra el correo de una suite a otra? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Se inventarían los buzones, calendarios, contactos y archivos; se crean los usuarios en la nueva suite; se copian los datos con las herramientas de migración de cada fabricante mientras la suite antigua sigue en uso; y se cambian los registros MX del dominio en el momento acordado, con una última sincronización para recoger lo más reciente.</p></details>
-        <details><summary>¿Qué registros DNS hay que configurar al implantar la suite? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Un registro TXT para verificar el dominio y los registros del correo: MX, que indica a qué servidores llega el correo; SPF, que declara qué servidores pueden enviar en nombre del dominio; DKIM, que firma digitalmente los mensajes; y DMARC, que define qué hacer con los mensajes que no superan esas comprobaciones.</p></details>
-        <details><summary>¿Pueden convivir Google Workspace y Microsoft 365 en la misma organización? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sí. Lo más habitual es usar una suite para el correo y la colaboración y licenciar las aplicaciones de escritorio de Microsoft solo para quien las necesita. También pueden convivir dos grupos de usuarios con el mismo dominio, configurando el enrutamiento del correo entre ambas plataformas, por ejemplo durante una migración.</p></details>
-        <details><summary>¿Cómo se protegen las cuentas de Google Workspace o Microsoft 365? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Con verificación en dos pasos (MFA) para todos los usuarios, políticas de acceso y de uso compartido de archivos, una revisión de quién tiene permisos de administrador, la autenticación del correo con SPF, DKIM y DMARC y, cuando hace falta, soluciones de e-mail seguro. Lo trabajamos junto con nuestro servicio de ciberseguridad.</p></details>
-      </div>
-    </div>
-  </div>
-</section>
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre Google Workspace") }}
 
 <!-- ============ RECURSOS ============ -->
 <section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
@@ -378,40 +326,17 @@ description: "Partner oficial de Google y expertos en Microsoft 365: implantaci�
       <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="res">
-      <a class="card rv" style="--s:0" href="/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/"><span class="cat">Workspace</span><h3>Cuándo tiene sentido cambiar de Microsoft 365 a Google Workspace (o al revés)</h3><p>Cambiar de suite tiene sentido cuando hay una razón concreta y sostenida que lo justifica —un cambio…</p></a>
-      <a class="card rv" style="--s:1" href="/recursos/google-workspace-para-equipos-remotos-e-hibridos/"><span class="cat">Workspace</span><h3>Google Workspace para equipos remotos e híbridos</h3><p>Google Workspace permite que un equipo trabaje de forma equivalente esté donde esté, porque el correo,…</p></a>
-      <a class="card rv" style="--s:2" href="/recursos/licencias-de-microsoft-365/"><span class="cat">Workspace</span><h3>Licencias de Microsoft 365</h3><p>Optimizar las licencias de Microsoft 365 significa asignar a cada usuario el plan que corresponde a su…</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/que-es-google-workspace-y-por-que-migrar-tu-empresa/"><span class="cat">Workspace</span><h3>Qué es Google Workspace y por qué migrar tu empresa</h3><p>Qué incluye cada edición, qué cambia en el trabajo diario y qué conviene revisar antes de dar el paso.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/"><span class="cat">Workspace</span><h3>Migración a Google Workspace sin parar tu negocio</h3><p>Las fases de una migración bien planificada, del inventario inicial al cambio del correo.</p></a>
+      <a class="card rv" style="--s:2" href="/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/"><span class="cat">Workspace</span><h3>Seguridad en Google Workspace: qué protege y qué configurar</h3><p>Lo que Google ya hace por ti y los ajustes de la consola que conviene revisar.</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="sec" id="contacto" aria-labelledby="h-con" style="padding-top:0">
-  <div class="wrap contact">
-    <div class="contact-info rv">
-      <span class="eyebrow" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25);color:#fff">¿Podemos ayudarte?</span>
-      <h2 id="h-con">Cuéntanos cómo trabaja tu equipo</h2>
-      <p>Además de la tecnología, se nos da bien escuchar y dar la respuesta ADQAda. Explícanos qué suite usas hoy y qué te gustaría mejorar: te diremos cómo podemos ayudarte, sin compromiso y con respuesta rápida.</p>
-      <div class="ways">
-        <a href="tel:+34938147380"><svg><use href="#i-phone"/></svg>+34 938 147 380</a>
-        <a href="mailto:info@adqa.com"><svg><use href="#i-mail"/></svg>info@adqa.com</a>
-        <div><svg><use href="#i-pin"/></svg><span style="font-weight:500">C. Masia d'en Notari 23 · 08800 Vilanova i la Geltrú</span></div>
-      </div>
-    </div>
-    <form class="form rv" style="--s:1" action="/contacto/" method="post" novalidate>
-      <div class="field"><label for="f-nombre">Nombre <i>*</i></label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
-      <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" autocomplete="organization"></div>
-      <div class="field"><label for="f-email">E-mail <i>*</i></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel"></div>
-      <div class="field full"><label for="f-area">Área de interés</label>
-        <select id="f-area" name="area"><option value="">Selecciona una opción</option><option>Soporte y mantenimiento IT</option><option>Redes e instalaciones</option><option>Telecomunicaciones</option><option>Sistemas y cloud</option><option>Ciberseguridad</option><option>Web y software</option><option selected>Google Workspace / Microsoft 365</option><option>Hardware y software</option><option>Varias / no lo sé</option></select></div>
-      <div class="field full"><label for="f-msg">¿Qué necesitas?</label><textarea id="f-msg" name="mensaje"></textarea></div>
-      <input class="hp" name="linkedin" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="check"><input type="checkbox" name="consentimiento" required> <span>He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>. <i style="color:var(--pink);font-style:normal">*</i></span></label>
-      <button class="btn btn-primary" type="submit">Enviar <svg><use href="#i-arrow"/></svg></button>
-      <p class="form-ok" role="status">Gracias. Hemos recibido tu mensaje y te responderemos muy pronto.</p>
-    </form>
-  </div>
-</section>
+{{ m.contactBlock(
+  title="¿Cómo tenéis hoy Google Workspace?",
+  text="Cuéntanos cuántos usuarios sois y cómo lo tenéis contratado. Lo revisamos con calma y te damos la respuesta ADQAda: qué cambiaríamos, cómo y por qué.",
+  area="Google Workspace / Microsoft 365"
+) }}
 
 {% endblock %}

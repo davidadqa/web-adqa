@@ -1,0 +1,368 @@
+---
+title: "Licenciamiento mixto de Google Workspace | ADQA"
+description: "Licenciamiento mixto de Google Workspace en Barcelona: cada usuario con la edición que usa, en el mismo dominio y sin migrar. Ahorro habitual del 20% al 40%."
+keyword: "licenciamiento mixto Google Workspace"
+breadcrumbs:
+  - { name: "Google Workspace", url: "/google-workspace/" }
+  - { name: "Licenciamiento mixto" }
+service:
+  name: "Licenciamiento mixto de Google Workspace"
+  serviceType: "Gestión de licencias de Google Workspace"
+faq:
+  manager:
+    - q: "¿Cuánto puedo ahorrar con el licenciamiento mixto de Google Workspace?"
+      a: "Habitualmente, entre un 20% y un 40% de la factura de licencias. Depende de cuántas personas tengan un uso básico frente a un uso avanzado y de la edición de partida. En un caso real de 40 puestos en Business Plus, pasar 20 de ellos a Business Starter redujo el coste anual un 34%. Para tu empresa lo calculamos con una auditoría del uso real del dominio, no con una estimación genérica."
+    - q: "¿Tengo que cambiar los correos o migrar algo?"
+      a: "No. El licenciamiento mixto no implica migración: se aplica sobre tu dominio de Google Workspace actual. Cambia la edición asignada a cada usuario, no dónde están sus correos ni sus archivos, y nadie tiene que cambiar su forma de trabajar."
+    - q: "¿Es una función oficial de Google o un truco de precio?"
+      a: "Es una función oficial de Google, llamada Partial Domain Licensing (PDL), disponible a través de partners autorizados. No es un descuento ni una interpretación libre de la tarifa: cada usuario paga el precio de la edición que tiene asignada."
+    - q: "¿Las licencias cuestan más si las compro a través de ADQA?"
+      a: "No. El precio de cada licencia es el mismo comprando a Google que a través de un partner. Lo que cambia es que, con un partner, puedes combinar ediciones en el mismo dominio y delegar la gestión de altas, bajas y cambios de plan, además de tener soporte de primer nivel."
+  tecnico:
+    - q: "¿Cómo se asigna una edición distinta a cada usuario?"
+      a: "Desde la consola de administración de Google, a nivel de unidad organizativa o de usuario individual, una vez el dominio está vinculado a un partner con Partial Domain Licensing. ADQA se encarga de esta parte, para que el cliente no tenga que hacerlo."
+    - q: "¿Qué pasa con el almacenamiento si un usuario baja a Business Starter?"
+      a: "Cada edición aporta una cantidad distinta de almacenamiento: 30 GB por usuario en Business Starter frente a 5 TB en Business Plus. Antes de cambiar el plan a nadie, revisamos cuánto espacio usa en Gmail, Drive y Fotos y lo tenemos en cuenta en la propuesta, para que nadie se quede sin espacio."
+    - q: "¿Puedo cambiar la edición de un usuario cuando quiera?"
+      a: "Sí. Si una persona cambia de puesto o de necesidades, ajustamos su licencia sin trámites con Google por tu parte. Si la modalidad de compromiso de tu contrato condiciona cuándo se aplica un cambio, te lo explicamos antes de hacerlo."
+    - q: "¿Qué pasa con los datos y la administración del dominio?"
+      a: "Los datos siguen siendo tuyos y siguen alojados en tu dominio de Google Workspace. El licenciamiento mixto no afecta a la propiedad ni a la ubicación de los datos, solo a qué edición tiene asignada cada usuario. Las cuentas de administrador de tu empresa siguen siendo tuyas."
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}
+<style>
+/* Licenciamiento mixto: tablas (.vs), orden alterno de .split y rejilla de casos */
+.vs{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.vs table{width:100%;border-collapse:collapse;text-align:left}
+.vs th,.vs td{padding:18px 24px;vertical-align:top;font-size:.97rem;color:var(--gray);border-top:1px solid var(--line)}
+.vs thead th{border-top:0;background:var(--surface-2);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.vs thead th+th{color:var(--ink)}
+.vs tbody th{width:30%;font-weight:600;color:var(--ink)}
+.vs tr.fit th,.vs tr.fit td{background:var(--pink-50);color:var(--ink)}
+.vs.calc tbody th{width:50%}
+.vs td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.case-feat{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding:clamp(26px,4vw,44px)}
+.case-feat .txt{display:grid;gap:14px}
+.case-feat .kind{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
+.cases-wp{margin-top:14px}
+@media (min-width:1061px){.split.rev .txt{order:2}}
+@media (max-width:1060px){.case-feat{grid-template-columns:1fr;gap:28px}}
+@media (max-width:720px){
+  .vs thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .vs table,.vs tbody,.vs tr,.vs th,.vs td{display:block;width:auto}
+  .vs tr{padding:18px 20px;border-top:1px solid var(--line)}
+  .vs tbody tr:first-child{border-top:0}
+  .vs th,.vs td{border:0;padding:0}
+  .vs tbody th{width:auto;margin-bottom:10px;font-size:1.02rem}
+  .vs td+td{margin-top:10px}
+  .vs td::before{content:attr(data-l);display:block;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pink-600);margin-bottom:2px}
+  .vs tr.fit{background:var(--pink-50)}
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Partner oficial de Google · Más de 30 años · ISO 9001:2015</span>
+    <h1 id="h-hero" data-words>Licenciamiento mixto de Google Workspace: <span class="accent">cada usuario, con el plan que necesita</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Quien solo usa el correo y Drive no necesita la misma edición que quien graba reuniones o guarda datos con retención. Combinamos ediciones en tu mismo dominio, sin migrar nada, para empresas de Barcelona y de toda Cataluña.</p>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="#contacto">Calcula tu caso con nosotros <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#caso">Ver un caso real</a>
+    </div>
+    <div class="trust fade-in" style="--d:1.1s">
+      <span><svg><use href="#i-check"/></svg>Google Cloud Partner</span>
+      <span><svg><use href="#i-check"/></svg>Sin migración ni cambios de correo</span>
+      <span><svg><use href="#i-check"/></svg>Mismo dominio</span>
+    </div>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-sum" style="padding:clamp(56px,7vw,88px) 0 0">
+  <div class="wrap intro">
+    <div class="rv" style="display:grid;gap:22px">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-sum" class="sr">¿Qué es el licenciamiento mixto de Google Workspace?</h2>
+      <p class="tldr"><strong>ADQA, partner oficial de Google, aplica el licenciamiento mixto de Google Workspace a empresas de Barcelona y Cataluña:</strong> asigna a cada usuario la edición que usa de verdad dentro del mismo dominio, sin migrar correos ni archivos. Habitualmente reduce la factura de licencias entre un 20% y un 40%. En un caso real con 40 puestos, el ahorro fue del 34%.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv" style="--s:0"><b>20–40<small>%</small></b><span>de ahorro habitual en la factura de licencias, según el reparto de usos</span></div>
+      <div class="stat rv" style="--s:1"><b><span data-count="34">0</span><small>%</small></b><span>menos en un caso real de 40 puestos con Business Plus</span></div>
+      <div class="stat rv" style="--s:2"><b>0</b><span>migraciones: el correo y los archivos se quedan donde están</span></div>
+      <div class="stat rv" style="--s:3"><b>Partner</b><span>oficial de Google (Google Cloud Partner)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ HACEMOS POSIBLE ============ -->
+<section class="sec" aria-labelledby="h-pos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Lo que cambia en tu factura</span>
+      <h2 id="h-pos">Que nadie pague por funciones que no usa</h2>
+      <p class="lead">El plan se decide una vez, al contratar, y casi nunca se vuelve a mirar. Revisarlo con datos cambia cuatro cosas.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Cada persona, en su edición</h3><p>Backoffice en Business Starter, consultores en Standard y dirección en Plus, todos en el mismo dominio.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Decisiones con datos</h3><p>Miramos qué usa cada usuario: almacenamiento, grabaciones, controles de seguridad. Nada de suponer por el cargo.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-check"/></svg></span><h3>Altas con el plan correcto</h3><p>Quien entra empieza en la edición que le corresponde, no en la más alta por defecto.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-file"/></svg></span><h3>Una factura que se revisa</h3><p>Sin licencias de gente que ya no está ni planes que nadie ha vuelto a mirar desde el primer día.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ ES EL PDL ============ -->
+<section class="sec" id="que-es" aria-labelledby="h-pdl" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Partial Domain Licensing (PDL)</span>
+      <h2 id="h-pdl">¿Qué es el licenciamiento mixto y por qué lo ofrece un partner?</h2>
+      <p>Técnicamente se llama Partial Domain Licensing (PDL). Permite asignar ediciones distintas de Google Workspace a usuarios distintos dentro del mismo dominio: unos con Business Starter, otros con Business Standard y otros con Business Plus.</p>
+      <p>Con las condiciones actuales de Google, si compras directamente, el dominio queda vinculado a una sola edición para todos. El PDL se activa cuando el dominio está vinculado a un partner oficial: es una condición técnica de la plataforma, no una decisión comercial.</p>
+      <p>En Microsoft 365, en cambio, combinar planes en el mismo tenant es estándar. Lo explicamos en <a class="txt-link" href="/microsoft-365/#planes">Microsoft <span class="nw">365<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+    <div class="vs rv" style="--s:1">
+      <table>
+        <caption class="sr">Comprar Google Workspace directamente a Google o con un partner</caption>
+        <thead><tr><th scope="col"><span class="sr">Aspecto</span></th><th scope="col">Directo a Google</th><th scope="col">Con partner</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ediciones por dominio</th><td data-l="Directo a Google">Una, para todos los usuarios</td><td data-l="Con partner">Varias, combinables por usuario</td></tr>
+          <tr><th scope="row">Qué pagas</th><td data-l="Directo a Google">La misma edición para todos</td><td data-l="Con partner">La edición de cada usuario</td></tr>
+          <tr><th scope="row">Precio de cada licencia</th><td data-l="Directo a Google">Tarifa de Google</td><td data-l="Con partner">El mismo</td></tr>
+          <tr><th scope="row">Cambios de plan</th><td data-l="Directo a Google">Los haces tú en la consola</td><td data-l="Con partner">Los gestiona el partner</td></tr>
+          <tr><th scope="row">Soporte</th><td data-l="Directo a Google">Directo con Google</td><td data-l="Con partner">Primer nivel con quien conoce tu dominio</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDICIONES ============ -->
+<section class="sec" id="ediciones" aria-labelledby="h-ed" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Ediciones combinables</span>
+      <h2 id="h-ed">¿Qué edición necesita cada persona?</h2>
+      <p class="lead">Una guía de partida. La decisión final sale de lo que cada usuario usa de verdad.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="n">BUSINESS STARTER</span><h3>Uso básico</h3><p>Correo, Drive con 30 GB por usuario y videollamadas. Para quien trabaja sobre todo con el correo y algún documento.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">BUSINESS STANDARD</span><h3>Colaboración diaria</h3><p>Más almacenamiento, grabación de reuniones y herramientas de colaboración avanzadas. Para equipos que viven en Meet y Drive.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">BUSINESS PLUS</span><h3>Seguridad y retención</h3><p>5 TB por usuario, seguridad avanzada, auditoría y retención de datos. Para dirección o puestos con información sensible.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">ENTERPRISE</span><h3>Cumplimiento exigente</h3><p>Para entornos con requisitos normativos estrictos y necesidades avanzadas de control y seguridad.</p></div>
+    </div>
+    <p class="note-src rv">Las funciones y el almacenamiento de cada edición los fija Google y pueden cambiar. Complementos como Google AI Ultra for Business se pueden añadir solo a quien los va a usar.</p>
+  </div>
+</section>
+
+<!-- ============ CÁLCULO ============ -->
+<section class="sec" id="calculo" aria-labelledby="h-calc" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Un ejemplo con números</span>
+      <h2 id="h-calc">Cuánto se puede ahorrar: un ejemplo con 10 usuarios</h2>
+      <p class="lead">Diez personas con Business Plus. ¿Qué pasa si las que tienen un uso básico pasan a Business Starter? La horquilla habitual sale de aquí: depende de cuántas de cada diez lo necesitan.</p>
+    </div>
+    <div class="vs calc rv">
+      <table>
+        <caption class="sr">Coste anual de 10 licencias según cuántos usuarios pasan de Business Plus a Business Starter</caption>
+        <thead><tr><th scope="col">Reparto de los 10 usuarios</th><th scope="col">Coste anual</th><th scope="col">Ahorro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">10 en Business Plus (punto de partida)</th><td class="num" data-l="Coste anual">2.532,00 €</td><td data-l="Ahorro">—</td></tr>
+          <tr><th scope="row">7 en Plus y 3 en Starter</th><td class="num" data-l="Coste anual">2.017,20 €</td><td class="num" data-l="Ahorro">20%</td></tr>
+          <tr><th scope="row">6 en Plus y 4 en Starter</th><td class="num" data-l="Coste anual">1.845,60 €</td><td class="num" data-l="Ahorro">27%</td></tr>
+          <tr class="fit"><th scope="row">5 en Plus y 5 en Starter (como el caso real)</th><td class="num" data-l="Coste anual">1.674,00 €</td><td class="num" data-l="Ahorro">34%</td></tr>
+          <tr><th scope="row">4 en Plus y 6 en Starter</th><td class="num" data-l="Coste anual">1.502,40 €</td><td class="num" data-l="Ahorro">41%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-src rv">Cálculo con las tarifas anuales por usuario del caso real de esta página, publicado en agosto de 2026: 253,20 € en Business Plus y 81,60 € en Business Starter. Las tarifas de Google cambian; para tu empresa lo recalculamos con las vigentes. Si partís de Business Standard, la diferencia por puesto es menor y el ahorro también.</p>
+  </div>
+</section>
+
+<!-- ============ CÓMO LO ACTIVAMOS (sección oscura) ============ -->
+<section class="sec dark-sec" id="proceso" aria-labelledby="h-proc">
+  <div class="wrap strengths">
+    <div class="sticky rv">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 id="h-proc">¿Cómo lo activamos en tu dominio?</h2>
+      <p class="lead" style="color:#bdbdbd">Sin tocar el correo, los archivos ni la forma de trabajar de nadie. Lo único que cambia es la edición que tiene asignada cada persona.</p>
+      <div><a class="btn btn-primary" href="#contacto">Empieza por la auditoría <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="stack">
+      <article class="st" style="--n:0">
+        <span class="num">01 · AUDITORÍA</span>
+        <h3>Vemos qué usa cada persona</h3>
+        <p>Almacenamiento en Gmail y Drive, grabación de reuniones, controles de seguridad y retención. Con datos reales de tu dominio.</p>
+      </article>
+      <article class="st" style="--n:1">
+        <span class="num">02 · PROPUESTA</span>
+        <h3>Perfiles, reparto y cálculo</h3>
+        <p>Agrupamos a las personas por lo que necesitan para trabajar, no por su cargo, y te enseñamos el coste antes y después.</p>
+      </article>
+      <article class="st" style="--n:2">
+        <span class="num">03 · VINCULACIÓN</span>
+        <h3>Tu dominio, vinculado a ADQA</h3>
+        <p>Traspasamos la gestión de las licencias a ADQA como partner oficial. Tus datos y tus cuentas de administrador siguen siendo tuyos.</p>
+      </article>
+      <article class="st" style="--n:3">
+        <span class="num">04 · ASIGNACIÓN</span>
+        <h3>Cada edición, en su sitio</h3>
+        <p>Asignamos las ediciones por unidad organizativa o por usuario desde la consola y comprobamos que nadie pierde nada de lo que usa.</p>
+      </article>
+      <article class="st" style="--n:4">
+        <span class="num">05 · DÍA A DÍA</span>
+        <h3>Ajustado con cada cambio</h3>
+        <p>Altas, bajas y cambios de puesto: adaptamos las licencias para que sigan reflejando a tu equipo, con revisiones periódicas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="sec" id="servicios" aria-labelledby="h-serv">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Qué incluye</span>
+      <h2 id="h-serv">Licenciamiento mixto, y todo lo que lo rodea</h2>
+    </div>
+    <div class="services">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <h3>Auditoría de uso</h3>
+        <p>Qué usa cada persona y qué edición le corresponde, con el cálculo del coste antes y después.</p>
+        <ul class="tags"><li>Por usuario</li><li>Por departamento</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-grid"/></svg></span>
+        <h3>Activación y asignación</h3>
+        <p>Vinculación del dominio a ADQA y asignación de ediciones por unidad organizativa o por usuario.</p>
+        <ul class="tags"><li>PDL</li><li>Unidades organizativas</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-user"/></svg></span>
+        <h3>Gestión continuada</h3>
+        <p>Altas, bajas, cambios de plan y renovaciones, y revisiones periódicas para que el reparto siga teniendo sentido.</p>
+        <ul class="tags"><li>Altas y bajas</li><li>Revisiones</li></ul>
+      </div>
+      <a class="card svc wide rv" href="/google-workspace/" style="--s:0">
+        <span class="ico"><svg><use href="#i-phone"/></svg></span>
+        <h3>Gestión completa de Google Workspace</h3>
+        <p>Soporte de primer nivel, configuración, migración y formación, con el mismo equipo que lleva tus licencias.</p>
+        <ul class="tags"><li>Google Cloud Partner</li><li>Primer nivel</li></ul>
+        <span class="more">Google Workspace <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card svc wide rv" href="/google-workspace/google-workspace-vs-microsoft-365/" style="--s:1">
+        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
+        <h3>¿Dudas entre Google y Microsoft?</h3>
+        <p>Si estás valorando la suite entera y no solo las licencias, empieza por la comparativa.</p>
+        <ul class="tags"><li>Comparativa</li><li>Sin preferencia</li></ul>
+        <span class="more">Google Workspace vs Microsoft 365 <svg><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section class="sec" aria-labelledby="h-aud" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Para quién</span>
+      <h2 id="h-aud">¿Cuándo tiene sentido el licenciamiento mixto?</h2>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Todos estáis en la misma edición</h3><p>Ya tenéis Google Workspace, pero con todo el equipo en el mismo plan.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Usos muy distintos</h3><p>Algunas personas aprovechan todas las funciones; otras usan el correo y Drive de vez en cuando.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Una factura que nadie revisa</h3><p>Las licencias se contrataron en su día y no se han vuelto a mirar desde entonces.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Vais a crecer</h3><p>Y queréis que las nuevas incorporaciones entren con la edición que necesitan, no con la más alta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS ============ -->
+<section class="sec" id="caso" aria-labelledby="h-caso" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Casos de éxito</span>
+        <h2 id="h-caso">Licenciamiento mixto en empresas reales</h2>
+      </div>
+      <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos <svg><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <article class="card case-feat rv" data-origen="wp">
+      <div class="txt">
+        <span class="kind">Pyme · 40 puestos de Google Workspace</span>
+        <h3>-34% en el coste de las licencias, sin perder funciones</h3>
+        <p><strong>Punto de partida:</strong> los 40 puestos tenían Business Plus, con 5 TB por usuario. Iban a incorporar a 20 personas más, y un grupo de 10 quería usar las funciones de IA más avanzadas de Google Workspace.</p>
+        <p><strong>Diagnóstico:</strong> revisamos el uso real de los 40 usuarios. La mitad necesitaba de verdad el almacenamiento y las funciones de Business Plus; la otra mitad podía pasar a Business Starter sin perder nada de lo que usaba.</p>
+        <p><strong>Solución:</strong> 20 puestos se quedaron en Business Plus y 20 pasaron a Business Starter. Las 20 incorporaciones entraron directamente en Business Starter, y Google AI Ultra for Business se añadió solo a las 10 personas que lo iban a usar.</p>
+        <p class="note-src">Caso basado en un proyecto real de ADQA, con datos anonimizados. Tarifas de Google vigentes en agosto de 2026, cuando se publicó el caso.</p>
+      </div>
+      <div class="vs">
+        <table>
+          <caption class="sr">Antes y después del licenciamiento mixto en los 40 puestos existentes</caption>
+          <thead><tr><th scope="col"><span class="sr">Concepto</span></th><th scope="col">Antes</th><th scope="col">Después</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Puestos existentes (40)</th><td data-l="Antes">40 Business Plus</td><td data-l="Después">20 Business Plus y 20 Business Starter</td></tr>
+            <tr class="fit"><th scope="row">Coste anual de esos 40 puestos</th><td class="num" data-l="Antes">10.128,00 €</td><td class="num" data-l="Después">6.696,00 € (-34%)</td></tr>
+            <tr><th scope="row">Incorporaciones nuevas</th><td data-l="Antes">Por defecto, edición superior</td><td data-l="Después">20 Business Starter, según necesidad</td></tr>
+            <tr><th scope="row">IA avanzada</th><td data-l="Antes">No disponible</td><td data-l="Después">10 Google AI Ultra, solo para quien la usa</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <div class="res two cases-wp rv">
+      {{ m.anonCase(
+        "Business Plus solo para quien lo necesita",
+        "Empresa industrial · Optimización de licencias",
+        "Tenía Google Workspace contratado directamente con Google y todo el equipo en Business Plus, incluidas las personas que solo usaban el correo. Cada alta o baja pasaba por la consola de Google.",
+        "Traspasamos la gestión a ADQA como partner oficial, auditamos el uso real y aplicamos licenciamiento mixto: Business Starter para los usuarios de uso básico y Business Plus solo para dirección.",
+        ["-40% en licencias", "Menos tiempo de administración interna"]
+      ) }}
+      {{ m.anonCase(
+        "Tres niveles para tres formas de trabajar",
+        "Consultora de servicios · 45 usuarios",
+        "Contratada directamente con Google, con todo el equipo en Business Standard. Backoffice usaba correo y Drive, consultoría necesitaba videollamadas y colaboración, y dirección pedía seguridad reforzada y retención de datos.",
+        "Vinculamos el dominio a ADQA como partner oficial y auditamos el uso por departamento. Business Starter para backoffice, Business Standard para consultoría y comercial, y Business Plus para dirección.",
+        ["-30% en licencias", "Altas, bajas y cambios centralizados en ADQA"]
+      ) }}
+    </div>
+  </div>
+</section>
+
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre el licenciamiento mixto") }}
+
+<!-- ============ RECURSOS ============ -->
+<section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Recursos</span>
+        <h2 id="h-res">Para ir al detalle</h2>
+      </div>
+      <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/recursos/coste-real/"><span class="cat">Workspace</span><h3>El coste real de tu suite de productividad</h3><p>Qué entra en la factura además de las licencias y dónde suele haber margen de ajuste.</p></a>
+      <a class="card rv" style="--s:1" href="/google-workspace/google-workspace-vs-microsoft-365/"><span class="cat">Comparativa</span><h3>Google Workspace vs Microsoft 365</h3><p>En qué se parecen, en qué se diferencian y cuándo encaja cada una.</p></a>
+      <a class="card rv" style="--s:2" href="/recursos/licencias-de-microsoft-365/"><span class="cat">Workspace</span><h3>Licencias de Microsoft 365</h3><p>Si tu empresa trabaja con Microsoft, cómo ajustar el plan de cada usuario en el mismo tenant.</p></a>
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(
+  title="¿Cuántos usuarios sois y qué edición tenéis?",
+  text="Con eso basta para empezar. Revisamos el uso real de tu dominio y te enseñamos el reparto y el cálculo antes de cambiar nada.",
+  area="Google Workspace / Microsoft 365"
+) }}
+
+{% endblock %}
