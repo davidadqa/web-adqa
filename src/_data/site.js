@@ -11,7 +11,7 @@ export default {
   claim: "Tocamos todas las teclas",
   claimFull: "Tocamos todas las teclas para que solo tengas que tocar una",
   orgDescription:
-    "Empresa TIC y operador de telecomunicaciones propio en Barcelona. Soporte IT, redes, telecomunicaciones, cloud en datacenter propio y de proximidad, desarrollo web y software, y ciberseguridad para empresas e instituciones, con un mismo equipo.",
+    "Empresa TIC de Vilanova i la Geltrú (Barcelona) y operador de telecomunicaciones propio. Soporte IT, redes, telecomunicaciones, cloud en datacenter propio y de proximidad, desarrollo web y software, y ciberseguridad para empresas e instituciones de toda España, con un mismo equipo.",
   phone: "+34 938 147 380",
   phoneE164: "+34938147380",
   email: "info@adqa.com",
