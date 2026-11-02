@@ -1,0 +1,51 @@
+# ADQA
+
+> ADQA (Ingeniería y Suministros Profesionales, S.L.) es una empresa TIC y operador de telecomunicaciones propio en Barcelona que se ocupa, con un mismo equipo, de la informática, las redes, las telecomunicaciones, el cloud, el desarrollo web y la ciberseguridad de empresas e instituciones públicas.
+
+Datos clave:
+
+- Más de 30 años de experiencia.
+- Certificación del Esquema Nacional de Seguridad (ENS) en categoría ALTA.
+- Certificado de calidad ISO 9001:2015.
+- Operador de telecomunicaciones propio, Anxanet. Conexiones a Internet de hasta 10 Gb.
+- Datacenter propio y de proximidad en Barcelona.
+- Equipo propio de instaladores, acreditado en trabajos en altura, espacios confinados y Telco 2.
+- Extranet de ticketing propia para gestionar incidencias en tiempo real.
+- Partner oficial de Google. Ruckus es su marca representada en WiFi. Expertos en Microsoft 365.
+- Según nuestra encuesta de calidad (ISO 9001): el 87 % valora el tiempo de respuesta como bueno o muy bueno, el 97 % el conocimiento del equipo técnico y el 95 % recomendaría ADQA por su capacidad de integración.
+- Claim: «Tocamos todas las teclas para que solo tengas que tocar una».
+- Sede: C. Masia d'en Notari 23, Nave 3, Polígono Masia d'en Frederic, 08800 Vilanova i la Geltrú (Barcelona). Teléfono: +34 938 147 380. E-mail: info@adqa.com.
+
+## Servicios
+
+- [Ciberseguridad para empresas en Barcelona](https://adqa.com/ciberseguridad/): Ciberseguridad para empresas en Barcelona: auditoría, protección de equipos, correo y red, copias verificadas, pentesting y detección gestionada con WatchGuard.
+- [Certificado ENS categoría ALTA: qué significa](https://adqa.com/ciberseguridad/certificado-ens/): ADQA tiene el certificado ENS en categoría ALTA, emitido por Applus, entidad acreditada por ENAC. Qué es el Esquema Nacional de Seguridad y qué te aporta.
+- [Pentesting para empresas en Barcelona](https://adqa.com/ciberseguridad/pentesting/): Pentesting para empresas en Barcelona: pruebas externas, internas, web, WiFi, cloud e ingeniería social, con informe ejecutivo, técnico y plan de remediación.
+- [Desarrollo de software a medida en Barcelona](https://adqa.com/desarrollo-software-medida/): Desarrollo de software a medida en Barcelona: intranets, portales de clientes, aplicaciones de gestión e integraciones con ERP, con especificación previa.
+- [Diseño y programación web para empresas en Barcelona](https://adqa.com/diseno-programacion-web/): Diseño y programación web para empresas en Barcelona: webs corporativas y tiendas online con los textos incluidos, software a medida y mantenimiento web.
+- [Mantenimiento web para empresas en Barcelona](https://adqa.com/diseno-programacion-web/mantenimiento-web-para-empresas/): Mantenimiento web para empresas en Barcelona: actualizaciones verificadas, copias diarias que comprobamos, seguridad, certificado SSL, dominios y soporte.
+- [Google Workspace para empresas en Barcelona](https://adqa.com/google-workspace/): Gestión de Google Workspace para empresas en Barcelona: licencias, licenciamiento mixto, migración y soporte de primer nivel, con un partner oficial de Google.
+- [Google Workspace vs Microsoft 365: cuál elegir](https://adqa.com/google-workspace/google-workspace-vs-microsoft-365/): Google Workspace vs Microsoft 365: en qué se parecen, en qué se diferencian y cuándo encaja cada una. Te ayudamos a elegir en Barcelona, sin preferencias.
+- [Licenciamiento mixto de Google Workspace](https://adqa.com/google-workspace/licenciamiento-mixto-google-workspace/): Licenciamiento mixto de Google Workspace en Barcelona: cada usuario con la edición que usa, en el mismo dominio y sin migrar. Ahorro habitual del 20% al 40%.
+- [Microsoft 365 para empresas en Barcelona](https://adqa.com/microsoft-365/): Expertos en Microsoft 365 para empresas en Barcelona: licencias ajustadas al uso real, migración por fases, copias de seguridad y soporte de primer nivel.
+- [Redes informáticas y WiFi para empresas en Barcelona](https://adqa.com/redes/): Redes informáticas y WiFi para empresas en Barcelona: diseño, cableado, fibra, switching y certificación, con equipo propio de instaladores y WiFi Ruckus.
+- [Certificación de redes en Barcelona: cobre y fibra](https://adqa.com/redes/certificacion-redes/): Certificación de redes en Barcelona: medimos cobre y fibra según ANSI/TIA-568 e ISO/IEC 11801, también instalaciones de terceros, con informe por punto.
+- [WiFi profesional para empresas en Barcelona](https://adqa.com/redes/wifi-entornos-complejos/): WiFi profesional para empresas en Barcelona: estudio de cobertura, Ruckus, Aruba o Huawei y diseño para naves, cámaras frigoríficas, minas y alta densidad.
+- [Sistemas y cloud para empresas en Barcelona](https://adqa.com/sistemas-cloud/): Sistemas y cloud para empresas en Barcelona: servidores físicos y virtuales, copias Veeam probadas y migraciones, en tu oficina o en nuestro datacenter.
+- [Datacenter de proximidad en Barcelona](https://adqa.com/sistemas-cloud/datacenter/): Datacenter de proximidad en Barcelona: housing, servidores virtuales y backup remoto, unidos a tu oficina por un enlace privado que no pasa por Internet.
+- [Soporte IT para empresas en Barcelona: mantenimiento](https://adqa.com/soporte-it/): Soporte IT para empresas en Barcelona: mantenimiento preventivo, asistencia remota e in situ, licencias e inventario, y cada incidencia en nuestra extranet.
+- [Telecomunicaciones para empresas en Barcelona](https://adqa.com/telecomunicaciones/): Telecomunicaciones para empresas en Barcelona con operador propio, Anxanet: Internet hasta 10 Gb, enlaces entre sedes, SD-WAN, SASE y centralitas IP Wildix.
+- [Networking empresarial en Barcelona](https://adqa.com/telecomunicaciones/networking/): Networking empresarial en Barcelona: arquitectura de red, VLAN, routing, QoS, VPN, SD-WAN y alta disponibilidad con MikroTik, Huawei y Aruba, todo documentado.
+
+## Empresa
+
+- [Informática, telecom y ciberseguridad en Barcelona](https://adqa.com/): Informática, telecomunicaciones y ciberseguridad para empresas en Barcelona, con un mismo equipo: operador propio, datacenter de proximidad, ENS e ISO 9001.
+- [Aviso legal](https://adqa.com/aviso-legal/): Aviso legal de ADQA: datos identificativos de Ingeniería y Suministros Profesionales, S.L., finalidad de la web, legislación aplicable y propiedad intelectual.
+- [Casos de éxito de informática y telecom en Barcelona](https://adqa.com/casos-de-exito/): Casos de éxito de ADQA en Barcelona y Cataluña: hospitales conectados a 100 Gb/s, fibra a 1.000 m bajo tierra, WiFi en fábricas, cloud y ciberseguridad.
+- [Certificado ISO 9001:2015 emitido por BSI](https://adqa.com/certificado-bsi/): ADQA tiene el certificado ISO 9001:2015 de gestión de la calidad, emitido por BSI. Consulta el certificado y qué supone para los servicios que te prestamos.
+- [Certificado ENS categoría ALTA](https://adqa.com/certificado-ens/): Certificado de conformidad de ADQA con el Esquema Nacional de Seguridad (ENS) en categoría ALTA. Consulta el certificado y qué significa para tu organización.
+- [Contacto: hablemos de la tecnología de tu empresa](https://adqa.com/contacto/): Contacta con ADQA en Barcelona: cuéntanos qué necesitas en informática, telecomunicaciones, ciberseguridad o web y te proponemos el siguiente paso.
+- [Política de privacidad](https://adqa.com/politica-de-privacidad/): Política de privacidad de ADQA: responsable del tratamiento, finalidades, legitimación, destinatarios y cómo ejercer tus derechos sobre tus datos personales.
+- [Política de seguridad de la información](https://adqa.com/politica-de-seguridad/): Política de seguridad de la información de ADQA, ligada a su certificación ENS categoría ALTA: qué es, a quién se aplica y dónde descargar el documento en PDF.
+- [Quiénes somos: informática y telecom en Barcelona](https://adqa.com/quienes-somos/): ADQA es una empresa de informática y telecomunicaciones en Barcelona: equipo propio de 18 personas, operador propio, datacenter de proximidad, ENS e ISO 9001.
+- [Trabaja con nosotros en Barcelona](https://adqa.com/trabaja-con-nosotros/): Trabaja en ADQA: envía tu candidatura espontánea si eres técnico de sistemas, redes, telecomunicaciones o desarrollo. Equipo propio de 18 personas en Barcelona.
