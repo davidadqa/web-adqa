@@ -29,3 +29,16 @@ Datos clave:
 ## Empresa
 {% for p in collections.all | sort(false, false, "url") %}{% if not (p.url in serviceUrls) and not p.data.noindex and not (p.url | startsWith("/recursos/")) %}
 - [{{ (p.data.llmsTitle or p.data.title) | replace(' | ADQA','') | replace('ADQA · ','') | safe }}]({{ p.url | absUrl }}): {{ p.data.description | safe }}{% endif %}{% endfor %}
+
+## Recursos
+
+- [Recursos: guías para empresas]({{ "/recursos/" | absUrl }}): guías prácticas de ADQA sobre redes y WiFi, ciberseguridad, cloud, telecomunicaciones, soporte IT, web y software, Google Workspace y Microsoft 365.
+{%- for c in blog.categories %}
+{%- set items = collections.articulos | byCategory(c.slug) | newestFirst %}
+{%- if items.length %}
+
+### {{ c.name }}
+{% for p in items %}
+- [{{ p.data.h1 | safe }}]({{ p.url | absUrl }}): {{ p.data.description | safe }}{% endfor %}
+{%- endif %}
+{%- endfor %}

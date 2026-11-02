@@ -2,9 +2,11 @@
 // las sirve y hace capturas en escritorio (1440) y móvil (390). Sirve para trabajar en paralelo
 // sin que el error de otra página rompa tu build.
 //
-// Uso: node tools/preview.mjs <carpeta-de-salida> src/redes/index.njk [src/redes/otra/index.njk ...]
+// Uso: node tools/preview.mjs <carpeta-de-salida> src/redes/index.njk [src/recursos/articulos/cable-o-wifi.md ...]
+// Copia también los ficheros de datos de directorio (*.11tydata.js) de las carpetas de cada página
+// y hace capturas de TODAS las páginas generadas (p. ej., las de una plantilla paginada).
 // Imprime un JSON por página con errores de consola, overflow horizontal, nº de h1, JSON-LD y rutas de las capturas.
-import { mkdtemp, mkdir, cp, symlink, rm } from "node:fs/promises";
+import { mkdtemp, mkdir, cp, symlink, rm, readdir } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 import { join, dirname, resolve } from "node:path";
 import { tmpdir } from "node:os";
@@ -28,12 +30,28 @@ try {
     const rel = p.replace(/^\.?\/?/, "");
     await mkdir(dirname(join(work, rel)), { recursive: true });
     await cp(join(root, rel), join(work, rel));
+    // Datos de directorio de la carpeta de la página y de sus carpetas padre.
+    for (let d = dirname(rel); d.startsWith("src/") ; d = dirname(d)) {
+      for (const f of await readdir(join(root, d))) {
+        if (f.endsWith(".11tydata.js") || f.endsWith(".11tydata.json")) {
+          await mkdir(join(work, d), { recursive: true });
+          await cp(join(root, d, f), join(work, d, f));
+        }
+      }
+    }
   }
   execFileSync("npx", ["@11ty/eleventy", "--quiet"], { cwd: work, stdio: ["ignore", "ignore", "inherit"] });
   const site = await serve(join(work, "_site"));
   const browser = await chromium.launch();
-  for (const p of pages) {
-    const urlPath = p.replace(/^\.?\/?src\//, "").replace(/index\.njk$/, "").replace(/\.njk$/, "/");
+  const built = [];
+  async function walk(dir, rel = "") {
+    for (const e of await readdir(dir, { withFileTypes: true })) {
+      if (e.isDirectory() && e.name !== "assets") await walk(join(dir, e.name), rel + e.name + "/");
+      else if (e.name === "index.html") built.push(rel);
+    }
+  }
+  await walk(join(work, "_site"));
+  for (const urlPath of built.sort()) {
     const slug = urlPath.replace(/\//g, "_") || "home";
     const d = await inspect(browser, site.base + urlPath, { shot: join(outDir, `${slug}-desktop.png`) });
     const m = await inspect(browser, site.base + urlPath, { width: 390, height: 844, shot: join(outDir, `${slug}-mobile.png`) });

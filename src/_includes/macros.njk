@@ -199,3 +199,25 @@
   </div>
 </section>
 {% endmacro %}
+
+{#- ---------- Blog ---------- -#}
+
+{#- Tarjeta de artículo (índice, categorías y relacionados). -#}
+{% macro articleCard(p, i=0, showCat=true) %}
+{%- set c = blog.bySlug[p.data.category] %}
+<a class="card art-card rv" style="--s:{{ i % 3 }}" href="{{ p.url }}">
+  {%- if showCat and c %}<span class="cat">{{ c.short }}</span>{% endif %}
+  <h3>{{ p.data.h1 }}</h3>
+  <p>{{ p.data.description }}</p>
+</a>
+{% endmacro %}
+
+{#- Navegación por categorías del blog. current = slug de la categoría actual ("" en el índice). -#}
+{% macro catChips(current="") %}
+<nav class="chips rv" aria-label="Categorías de recursos">
+  <a href="/recursos/"{% if not current %} aria-current="page"{% endif %}>Todos <span>{{ collections.articulos.length }}</span></a>
+  {%- for c in blog.categories %}
+  <a href="{{ c.url }}"{% if c.slug == current %} aria-current="page"{% endif %}>{{ c.short }} <span>{{ c.count }}</span></a>
+  {%- endfor %}
+</nav>
+{% endmacro %}

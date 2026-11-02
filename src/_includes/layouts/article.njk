@@ -1,0 +1,101 @@
+{#- Plantilla de artículo del blog. El cuerpo viene del Markdown; el resto, del front matter:
+    title, description, h1, lead, category, etiquetas, date, updated, tldr, related, servicio, imagen, faq. -#}
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+
+{% block jsonld %}{% set c = blog.bySlug[category] %}{{ { url: page.url, title: title, description: description, breadcrumbs: breadcrumbs, faq: faq, article: { headline: h1, datePublished: page.date | isoDate, dateModified: (updated or page.date) | isoDate, author: c.author, section: c.name, keywords: etiquetas, wordCount: content | wordCount } } | jsonld | safe }}{% endblock %}
+
+{% block head %}
+<meta property="article:published_time" content="{{ page.date | isoDate }}">
+<meta property="article:modified_time" content="{{ (updated or page.date) | isoDate }}">
+<meta property="article:section" content="{{ blog.bySlug[category].name }}">
+{% endblock %}
+
+{% block content %}
+{%- set c = blog.bySlug[category] %}
+{%- set doc = content | withToc %}
+{%- set svcUrl = servicio or c.service.url %}
+{%- set svcLabel = (servicio | navLabel) or c.service.label %}
+
+<!-- ============ CABECERA DEL ARTÍCULO ============ -->
+<section class="hero page-hero doc-hero art-hero" aria-labelledby="h-hero">
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <a class="eyebrow" href="{{ c.url }}">{{ c.name }}</a>
+    <h1 id="h-hero">{{ h1 }}</h1>
+    {%- if lead %}
+    <p class="lead">{{ lead }}</p>
+    {%- endif %}
+    <p class="art-meta">
+      <span>{{ c.author }}</span>
+      <span>Publicado el <time datetime="{{ page.date | isoDate }}">{{ page.date | fecha }}</time></span>
+      {%- if updated %}
+      <span>Revisado el <time datetime="{{ updated | isoDate }}">{{ updated | fecha }}</time></span>
+      {%- endif %}
+      <span>{{ content | readingTime }} min de lectura</span>
+    </p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ CUERPO ============ -->
+<section class="sec art-sec">
+  <div class="wrap art-layout">
+    <article class="art-main" aria-labelledby="h-hero">
+      {{ m.placeholder(imagen or ("Imagen destacada del artículo «" + h1 + "»"), "21/9", "art-ph") }}
+      <div class="art-summary card">
+        <span class="eyebrow">En resumen</span>
+        <p class="tldr">{{ tldr }}</p>
+      </div>
+      <div class="prose doc">
+{{ doc.html | safe }}
+      </div>
+      {%- if etiquetas and etiquetas.length %}
+      <ul class="art-tags" aria-label="Etiquetas">
+        {%- for t in etiquetas %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </article>
+    <aside class="art-aside" aria-label="Más sobre este tema">
+      {%- if doc.toc.length > 2 %}
+      <nav class="toc card" aria-label="En este artículo">
+        <p class="toc-title">En este artículo</p>
+        <ol>
+          {%- for t in doc.toc %}
+          <li><a href="#{{ t.id }}">{{ t.text }}</a></li>
+          {%- endfor %}
+        </ol>
+      </nav>
+      {%- endif %}
+      <a class="card svc-card" href="{{ svcUrl }}">
+        <span class="cat">Servicio relacionado</span>
+        <b>{{ svcLabel }}</b>
+        <span class="txt-link">Cómo trabajamos <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+    </aside>
+  </div>
+</section>
+
+{%- if faq %}
+{{ m.faqSection(faq, title="Preguntas frecuentes", eyebrow="Preguntas frecuentes") }}
+{%- endif %}
+
+{%- set rel = collections.articulos | relatedFor(page, related, category, 3) %}
+{%- if rel.length %}
+<!-- ============ RELACIONADOS ============ -->
+<section class="sec" aria-labelledby="h-rel" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Sigue leyendo</span>
+      <h2 id="h-rel">Artículos relacionados</h2>
+    </div>
+    <div class="res">
+      {%- for p in rel %}{{ m.articleCard(p, loop.index0) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{{ m.contactBlock(title=blog.cta.title, text=blog.cta.text, eyebrow="¿Hablamos?", area=c.area) }}
+{% endblock %}

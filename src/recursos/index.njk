@@ -1,0 +1,78 @@
+---
+title: "Recursos: guías de informática y telecom para empresas | ADQA"
+description: "Guías prácticas de ADQA sobre redes y WiFi, ciberseguridad, cloud, telecomunicaciones, soporte IT, web, Google Workspace y Microsoft 365 para empresas."
+keyword: "guías de informática para empresas"
+breadcrumbs:
+  - { name: "Recursos" }
+pageType: "CollectionPage"
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+
+{% block jsonld %}{{ { url: page.url, title: title, description: description, pageType: pageType, breadcrumbs: breadcrumbs, blog: { name: "Recursos de ADQA" }, itemList: collections.articulos | newestFirst | itemList } | jsonld | safe }}{% endblock %}
+
+{% block content %}
+{%- set arts = collections.articulos | newestFirst %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.1s">Recursos</span>
+    <h1 id="h-hero" data-words>Guías claras para decidir sobre la <em>tecnología</em> de tu empresa</h1>
+    <p class="lead fade-in" style="--d:.9s">Artículos prácticos de nuestros equipos de redes, ciberseguridad, cloud, telecomunicaciones, soporte, web y Workspace. Qué conviene saber antes de decidir, explicado sin tecnicismos de más.</p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN + CATEGORÍAS ============ -->
+<section class="sec blog-intro" aria-label="En resumen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">En resumen</span>
+      <p class="tldr"><strong>ADQA publica en Recursos {{ arts.length }} guías prácticas para empresas</strong>, escritas por sus equipos de especialistas, sobre redes y WiFi, ciberseguridad, cloud y datacenter, telecomunicaciones, soporte IT, desarrollo web y software, Google Workspace y Microsoft 365. Cada guía resume la respuesta al principio, compara las opciones y explica cuándo encaja cada una.</p>
+    </div>
+    {{ m.catChips("") }}
+  </div>
+</section>
+
+<!-- ============ PARA EMPEZAR ============ -->
+{%- set feat = collections.articulos | bySlugs(blog.featured) %}
+{%- if feat.length %}
+<section class="sec" aria-labelledby="h-feat" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Para empezar</span>
+      <h2 id="h-feat">Las preguntas que más nos hacen</h2>
+    </div>
+    <div class="res">
+      {%- for p in feat %}{{ m.articleCard(p, loop.index0) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ============ POR CATEGORÍA ============ -->
+{%- for c in blog.categories %}
+{%- set items = arts | byCategory(c.slug) %}
+{%- if items.length %}
+<section class="sec blog-cat" id="{{ c.slug }}" aria-labelledby="h-{{ c.slug }}" style="padding-top:0">
+  <div class="wrap">
+    <div class="blog-cat-head rv">
+      <div>
+        <h2 id="h-{{ c.slug }}">{{ c.name }}</h2>
+        <p>{{ c.intro }}</p>
+      </div>
+      <a class="btn btn-ghost" href="{{ c.url }}">Ver {{ items.length }} {{ "guía" if items.length == 1 else "guías" }} <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      {%- for p in items %}{% if loop.index <= 6 %}{{ m.articleCard(p, loop.index0, false) }}{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+{%- endfor %}
+
+{{ m.contactBlock(title="¿No encuentras lo que buscas?", text="Si tu pregunta no está aquí, escríbenos. Te respondemos con criterio técnico y sin compromiso.", eyebrow="¿Hablamos?", area="Varias / no lo sé") }}
+{% endblock %}

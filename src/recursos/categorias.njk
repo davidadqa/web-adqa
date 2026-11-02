@@ -1,0 +1,53 @@
+---
+pagination:
+  data: blog.categories
+  size: 1
+  alias: cat
+permalink: "/recursos/{{ cat.slug }}/"
+pageType: "CollectionPage"
+---
+{#- title, description, noindex y breadcrumbs: categorias.11tydata.js (a partir de src/_data/blog.js). -#}
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+
+{% block jsonld %}{{ { url: page.url, title: title, description: description, pageType: pageType, breadcrumbs: breadcrumbs, itemList: collections.articulos | byCategory(cat.slug) | newestFirst | itemList } | jsonld | safe }}{% endblock %}
+
+{% block content %}
+{%- set items = collections.articulos | byCategory(cat.slug) | newestFirst %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.1s">Recursos · {{ cat.name }}</span>
+    <h1 id="h-hero" data-words>{{ cat.h1 }}</h1>
+    <p class="lead fade-in" style="--d:.9s">{{ cat.intro }}</p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<section class="sec blog-intro" aria-label="Categorías">
+  <div class="wrap">
+    {{ m.catChips(cat.slug) }}
+  </div>
+</section>
+
+<!-- ============ ARTÍCULOS ============ -->
+<section class="sec" aria-labelledby="h-list" style="padding-top:0">
+  <div class="wrap">
+    <div class="blog-cat-head rv">
+      <div>
+        <h2 id="h-list">{{ items.length }} {{ "guía" if items.length == 1 else "guías" }} de {{ cat.name }}</h2>
+        <p>Autoría: {{ cat.author }}. Revisamos las guías para que sigan vigentes.</p>
+      </div>
+      <a class="btn btn-ghost" href="{{ cat.service.url }}">{{ cat.service.label }} <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      {%- for p in items %}{{ m.articleCard(p, loop.index0, false) }}{% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(title=blog.cta.title, text=blog.cta.text, eyebrow="¿Hablamos?", area=cat.area) }}
+{% endblock %}

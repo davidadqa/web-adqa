@@ -15,7 +15,7 @@ const root = resolve(dirname(new URL(import.meta.url).pathname), "..");
 const out = await mkdtemp(join(tmpdir(), "adqa-check-"));
 
 // Pendientes conocidos (fases posteriores): no cuentan como enlaces rotos.
-const LATER = [/^\/recursos\//, /^\/casos-de-exito\/.+/, /^\/ca\//];
+const LATER = [/^\/casos-de-exito\/.+/, /^\/ca\//];
 const BANNED = [
   [/primera empresa del Garraf|primera del Garraf/i, "«primera del Garraf» (decisión: eliminar)"],
   [/licencia propia/i, "«licencia propia» (decisión: no decirlo)"],
@@ -26,6 +26,11 @@ const BANNED = [
   [/\bFortinet\b|\bFluke\b|\bCisco\b|\bUbiquiti\b|\bHPE\b/, "marca no autorizada (D9)"],
   [/más de 25 años|más de veinte años/i, "dato no canónico"],
   [/\d+[.,]?\d*\s?€/, "precio (D8: no publicar precios)"],
+  [/Azure AD\b/, "nomenclatura antigua: «Microsoft Entra ID»"],
+  [/Partner Delegated Licensing/i, "término incorrecto (PDL)"],
+  [/preguntas reales que nos hacen|Para la dirección de la empresa/i, "texto heredado del WordPress"],
+  [/hemos ayudado a|en las (webs|empresas|instalaciones) que hemos|hemos visto (muchas|muchos|cómo|casos)/i, "prueba social en primera persona (blog)"],
+  [/nou\.adqa\.com/i, "enlace al WordPress de pruebas"],
 ];
 
 try {

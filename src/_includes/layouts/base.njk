@@ -8,7 +8,7 @@
 <link rel="canonical" href="{{ page.url | absUrl }}">
 <link rel="alternate" hreflang="es" href="{{ page.url | absUrl }}">
 <link rel="alternate" hreflang="x-default" href="{{ page.url | absUrl }}">
-<meta name="robots" content="{% if site.noindex or noindex %}noindex, nofollow{% else %}index, follow, max-image-preview:large{% endif %}">
+<meta name="robots" content="{% if site.noindex %}noindex, nofollow{% elif noindex %}noindex, follow{% else %}index, follow, max-image-preview:large{% endif %}">
 <meta name="theme-color" content="#E32772">
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="{{ ogType or 'website' }}">
@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
-{{ { url: page.url, title: title, description: description, isHome: isHome, pageType: pageType, service: service, breadcrumbs: breadcrumbs, faq: faq, extra: jsonldExtra } | jsonld | safe }}
+{% block jsonld %}{{ { url: page.url, title: title, description: description, isHome: isHome, pageType: pageType, service: service, breadcrumbs: breadcrumbs, faq: faq, extra: jsonldExtra } | jsonld | safe }}{% endblock %}
 </script>
 {% block head %}{% endblock %}
 </head>
