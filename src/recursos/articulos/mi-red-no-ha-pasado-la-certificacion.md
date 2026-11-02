@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/redes/certificacion-redes/"
 related: ["asi-se-certifica-una-red", "categorias-de-cableado", "certificacion-de-redes"]
 imagen: "Técnico rehaciendo el conector de una toma de red en un panel de parcheo, con el informe de certificación al lado"
-tldr: "Un punto «no apto» en una certificación indica que ese enlace concreto no cumple los márgenes de su categoría. No significa que toda la red esté mal. Las causas más frecuentes son conectores mal terminados y tramos más largos de lo que admite la norma. También cables doblados en exceso o algún componente de categoría inferior. Normalmente basta con corregir ese punto y volver a medirlo, sin repetir toda la certificación."
+tldr: "Un punto «no apto» en una certificación indica que ese enlace concreto no cumple los márgenes de su categoría. No significa que toda la red esté mal. Las causas más frecuentes son conectores mal terminados y tramos más largos de lo que admite la norma. También lo son los cables doblados en exceso o algún componente de categoría inferior. Normalmente basta con corregir ese punto y volver a medirlo, sin repetir toda la certificación."
 faq:
   manager:
     - q: "¿Un punto no apto significa que la red está mal instalada?"
@@ -26,7 +26,7 @@ faq:
     - q: "¿Hay que volver a certificar toda la red después de corregir un punto?"
       a: "No. Basta con volver a medir el punto corregido y actualizar el informe. El resto de la certificación sigue siendo válida si esa parte de tu instalación no se ha tocado."
     - q: "¿Qué se hace si el punto no apto está empotrado y es difícil de sustituir?"
-      a: "Primero se valora si se puede corregir la parte accesible. Por ejemplo, la toma o la conexión en el panel. Si no, puede hacer falta un recorrido alternativo. En instalaciones complejas se decide caso por caso, según el acceso físico disponible."
+      a: "Primero se valora si se puede corregir la parte accesible, como la toma o la conexión en el panel. Si no, puede hacer falta un recorrido alternativo. En instalaciones complejas se decide caso por caso, según el acceso físico disponible."
 ---
 Abres el informe y ves varias tomas marcadas como «no apto». Es normal que te surjan dudas. Lo primero que conviene saber: que un punto no pase la certificación no significa que tu red esté rota. Tampoco que haya que rehacer la instalación. Casi siempre es algo mucho más concreto, y tiene solución.
 
@@ -43,7 +43,7 @@ Cada punto se compara con los valores que admite la norma para su categoría. «
 
 Puede que hoy ese punto dé conexión sin problemas. Quien trabaja en esa mesa quizá no ha notado nada. Pero no hay garantía de que rinda según su categoría cuando le pidas más.
 
-El informe te indica qué parámetro ha fallado. En muchos casos, también en qué zona del enlace está el problema. Con eso, la causa suele quedar acotada antes de abrir ninguna caja.
+El informe te indica qué parámetro ha fallado y, en muchos casos, en qué zona del enlace está el problema. Con eso, la causa suele quedar acotada antes de abrir ninguna caja.
 
 ## Causas más habituales
 
@@ -60,9 +60,9 @@ El informe te indica qué parámetro ha fallado. En muchos casos, también en qu
 3. **Vuelve a medir solo ese punto.** No hace falta repetir la certificación entera.
 4. **Actualiza el informe.** La documentación final debe reflejar la corrección, para que la evidencia quede completa.
 
-La corrección la puede hacer el instalador original o el equipo que ha certificado. Lo importante es que después el punto se vuelva a medir con el equipo certificador. Igual que en cualquier [certificación de redes](/redes/certificacion-redes/).
+La corrección la puede hacer el instalador original o el equipo que ha certificado. Lo importante es que después el punto se vuelva a medir con el equipo certificador, como en cualquier [certificación de redes](/redes/certificacion-redes/).
 
-Lo más habitual es que los puntos no aptos sean excepciones dentro de una instalación correcta. Se resuelven rehaciendo un conector o corrigiendo un tramo. Otra cosa es que los fallos se repitan en muchos puntos y en varios parámetros. Imagina que casi todas las tomas de una misma planta fallan en la diafonía. Ahí te conviene revisar el material y el método de instalación antes de corregirlas una a una.
+Lo más habitual es que los puntos no aptos sean excepciones dentro de una instalación correcta. Suelen resolverse rehaciendo un conector o corrigiendo un tramo. Otra cosa es que los fallos se repitan en muchos puntos y en varios parámetros. Imagina que casi todas las tomas de una misma planta fallan en la diafonía. Ahí te conviene revisar el material y el método de instalación antes de corregirlas una a una.
 
 ## Cómo actuar según la causa
 

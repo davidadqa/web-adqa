@@ -22,9 +22,9 @@ faq:
       a: "Tiene un coste de mantenimiento que una web estática apenas necesita. Hay que actualizar el gestor y sus extensiones, y aplicar medidas de seguridad. Ese coste suele compensarse con la autonomía y el tiempo que gana tu equipo."
   tecnico:
     - q: "¿Qué exige un CMS en seguridad que no exige una web estática?"
-      a: "Mantener al día el núcleo, la plantilla y las extensiones, porque sus actualizaciones corrigen fallos de seguridad conocidos. También proteger el acceso al panel de administración. Y dar de baja las extensiones y las cuentas que nadie utiliza."
+      a: "Mantener al día el núcleo, la plantilla y las extensiones, porque sus actualizaciones corrigen fallos de seguridad conocidos. También proteger el acceso al panel de administración y dar de baja las extensiones y las cuentas que nadie utiliza."
     - q: "¿Se puede tener la velocidad de una web estática con la autonomía de un CMS?"
-      a: "En buena medida, sí. Hace falta una caché bien configurada, que guarda las páginas ya montadas. También un desarrollo cuidado de la plantilla y de las extensiones. Otra vía es un generador de webs estáticas, que crea las páginas a partir de contenidos editables. Su edición suele ser menos visual que en un CMS."
+      a: "En buena medida, sí. Hace falta una caché bien configurada y un desarrollo cuidado de la plantilla y de las extensiones. La caché guarda las páginas ya montadas. Otra vía es un generador de webs estáticas, que crea las páginas a partir de contenidos editables. Su edición suele ser menos visual que en un CMS."
     - q: "¿Qué hay que tener en cuenta al pasar de una web estática a un CMS?"
       a: "Es una migración habitual. Conserva las URL o redirígelas a las nuevas. Traslada el contenido que ya posiciona en los buscadores. Y comprueba que los formularios y las integraciones siguen funcionando después del cambio."
 ---
@@ -59,7 +59,7 @@ Cuando el contenido cambia a menudo, la autonomía que te da un gestor compensa 
 - **Extensiones** para sumar funciones sin programarlas desde cero, como un formulario de reservas o un segundo idioma.
 - **Roles y permisos de edición**, para que varias personas actualicen contenido sin acceso a la parte técnica.
 
-Para muchas empresas, la ventaja que más pesa es sencilla. Cambiar una frase o subir una foto sin pedírselo a nadie. El día que lanzas un producto nuevo, quien lleva el marketing sube la ficha esa misma mañana.
+Para muchas empresas, la ventaja que más pesa es sencilla: cambiar una frase o subir una foto sin pedírselo a nadie. El día que lanzas un producto nuevo, quien lleva el marketing sube la ficha esa misma mañana.
 
 La contrapartida es el mantenimiento. El gestor y sus extensiones reciben actualizaciones que hay que aplicar con método. Cómo hacerlo está en [actualizar WordPress tú mismo o con mantenimiento profesional](/recursos/actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional/).
 

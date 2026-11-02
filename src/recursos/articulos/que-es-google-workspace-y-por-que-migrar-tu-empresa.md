@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/google-workspace/"
 related: ["migracion-a-google-workspace-sin-parar-tu-negocio", "seguridad-en-google-workspace-que-protege-y-que-configurar", "google-workspace-para-equipos-remotos-e-hibridos"]
 imagen: "Equipo de oficina editando a la vez un mismo documento en sus portátiles, con el correo y el calendario abiertos en pantalla"
-tldr: "Google Workspace es el conjunto de aplicaciones cloud de Google para empresas. Reúne el correo con el dominio propio, el almacenamiento de archivos, el calendario y las videollamadas. Sus documentos los pueden editar varias personas a la vez. Todo se gestiona desde una consola de administración. Frente a montar cada pieza por separado, funciona integrado y se actualiza solo. Y no exige mantener servidores propios."
+tldr: "Google Workspace es el conjunto de aplicaciones cloud de Google para empresas. Reúne el correo con el dominio propio, el almacenamiento de archivos, el calendario y las videollamadas. Sus documentos los pueden editar varias personas a la vez. Todo se gestiona desde una consola de administración. Frente a montar cada pieza por separado, funciona integrado, se actualiza solo y no exige mantener servidores propios."
 faq:
   manager:
     - q: "¿Vale la pena migrar si el correo y los documentos ya funcionan?"
@@ -45,7 +45,7 @@ Google Workspace es algo más que Gmail con el nombre de tu empresa. Son aplicac
 - **Calendar**, agendas compartidas. Ves la disponibilidad real del equipo antes de proponer una reunión.
 - **La consola de administración**, el panel desde el que gestionas usuarios, dispositivos, seguridad y permisos de toda la organización.
 
-Las funciones concretas dependen de la edición contratada. Entre una y otra cambian sobre todo el almacenamiento, las opciones de las reuniones y los controles de seguridad. Imagina a quien atiende el mostrador y solo abre el correo y la agenda. Y a quien graba cada reunión con clientes. No necesitan lo mismo ni tienen por qué compartir edición. Con las condiciones actuales de Google, a través de un partner oficial puedes [combinar ediciones en el mismo dominio](/google-workspace/licenciamiento-mixto-google-workspace/).
+Las funciones concretas dependen de la edición contratada. Entre una y otra cambian sobre todo el almacenamiento, las opciones de las reuniones y los controles de seguridad. Imagina a quien atiende el mostrador y solo abre el correo y la agenda, y a quien graba cada reunión con clientes. No necesitan lo mismo ni tienen por qué compartir edición. Con las condiciones actuales de Google, a través de un partner oficial puedes [combinar ediciones en el mismo dominio](/google-workspace/licenciamiento-mixto-google-workspace/).
 
 <!-- PENDIENTE: que la compra directa a Google obligue a una sola edición por dominio es una política comercial de Google (informe, apartado 9). Revisarla periódicamente; afecta también a la FAQ de ediciones. -->
 

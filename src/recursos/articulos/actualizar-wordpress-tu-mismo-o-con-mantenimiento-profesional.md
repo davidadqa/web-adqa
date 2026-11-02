@@ -19,10 +19,10 @@ faq:
     - q: "¿Se pueden aplazar las actualizaciones?"
       a: "Unos días, sí, por ejemplo para probarlas antes. Aplazarlas durante meses no es buena idea. Las actualizaciones corrigen fallos de seguridad conocidos. Y cuantas más se acumulan, más difícil es aplicarlas todas a la vez sin conflictos."
     - q: "¿Cuánto tiempo interno se ahorra con un servicio de mantenimiento?"
-      a: "El clic de actualizar lleva poco. Lo que te ahorras es todo lo de alrededor: preparar la copia y revisar la web después. Si algo falla, también el diagnóstico y la corrección. Es la parte que pide más conocimiento técnico."
+      a: "El clic de actualizar lleva poco. Lo que te ahorras es todo lo de alrededor: preparar la copia y revisar la web después. Si algo falla, también te ahorras el diagnóstico y la corrección, que es la parte que pide más conocimiento técnico."
   tecnico:
     - q: "¿Cómo se prueba la compatibilidad antes de actualizar la web publicada?"
-      a: "La actualización se aplica primero en un entorno de pruebas, una copia equivalente a la web real. Allí se comprueba que las funciones críticas siguen funcionando. Por ejemplo, los formularios, la tienda o las integraciones."
+      a: "La actualización se aplica primero en un entorno de pruebas, una copia equivalente a la web real. Allí se comprueba que siguen funcionando las funciones críticas, como los formularios, la tienda o las integraciones."
     - q: "¿Qué se hace si una actualización falla a pesar de la prueba previa?"
       a: "Se vuelve al estado anterior con la copia hecha justo antes del cambio. Con la web ya funcionando, el conflicto se analiza con calma. Después se aplica la actualización cuando el desarrollador del plugin o de la plantilla lo haya corregido."
     - q: "¿Se actualizan también los plugins y la plantilla, o solo el núcleo de WordPress?"

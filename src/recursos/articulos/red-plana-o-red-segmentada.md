@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/redes/"
 related: ["switch-gestionado-o-no-gestionado", "firewall-gestionado-o-propio", "monitorizacion-de-red"]
 imagen: "Armario de comunicaciones con switches gestionados y cables de colores que identifican las distintas VLAN de la red"
-tldr: "Una red plana conecta todos los dispositivos en el mismo segmento. Es sencilla de montar, pero no tiene barreras internas. Una red segmentada divide la red en zonas según su función o su nivel de riesgo. Por ejemplo, oficina, producción, invitados o videovigilancia. Unas reglas fijan qué puede comunicarse con qué. Así, un problema en una zona no se extiende a las demás."
+tldr: "Una red plana conecta todos los dispositivos en el mismo segmento. Es sencilla de montar, pero no tiene barreras internas. Una red segmentada divide la red en zonas según su función o su nivel de riesgo, como oficina, producción, invitados o videovigilancia. Unas reglas fijan qué puede comunicarse con qué. Así, un problema en una zona no se extiende a las demás."
 faq:
   manager:
     - q: "¿Segmentar la red obliga a cambiar el cableado o el WiFi?"
@@ -22,15 +22,15 @@ faq:
       a: "Depende del tamaño de la red y del número de sedes. Habitualmente se resuelve en días, por fases. Los cambios que afectan al servicio se programan fuera de horario."
   tecnico:
     - q: "¿Qué segmentos se crean primero en una empresa típica?"
-      a: "Habitualmente, oficina o administración y servidores. También producción o dispositivos IoT, WiFi de invitados y videovigilancia. Cada uno va en su VLAN, con reglas de tráfico entre ellos según la necesidad real."
+      a: "Habitualmente se separan oficina o administración, servidores, producción o dispositivos IoT, WiFi de invitados y videovigilancia. Cada uno va en su VLAN, con reglas de tráfico entre ellos según la necesidad real."
     - q: "¿Dónde se aplican las reglas entre segmentos?"
       a: "Hay dos sitios habituales. El firewall permite reglas más finas y registra el tráfico entre zonas. Los switches de capa 3 del núcleo enrutan más rápido entre segmentos internos de confianza. Usan listas de acceso más sencillas. Muchas redes combinan los dos."
     - q: "¿Cómo se comprueba que una red está bien segmentada?"
-      a: "Revisando la configuración de switches, puntos de acceso y firewall. Y comprobando que el tráfico permitido entre segmentos coincide con el diseño. No basta con el diagrama: hay que probarlo desde dentro de cada zona."
+      a: "Revisando la configuración de switches, puntos de acceso y firewall, y comprobando que el tráfico permitido entre segmentos coincide con el diseño. No basta con el diagrama: hay que probarlo desde dentro de cada zona."
 ---
-Cuando una red funciona, nadie se pregunta cómo está organizada por dentro. En muchas empresas, ordenadores, impresoras y cámaras comparten la misma red, sin separación. Y con ellos, los sistemas de producción y el WiFi de invitados. Es la forma más rápida de montarla, y durante años nadie lo nota.
+Cuando una red funciona, nadie se pregunta cómo está organizada por dentro. En muchas empresas, ordenadores, impresoras, cámaras, sistemas de producción y el WiFi de invitados comparten la misma red, sin separación. Es la forma más rápida de montarla, y durante años nadie lo nota.
 
-La diferencia aparece el día que un equipo da problemas. O el día que una visita, conectada desde la sala de espera, ve tu servidor de facturas. En una red segmentada, cada problema se queda en su zona. En una red plana, no hay nada que lo frene.
+La diferencia aparece cuando un equipo da problemas o cuando una visita conectada desde la sala de espera ve tu servidor de facturas. En una red segmentada, cada problema se queda en su zona. En una red plana, no hay nada que lo frene.
 
 ## Qué implica una red plana
 
@@ -39,7 +39,7 @@ La diferencia aparece el día que un equipo da problemas. O el día que una visi
 - **Sin barreras internas.** Si un portátil se infecta, el problema puede llegar a los servidores o a los sistemas de producción. Lo mismo si un invitado conecta un dispositivo comprometido.
 - **Fallos que afectan a todos.** Un equipo que satura la red o un bucle en un switch se nota en toda la empresa. Y cuesta localizar el origen. Para un bucle basta un cable con los dos extremos enchufados al switch de debajo de una mesa.
 
-Es un hallazgo frecuente en las revisiones de red. Producción, oficina y WiFi de invitados comparten una misma red, completamente plana. Separarla suele ser una de las primeras recomendaciones, porque aprovecha en gran parte los equipos que ya tienes.
+En las revisiones de red es frecuente encontrar producción, oficina y WiFi de invitados en una misma red, completamente plana. Separarla suele ser una de las primeras recomendaciones, porque aprovecha en gran parte los equipos que ya tienes.
 
 ## Qué aporta segmentar con VLAN
 

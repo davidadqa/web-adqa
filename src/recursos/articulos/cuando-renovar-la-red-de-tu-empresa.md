@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/redes/"
 related: ["switch-gestionado-o-no-gestionado", "monitorizacion-de-red", "red-plana-o-red-segmentada"]
 imagen: "Técnico sustituyendo un switch antiguo por uno nuevo en el armario de red de una oficina, con los latiguillos etiquetados"
-tldr: "Conviene plantear la renovación de la red cuando los síntomas se repiten. Por ejemplo, lentitud recurrente, cortes intermitentes o falta de margen para nuevos equipos. También cuando la electrónica supera su vida útil razonable. En switches y puntos de acceso suele situarse entre cinco y siete años. Renovar por fases y con planificación es más ordenado que sustituir equipos a medida que fallan."
+tldr: "Conviene plantear la renovación de la red cuando los síntomas se repiten: lentitud recurrente, cortes intermitentes o falta de margen para nuevos equipos. También conviene cuando la electrónica supera su vida útil razonable. En switches y puntos de acceso suele situarse entre cinco y siete años. Renovar por fases y con planificación es más ordenado que sustituir equipos a medida que fallan."
 faq:
   manager:
     - q: "¿Renovar la red obliga a parar la actividad?"
@@ -19,25 +19,25 @@ faq:
     - q: "¿Cómo sé si el problema es la red o la conexión a internet?"
       a: "Midiendo en los dos lados. Haz una prueba de velocidad desde un equipo conectado por cable junto al router. Eso te muestra lo que da la línea. Si ahí va bien y en los puestos no, el cuello de botella está en tu red interna. Si también va lento ahí, apunta a la conexión contratada."
     - q: "¿Compensa esperar a que la red falle para invertir?"
-      a: "Normalmente no. Una sustitución urgente te obliga a decidir con prisa y con lo que haya disponible. Y sin margen para revisar el conjunto. Planificar la renovación te permite escalonar la inversión y elegir el momento del cambio."
+      a: "Normalmente no. Una sustitución urgente te obliga a decidir con prisa, con lo que haya disponible y sin margen para revisar el conjunto. Planificar la renovación te permite escalonar la inversión y elegir el momento del cambio."
   tecnico:
     - q: "¿Qué vida útil tienen los switches y los puntos de acceso?"
-      a: "Como orientación, entre cinco y siete años antes de plantear la renovación. Es lo habitual en un entorno empresarial con uso normal. Depende de la carga y del entorno físico. Y, sobre todo, de si el fabricante sigue publicando actualizaciones de firmware para ese modelo."
+      a: "Como orientación, entre cinco y siete años antes de plantear la renovación. Es lo habitual en un entorno empresarial con uso normal. Depende de la carga, del entorno físico y, sobre todo, de si el fabricante sigue publicando actualizaciones de firmware para ese modelo."
     - q: "¿Cómo se prioriza qué renovar primero si no hay presupuesto para todo?"
-      a: "Por criticidad. Primero, los equipos que paran la actividad si fallan. Por ejemplo, el núcleo de la red y los switches de distribución. Después, los switches de acceso y los puntos de acceso WiFi, según el impacto de cada fallo."
+      a: "Por criticidad. Primero, los equipos que paran la actividad si fallan, como el núcleo de la red y los switches de distribución. Después, los switches de acceso y los puntos de acceso WiFi, según el impacto de cada fallo."
     - q: "¿Una renovación por fases genera incompatibilidades entre equipos nuevos y antiguos?"
       a: "Bien planificada, no. Se diseña cómo convivirán los equipos nuevos y los antiguos durante la transición. La segmentación y la configuración quedan preparadas de antemano. Así cada fase apenas se nota en el día a día."
 ---
-Una red casi nunca falla de golpe. Antes suele dar señales pequeñas. Una lentitud a ciertas horas del día. Un corte que se resuelve solo. Un dispositivo que tarda en conectar. Ninguna parece grave por separado. Por eso es fácil acostumbrarse a convivir con ellas. Es lo que ocurre con la videollamada que se congela a media mañana y que ya nadie comenta.
+Una red casi nunca falla de golpe. Antes suele dar señales pequeñas: una lentitud a ciertas horas del día, un corte que se resuelve solo, un dispositivo que tarda en conectar. Ninguna parece grave por separado, y por eso es fácil acostumbrarse a convivir con ellas. Es lo que ocurre con la videollamada que se congela a media mañana y que ya nadie comenta.
 
 Si sabes leerlas, puedes decidir con margen si conviene revisar, ajustar o renovar. Y hacerlo cuando le viene bien a tu empresa, no cuando lo impone una avería.
 
 ## Señales de que la red se ha quedado corta
 
-- **Lentitud que va y viene sin motivo claro.** Suele indicar equipos al límite de su capacidad. Sobre todo si coincide con los momentos de más uso.
+- **Lentitud que va y viene sin motivo claro.** Suele indicar equipos al límite de su capacidad, sobre todo si coincide con los momentos de más uso.
 - **Dispositivos que tardan en conectar o se desconectan solos.** Es frecuente en puntos de acceso o switches antiguos que no gestionan bien la carga actual.
 - **Incidencias que se resuelven reiniciando.** Si reiniciar un equipo es la solución habitual, la causa de fondo sigue ahí.
-- **Falta de margen para crecer.** Añadir un puesto o una cámara obliga a «hacer sitio» quitando otra cosa. Por ejemplo, desenchufar la impresora del switch para conectar la cámara nueva. Es señal de que tu red está al límite.
+- **Falta de margen para crecer.** Si añadir un puesto o una cámara obliga a «hacer sitio» quitando otra cosa, tu red está al límite. Pasa, por ejemplo, cuando desenchufas la impresora del switch para conectar la cámara nueva.
 - **Equipos sin actualizaciones del fabricante.** Un switch o un punto de acceso sin firmware nuevo se queda atrás en seguridad y en funciones.
 - **Electrónica con muchos años.** El hardware de red no se degrada a la vista. Pero pierde fiabilidad y se aleja de los estándares actuales. Como orientación, la vida útil de switches y puntos de acceso suele situarse entre cinco y siete años. Depende de la carga y del entorno.
 
@@ -60,7 +60,7 @@ Piensa en un switch que deja de funcionar un viernes por la tarde. Compras lo qu
 - **Elegir el momento** del cambio, por zonas o fuera de horario. La red actual sigue funcionando hasta entonces.
 - **Aprovechar para ordenar**: segmentar la red, documentarla y sustituir los [switches no gestionados](/recursos/switch-gestionado-o-no-gestionado/) que limitan la visibilidad.
 
-Un escenario frecuente es la red que se ha ido renovando pieza a pieza durante años. Cada vez, por una urgencia distinta. Funciona, pero es un mosaico de equipos de distintas generaciones que nadie ha revisado en conjunto. Una revisión completa te ayuda a decidir qué se aprovecha y qué conviene cambiar. El método, del análisis inicial a la instalación por fases, lo tienes en [redes informáticas para empresas](/redes/).
+Un escenario frecuente es la red que se ha ido renovando pieza a pieza durante años, cada vez por una urgencia distinta. Funciona, pero es un mosaico de equipos de distintas generaciones que nadie ha revisado en conjunto. Una revisión completa te ayuda a decidir qué se aprovecha y qué conviene cambiar. El método, del análisis inicial a la instalación por fases, lo tienes en [redes informáticas para empresas](/redes/).
 
 ## Cómo decidirlo
 

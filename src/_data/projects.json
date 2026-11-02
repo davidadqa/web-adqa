@@ -5,7 +5,7 @@
   "image": "consorci-sanitari-hospital.webp",
   "alt": "Hospital del Consorci Sanitari Alt Penedès-Garraf",
   "kind": "Proyecto y mantenimiento 24/7 · Informática y telecom",
-  "summary": "Unimos los hospitales con enlaces licenciados de muy alta capacidad y fibra oscura MUX-DEMUX. Y montamos redes WiFi en todos los centros para pacientes y usuarios.",
+  "summary": "Unimos los hospitales con enlaces licenciados de muy alta capacidad y fibra oscura MUX-DEMUX. En todos los centros montamos redes WiFi para pacientes y usuarios.",
   "highlight": "100 Gb/s entre sedes",
   "icon": "i-signal"
  },
@@ -35,7 +35,7 @@
   "image": "granier-tienda.webp",
   "alt": "Tienda Granier",
   "kind": "Instalaciones · Mantenimiento · Telecom · Cloud",
-  "summary": "Nos encargamos de la informática y las telecomunicaciones de la nueva sede central. También las redes de oficinas, fábricas y tiendas. Y el cloud para aplicaciones corporativas, con una centralita virtual entre sedes.",
+  "summary": "Nos encargamos de la informática y las telecomunicaciones de la nueva sede central. También llevamos las redes de oficinas, fábricas y tiendas, el cloud para aplicaciones corporativas y una centralita virtual entre sedes.",
   "highlight": "Gestión de Google Workspace y formación",
   "icon": "i-grid"
  },
@@ -45,7 +45,7 @@
   "image": "pimec-sede.webp",
   "alt": "Auditorio de la sede de PIMEC",
   "kind": "Instalaciones · Cloud · Ciberseguridad",
-  "summary": "Nos ocupamos de todo el mantenimiento, de las telecomunicaciones y del WiFi Ruckus. Montamos el nuevo CPD y la interconexión de sedes. Y llevamos networking, seguridad y suministro continuado.",
+  "summary": "Nos ocupamos de todo el mantenimiento, de las telecomunicaciones y del WiFi Ruckus. Montamos el nuevo CPD y la interconexión de sedes, y llevamos networking, seguridad y suministro continuado.",
   "highlight": "Nuevo CPD e interconexión de sedes",
   "icon": "i-cloud"
  },
@@ -65,7 +65,7 @@
   "image": "consell-comarcal-garraf.webp",
   "alt": "Sede del Consell Comarcal del Garraf",
   "kind": "Mantenimiento · Networking · Ciberseguridad",
-  "summary": "Mantenemos sus sistemas y gestionamos la seguridad de forma activa. Llevamos la red interna y el radioenlace entre las dos sedes administrativas. Y gestionamos su Google Workspace.",
+  "summary": "Mantenemos sus sistemas y gestionamos la seguridad de forma activa. Llevamos la red interna, el radioenlace entre las dos sedes administrativas y su Google Workspace.",
   "highlight": "Más de 15 años trabajando juntos",
   "icon": "i-clock"
  },
@@ -85,7 +85,7 @@
   "image": "web-vilanova.webp",
   "alt": "Web del Ajuntament de Vilanova i la Geltrú",
   "kind": "Web · Telecom · Instalaciones",
-  "summary": "Ordenamos el contenido de la web municipal y definimos sus funcionalidades. Hicimos el diseño gráfico y la programación HTML y CSS. Varias empresas municipales nos confían telecom e instalaciones.",
+  "summary": "Ordenamos el contenido de la web municipal y pusimos en marcha funcionalidades. Hicimos el diseño gráfico y la programación HTML y CSS. Varias empresas municipales nos confían telecom e instalaciones.",
   "highlight": "Diseño y programación de la web",
   "icon": "i-code"
  }

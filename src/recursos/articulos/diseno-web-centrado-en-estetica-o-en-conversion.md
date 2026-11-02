@@ -22,15 +22,15 @@ faq:
       a: "No. Se trata de aplicar la identidad de marca dentro de una estructura pensada para guiar al visitante. Bien resueltos, los dos enfoques se refuerzan. La marca genera confianza y la estructura la convierte en contactos."
   tecnico:
     - q: "¿Qué elementos mejoran la tasa de conversión de una web?"
-      a: "Lo que más ayuda es una jerarquía visual clara, con llamadas a la acción visibles sin desplazarse demasiado. Los formularios cortos también suman. Los testimonios o casos funcionan mejor cerca del momento de decidir, no solo al final de la página."
+      a: "Ayudan una jerarquía visual clara y unas llamadas a la acción visibles sin desplazarse demasiado. Los formularios cortos también suman. Los testimonios o casos funcionan mejor cerca del momento de decidir, no solo al final de la página."
     - q: "¿Se puede medir el efecto de un rediseño orientado a conversión?"
-      a: "Sí. Se compara la tasa de conversión antes y después con la analítica web. Si el volumen de visitas lo permite, también con pruebas A/B, que muestran dos versiones a visitantes distintos. Se aplican a elementos concretos, como el texto de un botón o la longitud de un formulario."
+      a: "Sí. Se compara la tasa de conversión antes y después con la analítica web. Si el volumen de visitas lo permite, también se hacen pruebas A/B, que muestran dos versiones a visitantes distintos. Se aplican a elementos concretos, como el texto de un botón o la longitud de un formulario."
     - q: "¿Priorizar la conversión afecta al SEO?"
       a: "No tiene por qué. Una estructura clara y una navegación bien pensada suelen favorecer también el posicionamiento. El contenido relevante es más fácil de encontrar, tanto para las personas como para los buscadores."
 ---
 Hay webs que causan una gran primera impresión y apenas generan contactos. Y hay webs sencillas que convierten bien, porque están construidas para llevar al visitante hasta la acción.
 
-No hace falta elegir entre una cosa y otra. Lo útil es entender qué aporta cada uno y por qué funcionan mejor pensados juntos desde el principio.
+No hace falta elegir entre una cosa y otra. Lo útil es entender qué aporta cada enfoque y por qué funcionan mejor pensados juntos desde el principio.
 
 ## Lo que aporta un diseño centrado en la estética
 
@@ -46,7 +46,7 @@ Es una base necesaria. Alguien compara proveedores con varias pestañas abiertas
 
 Aquí es donde una web cuidada se convierte, además, en una web que trabaja:
 
-- **Jerarquía visual clara**, que lleva la mirada hacia la información y la acción que importan. Sin adornos que distraigan.
+- **Jerarquía visual clara**, que lleva la mirada hacia la información y la acción que importan, sin adornos que distraigan.
 - **Formularios cortos y visibles**, sin campos de más que hagan abandonar a alguien interesado.
 - **Textos orientados a la acción.** Resuelven la duda del visitante y lo llevan al siguiente paso, no solo describen el servicio.
 - **Testimonios y casos donde aparecen las dudas**, cerca de la decisión, no escondidos al final de la página.

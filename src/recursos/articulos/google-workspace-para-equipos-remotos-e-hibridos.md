@@ -2,7 +2,7 @@
 title: "Google Workspace para equipos remotos e híbridos | ADQA"
 description: "Google Workspace para equipos remotos e híbridos: cómo coordinar documentos, agendas y reuniones a distancia, y qué configurar para que el acceso sea seguro."
 h1: "Google Workspace para equipos remotos e híbridos: cómo trabajar igual desde cualquier sitio"
-lead: "Qué cambia en el día a día cuando el equipo no coincide en la misma oficina. Y qué ajustar para trabajar con seguridad."
+lead: "Qué cambia en el día a día cuando el equipo no coincide en la misma oficina, y qué ajustar para trabajar con seguridad."
 keyword: "Google Workspace para equipos remotos e híbridos"
 category: workspace
 etiquetas: ["Google Workspace", "Colaboración"]
@@ -17,7 +17,7 @@ faq:
     - q: "¿Google Workspace sirve de verdad para el trabajo híbrido o es solo almacenamiento?"
       a: "Va más allá del almacenamiento. Tiene edición simultánea, videollamadas integradas en el calendario y agendas compartidas. Todo eso está pensado para que un equipo repartido trabaje coordinado. Guardar archivos es solo una parte."
     - q: "¿Necesitamos VPN para trabajar con Google Workspace desde casa?"
-      a: "No para el correo, los documentos y las videollamadas. Se usan de forma segura desde el navegador. Puede seguir haciendo falta un acceso remoto para otros sistemas internos. Por ejemplo, un ERP o un servidor de archivos de la oficina."
+      a: "No para el correo, los documentos y las videollamadas, que se usan de forma segura desde el navegador. Puede seguir haciendo falta un acceso remoto para otros sistemas internos, como un ERP o un servidor de archivos de la oficina."
     - q: "¿Se puede trabajar con el portátil o el móvil personal?"
       a: "Sí, de forma controlada. Aplicas políticas de dispositivo, como el bloqueo y el cifrado. Si un dispositivo se pierde, eliminas en remoto la información de la empresa. Así no tienes que entregar un equipo corporativo a cada persona."
   tecnico:
@@ -34,11 +34,11 @@ Google Workspace se pensó para ese escenario. Estas son las fricciones típicas
 
 ## Las fricciones típicas del trabajo remoto o híbrido
 
-Alguien de tu equipo prepara una oferta en el tren. La tarifa está en el servidor de la oficina y desde allí no la puede abrir. No es un caso raro. Estas son las fricciones más habituales:
+Alguien de tu equipo prepara una oferta en el tren. La tarifa está en el servidor de la oficina y desde el tren no la puede abrir. No es un caso raro. Estas son las fricciones más habituales:
 
 - **Documentos que viajan por correo**, con varias versiones del mismo archivo y dudas sobre cuál es la definitiva.
 - **Reuniones difíciles de convocar** cuando no ves la disponibilidad de cada persona.
-- **Archivos que solo se abren desde la oficina.** Te obligan a conectarte por VPN, una conexión cifrada con la oficina. O a copiarlos en dispositivos personales.
+- **Archivos que solo se abren desde la oficina.** Te obligan a conectarte por VPN, una conexión cifrada con la oficina, o a copiarlos en dispositivos personales.
 - **Información repartida** entre correo, chat y llamadas, sin un sitio donde quede registrada.
 
 ## Cómo las resuelve Google Workspace en el día a día

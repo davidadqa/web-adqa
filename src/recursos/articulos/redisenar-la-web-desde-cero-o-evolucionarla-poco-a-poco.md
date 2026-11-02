@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/diseno-programacion-web/"
 related: ["web-a-medida-o-plantilla", "diseno-web-centrado-en-estetica-o-en-conversion", "web-estatica-o-web-con-gestor-de-contenidos-cms"]
 imagen: "Dos versiones de la misma web, la antigua y la nueva, una al lado de la otra en dos pantallas"
-tldr: "Un rediseño completo resuelve de raíz los problemas estructurales de una web antigua. Renueva a la vez tecnología, diseño y SEO técnico, siempre que la migración se planifique para conservar el posicionamiento. Una evolución progresiva mantiene lo que ya funciona y valida cada cambio por separado. Además reparte la inversión en el tiempo, aunque no llega a los problemas de base. La decisión depende del estado técnico de la web."
+tldr: "Un rediseño completo resuelve de raíz los problemas estructurales de una web antigua. Renueva a la vez tecnología, diseño y SEO técnico, siempre que la migración se planifique para conservar el posicionamiento. Una evolución progresiva mantiene lo que ya funciona y valida cada cambio por separado. Además, reparte la inversión en el tiempo, aunque no llega a los problemas de base. La decisión depende del estado técnico de la web."
 faq:
   manager:
     - q: "¿Rediseñar la web desde cero significa perder el posicionamiento?"
@@ -22,7 +22,7 @@ faq:
       a: "Depende del alcance. Lo habitual es que haya un periodo de ajuste tras el lanzamiento. Mientras tanto, buscadores y usuarios se adaptan a la nueva estructura. Después, el tráfico y los contactos se estabilizan."
   tecnico:
     - q: "¿Cómo se protege el SEO durante un rediseño completo?"
-      a: "Con un mapa de redirecciones 301 de cada dirección antigua (URL) a su equivalente nueva. Una redirección 301 avisa a los buscadores de que la página se ha mudado para siempre. También se conserva el contenido que posiciona. Y se comprueba que la nueva estructura no rompe enlaces internos ni externos. Después del lanzamiento, vigila los errores de rastreo durante unas semanas."
+      a: "Con un mapa de redirecciones 301 de cada dirección antigua (URL) a su equivalente nueva. Una redirección 301 avisa a los buscadores de que la página se ha mudado para siempre. También se conserva el contenido que posiciona y se comprueba que la nueva estructura no rompe enlaces internos ni externos. Después del lanzamiento, vigila los errores de rastreo durante unas semanas."
     - q: "¿Se puede evolucionar una web con tecnología antigua sin migrarla del todo?"
       a: "Hasta cierto punto. Se pueden mejorar aspectos visuales o de contenido. Pero una base tecnológica antigua arrastra límites de rendimiento o de seguridad. Esos límites no siempre se resuelven sin una migración de fondo."
     - q: "¿Qué se revisa antes de elegir entre una opción y la otra?"
@@ -36,7 +36,7 @@ Los dos caminos pueden llegar a un resultado parecido. Lo que cambia es el recor
 
 Cuando tu web tiene años y arrastra decisiones antiguas, empezar de nuevo tiene ventajas claras:
 
-- **Resuelve problemas estructurales** que un cambio parcial no alcanza. Por ejemplo, código antiguo, una navegación confusa o un diseño que no se pensó para el móvil.
+- **Resuelve problemas estructurales** que un cambio parcial no alcanza: código antiguo, una navegación confusa o un diseño que no se pensó para el móvil.
 - **Renueva la tecnología de una vez.** Trae mejoras de velocidad y de SEO técnico que a menudo no son viables sobre una base antigua. El SEO técnico es la parte del posicionamiento que depende de cómo está hecha la web.
 - **Alinea la web con la marca actual**, si esta ha cambiado desde que se creó la web original.
 

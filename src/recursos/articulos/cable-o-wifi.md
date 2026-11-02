@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/redes/"
 related: ["cuantos-puntos-de-acceso-necesita-tu-wifi", "wifi-domestico-o-wifi-profesional", "categorias-de-cableado"]
 imagen: "Puesto de trabajo con cable de red junto a un punto de acceso WiFi en el techo de una oficina"
-tldr: "El cableado estructurado da una velocidad estable, sin interferencias y que no se reparte entre los dispositivos conectados. Es lo adecuado para todo lo que no se mueve y debe funcionar siempre. Por ejemplo, servidores, puestos fijos, cámaras e impresoras de red. El WiFi aporta movilidad y se amplía con facilidad. Es lo natural para portátiles, móviles e invitados. Una red de empresa bien diseñada combina los dos."
+tldr: "El cableado estructurado da una velocidad estable, sin interferencias y que no se reparte entre los dispositivos conectados. Es lo adecuado para todo lo que no se mueve y debe funcionar siempre, como servidores, puestos fijos, cámaras e impresoras de red. El WiFi aporta movilidad y se amplía con facilidad. Es lo natural para portátiles, móviles e invitados. Una red de empresa bien diseñada combina los dos."
 faq:
   manager:
     - q: "¿Cablear la oficina implica obra y molestias?"
@@ -24,9 +24,9 @@ faq:
     - q: "¿Qué categoría de cable conviene para una oficina nueva?"
       a: "Depende del uso que le vayas a dar y de cuántos años debe durar la instalación. En proyectos nuevos suele tener sentido dejar margen de rendimiento para los próximos años. Ajustarse al mínimo actual deja poco recorrido."
     - q: "¿Cómo se evita que el WiFi y el cable compitan por el mismo ancho de banda?"
-      a: "Diseñando la red por capas. El tráfico crítico va por cable siempre que sea posible: servidores, videovigilancia o producción. Y el WiFi se planifica para lo que de verdad necesita moverse."
+      a: "Diseñando la red por capas. El tráfico crítico, como servidores, videovigilancia o producción, va por cable siempre que sea posible. El WiFi se planifica para lo que de verdad necesita moverse."
     - q: "¿Tiene sentido certificar el cableado después de instalarlo?"
-      a: "Sí, sobre todo en instalaciones nuevas y ampliaciones. La certificación comprueba que cada punto rinde según lo especificado. Y te deja la documentación para el mantenimiento futuro."
+      a: "Sí, sobre todo en instalaciones nuevas y ampliaciones. La certificación comprueba que cada punto rinde según lo especificado y te deja la documentación para el mantenimiento futuro."
 ---
 «¿Para qué quiero cables si tengo WiFi?» Es una pregunta cada vez más habitual. Quizá te la has hecho ante el presupuesto de una reforma, buscando qué recortar. La duda tiene sentido: el WiFi de hoy es rápido y cómodo.
 
@@ -34,11 +34,11 @@ Pero en una red de empresa no eliges entre cable y WiFi. Decides qué va por cad
 
 ## Lo que el cable resuelve mejor
 
-- **Velocidad y estabilidad constantes.** No dependen de interferencias ni de lo lejos que quede tu mesa del punto de acceso. Tampoco de cuántos dispositivos haya conectados.
+- **Velocidad y estabilidad constantes.** No dependen de interferencias, de lo lejos que quede tu mesa del punto de acceso ni de cuántos dispositivos haya conectados.
 - **Seguridad física.** Para entrar en tu red hace falta un puerto físico. No basta con estar dentro del alcance de la señal.
 - **Rendimiento que no baja con la carga.** Un servidor o una cámara de videovigilancia por cable rinden igual aunque el WiFi esté saturado.
 
-Lo que no cambia de sitio y no puede permitirse un corte va por cable. Son los servidores, los switches y los puestos fijos. También las cámaras y los equipos de producción conectados a la red.
+Lo que no cambia de sitio y no puede permitirse un corte va por cable. Son los servidores, los switches, los puestos fijos, las cámaras y los equipos de producción conectados a la red.
 
 En pleno cierre de mes, nadie en contabilidad quiere que un bajón del WiFi le cuelgue el programa. Para que el cable rinda lo que promete, conviene que esté [certificado](/redes/certificacion-redes/).
 
@@ -67,6 +67,6 @@ Un error habitual es conectar por WiFi cámaras o servidores que deberían ir po
 
 Una guía rápida:
 
-- **Cable** para todo lo fijo y crítico. Servidores, switches, cámaras y puestos de trabajo estables.
-- **WiFi** para todo lo que se mueve. Portátiles, móviles, tablets y los dispositivos de las visitas.
+- **Cable** para todo lo fijo y crítico, como servidores, switches, cámaras y puestos de trabajo estables.
+- **WiFi** para todo lo que se mueve, como portátiles, móviles, tablets y los dispositivos de las visitas.
 - **Los dos, planificados juntos**, cuando hay de todo. Es lo más habitual en una empresa real.

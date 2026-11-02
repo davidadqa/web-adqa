@@ -11,22 +11,22 @@ service:
 faq:
   manager:
     - q: "¿Cuándo compensa un software a medida frente a un programa estándar?"
-      a: "Compensa en tres casos. Cuando tus procesos tienen particularidades que un programa estándar no recoge bien. Cuando necesitas que clientes, distribuidores o empleados accedan a tu información de forma controlada. O cuando adaptar el estándar exige más trabajo manual que construir lo que necesitas. Si tu programa actual cubre bien casi todo, a menudo lo más sensato es completarlo o integrarlo. No hace falta sustituirlo."
+      a: "Compensa en tres casos. Cuando tus procesos tienen particularidades que un programa estándar no recoge bien. Cuando necesitas que clientes, distribuidores o empleados accedan a tu información de forma controlada. O cuando adaptar el estándar exige más trabajo manual que construir lo que necesitas. Si tu programa actual cubre bien casi todo, a menudo lo más sensato es completarlo o integrarlo, sin sustituirlo."
     - q: "¿Cómo se presupuesta un proyecto de software a medida?"
-      a: "A partir de la especificación funcional. Ese documento define qué hará el sistema y quién lo usará. También qué datos gestionará y con qué otros sistemas se conectará. Con el alcance por escrito, el presupuesto y el calendario se pueden estimar con precisión. Y tú sabes qué vas a recibir antes de que empiece el desarrollo."
+      a: "A partir de la especificación funcional. Ese documento define qué hará el sistema, quién lo usará, qué datos gestionará y con qué otros sistemas se conectará. Con el alcance por escrito, el presupuesto y el calendario se pueden estimar con precisión. Y tú sabes qué vas a recibir antes de que empiece el desarrollo."
     - q: "¿Cuánto tarda un proyecto de software a medida?"
       a: "Habitualmente, un proyecto de tamaño medio bien especificado tarda entre 3 y 6 meses. Se cuenta desde la especificación hasta la puesta en marcha. Como se desarrolla por fases, tienes versiones que funcionan antes de la entrega final. Puedes empezar a usar partes del sistema mientras se completa el resto."
     - q: "¿Qué pasa si necesito cambiar algo durante el desarrollo?"
       a: "Los cambios son normales en un proyecto de software. Los valoramos y decidimos contigo en qué fase entran. Así se incorporan sin perder el control del proyecto. Cuanto más clara es la especificación inicial, más fácil es gestionar los cambios que aparecen por el camino."
   tecnico:
     - q: "¿Con qué tecnologías desarrolláis el software a medida?"
-      a: "Desarrollamos sobre todo en PHP y MySQL, sobre una arquitectura propia. Son aplicaciones web: se accede a ellas desde el navegador. Elegimos tecnologías muy extendidas pensando en el mantenimiento a largo plazo. El software tiene que poder evolucionar durante años."
+      a: "Desarrollamos sobre todo en PHP y MySQL, con una arquitectura propia. Son aplicaciones web: se accede a ellas desde el navegador. Elegimos tecnologías muy extendidas pensando en el mantenimiento a largo plazo. El software tiene que poder evolucionar durante años."
     - q: "¿Entregáis el código fuente y la documentación técnica?"
       a: "Habitualmente, sí. Recibes el código fuente y la documentación técnica y funcional del proyecto. Las condiciones concretas se recogen en cada propuesta. Así el software no depende de nosotros para evolucionar. Y si lo prefieres, podemos seguir manteniéndolo."
     - q: "¿Podéis integrar el software con nuestro ERP o CRM?"
       a: "Sí, siempre que el sistema externo tenga una API u otro mecanismo de integración disponible. La API es la puerta que ofrece un programa para que otros se conecten con él. Lo analizamos durante la especificación funcional. Si forma parte de los requisitos, lo incluimos en el alcance. Lo mismo vale para sistemas de facturación, pasarelas de pago y otras plataformas."
     - q: "¿Dónde se aloja el software y cómo se protegen los datos?"
-      a: "Podemos alojarlo en nuestro datacenter propio y de proximidad en Barcelona. Es lo que hacemos con las aplicaciones corporativas de HITECSA. También puede ir en tus propios servidores. Desde la especificación se definen los permisos por rol y el registro de la actividad. Si hay datos personales, también la gestión del consentimiento conforme al RGPD."
+      a: "Podemos alojarlo en nuestro datacenter propio y de proximidad en Barcelona. Es lo que hacemos con las aplicaciones corporativas de HITECSA. También puede ir en tus propios servidores. Desde la especificación se definen los permisos por rol y el registro de la actividad. Si hay datos personales, se define también la gestión del consentimiento conforme al RGPD."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
@@ -82,7 +82,7 @@ faq:
     <div class="aud">
       <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>De las hojas de cálculo a un sistema compartido</h3><p>La información sale de la hoja que solo entiende quien la creó. Queda en un solo sitio, con permisos por persona e historial de cambios. Y los flujos de trabajo avanzan solos.</p></div>
       <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-box"/></svg></span><h3>Lo que le falta a tu programa</h3><p>Tu software resuelve casi todo, pero una parte se hace a mano. Construimos esa pieza y la conectamos con lo que ya tienes.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Clientes y distribuidores, con acceso propio</h3><p>Un portal donde cada uno consulta sus pedidos, sus documentos o el estado de sus gestiones. El distribuidor que te llamaba para saber si su pedido había salido ahora lo mira él.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Clientes y distribuidores, con acceso propio</h3><p>Un portal donde cada uno consulta sus pedidos, sus documentos o el estado de sus gestiones. Ahora, el distribuidor que te llamaba para saber si su pedido había salido lo mira él mismo.</p></div>
       <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-clock"/></svg></span><h3>Menos tareas repetitivas</h3><p>Validaciones, avisos y documentos que se generan solos. Menos errores y un registro claro de quién hizo qué.</p></div>
     </div>
   </div>
@@ -94,7 +94,7 @@ faq:
     <div class="txt rv">
       <span class="eyebrow">Especificación funcional</span>
       <h2 id="h-esp">¿Por qué escribimos el proyecto antes de programarlo?</h2>
-      <p>Un software a medida no empieza con tecnología. Empieza con preguntas sobre tu proceso. Qué tiene que resolver y quién interviene en él. Cómo circula la información y qué debe quedar registrado.</p>
+      <p>Un software a medida no empieza con tecnología. Empieza con preguntas sobre tu proceso. ¿Qué tiene que resolver y quién interviene en él? ¿Cómo circula la información y qué debe quedar registrado?</p>
       <p>Las respuestas quedan en una <strong>especificación funcional detallada</strong>, antes de escribir una sola línea de código. Tú la revisas y la validas. Así sabes exactamente qué vas a recibir. Y nosotros podemos estimar el coste y el calendario con datos reales.</p>
       <p>En los proyectos de software, lo que más complica las cosas no suele ser técnico. Suele ser una idea que cada parte había entendido a su manera. Tú dices «aprobación» y piensas en la firma del jefe de taller; quien programa imagina un botón. La especificación pone a todo el mundo delante del mismo papel.</p>
     </div>
@@ -124,7 +124,7 @@ faq:
       <article class="st" style="--n:0">
         <span class="num">01 · ANÁLISIS DEL PROCESO</span>
         <h3>Entender cómo trabajas hoy</h3>
-        <p>Hablamos con las personas que usarán el sistema. Revisamos las hojas, los correos y los documentos que usan ahora. También la libreta donde alguien apunta las excepciones. Ahí está casi todo lo que el software tiene que recoger.</p>
+        <p>Hablamos con las personas que usarán el sistema. Revisamos las hojas, los correos y los documentos que usan ahora. Preguntamos por las excepciones que hoy se resuelven de memoria. Ahí está casi todo lo que el software tiene que recoger.</p>
       </article>
       <article class="st" style="--n:1">
         <span class="num">02 · ESPECIFICACIÓN</span>
@@ -161,7 +161,7 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Qué desarrollamos</span>
       <h2 id="h-tipos">¿Qué tipo de software desarrollamos?</h2>
-      <p class="lead">Aplicaciones web a las que tu equipo, tus clientes o tus distribuidores acceden desde el navegador. Cada uno, con los permisos que le correspondan.</p>
+      <p class="lead">Aplicaciones web a las que tu equipo, tus clientes o tus distribuidores acceden desde el navegador. Cada uno entra con los permisos que le correspondan.</p>
     </div>
     <div class="services">
       <div class="card svc rv" style="--s:0">
@@ -173,7 +173,7 @@ faq:
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-user"/></svg></span>
         <h3>Portales de clientes y distribuidores</h3>
-        <p>Espacios privados donde cada uno accede a su información y sus documentos. También a sus pedidos o al estado de sus gestiones.</p>
+        <p>Espacios privados donde cada uno accede a su información, sus documentos, sus pedidos o el estado de sus gestiones.</p>
         <ul class="tags"><li>Área privada</li><li>Pedidos</li><li>Socios</li></ul>
       </div>
       <div class="card svc rv" style="--s:2">
@@ -274,7 +274,7 @@ faq:
         "Gestión de expedientes para una entidad de apoyo a emprendedores",
         "Institución · Aplicación de gestión",
         "La entidad gestionaba unos 300 expedientes al año con un programa antiguo. Sus técnicos preparaban a mano las memorias justificativas para las administraciones. Además, querían gestionar el consentimiento de los datos personales conforme al Reglamento General de Protección de Datos (RGPD).",
-        "Un software a medida, hecho por fases. Incluye un programa renovado, con la entrada de datos protegida. También un módulo de consentimiento RGPD y el registro de horas por expediente y técnico. Y una exportación automática con el formato que piden las administraciones.",
+        "Un software a medida, hecho por fases. Incluye un programa renovado, con la entrada de datos protegida, y un módulo de consentimiento RGPD. Registra las horas por expediente y técnico. La exportación sale de forma automática, con el formato que piden las administraciones.",
         ["De ~10 h a ~2,5 h por expediente", "Más de 1.000 expedientes gestionados", "Memorias justificativas automáticas"], {n: "~2,5 h", l: "por expediente, antes unas 10 h", i: 0}
       ) }}</div>
       <div class="rv" style="--s:1;display:grid">{{ m.anonCase(
@@ -309,7 +309,7 @@ faq:
       <a class="btn btn-ghost rv" href="/recursos/web/">Más guías de web y software <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="res two">
-      <a class="card rv" style="--s:0" href="/recursos/seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida/"><span class="cat">Web y software</span><h3>Seguir con hojas de cálculo o automatizar con software a medida</h3><p>Señales de que una hoja de cálculo se ha quedado pequeña. Y qué gana tu equipo con un sistema compartido.</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida/"><span class="cat">Web y software</span><h3>Seguir con hojas de cálculo o automatizar con software a medida</h3><p>Señales de que una hoja de cálculo se ha quedado pequeña y qué gana tu equipo con un sistema compartido.</p></a>
       <a class="card rv" style="--s:1" href="/recursos/varias-herramientas-sueltas-o-un-software-de-gestion-centralizado/"><span class="cat">Web y software</span><h3>Varias herramientas sueltas o un software de gestión centralizado</h3><p>Cuándo conviene unir herramientas en un solo sistema y cuándo basta con conectarlas entre sí.</p></a>
       <a class="card rv" style="--s:0" href="/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/"><span class="cat">Web y software</span><h3>Mantener el software de gestión actual o modernizarlo</h3><p>Cómo valorar si tu programa todavía acompaña al negocio o si ha llegado el momento de renovarlo.</p></a>
       <a class="card rv" style="--s:1" href="/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/"><span class="cat">Web y software</span><h3>Desarrollar el software a medida con equipo interno o externalizado</h3><p>Qué aporta cada modelo en control, continuidad y coste, y cómo combinarlos.</p></a>

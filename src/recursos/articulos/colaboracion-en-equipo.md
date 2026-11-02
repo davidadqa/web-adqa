@@ -26,9 +26,9 @@ faq:
     - q: "¿Dónde se organiza la documentación de un proyecto en cada suite?"
       a: "En Google Workspace, habitualmente en una unidad compartida de Drive, con permisos por equipo o proyecto. En Microsoft 365, en un canal de Teams vinculado a una biblioteca de SharePoint. Ahí se guardan los archivos del equipo."
     - q: "¿Se pueden integrar Google Chat o Teams con otras herramientas de la empresa?"
-      a: "Sí, las dos admiten integraciones con aplicaciones de terceros. Si tu empresa ya trabaja con otras herramientas de Microsoft, el ecosistema de Teams suele ser más amplio. Google Workspace ofrece APIs abiertas, conectores documentados para enlazarlo con herramientas externas."
+      a: "Sí, las dos admiten integraciones con aplicaciones de terceros. Si tu empresa ya trabaja con otras herramientas de Microsoft, el ecosistema de Teams suele ser más amplio. Google Workspace ofrece APIs abiertas, es decir, interfaces documentadas para enlazarlo con herramientas externas."
 ---
-Más allá del correo y del almacenamiento, Google Workspace y Microsoft 365 se diferencian en las tareas pequeñas. Las que repites decenas de veces al día. Por ejemplo, revisar un documento entre varios, resolver una duda por chat o montar una reunión rápida. Ahí es donde cada suite encaja mejor o peor con la forma de trabajar de tu equipo.
+Más allá del correo y del almacenamiento, Google Workspace y Microsoft 365 se diferencian en las tareas pequeñas. Son las que repites decenas de veces al día: revisar un documento entre varios, resolver una duda por chat o montar una reunión rápida. Ahí es donde cada suite encaja mejor o peor con la forma de trabajar de tu equipo.
 
 Aquí el foco está en la colaboración. La comparación completa, con licencias, integración y seguridad, la tienes en [Google Workspace vs Microsoft 365](/google-workspace/google-workspace-vs-microsoft-365/).
 

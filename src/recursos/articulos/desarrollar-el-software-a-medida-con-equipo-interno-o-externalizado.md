@@ -17,14 +17,14 @@ faq:
     - q: "¿Externalizar el desarrollo significa perder el control del proyecto?"
       a: "No. Qué se construye y por qué lo sigue decidiendo tu empresa. Lo que delegas es la ejecución técnica. El control se mantiene con una especificación validada, entregas por fases y reuniones periódicas de seguimiento. Así las decisiones siguen en manos de quien conoce el negocio."
     - q: "¿Podemos montar un equipo interno más adelante?"
-      a: "Sí. Si el software crece hasta justificar una estructura propia, la transición se puede planificar de forma progresiva. Es mucho más sencilla si el código está documentado. Y si tu empresa tiene acceso a todo desde el principio."
+      a: "Sí. Si el software crece hasta justificar una estructura propia, la transición se puede planificar de forma progresiva. Es mucho más sencilla si el código está documentado y tu empresa tiene acceso a todo desde el principio."
     - q: "¿Qué costes hay que comparar entre un equipo interno y uno externo?"
       a: "En el interno, salarios, formación, herramientas y gestión del equipo. Son costes constantes, también en los periodos con poca carga. En el externo, el desarrollo de cada fase y el acuerdo de mantenimiento. Haz la comparación a varios años vista, no solo con el primer proyecto."
   tecnico:
     - q: "¿Cómo se asegura la calidad del código de un equipo externo?"
-      a: "Con una especificación clara, revisiones de código y pruebas antes de cada entrega. También con documentación técnica actualizada. Acuerda además cómo se gestionan las versiones. Y asegúrate de que tu empresa tiene acceso al repositorio, el sitio donde se guarda el código."
+      a: "Con una especificación clara, revisiones de código, pruebas antes de cada entrega y documentación técnica actualizada. Acuerda además cómo se gestionan las versiones. Y asegúrate de que tu empresa tiene acceso al repositorio, el sitio donde se guarda el código."
     - q: "¿Qué pasa si hay que cambiar de proveedor de desarrollo?"
-      a: "Depende de cómo estén documentados y organizados el código y los entornos. Ayudan tres cosas. El código, en un repositorio al que tu empresa tenga acceso. La documentación técnica al día. Y un entorno de pruebas. Con eso, otro equipo puede retomarlo sin empezar de cero."
+      a: "Depende de cómo estén documentados y organizados el código y los entornos. Ayudan tres cosas: el código en un repositorio accesible para tu empresa, la documentación técnica al día y un entorno de pruebas. Con eso, otro equipo puede retomarlo sin empezar de cero."
     - q: "¿El soporte posterior a la puesta en marcha se acuerda aparte?"
       a: "Suele definirse desde el principio, como parte del proyecto. El alcance queda claro: corrección de errores, puesta al día de la tecnología y evolución con nuevas funciones. Así nadie improvisa cuando aparece la primera incidencia."
 ---
@@ -42,13 +42,13 @@ Tiene sentido cuando el desarrollo de software es una parte constante y central 
 
 Si por la mañana pides una columna nueva en un informe, puede estar lista esa misma tarde.
 
-Su contrapartida es el coste fijo: salarios, formación y gestión del equipo, haya mucho o poco desarrollo. Y una dependencia. Si una persona clave se va, parte del conocimiento se va con ella.
+Su contrapartida es el coste fijo: salarios, formación y gestión del equipo, haya mucho o poco desarrollo. Y una dependencia: si una persona clave se va, parte del conocimiento se va con ella.
 
 ## Lo que aporta externalizar
 
 ¿El software es una herramienta de gestión y no el producto que vendes? En ese caso, [externalizar el desarrollo](/desarrollo-software-medida/) suele encajar mejor:
 
-- **Experiencia en muchos proyectos y tecnologías.** Ese equipo ya se ha encontrado problemas parecidos en otros contextos.
+- **Experiencia en muchos proyectos y tecnologías.** El equipo externo ya se ha encontrado con problemas parecidos en otros contextos.
 - **Sin estructura fija.** Pagas el desarrollo y el mantenimiento que necesitas, no un equipo que espera entre proyectos.
 - **Un equipo que se ajusta a cada fase.** Más intenso durante el desarrollo y más ligero cuando el sistema está estable.
 - **Mantenimiento acordado desde el principio.** Sabes quién atiende las incidencias tras la puesta en marcha.
@@ -61,11 +61,11 @@ Externalizar la ejecución no significa delegar las decisiones. Estos puntos pro
 
 - **Una persona responsable en la empresa** que conozca los procesos, priorice y valide las entregas. No hace falta que tenga perfil técnico.
 - **Una especificación funcional por escrito**, es decir, el documento que describe qué debe hacer el programa. Se revisa y se valida antes de programar.
-- **La titularidad del código y de la documentación**, acordada en el contrato. Qué se entrega, en qué formato y cuándo.
+- **La titularidad del código y de la documentación**, acordada en el contrato: qué se entrega, en qué formato y cuándo.
 - **Accesos a nombre de la empresa.** El dominio, los servidores, el repositorio del código y las copias de seguridad.
 - **Un acuerdo de mantenimiento** con el alcance claro: correcciones, actualizaciones y nuevas funciones.
 
-Imagina que un día decides cambiar de proveedor. Lo primero que vas a necesitar son las claves del servidor y del repositorio. Si están a nombre de tu empresa, el cambio es mucho más sencillo.
+Imagina que un día decides cambiar de proveedor. Lo primero que vas a necesitar son los accesos al servidor y al repositorio. Si están a nombre de tu empresa, el cambio es mucho más sencillo.
 
 Con estos puntos resueltos, cambiar de proveedor o sumar más adelante un equipo propio es una transición planificada. No un proyecto que empieza de cero. ¿El software ya existe y quien lo mantenía ya no está? La decisión se parece más a la de [mantener el software de gestión actual o modernizarlo](/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/).
 

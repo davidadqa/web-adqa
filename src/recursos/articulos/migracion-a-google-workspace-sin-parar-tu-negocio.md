@@ -11,13 +11,13 @@ updated: 2026-11-02
 servicio: "/google-workspace/"
 related: ["que-es-google-workspace-y-por-que-migrar-tu-empresa", "seguridad-en-google-workspace-que-protege-y-que-configurar", "cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves"]
 imagen: "Responsable de informática revisando en un portátil el avance de una migración de buzones de correo por fases"
-tldr: "Una migración a Google Workspace no interrumpe la actividad cuando sigue un orden. Primero, el inventario de cuentas y datos y la preparación del dominio. Después, una prueba con un grupo piloto. Luego, el traslado del resto por bloques, con el sistema antiguo aún en marcha. El cambio del correo llega al final, con todo verificado. Así nadie se queda sin correo y cualquier ajuste afecta solo a unas pocas personas."
+tldr: "Una migración a Google Workspace no interrumpe la actividad cuando sigue un orden. Primero se hace el inventario de cuentas y datos y se prepara el dominio. Después se prueba con un grupo piloto. Luego se traslada el resto por bloques, con el sistema antiguo aún en marcha. El cambio del correo llega al final, con todo verificado. Así nadie se queda sin correo y cualquier ajuste afecta solo a unas pocas personas."
 faq:
   manager:
     - q: "¿Habrá algún momento sin correo durante la migración?"
       a: "No debería. Mientras se trasladan los datos, todo el mundo sigue con el sistema de siempre. El correo empieza a llegar a Google Workspace solo al final. Para entonces, los buzones ya están copiados y revisados."
     - q: "¿Cuánto dura la migración de una empresa completa?"
-      a: "La marcan el número de cuentas y los años de correo y de archivos acumulados. Con el inventario inicial se fija la duración de cada fase. El calendario se comparte antes de empezar. Así cada persona de tu equipo sabe cuándo le toca."
+      a: "La marcan el número de cuentas y los años de correo y de archivos acumulados. Con el inventario inicial se fija la duración de cada fase. El calendario se comparte antes de empezar, para que cada persona de tu equipo sepa cuándo le toca."
     - q: "¿Los empleados tienen que hacer algo por su cuenta?"
       a: "Muy poco. Iniciar sesión con sus nuevas credenciales cuando se les indique y asistir a una formación breve. La copia de los datos y la configuración corren a cargo de quien gestiona la migración."
   tecnico:
@@ -26,7 +26,7 @@ faq:
     - q: "¿En qué momento se cambian los registros MX?"
       a: "Al final, cuando los buzones ya están migrados y verificados. Los registros MX indican a qué servidor llega el correo de tu dominio. Hasta ese momento, el correo sigue entrando por el sistema anterior. Tras el cambio, una sincronización final recoge lo que haya llegado allí mientras el cambio se propagaba."
     - q: "¿Cómo se valida que el grupo piloto ha ido bien?"
-      a: "Revisando con esas personas lo que ven en el sistema nuevo. Su correo histórico, sus contactos y sus calendarios tienen que estar como en el sistema anterior. Y los permisos de sus archivos compartidos, también. Solo entonces se pasa al resto de la plantilla."
+      a: "Revisando con esas personas lo que ven en el sistema nuevo. Su correo histórico, sus contactos, sus calendarios y los permisos de sus archivos compartidos tienen que estar como en el sistema anterior. Solo entonces se pasa al resto de la plantilla."
 ---
 La duda que más se repite antes de migrar el correo es si habrá algún momento sin él. Sobre todo si el día del cambio esperas el presupuesto de un proveedor. Con una migración por fases bien planificada, ese hueco no tiene por qué existir. El sistema antiguo sigue en marcha mientras se trasladan los datos. Y el cambio definitivo llega al final, con todo comprobado.
 
@@ -43,7 +43,7 @@ Cuando una migración se complica, el motivo suele ser un paso saltado, no la pl
 
 ## Las fases de una migración sin cortes
 
-1. **Inventario y diagnóstico.** Se listan cuentas, alias, listas de distribución, calendarios compartidos y el volumen de correo y de archivos. También los equipos y aplicaciones que envían correo en nombre de la empresa. Piensa en el ERP (el programa de gestión) o en una impresora que escanea al correo. Después del cambio, habrá que reconfigurarlos. Es el momento de decidir qué edición necesita cada perfil. Puedes [combinarlas en el mismo dominio](/google-workspace/licenciamiento-mixto-google-workspace/).
+1. **Inventario y diagnóstico.** Se listan cuentas, alias, listas de distribución, calendarios compartidos y el volumen de correo y de archivos. Se listan también los equipos y aplicaciones que envían correo en nombre de la empresa. Puede ser el ERP (el programa de gestión) o una impresora que escanea al correo. Después del cambio, habrá que reconfigurarlos. Es el momento de decidir qué edición necesita cada perfil. Puedes [combinarlas en el mismo dominio](/google-workspace/licenciamiento-mixto-google-workspace/).
 2. **Preparación del entorno.** Se verifica tu dominio y se crean los usuarios y los grupos. Antes de mover ningún dato, se dejan listas las [políticas de seguridad de Google Workspace](/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/).
 3. **Grupo piloto.** Unas pocas personas de tu equipo pasan primero y trabajan ya con el sistema nuevo. Si su correo, su agenda y sus archivos aparecen completos, se sigue adelante.
 4. **Migración por fases.** El resto de tu plantilla pasa por bloques, mientras todos siguen trabajando con el sistema anterior. Así, una incidencia puntual afecta a pocas personas y se resuelve con calma.
@@ -54,7 +54,7 @@ Cuando una migración se complica, el motivo suele ser un paso saltado, no la pl
 
 ## Qué preparar antes del día del cambio
 
-La primera mañana con el sistema nuevo, alguien abre el portátil y no sabe con qué contraseña entrar. Eso se evita con cuatro cosas preparadas de antemano:
+El día del cambio, alguien abre el portátil y no sabe con qué contraseña entrar. Eso se evita con cuatro cosas preparadas de antemano:
 
 - **Comunicación interna clara.** Qué cambia, cuándo y qué tiene que hacer cada persona. Normalmente, solo iniciar sesión con sus nuevas credenciales.
 - **Copia de seguridad del sistema anterior** antes de retirarlo. Hazla dentro de tu política de [backup y continuidad de negocio](/recursos/backup-y-continuidad-de-negocio/).

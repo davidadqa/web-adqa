@@ -22,9 +22,9 @@ faq:
       a: "Sí, si la web es importante para tu negocio. El mantenimiento no solo responde a incidentes. Mantiene las actualizaciones al día, comprueba las copias y revisa los avisos. Eso es justo lo que ayuda a que la web siga funcionando sin problemas."
   tecnico:
     - q: "¿Qué alertas de un plugin de seguridad conviene revisar a mano?"
-      a: "Las que no se resuelven con un bloqueo automático. Revisa a mano cualquier archivo del núcleo o de los plugins modificado fuera de una actualización. Haz lo mismo con los usuarios administradores nuevos y las extensiones con vulnerabilidades publicadas. Y con los patrones de tráfico que no encajan con el uso normal de tu web."
+      a: "Las que no se resuelven con un bloqueo automático. Revisa a mano cualquier archivo del núcleo o de los plugins modificado fuera de una actualización. Haz lo mismo con los usuarios administradores nuevos y las extensiones con vulnerabilidades publicadas. Mira también los patrones de tráfico que no encajan con el uso normal de tu web."
     - q: "¿Cómo se actúa si se confirma que la web está comprometida?"
-      a: "Primero se restringen los accesos y se identifica el punto de entrada. Después se limpia o se sustituye el código afectado. Y se restaura desde una copia comprobada anterior al incidente. Por último se corrige la causa, se cambian las credenciales y se revisan los usuarios con permisos de administración."
+      a: "Primero se restringen los accesos y se identifica el punto de entrada. Después se limpia o se sustituye el código afectado y se restaura desde una copia comprobada anterior al incidente. Por último se corrige la causa, se cambian las credenciales y se revisan los usuarios con permisos de administración."
     - q: "¿El mantenimiento gestionado sustituye al plugin de seguridad?"
       a: "No, lo complementa. El plugin sigue haciendo la detección automática de primera línea. El mantenimiento añade la revisión de las alertas, las actualizaciones y la respuesta. Son cosas que la herramienta no puede dar por sí sola."
 ---
@@ -68,7 +68,7 @@ La mayoría de alertas tienen una explicación inocente. Lo importante es que la
 
 Un domingo por la noche aparece el aviso de un usuario administrador nuevo. Puede ser la agencia haciendo un cambio o alguien que no debería estar ahí. Solo quien conoce tu web sabe distinguirlo.
 
-Un plugin compara la web con amenazas conocidas, de forma parecida a un escaneo automatizado. Si tu web gestiona datos sensibles o tiene desarrollos propios, puedes ir un paso más allá. Por ejemplo, con una prueba de intrusión hecha por personas. La diferencia entre las dos pruebas se explica en [pentesting o escaneo automatizado](/recursos/pentesting-o-escaneo-automatizado/).
+Un plugin compara la web con amenazas conocidas, de forma parecida a un escaneo automatizado. Si tu web gestiona datos sensibles o tiene desarrollos propios, puedes ir un paso más allá. Ese paso suele ser una prueba de intrusión hecha por personas. La diferencia entre las dos pruebas se explica en [pentesting o escaneo automatizado](/recursos/pentesting-o-escaneo-automatizado/).
 
 ## Cómo decidirlo
 

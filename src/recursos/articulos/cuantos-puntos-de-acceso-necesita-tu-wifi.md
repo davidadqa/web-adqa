@@ -11,11 +11,11 @@ updated: 2026-11-02
 servicio: "/redes/wifi-entornos-complejos/"
 related: ["wifi-para-eventos-y-salas-de-formacion", "wifi-domestico-o-wifi-profesional", "wifi-en-naves-industriales"]
 imagen: "Plano de una planta de oficinas con el mapa de calor de la cobertura WiFi y la ubicación de cada punto de acceso"
-tldr: "El número de puntos de acceso depende de la superficie y de los materiales del edificio. También cuentan los dispositivos de cada zona, el uso de la red y las interferencias del entorno. El hormigón y el metal frenan la señal mucho más que el pladur. Y una videollamada exige más que el correo. Un estudio de cobertura lo mide sobre el terreno antes de comprar ningún equipo."
+tldr: "El número de puntos de acceso depende de la superficie y de los materiales del edificio. También cuentan los dispositivos de cada zona, el uso de la red y las interferencias del entorno. El hormigón y el metal frenan la señal mucho más que el pladur, y una videollamada exige más que el correo. Un estudio de cobertura lo mide sobre el terreno antes de comprar ningún equipo."
 faq:
   manager:
     - q: "¿El estudio de cobertura se paga aparte de la instalación?"
-      a: "Depende del alcance del proyecto. Lo habitual es plantearlo como parte del diseño de la red. No como un extra desconectado de la instalación final."
+      a: "Depende del alcance del proyecto. Lo habitual es plantearlo como parte del diseño de la red, no como un extra desconectado de la instalación final."
     - q: "¿Cuánto tarda un estudio de cobertura?"
       a: "En una oficina o una nave de tamaño medio, habitualmente se resuelve en una visita. Poco después te llega el mapa de cobertura con la propuesta de ubicación de los puntos de acceso."
     - q: "¿Se pueden aprovechar los puntos de acceso que ya tenemos?"
@@ -34,7 +34,7 @@ El número correcto no se adivina. Se calcula a partir de tu espacio y de cómo 
 
 ## Por qué más puntos de acceso no siempre es la solución
 
-- **Se interfieren entre ellos.** Si están demasiado cerca y en el mismo canal, compiten en lugar de repartirse la carga. Y el rendimiento baja.
+- **Se interfieren entre ellos.** Si están demasiado cerca y en el mismo canal, compiten en lugar de repartirse la carga, y el rendimiento baja.
 - **Cada uno tiene un coste.** Es un equipo, su gestión y una toma de red hasta el armario. Todo punto de acceso necesita su cable, como se explica en [cable o WiFi](/recursos/cable-o-wifi/). Si la cobertura ya era suficiente, uno más no aporta nada.
 - **El síntoma puede no ser de cobertura.** A veces la red está saturada por dispositivos mal configurados. Otras, la conexión a internet no da para el uso real.
 
@@ -61,7 +61,7 @@ Los puntos de acceso y los dispositivos compatibles con WiFi 6E y WiFi 7 tienen 
 - **Más canales y menos ruido.** En Europa solo está habilitada la parte baja de la banda. Aun así, suma canales nuevos y, de momento, con pocas redes vecinas. Alivia las zonas con mucha gente conectada.
 - **Menos alcance.** A 6 GHz la señal atraviesa peor paredes y forjados. Si quieres cobertura completa en esa banda, los puntos de acceso tienen que estar más cerca entre sí.
 
-Solo la aprovechan los dispositivos compatibles. Tu portátil nuevo quizá la ve, pero el móvil de empresa que ya tiene unos años, no. Por eso lo habitual es diseñar para las tres bandas a la vez. Y sacar partido de 6 GHz donde más aporta, como las salas con mucha ocupación.
+Solo la aprovechan los dispositivos compatibles. Tu portátil nuevo quizá la ve, pero el móvil de empresa que ya tiene unos años, no. Por eso lo habitual es diseñar para las tres bandas a la vez. La de 6 GHz se aprovecha donde más aporta, como las salas con mucha ocupación.
 
 ## Cómo decidirlo
 

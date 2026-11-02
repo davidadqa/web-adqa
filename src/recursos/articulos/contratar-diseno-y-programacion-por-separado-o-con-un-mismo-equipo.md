@@ -24,7 +24,7 @@ faq:
     - q: "¿Cómo se asegura la viabilidad técnica del diseño cuando lo hace el mismo equipo que programa?"
       a: "Las decisiones de diseño se toman sabiendo ya qué es viable en rendimiento, SEO técnico y mantenimiento. Así no hace falta revisar después si el desarrollo lo permite. Tampoco hay que rebajar el diseño a mitad de proyecto."
     - q: "¿Se puede programar un diseño que ha hecho otra agencia?"
-      a: "Sí. En ese caso, antes de programar se revisa que el diseño sea técnicamente viable tal como está. También se comprueba que incluya todos los estados de cada página y que venga con una guía de estilo. Así te ahorras ajustes de última hora."
+      a: "Sí. En ese caso, antes de programar se revisa que el diseño sea técnicamente viable tal como está. Se comprueba además que incluya todos los estados de cada página y que venga con una guía de estilo. Con eso te ahorras ajustes de última hora."
     - q: "¿Quién se ocupa del SEO técnico durante el desarrollo?"
       a: "Quien programa, a partir de la estructura que define el diseño. Cuando las dos partes trabajan juntas, la estructura, la velocidad y el marcado se optimizan desde el principio. No quedan para una revisión posterior."
 ---
@@ -51,7 +51,7 @@ Cuando quien diseña y quien programa trabajan juntos, el traspaso deja de ser u
 - **Una sola conversación y un solo responsable**, sin tener que mediar entre dos proveedores que no siempre coinciden.
 - **Estética y rendimiento pensados a la vez**, en lugar de ajustar uno al otro al final. Así la marca y la [conversión](/recursos/diseno-web-centrado-en-estetica-o-en-conversion/) van de la mano.
 
-A cambio, dependes del criterio de un mismo equipo en las dos disciplinas. Por eso vale la pena que revises sus trabajos anteriores de diseño y de programación. Si las dos partes se piensan a la vez, el resultado se parece más a lo planteado. El menú desplegable que te gustó en el boceto llega igual a la web publicada. Sin versiones rebajadas por el camino.
+A cambio, dependes del criterio de un mismo equipo en las dos disciplinas. Por eso vale la pena que revises sus trabajos anteriores de diseño y de programación. Si las dos partes se piensan a la vez, el resultado se parece más a lo planteado. El menú desplegable que te gustó en el boceto suele llegar igual a la web, sin versiones rebajadas.
 
 ## Cómo cuidar el traspaso si contratas por separado
 

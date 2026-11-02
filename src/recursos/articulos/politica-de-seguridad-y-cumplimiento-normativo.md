@@ -24,15 +24,15 @@ faq:
     - q: "¿Qué diferencia hay entre una política de seguridad y el cumplimiento del RGPD?"
       a: "La política de seguridad cubre cómo se protege la información en general. El RGPD (Reglamento General de Protección de Datos) es una normativa concreta sobre datos personales. Se apoya en parte de esa política, pero añade requisitos propios. Por ejemplo, pide una base legal para cada tratamiento y unos plazos de conservación. También obliga a atender los derechos de las personas."
     - q: "¿Hay que revisar la política periódicamente o es un documento fijo?"
-      a: "Conviene revisarla cada vez que cambia algo relevante, como un sistema o un proveedor nuevo. También cuando cambia el personal con acceso a datos sensibles. Fijar además una revisión anual ayuda a que no se quede desfasada."
+      a: "Conviene revisarla cada vez que cambia algo relevante: un sistema, un proveedor o el personal con acceso a datos sensibles. Fijar además una revisión anual ayuda a que no se quede desfasada."
     - q: "¿Qué debe incluir el procedimiento de respuesta ante incidentes?"
       a: "Quién decide y a quién se avisa, dentro de la empresa y fuera de ella. Cómo se contiene el problema y cómo se documenta lo ocurrido. Si hay datos personales afectados, también cuándo se notifica a la autoridad de protección de datos. Conviene que sea breve y que todo tu equipo sepa dónde encontrarlo."
 ---
-«Cumplimiento normativo» suena a departamento legal y a muchos folios. Para la mayoría de pymes significa algo más concreto. Se trata de tener por escrito quién accede a qué y cómo se protege la información. Y dejar claro qué se hace si algo falla.
+«Cumplimiento normativo» suena a departamento legal y a muchos folios. Para la mayoría de pymes significa algo más concreto. Se trata de tener por escrito quién accede a qué, cómo se protege la información y qué se hace si algo falla.
 
 Un ejemplo es el día en que una persona nueva se incorpora a tu empresa. Hay que decidir qué carpetas puede abrir y quién le entrega su contraseña. Esa decisión ya forma parte de una política de seguridad.
 
-La dificultad no suele ser la falta de voluntad. Es saber por dónde empezar. Este artículo te propone un orden.
+La dificultad no suele ser la falta de voluntad, sino saber por dónde empezar. Este artículo te propone un orden.
 
 ## Los bloques que no pueden faltar
 
@@ -45,9 +45,9 @@ La dificultad no suele ser la falta de voluntad. Es saber por dónde empezar. Es
 
 La política de seguridad es la base. La normativa añade requisitos concretos sobre ella:
 
-- **RGPD (Reglamento General de Protección de Datos).** Se aplica a cualquier empresa que trate datos personales de clientes, empleados o proveedores. No basta con proteger esos datos. También obliga a justificar cada tratamiento, a informar a las personas y a atender sus derechos.
+- **RGPD (Reglamento General de Protección de Datos).** Se aplica a cualquier empresa que trate datos personales de clientes, empleados o proveedores. Además de proteger esos datos, obliga a justificar cada tratamiento, a informar a las personas y a atender sus derechos.
 - **Esquema Nacional de Seguridad (ENS).** Lo deben cumplir los organismos públicos y las empresas que les prestan servicios o les suministran soluciones. Si trabajas con la administración o quieres hacerlo, revisa [si tu empresa necesita la certificación ENS](/recursos/certificacion-ens-categoria-alta/) y en qué categoría.
-- **Exigencias de sector y de clientes.** Algunos sectores tienen requisitos propios. Y cada vez más clientes piden a sus proveedores pruebas de que protegen la información. La petición suele llegar cuando un cliente grande te da de alta como proveedor.
+- **Exigencias de sector y de clientes.** Algunos sectores tienen requisitos propios, y cada vez más clientes piden a sus proveedores pruebas de que protegen la información. La petición suele llegar cuando un cliente grande te da de alta como proveedor.
 
 En todos los casos, la política de seguridad suele ser el primer documento que se pide. Sin ella, cada exigencia nueva obliga a empezar de cero. Con ella, cada exigencia nueva parte de lo que ya tienes.
 

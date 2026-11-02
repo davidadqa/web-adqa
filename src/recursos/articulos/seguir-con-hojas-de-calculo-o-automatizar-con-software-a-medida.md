@@ -15,7 +15,7 @@ tldr: "Las hojas de cálculo no requieren inversión y son flexibles y fáciles 
 faq:
   manager:
     - q: "¿Cómo sé si ya hemos superado lo que puede gestionar una hoja de cálculo?"
-      a: "Cuando dedicas más tiempo a mantener y corregir la hoja que a usar la información que contiene. También cuando varias personas necesitan editarla a la vez. O cuando ya ha habido un error por trabajar con una versión desactualizada."
+      a: "Cuando dedicas más tiempo a mantener y corregir la hoja que a usar la información que contiene. También cuando varias personas necesitan editarla a la vez, o cuando ya ha habido un error por trabajar con una versión desactualizada."
     - q: "¿Automatizar con software a medida elimina los errores?"
       a: "Los reduce mucho. Evita copiar datos a mano y valida la información al introducirla. Aun así, cualquier sistema depende de que los datos de entrada sean correctos. Por eso se definen controles en los puntos donde se introducen."
     - q: "¿Qué pasa con lo que hoy solo sabe la persona que montó la hoja?"
@@ -30,7 +30,7 @@ faq:
 ---
 Al principio, una hoja de cálculo es la solución natural. Es flexible, no pide inversión y cualquiera sabe usarla. El problema no aparece el primer año. Aparece cuando hay varias hojas, varias versiones y un archivo que se llama «definitivo_v3».
 
-No hace falta abandonarlas. La pregunta es qué procesos han crecido tanto que ya no caben en una hoja. Y cuáles pueden seguir donde están.
+No hace falta abandonarlas. La pregunta es qué procesos han crecido tanto que ya no caben en una hoja y cuáles pueden seguir donde están.
 
 ## Lo que las hojas de cálculo hacen bien
 
@@ -60,7 +60,7 @@ Hay un paso intermedio que vale la pena conocer. Una hoja compartida en la nube 
 
 ## Lo que aporta un software a medida
 
-Puede que en tu empresa varias personas necesiten la misma información a la vez. Y que esa información pese en decisiones reales. Ahí un [software a medida](/desarrollo-software-medida/) te da:
+Puede que en tu empresa varias personas necesiten la misma información a la vez, y que pese en decisiones reales. Ahí un [software a medida](/desarrollo-software-medida/) te da:
 
 - **Datos centralizados y coherentes**, sin versiones distintas ni dudas sobre cuál es la actual.
 - **Automatización de tareas repetitivas.** Los cálculos, avisos, informes y traspasos que hoy se hacen a mano.

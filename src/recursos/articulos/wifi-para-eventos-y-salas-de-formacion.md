@@ -11,13 +11,13 @@ updated: 2026-11-02
 servicio: "/redes/wifi-entornos-complejos/"
 related: ["cuantos-puntos-de-acceso-necesita-tu-wifi", "red-plana-o-red-segmentada", "wifi-domestico-o-wifi-profesional"]
 imagen: "Sala de formación llena de asistentes trabajando con portátiles, con varios puntos de acceso WiFi en el techo"
-tldr: "En eventos y salas de formación, el problema del WiFi no suele ser de cobertura, sino de capacidad. La señal llega a todas las sillas. Pero los puntos de acceso no pueden atender bien a tantos dispositivos a la vez. La red se calcula por el número de dispositivos esperados, no por los metros de la sala. Y los picos puntuales se planifican con antelación."
+tldr: "En eventos y salas de formación, el problema del WiFi no suele ser de cobertura, sino de capacidad. La señal llega a todas las sillas, pero los puntos de acceso no pueden atender bien a tantos dispositivos a la vez. La red se calcula por el número de dispositivos esperados, no por los metros de la sala. Los picos puntuales se planifican con antelación."
 faq:
   manager:
     - q: "¿Hace falta equipamiento distinto para un evento puntual?"
       a: "No siempre. A veces basta con ajustar la configuración de la red. Otras veces se añaden puntos de acceso temporales para cubrir el pico de ocupación de esos días."
     - q: "¿Con cuánta antelación hay que preparar la red para un evento?"
-      a: "Cuanta más, mejor. Sobre todo si hace falta equipamiento adicional o una revisión previa de la sala. Si preparas la red el mismo día, no te queda margen para corregir nada."
+      a: "Cuanta más, mejor, sobre todo si hace falta equipamiento adicional o una revisión previa de la sala. Si preparas la red el mismo día, no te queda margen para corregir nada."
     - q: "¿Se puede comprobar antes del evento que la red aguantará?"
       a: "Sí. Se revisa la configuración y se calcula la capacidad con el número de asistentes previsto. Cuando es posible, se hace una prueba con dispositivos reales en la sala. Durante la jornada, la carga de cada punto de acceso se puede seguir en tiempo real."
   tecnico:
@@ -26,11 +26,11 @@ faq:
     - q: "¿Conviene llevar a los asistentes a las bandas de 5 y 6 GHz?"
       a: "Suele ayudar. Las bandas de 5 y 6 GHz ofrecen más canales que la de 2,4 GHz. Así, los puntos de acceso cercanos no se pisan entre sí. La de 2,4 GHz se deja para los dispositivos que solo funcionan en ella."
     - q: "¿Cómo se gestiona el acceso de los asistentes?"
-      a: "Con una red de invitados separada de la interna. Se entra con un portal cautivo o con credenciales temporales para la jornada. El portal cautivo es la página de acceso que aparece al conectarse. Cada usuario tiene un límite de ancho de banda. Así los asistentes navegan sin ver la red de la empresa."
+      a: "Con una red de invitados separada de la interna. Se entra con un portal cautivo o con credenciales temporales para la jornada. El portal cautivo es la página de acceso que aparece al conectarse. Cada usuario tiene un límite de ancho de banda. Al ir en una red aparte, los asistentes navegan sin ver la de la empresa."
 ---
-Tu WiFi funciona bien todo el año. Pero puede colapsar el día que se llena la sala de formación. O cuando organizas una jornada con cien personas conectadas a la vez. El formador pide a todos que abran la plataforma del curso, y la página se queda en blanco.
+Tu WiFi funciona bien todo el año. Pero puede colapsar el día que se llena la sala de formación o organizas una jornada con cien personas conectadas a la vez. El formador pide a todos que abran la plataforma del curso, y la página se queda en blanco.
 
-No se ha estropeado. Está pensado para tu día a día en la oficina. No para un pico de ocupación que solo llega unos días al año. La buena noticia es que ese pico se puede prever y calcular.
+No se ha estropeado. Está pensado para tu día a día en la oficina, no para un pico de ocupación que solo llega unos días al año. La buena noticia es que ese pico se puede prever y calcular.
 
 ## Por qué la cobertura no es el problema
 
@@ -56,7 +56,7 @@ En una sala llena, la saturación suele venir de tres sitios:
 
 ## Antes y durante la jornada
 
-Una jornada con mucha gente se prepara como cualquier otro montaje. Con tiempo y sin dar nada por supuesto. Igual que pruebas el micro y el proyector la víspera, te conviene probar también la red. Su preparación tiene tres momentos:
+Una jornada con mucha gente se prepara como cualquier otro montaje: con tiempo y sin dar nada por supuesto. Igual que pruebas el micro y el proyector la víspera, te conviene probar también la red. Su preparación tiene tres momentos:
 
 - **Antes:** calcular la capacidad con el número de asistentes previsto y revisar canales y potencias. Si es posible, probar la sala con dispositivos reales.
 - **Durante:** seguir la carga de cada punto de acceso y el número de clientes conectados. Así se puede actuar si una zona se satura. Es una aplicación directa de la [monitorización de red](/recursos/monitorizacion-de-red/).

@@ -24,11 +24,11 @@ faq:
     - q: "¿Se puede pasar a un modelo proactivo sin interrumpir el servicio?"
       a: "Sí. La monitorización se despliega sobre la infraestructura existente. Para eso usa agentes, que son pequeños programas instalados en los equipos. También puede hacer consultas a los servidores y dispositivos de red. Habitualmente no hace falta parar los sistemas en producción."
     - q: "¿Qué indicadores se monitorizan en un modelo proactivo?"
-      a: "Los habituales son el uso de procesador, memoria y disco, y el estado de los servicios críticos. También el resultado de las copias de seguridad, las alertas de hardware y el comportamiento de la red. La lista se ajusta a cada infraestructura. Los umbrales se fijan para que las alertas avisen de lo importante sin generar ruido."
+      a: "Los habituales son el uso de procesador, memoria y disco, y el estado de los servicios críticos. Se vigilan también el resultado de las copias de seguridad, las alertas de hardware y el comportamiento de la red. La lista se ajusta a cada infraestructura. Los umbrales se fijan para que las alertas avisen de lo importante sin generar ruido."
     - q: "¿Quién recibe las alertas de la monitorización?"
       a: "El equipo de soporte, que las revisa y actúa cuando hace falta. Solo se escala a tu empresa si se necesita una decisión o una acción por tu parte. Qué alertas se atienden fuera del horario laboral se define en el contrato de soporte."
 ---
-Hay dos formas de llevar el soporte técnico de una empresa. Una espera a que algo se rompa para actuar. La otra revisa y vigila los sistemas de forma continuada. Así encuentra el problema antes de que se note.
+Hay dos formas de llevar el soporte técnico de una empresa. Una espera a que algo se rompa para actuar. La otra revisa y vigila los sistemas de forma continuada para encontrar el problema antes de que se note.
 
 Las dos resuelven incidencias. Lo que cambia es cuándo te enteras y cuánto trabajo se interrumpe por el camino.
 
@@ -36,7 +36,7 @@ Las dos resuelven incidencias. Lo que cambia es cuándo te enteras y cuánto tra
 
 Es el modelo más habitual. Alguien detecta un problema, abre una incidencia y un técnico la resuelve. Es sencillo, no exige preparación y se paga cuando se usa.
 
-Su límite está en el cuándo. Siempre llega después del fallo, cuando el usuario ya lo ha notado. Y a menudo, cuando ya ha frenado a alguien. Imagina el disco del servidor que se va llenando poco a poco durante semanas. Nadie lo ve hasta la mañana en que el programa de contabilidad no deja guardar. Además, sin datos de lo que pasaba antes, cada diagnóstico empieza de cero.
+Su límite está en el cuándo. Siempre llega después del fallo, cuando el usuario ya lo ha notado y, a menudo, cuando ya ha frenado a alguien. Imagina el disco del servidor que se va llenando poco a poco durante semanas. Nadie lo ve hasta la mañana en que el programa de contabilidad no deja guardar. Además, sin datos de lo que pasaba antes, cada diagnóstico empieza de cero.
 
 Encaja bien en empresas con pocos equipos, sin servidores propios y con una actividad que tolera alguna interrupción puntual.
 

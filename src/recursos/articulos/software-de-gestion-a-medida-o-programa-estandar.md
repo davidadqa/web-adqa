@@ -15,7 +15,7 @@ tldr: "Un programa de gestión estándar se pone en marcha rápido, tiene un cos
 faq:
   manager:
     - q: "¿Un software a medida es mucho más caro que un programa estándar?"
-      a: "La inversión inicial suele ser mayor. Para compararlos bien, suma también el coste de las licencias año tras año y los módulos adicionales. Y el tiempo que hoy dedicas a tareas manuales que el programa estándar no cubre."
+      a: "La inversión inicial suele ser mayor. Para compararlos bien, suma también el coste de las licencias año tras año y los módulos adicionales. Cuenta además el tiempo que hoy dedicas a tareas manuales que el programa estándar no cubre."
     - q: "¿Cómo sé si mi empresa necesita un software a medida?"
       a: "Si tus procesos se parecen a los de cualquier empresa de tu sector, un programa estándar puede bastar. Otra cosa es que el programa casi sirva, pero siempre falte algo. Si lo resuelves con hojas paralelas o trabajo manual, valora una pieza a medida o un sistema completo."
     - q: "¿Cuánto se tarda en tener un software a medida funcionando?"
@@ -24,17 +24,17 @@ faq:
     - q: "¿Qué pasa con las integraciones al pasar de un programa estándar a uno a medida?"
       a: "Se diseñan para las herramientas que ya usa tu empresa, como la facturación, el CRM o el ERP. La condición es que ofrezcan una API u otro mecanismo de integración. Se definen durante la especificación para que formen parte del alcance desde el principio."
     - q: "¿Qué mantenimiento necesita un software de gestión a medida?"
-      a: "Un mantenimiento propio. Hay que corregir errores y actualizar las tecnologías en las que se basa. También hacer copias de seguridad y añadir funciones cuando cambian los procesos. Acuérdalo desde el principio. En un programa estándar suele ir incluido en la licencia; aquí no."
+      a: "Un mantenimiento propio. Hay que corregir errores, hacer copias de seguridad y actualizar las tecnologías en las que se basa. Cuando cambian los procesos, también toca añadir funciones. Acuérdalo desde el principio. En un programa estándar suele ir incluido en la licencia; aquí no."
     - q: "¿Se pueden migrar los datos del programa estándar sin perderlos?"
-      a: "Sí, siempre que el programa permita exportarlos. Comprueba pronto qué se puede extraer y en qué formato, incluidos el histórico y los documentos adjuntos. Después se hace una carga de prueba sobre una copia. Y se revisa que todo cuadra antes del cambio definitivo."
+      a: "Sí, siempre que el programa permita exportarlos. Comprueba pronto qué se puede extraer y en qué formato, incluidos el histórico y los documentos adjuntos. Después se hace una carga de prueba sobre una copia y se revisa que todo cuadra antes del cambio definitivo."
 ---
 Un programa de gestión estándar promete resolver casi todo desde el primer día. En muchas empresas lo consigue. Es la opción lógica cuando los procesos son los habituales del sector.
 
-Las dudas aparecen cuando tu empresa empieza a trabajar como quiere el programa, y no como funciona de verdad. Hay campos que se usan para otra cosa y pasos que se hacen fuera del sistema. Y una hoja de cálculo paralela que crece cada mes. O la libreta junto al teclado con los descuentos que el programa no sabe aplicar.
+Las dudas aparecen cuando tu empresa empieza a trabajar como quiere el programa, y no como funciona de verdad. Hay campos que se usan para otra cosa y pasos que se hacen fuera del sistema. Una hoja de cálculo paralela crece cada mes. Y junto al teclado aparece una libreta con los descuentos que el programa no sabe aplicar.
 
 ## Lo que un programa estándar hace bien
 
-Es la opción razonable en más casos de los que parece. Sobre todo cuando los procesos son sencillos o muy comunes:
+Es la opción razonable en más casos de los que parece, sobre todo cuando los procesos son sencillos o muy comunes:
 
 - **Puesta en marcha rápida**, con el programa listo para usarse tras una configuración inicial.
 - **Coste conocido**, normalmente por licencia o suscripción, fácil de presupuestar.
@@ -54,7 +54,7 @@ Cuando tus procesos tienen particularidades reales, un [software de gestión a m
 
 ¿Calculas los precios por volumen de una forma propia? En un sistema a medida entra tal cual.
 
-A cambio, pide más tiempo e inversión al principio. Y un mantenimiento propio que hay que planificar. Quién se ocupa de ese desarrollo y de su evolución es otra decisión. Se analiza en [desarrollar el software a medida con equipo interno o externalizado](/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/).
+A cambio, pide más tiempo e inversión al principio y un mantenimiento propio que hay que planificar. Quién se ocupa de ese desarrollo y de su evolución es otra decisión. Se analiza en [desarrollar el software a medida con equipo interno o externalizado](/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/).
 
 Lo que más cambia al pasar del estándar a un sistema a medida no suele ser una función concreta. Es dejar de forzar el programa para que haga lo que tu empresa necesita.
 
@@ -99,6 +99,6 @@ Una prueba sencilla: en la demostración del programa, pide que te enseñen tu p
 Una guía rápida:
 
 - **Programa estándar** si tus procesos son sencillos y comunes en tu sector.
-- **Software a medida** si tus procesos tienen particularidades que ningún estándar recoge bien. Sobre todo si eso ya genera trabajo manual.
+- **Software a medida** si tus procesos tienen particularidades que ningún estándar recoge bien y eso ya genera trabajo manual.
 - **Estándar con piezas a medida** si el programa cubre el núcleo y solo se queda corto en una parte.
 - **Empezar con estándar y migrar después** es viable. Eso sí, comprueba desde el principio cómo podrás exportar los datos.

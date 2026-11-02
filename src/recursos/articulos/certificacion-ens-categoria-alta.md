@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/ciberseguridad/certificado-ens/"
 related: ["pentesting-para-cumplir-con-el-ens-y-otras-normativas", "politica-de-seguridad-y-cumplimiento-normativo", "certificacion-de-redes-y-ens"]
 imagen: "Responsables de una empresa revisando en una sala de reuniones la documentación de seguridad que preparan para una auditoría"
-tldr: "El Esquema Nacional de Seguridad (ENS) fija las medidas de protección que debe aplicar la administración pública española. Las empresas que le dan servicio también tienen que aplicarlas. ALTA es su categoría más exigente. Certificarse en ella requiere una auditoría formal de una entidad acreditada. La certificación no es obligatoria para cualquier empresa privada. Pero suele ser un requisito para trabajar con la administración en sistemas de esa categoría."
+tldr: "El Esquema Nacional de Seguridad (ENS) fija las medidas de protección que debe aplicar la administración pública española. Las empresas que le dan servicio también tienen que aplicarlas. ALTA es su categoría más exigente, y certificarse en ella requiere una auditoría formal de una entidad acreditada. La certificación no es obligatoria para cualquier empresa privada. Pero suele ser un requisito para trabajar con la administración en sistemas de esa categoría."
 faq:
   manager:
     - q: "¿Cuánto se tarda en obtener la certificación ENS en categoría ALTA?"
@@ -22,9 +22,9 @@ faq:
       a: "Sí. No es un sello permanente. El Real Decreto 311/2022 prevé que los sistemas de categoría MEDIA y ALTA se vuelvan a auditar. La auditoría se repite como mínimo cada dos años, y también cuando los sistemas cambian de forma sustancial. Entre una auditoría y otra, las medidas tienen que seguir aplicándose en tu día a día."
   tecnico:
     - q: "¿Qué controles refuerza la categoría ALTA respecto a BÁSICA y MEDIA?"
-      a: "Sobre todo, el cifrado de la información, la autenticación y la trazabilidad de los accesos. También la gestión de incidentes con procedimientos formales y la continuidad del servicio. La categoría ALTA no solo añade medidas. También refuerza muchas de las que ya pide la categoría MEDIA."
+      a: "Sobre todo, el cifrado de la información, la autenticación y la trazabilidad de los accesos. También la gestión de incidentes con procedimientos formales y la continuidad del servicio. La categoría ALTA no solo añade medidas: también refuerza muchas de las que ya pide la categoría MEDIA."
     - q: "¿Quién audita la certificación ENS?"
-      a: "En una empresa privada de categoría MEDIA o ALTA, lo hace un organismo de certificación. Ese organismo está acreditado por ENAC, la Entidad Nacional de Acreditación. Y es independiente de quien implanta los controles. Esa independencia es la que da valor al certificado ante organismos públicos y clientes. En categoría BÁSICA basta una autoevaluación."
+      a: "En una empresa privada de categoría MEDIA o ALTA, lo hace un organismo de certificación. Ese organismo está acreditado por ENAC, la Entidad Nacional de Acreditación, y es independiente de quien implanta los controles. Esa independencia es la que da valor al certificado ante organismos públicos y clientes. En categoría BÁSICA basta una autoevaluación."
     - q: "¿Se puede alinear la infraestructura con el ENS sin certificarse?"
       a: "Sí, y es habitual. Muchas organizaciones adoptan las medidas y buenas prácticas del esquema para ordenar su seguridad interna. La auditoría formal la dejan para cuando un contrato o una licitación la piden. Cuando llega ese momento, el trabajo previo te facilita la certificación."
 ---
@@ -39,7 +39,7 @@ El Real Decreto 311/2022, que regula el ENS, distingue tres categorías de siste
 En la práctica, la categoría ALTA implica:
 
 - **Auditoría formal de certificación.** Como en la categoría MEDIA, la conformidad la verifica un auditor independiente de quien implanta los controles. No vale la autoevaluación que admite la categoría BÁSICA.
-- **Más medidas, y más reforzadas.** Afectan al cifrado, al control de accesos y a la autenticación reforzada. También al registro de la actividad, a la gestión de incidentes y a la continuidad del servicio. En todas hay más requisitos que en las categorías inferiores.
+- **Más medidas, y más reforzadas.** Afectan al cifrado, al control de accesos y a la autenticación reforzada. Se extienden también al registro de la actividad, a la gestión de incidentes y a la continuidad del servicio. En todas hay más requisitos que en las categorías inferiores.
 - **Mantenimiento continuo.** Las auditorías se repiten periódicamente. Entre una y otra, las medidas se aplican en tu día a día: revisiones, registros y mejoras.
 - **Un alcance definido.** Se certifican unos sistemas concretos y los servicios que soportan. Por ejemplo, la plataforma con la que das servicio a un organismo, no necesariamente toda tu red. Delimitar bien ese alcance es una de las primeras decisiones del proceso.
 

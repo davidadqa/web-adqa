@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/diseno-programacion-web/mantenimiento-web-para-empresas/"
 related: ["mantenimiento-web-propio-o-externalizado", "actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional", "plugin-de-seguridad-o-mantenimiento-web-gestionado"]
 imagen: "Calendario de revisiones de una web con tareas marcadas (actualizaciones, copias, certificado SSL) junto a un panel que muestra la web funcionando con normalidad"
-tldr: "El mantenimiento web reactivo interviene cuando algo ya ha fallado. Por ejemplo, una caída, un formulario que no envía o un plugin que deja de funcionar. El preventivo revisa la web de forma periódica: actualizaciones, copias, certificado y formularios. Así detecta esos problemas antes de que los note un visitante. El reactivo puede bastar en webs informativas sencillas. Cuando la web genera contactos o ventas, el preventivo suele compensar."
+tldr: "El mantenimiento web reactivo interviene cuando algo ya ha fallado: una caída, un formulario que no envía o un plugin que deja de funcionar. El preventivo revisa la web de forma periódica: actualizaciones, copias, certificado y formularios. Así detecta esos problemas antes de que los note un visitante. El reactivo puede bastar en webs informativas sencillas. Cuando la web genera contactos o ventas, el preventivo suele compensar."
 faq:
   manager:
     - q: "¿El mantenimiento preventivo evita todos los problemas?"

@@ -11,20 +11,20 @@ updated: 2026-11-02
 servicio: "/sistemas-cloud/"
 related: ["datacenter-de-proximidad", "soporte-it-reactivo-o-proactivo", "politica-de-seguridad-y-cumplimiento-normativo"]
 imagen: "Técnico comprobando una restauración de prueba en un portátil junto a un servidor de copias de seguridad"
-tldr: "El backup es la copia de los datos. La continuidad de negocio es el plan para seguir trabajando cuando algo falla. Para saber si una empresa está cubierta hay que revisar cada cuánto se copia y dónde se guarda. También cuánto se tarda en restaurar y si las restauraciones se prueban. Cuántos datos se pueden perder (RPO) y cuánto puede estar parado cada sistema (RTO) marcan el diseño de las copias."
+tldr: "El backup es la copia de los datos. La continuidad de negocio es el plan para seguir trabajando cuando algo falla. Para saber si una empresa está cubierta hay que revisar cada cuánto se copia y dónde se guarda. También hay que comprobar cuánto se tarda en restaurar y si las restauraciones se prueban. Cuántos datos se pueden perder (RPO) y cuánto puede estar parado cada sistema (RTO) marcan el diseño de las copias."
 faq:
   manager:
     - q: "¿Quién debería encargarse de las copias de seguridad en la empresa?"
       a: "Alguien con la responsabilidad asignada por escrito, sea de tu equipo o de un proveedor. Esa persona revisa que las copias se completan y programa las restauraciones de prueba. También mantiene al día el procedimiento de recuperación. Cuando nadie lo tiene asignado, esas tareas tienden a quedarse sin hacer. Por eso conviene ponerle nombre."
     - q: "¿Cómo sé si el backup que tenemos hoy es suficiente?"
-      a: "Con cuatro preguntas. Cada cuánto se hace la copia y dónde se guarda. Cuánto se tarda en restaurar. Y cuándo se probó una restauración por última vez. Si alguna respuesta no está clara, empieza por ese punto. Revísalo con quien gestiona tus sistemas."
+      a: "Con cuatro preguntas. ¿Cada cuánto se hace la copia? ¿Dónde se guarda? ¿Cuánto se tarda en restaurar? ¿Cuándo se probó una restauración por última vez? Si alguna respuesta no está clara, empieza por ese punto. Revísalo con quien gestiona tus sistemas."
     - q: "¿Hace falta duplicar toda la infraestructura para tener continuidad?"
       a: "No siempre. Depende de qué sistemas son realmente críticos para ti. No todo necesita el mismo nivel de protección. Un servidor de producción puede justificar una réplica lista para arrancar. En cambio, un archivo histórico se cubre bien con una copia diaria fuera de la oficina."
   tecnico:
     - q: "¿Cada cuánto se debería probar una restauración?"
-      a: "Con una periodicidad definida, no solo cuando hay una incidencia. Como referencia, prueba una restauración completa al menos una vez al año. Y siempre después de un cambio importante en la infraestructura. Entre medias, haz pruebas parciales más frecuentes de archivos o máquinas concretas."
+      a: "Con una periodicidad definida, no solo cuando hay una incidencia. Como referencia, prueba una restauración completa al menos una vez al año y siempre después de un cambio importante en la infraestructura. Entre medias, haz pruebas parciales más frecuentes de archivos o máquinas concretas."
     - q: "¿Qué RPO y RTO son razonables para una pyme?"
-      a: "Varían según el sistema. El RPO es el trabajo que puedes perder, y el RTO, el tiempo parado que aguantas. Un RPO de 24 horas puede bastar para datos poco críticos. Para un ERP en producción, en cambio, se queda corto. Lo correcto es fijarlos sistema por sistema, no de forma genérica para toda la empresa. Pregunta a cada área cuánto tiempo y cuántos datos puede permitirse perder."
+      a: "Varían según el sistema. El RPO es el trabajo que puedes perder, y el RTO, el tiempo parado que aguantas. Un RPO de 24 horas puede bastar para datos poco críticos. Para un ERP en producción, en cambio, puede quedarse corto. Lo correcto es fijarlos sistema por sistema, no de forma genérica para toda la empresa. Pregunta a cada área cuánto tiempo y cuántos datos puede permitirse perder."
     - q: "¿Dónde debería guardarse la copia respecto al entorno de producción?"
       a: "En una ubicación física distinta, aislada de la red de producción y con credenciales propias. Así un mismo incidente no alcanza a la vez a los sistemas originales y a sus copias. Da igual que sea un fallo eléctrico, una avería o un cifrado de datos."
 ---

@@ -24,9 +24,9 @@ faq:
     - q: "¿Cómo se sabe en qué región se almacenan los datos de la suite?"
       a: "Las dos suites lo indican en su documentación y en la consola de administración. En Microsoft 365, la ubicación está ligada al país del tenant. En Google Workspace, algunas ediciones permiten fijar una región de datos. Compruébalo y déjalo documentado en el registro de actividades de tratamiento."
     - q: "¿Cómo se atiende una solicitud de acceso o de supresión de datos de una persona?"
-      a: "Con las herramientas de búsqueda de cada suite: Google Vault o la búsqueda de contenido de Microsoft Purview. Con ellas localizas lo que hay sobre esa persona en el correo y en los archivos. Después lo exportas o lo eliminas, según la solicitud. Y dejas constancia de lo que has hecho."
+      a: "Con las herramientas de búsqueda de cada suite: Google Vault o la búsqueda de contenido de Microsoft Purview. Con ellas localizas lo que hay sobre esa persona en el correo y en los archivos. Después lo exportas o lo eliminas, según la solicitud, y dejas constancia de lo que has hecho."
     - q: "¿Qué registros de actividad conviene conservar para el ENS?"
-      a: "Para demostrar la trazabilidad, los más útiles son tres. Los inicios de sesión. Los cambios de configuración y de permisos de administración. Y los accesos y el uso compartido de los documentos. Cuánto tiempo los guarda cada suite depende del plan. Comprueba si cubre lo que fija tu política de seguridad. Si no, expórtalos a otro sistema."
+      a: "Para demostrar la trazabilidad, los más útiles son los inicios de sesión y los cambios de configuración y de permisos de administración. Igual de útiles son los accesos y el uso compartido de los documentos. Cuánto tiempo los guarda cada suite depende del plan. Comprueba si cubre lo que fija tu política de seguridad. Si no, expórtalos a otro sistema."
 ---
 Cuando entran en juego el RGPD o el Esquema Nacional de Seguridad, la pregunta sobre la suite cambia. Ya no basta con saber si es segura. Hay que poder demostrar cómo se protegen y se gestionan los datos. Google Workspace y Microsoft 365 permiten hacerlo, cada una con sus herramientas. Pero ninguna lo hace por sí sola.
 
@@ -49,7 +49,7 @@ En la suite, el Reglamento General de Protección de Datos (RGPD) se concreta en
 - **Ubicación de los datos.** Saber en qué región se almacenan y si hay transferencias fuera del Espacio Económico Europeo. Las dos suites lo informan. Según el plan o la edición, ofrecen opciones para fijar la región.
 - **Conservación y supresión.** El RGPD pide no guardar los datos más tiempo del necesario. Las políticas de retención conservan lo que hay que conservar y eliminan el resto de forma ordenada.
 - **Derechos de las personas.** Un cliente puede pedirte por escrito qué datos suyos guardas, o que los borres. Es una solicitud de acceso o de supresión. Para responderla, hay que localizar todo lo que hay sobre él en buzones y archivos.
-- **Brechas de seguridad.** Si afectan a datos personales, el RGPD pide notificarlas a la autoridad de control sin dilación. Si es posible, en 72 horas como máximo desde que se conocen. No hace falta notificarlas cuando es improbable que supongan un riesgo para las personas. Los registros de actividad de la suite ayudan a reconstruir qué ha pasado.
+- **Brechas de seguridad.** Si afectan a datos personales, el RGPD pide notificarlas a la autoridad de control sin dilación. Si es posible, debe hacerse en 72 horas como máximo desde que se conocen. No hace falta notificarlas cuando es improbable que supongan un riesgo para las personas. Los registros de actividad de la suite ayudan a reconstruir qué ha pasado.
 
 Todo esto se apoya en la política de seguridad de tu empresa. Por dónde empezarla lo explica [Política de seguridad y cumplimiento normativo](/recursos/politica-de-seguridad-y-cumplimiento-normativo/).
 

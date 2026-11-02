@@ -24,13 +24,13 @@ faq:
     - q: "¿El mantenimiento web sustituye al hosting o lo complementa?"
       a: "Lo complementa. El hosting sigue proporcionando el servidor y sus recursos. El mantenimiento se ocupa de todo lo que funciona por encima, para que la web siga actualizada, rápida y segura."
     - q: "¿Qué se revisa en la optimización de la velocidad?"
-      a: "Se miran el peso y la compresión de las imágenes. Se cuentan las extensiones activas y se valora su calidad. Se revisa la configuración de la caché. Y, si el hosting lo permite, también algunos parámetros del propio servidor."
+      a: "Se miran el peso y la compresión de las imágenes. Se cuentan las extensiones activas y se valora su calidad. Se revisa la configuración de la caché y, si el hosting lo permite, algunos parámetros del propio servidor."
     - q: "¿Qué conviene pedirle a un hosting para una web con gestor de contenidos?"
       a: "Lo básico son versiones actuales del software del servidor y de la base de datos, y certificado SSL. Pide también copias automáticas con varios días de historial y un panel para gestionar el dominio y el correo. Con esa base, el mantenimiento trabaja con más margen."
 ---
 Contratar un hosting es el primer paso para tener una web, no el último. Es fácil confundir «la web está alojada» con «la web está cuidada». Pagas la renovación del hosting cada año y das por hecho que alguien vigila lo demás.
 
-Son dos cosas distintas. Te conviene saber qué cubre cada una. Así decides qué contratar y qué te toca hacer a ti.
+Son dos cosas distintas. Te conviene saber qué cubre cada una para decidir qué contratar y qué te toca hacer a ti.
 
 ## Qué cubre un hosting básico
 
@@ -55,7 +55,7 @@ Todo lo que el hosting no cubre, alguien tiene que hacerlo. Un mantenimiento com
 - **Optimización de la velocidad**: imágenes sin comprimir, extensiones que sobran o una caché mal configurada.
 - **Supervisión.** Se comprueba que las páginas responden y que llegan los mensajes del formulario. Tras cada cambio, se revisa que no aparezcan errores.
 
-Es habitual encontrar webs en un buen hosting que cargan despacio. El servidor hace su parte. Lo que falta es alguien que revise lo que funciona por encima. Basta una foto de portada subida tal cual sale de la cámara. En el móvil de tu cliente, esa foto tarda en aparecer.
+Es habitual encontrar webs en un buen hosting que cargan despacio. El servidor hace su parte. Lo que falta es alguien que revise lo que funciona por encima. Basta una foto de portada subida tal cual sale de la cámara para que tarde en aparecer en el móvil de tu cliente.
 
 ## Las copias del hosting y las del mantenimiento
 

@@ -19,7 +19,7 @@ faq:
     - q: "¿Por qué importa saber dónde están los datos de la empresa?"
       a: "Porque hay normativas, contratos y clientes que lo preguntan. Si sabes en qué edificio están tus servidores, respondes con precisión. Da igual que pregunte un auditor o un cliente que quiere saber dónde se alojan sus datos. En la nube pública eliges la región, pero no conoces la instalación concreta."
     - q: "¿Hace falta saber de tecnología para tomar esta decisión?"
-      a: "No. Basta con que alguien te explique las opciones en coste, control y tiempo de respuesta. Y que te diga cómo encaja cada una con tu forma de trabajar. La parte técnica llega después, con el equipo que se ocupe de los sistemas. Es entonces cuando se calcula cuánta capacidad hace falta y se planifica la migración."
+      a: "No. Basta con que alguien te explique cada opción en coste, control y tiempo de respuesta, y cómo encaja con tu forma de trabajar. La parte técnica llega después, con el equipo que se ocupe de los sistemas. Es entonces cuando se calcula cuánta capacidad hace falta y se planifica la migración."
   tecnico:
     - q: "¿Se pueden combinar un datacenter de proximidad y la nube pública?"
       a: "Sí, y es una combinación frecuente. Las cargas críticas y estables se quedan en el datacenter de proximidad. La nube pública se usa para picos de demanda o para servicios que necesitan alcance global. El datacenter también puede alojar una copia de lo que corre en la nube. Así no dependes de un solo entorno."
@@ -36,11 +36,11 @@ En este artículo, «datacenter propio» quiere decir datacenter de proximidad. 
 
 Conviene empezar por aquí. Los grandes proveedores de nube resuelven cosas que a una infraestructura mediana le cuesta igualar.
 
-- **Escala elástica.** Cuando la carga sube y baja sin avisar, la capacidad de los grandes proveedores marca la diferencia. Por ejemplo, la web que se llena de visitas el día que tu anuncio sale en televisión. También cuando tienes que dar servicio en varias regiones del mundo.
+- **Escala elástica.** Cuando la carga sube y baja sin avisar, la capacidad de los grandes proveedores marca la diferencia. Por ejemplo, la web que se llena de visitas el día que tu anuncio sale en televisión. Pasa lo mismo cuando tienes que dar servicio en varias regiones del mundo.
 - **Servicios gestionados.** Bases de datos, colas o herramientas de análisis, listas para usar. No tienes que montar ni mantener el servidor que hay debajo. Para un equipo de desarrollo, eso es velocidad.
-- **Sin inversión inicial en hardware.** Pagas por uso. Es la opción natural para arrancar un proyecto sin comprar equipos. Y para cargas que solo existen unas semanas al año.
+- **Sin inversión inicial en hardware.** Pagas por uso. Es la opción natural para arrancar un proyecto sin comprar equipos o para cargas que solo existen unas semanas al año.
 
-¿Tu prioridad es crecer rápido o llegar a usuarios de muchos países? La nube pública suele ser la respuesta. También si tienes que absorber picos estacionales fuertes.
+¿Tu prioridad es crecer rápido, llegar a usuarios de muchos países o absorber picos estacionales fuertes? La nube pública suele ser la respuesta.
 
 ## Lo que aporta un datacenter de proximidad
 
@@ -59,7 +59,7 @@ No hace falta elegir un modelo para toda la empresa. Lo habitual es repartir los
 - **En la nube pública**, lo que va a picos o tiene usuarios en otros países. Una tienda online con campañas estacionales es el caso típico.
 - **Como servicio**, el correo y las herramientas de colaboración. Ya funcionan en la nube de su fabricante.
 
-El reto es que las piezas no vayan cada una por su lado. Quien se incorpora a tu equipo debería entrar con el mismo usuario en todas partes. No con una contraseña para el ERP, otra para los archivos y otra para el correo. Para eso hacen falta las mismas cuentas de usuario y permisos coherentes. También una política de copias que cubra todos los entornos. Ese diseño es la base de un [entorno híbrido de sistemas y cloud](/sistemas-cloud/). Y si la decisión implica trasladar servidores, el cambio se puede [planificar sin parar la producción](/recursos/migrar-servidores-sin-parar-la-produccion/).
+El reto es que las piezas no vayan cada una por su lado. Quien se incorpora a tu equipo debería entrar con el mismo usuario en todas partes. No con una contraseña para el ERP, otra para los archivos y otra para el correo. Para eso hacen falta las mismas cuentas de usuario, permisos coherentes y una política de copias que cubra todos los entornos. Ese diseño es la base de un [entorno híbrido de sistemas y cloud](/sistemas-cloud/). Y si la decisión implica trasladar servidores, el cambio se puede [planificar sin parar la producción](/recursos/migrar-servidores-sin-parar-la-produccion/).
 
 ## Cómo decidirlo
 
@@ -75,7 +75,7 @@ El reto es que las piezas no vayan cada una por su lado. Quien se incorpora a tu
 Una guía rápida:
 
 - **Nube pública** si tu prioridad es crecer rápido, estar presente en varias regiones o evitar la inversión inicial.
-- **Datacenter de proximidad** si te importa saber dónde están tus datos y tener un coste previsible. Y si quieres cerca un equipo que conozca tus sistemas.
-- **Un modelo mixto** si tienes cargas críticas y estables que quieres cerca. Y, a la vez, picos o servicios globales que encajan mejor en la nube.
+- **Datacenter de proximidad** si te importa saber dónde están tus datos, tener un coste previsible y un equipo cercano que conozca tus sistemas.
+- **Un modelo mixto** si quieres cerca tus cargas críticas y estables, pero tienes picos o servicios globales que encajan mejor en la nube.
 
 Decide sistema por sistema, con toda la infraestructura a la vista. Coge la lista de tus aplicaciones y piensa quién usa cada una y desde dónde. Cómo trabaja tu negocio es lo que marca dónde va cada pieza.

@@ -11,22 +11,22 @@ updated: 2026-11-02
 servicio: "/ciberseguridad/"
 related: ["ciberseguridad-gestionada-o-equipo-interno", "red-plana-o-red-segmentada", "ciberseguridad-sin-departamento-it-propio"]
 imagen: "Firewall montado en un rack de comunicaciones mientras un técnico revisa sus reglas en un portátil"
-tldr: "Un firewall propio da control total sobre la configuración. A cambio, pide dedicación técnica constante para actualizarlo y revisar sus reglas. Un firewall gestionado traslada ese trabajo a un especialista. Es quien lo actualiza, supervisa su actividad y ajusta las reglas con la empresa. La elección no depende del aparato en sí. Depende de si el equipo interno tiene tiempo asignado y conocimiento actualizado para sostenerlo."
+tldr: "Un firewall propio da control total sobre la configuración. A cambio, pide dedicación técnica constante para actualizarlo y revisar sus reglas. Un firewall gestionado traslada ese trabajo a un especialista, que lo actualiza, supervisa su actividad y ajusta las reglas con la empresa. La elección no depende del aparato en sí. Depende de si el equipo interno tiene tiempo asignado y conocimiento actualizado para sostenerlo."
 faq:
   manager:
     - q: "¿Es menos seguro un firewall que gestiona alguien de fuera de la empresa?"
       a: "No por sí mismo. Lo que protege es que el firewall esté al día y bien atendido. Alguien tiene que revisar sus reglas y sus alertas con regularidad. En un firewall gestionado, ese trabajo forma parte del servicio. En uno propio, depende de que alguien de tu equipo tenga tiempo para hacerlo."
     - q: "¿Hay que cambiar el firewall si cambiamos de operador de internet?"
-      a: "Normalmente no hace falta cambiar el equipo. Lo que sí hay que revisar es su configuración: direcciones, enlaces y accesos remotos. En un servicio gestionado, esa adaptación suele correr a cargo del especialista. También coordina el cambio con el nuevo operador."
+      a: "Normalmente no hace falta cambiar el equipo. Lo que sí hay que revisar es su configuración: direcciones, enlaces y accesos remotos. En un servicio gestionado, esa adaptación suele correr a cargo del especialista, que también coordina el cambio con el nuevo operador."
     - q: "¿Cuánto se tarda en poner en marcha un firewall gestionado?"
-      a: "El plazo depende del tamaño de la red y del número de sedes. También de los accesos remotos que haya que mantener. Lo que más tiempo lleva suele ser el diagnóstico inicial y definir las reglas contigo. Instalar el equipo es la parte más rápida."
+      a: "El plazo depende del tamaño de la red, del número de sedes y de los accesos remotos que haya que mantener. Lo que más tiempo lleva suele ser el diagnóstico inicial y definir las reglas contigo. Instalar el equipo es la parte más rápida."
   tecnico:
     - q: "¿Quién define las reglas en un firewall gestionado: nosotros o el proveedor?"
       a: "Las dos partes. El proveedor propone la configuración según las buenas prácticas y el diagnóstico de la red. Los accesos propios del negocio se acuerdan con tu equipo técnico o con la dirección."
     - q: "¿Se mantiene la visibilidad sobre los registros si el firewall es gestionado?"
       a: "Debería mantenerse. Un servicio gestionado suele incluir informes periódicos y acceso a la información de los registros. Así sabes qué se ha bloqueado, qué se ha permitido y por qué."
     - q: "¿Cómo se coordina el firewall con la VPN y los accesos remotos?"
-      a: "Las reglas del firewall y la política de VPN y accesos remotos se revisan juntas. Los accesos desde fuera llevan autenticación multifactor. Así una regla abierta en un punto no deja sin efecto una restricción definida en otro."
+      a: "Las reglas del firewall y la política de VPN y accesos remotos se revisan juntas. Así una regla abierta en un punto no deja sin efecto una restricción definida en otro. Además, los accesos desde fuera llevan autenticación multifactor."
 ---
 Comprar un firewall es la parte sencilla. Lo que de verdad protege tu red viene después. Hay que configurarlo bien y actualizarlo cuando el fabricante publica mejoras. Y hay que revisar sus reglas cada vez que tu empresa cambia. Tener el aparato en el rack no es lo mismo que estar protegido.
 
@@ -38,7 +38,7 @@ Un firewall decide qué tráfico entra y sale de tu red, y entre qué zonas pued
 
 Imagina que abres una segunda oficina y la gente de allí necesita entrar en el servidor de aquí. Las reglas de ayer no contemplan ese camino. Cuando la empresa cambia, las reglas también deberían cambiar.
 
-A eso se suman las actualizaciones del propio equipo y de sus servicios de seguridad. Luego están los registros. En ellos ves qué bloquea el firewall, qué deja pasar y qué alertas genera. Es un trabajo pequeño pero constante. Lo importante es que tenga un responsable claro.
+A eso se suman las actualizaciones del propio equipo y de sus servicios de seguridad. Luego están los registros, donde ves qué bloquea el firewall, qué deja pasar y qué alertas genera. Es un trabajo pequeño pero constante. Lo importante es que tenga un responsable claro.
 
 ## Lo que exige un firewall propio
 

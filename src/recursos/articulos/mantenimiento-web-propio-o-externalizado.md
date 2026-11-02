@@ -22,7 +22,7 @@ faq:
       a: "Depende del tamaño de la web y de cuántas extensiones tenga. Lo que más se nota es el tiempo que hoy dedicas a resolver imprevistos de forma irregular. Ese tiempo queda libre para el contenido o pasa a ser tiempo planificado."
   tecnico:
     - q: "¿Qué incluye un mantenimiento externalizado frente a hacerlo internamente?"
-      a: "Las mismas tareas, hechas con método. Las actualizaciones del gestor, de la plantilla y de los plugins se prueban antes de aplicarse. Las copias de seguridad se verifican. Se supervisan la disponibilidad y el rendimiento. Y, si algo falla, tienes respuesta directa."
+      a: "Las mismas tareas, hechas con método. Las actualizaciones del gestor, de la plantilla y de los plugins se prueban antes de aplicarse. Se verifican las copias de seguridad y se supervisan la disponibilidad y el rendimiento. Si algo falla, tienes respuesta directa."
     - q: "¿Qué documentación conviene tener si el mantenimiento se lleva dentro?"
       a: "Lo básico es un inventario de lo instalado, con sus versiones. Ten a mano también los accesos al hosting, al dominio y al panel de la web. Añade el procedimiento de copias y restauración y un registro de cambios. Todo eso facilita el relevo entre personas y también un posible traspaso a un servicio externo."
     - q: "¿Cómo se atiende un cambio urgente fuera de las tareas planificadas?"
@@ -62,7 +62,7 @@ Un servicio externo no está tan cerca de tu negocio como alguien de dentro. Lo 
 - **Revisiones periódicas** que encuentran una extensión desactualizada, una renovación pendiente o un error antes que tus visitantes.
 - **Experiencia con muchas webs y extensiones**, sin la curva de aprendizaje de quien lo hace de vez en cuando.
 
-Con un mantenimiento planificado, los imprevistos se reducen. Un conflicto entre extensiones, un certificado que caduca o una copia incompleta aparecen en una revisión. Y no el día en que lanzas una promoción. La diferencia entre actuar cuando algo falla y revisar antes se explica en [mantenimiento web reactivo o preventivo](/recursos/mantenimiento-web-reactivo-o-preventivo/).
+Con un mantenimiento planificado, los imprevistos se reducen. Un conflicto entre extensiones, un certificado que caduca o una copia incompleta aparecen en una revisión. No te los encuentras el día en que lanzas una promoción. La diferencia entre actuar cuando algo falla y revisar antes se explica en [mantenimiento web reactivo o preventivo](/recursos/mantenimiento-web-reactivo-o-preventivo/).
 
 Ninguna de las dos opciones sustituye al alojamiento, que es otra pieza. Qué cubre el hosting y qué cubre el mantenimiento se detalla en [hosting básico o mantenimiento web completo](/recursos/hosting-basico-o-mantenimiento-web-completo/).
 

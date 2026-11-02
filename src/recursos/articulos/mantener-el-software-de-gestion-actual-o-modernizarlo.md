@@ -2,7 +2,7 @@
 title: "Mantener el software de gestión actual o modernizarlo | ADQA"
 description: "Mantener el software de gestión actual o modernizarlo: señales de que el sistema se queda atrás, formas de renovarlo y cómo hacerlo sin parar la operativa."
 h1: "Mantener el software de gestión actual o modernizarlo: cómo decidir sin parar la operativa"
-lead: "Cuándo compensa seguir con el sistema que tienes y qué señales dicen que se queda atrás. Y cómo renovarlo por partes."
+lead: "Cuándo compensa seguir con el sistema que tienes, qué señales dicen que se queda atrás y cómo renovarlo por partes."
 keyword: "mantener el software de gestión actual o modernizarlo"
 category: web
 etiquetas: ["Software a medida", "Migración"]
@@ -19,16 +19,16 @@ faq:
     - q: "¿Modernizar el software obliga a parar la operativa?"
       a: "No tiene por qué. Con una transición por módulos, el sistema antiguo y el nuevo conviven durante un tiempo. Tu equipo sigue trabajando mientras se completa el cambio. Las fechas clave se acuerdan para evitar los periodos de más actividad."
     - q: "¿Cómo sabemos si ha llegado el momento de modernizar?"
-      a: "Lo sabes cuando la tecnología ya no recibe actualizaciones de seguridad. O cuando cuesta encontrar a quien la conozca. También cuando no se conecta con herramientas que tu negocio necesita. O cuando el mantenimiento ya cuesta más de lo que aporta."
+      a: "Lo sabes cuando la tecnología ya no recibe actualizaciones de seguridad o cuesta encontrar a quien la conozca. Otras señales: no se conecta con herramientas que tu negocio necesita, o el mantenimiento ya cuesta más de lo que aporta."
   tecnico:
     - q: "¿Se conservan la base de datos y el histórico al modernizar?"
       a: "Sí, es lo habitual. Los datos existentes se migran al nuevo sistema con una fase de validación previa. En ella se comparan registros y totales entre los dos sistemas. Así se comprueba que la información se ha trasladado correctamente."
     - q: "¿Qué parte del sistema antiguo se puede reutilizar?"
-      a: "Depende del caso. Los datos y el histórico se conservan casi siempre. Luego está la lógica de negocio. Son las reglas, los cálculos y las validaciones que tu empresa ha ido definiendo con los años. También se suele aprovechar, aunque se reconstruya sobre una tecnología actual."
+      a: "Depende del caso. Los datos y el histórico se conservan casi siempre. Luego está la lógica de negocio: las reglas, los cálculos y las validaciones que tu empresa ha ido definiendo con los años. También se suele aprovechar, aunque se reconstruya sobre una tecnología actual."
     - q: "¿Cómo se planifica una modernización por módulos sin duplicar trabajo?"
       a: "Se empieza por los módulos con más riesgo o más limitaciones. Después se define cómo se sincronizan los datos entre el sistema antiguo y el nuevo mientras conviven. Cada parte antigua se retira en cuanto la nueva está validada."
 ---
-«Si funciona, no lo toques» es una regla razonable. Deja de serlo cuando el programa lleva años sin actualizarse. O cuando cada vez cuesta más encontrar a quien sepa mantenerlo. Por ejemplo, cuando se acerca la jubilación del técnico que lo conoce por dentro. Entonces la pregunta cambia: no es si renovarlo, sino cuándo y cómo.
+«Si funciona, no lo toques» es una regla razonable. Deja de serlo cuando el programa lleva años sin actualizarse y cada vez cuesta más encontrar a quien sepa mantenerlo. Pasa, por ejemplo, cuando se acerca la jubilación del técnico que lo conoce por dentro. Entonces la pregunta cambia: no es si renovarlo, sino cuándo y cómo.
 
 Modernizar no significa tirarlo todo. Muchas veces conservas lo más valioso del sistema actual: los datos, el histórico y la lógica de negocio. Es decir, las reglas que tu empresa ha ido afinando durante años.
 
@@ -81,7 +81,7 @@ Se reconstruye el sistema sobre una tecnología actual. Se aprovechan las reglas
 
 ¿Los procesos que recogía el sistema antiguo ya son los habituales del sector? Un programa del mercado puede ser una buena salida. La comparación se detalla en [software de gestión a medida o programa estándar](/recursos/software-de-gestion-a-medida-o-programa-estandar/).
 
-En los tres casos, la migración de datos se prepara y se prueba antes del cambio. Hay una fase en la que tu equipo trabaja con datos reales. Lo que más preocupa antes de empezar es parar la operativa. Es justo lo que más se planifica. Si además hay que trasladar servidores, los pasos están en [migrar servidores sin parar la producción](/recursos/migrar-servidores-sin-parar-la-produccion/).
+En los tres casos, la migración de datos se prepara y se prueba antes del cambio. La prueba incluye una fase en la que tu equipo trabaja con datos reales. Lo que más preocupa antes de empezar es parar la operativa. Es justo lo que más se planifica. Si además hay que trasladar servidores, los pasos están en [migrar servidores sin parar la producción](/recursos/migrar-servidores-sin-parar-la-produccion/).
 
 ## Cómo decidirlo
 

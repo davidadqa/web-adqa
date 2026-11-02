@@ -11,13 +11,13 @@ updated: 2026-11-02
 servicio: "/diseno-programacion-web/"
 related: ["web-estatica-o-web-con-gestor-de-contenidos-cms", "contratar-diseno-y-programacion-por-separado-o-con-un-mismo-equipo", "redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco"]
 imagen: "Pantalla de ordenador con el boceto de una web a medida junto a una galería de plantillas web genéricas"
-tldr: "Una plantilla permite lanzar una web rápido y con un presupuesto ajustado. A cambio, se adapta a una estructura y unas funciones pensadas para cualquier negocio. Una web a medida se construye a partir de lo que necesita la empresa. Requiere más tiempo e inversión inicial, y da más margen para diferenciarse, cargar rápido e integrar funciones propias. La elección depende del papel de la web en el negocio."
+tldr: "Una plantilla permite lanzar una web rápido y con un presupuesto ajustado. A cambio, la web tiene que adaptarse a una estructura y unas funciones pensadas para cualquier negocio. Una web a medida se construye a partir de lo que necesita la empresa. Requiere más tiempo e inversión inicial, y da más margen para diferenciarse, cargar rápido e integrar funciones propias. La elección depende del papel de la web en el negocio."
 faq:
   manager:
     - q: "¿Una plantilla es suficiente para mi empresa?"
-      a: "Depende de lo que le pidas a la web. Si sirve sobre todo para presentar la empresa y cambia poco, una plantilla bien elegida puede bastar. Si genera contactos o ventas, o necesita funciones propias, sus límites suelen llegar antes de lo que esperas."
+      a: "Depende de lo que le pidas a la web. Si sirve sobre todo para presentar la empresa y cambia poco, una plantilla bien elegida puede bastar. Si genera contactos o ventas de forma activa, o necesita funciones propias, sus límites suelen llegar antes de lo que esperas."
     - q: "¿Cómo se nota que una plantilla se ha quedado corta?"
-      a: "Lo notas cuando te hace falta una función que la plantilla no permite. También cuando carga despacio por acumular extensiones para conseguir lo que no venía de serie. Y cuando cada cambio de diseño te obliga a dar rodeos."
+      a: "Lo notas cuando te hace falta una función que la plantilla no permite. La web empieza a cargar despacio por acumular extensiones para conseguir lo que no venía de serie. Y cada cambio de diseño te obliga a dar rodeos."
     - q: "¿Pasar de plantilla a web a medida más adelante es complicado?"
       a: "Es posible, pero supone rehacer buena parte del trabajo: el diseño, la estructura y, a veces, los contenidos. Si ya sabes que tu negocio va a necesitar algo a medida, suele compensar decidirlo desde el principio. Así no haces el trabajo dos veces."
   tecnico:
@@ -50,12 +50,12 @@ Cuando la web es una pieza activa del negocio, la diferencia empieza a notarse:
 
 - **Diseño a partir de tu marca y tu mensaje.** No tienes que encajar el contenido en un esquema pensado para otro tipo de empresa.
 - **Código más ligero.** Sin funciones que la web no usa, suele cargar más rápido. Eso influye en el posicionamiento y en la [conversión de visitas en contactos](/recursos/diseno-web-centrado-en-estetica-o-en-conversion/).
-- **Funciones específicas.** Una calculadora, un formulario con reglas propias o un área privada. También integraciones con el ERP (tu programa de gestión) o con el CRM (donde llevas a tus clientes). Si esa parte crece mucho, el proyecto pasa a ser más bien de [software a medida](/desarrollo-software-medida/).
+- **Funciones específicas.** Una calculadora, un formulario con reglas propias o un área privada. La web también puede conectarse con el ERP (tu programa de gestión) o con el CRM (donde llevas a tus clientes). Si esa parte crece mucho, el proyecto pasa a ser más bien de [software a medida](/desarrollo-software-medida/).
 - **Margen para crecer.** Puedes añadir secciones y funciones sin reconstruir la web cuando el negocio cambia.
 
 Alguien te busca desde el móvil, en el tren y con poca cobertura. Si tu página tarda en abrir, pasa al siguiente resultado.
 
-Al pasar de plantilla a web a medida, el cambio que más se nota no suele ser visual. Es la velocidad de carga. Y la facilidad para añadir cosas nuevas sin chocar con los límites de la herramienta original.
+Al pasar de plantilla a web a medida, el cambio que más se nota no suele ser visual. Es la velocidad de carga y la facilidad para añadir cosas nuevas sin chocar con los límites de la herramienta original.
 
 ## Preguntas que conviene hacerse antes de elegir
 
@@ -86,4 +86,4 @@ Una guía rápida:
 
 - **Plantilla** si necesitas una web sencilla, pronto y con un presupuesto ajustado.
 - **Web a medida** si la web vende de forma activa o necesita funciones que una plantilla no ofrece.
-- **Empezar con plantilla y cambiar después** también es una opción válida. Eso sí, sabiendo desde el principio que llegará el momento de [rediseñar la web](/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/).
+- **Empezar con plantilla y cambiar después** es una opción válida si sabes desde el principio que llegará el momento de [rediseñar la web](/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/).

@@ -11,20 +11,20 @@ updated: 2026-11-02
 servicio: "/microsoft-365/"
 related: ["cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves", "seguridad-en-microsoft-365", "migracion-a-google-workspace-sin-parar-tu-negocio"]
 imagen: "Persona de un equipo de oficina abriendo por primera vez Teams y Outlook en su portátil, con una compañera a su lado resolviendo una duda"
-tldr: "Una migración a Microsoft 365 no frena el trabajo diario si se prepara bien. Se decide de antemano dónde va cada archivo. Los permisos de las carpetas compartidas se revisan a mano. El sistema anterior sigue funcionando hasta el cambio final del correo. Y cada persona sabe qué cambia y cuándo. La productividad se pierde más por archivos que nadie encuentra y dudas sin resolver que por la tecnología."
+tldr: "Una migración a Microsoft 365 no frena el trabajo diario si se prepara bien. Eso significa decidir antes dónde va cada archivo y revisar a mano los permisos de las carpetas compartidas. Además, el sistema anterior sigue funcionando hasta el cambio final del correo y cada persona sabe qué cambia y cuándo. La productividad se pierde más por archivos que nadie encuentra y dudas sin resolver que por la tecnología."
 faq:
   manager:
     - q: "¿Cómo se evita perder correo o documentos durante la migración a Microsoft 365?"
       a: "Con un periodo de convivencia. Tu sistema anterior sigue funcionando mientras se copian los datos. El correo pasa a Microsoft 365 al final, cuando todo está comprobado. Y antes de retirar el sistema anterior, se guarda una copia."
     - q: "¿Cuánto se tarda en migrar una empresa a Microsoft 365?"
-      a: "No hay un plazo fijo. Influyen cuántas personas se migran y cuánto correo y cuántos archivos hay. También influye cuántas carpetas compartidas tienen permisos propios. El plazo se calcula al principio, después de revisar lo que tienes. Se reparte en fases, con fechas que todo tu equipo conoce. Mientras tanto, el sistema anterior sigue funcionando."
+      a: "No hay un plazo fijo. Influyen cuántas personas se migran, cuánto correo y cuántos archivos hay y cuántas carpetas compartidas tienen permisos propios. El plazo se calcula al principio, después de revisar lo que tienes. Se reparte en fases, con fechas que todo tu equipo conoce. Mientras tanto, el sistema anterior sigue funcionando."
     - q: "¿El equipo necesitará formación para usar Microsoft 365?"
       a: "Suele bastar una formación breve y práctica. Se explica dónde va cada tipo de documento y cuándo usar un chat o un canal de Teams. Y se enseña a enviar un enlace de OneDrive en vez de un adjunto. Word, Excel y Outlook ya le resultan familiares a la mayoría."
   tecnico:
     - q: "¿Se migran también las reglas de correo, las firmas y las listas de distribución?"
       a: "El correo, las carpetas, los calendarios y los contactos se trasladan con herramientas de migración. Las reglas, las firmas y las listas de distribución dependen del sistema de origen. A menudo hay que recrearlas. Por eso conviene inventariarlas al principio y revisarlas en el grupo piloto."
     - q: "¿Dónde van los documentos que hoy están en un servidor de archivos de la oficina?"
-      a: "Se decide antes de moverlos. Los documentos personales van a OneDrive. Los de cada departamento, a bibliotecas de SharePoint. Y los de proyectos que se trabajan en equipo, a canales de Teams. Se mantiene la estructura de carpetas que tu equipo ya conoce. Y se revisan los permisos de cada una."
+      a: "Se decide antes de moverlos. Los documentos personales van a OneDrive. Los de cada departamento, a bibliotecas de SharePoint. Y los de proyectos que se trabajan en equipo, a canales de Teams. Se mantiene la estructura de carpetas que tu equipo ya conoce y se revisan los permisos de cada una."
     - q: "¿Cómo se coordinan los calendarios entre quien ya ha migrado y quien todavía no?"
       a: "Mientras conviven los dos sistemas, hay un detalle con las agendas. Quien ya está en Microsoft 365 no ve por defecto si está libre quien aún no ha migrado. Se puede configurar la consulta de disponibilidad entre los dos. Pero lo más práctico es migrar a la vez a los equipos que trabajan juntos. Así el periodo mixto dura menos."
 ---
@@ -34,7 +34,7 @@ La parte técnica sigue un orden conocido. Lo tienes en [cómo es una migración
 
 ## Dónde se pierde productividad en una migración
 
-Los tropiezos rara vez vienen del traslado de datos. Aparecen el primer día con el sistema nuevo, y casi todos se pueden prever:
+Los tropiezos rara vez vienen del traslado de datos. Suelen aparecer el primer día con el sistema nuevo, y casi todos se pueden prever:
 
 - **Archivos que nadie encuentra.** Si nadie decide qué va a OneDrive, qué a SharePoint y qué a Teams, cada uno guarda donde puede. Aparecen duplicados, y alguien busca la oferta que guardó ayer sin saber dónde mirar.
 - **Permisos que no se trasladan solos.** Copiar el correo y los archivos es casi automático. Los accesos a las carpetas compartidas, en cambio, hay que revisarlos a mano. Si no, alguien se queda sin una carpeta el lunes o ve una que no le corresponde.
@@ -72,10 +72,10 @@ Ten también un plan de vuelta atrás para el grupo piloto, que es el primero en
 
 La primera mañana, alguien abre Teams y no sabe si escribir en el chat o en el canal. Se lo resuelve la compañera de al lado, que ya lo probó en el piloto. Eso no sale solo. Se prepara así:
 
-- **Un aviso con fechas concretas.** Qué cambia para cada persona y dónde estarán su correo y sus archivos. Y qué tiene que hacer, que normalmente es poco.
-- **Formación breve y práctica.** La diferencia entre un chat y un canal de Teams. Cómo compartir un archivo desde OneDrive en lugar de adjuntarlo. Y dónde guardar cada cosa.
+- **Un aviso con fechas concretas.** Qué cambia para cada persona, dónde estarán su correo y sus archivos y qué tiene que hacer, que normalmente es poco.
+- **Formación breve y práctica.** La diferencia entre un chat y un canal de Teams. Cómo compartir un archivo desde OneDrive en lugar de adjuntarlo y dónde guardar cada cosa.
 - **Alguien a quien preguntar en cada departamento.** Quienes formaron parte del grupo piloto ya conocen el entorno. Resuelven muchas dudas sobre la marcha.
-- **Atención cercana los primeros días.** Para las dudas de Outlook, del móvil o de un permiso que te falte.
+- **Atención cercana los primeros días**, para las dudas de Outlook, del móvil o de un permiso que te falte.
 - **Una copia del sistema anterior** antes de retirarlo definitivamente.
 
 ## Lo que notará el equipo, momento a momento

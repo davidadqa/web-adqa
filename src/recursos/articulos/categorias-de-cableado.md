@@ -15,14 +15,14 @@ tldr: "Las categorías de cobre habituales en una empresa son Cat 5e, Cat 6 y Ca
 faq:
   manager:
     - q: "¿Vale la pena pagar más por Cat 6A si hoy no necesito tanta velocidad?"
-      a: "En una instalación nueva suele compensar. El sobrecoste frente a Cat 6 es moderado si lo comparas con tener que recablear dentro de unos años. Ese momento llega cuando crecen tus necesidades de ancho de banda. O cuando instalas puntos de acceso WiFi más exigentes."
+      a: "En una instalación nueva suele compensar. El sobrecoste frente a Cat 6 es moderado si lo comparas con tener que recablear dentro de unos años. Ese momento llega cuando crecen tus necesidades de ancho de banda o cuando instalas puntos de acceso WiFi más exigentes."
     - q: "¿Cómo sé qué categoría tiene el cableado que ya tengo?"
-      a: "La inscripción impresa en el propio cable te da una primera pista. Pero la respuesta fiable la da una certificación. Confirma si cada enlace rinde según esa categoría. Y tiene en cuenta también las tomas, los paneles y los conectores."
+      a: "La inscripción impresa en el propio cable te da una primera pista. Pero la respuesta fiable la da una certificación. Confirma si cada enlace rinde según esa categoría, con las tomas, los paneles y los conectores incluidos."
     - q: "¿La fibra es siempre mejor que el cobre?"
       a: "No para todo. Dentro de una misma planta, un cobre de buena categoría suele ser suficiente y más económico. Además, tus equipos se conectan directamente a él. La fibra gana peso con la distancia y en los troncales que unen armarios, plantas o edificios."
   tecnico:
     - q: "¿Qué diferencia práctica hay entre instalar Cat 6 y Cat 6A?"
-      a: "Cat 6A exige más cuidado con las interferencias y el apantallamiento. Sobre todo en recorridos largos o cerca de fuentes de ruido eléctrico. El cable es más grueso y ocupa más espacio en bandejas y canalizaciones. Y conviene que tomas, paneles y latiguillos sean de la misma categoría para aprovechar todo su rendimiento."
+      a: "Cat 6A exige más cuidado con las interferencias y el apantallamiento, sobre todo en recorridos largos o cerca de fuentes de ruido eléctrico. El cable es más grueso y ocupa más espacio en bandejas y canalizaciones. Y conviene que tomas, paneles y latiguillos sean de la misma categoría para aprovechar todo su rendimiento."
     - q: "¿Cuándo tiene sentido la fibra multimodo en lugar de la monomodo?"
       a: "Cuando las distancias son moderadas y el coste de la electrónica pesa en la decisión. Por ejemplo, entre plantas de un mismo edificio o entre edificios cercanos. Para enlaces largos o entre sedes, la monomodo es la opción natural."
     - q: "¿Contra qué se certifica, la categoría del cable o la de la instalación?"
@@ -30,7 +30,7 @@ faq:
 ---
 Pedir «cableado de red» sin más es como pedir «un coche»: la categoría importa. Cada una tiene un límite de frecuencia y de velocidad. Elegir la que no toca es una causa habitual de que tu red no rinda lo esperado. Instalarla sin el cuidado que pide, también.
 
-A continuación verás qué diferencia a cada categoría de cobre y cuándo entra en juego la fibra. También por qué la etiqueta del cable no basta para saber cuánto rinde.
+A continuación verás qué diferencia a cada categoría de cobre y cuándo entra en juego la fibra. Y entenderás por qué la etiqueta del cable no basta para saber cuánto rinde.
 
 ## Categorías de cobre: qué diferencia hay
 
@@ -46,7 +46,7 @@ La categoría no es solo del cable. Es la del enlace completo, con tomas, panele
 
 - **Fibra multimodo.** Para distancias cortas y medias, dentro de un edificio o entre edificios cercanos. La electrónica asociada suele ser más económica.
 - **Fibra monomodo.** Para distancias mucho mayores: enlaces entre edificios distantes o entre sedes.
-- **Frente al cobre.** La fibra suele imponerse en naves grandes o con muchos metros entre armarios. También cuando necesitas mucho ancho de banda sin interferencias. Dentro de una misma planta, un buen cobre normalmente basta.
+- **Frente al cobre.** La fibra suele imponerse en naves grandes o con muchos metros entre armarios, y cuando necesitas mucho ancho de banda sin interferencias. Dentro de una misma planta, un buen cobre normalmente basta.
 
 Piensa en una nave con dos armarios: uno junto a las oficinas y otro en el muelle de carga. Entre uno y otro hay muchos metros. Ese tramo es terreno de la fibra.
 
@@ -54,9 +54,9 @@ La fibra no se clasifica por categorías como el cobre, sino por tipos de fibra.
 
 ## Por qué la categoría no lo es todo
 
-Un cable Cat 6A puede rendir muy por debajo de su categoría. Ocurre si tiene radios de curvatura demasiado cerrados o conectores mal terminados. O si va tendido junto a líneas eléctricas. Por ejemplo, un cable que comparte canaleta con la corriente de toda una fila de mesas. El material es una parte de la ecuación; la instalación, la otra.
+Un cable Cat 6A puede rendir muy por debajo de su categoría. Ocurre si tiene radios de curvatura demasiado cerrados, conectores mal terminados o si va tendido junto a líneas eléctricas. Es el caso de un cable que comparte canaleta con la corriente de toda una fila de mesas. El material es una parte de la ecuación; la instalación, la otra.
 
-Por eso la [certificación del cableado](/redes/certificacion-redes/) no se limita a mirar qué cable se ha usado. Mide cuánto rinde de verdad cada enlace y lo compara con lo que exige su categoría. ¿Algún punto no llega? En [mi red no ha pasado la certificación](/recursos/mi-red-no-ha-pasado-la-certificacion/) tienes las causas más habituales y cómo se corrigen.
+Por eso la [certificación del cableado](/redes/certificacion-redes/) no se limita a mirar qué cable se ha usado. Mide cuánto rinde de verdad cada enlace y lo compara con lo que exige su categoría. ¿Algún punto no llega? [Mi red no ha pasado la certificación](/recursos/mi-red-no-ha-pasado-la-certificacion/) te explica por qué suele fallar y cómo se corrige.
 
 ## Cómo decidirlo
 
@@ -71,5 +71,5 @@ Por eso la [certificación del cableado](/redes/certificacion-redes/) no se limi
 Una guía rápida:
 
 - **Cat 6A para obra nueva**, salvo presupuesto muy ajustado. Te da margen para los próximos años sin un gran sobrecoste frente a Cat 6.
-- **Fibra para los troncales** entre plantas, edificios o sedes. También donde las distancias superan lo que admite el cobre.
+- **Fibra para los troncales** entre plantas, edificios o sedes, y donde las distancias superan lo que admite el cobre.
 - **Certificación siempre**, sea cual sea la categoría. Es la forma de saber si lo instalado rinde lo que promete. Si quieres verlo paso a paso, lee [así se certifica una red](/recursos/asi-se-certifica-una-red/).

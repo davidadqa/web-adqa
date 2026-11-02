@@ -15,20 +15,20 @@ tldr: "Un datacenter de proximidad es una instalación cercana a la empresa, pre
 faq:
   manager:
     - q: "¿Un datacenter de proximidad es una alternativa real a la nube pública?"
-      a: "Sí. No es una versión reducida de la nube, sino una opción para necesidades distintas. Te da control, cercanía y coste previsible, frente a la escala y la elasticidad de la nube. Muchas empresas que podrían ir a la nube pública eligen un datacenter cercano. Encaja mejor con su forma de trabajar. Otras combinan los dos."
+      a: "Sí. No es una versión reducida de la nube, sino una opción para necesidades distintas. Te da control, cercanía y coste previsible, frente a la escala y la elasticidad de la nube. Muchas empresas que podrían ir a la nube pública eligen un datacenter cercano porque encaja mejor con cómo trabajan. Otras combinan los dos."
     - q: "¿En qué se diferencia de tener los servidores en la oficina?"
-      a: "En el entorno y en quién lo cuida. En un datacenter, tus servidores están en una sala preparada para ellos. Tiene temperatura estable, alimentación redundante y acceso controlado. Ya no dependen del aire acondicionado de la oficina. Tampoco de su SAI, la batería que aguanta los cortes de luz. Si en la oficina se va la luz o se estropea la climatización, tus servidores siguen igual."
+      a: "En el entorno y en quién lo cuida. En un datacenter, tus servidores están en una sala preparada para ellos. Tiene temperatura estable, alimentación redundante y acceso controlado. Ya no dependen del aire acondicionado de la oficina ni de su SAI, la batería que aguanta los cortes de luz. Si en la oficina se va la luz o se estropea la climatización, tus servidores siguen igual."
     - q: "¿Un datacenter de proximidad se queda corto si la empresa crece?"
       a: "No, si desde el principio se calcula la capacidad con margen y se revisa de forma periódica. Los servidores virtuales se amplían sin comprar hardware nuevo. Y puedes combinar: el datacenter para lo crítico y la nube pública para lo que crece a picos."
   tecnico:
     - q: "¿Qué tiempos de intervención física conviene acordar?"
-      a: "Depende de lo crítico que sea cada sistema. El plazo que acuerdes, déjalo por escrito en el contrato. En un datacenter cercano, quien interviene suele conocer ya el montaje. Eso acorta el diagnóstico. Antes de firmar, pregunta a qué plazos se comprometen y en qué horario. Pregunta también cómo queda registrada cada actuación."
+      a: "Depende de lo crítico que sea cada sistema. El plazo que acuerdes, déjalo por escrito en el contrato. En un datacenter cercano, quien interviene suele conocer ya el montaje. Eso acorta el diagnóstico. Antes de firmar, pregunta a qué plazos se comprometen, en qué horario y cómo queda registrada cada actuación."
     - q: "¿Cómo se gestiona la redundancia frente a una nube con varias zonas de disponibilidad?"
       a: "Depende del proveedor. Revisa la redundancia eléctrica, la de refrigeración y la de conectividad. Comprueba también si las copias se guardan en un segundo emplazamiento. No es automático como en una nube con varias zonas. Por eso conviene preguntarlo de forma explícita antes de migrar."
     - q: "¿Se puede usar un datacenter de proximidad solo para las copias de seguridad?"
       a: "Sí, y es un primer paso habitual. Tus servidores siguen en la oficina y una copia se guarda en el datacenter. Queda aislada de la red interna, con restauraciones de prueba periódicas. Más adelante puedes decidir si algún servidor también se traslada."
 ---
-Quizá tu servidor vive en un armario de la oficina, entre la fotocopiadora y las cajas de folios. Cuando toca decidir qué hacer con él, casi siempre aparecen dos respuestas: «nos vamos a la nube» o «seguimos como estamos». Entre las dos hay otra opción que se menciona menos. Y encaja con muchas pymes: un datacenter de proximidad.
+Quizá tu servidor vive en un armario de la oficina, entre la fotocopiadora y las cajas de folios. Cuando toca decidir qué hacer con él, casi siempre aparecen dos respuestas: «nos vamos a la nube» o «seguimos como estamos». Entre las dos hay otra opción que se menciona menos y que encaja con muchas pymes: un datacenter de proximidad.
 
 Aquí verás qué es, qué gana tu empresa con él y en qué situaciones tiene sentido. Si quieres compararlo criterio a criterio con la nube pública, lo tienes en [datacenter propio o nube pública](/recursos/datacenter-propio-o-nube-publica/).
 
@@ -46,7 +46,7 @@ Lo que alojas puede ser de dos tipos. Con **housing**, llevas tus propios servid
 
 - **Equipos en un entorno adecuado.** Los servidores dejan el cuarto técnico de la oficina. Allí dependen de la climatización del edificio, que puede apagarse un sábado de agosto. Ahora pasan a una sala con frío y corriente pensados para ellos.
 - **Manos cerca del servidor.** Cambiar un disco, revisar un equipo que no arranca o instalar uno nuevo. Todo eso lo hace un técnico que puede desplazarse hasta la sala y que ya conoce la instalación.
-- **Un camino privado hasta los servidores.** Un operador presente en los dos extremos puede tender un [enlace privado](/recursos/enlace-privado-oficina-datacenter/). Con él, la oficina llega al datacenter sin pasar por internet. Y los tiempos de respuesta son más regulares.
+- **Un camino privado hasta los servidores.** Un operador presente en los dos extremos puede tender un [enlace privado](/recursos/enlace-privado-oficina-datacenter/). Con él, la oficina llega al datacenter sin pasar por internet y con tiempos de respuesta más regulares.
 - **Copias en otro edificio.** Guardarlas lejos de tus equipos originales es una de las bases de la [continuidad de negocio](/recursos/backup-y-continuidad-de-negocio/).
 - **Un coste que se conoce de antemano.** Pagas una cuota estable, no una factura que depende del consumo de cada mes.
 
@@ -79,4 +79,4 @@ Depende, sobre todo, de para qué usas cada servidor. No es lo mismo el que cont
 | Usuarios repartidos por varios países | Mejor nube pública |
 | Máquinas de producción que necesitan el servidor a su lado | Mejor en local, con la copia en el datacenter |
 
-¿La conclusión es trasladar tus servidores? Entonces la clave está en la preparación. Inventario, réplica en paralelo y un cambio final corto, a la hora que menos molesta. En [migrar servidores sin parar la producción](/recursos/migrar-servidores-sin-parar-la-produccion/) tienes el paso a paso.
+¿La conclusión es trasladar tus servidores? Entonces la clave está en la preparación: inventario, réplica en paralelo y un cambio final corto, a la hora que menos molesta. En [migrar servidores sin parar la producción](/recursos/migrar-servidores-sin-parar-la-produccion/) tienes el paso a paso.

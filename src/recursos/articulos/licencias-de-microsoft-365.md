@@ -15,9 +15,9 @@ tldr: "Ajustar las licencias de Microsoft 365 es dar a cada persona el plan que 
 faq:
   manager:
     - q: "¿Cómo sabemos si estamos pagando de más por licencias de Microsoft 365?"
-      a: "Comparando el plan de cada persona con lo que usa de verdad. Es habitual encontrar cuentas de gente que ya no está en la empresa. También aparecen planes superiores asignados a quien solo usa el correo y Teams. Y complementos contratados para un caso puntual que siguen activos."
+      a: "Comparando el plan de cada persona con lo que usa de verdad. Es habitual encontrar cuentas de gente que ya no está en la empresa. También aparecen planes superiores asignados a quien solo usa el correo y Teams, o complementos contratados para un caso puntual que siguen activos."
     - q: "¿Cada cuánto conviene revisar las licencias?"
-      a: "Al menos una vez al año. Y, además, cada vez que cambia algo en tu plantilla: incorporaciones, salidas o cambios de puesto. Si lo haces antes de cada renovación, no arrastras un año más un reparto que ya no encaja."
+      a: "Al menos una vez al año y, además, cada vez que cambia algo en tu plantilla: incorporaciones, salidas o cambios de puesto. Si lo haces antes de cada renovación, no arrastras un año más un reparto que ya no encaja."
     - q: "¿Ajustar las licencias significa recortar funciones necesarias?"
       a: "No. El objetivo es que cada persona tenga lo que usa, ni más ni menos. A veces la revisión baja el plan de unos y sube el de otros. Ocurre, por ejemplo, cuando alguien que maneja datos sensibles no tenía la seguridad que necesitaba."
   tecnico:
@@ -35,7 +35,7 @@ Lo notas cuando llega la renovación y la factura tiene más líneas de las que 
 ## Por qué las licencias se desajustan sin que nadie lo note
 
 - **Cuentas de personas que ya no están.** Si la baja no forma parte del proceso de salida, la licencia sigue activa durante meses. La de quien se fue en primavera se sigue pagando en otoño.
-- **Cambios de puesto que no llegan al plan.** Alguien pasa de un puesto operativo a uno de dirección, o al revés. Y se queda con el plan anterior por inercia.
+- **Cambios de puesto que no llegan al plan.** Quien pasa de un puesto operativo a uno de dirección, o al revés, se queda con el plan anterior por inercia.
 - **Un plan superior para todos.** Se eligió al principio por simplicidad, sin distinguir entre perfiles muy distintos.
 - **Licencias «por si acaso».** Personal temporal o externo con un plan completo cuando solo necesita un acceso puntual.
 - **Buzones de departamento con licencia de usuario.** Direcciones como las de administración o atención al cliente, que funcionarían igual como buzones compartidos. Estos no suelen necesitar licencia mientras no superen los límites de tamaño que fija Microsoft.
@@ -56,7 +56,7 @@ Abre el listado de usuarios y ponlo al lado de la lista de tu plantilla. Con eso
 
 - Número de cuentas activas frente a personas en plantilla.
 - Plan asignado a cada usuario frente a las aplicaciones y funciones que usa de verdad.
-- Cuentas con seguridad avanzada que no la necesitan. Y, al revés, personas que manejan datos sensibles sin ese nivel.
+- Cuentas con seguridad avanzada que no la necesitan y, al revés, personas que manejan datos sensibles sin ese nivel.
 - Licencias de personal temporal o externo que ya no trabaja con tu empresa.
 - Buzones de departamento que podrían pasar a ser buzones compartidos.
 - Complementos contratados para un caso puntual, como almacenamiento adicional, que siguen activos.

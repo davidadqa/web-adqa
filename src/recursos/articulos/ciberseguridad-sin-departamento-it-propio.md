@@ -19,14 +19,14 @@ faq:
     - q: "¿Quién se ocupa de un incidente si no hay nadie técnico en la empresa?"
       a: "El proveedor que tiene el encargo de la ciberseguridad. Diagnostica el problema y coordina la solución. Después explica a la dirección qué ha pasado y qué decisiones hacen falta. La dirección sigue decidiendo lo que afecta al negocio, como la comunicación con clientes y proveedores."
     - q: "¿Cómo sé si lo que tengo hoy es suficiente?"
-      a: "Una buena señal es que alguien pueda explicarte en pocas frases qué está protegido y qué no. También qué se haría si algo fallara mañana. Si esa explicación no existe, repasa una lista de comprobación básica con quien lleve tu informática."
+      a: "Una buena señal es que alguien pueda explicarte en pocas frases qué está protegido, qué no y qué se haría si algo fallara mañana. Si esa explicación no existe, repasa una lista de comprobación básica con quien lleve tu informática."
   tecnico:
     - q: "¿Cómo se gestionan las altas y bajas de usuarios sin un responsable técnico interno?"
       a: "Con un procedimiento acordado con el proveedor. Tu empresa avisa de cada entrada o salida, y el proveedor crea, ajusta o desactiva las cuentas. Además, revisa cada cierto tiempo quién tiene acceso a qué y retira los permisos que ya no corresponden."
     - q: "¿Por dónde se empieza si casi nada de la lista está cubierto?"
-      a: "Por lo que más reduce el riesgo con menos esfuerzo. Pon doble verificación en el correo y en los accesos remotos. Haz una restauración de prueba de las copias. Y da de baja las cuentas antiguas. Después llegan las actualizaciones planificadas y la separación de la red de invitados. Una auditoría inicial ayuda a ordenar el resto."
+      a: "Por lo que más reduce el riesgo con menos esfuerzo. Pon doble verificación en el correo y en los accesos remotos. Haz una restauración de prueba de las copias y da de baja las cuentas antiguas. Después llegan las actualizaciones planificadas y la separación de la red de invitados. Una auditoría inicial ayuda a ordenar el resto."
     - q: "¿Cómo se acuerda la respuesta ante incidencias con un proveedor externo?"
-      a: "Por escrito y antes de necesitarla. Hay que acordar qué se considera urgente, por qué canal se avisa y quién decide en la empresa. También qué puede hacer el proveedor sin esperar autorización, como aislar un equipo. La rapidez depende sobre todo de tener esto acordado y la infraestructura documentada. Eso pesa más que tener personal técnico en la oficina."
+      a: "Por escrito y antes de necesitarla. Hay que acordar qué se considera urgente, por qué canal se avisa y quién decide en la empresa. Deja claro también qué puede hacer el proveedor sin esperar autorización, como aislar un equipo. La rapidez depende sobre todo de tener esto acordado y la infraestructura documentada. Eso pesa más que tener personal técnico en la oficina."
 ---
 Muchas pymes funcionan bien sin un departamento de informática propio. La tecnología no es el centro del negocio y alguien de confianza resuelve el día a día. A veces es un técnico de fuera al que llamas cuando algo falla. La ciberseguridad encaja en ese modelo. Basta con que cada pieza tenga un responsable claro, aunque sea externo.
 
@@ -42,7 +42,7 @@ Esta lista sirve para comprobarlo. Para cada punto, intenta responder dos cosas:
 
 - **¿Se dan de baja las cuentas cuando alguien deja la empresa?** Con un procedimiento, no de memoria.
 - **¿Cada persona tiene su propia contraseña?** Las contraseñas compartidas impiden saber quién ha entrado en cada sistema.
-- **¿El correo y los accesos remotos piden una segunda verificación?** Es el código que te llega al móvil cuando entras desde un sitio nuevo. En esos puntos, la autenticación multifactor es de las medidas con más efecto por menos esfuerzo.
+- **¿El correo y los accesos remotos piden una segunda verificación?** Es el código que te llega al móvil, además de la contraseña, para confirmar que eres tú. En esos puntos, la autenticación multifactor es de las medidas con más efecto por menos esfuerzo.
 
 ## Equipos, copias y correo
 

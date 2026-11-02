@@ -24,9 +24,9 @@ faq:
     - q: "¿Cómo se obliga a usar la verificación en dos pasos en toda la organización?"
       a: "Desde la consola de administración. Se activa la verificación obligatoria por unidad organizativa, es decir, por departamento o grupo de cuentas. Antes de exigirla, se da un periodo de gracia para que cada usuario la configure."
     - q: "¿Se puede limitar con quién se comparten los documentos de Drive?"
-      a: "Sí, con políticas de uso compartido para toda la organización o por unidad organizativa. Lo habitual es restringir por defecto el uso compartido fuera del dominio. Después se permite como excepción, por ejemplo con dominios de confianza."
+      a: "Sí, con políticas de uso compartido para toda la organización o por unidad organizativa. Lo habitual es restringir por defecto el uso compartido fuera del dominio y permitirlo como excepción, por ejemplo con dominios de confianza."
     - q: "¿Cómo se controla qué aplicaciones externas acceden a Gmail o a Drive?"
-      a: "En la consola está el control de acceso de aplicaciones. Muestra cuáles han recibido permisos mediante OAuth y a qué datos llegan. OAuth es el sistema que da acceso a una aplicación sin entregarle tu contraseña. Desde ahí se revocan las que ya no se usan. También se decide cuáles pueden conectarse en adelante."
+      a: "En la consola está el control de acceso de aplicaciones. Muestra cuáles han recibido permisos mediante OAuth y a qué datos llegan. OAuth es el sistema que da acceso a una aplicación sin entregarle tu contraseña. Desde la consola se revocan las que ya no se usan y se decide cuáles pueden conectarse en adelante."
 ---
 Google Workspace viene con varias protecciones activadas de serie. Otra parte de la seguridad la decides tú, en la consola de administración. Ahí se fija quién entra, desde qué dispositivos y qué se comparte con quién. Las dos se complementan.
 
@@ -46,7 +46,7 @@ Esta parte no te pide ninguna acción. La siguiente, sí.
 - **Gestión de dispositivos móviles.** Puedes exigir bloqueo de pantalla y cifrado. Y si alguien se deja el móvil en un taxi, borras a distancia los datos de la empresa.
 - **Control del uso compartido externo.** Es fácil compartir una hoja con «cualquier persona con el enlace» sin pensar en el alcance. Ese enlace se puede reenviar a quien sea. Una política de organización lo limita por defecto y lo deja como excepción.
 - **Revisión de permisos y aplicaciones conectadas.** Las aplicaciones de terceros con acceso al correo o a Drive pueden acumular permisos que nadie revisa después. Por ejemplo, la aplicación de encuestas que alguien conectó un día a su cuenta.
-- **Contraseñas y sesiones.** Exigir contraseñas robustas y cerrar las sesiones inactivas reduce el riesgo. Sobre todo si un equipo se pierde o se comparte.
+- **Contraseñas y sesiones.** Exigir contraseñas robustas y cerrar las sesiones inactivas reduce el riesgo, sobre todo si un equipo se pierde o se comparte.
 
 Estos ajustes pesan todavía más cuando tu equipo trabaja fuera de la oficina. Lo explica [Google Workspace para equipos remotos e híbridos](/recursos/google-workspace-para-equipos-remotos-e-hibridos/).
 
@@ -60,7 +60,7 @@ Suelen ser descuidos pequeños. Alguien recibió permisos de administrador para 
 - Tardar en dar de baja las cuentas de quien deja la empresa.
 - No revisar qué aplicaciones de terceros tienen acceso al correo o a Drive.
 
-Todos se corrigen desde la consola. Y apenas cambian la forma de trabajar de tu equipo.
+Todos se corrigen desde la consola y apenas cambian la forma de trabajar de tu equipo.
 
 ## De la configuración inicial a la recomendada
 

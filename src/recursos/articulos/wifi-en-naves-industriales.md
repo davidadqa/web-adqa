@@ -15,18 +15,18 @@ tldr: "Una nave industrial plantea al WiFi retos que una oficina normalmente no 
 faq:
   manager:
     - q: "¿Instalar WiFi en una nave cuesta mucho más que en una oficina?"
-      a: "Depende del tamaño y de las condiciones del espacio. A la larga, lo que más encarece un proyecto es corregir puntos de acceso mal ubicados. Un buen diseño previo te ahorra ese gasto."
+      a: "Depende del tamaño y de las condiciones del espacio. A la larga, lo que suele encarecer un proyecto es corregir puntos de acceso mal ubicados. Un buen diseño previo te ahorra ese gasto."
     - q: "¿Cuánto dura un proyecto de WiFi industrial?"
       a: "Depende del tamaño de la nave. La fase más importante es el estudio de cobertura y el diseño. Instalar sin ese paso previo es lo que después te obliga a rehacer trabajo. La instalación se puede planificar por zonas para no frenar tu actividad."
     - q: "¿El WiFi interfiere con la maquinaria, o es al revés?"
-      a: "Lo habitual es que sea la maquinaria la que interfiere en el WiFi. Sobre todo los motores y los variadores de frecuencia. Un WiFi profesional emite con potencias bajas y en bandas reguladas. Normalmente no afecta a los equipos industriales. Si tienes maquinaria sensible a la radiofrecuencia, durante el estudio se revisan las indicaciones de su fabricante."
+      a: "Lo habitual es que sea la maquinaria la que interfiere en el WiFi, sobre todo los motores y los variadores de frecuencia. Un WiFi profesional emite con potencias bajas y en bandas reguladas. Normalmente no afecta a los equipos industriales. Si tienes maquinaria sensible a la radiofrecuencia, durante el estudio se revisan las indicaciones de su fabricante."
   tecnico:
     - q: "¿Qué banda funciona mejor con interferencias industriales?"
       a: "Depende del tipo de interferencia que detecte el estudio de cobertura. A menudo se combinan 2,4 y 5 GHz según la zona y los equipos que generan más ruido. La banda de 2,4 GHz llega más lejos, pero es la más expuesta a interferencias."
     - q: "¿Cómo se resuelven las zonas de sombra detrás de estanterías o maquinaria?"
       a: "Con puntos de acceso adicionales o con antenas orientadas específicamente a esas zonas. El estudio de cobertura indica dónde hacen falta. Añadirlos después a ciegas suele crear interferencias nuevas."
     - q: "¿Qué protección debe tener el equipamiento en zonas con polvo, humedad o frío?"
-      a: "Un grado de protección IP adecuado al entorno. Es el código que dice cuánto polvo y agua aguanta el equipo. También un rango de temperatura de funcionamiento acorde con el espacio, por ejemplo en cámaras frigoríficas. Los equipos de oficina estándar no están pensados para esas condiciones."
+      a: "Un grado de protección IP adecuado al entorno. Es el código que dice cuánto polvo y agua aguanta el equipo. Además, necesita un rango de temperatura de funcionamiento acorde con el espacio, por ejemplo en cámaras frigoríficas. Los equipos de oficina estándar no están pensados para esas condiciones."
 ---
 En la oficina de la entrada, tu WiFi va bien. En el muelle de carga, alguien camina con la tablet en alto buscando señal, y el camión espera. Detrás suele estar lo mismo: el WiFi de la nave se instaló con la lógica de una oficina. Es una de las causas más habituales de los proyectos que no funcionan como se esperaba.
 
@@ -48,7 +48,7 @@ Un [estudio de cobertura](/redes/wifi-entornos-complejos/) pensado para una ofic
 - zonas con cobertura excelente junto a otras sin señal;
 - interferencias entre equipos colocados demasiado cerca.
 
-Las zonas problemáticas también suelen repetirse. Detrás de las estanterías altas, junto a la maquinaria pesada y en los extremos de las naves muy alargadas. Un diseño genérico no las anticipa. Una medición sobre el terreno las identifica antes de decidir [cuántos puntos de acceso hacen falta](/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/).
+Las zonas problemáticas también suelen repetirse. Aparecen detrás de las estanterías altas, junto a la maquinaria pesada y en los extremos de las naves muy alargadas. Un diseño genérico no las anticipa. Una medición sobre el terreno las identifica antes de decidir [cuántos puntos de acceso hacen falta](/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/).
 
 Hay otro punto propio de la industria. Tus terminales de almacén, los lectores y los equipos de producción van mejor en su propia red. La de oficina y la de invitados van aparte. Así, un fallo en la red de oficina no para la línea de producción, ni al revés. Es la lógica de una [red segmentada](/recursos/red-plana-o-red-segmentada/).
 

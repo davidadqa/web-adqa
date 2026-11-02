@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/redes/wifi-entornos-complejos/"
 related: ["monitorizacion-de-red", "cuantos-puntos-de-acceso-necesita-tu-wifi", "red-plana-o-red-segmentada"]
 imagen: "Mapa con varias oficinas conectadas y una consola que muestra el estado de los puntos de acceso WiFi de cada sede"
-tldr: "Gestionar el WiFi de cada sede por separado obliga a duplicar configuración, contraseñas y soporte. Además, no da una visión conjunta. Una gestión multisede centralizada aplica la misma configuración en todas las sedes. El personal se conecta igual en cualquier oficina. Y el estado de todas se ve desde una sola consola. La diferencia crece con el número de sedes."
+tldr: "Gestionar el WiFi de cada sede por separado obliga a duplicar configuración, contraseñas y soporte. Además, no da una visión conjunta. Una gestión multisede centralizada aplica la misma configuración en todas las sedes y muestra el estado de todas desde una sola consola. Con ella, el personal se conecta igual en cualquier oficina. La diferencia crece con el número de sedes."
 faq:
   manager:
     - q: "¿Unificar el WiFi de varias sedes es un proyecto largo?"
@@ -26,9 +26,9 @@ faq:
     - q: "¿Cómo se usan las mismas credenciales si las sedes no están conectadas por una red privada?"
       a: "Con una contraseña compartida, basta con que todas las sedes reciban la misma configuración desde la controladora. Otra opción es que cada persona entre con su propio usuario, por ejemplo con 802.1X. Entonces los puntos de acceso de cada sede tienen que llegar al servidor de autenticación. Pueden hacerlo a través de una VPN o con un servicio de autenticación en la nube. La VPN es un túnel cifrado a través de internet."
     - q: "¿Se puede aplicar una política distinta en una sede concreta?"
-      a: "Sí. La gestión centralizada admite reglas comunes con excepciones donde hagan falta. Por ejemplo, una red adicional para el almacén de una sede. O un horario distinto para la red de invitados."
+      a: "Sí. La gestión centralizada admite reglas comunes con excepciones donde hagan falta. Puede ser una red adicional para el almacén de una sede o un horario distinto para la red de invitados."
 ---
-Cuando abres una segunda sede, lo habitual es replicar el WiFi de la primera. Se compra un equipo parecido, se configura por separado y listo. Funciona. Pero te deja dos redes independientes, con configuraciones y contraseñas distintas. Y sin una visión conjunta.
+Cuando abres una segunda sede, lo habitual es replicar el WiFi de la primera. Se compra un equipo parecido, se configura por separado y listo. Funciona. Pero te deja dos redes independientes, con configuraciones y contraseñas distintas y sin una visión conjunta.
 
 Con dos sedes se nota poco. Con cinco, cada cambio se convierte en cinco cambios.
 
@@ -42,7 +42,7 @@ Con dos sedes se nota poco. Con cinco, cada cambio se convierte en cinco cambios
 ## Qué cambia con una gestión centralizada
 
 - **Una configuración para todas las sedes.** Los cambios de política se hacen una vez y se aplican en todas.
-- **Las mismas credenciales en cualquier oficina.** Llegas a otra sede, abres el portátil y ya estás conectado. Sin contraseñas nuevas.
+- **Las mismas credenciales en cualquier oficina.** Llegas a otra sede, abres el portátil y ya estás conectado, sin contraseñas nuevas.
 - **Una consola para todo.** Los puntos de acceso de todas las sedes se ven en la misma pantalla. Un equipo caído en una oficina lejana avisa igual que uno de la central. Es la base de una buena [monitorización de red](/recursos/monitorizacion-de-red/).
 - **Crecer es sumar.** Una sede nueva se añade a la [controladora centralizada](/redes/wifi-entornos-complejos/) en lugar de montarse desde cero.
 
@@ -56,9 +56,9 @@ Con una controladora en la nube, gestionar el WiFi de forma centralizada no exig
 
 ## Varias sedes en la práctica
 
-Lo que más se nota al unificar no suele ser técnico, sino organizativo. Deja de haber una persona distinta «encargada del WiFi» en cada oficina. Esa a la que todos buscan cuando algo falla. Pasa a haber una sola configuración de la que dependen todas por igual.
+Lo que más se nota al unificar no suele ser técnico, sino organizativo. Deja de haber en cada oficina una persona distinta «encargada del WiFi», esa a la que todos buscan cuando algo falla. Pasa a haber una sola configuración de la que dependen todas por igual.
 
-Dos proyectos reales lo muestran a escalas muy distintas. En KUKA Robots Iberia, la red de la central de España se completó con una implantación dirigida en delegaciones. Por ejemplo, la del País Vasco o la de Argentina. En el Consorci Sanitari Alt Penedès-Garraf, el WiFi para pacientes y usuarios llega a cada uno de sus centros. Puedes verlos en [casos de éxito](/casos-de-exito/).
+Dos proyectos reales lo muestran a escalas muy distintas. En KUKA Robots Iberia, la red de la central de España se completó con una implantación dirigida en delegaciones. Entre ellas están la del País Vasco y la de Argentina. En el Consorci Sanitari Alt Penedès-Garraf, el WiFi para pacientes y usuarios llega a cada uno de sus centros. Puedes verlos en [casos de éxito](/casos-de-exito/).
 
 ## Cómo decidirlo
 

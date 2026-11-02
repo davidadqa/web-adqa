@@ -17,7 +17,7 @@ faq:
     - q: "¿Qué plan de Microsoft 365 necesita mi empresa?"
       a: "Depende de cómo trabaja cada perfil de tu equipo. A quien vive en el correo y en Teams le suele bastar un plan básico. Quien trabaja a fondo con documentos necesita las aplicaciones de escritorio. Y quien maneja datos sensibles o trabaja fuera de la oficina con portátiles y móviles necesita más protección. Esa seguridad llega con Business Premium. En muchas empresas, la respuesta es una combinación de planes."
     - q: "¿Podemos tener empleados con planes distintos dentro de la misma empresa?"
-      a: "Sí. En Microsoft 365 tu empresa tiene su propio espacio, llamado tenant. Dentro de él, cada persona puede tener su propio plan, sin trámites especiales. Así no pagas funciones que una parte de tu plantilla no usa. Y quien sí las necesita no se queda corto."
+      a: "Sí. En Microsoft 365 tu empresa tiene su propio espacio, llamado tenant. Dentro de él, cada persona puede tener su propio plan, sin trámites especiales. Así no pagas funciones que una parte de tu plantilla no usa, y quien sí las necesita no se queda corto."
     - q: "¿Microsoft 365 incluye protección para los ordenadores y los móviles?"
       a: "Todos los planes filtran el correo malicioso. Microsoft Defender, que protege los equipos, llega con Business Premium y con los planes Enterprise. Con ellos viene también Intune, para gestionar portátiles y móviles. Si tienes un plan básico o estándar, revisa cómo proteges tus equipos por otra vía."
   tecnico:
@@ -26,7 +26,7 @@ faq:
     - q: "¿Qué es Microsoft Entra ID y qué papel tiene en Microsoft 365?"
       a: "Es el servicio de identidades de Microsoft. Guarda las cuentas, los grupos y los inicios de sesión de toda la organización. Desde ahí se configura la verificación en dos pasos y, en los planes que lo incluyen, el acceso condicional. Si la empresa tiene un Active Directory local, se puede sincronizar con Entra ID. Así cada persona usa las mismas credenciales."
     - q: "¿Qué planes incluyen Intune y el acceso condicional?"
-      a: "Business Premium y los planes Microsoft 365 E3 y E5. En Business Basic y Business Standard puedes exigir la verificación en dos pasos. Pero las directivas de acceso condicional y la gestión de dispositivos requieren licencias adicionales. Microsoft revisa sus planes de vez en cuando, así que confírmalo al contratar."
+      a: "Business Premium y los planes Microsoft 365 E3 y E5. En Business Basic y Business Standard puedes exigir la verificación en dos pasos. Incluyen una gestión básica de móviles, pero las directivas de acceso condicional y la gestión completa de dispositivos con Intune requieren licencias adicionales. Microsoft revisa sus planes de vez en cuando, así que confírmalo al contratar."
 ---
 Para muchas empresas, Microsoft 365 es sinónimo de Word, Excel y PowerPoint. Pero la suite actual va bastante más allá. Incluye el correo, los archivos en la nube, las reuniones y el chat del equipo. Además, gestiona las identidades y cubre una parte de la seguridad.
 
@@ -34,7 +34,7 @@ Todo eso se reparte en varios planes que no siempre se entienden antes de contra
 
 ## Las piezas que forman Microsoft 365
 
-- **Aplicaciones de ofimática.** Word, Excel, PowerPoint y Outlook. Todos los planes las traen en versión web y móvil. Según el plan, también instaladas en el ordenador.
+- **Aplicaciones de ofimática.** Word, Excel, PowerPoint y Outlook. Todos los planes las traen en versión web y móvil. Según el plan, también puedes instalarlas en el ordenador.
 - **Exchange Online.** El correo con el dominio de tu empresa, con su calendario y sus contactos. Incluye filtrado de spam y phishing.
 - **OneDrive.** El espacio de archivos de cada persona, sincronizado entre sus equipos. Desde ahí compartes archivos de forma controlada.
 - **SharePoint.** Los espacios de documentos de cada equipo o departamento, con permisos propios. Cuando abres la pestaña de archivos de un equipo de Teams, estás en una biblioteca de SharePoint.
@@ -53,7 +53,7 @@ Los planes para empresas varían en tres ejes. El primero, si traen las aplicaci
 - **Business Premium.** Suma la gestión de portátiles y móviles con Intune y la protección de Microsoft Defender frente a amenazas. Trae, además, el acceso condicional de Entra ID.
 - **Enterprise (E3 y E5).** Para organizaciones con requisitos más exigentes de seguridad, auditoría y retención. Qué aportan cuando hay normativa de por medio se repasa en [Seguridad y cumplimiento](/recursos/seguridad-y-cumplimiento/).
 
-Imagina a tu jefe de obra consultando planos y correo desde el móvil, lejos de la oficina. Gestionar ese móvil desde un mismo sitio ya es terreno de Business Premium. Microsoft fija las funciones de cada plan y las revisa de vez en cuando. Compruébalas al contratar o al renovar.
+Imagina a tu jefe de obra consultando planos y correo desde el móvil, lejos de la oficina. Gestionar ese móvil con Intune desde un mismo sitio ya es terreno de Business Premium. Microsoft fija las funciones de cada plan y las revisa de vez en cuando. Compruébalas al contratar o al renovar.
 
 ## Qué preguntarse antes de elegir plan
 
@@ -61,7 +61,7 @@ Antes de comparar planes, repasa tu equipo mesa a mesa y hazte estas preguntas:
 
 - ¿Quién necesita las aplicaciones de Office instaladas y a quién le basta la versión web?
 - ¿Trabajas con datos que piden más control de acceso o cumplir una normativa concreta?
-- ¿Tienes portátiles y móviles de empresa que convenga gestionar desde un mismo sitio? ¿Con bloqueo, cifrado y borrado a distancia?
+- ¿Tienes portátiles y móviles de empresa que convenga gestionar desde un mismo sitio, con bloqueo, cifrado y borrado a distancia?
 - ¿El espacio de correo y de almacenamiento de cada plan encaja con lo que ya usas hoy?
 - ¿Todos usan la suite igual, o hay grupos con necesidades muy distintas?
 

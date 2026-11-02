@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/desarrollo-software-medida/"
 related: ["software-de-gestion-a-medida-o-programa-estandar", "seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida", "mantener-el-software-de-gestion-actual-o-modernizarlo"]
 imagen: "Esquema de varias aplicaciones de empresa (facturación, clientes, stock y proyectos) conectadas entre sí y con una base de datos central"
-tldr: "Usar varias herramientas especializadas es rápido y barato al principio. Por ejemplo, una para facturar, otra para clientes y otra para stock. Ese reparto obliga a copiar datos entre ellas y genera duplicados. Una salida es conectarlas con integraciones, para que cada dato se escriba una sola vez. La otra es centralizar la gestión en un mismo sistema. La elección depende de cuántos datos comparten y de cuánto encajan con los procesos."
+tldr: "Usar una herramienta especializada para facturar, otra para clientes y otra para stock es rápido y barato al principio. Ese reparto obliga a copiar datos entre ellas y genera duplicados. Una salida es conectarlas con integraciones, para que cada dato se escriba una sola vez. La otra es centralizar la gestión en un mismo sistema. La elección depende de cuántos datos comparten y de cuánto encajan con los procesos."
 faq:
   manager:
     - q: "¿Hay que dejar de usar las herramientas que ya funcionan bien?"
@@ -22,7 +22,7 @@ faq:
       a: "No. Se puede hacer por fases. Primero, el dato o el proceso que más se duplica, con las demás herramientas conectadas mientras tanto. Después, el resto. Así tu equipo no cambia toda su forma de trabajar de golpe."
   tecnico:
     - q: "¿Qué hace falta para conectar dos herramientas de gestión?"
-      a: "Que las dos ofrezcan una forma de conectarse. Lo más habitual es una API. Es la puerta que ofrece cada programa para que otros lean y escriban sus datos. También sirven los avisos automáticos cuando cambia un dato. Como mínimo, una exportación e importación que se pueda programar. Además, hay que definir qué campos se corresponden. Y qué ocurre si el mismo dato cambia en las dos a la vez."
+      a: "Que las dos ofrezcan una forma de conectarse. Lo más habitual es una API. Es la puerta que ofrece cada programa para que otros lean y escriban sus datos. También sirven los avisos automáticos cuando cambia un dato o, como mínimo, una exportación e importación que se pueda programar. Además, hay que definir qué campos se corresponden y qué ocurre si el mismo dato cambia en las dos a la vez."
     - q: "¿Cómo se decide qué herramienta manda sobre cada dato?"
       a: "Se asigna a cada tipo de dato una fuente principal. Por ejemplo, los clientes al CRM y las facturas a la herramienta de facturación. Las demás solo leen ese dato o lo reciben por la integración. Así se evita que convivan dos versiones distintas."
     - q: "¿Cómo se migran a un sistema central los clientes duplicados en varias herramientas?"
@@ -39,13 +39,13 @@ La salida no siempre es sustituirlas todas por un sistema nuevo. A menudo basta 
 - **Puesta en marcha rápida**, sin un proyecto de desarrollo.
 - **Fáciles de sustituir** de una en una si alguna deja de encajar.
 
-Funcionan bien cuando cada área trabaja de forma bastante independiente. Y cuando los datos que comparten son pocos. Quien lleva tu almacén, por ejemplo, conoce su aplicación de stock al dedillo. No tiene por qué cambiarla.
+Funcionan bien cuando cada área trabaja de forma bastante independiente y los datos que comparten son pocos. Quien lleva tu almacén, por ejemplo, conoce su aplicación de stock al dedillo. No tiene por qué cambiarla.
 
 ## El problema no son las herramientas, sino los datos que comparten
 
 Las dificultades aparecen en los cruces. Un síntoma habitual es descubrir, semanas después, que dos herramientas tenían datos distintos del mismo cliente. Por ejemplo, un envío sale hacia la dirección antigua porque el cambio solo se hizo en facturación. Hay otros síntomas:
 
-- El mismo dato **se escribe a mano en dos o más sitios**. Das de alta un cliente nuevo en el CRM, el programa de clientes. Y otra vez en facturación.
+- El mismo dato **se escribe a mano en dos o más sitios**. Das de alta un cliente nuevo en el CRM (el programa de clientes) y otra vez en facturación.
 - **No está claro qué herramienta manda** sobre cada dato. Nadie sabe qué dirección o qué precio es el correcto.
 - Los informes de negocio **se montan exportando** de cada herramienta y juntando los datos en una hoja de cálculo.
 - **Cada herramienta tiene sus propios usuarios y permisos.** Dar de baja a alguien implica revisarlas todas.
@@ -70,7 +70,7 @@ Una integración hace que las herramientas se pasen los datos solas. Das de alta
 - Decidir **qué herramienta es la fuente de cada dato**. Por ejemplo, los clientes en el CRM, los artículos en el stock y las facturas en facturación.
 - Un **identificador común** para reconocer el mismo cliente o artículo en todas ellas.
 
-Es la opción natural cuando cada herramienta encaja bien con su área. Y cuando el problema está solo en los traspasos.
+Es la opción natural cuando cada herramienta encaja bien con su área y el problema está solo en los traspasos.
 
 ### Centralizar en un sistema de gestión
 
@@ -83,7 +83,7 @@ Un software de gestión centralizado reúne esos datos en una misma base de dato
 
 ¿Dudas entre un ERP del mercado y un desarrollo propio? Los dos se comparan en [software de gestión a medida o programa estándar](/recursos/software-de-gestion-a-medida-o-programa-estandar/). ¿Y si una de las piezas es un programa antiguo que no admite conexiones? Ahí la decisión se parece a la de [mantener el software de gestión actual o modernizarlo](/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/).
 
-Puedes combinar los dos caminos. Centralizas el núcleo de la gestión y mantienes conectada una herramienta especializada que funciona bien. Por ejemplo, la tienda online o la de nóminas.
+Puedes combinar los dos caminos. Centralizas el núcleo de la gestión y mantienes conectada una herramienta especializada que funciona bien. Puede ser la tienda online o la de nóminas.
 
 ## Cómo decidirlo
 

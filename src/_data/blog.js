@@ -46,7 +46,7 @@ const blog = {
       title: "Ciberseguridad para empresas: guías prácticas | ADQA",
       description: "Guías de ciberseguridad para empresas: pentesting, ENS, firewall gestionado y políticas de seguridad, explicados con claridad para decidir con criterio.",
       h1: "Ciberseguridad para empresas, explicada sin alarmismo",
-      intro: "Pentesting (pruebas de intrusión), Esquema Nacional de Seguridad, firewalls y políticas de seguridad. Quizá un cliente te ha pedido por escrito cómo proteges sus datos. Estas guías explican qué aporta cada medida y cuándo tiene sentido. También cómo encaja si tu empresa no tiene un departamento de seguridad propio.",
+      intro: "Pentesting (pruebas de intrusión), Esquema Nacional de Seguridad, firewalls y políticas de seguridad. Quizá un cliente te ha pedido por escrito cómo proteges sus datos. Estas guías explican qué aporta cada medida y cuándo tiene sentido. También te cuentan cómo encaja cada una si tu empresa no tiene un departamento de seguridad propio.",
     },
     {
       slug: "redes",

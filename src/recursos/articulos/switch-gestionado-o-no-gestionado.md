@@ -15,18 +15,18 @@ tldr: "Un switch no gestionado conecta equipos sin configuración. Se enchufa y 
 faq:
   manager:
     - q: "¿Compensa pagar más por un switch gestionado?"
-      a: "Depende de lo que funcione sobre tu red. En un despacho pequeño, sin telefonía IP ni cámaras, uno no gestionado suele bastar. Con varios departamentos, telefonía IP o videovigilancia, la diferencia de precio suele compensar. El gestionado te permite separar el tráfico y dar prioridad a lo importante. Y saber qué pasa en cada puerto cuando algo falla."
+      a: "Depende de lo que funcione sobre tu red. En un despacho pequeño, sin telefonía IP ni cámaras, uno no gestionado suele bastar. Con varios departamentos, telefonía IP o videovigilancia, la diferencia de precio suele compensar. El gestionado te permite separar el tráfico, dar prioridad a lo importante y saber qué pasa en cada puerto cuando algo falla."
     - q: "¿Hace falta un técnico dedicado para mantener switches gestionados?"
       a: "No. La configuración inicial la hace un técnico. Después solo hay que intervenir para cambios, ampliaciones o actualizaciones de firmware. No requiere dedicación diaria, sobre todo si los switches están monitorizados."
     - q: "¿Cómo sé si los switches de mi empresa son gestionados?"
-      a: "Basta con identificar la marca y el modelo de cada equipo. Después comprueba si tiene interfaz de gestión, web o por línea de comandos. Es una de las primeras comprobaciones de cualquier revisión de red."
+      a: "Identifica la marca y el modelo de cada equipo. Después comprueba si tiene interfaz de gestión, web o por línea de comandos. Es una de las primeras comprobaciones de cualquier revisión de red."
   tecnico:
     - q: "¿Qué protocolos de gestión son los habituales?"
-      a: "Interfaz web o línea de comandos para la configuración. SNMP para la monitorización externa. Y el estándar 802.1Q para las VLAN. Muchos modelos admiten además enviar registros a un servidor y gestionarse desde una consola centralizada del fabricante."
+      a: "Interfaz web o línea de comandos para la configuración, SNMP para la monitorización externa y el estándar 802.1Q para las VLAN. Muchos modelos admiten además enviar registros a un servidor y gestionarse desde una consola centralizada del fabricante."
     - q: "¿Se pueden mezclar switches gestionados y no gestionados en la misma red?"
       a: "Sí, y es habitual. Lo razonable es que el núcleo y los armarios principales sean gestionados. Los no gestionados quedan para puntos de bajo impacto. Un switch no gestionado no distingue VLAN. Por eso conviene conectarlo a un puerto asignado a una sola VLAN."
     - q: "¿Qué aporta un switch gestionado al diagnosticar una incidencia?"
-      a: "Te da contadores de tráfico y de errores por puerto, y el estado de cada enlace. También la tabla de equipos conectados y un registro de eventos. Con esos datos localizas el puerto o el equipo que causa el problema. No tienes que ir desconectando cables."
+      a: "Te da contadores de tráfico y de errores por puerto, y el estado de cada enlace. Además, muestra la tabla de equipos conectados y un registro de eventos. Con esos datos localizas el puerto o el equipo que causa el problema. No tienes que ir desconectando cables."
 ---
 En el armario, un switch gestionado y uno no gestionado parecen iguales: una caja con puertos y lucecitas. Los dos conectan a la red ordenadores, impresoras, cámaras y puntos de acceso. La diferencia aparece cuando tu red crece y hay que ordenarla por dentro. O cuando algo va lento y necesitas saber dónde.
 
@@ -45,7 +45,7 @@ Su límite es la visibilidad. El propio switch no te dice qué pasa en cada puer
 - **Visibilidad puerto por puerto.** Ves cuánto tráfico pasa por cada puerto, qué errores hay y qué equipo está conectado.
 - **Segmentación en VLAN.** Las VLAN son redes virtuales dentro del mismo switch físico. Separan oficina, servidores, telefonía, cámaras e invitados. Así, el grabador de las cámaras queda en su propia red, aparte de los ordenadores de la oficina. Qué aporta esa separación lo tienes en [red plana o red segmentada](/recursos/red-plana-o-red-segmentada/).
 - **Prioridad para el tráfico crítico.** La voz y las aplicaciones de gestión pasan antes que una descarga cuando la red va cargada.
-- **Avisos y monitorización.** Puede notificar la caída de un puerto o un tráfico fuera de lo normal. Y enviar datos a un sistema de [monitorización de red](/recursos/monitorizacion-de-red/).
+- **Avisos y monitorización.** Puede notificar la caída de un puerto o un tráfico fuera de lo normal. También puede enviar datos a un sistema de [monitorización de red](/recursos/monitorizacion-de-red/).
 - **Configuración documentada.** La configuración se guarda, se revisa y se puede replicar en otros switches.
 
 Entre los dos extremos hay switches con gestión básica, a veces llamados «smart». Suelen permitir crear VLAN y poco más, desde una interfaz web sencilla. Pueden encajar en redes pequeñas que solo necesitan separar a los invitados o las cámaras.
@@ -68,7 +68,7 @@ Una guía rápida:
 
 - **No gestionado** para una red muy pequeña, sin telefonía IP, cámaras ni necesidad de separar tráfico.
 - **Gestionado** si tienes varios departamentos, telefonía IP, videovigilancia, WiFi de invitados o servidores que dependen de la red.
-- **Una combinación** cuando hay de todo. Gestionados en el núcleo y en los armarios principales. No gestionados solo en puntos de bajo impacto, como una sala con un par de equipos.
+- **Una combinación** cuando hay de todo: gestionados en el núcleo y en los armarios principales. Los no gestionados se limitan a puntos de bajo impacto, como una sala con un par de equipos.
 
 ## Si no sabes qué switches tienes
 

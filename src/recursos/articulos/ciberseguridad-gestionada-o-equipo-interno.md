@@ -15,7 +15,7 @@ tldr: "Un equipo interno de ciberseguridad aporta conocimiento profundo del nego
 faq:
   manager:
     - q: "¿La ciberseguridad gestionada es menos segura que tener un equipo propio?"
-      a: "No. La seguridad depende de la calidad del servicio. No depende de si quien lo presta está dentro o fuera de tu empresa. Un buen servicio gestionado suele cubrir más frentes que un equipo interno pequeño. Reúne especialistas de varias áreas."
+      a: "No. La seguridad depende de la calidad del servicio, no de si quien lo presta está dentro o fuera de tu empresa. Un buen servicio gestionado suele cubrir más frentes que un equipo interno pequeño, porque reúne especialistas de varias áreas."
     - q: "¿Cuánto se tarda en notar la protección tras contratar un servicio gestionado?"
       a: "Depende del punto de partida. El servicio arranca con un diagnóstico de la infraestructura. Después despliega la protección por fases, primero las medidas con más impacto. Así notas la mejora desde las primeras fases, no solo al final del proyecto."
     - q: "¿Tiene sentido si ya tenemos una persona de informática, pero no de seguridad?"
@@ -40,7 +40,7 @@ Tener especialistas en plantilla tiene ventajas reales, sobre todo en organizaci
 - **Disponibilidad inmediata dentro de la jornada.** Te acercas a su mesa y lo comentas. No hay que abrir una petición ni esperar turno.
 - **Control directo sobre las prioridades.** El equipo trabaja solo para tu empresa.
 
-El límite no es la calidad, sino la cobertura. La ciberseguridad toca la red, los equipos y el correo. También las copias, el cumplimiento normativo y la vigilancia de alertas. Para cubrir esos frentes con personal propio hace falta un equipo amplio, con turnos fuera de la jornada. Ese equipo solo se justifica a partir de cierto tamaño.
+El límite no es la calidad, sino la cobertura. La ciberseguridad toca la red, los equipos y el correo. Toca también las copias, el cumplimiento normativo y la vigilancia de alertas. Para cubrir esos frentes con personal propio hace falta un equipo amplio, con turnos fuera de la jornada. Ese equipo solo se justifica a partir de cierto tamaño.
 
 Con una o dos personas, las urgencias del día a día suelen comerse el tiempo de revisión. La mañana se va en recuperar un archivo borrado y en configurar el correo en un móvil nuevo. La revisión de alertas vuelve a quedar para otro día.
 
@@ -49,7 +49,7 @@ Con una o dos personas, las urgencias del día a día suelen comerse el tiempo d
 Un servicio de [ciberseguridad gestionada](/ciberseguridad/) reparte ese trabajo entre especialistas:
 
 - **Varias especialidades en un mismo servicio**, sin contratar una persona para cada una.
-- **Vigilancia organizada.** El servicio define quién revisa las alertas, en qué horario y cómo se responde. Si una alerta salta un sábado por la noche, ya sabes qué está previsto para ella. En la detección y respuesta gestionada, la vigilancia continua suele hacerla el fabricante de la tecnología. La lleva su centro de operaciones de seguridad (SOC). El proveedor integra el servicio y responde ante tu empresa.
+- **Vigilancia organizada.** El servicio define quién revisa las alertas, en qué horario y cómo se responde. Si una alerta salta un sábado por la noche, ya sabes qué está previsto para ella. En la detección y respuesta gestionada, la vigilancia continua suele hacerla el centro de operaciones de seguridad (SOC) del fabricante de la tecnología. El proveedor integra el servicio y responde ante tu empresa.
 - **Actualización frente a amenazas nuevas.** El proveedor trabaja con muchos entornos. Lo que aprende en uno lo aplica en los demás.
 - **Coste más previsible**: una cuota periódica en lugar de nóminas, formación continua y herramientas.
 
@@ -63,8 +63,8 @@ Entre los dos extremos hay un modelo que encaja con muchas empresas medianas. Un
 
 Un reparto habitual:
 
-- **Se queda dentro:** las prioridades del negocio y las altas y bajas de usuarios. También la relación con los proveedores y las primeras incidencias.
-- **Se delega:** la vigilancia de alertas, la actualización de la protección y la revisión del firewall. También las pruebas de seguridad y el asesoramiento normativo.
+- **Se queda dentro:** las prioridades del negocio y las altas y bajas de usuarios. Tu responsable interno lleva además la relación con los proveedores y las primeras incidencias.
+- **Se delega:** la vigilancia de alertas, la actualización de la protección y la revisión del firewall. El servicio externo se encarga también de las pruebas de seguridad y del asesoramiento normativo.
 
 El firewall es un buen ejemplo de pieza que se puede delegar sin perder el control. Tienes el detalle en [firewall gestionado o propio](/recursos/firewall-gestionado-o-propio/). Las pruebas de intrusión, por su parte, ganan objetividad cuando las hace alguien de fuera. Lo explica [pentesting interno o externo](/recursos/pentesting-interno-o-externo/).
 

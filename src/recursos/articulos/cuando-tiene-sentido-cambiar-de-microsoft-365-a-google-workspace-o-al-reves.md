@@ -11,20 +11,20 @@ updated: 2026-11-02
 servicio: "/google-workspace/google-workspace-vs-microsoft-365/"
 related: ["coste-real", "migracion-a-google-workspace-sin-parar-tu-negocio", "migracion-a-microsoft-365-sin-perder-productividad"]
 imagen: "Equipo de dirección en una sala de reuniones valorando un cambio de suite, con dos portátiles abiertos, uno con Outlook y otro con Gmail"
-tldr: "Cambiar de suite tiene sentido cuando hay un motivo de fondo y duradero. Puede ser un cambio en el ecosistema tecnológico de la empresa o en la forma de trabajar del equipo. También una fusión con una empresa que usa la otra plataforma. Una incidencia puntual, una preferencia aislada o una factura de licencias sin revisar son otra cosa. Suelen resolverse en la suite actual, sin migrar."
+tldr: "Cambiar de suite tiene sentido cuando hay un motivo de fondo y duradero. Puede ser un cambio en el ecosistema tecnológico de la empresa o en la forma de trabajar del equipo. También puede ser una fusión con una empresa que usa la otra plataforma. Una incidencia puntual, una preferencia aislada o una factura de licencias sin revisar son otra cosa. Suelen resolverse en la suite actual, sin migrar."
 faq:
   manager:
     - q: "¿Cuándo deberíamos plantearnos en serio cambiar de suite?"
-      a: "Cuando hay un motivo de fondo que se mantiene en el tiempo. Por ejemplo, un cambio real en los sistemas de tu empresa o en la forma de trabajar del equipo. También una fusión con otra empresa que usa la otra suite. Una incidencia puntual o una preferencia personal no suelen bastar."
+      a: "Cuando hay un motivo de fondo que se mantiene en el tiempo. Por ejemplo, un cambio real en los sistemas de tu empresa o en la forma de trabajar del equipo. Otro ejemplo es una fusión con otra empresa que usa la otra suite. Una incidencia puntual o una preferencia personal no suelen bastar."
     - q: "¿Una factura alta de licencias significa que estamos en la suite equivocada?"
-      a: "No necesariamente. Antes de plantear un cambio, comprueba si cada persona tiene el plan que corresponde a su uso. Muchas veces, ajustar las licencias en tu suite actual resuelve buena parte del problema. Y sin migrar nada."
+      a: "No necesariamente. Antes de plantear un cambio, comprueba si cada persona tiene el plan que corresponde a su uso. Muchas veces, ajustar las licencias en tu suite actual resuelve buena parte del problema sin migrar nada."
     - q: "¿Es buena idea cambiar de suite si solo un departamento lo pide?"
       a: "Generalmente no. La decisión tiene que responder a una necesidad del conjunto de tu empresa. La preferencia de un grupo concreto suele resolverse con formación o ajustando cómo usa la suite actual."
   tecnico:
     - q: "¿Cómo se distingue un problema de configuración de un motivo real para migrar?"
       a: "Revisando primero si el problema se resuelve en la suite actual. Puede ser de seguridad, de coste o de colaboración. En los tres casos, mira si basta con ajustar la configuración, los permisos o las licencias. Si después de ese ajuste el desencaje persiste, es más probable que sea de fondo."
     - q: "¿Qué hay que recrear al pasar de una suite a otra?"
-      a: "El correo, los calendarios, los contactos y los archivos se copian con herramientas de migración. Lo que no pasa solo de una plataforma a otra son las reglas de correo y las firmas. Tampoco las listas de distribución ni los permisos de las carpetas compartidas. Hay que inventariarlos al principio y recrearlos dentro del proyecto."
+      a: "El correo, los calendarios, los contactos y los archivos se copian con herramientas de migración. Lo que no pasa solo de una plataforma a otra son las reglas de correo y las firmas. Lo mismo ocurre con las listas de distribución y los permisos de las carpetas compartidas. Hay que inventariarlos al principio y recrearlos dentro del proyecto."
     - q: "¿Se puede migrar por departamentos y mantener las dos suites un tiempo?"
       a: "Sí, con el mismo dominio y el correo bien enrutado entre las dos. Es una buena fase de transición. Pero como modelo permanente añade complejidad de administración. Por eso, en general, conviene unificar al terminar."
 ---
@@ -41,7 +41,7 @@ No hace falta que una suite falle para plantearse un cambio. A veces tu empresa 
 
 ## Situaciones que se resuelven sin cambiar de suite
 
-- **Una incidencia puntual.** Un correo importante tarda horas en llegar justo antes de una entrega, y alguien propone cambiar de suite. Ese fallo casi siempre tiene que ver con la configuración o con el soporte, no con la plataforma. Y se resuelve revisando esa configuración.
+- **Una incidencia puntual.** Un correo importante tarda horas en llegar justo antes de una entrega, y alguien propone cambiar de suite. Ese fallo casi siempre tiene que ver con la configuración o con el soporte, no con la plataforma. Se resuelve revisando esa configuración.
 - **La preferencia de una persona o de un departamento.** Si no responde a una necesidad de toda tu empresa, la formación suele cerrar la distancia.
 - **Licencias sin revisar.** En Microsoft 365, el margen está en [ajustar el plan de cada usuario](/recursos/licencias-de-microsoft-365/). En Google Workspace, en el [licenciamiento mixto](/google-workspace/licenciamiento-mixto-google-workspace/), que permite combinar ediciones en el mismo dominio.
 - **La novedad.** Que una plataforma esté más presente en un momento dado no compensa, por sí sola, el esfuerzo de una migración completa.
