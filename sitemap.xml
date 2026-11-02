@@ -96,6 +96,326 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/quienes-somos/"/>
   </url>
   <url>
+    <loc>https://adqa.com/recursos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/asi-se-certifica-una-red/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/asi-se-certifica-una-red/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/asi-se-certifica-una-red/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/backup-y-continuidad-de-negocio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/backup-y-continuidad-de-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/backup-y-continuidad-de-negocio/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/cable-o-wifi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/cable-o-wifi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/cable-o-wifi/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/cada-cuanto-hacer-un-pentesting-guia-de-frecuencia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/cada-cuanto-hacer-un-pentesting-guia-de-frecuencia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/cada-cuanto-hacer-un-pentesting-guia-de-frecuencia/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/categorias-de-cableado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/categorias-de-cableado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/categorias-de-cableado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/certificacion-de-redes-y-ens/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/certificacion-de-redes-y-ens/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/certificacion-de-redes-y-ens/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/certificacion-de-redes/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/certificacion-de-redes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/certificacion-de-redes/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/certificacion-ens-categoria-alta/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/certificacion-ens-categoria-alta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/certificacion-ens-categoria-alta/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/ciberseguridad-gestionada-o-equipo-interno/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/ciberseguridad-gestionada-o-equipo-interno/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/ciberseguridad-gestionada-o-equipo-interno/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/ciberseguridad-sin-departamento-it-propio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/ciberseguridad-sin-departamento-it-propio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/ciberseguridad-sin-departamento-it-propio/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/ciberseguridad/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/ciberseguridad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/ciberseguridad/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/cloud/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/cloud/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/cloud/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/colaboracion-en-equipo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/colaboracion-en-equipo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/colaboracion-en-equipo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/contratar-diseno-y-programacion-por-separado-o-con-un-mismo-equipo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/contratar-diseno-y-programacion-por-separado-o-con-un-mismo-equipo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/contratar-diseno-y-programacion-por-separado-o-con-un-mismo-equipo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/coste-real/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/coste-real/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/coste-real/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/cuando-renovar-la-red-de-tu-empresa/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/cuando-renovar-la-red-de-tu-empresa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/cuando-renovar-la-red-de-tu-empresa/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/datacenter-de-proximidad/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/datacenter-de-proximidad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/datacenter-de-proximidad/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/datacenter-propio-o-nube-publica/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/datacenter-propio-o-nube-publica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/datacenter-propio-o-nube-publica/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/del-informe-de-pentesting-a-la-solucion/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/del-informe-de-pentesting-a-la-solucion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/del-informe-de-pentesting-a-la-solucion/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/diseno-web-centrado-en-estetica-o-en-conversion/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/diseno-web-centrado-en-estetica-o-en-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/diseno-web-centrado-en-estetica-o-en-conversion/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/enlace-privado-oficina-datacenter/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/enlace-privado-oficina-datacenter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/enlace-privado-oficina-datacenter/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/firewall-gestionado-o-propio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/firewall-gestionado-o-propio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/firewall-gestionado-o-propio/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/google-workspace-para-equipos-remotos-e-hibridos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/google-workspace-para-equipos-remotos-e-hibridos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/google-workspace-para-equipos-remotos-e-hibridos/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/hosting-basico-o-mantenimiento-web-completo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/hosting-basico-o-mantenimiento-web-completo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/hosting-basico-o-mantenimiento-web-completo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/licencias-de-microsoft-365/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/licencias-de-microsoft-365/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/licencias-de-microsoft-365/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/mantenimiento-web-propio-o-externalizado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/mantenimiento-web-propio-o-externalizado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/mantenimiento-web-propio-o-externalizado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/mantenimiento-web-reactivo-o-preventivo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/mantenimiento-web-reactivo-o-preventivo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/mantenimiento-web-reactivo-o-preventivo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/mi-red-no-ha-pasado-la-certificacion/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/mi-red-no-ha-pasado-la-certificacion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/mi-red-no-ha-pasado-la-certificacion/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/migracion-a-microsoft-365-sin-perder-productividad/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/migracion-a-microsoft-365-sin-perder-productividad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/migracion-a-microsoft-365-sin-perder-productividad/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/migrar-servidores-sin-parar-la-produccion/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/migrar-servidores-sin-parar-la-produccion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/migrar-servidores-sin-parar-la-produccion/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/monitorizacion-de-red/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/monitorizacion-de-red/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/monitorizacion-de-red/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/pentesting-interno-o-externo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/pentesting-interno-o-externo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/pentesting-interno-o-externo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/pentesting-o-escaneo-automatizado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/pentesting-o-escaneo-automatizado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/pentesting-o-escaneo-automatizado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/pentesting-para-cumplir-con-el-ens-y-otras-normativas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/pentesting-para-cumplir-con-el-ens-y-otras-normativas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/pentesting-para-cumplir-con-el-ens-y-otras-normativas/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/plugin-de-seguridad-o-mantenimiento-web-gestionado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/plugin-de-seguridad-o-mantenimiento-web-gestionado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/plugin-de-seguridad-o-mantenimiento-web-gestionado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/politica-de-seguridad-y-cumplimiento-normativo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/politica-de-seguridad-y-cumplimiento-normativo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/politica-de-seguridad-y-cumplimiento-normativo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/que-es-google-workspace-y-por-que-migrar-tu-empresa/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/que-es-google-workspace-y-por-que-migrar-tu-empresa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/que-es-google-workspace-y-por-que-migrar-tu-empresa/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/que-incluye-microsoft-365-para-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/que-incluye-microsoft-365-para-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/que-incluye-microsoft-365-para-empresas/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/red-plana-o-red-segmentada/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/red-plana-o-red-segmentada/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/red-plana-o-red-segmentada/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/redes/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/redes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/redes/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/seguridad-en-microsoft-365/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/seguridad-en-microsoft-365/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/seguridad-en-microsoft-365/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/seguridad-y-cumplimiento/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/seguridad-y-cumplimiento/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/seguridad-y-cumplimiento/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/software-de-gestion-a-medida-o-programa-estandar/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/software-de-gestion-a-medida-o-programa-estandar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/software-de-gestion-a-medida-o-programa-estandar/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/soporte-it-reactivo-o-proactivo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/soporte-it-reactivo-o-proactivo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/soporte-it-reactivo-o-proactivo/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/switch-gestionado-o-no-gestionado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/switch-gestionado-o-no-gestionado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/switch-gestionado-o-no-gestionado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/varias-herramientas-sueltas-o-un-software-de-gestion-centralizado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/varias-herramientas-sueltas-o-un-software-de-gestion-centralizado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/varias-herramientas-sueltas-o-un-software-de-gestion-centralizado/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/web-a-medida-o-plantilla/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/web-a-medida-o-plantilla/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/web-a-medida-o-plantilla/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/web/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/web/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/wifi-domestico-o-wifi-profesional/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/wifi-domestico-o-wifi-profesional/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/wifi-domestico-o-wifi-profesional/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/wifi-en-naves-industriales/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/wifi-en-naves-industriales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/wifi-en-naves-industriales/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/wifi-multisede/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/wifi-multisede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/wifi-multisede/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/wifi-para-eventos-y-salas-de-formacion/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/wifi-para-eventos-y-salas-de-formacion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/wifi-para-eventos-y-salas-de-formacion/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/workspace/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/workspace/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/workspace/"/>
+  </url>
+  <url>
     <loc>https://adqa.com/redes/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/redes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/redes/"/>
