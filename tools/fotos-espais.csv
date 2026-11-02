@@ -1,0 +1,67 @@
+﻿#;Pàgina(es);Què ha de mostrar la foto;Proporció;Mida mínima recomanada (px);Nom del fitxer que m'envies
+1;/certificado-bsi/;Captura del certificado ISO 9001:2015 de BSI;3/4;1800 × 2400;foto-001.jpg
+2;/certificado-ens/;Captura del certificado ENS categoría ALTA (pendiente: llega el nuevo certificado);3/4;1800 × 2400;foto-002.jpg
+3;/microsoft-365/;Captura del centro de administración de Microsoft 365 con las licencias asignadas por usuario;4/3;1800 × 1350;foto-003.jpg
+4;/quienes-somos/;Foto del equipo de ADQA en la oficina (sin nombres ni datos personales);4/3;1800 × 1350;foto-004.jpg
+5;/redes/certificacion-redes/;Técnico de ADQA certificando un panel de parcheo con el equipo certificador;4/3;1800 × 1350;foto-005.jpg
+6;/redes/wifi-entornos-complejos/;Plano de un estudio de cobertura WiFi con el mapa de señal sobre la planta de una nave;4/5;1800 × 2250;foto-006.jpg
+7;/sistemas-cloud/datacenter/;Sala del datacenter de ADQA en Barcelona, con racks de servidores y cableado ordenado;4/5;1800 × 2250;foto-007.jpg
+8;/telecomunicaciones/networking/;Diagrama de una red corporativa: dos sedes unidas por enlace, firewall, switches de núcleo y VLAN por servicio;4/5;1800 × 2250;foto-008.jpg
+9;/recursos/actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional/;Panel de administración de WordPress con la lista de actualizaciones pendientes de plugins y del núcleo;21/9;2400 × 1029;foto-009.jpg
+10;/recursos/asi-se-certifica-una-red/;Equipo certificador de cableado conectado a un panel de parcheo, con la pantalla mostrando el resultado de un enlace;21/9;2400 × 1029;foto-010.jpg
+11;/recursos/backup-y-continuidad-de-negocio/;Técnico comprobando una restauración de prueba en un portátil junto a un servidor de copias de seguridad;21/9;2400 × 1029;foto-011.jpg
+12;/recursos/cable-o-wifi/;Puesto de trabajo con cable de red junto a un punto de acceso WiFi en el techo de una oficina;21/9;2400 × 1029;foto-012.jpg
+13;/recursos/cada-cuanto-hacer-un-pentesting-guia-de-frecuencia/;Calendario de planificación con revisiones de seguridad marcadas junto a un portátil en la mesa de un responsable técnico;21/9;2400 × 1029;foto-013.jpg
+14;/recursos/categorias-de-cableado/;Primer plano de varios cables de red de distintas categorías y un latiguillo de fibra óptica sobre un panel de parcheo;21/9;2400 × 1029;foto-014.jpg
+15;/recursos/certificacion-de-redes-y-ens/;Carpeta con el informe de certificación del cableado abierta junto a un armario de red con los paneles de parcheo etiquetados;21/9;2400 × 1029;foto-015.jpg
+16;/recursos/certificacion-de-redes/;Técnico midiendo una toma de red de una oficina con un equipo certificador de cableado en la mano;21/9;2400 × 1029;foto-016.jpg
+17;/recursos/certificacion-ens-categoria-alta/;Responsables de una empresa revisando en una sala de reuniones la documentación de seguridad que preparan para una auditoría;21/9;2400 × 1029;foto-017.jpg
+18;/recursos/ciberseguridad-gestionada-o-equipo-interno/;Responsable de sistemas de una empresa revisando un panel de seguridad junto a un especialista externo;21/9;2400 × 1029;foto-018.jpg
+19;/recursos/ciberseguridad-sin-departamento-it-propio/;Responsable de una pequeña empresa repasando una lista de comprobación de ciberseguridad en la mesa de su oficina;21/9;2400 × 1029;foto-019.jpg
+20;/recursos/colaboracion-en-equipo/;Dos personas comentando a la vez un mismo documento compartido, una desde un portátil y otra desde la pantalla de una sala de reuniones;21/9;2400 × 1029;foto-020.jpg
+21;/recursos/contratar-diseno-y-programacion-por-separado-o-con-un-mismo-equipo/;Diseñadora y programador revisando juntos el boceto de una web en una pantalla grande;21/9;2400 × 1029;foto-021.jpg
+22;/recursos/coste-real/;Responsable de administración revisando en una hoja de cálculo el reparto de licencias por usuario de la suite de la empresa;21/9;2400 × 1029;foto-022.jpg
+23;/recursos/cuando-renovar-la-red-de-tu-empresa/;Técnico sustituyendo un switch antiguo por uno nuevo en el armario de red de una oficina, con los latiguillos etiquetados;21/9;2400 × 1029;foto-023.jpg
+24;/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/;Equipo de dirección en una sala de reuniones valorando un cambio de suite, con dos portátiles abiertos, uno con Outlook y otro con Gmail;21/9;2400 × 1029;foto-024.jpg
+25;/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/;Plano de una planta de oficinas con el mapa de calor de la cobertura WiFi y la ubicación de cada punto de acceso;21/9;2400 × 1029;foto-025.jpg
+26;/recursos/datacenter-de-proximidad/;Pasillo de un datacenter con racks de servidores cerrados y un técnico revisando un equipo;21/9;2400 × 1029;foto-026.jpg
+27;/recursos/datacenter-propio-o-nube-publica/;Racks de servidores en un datacenter cercano, con un esquema de nube pública superpuesto que muestra los dos modelos;21/9;2400 × 1029;foto-027.jpg
+28;/recursos/del-informe-de-pentesting-a-la-solucion/;Equipo técnico ordenando los hallazgos de un informe de pentesting en un tablero con columnas de pendiente, en curso y verificado;21/9;2400 × 1029;foto-028.jpg
+29;/recursos/desarrollar-el-software-a-medida-con-equipo-interno-o-externalizado/;Reunión de seguimiento de un proyecto de software entre la persona responsable de la empresa y el equipo de desarrollo, con la especificación impresa sobre la mesa;21/9;2400 × 1029;foto-029.jpg
+30;/recursos/diseno-web-centrado-en-estetica-o-en-conversion/;Página web en un portátil con el botón de contacto y el formulario destacados dentro de un diseño cuidado de marca;21/9;2400 × 1029;foto-030.jpg
+31;/recursos/enlace-privado-oficina-datacenter/;Esquema de una oficina y un datacenter unidos por una línea de fibra dedicada, separada de la nube de internet;21/9;2400 × 1029;foto-031.jpg
+32;/recursos/firewall-gestionado-o-propio/;Firewall montado en un rack de comunicaciones mientras un técnico revisa sus reglas en un portátil;21/9;2400 × 1029;foto-032.jpg
+33;/recursos/google-workspace-para-equipos-remotos-e-hibridos/;Videollamada de Meet con parte del equipo en la oficina y parte desde casa, revisando juntos un documento compartido;21/9;2400 × 1029;foto-033.jpg
+34;/recursos/hosting-basico-o-mantenimiento-web-completo/;Esquema de capas de una web: el servidor de alojamiento en la base y, encima, el gestor de contenidos, las extensiones y las copias de seguridad;21/9;2400 × 1029;foto-034.jpg
+35;/recursos/licencias-de-microsoft-365/;Centro de administración de Microsoft 365 en un portátil, con el listado de usuarios y el plan asignado a cada uno;21/9;2400 × 1029;foto-035.jpg
+36;/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/;Pantalla de un programa de gestión antiguo junto a la versión renovada del mismo sistema abierta en un navegador;21/9;2400 × 1029;foto-036.jpg
+37;/recursos/mantenimiento-web-propio-o-externalizado/;Responsable de marketing actualizando contenidos de la web mientras un técnico revisa en otra pantalla las actualizaciones y las copias;21/9;2400 × 1029;foto-037.jpg
+38;/recursos/mantenimiento-web-reactivo-o-preventivo/;Calendario de revisiones de una web con tareas marcadas (actualizaciones, copias, certificado SSL) junto a un panel que muestra la web funcionando con normalidad;21/9;2400 × 1029;foto-038.jpg
+39;/recursos/mi-red-no-ha-pasado-la-certificacion/;Técnico rehaciendo el conector de una toma de red en un panel de parcheo, con el informe de certificación al lado;21/9;2400 × 1029;foto-039.jpg
+40;/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/;Responsable de informática revisando en un portátil el avance de una migración de buzones de correo por fases;21/9;2400 × 1029;foto-040.jpg
+41;/recursos/migracion-a-microsoft-365-sin-perder-productividad/;Persona de un equipo de oficina abriendo por primera vez Teams y Outlook en su portátil, con una compañera a su lado resolviendo una duda;21/9;2400 × 1029;foto-041.jpg
+42;/recursos/migrar-servidores-sin-parar-la-produccion/;Dos racks de servidores conectados durante una migración, con un técnico comprobando la réplica de datos en una pantalla;21/9;2400 × 1029;foto-042.jpg
+43;/recursos/monitorizacion-de-red/;Pantalla con un panel de monitorización que muestra el estado de switches, enlaces y puntos de acceso de una red de empresa;21/9;2400 × 1029;foto-043.jpg
+44;/recursos/pentesting-interno-o-externo/;Especialista en ciberseguridad y responsable técnico de una empresa revisando juntos un esquema de red en una pantalla;21/9;2400 × 1029;foto-044.jpg
+45;/recursos/pentesting-o-escaneo-automatizado/;Pantalla con el listado de resultados de un escaneo de vulnerabilidades junto a un especialista que analiza manualmente un sistema;21/9;2400 × 1029;foto-045.jpg
+46;/recursos/pentesting-para-cumplir-con-el-ens-y-otras-normativas/;Responsable de seguridad revisando en un portátil el informe de una prueba de penetración junto a una lista de controles de cumplimiento;21/9;2400 × 1029;foto-046.jpg
+47;/recursos/plugin-de-seguridad-o-mantenimiento-web-gestionado/;Panel de un plugin de seguridad con varias alertas en la pantalla de un portátil, mientras un técnico toma notas de lo que ha revisado;21/9;2400 × 1029;foto-047.jpg
+48;/recursos/politica-de-seguridad-y-cumplimiento-normativo/;Documento de política de seguridad sobre una mesa de reuniones, junto a un portátil y una taza de café;21/9;2400 × 1029;foto-048.jpg
+49;/recursos/que-es-google-workspace-y-por-que-migrar-tu-empresa/;Equipo de oficina editando a la vez un mismo documento en sus portátiles, con el correo y el calendario abiertos en pantalla;21/9;2400 × 1029;foto-049.jpg
+50;/recursos/que-incluye-microsoft-365-para-empresas/;Portátil en una mesa de oficina con Outlook, Teams y el centro de administración de Microsoft 365 abiertos en ventanas contiguas;21/9;2400 × 1029;foto-050.jpg
+51;/recursos/red-plana-o-red-segmentada/;Armario de comunicaciones con switches gestionados y cables de colores que identifican las distintas VLAN de la red;21/9;2400 × 1029;foto-051.jpg
+52;/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/;Dos versiones de la misma web, la antigua y la nueva, una al lado de la otra en dos pantallas;21/9;2400 × 1029;foto-052.jpg
+53;/recursos/seguir-con-hojas-de-calculo-o-automatizar-con-software-a-medida/;Varias versiones de la misma hoja de cálculo abiertas en pantalla, con nombres como «final» y «final_v2», junto a una aplicación de gestión con los mismos datos ordenados;21/9;2400 × 1029;foto-053.jpg
+54;/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/;Consola de administración de Google Workspace en un portátil, con la verificación en dos pasos activada para toda la organización;21/9;2400 × 1029;foto-054.jpg
+55;/recursos/seguridad-en-microsoft-365/;Responsable de informática revisando en un portátil las directivas de acceso condicional de Microsoft Entra ID;21/9;2400 × 1029;foto-055.jpg
+56;/recursos/seguridad-y-cumplimiento/;Responsable de cumplimiento revisando en un portátil las políticas de retención y el registro de actividad de la suite de su empresa;21/9;2400 × 1029;foto-056.jpg
+57;/recursos/software-de-gestion-a-medida-o-programa-estandar/;Pantalla de un programa de gestión estándar junto a una hoja de cálculo paralela con los datos que el programa no recoge;21/9;2400 × 1029;foto-057.jpg
+58;/recursos/soporte-it-reactivo-o-proactivo/;Técnico de soporte revisando en una pantalla el estado de los servidores y los equipos de una empresa;21/9;2400 × 1029;foto-058.jpg
+59;/recursos/switch-gestionado-o-no-gestionado/;Armario de red de una oficina con dos switches, latiguillos de colores ordenados y las luces de los puertos encendidas;21/9;2400 × 1029;foto-059.jpg
+60;/recursos/varias-herramientas-sueltas-o-un-software-de-gestion-centralizado/;Esquema de varias aplicaciones de empresa (facturación, clientes, stock y proyectos) conectadas entre sí y con una base de datos central;21/9;2400 × 1029;foto-060.jpg
+61;/recursos/web-a-medida-o-plantilla/;Pantalla de ordenador con el boceto de una web a medida junto a una galería de plantillas web genéricas;21/9;2400 × 1029;foto-061.jpg
+62;/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/;Persona editando el texto de una página web desde el panel de un gestor de contenidos en un portátil;21/9;2400 × 1029;foto-062.jpg
+63;/recursos/wifi-domestico-o-wifi-profesional/;Punto de acceso WiFi profesional en el techo de una oficina diáfana, con varias personas trabajando con portátiles;21/9;2400 × 1029;foto-063.jpg
+64;/recursos/wifi-en-naves-industriales/;Nave industrial con estanterías metálicas altas y un punto de acceso WiFi industrial instalado en la estructura del techo;21/9;2400 × 1029;foto-064.jpg
+65;/recursos/wifi-multisede/;Mapa con varias oficinas conectadas y una consola que muestra el estado de los puntos de acceso WiFi de cada sede;21/9;2400 × 1029;foto-065.jpg
+66;/recursos/wifi-para-eventos-y-salas-de-formacion/;Sala de formación llena de asistentes trabajando con portátiles, con varios puntos de acceso WiFi en el techo;21/9;2400 × 1029;foto-066.jpg
