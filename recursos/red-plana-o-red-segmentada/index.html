@@ -76,7 +76,7 @@
       },
       "articleSection": "Redes y WiFi",
       "keywords": "Segmentación, Seguridad",
-      "wordCount": 753,
+      "wordCount": 743,
       "image": "https://adqa.com/assets/og-adqa.jpg",
       "inLanguage": "es-ES"
     },
@@ -143,7 +143,7 @@
           "name": "¿Qué segmentos se crean primero en una empresa típica?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Habitualmente, oficina o administración y servidores. También producción o dispositivos IoT, WiFi de invitados y videovigilancia. Cada uno va en su VLAN, con reglas de tráfico entre ellos según la necesidad real."
+            "text": "Habitualmente se separan oficina o administración, servidores, producción o dispositivos IoT, WiFi de invitados y videovigilancia. Cada uno va en su VLAN, con reglas de tráfico entre ellos según la necesidad real."
           }
         },
         {
@@ -159,7 +159,7 @@
           "name": "¿Cómo se comprueba que una red está bien segmentada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Revisando la configuración de switches, puntos de acceso y firewall. Y comprobando que el tráfico permitido entre segmentos coincide con el diseño. No basta con el diagrama: hay que probarlo desde dentro de cada zona."
+            "text": "Revisando la configuración de switches, puntos de acceso y firewall, y comprobando que el tráfico permitido entre segmentos coincide con el diseño. No basta con el diagrama: hay que probarlo desde dentro de cada zona."
           }
         }
       ]
@@ -311,11 +311,11 @@
 
       <div class="art-summary card">
         <span class="eyebrow">En resumen</span>
-        <p class="tldr">Una red plana conecta todos los dispositivos en el mismo segmento. Es sencilla de montar, pero no tiene barreras internas. Una red segmentada divide la red en zonas según su función o su nivel de riesgo. Por ejemplo, oficina, producción, invitados o videovigilancia. Unas reglas fijan qué puede comunicarse con qué. Así, un problema en una zona no se extiende a las demás.</p>
+        <p class="tldr">Una red plana conecta todos los dispositivos en el mismo segmento. Es sencilla de montar, pero no tiene barreras internas. Una red segmentada divide la red en zonas según su función o su nivel de riesgo, como oficina, producción, invitados o videovigilancia. Unas reglas fijan qué puede comunicarse con qué. Así, un problema en una zona no se extiende a las demás.</p>
       </div>
       <div class="prose doc">
-<p>Cuando una red funciona, nadie se pregunta cómo está organizada por dentro. En muchas empresas, ordenadores, impresoras y cámaras comparten la misma red, sin separación. Y con ellos, los sistemas de producción y el WiFi de invitados. Es la forma más rápida de montarla, y durante años nadie lo nota.</p>
-<p>La diferencia aparece el día que un equipo da problemas. O el día que una visita, conectada desde la sala de espera, ve tu servidor de facturas. En una red segmentada, cada problema se queda en su zona. En una red plana, no hay nada que lo frene.</p>
+<p>Cuando una red funciona, nadie se pregunta cómo está organizada por dentro. En muchas empresas, ordenadores, impresoras, cámaras, sistemas de producción y el WiFi de invitados comparten la misma red, sin separación. Es la forma más rápida de montarla, y durante años nadie lo nota.</p>
+<p>La diferencia aparece cuando un equipo da problemas o cuando una visita conectada desde la sala de espera ve tu servidor de facturas. En una red segmentada, cada problema se queda en su zona. En una red plana, no hay nada que lo frene.</p>
 <h2 id="que-implica-una-red-plana">Qué implica una red plana</h2>
 <ul>
 <li><strong>Montaje sencillo.</strong> Todo conectado a los mismos switches, sin configuración adicional.</li>
@@ -323,7 +323,7 @@
 <li><strong>Sin barreras internas.</strong> Si un portátil se infecta, el problema puede llegar a los servidores o a los sistemas de producción. Lo mismo si un invitado conecta un dispositivo comprometido.</li>
 <li><strong>Fallos que afectan a todos.</strong> Un equipo que satura la red o un bucle en un switch se nota en toda la empresa. Y cuesta localizar el origen. Para un bucle basta un cable con los dos extremos enchufados al switch de debajo de una mesa.</li>
 </ul>
-<p>Es un hallazgo frecuente en las revisiones de red. Producción, oficina y WiFi de invitados comparten una misma red, completamente plana. Separarla suele ser una de las primeras recomendaciones, porque aprovecha en gran parte los equipos que ya tienes.</p>
+<p>En las revisiones de red es frecuente encontrar producción, oficina y WiFi de invitados en una misma red, completamente plana. Separarla suele ser una de las primeras recomendaciones, porque aprovecha en gran parte los equipos que ya tienes.</p>
 <h2 id="que-aporta-segmentar-con-vlan">Qué aporta segmentar con VLAN</h2>
 <p>Segmentar consiste en dividir la red en varias redes lógicas, las VLAN. Comparten cables y switches, pero funcionan como si estuvieran separadas. Es como un edificio con varias empresas: el ascensor es de todos, pero cada puerta tiene su llave.</p>
 <ul>
@@ -431,9 +431,9 @@
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
-        <details><summary>¿Qué segmentos se crean primero en una empresa típica? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Habitualmente, oficina o administración y servidores. También producción o dispositivos IoT, WiFi de invitados y videovigilancia. Cada uno va en su VLAN, con reglas de tráfico entre ellos según la necesidad real.</p></details>
+        <details><summary>¿Qué segmentos se crean primero en una empresa típica? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Habitualmente se separan oficina o administración, servidores, producción o dispositivos IoT, WiFi de invitados y videovigilancia. Cada uno va en su VLAN, con reglas de tráfico entre ellos según la necesidad real.</p></details>
         <details><summary>¿Dónde se aplican las reglas entre segmentos? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Hay dos sitios habituales. El firewall permite reglas más finas y registra el tráfico entre zonas. Los switches de capa 3 del núcleo enrutan más rápido entre segmentos internos de confianza. Usan listas de acceso más sencillas. Muchas redes combinan los dos.</p></details>
-        <details><summary>¿Cómo se comprueba que una red está bien segmentada? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Revisando la configuración de switches, puntos de acceso y firewall. Y comprobando que el tráfico permitido entre segmentos coincide con el diseño. No basta con el diagrama: hay que probarlo desde dentro de cada zona.</p></details>
+        <details><summary>¿Cómo se comprueba que una red está bien segmentada? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Revisando la configuración de switches, puntos de acceso y firewall, y comprobando que el tráfico permitido entre segmentos coincide con el diseño. No basta con el diagrama: hay que probarlo desde dentro de cada zona.</p></details>
       </div>
     </div>
   </div>

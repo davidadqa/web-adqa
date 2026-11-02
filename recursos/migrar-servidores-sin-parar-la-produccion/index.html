@@ -135,7 +135,7 @@
           "name": "¿Cuánto dura una migración y cuánto tiempo pide al equipo interno?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Depende del volumen de sistemas y de datos. Una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. Tu equipo participa sobre todo en dos momentos. Al principio, para explicar cómo se usan las aplicaciones. Y al final, para validar las pruebas y la ventana de corte."
+            "text": "Depende del volumen de sistemas y de datos. Una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. Tu equipo participa sobre todo en dos momentos. Al principio explica cómo se usan las aplicaciones. Al final valida las pruebas y la ventana de corte."
           }
         },
         {
@@ -151,7 +151,7 @@
           "name": "¿Cómo se decide el orden de migración de los sistemas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se empieza por los menos críticos. Así se valida el proceso y se detectan problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado."
+            "text": "Se empieza por los menos críticos, para validar el proceso y detectar problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado."
           }
         },
         {
@@ -311,7 +311,7 @@
 
       <div class="art-summary card">
         <span class="eyebrow">En resumen</span>
-        <p class="tldr">Una migración de servidores sin paradas relevantes se apoya en cuatro pasos. Primero, documentar las dependencias antes de tocar nada. Segundo, migrar por fases, empezando por lo menos crítico. Tercero, replicar los datos mientras el entorno antiguo sigue funcionando. Y cuarto, hacer un corte final breve en el momento de menor impacto. Siempre con un plan de vuelta atrás preparado.</p>
+        <p class="tldr">Una migración de servidores sin paradas relevantes se apoya en cuatro pasos. Primero, documentar las dependencias antes de tocar nada. Segundo, migrar por fases, empezando por lo menos crítico. Tercero, replicar los datos mientras el entorno antiguo sigue funcionando. Y cuarto, hacer un corte final breve en el momento de menor impacto, con un plan de vuelta atrás preparado.</p>
       </div>
       <div class="prose doc">
 <p>Basta con anunciar en la oficina que toca migrar los servidores. La primera pregunta llega sola: «¿cuánto tiempo estaremos parados?». Es una preocupación razonable. Si la migración está bien planificada, la respuesta es: lo mínimo, y en un momento elegido de antemano.</p>
@@ -319,17 +319,17 @@
 <h2 id="por-que-se-migra">Por qué se migra</h2>
 <p>Los motivos más habituales son estos:</p>
 <ul>
-<li><strong>Servidores en condiciones precarias.</strong> Un armario sin climatización adecuada ni redundancia eléctrica. O con las copias en el mismo espacio que los equipos.</li>
+<li><strong>Servidores en condiciones precarias.</strong> Un armario sin climatización adecuada ni redundancia eléctrica, o con las copias en el mismo espacio que los equipos.</li>
 <li><strong>Hardware o sistemas que se quedan cortos</strong>, sin garantía o sin actualizaciones del fabricante. Como ese servidor ruidoso que nadie se atreve a reiniciar.</li>
 <li><strong>Necesidad de crecer</strong> más allá de lo que permite el equipo actual.</li>
 <li><strong>Interés en un acceso privado</strong> a los servidores desde la oficina, en lugar de depender de internet para todo.</li>
 </ul>
 <p>¿Aún no tienes claro el destino? La comparación entre un <a href="/web-adqa/recursos/datacenter-propio-o-nube-publica/">datacenter propio o la nube pública</a> te ayuda a ordenar las opciones.</p>
 <h2 id="de-donde-vienen-las-paradas-imprevistas">De dónde vienen las paradas imprevistas</h2>
-<p>Cuando una migración se improvisa, aparecen sorpresas. Hay dependencias que nadie había detectado y configuraciones que no se replican bien. O copias de datos que tardan mucho más de lo previsto. Por ejemplo, el programa de etiquetas del almacén puede buscar el servidor antiguo por su dirección. Si nadie lo ha apuntado, el día del cambio deja de imprimir. Cada sorpresa así se traduce en horas de parada que no estaban en el plan. La mayoría te las ahorras en la fase de preparación.</p>
+<p>Cuando una migración se improvisa, aparecen sorpresas. Hay dependencias que nadie había detectado, configuraciones que no se replican bien o copias de datos que tardan mucho más de lo previsto. Por ejemplo, el programa de etiquetas del almacén puede buscar el servidor antiguo por su dirección. Si nadie lo ha apuntado, el día del cambio deja de imprimir. Cada sorpresa así se traduce en horas de parada que no estaban en el plan. La mayoría te las ahorras en la fase de preparación.</p>
 <h2 id="como-se-planifica-una-migracion-paso-a-paso">Cómo se planifica una migración, paso a paso</h2>
 <ol>
-<li><strong>Inventario y dependencias.</strong> Antes de tocar nada se documenta qué servidores hay y qué aplicaciones corren en cada uno. También quién trabaja con ellas y qué sistemas dependen de otros. Y qué franja horaria afecta menos a tu operativa.</li>
+<li><strong>Inventario y dependencias.</strong> Antes de tocar nada se documenta qué servidores hay, qué aplicaciones corren en cada uno y quién trabaja con ellas. Se apunta también qué sistemas dependen de otros y qué franja horaria afecta menos a tu operativa.</li>
 <li><strong>Copia verificada antes de empezar.</strong> Antes del primer cambio se comprueba que la copia se puede restaurar. Es la red de seguridad de todo el proyecto. Qué revisar en ella lo tienes en <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a>.</li>
 <li><strong>Fases y orden.</strong> Los sistemas se agrupan en fases, empezando por los que menos afectan a tu negocio si algo falla. Así el proceso se valida antes de llegar a lo crítico. Los pasos 4 a 6 se repiten en cada fase.</li>
 <li><strong>Réplica en paralelo.</strong> Los datos se van copiando al nuevo entorno mientras el antiguo sigue funcionando con normalidad.</li>
@@ -414,12 +414,12 @@
         <h3>Para el manager</h3>
         <details open=""><summary>¿Toda migración de servidores se puede hacer sin parar la actividad? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Habitualmente sí, con una buena planificación y réplica de datos en paralelo. El corte final se reduce a una ventana breve. Se programa fuera del horario de producción o en el momento de menos actividad. Algunos sistemas antiguos o con dependencias muy específicas necesitan una parada más larga. Esa parada también se puede acotar y planificar, para que tu equipo sepa cuándo será.</p></details>
         <details><summary>¿Y si algo no sale como estaba previsto durante la migración? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Para eso se prepara un plan de vuelta atrás en cada fase. El entorno antiguo sigue activo y sincronizado mientras tanto. Si algo falla, vuelves a él con un impacto mínimo en tu operativa. Luego se revisa qué ha fallado y se repite el paso con calma.</p></details>
-        <details><summary>¿Cuánto dura una migración y cuánto tiempo pide al equipo interno? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Depende del volumen de sistemas y de datos. Una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. Tu equipo participa sobre todo en dos momentos. Al principio, para explicar cómo se usan las aplicaciones. Y al final, para validar las pruebas y la ventana de corte.</p></details>
+        <details><summary>¿Cuánto dura una migración y cuánto tiempo pide al equipo interno? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Depende del volumen de sistemas y de datos. Una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. Tu equipo participa sobre todo en dos momentos. Al principio explica cómo se usan las aplicaciones. Al final valida las pruebas y la ventana de corte.</p></details>
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
         <details><summary>¿Cómo se sincronizan los datos mientras el entorno antiguo sigue en producción? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Mediante réplica continua entre el entorno de origen y el de destino. Así el corte final solo tiene que aplicar los últimos cambios. No hace falta mover todo el volumen de golpe, y la ventana de corte se mantiene corta.</p></details>
-        <details><summary>¿Cómo se decide el orden de migración de los sistemas? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se empieza por los menos críticos. Así se valida el proceso y se detectan problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado.</p></details>
+        <details><summary>¿Cómo se decide el orden de migración de los sistemas? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se empieza por los menos críticos, para validar el proceso y detectar problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado.</p></details>
         <details><summary>¿Qué pasa con las direcciones IP y la configuración de red al migrar? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se planifican de antemano para que los cambios visibles sean mínimos. En muchos casos se conserva el direccionamiento o se ajustan los nombres internos. Así tus usuarios no notan el cambio de entorno.</p></details>
       </div>
     </div>

@@ -135,7 +135,7 @@
           "name": "¿Monitorizar la red supone vigilar lo que hace el personal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. La monitorización de red mira el estado de los equipos y de los enlaces. Comprueba si están disponibles, cuánta carga tienen, si dan errores y a qué temperatura funcionan. No necesita leer el contenido del tráfico ni el correo de nadie. Si se analizan flujos de tráfico, se hace de forma agregada, solo para ver qué consume ancho de banda."
+            "text": "No. La monitorización de red mira el estado de los equipos y de los enlaces. Comprueba si están disponibles, cuánta carga tienen, si dan errores y a qué temperatura funcionan. No necesita leer el contenido del tráfico ni el correo de nadie. Si se analizan flujos de tráfico, se hace de forma agregada, para ver qué consume ancho de banda."
           }
         },
         {
@@ -143,7 +143,7 @@
           "name": "¿Qué protocolos se usan para monitorizar una red?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sobre todo SNMP, para leer el estado de los equipos. También sondas activas que comprueban disponibilidad y latencia, y registros syslog. Para ver qué consume el ancho de banda se usa el análisis de flujos, como NetFlow o sFlow. Todo se reúne en un panel con alertas por umbral."
+            "text": "Sobre todo SNMP, para leer el estado de los equipos. También se usan sondas activas que comprueban disponibilidad y latencia, y registros syslog. Para ver qué consume el ancho de banda se usa el análisis de flujos, como NetFlow o sFlow. Todo se reúne en un panel con alertas por umbral."
           }
         },
         {
@@ -159,7 +159,7 @@
           "name": "¿La monitorización sustituye al mantenimiento preventivo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, se complementan. La monitorización detecta síntomas en tiempo real. El mantenimiento preventivo corrige las causas de fondo antes de que generen esos síntomas. Por ejemplo, un firmware desactualizado o equipos al final de su vida útil."
+            "text": "No, se complementan. La monitorización detecta síntomas en tiempo real. El mantenimiento preventivo corrige las causas de fondo antes de que generen esos síntomas. Es el caso de un firmware desactualizado o de unos equipos al final de su vida útil."
           }
         }
       ]
@@ -311,7 +311,7 @@
 
       <div class="art-summary card">
         <span class="eyebrow">En resumen</span>
-        <p class="tldr">La monitorización de red vigila de forma continua switches, enlaces, firewall y puntos de acceso. Avisa cuando algo se sale de lo normal. Por ejemplo, un enlace que pierde paquetes, un puerto con errores o un equipo que se calienta. Así se puede actuar antes de que el problema se convierta en un corte. Además, deja un historial que acelera el diagnóstico cuando algo falla.</p>
+        <p class="tldr">La monitorización de red vigila de forma continua switches, enlaces, firewall y puntos de acceso. Avisa cuando algo se sale de lo normal: un enlace que pierde paquetes, un puerto con errores o un equipo que se calienta. Así se puede actuar antes de que el problema se convierta en un corte. Además, deja un historial que acelera el diagnóstico cuando algo falla.</p>
       </div>
       <div class="prose doc">
 <p>Muchas veces, la primera noticia de un problema en la red es que alguien no puede trabajar. Suena el teléfono y te dicen: «No va nada». Entonces toca reconstruir qué ha pasado, sin datos de cómo estaba la red un rato antes.</p>
@@ -364,7 +364,7 @@
 <h2 id="como-funcionan-las-alertas">Cómo funcionan las alertas</h2>
 <p>Una monitorización útil no avisa de todo: avisa de lo que importa.</p>
 <ul>
-<li><strong>Umbrales con sentido.</strong> Se fijan a partir de cómo se comporta tu red normalmente, su línea base. No con valores genéricos. Un enlace muy cargado puede ser normal un lunes a las nueve y raro un domingo.</li>
+<li><strong>Umbrales con sentido.</strong> Se fijan a partir de cómo se comporta tu red normalmente (su línea base), no con valores genéricos. Un enlace muy cargado puede ser normal un lunes a las nueve y raro un domingo.</li>
 <li><strong>Avisos agrupados.</strong> Si cae un switch, no quieres que el móvil te vibre por cada equipo que cuelga de él. Las dependencias se configuran para que llegue un aviso con la causa.</li>
 <li><strong>Un responsable para cada aviso.</strong> Quién recibe las alertas, en qué horario y qué hace con ellas se decide de antemano.</li>
 <li><strong>Historial.</strong> Los datos se guardan durante semanas o meses. Sirven para ver tendencias y comparar con lo que pasaba antes de un fallo.</li>
@@ -375,7 +375,7 @@
 <ul>
 <li><strong>Diagnóstico con datos.</strong> Cuando algo falla, tienes el registro de lo que pasaba antes. Así la causa se encuentra más rápido.</li>
 <li><strong>Inversión con criterio.</strong> Los datos de uso muestran qué enlaces se quedan cortos y qué equipos dan más problemas. Llegas a la reunión de presupuesto con la gráfica en la mano. Es una buena base para decidir <a href="/web-adqa/recursos/cuando-renovar-la-red-de-tu-empresa/">cuándo renovar la red</a>.</li>
-<li><strong>Varias sedes a la vista.</strong> Con una consola común, ves el estado de todas las oficinas desde el mismo sitio. Igual que en un <a href="/web-adqa/recursos/wifi-multisede/">WiFi multisede</a>.</li>
+<li><strong>Varias sedes a la vista.</strong> Con una consola común, ves el estado de todas las oficinas desde el mismo sitio, igual que en un <a href="/web-adqa/recursos/wifi-multisede/">WiFi multisede</a>.</li>
 </ul>
 <h2 id="por-donde-empezar-segun-tu-red">Por dónde empezar según tu red</h2>
 <div class="table-wrap"><table>
@@ -450,13 +450,13 @@
         <h3>Para el manager</h3>
         <details open=""><summary>¿Hace falta comprar equipos nuevos para monitorizar la red? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Normalmente no. La mayoría de switches, firewalls y puntos de acceso profesionales ya ofrecen la información necesaria. Si tu red tiene equipos domésticos o switches no gestionados, esa parte se ve peor. Es un buen motivo para renovarlos cuando toque.</p></details>
         <details><summary>¿Vale la pena en una empresa pequeña? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Suele valer la pena si el trabajo diario pasa por la red. Imagina una mañana entera sin conexión. Si eso frena la facturación, la atención a clientes o la producción, ya tienes la respuesta. Un buen comienzo es vigilar al menos la conexión a internet y el firewall.</p></details>
-        <details><summary>¿Monitorizar la red supone vigilar lo que hace el personal? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>No. La monitorización de red mira el estado de los equipos y de los enlaces. Comprueba si están disponibles, cuánta carga tienen, si dan errores y a qué temperatura funcionan. No necesita leer el contenido del tráfico ni el correo de nadie. Si se analizan flujos de tráfico, se hace de forma agregada, solo para ver qué consume ancho de banda.</p></details>
+        <details><summary>¿Monitorizar la red supone vigilar lo que hace el personal? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>No. La monitorización de red mira el estado de los equipos y de los enlaces. Comprueba si están disponibles, cuánta carga tienen, si dan errores y a qué temperatura funcionan. No necesita leer el contenido del tráfico ni el correo de nadie. Si se analizan flujos de tráfico, se hace de forma agregada, para ver qué consume ancho de banda.</p></details>
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
-        <details><summary>¿Qué protocolos se usan para monitorizar una red? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sobre todo SNMP, para leer el estado de los equipos. También sondas activas que comprueban disponibilidad y latencia, y registros syslog. Para ver qué consume el ancho de banda se usa el análisis de flujos, como NetFlow o sFlow. Todo se reúne en un panel con alertas por umbral.</p></details>
+        <details><summary>¿Qué protocolos se usan para monitorizar una red? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sobre todo SNMP, para leer el estado de los equipos. También se usan sondas activas que comprueban disponibilidad y latencia, y registros syslog. Para ver qué consume el ancho de banda se usa el análisis de flujos, como NetFlow o sFlow. Todo se reúne en un panel con alertas por umbral.</p></details>
         <details><summary>¿Se puede monitorizar el WiFi con la misma herramienta que el resto de la red? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí. La controladora WiFi ya recoge el estado de los puntos de acceso, los clientes conectados y las interferencias. Esos datos se pueden integrar en el mismo panel que los switches y el firewall. Así sabes si el fallo viene de la radio o del cable que llega al punto de acceso.</p></details>
-        <details><summary>¿La monitorización sustituye al mantenimiento preventivo? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>No, se complementan. La monitorización detecta síntomas en tiempo real. El mantenimiento preventivo corrige las causas de fondo antes de que generen esos síntomas. Por ejemplo, un firmware desactualizado o equipos al final de su vida útil.</p></details>
+        <details><summary>¿La monitorización sustituye al mantenimiento preventivo? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>No, se complementan. La monitorización detecta síntomas en tiempo real. El mantenimiento preventivo corrige las causas de fondo antes de que generen esos síntomas. Es el caso de un firmware desactualizado o de unos equipos al final de su vida útil.</p></details>
       </div>
     </div>
   </div>

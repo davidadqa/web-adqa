@@ -1,6 +1,6 @@
 # ADQA
 
-> ADQA (Ingeniería y Suministros Profesionales, S.L.) es una empresa TIC y operador de telecomunicaciones propio en Barcelona que se ocupa, con un mismo equipo, de la informática, las redes, las telecomunicaciones, el cloud, el desarrollo web y la ciberseguridad de empresas e instituciones públicas.
+> ADQA (Ingeniería y Suministros Profesionales, S.L.) es una empresa TIC de Vilanova i la Geltrú (Barcelona) y operador de telecomunicaciones propio que se ocupa, con un mismo equipo, de la informática, las redes, las telecomunicaciones, el cloud, el desarrollo web y la ciberseguridad de empresas e instituciones públicas de toda España.
 
 Datos clave:
 
@@ -41,7 +41,7 @@ Datos clave:
 
 - [Informática, telecom y ciberseguridad en Barcelona](https://adqa.com/): Informática, telecomunicaciones y ciberseguridad para empresas en Barcelona, con un mismo equipo: operador propio, datacenter de proximidad, ENS e ISO 9001.
 - [Aviso legal](https://adqa.com/aviso-legal/): Aviso legal de ADQA: datos identificativos de Ingeniería y Suministros Profesionales, S.L., finalidad de la web, legislación aplicable y propiedad intelectual.
-- [Casos de éxito de informática y telecom en Barcelona](https://adqa.com/casos-de-exito/): Casos de éxito de ADQA en Barcelona y Cataluña: hospitales conectados a 100 Gb/s, fibra a 1.000 m bajo tierra, WiFi en fábricas, cloud y ciberseguridad.
+- [Casos de éxito de informática y telecom en Barcelona](https://adqa.com/casos-de-exito/): Casos de éxito de ADQA en Barcelona y toda España: hospitales conectados a 100 Gb/s, fibra a 1.000 m bajo tierra, WiFi en fábricas, cloud y ciberseguridad.
 - [Certificado ISO 9001:2015 emitido por BSI](https://adqa.com/certificado-bsi/): ADQA tiene el certificado ISO 9001:2015 de gestión de la calidad, emitido por BSI. Consulta el certificado y qué supone para los servicios que te prestamos.
 - [Certificado ENS categoría ALTA](https://adqa.com/certificado-ens/): Certificado de conformidad de ADQA con el Esquema Nacional de Seguridad (ENS) en categoría ALTA. Consulta el certificado y qué significa para tu organización.
 - [Contacto: hablemos de la tecnología de tu empresa](https://adqa.com/contacto/): Contacta con ADQA en Barcelona: cuéntanos qué necesitas en informática, telecomunicaciones, ciberseguridad o web y te proponemos el siguiente paso.

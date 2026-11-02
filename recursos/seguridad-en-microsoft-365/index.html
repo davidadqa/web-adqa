@@ -76,7 +76,7 @@
       },
       "articleSection": "Google Workspace y Microsoft 365",
       "keywords": "Microsoft 365, Seguridad",
-      "wordCount": 830,
+      "wordCount": 827,
       "image": "https://adqa.com/assets/og-adqa.jpg",
       "inLanguage": "es-ES"
     },
@@ -143,7 +143,7 @@
           "name": "¿Qué diferencia hay entre la verificación en dos pasos y el acceso condicional?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto. Por ejemplo, desde un portátil gestionado puede permitir el acceso sin más. Y desde un dispositivo desconocido o una ubicación inusual, pedir una verificación adicional o bloquear el acceso."
+            "text": "La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto. Por ejemplo, desde un portátil gestionado puede permitir el acceso sin más. Desde un dispositivo desconocido o una ubicación inusual, en cambio, puede pedir una verificación adicional o bloquear el acceso."
           }
         },
         {
@@ -311,14 +311,14 @@
 
       <div class="art-summary card">
         <span class="eyebrow">En resumen</span>
-        <p class="tldr">Microsoft 365 incluye de serie el filtrado de spam y phishing en el correo. También cifra los datos en tránsito y en reposo, y la infraestructura la mantiene Microsoft. La protección efectiva depende de la configuración de cada empresa. Cuentan la verificación en dos pasos para todos en Microsoft Entra ID y el acceso condicional. También la gestión de dispositivos con Intune, pocos administradores y límites al uso compartido externo.</p>
+        <p class="tldr">Microsoft 365 incluye de serie el filtrado de spam y phishing en el correo. También cifra los datos en tránsito y en reposo, y la infraestructura la mantiene Microsoft. La protección efectiva depende de la configuración de cada empresa. Las claves son la verificación en dos pasos para todos en Microsoft Entra ID y el acceso condicional. También cuentan la gestión de dispositivos con Intune, pocos administradores y límites al uso compartido externo.</p>
       </div>
       <div class="prose doc">
 <p>Microsoft dedica muchos recursos a la seguridad de su infraestructura, y tu empresa se beneficia de ello. Pero conviene separar dos cosas desde el principio.</p>
 <p>La seguridad de la plataforma depende de Microsoft. La de tu tenant (el espacio de tu empresa en Microsoft 365) es otra historia. Depende de cómo se configura y se usa, y eso lo decides tú o quien te lo gestiona. La primera viene de serie. La segunda es la que marca la diferencia en el día a día.</p>
 <h2 id="lo-que-microsoft-365-protege-de-serie">Lo que Microsoft 365 protege de serie</h2>
 <ul>
-<li><strong>Filtrado del correo.</strong> Exchange Online detiene de forma automática buena parte del spam, el phishing y el malware. Lo hace antes de que llegue a tu bandeja. Esa factura falsa de un proveedor desconocido, muchas veces, ni siquiera llega.</li>
+<li><strong>Filtrado del correo.</strong> Exchange Online detiene de forma automática buena parte del spam, el phishing y el malware antes de que llegue a tu bandeja. Esa factura falsa de un proveedor desconocido, muchas veces, ni siquiera llega.</li>
 <li><strong>Cifrado de los datos.</strong> La información se cifra mientras viaja y mientras está guardada en los servidores de Microsoft. Ese nivel básico no necesita configuración adicional.</li>
 <li><strong>Infraestructura y actualizaciones.</strong> El mantenimiento de los centros de datos y las actualizaciones del servicio corren a cargo de Microsoft.</li>
 <li><strong>Certificaciones de la infraestructura.</strong> Microsoft mantiene certificaciones de seguridad y cumplimiento de su plataforma. Son una buena base, pero no cubren la configuración de tu empresa. Lo verás en <a href="/web-adqa/recursos/seguridad-y-cumplimiento/">Seguridad y cumplimiento</a>.</li>
@@ -327,7 +327,7 @@
 <h3>Identidades, en Microsoft Entra ID</h3>
 <ul>
 <li><strong>Verificación en dos pasos para todos.</strong> Los tenants recientes suelen tener activados los valores de seguridad predeterminados, que la exigen. En tenants más antiguos, o si se han desactivado, compruébalo. Sin ella, una contraseña filtrada basta para entrar en una cuenta.</li>
-<li><strong>Acceso condicional.</strong> Permite exigir condiciones para iniciar sesión, como un dispositivo gestionado o una ubicación conocida. Supón que alguien prueba la contraseña de tu administrativa de madrugada y desde otro país. Con una directiva bien puesta, no entra aunque la acierte. Está disponible en Business Premium y en los planes Enterprise. Pero las directivas hay que diseñarlas para cada empresa.</li>
+<li><strong>Acceso condicional.</strong> Permite exigir condiciones para iniciar sesión, como un dispositivo gestionado o una ubicación conocida. Supón que alguien prueba la contraseña de tu administrativa desde otro país. Con una directiva bien puesta, no entra aunque la acierte. Está disponible en Business Premium y en los planes Enterprise. Pero las directivas hay que diseñarlas para cada empresa.</li>
 <li><strong>Pocas cuentas de administrador.</strong> Las cuentas con el rol de administrador global deberían ser las mínimas. Conviene, además, separarlas de las de uso diario.</li>
 </ul>
 <h3>Dispositivos, con Intune</h3>
@@ -353,7 +353,7 @@
 <li>Enlaces para compartir abiertos a cualquier persona como opción por defecto.</li>
 <li>Aplicaciones de terceros con acceso a las cuentas corporativas que nadie revisa.</li>
 </ul>
-<p>La mayoría de estos fallos se corrige desde los centros de administración de Microsoft 365 y de Entra ID. Y muchos, con cambios que tu equipo apenas nota.</p>
+<p>La mayoría de estos fallos se corrige desde los centros de administración de Microsoft 365 y de Entra ID. Muchos, además, se arreglan con cambios que tu equipo apenas nota.</p>
 <h2 id="punto-de-partida-y-configuracion-recomendada">Punto de partida y configuración recomendada</h2>
 <div class="table-wrap"><table>
 <thead>
@@ -397,7 +397,7 @@
 </tbody>
 </table></div>
 <h2 id="mas-alla-de-la-configuracion">Más allá de la configuración</h2>
-<p>La papelera de Microsoft 365 guarda lo eliminado solo durante un tiempo. Si hoy necesitas una carpeta que alguien borró hace meses, puede que ya no esté ahí. Pasado ese plazo, recuperar un buzón o una carpeta exige una copia propia. Esa copia cubre el correo, OneDrive, SharePoint y Teams. Y va dentro del plan de <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a> de tu empresa.</p>
+<p>La papelera de Microsoft 365 guarda lo eliminado solo durante un tiempo. Si hoy necesitas una carpeta que alguien borró hace meses, puede que ya no esté ahí. Pasado ese plazo, recuperar un buzón o una carpeta exige una copia propia. Esa copia cubre el correo, OneDrive, SharePoint y Teams, y va dentro del plan de <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a> de tu empresa.</p>
 <p>Para Google Workspace, los ajustes equivalentes los tienes en <a href="/web-adqa/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/">Seguridad en Google Workspace</a>.</p>
 
       </div>
@@ -439,7 +439,7 @@
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
-        <details><summary>¿Qué diferencia hay entre la verificación en dos pasos y el acceso condicional? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto. Por ejemplo, desde un portátil gestionado puede permitir el acceso sin más. Y desde un dispositivo desconocido o una ubicación inusual, pedir una verificación adicional o bloquear el acceso.</p></details>
+        <details><summary>¿Qué diferencia hay entre la verificación en dos pasos y el acceso condicional? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto. Por ejemplo, desde un portátil gestionado puede permitir el acceso sin más. Desde un dispositivo desconocido o una ubicación inusual, en cambio, puede pedir una verificación adicional o bloquear el acceso.</p></details>
         <details><summary>¿Cuántas cuentas de administrador global conviene tener? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Las mínimas imprescindibles, pero más de una, para no depender de una sola persona. Conviene que sean cuentas separadas de las de uso diario y con la verificación reforzada. El resto de tareas se reparte en roles más acotados, como el de administración de usuarios o de Exchange.</p></details>
         <details><summary>¿Se pueden proteger los datos de la empresa en móviles personales? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí. Intune aplica directivas de protección a las aplicaciones de Microsoft 365 del móvil, sin gestionar el dispositivo completo. Puede exigir un PIN o impedir que se copien datos a aplicaciones personales. Si la persona deja la empresa, se borran solo los datos corporativos.</p></details>
       </div>
