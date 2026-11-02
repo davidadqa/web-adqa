@@ -104,7 +104,7 @@
           "name": "¿En qué se diferencia el datacenter de ADQA de contratar servidores en AWS o Azure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Responden a necesidades distintas. AWS y Azure están pensados para escalar con mucha flexibilidad, con autoservicio y facturación por uso. El datacenter de ADQA está pensado para empresas que quieren sus sistemas cerca y controlados, con un coste previsible, un equipo que conoce su infraestructura y la posibilidad de unirlo a la oficina con un enlace privado que no pasa por Internet. Muchas empresas combinan los dos."
+            "text": "Responden a necesidades distintas. AWS y Azure están pensados para escalar con mucha flexibilidad, con autoservicio y facturación por uso. El datacenter de ADQA es para quien quiere sus sistemas cerca y controlados. Ofrece un coste previsible y un equipo que conoce su infraestructura. Además, se puede unir a la oficina con un enlace privado que no pasa por Internet. Muchas empresas combinan los dos."
           }
         },
         {
@@ -112,7 +112,7 @@
           "name": "¿Dónde está el datacenter y quién tiene acceso a mis equipos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es un datacenter propio y de proximidad, en Barcelona. La sala tiene control de acceso, así que solo entra personal autorizado, y está preparada con refrigeración, alimentación redundante y monitorización. Los detalles de la instalación los revisamos contigo cuando estudiamos tu caso."
+            "text": "Es un datacenter propio y de proximidad, en Barcelona. La sala tiene control de acceso: solo entra personal autorizado. Está preparada con refrigeración, alimentación redundante y monitorización. Los detalles de la instalación los revisamos contigo cuando estudiamos tu caso."
           }
         },
         {
@@ -120,7 +120,7 @@
           "name": "¿De quién son los datos y los equipos alojados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tuyos. En housing, los servidores son de tu propiedad y nosotros ponemos la sala, la energía, la conectividad y la supervisión. En servidores virtuales, los datos y las máquinas virtuales siguen siendo tuyos y se pueden exportar, porque no dependen de una plataforma cerrada."
+            "text": "Tuyos. En housing, los servidores son de tu propiedad. Nosotros ponemos la sala, la energía, la conectividad y la supervisión. En servidores virtuales, los datos y las máquinas virtuales también siguen siendo tuyos. Se pueden exportar, porque no dependen de una plataforma cerrada."
           }
         },
         {
@@ -128,7 +128,7 @@
           "name": "¿Podré trabajar igual que ahora desde la oficina y desde fuera?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Con el enlace privado, los servidores del datacenter se integran en tu red como una parte más, así que desde la oficina se accede a ellos de forma directa. Desde fuera, el acceso se hace con una red privada virtual o con SASE, igual que harías para llegar a la oficina."
+            "text": "Sí. Con el enlace privado, los servidores del datacenter son una parte más de tu red. Desde la oficina accedes a ellos de forma directa. Desde fuera, entras con una red privada virtual o con SASE, igual que harías para llegar a la oficina."
           }
         },
         {
@@ -136,7 +136,7 @@
           "name": "¿Cómo funciona técnicamente el enlace privado entre la oficina y el datacenter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es un enlace dedicado entre tu sede y el datacenter, por fibra óptica o por radioenlace según la distancia y los requisitos, que presta Anxanet, el operador de telecomunicaciones de ADQA. Se integra en tu arquitectura como un segmento más de la red corporativa, con sus VLAN, su enrutamiento y sus políticas de seguridad. El tráfico entre la oficina y los servidores no sale a Internet."
+            "text": "Es un enlace dedicado entre tu sede y el datacenter. Lo presta Anxanet, el operador de telecomunicaciones de ADQA. Va por fibra óptica o por radioenlace, según la distancia y los requisitos. Se integra en tu arquitectura como un segmento más de la red corporativa. Tiene sus VLAN, su enrutamiento y sus políticas de seguridad. El tráfico entre la oficina y los servidores no sale a Internet."
           }
         },
         {
@@ -144,7 +144,7 @@
           "name": "¿Housing o servidores virtuales: qué me conviene?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El housing tiene sentido si ya tienes servidores con vida útil por delante, o hardware específico que quieres conservar. Los servidores virtuales encajan cuando toca renovar equipos o cuando la carga cambia, porque procesador, memoria y almacenamiento se ajustan sin comprar hardware. Se pueden combinar: housing para un equipo concreto y servidores virtuales para el resto."
+            "text": "El housing tiene sentido si ya tienes servidores con vida útil por delante. También si tienes hardware específico que quieres conservar. Los servidores virtuales encajan cuando toca renovar equipos o cuando la carga cambia. Procesador, memoria y almacenamiento se ajustan sin comprar hardware. Se pueden combinar: housing para un equipo concreto y servidores virtuales para el resto."
           }
         },
         {
@@ -152,7 +152,7 @@
           "name": "¿Cómo se integra el datacenter con la monitorización y la ciberseguridad?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Los sistemas alojados se supervisan junto con tus sistemas, tu red y tu seguridad: disponibilidad, rendimiento, consumo de recursos y conectividad. Tus políticas de ciberseguridad se extienden al entorno del datacenter, y las incidencias y las actuaciones quedan registradas en la extranet de ticketing de ADQA."
+            "text": "Los sistemas alojados se supervisan junto con tus sistemas, tu red y tu seguridad. Se vigilan la disponibilidad, el rendimiento, el consumo de recursos y la conectividad. Tus políticas de ciberseguridad se extienden al entorno del datacenter. Las incidencias y las actuaciones quedan registradas en la extranet de ticketing de ADQA."
           }
         },
         {
@@ -160,7 +160,7 @@
           "name": "¿Se puede combinar con el cloud público o con edge computing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, y es habitual. Los sistemas críticos y estables pueden estar en el datacenter, los servicios que necesitan crecer a picos en el cloud público y el proceso que requiere respuesta inmediata en la propia planta, con edge computing. El datacenter hace de punto de consolidación y guarda las copias de los demás entornos."
+            "text": "Sí, y es habitual. Los sistemas críticos y estables pueden estar en el datacenter. Los servicios que necesitan crecer a picos, en el cloud público. Y el proceso que requiere respuesta inmediata, en la propia planta, con edge computing. El datacenter hace de punto de consolidación y guarda las copias de los demás entornos."
           }
         }
       ]
@@ -285,7 +285,7 @@
   <div class="wrap hero-inner">
     <span class="eyebrow fade-in" style="--d:.05s">Sistemas y cloud · Datacenter propio</span>
     <h1 id="h-hero" data-words="">Datacenter de proximidad en Barcelona, <span class="accent">unido a tu oficina sin pasar por Internet</span></h1>
-    <p class="lead fade-in" style="--d:.8s">Alojamos tus servidores, o te damos servidores virtuales, en nuestro datacenter propio. Con Anxanet, nuestro operador, lo conectamos a tu oficina por un enlace privado: trabajas con tus sistemas como si estuvieran en tu propia red. Y los gestiona el mismo equipo que conoce tu montaje.</p>
+    <p class="lead fade-in" style="--d:.8s">Alojamos tus servidores, o te damos servidores virtuales, en nuestro datacenter propio. Con Anxanet, nuestro operador, lo conectamos a tu oficina por un enlace privado. Trabajas con tus sistemas como si estuvieran en tu propia red. Y los gestiona el mismo equipo que conoce tu montaje.</p>
     <div class="hero-ctas fade-in" style="--d:.95s">
       <a class="btn btn-primary" href="#contacto">Explícanos qué quieres alojar <svg><use href="#i-arrow"></use></svg></a>
       <a class="btn btn-ghost" href="#enlace">Cómo funciona el enlace</a>
@@ -314,7 +314,7 @@
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-resumen" class="sr">¿Qué es el datacenter de proximidad de ADQA?</h2>
-      <p class="tldr"><strong>ADQA tiene un datacenter propio y de proximidad en Barcelona donde aloja servidores de empresas e instituciones, propios del cliente o virtuales.</strong> Como también es operador de telecomunicaciones, a través de Anxanet, une la oficina y el datacenter con un enlace privado de fibra o radioenlace que no pasa por Internet. Lo gestiona el mismo equipo que mantiene la red y los sistemas del cliente.</p>
+      <p class="tldr"><strong>ADQA tiene un datacenter propio y de proximidad en Barcelona donde aloja servidores de empresas e instituciones.</strong> Como también es operador de telecomunicaciones (Anxanet), une la oficina y el datacenter con un enlace privado. Ese enlace, de fibra o radioenlace, no pasa por Internet. Los servidores pueden ser propios del cliente o virtuales. Todo lo gestiona el mismo equipo que mantiene la red y los sistemas del cliente.</p>
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b>Propio</b><span>datacenter de proximidad en Barcelona</span></div>
@@ -336,7 +336,7 @@
     <div class="aud">
       <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-server"></use></svg></span><h3>Una sala preparada</h3><p>Refrigeración, alimentación redundante, control de acceso y monitorización. Lo que cuesta montar bien en una oficina.</p></div>
       <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-clock"></use></svg></span><h3>La copia, lejos del original</h3><p>Si pasa algo en la oficina, tus copias están en otro edificio, separadas de tu red y probadas.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-net"></use></svg></span><h3>Acceso directo desde tu red</h3><p>Con el enlace privado, tus aplicaciones responden con una latencia baja y estable, sin depender del tráfico de Internet.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-net"></use></svg></span><h3>Acceso directo desde tu red</h3><p>Con el enlace privado, tus aplicaciones responden con una latencia baja y estable. No dependen del tráfico de Internet.</p></div>
       <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-lock"></use></svg></span><h3>Externalizar sin perder el control</h3><p>Sabes dónde están tus datos, quién accede y a quién llamar. Los equipos y los datos siguen siendo tuyos.</p></div>
     </div>
   </div>
@@ -348,7 +348,7 @@
     <div class="sticky rv">
       <span class="eyebrow">Enlace privado oficina-datacenter</span>
       <h2 id="h-enl">¿Cómo llega tu oficina al datacenter sin salir a Internet?</h2>
-      <p class="lead">Con un enlace dedicado de nuestro propio operador. El datacenter pasa a ser una extensión de tu red corporativa, y el tráfico entre tu empresa y tus servidores viaja solo por ese camino.</p>
+      <p class="lead">Con un enlace dedicado de nuestro propio operador. El datacenter pasa a ser una extensión de tu red corporativa. El tráfico entre tu empresa y tus servidores viaja solo por ese camino.</p>
       <div><a class="btn btn-primary" href="#contacto">Estudiemos tu conexión <svg><use href="#i-arrow"></use></svg></a></div>
     </div>
     <div class="stack">
@@ -361,18 +361,18 @@
       <article class="st" style="--n:1">
         <span class="num">02 · UNA PARTE MÁS DE TU RED</span>
         <h3>Tus VLAN, tus reglas</h3>
-        <p>El enlace se integra en tu arquitectura como un segmento más: con tus VLAN, tu enrutamiento y tus políticas de seguridad. Para tus usuarios, el servidor está en la red de siempre.</p>
+        <p>El enlace se integra en tu arquitectura como un segmento más. Lleva tus VLAN, tu enrutamiento y tus políticas de seguridad. Para tus usuarios, el servidor está en la red de siempre.</p>
       </article>
       <article class="st" style="--n:2">
         <span class="num">03 · LO QUE NOTAS</span>
         <h3>Más estable y menos expuesto</h3>
-        <p>Sin saltos por redes públicas, la latencia es baja y, sobre todo, constante. Y el tráfico corporativo no se expone fuera. No sustituye al firewall: es una capa más.</p>
+        <p>Abres una carpeta del servidor y responde como si estuviera en la sala de al lado. Sin saltos por redes públicas, la latencia es baja y, sobre todo, constante. Y el tráfico corporativo no se expone fuera. No sustituye al firewall: es una capa más.</p>
         <ul><li>Latencia baja y predecible</li><li>Tráfico fuera de la red pública</li><li>Un solo responsable de conexión y servidores</li></ul>
       </article>
       <article class="st" style="--n:3">
         <span class="num">04 · SI TRABAJAS FUERA</span>
         <h3>También desde casa o de viaje</h3>
-        <p>Quien no está en la oficina llega a los servidores con una red privada virtual o con SASE, con los mismos permisos de siempre.</p>
+        <p>Quien no está en la oficina llega a los servidores con una red privada virtual o con SASE. Sus permisos son los de siempre.</p>
         <a class="go" href="/web-adqa/telecomunicaciones/">Telecomunicaciones con Anxanet <svg><use href="#i-arrow"></use></svg></a>
       </article>
     </div>
@@ -385,8 +385,8 @@
     <div class="txt rv">
       <span class="eyebrow">Las instalaciones</span>
       <h2 id="h-ins">¿Qué tiene un datacenter que no tiene el armario de tu oficina?</h2>
-      <p>Un servidor necesita frío constante, corriente sin cortes y que solo lo toque quien debe. En una oficina, eso suele depender del aire acondicionado general, de un SAI pensado para otra cosa y de un armario que comparte espacio con el resto.</p>
-      <p>Nuestro datacenter está preparado para eso. Es propio, está en Barcelona y lo gestiona nuestro equipo: cuando hay que intervenir en un servidor, lo hacen técnicos que ya conocen tu montaje.</p>
+      <p>Un servidor necesita frío constante, corriente sin cortes y que solo lo toque quien debe. En una oficina, el frío sale del aire acondicionado general. A lo mejor se apaga el fin de semana. El SAI, la batería que aguanta los cortes de luz, suele estar pensado para otra cosa. Y el armario comparte espacio con las cajas del archivo.</p>
+      <p>Nuestro datacenter está preparado para eso. Es propio, está en Barcelona y lo gestiona nuestro equipo. Cuando hay que intervenir en un servidor, lo hacen técnicos que ya conocen tu montaje.</p>
       <div class="dc-feats">
         <div class="card rv" style="--s:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5 4.9 17.5"></path><path d="m9 4 3 2 3-2M9 20l3-2 3 2"></path></svg></span><h3>Refrigeración</h3><p>Temperatura controlada para los equipos, todo el año.</p></div>
         <div class="card rv" style="--s:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"></path></svg></span><h3>Alimentación redundante</h3><p>Más de un camino de energía para tus servidores.</p></div>
@@ -410,7 +410,7 @@
     <div class="sec-head center rv">
       <span class="eyebrow">Datacenter o cloud público</span>
       <h2 id="h-cuando">¿Cuándo tiene sentido un datacenter de proximidad?</h2>
-      <p class="lead">Responde a necesidades distintas de las del cloud público. Lo útil es saber qué pide cada sistema.</p>
+      <p class="lead">Responde a necesidades distintas de las del cloud público. Tu contabilidad lleva el mismo ritmo todo el año. Una tienda online, en cambio, se dispara en Navidad. Lo útil es saber qué pide cada sistema.</p>
     </div>
     <div class="compare">
       <div class="cmp good rv">
@@ -442,7 +442,7 @@
     <div class="sec-head rv">
       <span class="eyebrow">Servicios de datacenter</span>
       <h2 id="h-serv">¿Qué puedes tener en nuestro datacenter?</h2>
-      <p class="lead">Desde un servidor tuyo en un rack hasta toda tu infraestructura virtualizada, con la conexión y las copias incluidas en la misma conversación.</p>
+      <p class="lead">Desde un servidor tuyo en un rack hasta toda tu infraestructura virtualizada. La conexión y las copias entran en la misma conversación.</p>
     </div>
     <div class="services">
       <div class="card svc rv" style="--s:0">
@@ -454,13 +454,13 @@
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-cloud"></use></svg></span>
         <h3>Servidores virtuales</h3>
-        <p>Procesador, memoria y almacenamiento en nuestra infraestructura, dimensionados para tus aplicaciones y ampliables cuando creces.</p>
+        <p>Procesador, memoria y almacenamiento en nuestra infraestructura, a la medida de tus aplicaciones. Se amplían cuando creces.</p>
         <ul class="tags"><li>Escalables</li><li>Sin comprar hardware</li></ul>
       </div>
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-clock"></use></svg></span>
         <h3>Backup remoto</h3>
-        <p>Copias con Veeam fuera de tu oficina, con la frecuencia y el tiempo de recuperación que pide cada sistema, y restauraciones de prueba.</p>
+        <p>Copias con Veeam fuera de tu oficina. Cada sistema tiene la frecuencia y el tiempo de recuperación que pide. Hacemos restauraciones de prueba.</p>
         <ul class="tags"><li>Veeam</li><li>3-2-1</li><li>Pruebas</li></ul>
       </div>
       <div class="card svc rv" style="--s:0">
@@ -472,7 +472,7 @@
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-grid"></use></svg></span>
         <h3>Réplica de servidores locales</h3>
-        <p>Si tus servidores tienen que seguir en planta, los replicamos en el datacenter para recuperar el servicio si falla el local.</p>
+        <p>Si tus servidores tienen que seguir en planta, los replicamos en el datacenter. Si falla el local, el servicio se recupera desde allí.</p>
         <ul class="tags"><li>Réplica</li><li>Continuidad</li></ul>
       </div>
       <div class="card svc rv" style="--s:2">
@@ -486,7 +486,7 @@
     <h3 class="sub-head rv">Servicios relacionados</h3>
     <div class="res">
       <a class="card rv" style="--s:0" href="/web-adqa/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Servidores, copias y migraciones</h4><p>El diseño de tu arquitectura, la virtualización y las copias de seguridad, estén donde estén tus servidores.</p></a>
-      <a class="card rv" style="--s:1" href="/web-adqa/telecomunicaciones/"><span class="cat">Telecomunicaciones</span><h4>Conectividad con operador propio</h4><p>Conexiones a Internet de hasta 10&nbsp;Gb, fibra y radioenlaces con Anxanet, el mismo operador que despliega tu enlace privado.</p></a>
+      <a class="card rv" style="--s:1" href="/web-adqa/telecomunicaciones/"><span class="cat">Telecomunicaciones</span><h4>Conectividad con operador propio</h4><p>Conexiones a Internet de hasta 10&nbsp;Gb, fibra y radioenlaces con Anxanet. Es el mismo operador que despliega tu enlace privado.</p></a>
       <a class="card rv" style="--s:2" href="/web-adqa/ciberseguridad/"><span class="cat">Ciberseguridad</span><h4>Tus políticas, también en el datacenter</h4><p>Firewall, segmentación y protección de servidores aplicadas por igual en tu oficina y en el datacenter.</p></a>
     </div>
   </div>
@@ -498,7 +498,7 @@
     <div class="txt rv">
       <span class="eyebrow">Cómo trabajamos</span>
       <h2 id="h-met">Del armario de la oficina al datacenter, paso a paso</h2>
-      <p>Un traslado al datacenter empieza por entender qué tienes y termina cuando tu equipo trabaja igual o mejor que antes. Entre medio, decidimos contigo qué alojar, cómo conectarlo y cómo protegerlo.</p>
+      <p>Un traslado al datacenter empieza por entender qué tienes. Termina cuando el armario de la oficina se queda vacío y tu equipo trabaja igual o mejor que antes. Entre medio, decidimos contigo qué alojar, cómo conectarlo y cómo protegerlo.</p>
       <p>Cuando algo necesita atención, hablas con técnicos que conocen tu infraestructura. Las incidencias y las actuaciones quedan en nuestra extranet de ticketing, donde las sigues en tiempo real.</p>
       <p><a class="txt-link" href="/web-adqa/sistemas-cloud/#migracion">Cómo planificamos una <span class="nw">migración<svg aria-hidden="true"><use href="#i-arrow"></use></svg></span></a></p>
     </div>
@@ -538,9 +538,9 @@
       <p class="lead">Empresas que alojan con nosotros sus aplicaciones corporativas y nos confían también la red y las telecomunicaciones.</p>
     </div>
     <div class="proj-grid">
-      <article class="proj rv" style="--s:0"><figure><img src="/web-adqa/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom · Cloud</span><h3>Granier</h3><p>Alojamos en nuestro cloud diferentes aplicaciones corporativas de Granier. También llevamos las redes de sus oficinas, fábricas y tiendas y la centralita virtual que interconecta sus sedes.</p><div class="hl"><svg><use href="#i-cloud"></use></svg>Aplicaciones corporativas en nuestro cloud</div></div></article>
+      <article class="proj rv" style="--s:0"><figure><img src="/web-adqa/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom · Cloud</span><h3>Granier</h3><p>Alojamos en nuestro cloud diferentes aplicaciones corporativas de Granier. También llevamos las redes de sus oficinas, fábricas y tiendas, y la centralita virtual entre sus sedes.</p><div class="hl"><svg><use href="#i-cloud"></use></svg>Aplicaciones corporativas en nuestro cloud</div></div></article>
       <article class="proj rv" style="--s:1"><figure><img src="/web-adqa/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy" width="800" height="437"></figure><div class="body"><span class="kind">Software a medida · Cloud · Networking</span><h3>HITECSA</h3><p>Desde hace años nos confía su computación en la nube: alojamos sus aplicaciones corporativas en nuestro cloud. También desarrollamos sus programas de gestión y control a medida.</p><div class="hl"><svg><use href="#i-cloud"></use></svg>Infraestructura, telecomunicaciones y cloud</div></div></article>
-      <article class="proj rv" style="--s:2"><figure><img src="/web-adqa/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Instalaciones · Cloud · Ciberseguridad</span><h3>PIMEC</h3><p>Alojamiento cloud de aplicaciones corporativas, junto con la creación de un nuevo CPD en su sede, la interconexión de sedes y la gestión de networking y seguridad.</p><div class="hl"><svg><use href="#i-net"></use></svg>Cloud y nuevo CPD en su sede</div></div></article>
+      <article class="proj rv" style="--s:2"><figure><img src="/web-adqa/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Instalaciones · Cloud · Ciberseguridad</span><h3>PIMEC</h3><p>Alojamiento cloud de aplicaciones corporativas. Creación de un nuevo CPD (centro de proceso de datos) en su sede. También la interconexión de sedes y la gestión de networking y seguridad.</p><div class="hl"><svg><use href="#i-net"></use></svg>Cloud y nuevo CPD en su sede</div></div></article>
     </div>
 
     <h3 class="sub-head rv">Más casos, con resultados medibles</h3>
@@ -553,8 +553,8 @@
   </div>
   <h3>Una planta que dejó de parar por los servidores</h3>
   <dl class="ca-steps">
-    <div><dt>El reto</dt><dd>Una empresa industrial tenía los servidores en un armario sin refrigeración adecuada, sin SAI y sin monitorización, y las copias en el mismo espacio. Dos incidencias en dos años habían parado la producción durante horas.</dd></div>
-    <div><dt>Lo que hicimos</dt><dd>Traslado de los servidores a nuestro datacenter en housing, enlace privado directo entre la nave y el datacenter y copias remotas automatizadas con pruebas periódicas de restauración. Los sistemas de producción van más rápido que antes porque el enlace es directo.</dd></div>
+    <div><dt>El reto</dt><dd>Una empresa industrial tenía los servidores en un armario sin refrigeración adecuada, sin SAI y sin monitorización. Las copias estaban en el mismo espacio. Dos incidencias en dos años habían parado la producción durante horas.</dd></div>
+    <div><dt>Lo que hicimos</dt><dd>Traslado de los servidores a nuestro datacenter en housing. Enlace privado directo entre la nave y el datacenter. Copias remotas automatizadas, con pruebas periódicas de restauración. Los sistemas de producción van más rápido que antes porque el enlace es directo.</dd></div>
   </dl>
   <ul class="ca-results"><li><svg aria-hidden="true"><use href="#i-check"></use></svg>Acceso a producción sin pasar por Internet</li></ul>
 </article>
@@ -568,7 +568,7 @@
   <h3>Copias que ahora se sabe que funcionan</h3>
   <dl class="ca-steps">
     <div><dt>El reto</dt><dd>Una empresa de servicios hacía copias diarias, pero todas en la misma oficina que los servidores. Tras un ataque de ransomware, las copias también estaban afectadas y la recuperación fue parcial.</dd></div>
-    <div><dt>Lo que hicimos</dt><dd>Estrategia de backup remoto con réplica en nuestro datacenter, copias inmutables aisladas de la red del cliente y pruebas de restauración documentadas cada mes.</dd></div>
+    <div><dt>Lo que hicimos</dt><dd>Estrategia de backup remoto con réplica en nuestro datacenter. Copias inmutables, aisladas de la red del cliente. Pruebas de restauración documentadas cada mes.</dd></div>
   </dl>
   <ul class="ca-results"><li><svg aria-hidden="true"><use href="#i-check"></use></svg>Procedimiento de restauración documentado y probado</li></ul>
 </article>
@@ -588,17 +588,17 @@
     <div class="faq">
       <div class="rv">
         <h3>Para el manager</h3>
-        <details open=""><summary>¿En qué se diferencia el datacenter de ADQA de contratar servidores en AWS o Azure? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Responden a necesidades distintas. AWS y Azure están pensados para escalar con mucha flexibilidad, con autoservicio y facturación por uso. El datacenter de ADQA está pensado para empresas que quieren sus sistemas cerca y controlados, con un coste previsible, un equipo que conoce su infraestructura y la posibilidad de unirlo a la oficina con un enlace privado que no pasa por Internet. Muchas empresas combinan los dos.</p></details>
-        <details><summary>¿Dónde está el datacenter y quién tiene acceso a mis equipos? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Es un datacenter propio y de proximidad, en Barcelona. La sala tiene control de acceso, así que solo entra personal autorizado, y está preparada con refrigeración, alimentación redundante y monitorización. Los detalles de la instalación los revisamos contigo cuando estudiamos tu caso.</p></details>
-        <details><summary>¿De quién son los datos y los equipos alojados? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Tuyos. En housing, los servidores son de tu propiedad y nosotros ponemos la sala, la energía, la conectividad y la supervisión. En servidores virtuales, los datos y las máquinas virtuales siguen siendo tuyos y se pueden exportar, porque no dependen de una plataforma cerrada.</p></details>
-        <details><summary>¿Podré trabajar igual que ahora desde la oficina y desde fuera? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí. Con el enlace privado, los servidores del datacenter se integran en tu red como una parte más, así que desde la oficina se accede a ellos de forma directa. Desde fuera, el acceso se hace con una red privada virtual o con SASE, igual que harías para llegar a la oficina.</p></details>
+        <details open=""><summary>¿En qué se diferencia el datacenter de ADQA de contratar servidores en AWS o Azure? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Responden a necesidades distintas. AWS y Azure están pensados para escalar con mucha flexibilidad, con autoservicio y facturación por uso. El datacenter de ADQA es para quien quiere sus sistemas cerca y controlados. Ofrece un coste previsible y un equipo que conoce su infraestructura. Además, se puede unir a la oficina con un enlace privado que no pasa por Internet. Muchas empresas combinan los dos.</p></details>
+        <details><summary>¿Dónde está el datacenter y quién tiene acceso a mis equipos? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Es un datacenter propio y de proximidad, en Barcelona. La sala tiene control de acceso: solo entra personal autorizado. Está preparada con refrigeración, alimentación redundante y monitorización. Los detalles de la instalación los revisamos contigo cuando estudiamos tu caso.</p></details>
+        <details><summary>¿De quién son los datos y los equipos alojados? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Tuyos. En housing, los servidores son de tu propiedad. Nosotros ponemos la sala, la energía, la conectividad y la supervisión. En servidores virtuales, los datos y las máquinas virtuales también siguen siendo tuyos. Se pueden exportar, porque no dependen de una plataforma cerrada.</p></details>
+        <details><summary>¿Podré trabajar igual que ahora desde la oficina y desde fuera? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí. Con el enlace privado, los servidores del datacenter son una parte más de tu red. Desde la oficina accedes a ellos de forma directa. Desde fuera, entras con una red privada virtual o con SASE, igual que harías para llegar a la oficina.</p></details>
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
-        <details><summary>¿Cómo funciona técnicamente el enlace privado entre la oficina y el datacenter? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Es un enlace dedicado entre tu sede y el datacenter, por fibra óptica o por radioenlace según la distancia y los requisitos, que presta Anxanet, el operador de telecomunicaciones de ADQA. Se integra en tu arquitectura como un segmento más de la red corporativa, con sus VLAN, su enrutamiento y sus políticas de seguridad. El tráfico entre la oficina y los servidores no sale a Internet.</p></details>
-        <details><summary>¿Housing o servidores virtuales: qué me conviene? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>El housing tiene sentido si ya tienes servidores con vida útil por delante, o hardware específico que quieres conservar. Los servidores virtuales encajan cuando toca renovar equipos o cuando la carga cambia, porque procesador, memoria y almacenamiento se ajustan sin comprar hardware. Se pueden combinar: housing para un equipo concreto y servidores virtuales para el resto.</p></details>
-        <details><summary>¿Cómo se integra el datacenter con la monitorización y la ciberseguridad? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Los sistemas alojados se supervisan junto con tus sistemas, tu red y tu seguridad: disponibilidad, rendimiento, consumo de recursos y conectividad. Tus políticas de ciberseguridad se extienden al entorno del datacenter, y las incidencias y las actuaciones quedan registradas en la extranet de ticketing de ADQA.</p></details>
-        <details><summary>¿Se puede combinar con el cloud público o con edge computing? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí, y es habitual. Los sistemas críticos y estables pueden estar en el datacenter, los servicios que necesitan crecer a picos en el cloud público y el proceso que requiere respuesta inmediata en la propia planta, con edge computing. El datacenter hace de punto de consolidación y guarda las copias de los demás entornos.</p></details>
+        <details><summary>¿Cómo funciona técnicamente el enlace privado entre la oficina y el datacenter? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Es un enlace dedicado entre tu sede y el datacenter. Lo presta Anxanet, el operador de telecomunicaciones de ADQA. Va por fibra óptica o por radioenlace, según la distancia y los requisitos. Se integra en tu arquitectura como un segmento más de la red corporativa. Tiene sus VLAN, su enrutamiento y sus políticas de seguridad. El tráfico entre la oficina y los servidores no sale a Internet.</p></details>
+        <details><summary>¿Housing o servidores virtuales: qué me conviene? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>El housing tiene sentido si ya tienes servidores con vida útil por delante. También si tienes hardware específico que quieres conservar. Los servidores virtuales encajan cuando toca renovar equipos o cuando la carga cambia. Procesador, memoria y almacenamiento se ajustan sin comprar hardware. Se pueden combinar: housing para un equipo concreto y servidores virtuales para el resto.</p></details>
+        <details><summary>¿Cómo se integra el datacenter con la monitorización y la ciberseguridad? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Los sistemas alojados se supervisan junto con tus sistemas, tu red y tu seguridad. Se vigilan la disponibilidad, el rendimiento, el consumo de recursos y la conectividad. Tus políticas de ciberseguridad se extienden al entorno del datacenter. Las incidencias y las actuaciones quedan registradas en la extranet de ticketing de ADQA.</p></details>
+        <details><summary>¿Se puede combinar con el cloud público o con edge computing? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí, y es habitual. Los sistemas críticos y estables pueden estar en el datacenter. Los servicios que necesitan crecer a picos, en el cloud público. Y el proceso que requiere respuesta inmediata, en la propia planta, con edge computing. El datacenter hace de punto de consolidación y guarda las copias de los demás entornos.</p></details>
       </div>
     </div>
   </div>
@@ -629,7 +629,7 @@
     <div class="contact-info rv">
       <span class="eyebrow eyebrow-on-pink">¿Podemos ayudarte?</span>
       <h2 id="h-contacto">¿Qué te gustaría tener más cerca?</h2>
-      <p>Dinos qué servidores tienes, dónde están ahora y desde qué sedes se usan. Te proponemos qué alojar, cómo conectarlo con tu oficina y cómo protegerlo, sin compromiso y con un plan que puedas comparar.</p>
+      <p>Dinos qué servidores tienes, dónde están ahora y desde qué sedes se usan. Te proponemos qué alojar, cómo conectarlo con tu oficina y cómo protegerlo. Sin compromiso y con un plan que puedas comparar.</p>
       <div class="ways">
         <a href="tel:+34938147380"><svg><use href="#i-phone"></use></svg>+34 938 147 380</a>
         <a href="mailto:info@adqa.com"><svg><use href="#i-mail"></use></svg>info@adqa.com</a>

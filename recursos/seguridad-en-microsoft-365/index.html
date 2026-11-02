@@ -76,7 +76,7 @@
       },
       "articleSection": "Google Workspace y Microsoft 365",
       "keywords": "Microsoft 365, Seguridad",
-      "wordCount": 718,
+      "wordCount": 830,
       "image": "https://adqa.com/assets/og-adqa.jpg",
       "inLanguage": "es-ES"
     },
@@ -119,7 +119,7 @@
           "name": "¿Microsoft 365 es seguro tal como viene configurado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ofrece una base sólida: filtrado del correo, cifrado e infraestructura mantenida por Microsoft. Pero varias protecciones importantes, como el acceso condicional, la gestión de dispositivos o los límites al uso compartido, hay que configurarlas según las necesidades de cada empresa."
+            "text": "Ofrece una base sólida: filtrado del correo, cifrado e infraestructura mantenida por Microsoft. Pero varias protecciones importantes hay que configurarlas según las necesidades de tu empresa. Por ejemplo, el acceso condicional, la gestión de dispositivos o los límites al uso compartido."
           }
         },
         {
@@ -127,7 +127,7 @@
           "name": "¿Se pueden borrar los datos de la empresa de un portátil o un móvil perdido?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, si el dispositivo está gestionado con Intune. Desde la consola se puede bloquear o borrar a distancia la información corporativa. Por eso conviene configurar la gestión de dispositivos antes de entregar los equipos, no cuando ya hace falta."
+            "text": "Sí, si el dispositivo está gestionado con Intune. Desde la consola puedes bloquear o borrar a distancia la información corporativa. Por eso conviene configurar la gestión de dispositivos antes de entregar los equipos, no cuando ya hace falta."
           }
         },
         {
@@ -135,7 +135,7 @@
           "name": "¿Cómo sabemos si nuestra configuración de Microsoft 365 está bien planteada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Revisando los puntos que más influyen: quién tiene la verificación en dos pasos, cuántas cuentas son de administrador, qué directivas de acceso condicional hay, qué equipos están gestionados, cómo se comparte con personas de fuera y qué aplicaciones tienen acceso. Conviene repetir la revisión cuando la empresa crece o cambia de forma de trabajar."
+            "text": "Revisando los puntos que más influyen. Mira quién tiene la verificación en dos pasos y cuántas cuentas son de administrador. Comprueba qué directivas de acceso condicional hay y qué equipos están gestionados. Y repasa cómo se comparte con personas de fuera y qué aplicaciones tienen acceso. Repite la revisión cuando tu empresa crezca o cambie de forma de trabajar."
           }
         },
         {
@@ -143,7 +143,7 @@
           "name": "¿Qué diferencia hay entre la verificación en dos pasos y el acceso condicional?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto: por ejemplo, permitir el acceso sin más desde un portátil gestionado y pedir una verificación adicional, o bloquearlo, desde un dispositivo desconocido o una ubicación inusual."
+            "text": "La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto. Por ejemplo, desde un portátil gestionado puede permitir el acceso sin más. Y desde un dispositivo desconocido o una ubicación inusual, pedir una verificación adicional o bloquear el acceso."
           }
         },
         {
@@ -151,7 +151,7 @@
           "name": "¿Cuántas cuentas de administrador global conviene tener?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Las mínimas imprescindibles. Conviene que haya más de una, para no depender de una sola persona, que sean cuentas separadas de las de uso diario y que tengan la verificación reforzada. El resto de tareas se reparten con roles más acotados, como el de administración de usuarios o de Exchange."
+            "text": "Las mínimas imprescindibles, pero más de una, para no depender de una sola persona. Conviene que sean cuentas separadas de las de uso diario y con la verificación reforzada. El resto de tareas se reparte en roles más acotados, como el de administración de usuarios o de Exchange."
           }
         },
         {
@@ -159,7 +159,7 @@
           "name": "¿Se pueden proteger los datos de la empresa en móviles personales?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Intune permite aplicar directivas de protección a las aplicaciones de Microsoft 365 del móvil, como exigir un PIN o impedir copiar datos a aplicaciones personales, sin gestionar el dispositivo completo. Si la persona deja la empresa, se borran solo los datos corporativos."
+            "text": "Sí. Intune aplica directivas de protección a las aplicaciones de Microsoft 365 del móvil, sin gestionar el dispositivo completo. Puede exigir un PIN o impedir que se copien datos a aplicaciones personales. Si la persona deja la empresa, se borran solo los datos corporativos."
           }
         }
       ]
@@ -311,48 +311,49 @@
 
       <div class="art-summary card">
         <span class="eyebrow">En resumen</span>
-        <p class="tldr">Microsoft 365 incluye de serie filtrado de spam y phishing en el correo, cifrado de los datos en tránsito y en reposo, e infraestructura mantenida por Microsoft. La protección efectiva depende de la configuración de cada empresa: verificación en dos pasos para todos en Microsoft Entra ID, acceso condicional, gestión de dispositivos con Intune, pocas cuentas de administrador y límites al uso compartido externo.</p>
+        <p class="tldr">Microsoft 365 incluye de serie el filtrado de spam y phishing en el correo. También cifra los datos en tránsito y en reposo, y la infraestructura la mantiene Microsoft. La protección efectiva depende de la configuración de cada empresa. Cuentan la verificación en dos pasos para todos en Microsoft Entra ID y el acceso condicional. También la gestión de dispositivos con Intune, pocos administradores y límites al uso compartido externo.</p>
       </div>
       <div class="prose doc">
-<p>Microsoft dedica muchos recursos a la seguridad de su infraestructura, y cualquier empresa que usa Microsoft 365 se beneficia de ello. Pero conviene separar dos cosas desde el principio. La seguridad de la plataforma depende de Microsoft. La de cómo se configura y se usa depende de la empresa, o de quien la gestiona.</p>
-<p>La primera viene de serie. La segunda es la que marca la diferencia en el día a día.</p>
+<p>Microsoft dedica muchos recursos a la seguridad de su infraestructura, y tu empresa se beneficia de ello. Pero conviene separar dos cosas desde el principio.</p>
+<p>La seguridad de la plataforma depende de Microsoft. La de tu tenant (el espacio de tu empresa en Microsoft 365) es otra historia. Depende de cómo se configura y se usa, y eso lo decides tú o quien te lo gestiona. La primera viene de serie. La segunda es la que marca la diferencia en el día a día.</p>
 <h2 id="lo-que-microsoft-365-protege-de-serie">Lo que Microsoft 365 protege de serie</h2>
 <ul>
-<li><strong>Filtrado del correo.</strong> Exchange Online detiene de forma automática buena parte del spam, el phishing y el malware antes de que llegue a la bandeja de entrada.</li>
-<li><strong>Cifrado de los datos.</strong> La información se cifra mientras viaja y mientras está almacenada en los servidores de Microsoft, sin configuración adicional para ese nivel básico.</li>
+<li><strong>Filtrado del correo.</strong> Exchange Online detiene de forma automática buena parte del spam, el phishing y el malware. Lo hace antes de que llegue a tu bandeja. Esa factura falsa de un proveedor desconocido, muchas veces, ni siquiera llega.</li>
+<li><strong>Cifrado de los datos.</strong> La información se cifra mientras viaja y mientras está guardada en los servidores de Microsoft. Ese nivel básico no necesita configuración adicional.</li>
 <li><strong>Infraestructura y actualizaciones.</strong> El mantenimiento de los centros de datos y las actualizaciones del servicio corren a cargo de Microsoft.</li>
-<li><strong>Certificaciones de la infraestructura.</strong> Microsoft mantiene certificaciones de seguridad y cumplimiento de su plataforma. Son una buena base, pero no cubren la configuración de cada empresa, como se explica en <a href="/web-adqa/recursos/seguridad-y-cumplimiento/">Seguridad y cumplimiento</a>.</li>
+<li><strong>Certificaciones de la infraestructura.</strong> Microsoft mantiene certificaciones de seguridad y cumplimiento de su plataforma. Son una buena base, pero no cubren la configuración de tu empresa. Lo verás en <a href="/web-adqa/recursos/seguridad-y-cumplimiento/">Seguridad y cumplimiento</a>.</li>
 </ul>
 <h2 id="lo-que-depende-de-la-configuracion-de-tu-empresa">Lo que depende de la configuración de tu empresa</h2>
 <h3>Identidades, en Microsoft Entra ID</h3>
 <ul>
-<li><strong>Verificación en dos pasos para todos.</strong> Los tenants recientes suelen tener activados los valores de seguridad predeterminados, que la exigen. En tenants más antiguos, o si se han desactivado, hay que comprobarlo: sin ella, una contraseña filtrada basta para entrar en una cuenta.</li>
-<li><strong>Acceso condicional.</strong> Permite exigir condiciones para iniciar sesión, como un dispositivo gestionado o una ubicación conocida. Está disponible en Business Premium y en los planes Enterprise, pero las directivas hay que diseñarlas para cada empresa.</li>
-<li><strong>Pocas cuentas de administrador.</strong> Las cuentas con el rol de administrador global deberían ser las mínimas y estar separadas de las de uso diario.</li>
+<li><strong>Verificación en dos pasos para todos.</strong> Los tenants recientes suelen tener activados los valores de seguridad predeterminados, que la exigen. En tenants más antiguos, o si se han desactivado, compruébalo. Sin ella, una contraseña filtrada basta para entrar en una cuenta.</li>
+<li><strong>Acceso condicional.</strong> Permite exigir condiciones para iniciar sesión, como un dispositivo gestionado o una ubicación conocida. Supón que alguien prueba la contraseña de tu administrativa de madrugada y desde otro país. Con una directiva bien puesta, no entra aunque la acierte. Está disponible en Business Premium y en los planes Enterprise. Pero las directivas hay que diseñarlas para cada empresa.</li>
+<li><strong>Pocas cuentas de administrador.</strong> Las cuentas con el rol de administrador global deberían ser las mínimas. Conviene, además, separarlas de las de uso diario.</li>
 </ul>
 <h3>Dispositivos, con Intune</h3>
 <ul>
-<li><strong>Políticas para portátiles y móviles de empresa.</strong> Cifrado, bloqueo de pantalla y borrado a distancia si un equipo se pierde.</li>
+<li><strong>Políticas para portátiles y móviles de empresa.</strong> Cifrado, bloqueo de pantalla y borrado a distancia si un equipo se pierde. Si alguien se deja el portátil en el tren, borras desde la consola los datos de la empresa.</li>
 <li><strong>Protección de los datos en móviles personales.</strong> Se aplica solo a las aplicaciones de Microsoft 365, sin gestionar el teléfono entero.</li>
 </ul>
-<p>Qué planes incluyen estas herramientas se repasa en <a href="/web-adqa/recursos/que-incluye-microsoft-365-para-empresas/">Qué incluye Microsoft 365 para empresas</a>.</p>
+<p>Qué planes incluyen estas herramientas lo tienes en <a href="/web-adqa/recursos/que-incluye-microsoft-365-para-empresas/">Qué incluye Microsoft 365 para empresas</a>.</p>
 <h3>Datos y correo</h3>
 <ul>
-<li><strong>Uso compartido externo.</strong> OneDrive, SharePoint y Teams permiten compartir con personas de fuera e invitar a usuarios externos. Conviene decidir hasta dónde y dejarlo configurado a nivel de organización.</li>
+<li><strong>Uso compartido externo.</strong> OneDrive, SharePoint y Teams permiten compartir con personas de fuera e invitar a usuarios externos. Decide hasta dónde y déjalo configurado para toda la organización.</li>
 <li><strong>Protección frente a amenazas.</strong> Microsoft Defender, incluido en Business Premium, revisa los adjuntos y los enlaces del correo y protege los equipos.</li>
-<li><strong>Autenticación del correo del dominio</strong> (SPF, DKIM y DMARC), para que nadie pueda enviar correos haciéndose pasar por la empresa con facilidad.</li>
-<li><strong>Aplicaciones de terceros.</strong> Revisar qué aplicaciones tienen permisos sobre las cuentas y quién puede autorizar nuevas.</li>
+<li><strong>Autenticación del correo del dominio</strong> (SPF, DKIM y DMARC). Son registros de tu dominio que demuestran que un correo sale de verdad de tu empresa. Así nadie puede hacerse pasar por ti con facilidad.</li>
+<li><strong>Aplicaciones de terceros.</strong> Revisa qué aplicaciones tienen permisos sobre las cuentas y quién puede autorizar nuevas.</li>
 </ul>
 <h2 id="errores-de-configuracion-habituales">Errores de configuración habituales</h2>
+<p>Abre la lista de administradores globales. Si no reconoces todos los nombres, ya sabes por dónde empezar. Estos son los fallos que más se repiten:</p>
 <ul>
 <li>Verificación en dos pasos activada solo para algunos usuarios.</li>
 <li>Demasiadas cuentas con el rol de administrador global.</li>
-<li>Ninguna directiva de acceso condicional, de modo que se puede iniciar sesión desde cualquier dispositivo o ubicación sin condiciones.</li>
+<li>Ninguna directiva de acceso condicional: se entra desde cualquier dispositivo o ubicación, sin condiciones.</li>
 <li>Portátiles y móviles sin gestionar, sin posibilidad de borrado a distancia.</li>
 <li>Enlaces para compartir abiertos a cualquier persona como opción por defecto.</li>
 <li>Aplicaciones de terceros con acceso a las cuentas corporativas que nadie revisa.</li>
 </ul>
-<p>La buena noticia es que la mayoría se corrigen desde los centros de administración de Microsoft 365 y de Entra ID, y muchos con cambios que el equipo apenas nota.</p>
+<p>La mayoría de estos fallos se corrige desde los centros de administración de Microsoft 365 y de Entra ID. Y muchos, con cambios que tu equipo apenas nota.</p>
 <h2 id="punto-de-partida-y-configuracion-recomendada">Punto de partida y configuración recomendada</h2>
 <div class="table-wrap"><table>
 <thead>
@@ -396,8 +397,8 @@
 </tbody>
 </table></div>
 <h2 id="mas-alla-de-la-configuracion">Más allá de la configuración</h2>
-<p>La papelera de Microsoft 365 guarda lo eliminado solo durante un tiempo. Para recuperar un buzón o una carpeta pasado ese plazo hace falta una copia propia del correo, OneDrive, SharePoint y Teams, dentro del plan de <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a> de la empresa.</p>
-<p>Para Google Workspace, los ajustes equivalentes se explican en <a href="/web-adqa/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/">Seguridad en Google Workspace</a>.</p>
+<p>La papelera de Microsoft 365 guarda lo eliminado solo durante un tiempo. Si hoy necesitas una carpeta que alguien borró hace meses, puede que ya no esté ahí. Pasado ese plazo, recuperar un buzón o una carpeta exige una copia propia. Esa copia cubre el correo, OneDrive, SharePoint y Teams. Y va dentro del plan de <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a> de tu empresa.</p>
+<p>Para Google Workspace, los ajustes equivalentes los tienes en <a href="/web-adqa/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/">Seguridad en Google Workspace</a>.</p>
 
       </div>
       <ul class="art-tags" aria-label="Etiquetas"><li>Microsoft 365</li><li>Seguridad</li>
@@ -432,15 +433,15 @@
     <div class="faq">
       <div class="rv">
         <h3>Para el manager</h3>
-        <details open=""><summary>¿Microsoft 365 es seguro tal como viene configurado? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Ofrece una base sólida: filtrado del correo, cifrado e infraestructura mantenida por Microsoft. Pero varias protecciones importantes, como el acceso condicional, la gestión de dispositivos o los límites al uso compartido, hay que configurarlas según las necesidades de cada empresa.</p></details>
-        <details><summary>¿Se pueden borrar los datos de la empresa de un portátil o un móvil perdido? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí, si el dispositivo está gestionado con Intune. Desde la consola se puede bloquear o borrar a distancia la información corporativa. Por eso conviene configurar la gestión de dispositivos antes de entregar los equipos, no cuando ya hace falta.</p></details>
-        <details><summary>¿Cómo sabemos si nuestra configuración de Microsoft 365 está bien planteada? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Revisando los puntos que más influyen: quién tiene la verificación en dos pasos, cuántas cuentas son de administrador, qué directivas de acceso condicional hay, qué equipos están gestionados, cómo se comparte con personas de fuera y qué aplicaciones tienen acceso. Conviene repetir la revisión cuando la empresa crece o cambia de forma de trabajar.</p></details>
+        <details open=""><summary>¿Microsoft 365 es seguro tal como viene configurado? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Ofrece una base sólida: filtrado del correo, cifrado e infraestructura mantenida por Microsoft. Pero varias protecciones importantes hay que configurarlas según las necesidades de tu empresa. Por ejemplo, el acceso condicional, la gestión de dispositivos o los límites al uso compartido.</p></details>
+        <details><summary>¿Se pueden borrar los datos de la empresa de un portátil o un móvil perdido? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí, si el dispositivo está gestionado con Intune. Desde la consola puedes bloquear o borrar a distancia la información corporativa. Por eso conviene configurar la gestión de dispositivos antes de entregar los equipos, no cuando ya hace falta.</p></details>
+        <details><summary>¿Cómo sabemos si nuestra configuración de Microsoft 365 está bien planteada? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Revisando los puntos que más influyen. Mira quién tiene la verificación en dos pasos y cuántas cuentas son de administrador. Comprueba qué directivas de acceso condicional hay y qué equipos están gestionados. Y repasa cómo se comparte con personas de fuera y qué aplicaciones tienen acceso. Repite la revisión cuando tu empresa crezca o cambie de forma de trabajar.</p></details>
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
-        <details><summary>¿Qué diferencia hay entre la verificación en dos pasos y el acceso condicional? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto: por ejemplo, permitir el acceso sin más desde un portátil gestionado y pedir una verificación adicional, o bloquearlo, desde un dispositivo desconocido o una ubicación inusual.</p></details>
-        <details><summary>¿Cuántas cuentas de administrador global conviene tener? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Las mínimas imprescindibles. Conviene que haya más de una, para no depender de una sola persona, que sean cuentas separadas de las de uso diario y que tengan la verificación reforzada. El resto de tareas se reparten con roles más acotados, como el de administración de usuarios o de Exchange.</p></details>
-        <details><summary>¿Se pueden proteger los datos de la empresa en móviles personales? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí. Intune permite aplicar directivas de protección a las aplicaciones de Microsoft 365 del móvil, como exigir un PIN o impedir copiar datos a aplicaciones personales, sin gestionar el dispositivo completo. Si la persona deja la empresa, se borran solo los datos corporativos.</p></details>
+        <details><summary>¿Qué diferencia hay entre la verificación en dos pasos y el acceso condicional? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>La verificación en dos pasos pide un segundo factor al iniciar sesión. El acceso condicional de Microsoft Entra ID decide qué exigir según el contexto. Por ejemplo, desde un portátil gestionado puede permitir el acceso sin más. Y desde un dispositivo desconocido o una ubicación inusual, pedir una verificación adicional o bloquear el acceso.</p></details>
+        <details><summary>¿Cuántas cuentas de administrador global conviene tener? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Las mínimas imprescindibles, pero más de una, para no depender de una sola persona. Conviene que sean cuentas separadas de las de uso diario y con la verificación reforzada. El resto de tareas se reparte en roles más acotados, como el de administración de usuarios o de Exchange.</p></details>
+        <details><summary>¿Se pueden proteger los datos de la empresa en móviles personales? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Sí. Intune aplica directivas de protección a las aplicaciones de Microsoft 365 del móvil, sin gestionar el dispositivo completo. Puede exigir un PIN o impedir que se copien datos a aplicaciones personales. Si la persona deja la empresa, se borran solo los datos corporativos.</p></details>
       </div>
     </div>
   </div>
@@ -479,7 +480,7 @@
     <div class="contact-info rv">
       <span class="eyebrow eyebrow-on-pink">¿Hablamos?</span>
       <h2 id="h-contacto">¿Quieres que revisemos juntos cuál encaja mejor con tu empresa?</h2>
-      <p>Cuéntanos cómo trabajáis hoy y qué te preocupa. Lo miramos con calma y te proponemos el siguiente paso, sin compromiso.</p>
+      <p>Cuéntanos cómo trabajáis hoy y qué te gustaría cambiar. Lo miramos con calma y te proponemos el siguiente paso, sin compromiso.</p>
       <div class="ways">
         <a href="tel:+34938147380"><svg><use href="#i-phone"></use></svg>+34 938 147 380</a>
         <a href="mailto:info@adqa.com"><svg><use href="#i-mail"></use></svg>info@adqa.com</a>

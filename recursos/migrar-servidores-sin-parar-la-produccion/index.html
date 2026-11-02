@@ -76,7 +76,7 @@
       },
       "articleSection": "Cloud y datacenter",
       "keywords": "Migración, Datacenter",
-      "wordCount": 661,
+      "wordCount": 762,
       "image": "https://adqa.com/assets/og-adqa.jpg",
       "inLanguage": "es-ES"
     },
@@ -119,7 +119,7 @@
           "name": "¿Toda migración de servidores se puede hacer sin parar la actividad?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Habitualmente sí, con una planificación adecuada y réplica de datos en paralelo: el corte final se reduce a una ventana breve, programada fuera del horario de producción o en el momento de menos actividad. Algunos sistemas antiguos o con dependencias muy específicas necesitan una parada más larga, pero también se puede acotar y planificar."
+            "text": "Habitualmente sí, con una buena planificación y réplica de datos en paralelo. El corte final se reduce a una ventana breve. Se programa fuera del horario de producción o en el momento de menos actividad. Algunos sistemas antiguos o con dependencias muy específicas necesitan una parada más larga. Esa parada también se puede acotar y planificar, para que tu equipo sepa cuándo será."
           }
         },
         {
@@ -127,7 +127,7 @@
           "name": "¿Y si algo no sale como estaba previsto durante la migración?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Para eso se prepara un plan de vuelta atrás en cada fase. Mientras el entorno antiguo sigue activo y sincronizado, se puede volver a él con un impacto mínimo en la operativa, revisar qué ha fallado y repetir el paso con calma."
+            "text": "Para eso se prepara un plan de vuelta atrás en cada fase. El entorno antiguo sigue activo y sincronizado mientras tanto. Si algo falla, vuelves a él con un impacto mínimo en tu operativa. Luego se revisa qué ha fallado y se repite el paso con calma."
           }
         },
         {
@@ -135,7 +135,7 @@
           "name": "¿Cuánto dura una migración y cuánto tiempo pide al equipo interno?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Depende del volumen de sistemas y de datos, pero una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. El equipo interno participa sobre todo al principio, para explicar cómo se usan las aplicaciones, y al final, para validar las pruebas y la ventana de corte."
+            "text": "Depende del volumen de sistemas y de datos. Una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. Tu equipo participa sobre todo en dos momentos. Al principio, para explicar cómo se usan las aplicaciones. Y al final, para validar las pruebas y la ventana de corte."
           }
         },
         {
@@ -143,7 +143,7 @@
           "name": "¿Cómo se sincronizan los datos mientras el entorno antiguo sigue en producción?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mediante réplica continua entre el entorno de origen y el de destino. Así, el corte final solo tiene que aplicar los últimos cambios, en lugar de mover todo el volumen de golpe, y la ventana de corte se mantiene corta."
+            "text": "Mediante réplica continua entre el entorno de origen y el de destino. Así el corte final solo tiene que aplicar los últimos cambios. No hace falta mover todo el volumen de golpe, y la ventana de corte se mantiene corta."
           }
         },
         {
@@ -151,7 +151,7 @@
           "name": "¿Cómo se decide el orden de migración de los sistemas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se empieza por los menos críticos, para validar el proceso y detectar problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado."
+            "text": "Se empieza por los menos críticos. Así se valida el proceso y se detectan problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado."
           }
         },
         {
@@ -159,7 +159,7 @@
           "name": "¿Qué pasa con las direcciones IP y la configuración de red al migrar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se planifican de antemano para que los cambios visibles sean mínimos. En muchos casos se conserva el direccionamiento o se ajustan los nombres internos, de modo que el cambio de entorno resulta transparente para los usuarios."
+            "text": "Se planifican de antemano para que los cambios visibles sean mínimos. En muchos casos se conserva el direccionamiento o se ajustan los nombres internos. Así tus usuarios no notan el cambio de entorno."
           }
         }
       ]
@@ -282,7 +282,7 @@
       <span>Equipo de cloud y sistemas de ADQA</span>
       <span>Publicado el <time datetime="2026-07-05">5 de julio de 2026</time></span>
       <span>Revisado el <time datetime="2026-11-02">2 de noviembre de 2026</time></span>
-      <span>3 min de lectura</span>
+      <span>4 min de lectura</span>
     </p>
   </div>
 </section>
@@ -311,33 +311,34 @@
 
       <div class="art-summary card">
         <span class="eyebrow">En resumen</span>
-        <p class="tldr">Una migración de servidores sin paradas relevantes se apoya en cuatro pasos: documentar las dependencias antes de tocar nada, migrar por fases empezando por lo menos crítico, replicar los datos mientras el entorno antiguo sigue funcionando y hacer un corte final breve, en el momento de menor impacto, con un plan de vuelta atrás preparado.</p>
+        <p class="tldr">Una migración de servidores sin paradas relevantes se apoya en cuatro pasos. Primero, documentar las dependencias antes de tocar nada. Segundo, migrar por fases, empezando por lo menos crítico. Tercero, replicar los datos mientras el entorno antiguo sigue funcionando. Y cuarto, hacer un corte final breve en el momento de menor impacto. Siempre con un plan de vuelta atrás preparado.</p>
       </div>
       <div class="prose doc">
-<p>Migrar servidores genera una preocupación razonable: ¿cuánto tiempo estará todo parado? Cuando la migración está bien planificada, la respuesta es: lo mínimo, y en un momento elegido de antemano.</p>
-<p>Cada empresa migra por motivos distintos. El método, en cambio, se parece mucho tanto si el destino son servidores virtuales como si es hardware nuevo o un datacenter.</p>
+<p>Basta con anunciar en la oficina que toca migrar los servidores. La primera pregunta llega sola: «¿cuánto tiempo estaremos parados?». Es una preocupación razonable. Si la migración está bien planificada, la respuesta es: lo mínimo, y en un momento elegido de antemano.</p>
+<p>Cada empresa migra por motivos distintos. El método, en cambio, se parece mucho. Da igual que el destino sean servidores virtuales, hardware nuevo o un datacenter.</p>
 <h2 id="por-que-se-migra">Por qué se migra</h2>
 <p>Los motivos más habituales son estos:</p>
 <ul>
-<li><strong>Servidores en condiciones precarias:</strong> un armario sin climatización adecuada, sin redundancia eléctrica o con las copias en el mismo espacio que los equipos.</li>
-<li><strong>Hardware o sistemas que se quedan cortos</strong>, sin garantía o sin actualizaciones del fabricante.</li>
+<li><strong>Servidores en condiciones precarias.</strong> Un armario sin climatización adecuada ni redundancia eléctrica. O con las copias en el mismo espacio que los equipos.</li>
+<li><strong>Hardware o sistemas que se quedan cortos</strong>, sin garantía o sin actualizaciones del fabricante. Como ese servidor ruidoso que nadie se atreve a reiniciar.</li>
 <li><strong>Necesidad de crecer</strong> más allá de lo que permite el equipo actual.</li>
 <li><strong>Interés en un acceso privado</strong> a los servidores desde la oficina, en lugar de depender de internet para todo.</li>
 </ul>
-<p>Si todavía no está decidido el destino, la comparación entre un <a href="/web-adqa/recursos/datacenter-propio-o-nube-publica/">datacenter propio o la nube pública</a> ayuda a ordenar las opciones.</p>
+<p>¿Aún no tienes claro el destino? La comparación entre un <a href="/web-adqa/recursos/datacenter-propio-o-nube-publica/">datacenter propio o la nube pública</a> te ayuda a ordenar las opciones.</p>
 <h2 id="de-donde-vienen-las-paradas-imprevistas">De dónde vienen las paradas imprevistas</h2>
-<p>Cuando una migración se improvisa, aparecen sorpresas: dependencias que nadie había detectado, configuraciones que no se replican bien o copias de datos que tardan mucho más de lo previsto. Cada una se traduce en horas de parada que no estaban en el plan. La mayoría se pueden evitar en la fase de preparación.</p>
+<p>Cuando una migración se improvisa, aparecen sorpresas. Hay dependencias que nadie había detectado y configuraciones que no se replican bien. O copias de datos que tardan mucho más de lo previsto. Por ejemplo, el programa de etiquetas del almacén puede buscar el servidor antiguo por su dirección. Si nadie lo ha apuntado, el día del cambio deja de imprimir. Cada sorpresa así se traduce en horas de parada que no estaban en el plan. La mayoría te las ahorras en la fase de preparación.</p>
 <h2 id="como-se-planifica-una-migracion-paso-a-paso">Cómo se planifica una migración, paso a paso</h2>
 <ol>
-<li><strong>Inventario y dependencias.</strong> Antes de tocar nada se documenta qué servidores hay, qué aplicaciones corren en cada uno, qué usuarios trabajan con ellas y qué sistemas dependen de otros. También qué ventana horaria afecta menos a la operativa.</li>
-<li><strong>Copia verificada antes de empezar.</strong> Antes del primer cambio se comprueba que la copia se puede restaurar: es la red de seguridad de todo el proyecto. Qué revisar en ella se explica en <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a>.</li>
-<li><strong>Fases y orden.</strong> Los sistemas se agrupan en fases, empezando por los que menos afectan al negocio si algo falla. Así el proceso se valida antes de llegar a lo crítico. Los pasos 4 a 6 se repiten en cada fase.</li>
+<li><strong>Inventario y dependencias.</strong> Antes de tocar nada se documenta qué servidores hay y qué aplicaciones corren en cada uno. También quién trabaja con ellas y qué sistemas dependen de otros. Y qué franja horaria afecta menos a tu operativa.</li>
+<li><strong>Copia verificada antes de empezar.</strong> Antes del primer cambio se comprueba que la copia se puede restaurar. Es la red de seguridad de todo el proyecto. Qué revisar en ella lo tienes en <a href="/web-adqa/recursos/backup-y-continuidad-de-negocio/">backup y continuidad de negocio</a>.</li>
+<li><strong>Fases y orden.</strong> Los sistemas se agrupan en fases, empezando por los que menos afectan a tu negocio si algo falla. Así el proceso se valida antes de llegar a lo crítico. Los pasos 4 a 6 se repiten en cada fase.</li>
 <li><strong>Réplica en paralelo.</strong> Los datos se van copiando al nuevo entorno mientras el antiguo sigue funcionando con normalidad.</li>
-<li><strong>Pruebas antes del cambio.</strong> Un grupo de usuarios comprueba que sus aplicaciones funcionan en el nuevo entorno mientras el resto sigue trabajando en el antiguo.</li>
-<li><strong>Corte final breve y controlado.</strong> El paso definitivo llega en el momento de menor impacto, con todo verificado y la vuelta atrás lista por si hace falta.</li>
-<li><strong>Seguimiento.</strong> Durante los primeros días se vigila el rendimiento, y el entorno antiguo no se apaga hasta confirmar que ya no hace falta.</li>
+<li><strong>Pruebas antes del cambio.</strong> Un grupo de usuarios comprueba sus aplicaciones en el nuevo entorno. Alguien de administración, por ejemplo, hace un albarán de prueba. Mientras, el resto sigue trabajando en el antiguo.</li>
+<li><strong>Corte final breve y controlado.</strong> El paso definitivo llega en el momento de menor impacto. Todo está verificado y tienes la vuelta atrás lista por si hace falta.</li>
+<li><strong>Seguimiento.</strong> Durante los primeros días se vigila el rendimiento. El entorno antiguo no se apaga hasta confirmar que ya no hace falta.</li>
 </ol>
 <h2 id="riesgos-habituales-y-como-se-evitan">Riesgos habituales y cómo se evitan</h2>
+<p>La primera mañana después del corte, todo tu equipo se conecta a la vez. Para que sea una mañana normal, cubre estos riesgos:</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -373,10 +374,10 @@
 </tbody>
 </table></div>
 <h2 id="la-conectividad-parte-del-proyecto">La conectividad, parte del proyecto</h2>
-<p>Mover los servidores sin revisar cómo se conectan con la oficina deja fuera buena parte de la mejora posible. Si el destino es un <a href="/web-adqa/recursos/datacenter-de-proximidad/">datacenter de proximidad</a>, el recorrido entre la oficina y los servidores se nota en el día a día.</p>
-<p>Con un <a href="/web-adqa/recursos/enlace-privado-oficina-datacenter/">enlace privado entre la oficina y el datacenter</a>, el tráfico no pasa por internet y la latencia suele ser más estable, así que las aplicaciones responden de forma más previsible. Por eso conviene desplegar y probar el enlace antes de mover el primer servidor.</p>
+<p>Mover los servidores sin revisar cómo se conectan con la oficina deja fuera buena parte de la mejora. Con un <a href="/web-adqa/recursos/datacenter-de-proximidad/">datacenter de proximidad</a>, el recorrido entre la oficina y los servidores se nota cada día. Quien toma pedidos por teléfono consulta el stock sin parar. Cada segundo de espera se le acumula.</p>
+<p>Con un <a href="/web-adqa/recursos/enlace-privado-oficina-datacenter/">enlace privado entre la oficina y el datacenter</a>, el tráfico no pasa por internet. La latencia, lo que tarda cada respuesta, suele ser más estable. Así las aplicaciones responden de forma más previsible. Por eso conviene desplegar y probar el enlace antes de mover el primer servidor.</p>
 <!-- PENDIENTE: el WordPress afirmaba que, tras migrar con enlace privado, los sistemas «van más rápido que antes». Se ha suavizado a «latencia más estable / respuesta más previsible». Confirmar con ADQA si quiere mantener una mejora de rendimiento y con qué base. -->
-<p>Si el proyecto incluye <a href="/web-adqa/sistemas-cloud/">servidores virtuales o un entorno híbrido</a>, cada sistema necesita tres respuestas antes de fijar la fecha: dónde se aloja, por dónde se conecta y cómo se protegen sus datos.</p>
+<p>Si tu proyecto incluye <a href="/web-adqa/sistemas-cloud/">servidores virtuales o un entorno híbrido</a>, repasa cada sistema antes de fijar la fecha. Cada uno necesita tres respuestas: dónde se aloja, por dónde se conecta y cómo se protegen sus datos.</p>
 
       </div>
       <ul class="art-tags" aria-label="Etiquetas"><li>Migración</li><li>Datacenter</li>
@@ -411,15 +412,15 @@
     <div class="faq">
       <div class="rv">
         <h3>Para el manager</h3>
-        <details open=""><summary>¿Toda migración de servidores se puede hacer sin parar la actividad? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Habitualmente sí, con una planificación adecuada y réplica de datos en paralelo: el corte final se reduce a una ventana breve, programada fuera del horario de producción o en el momento de menos actividad. Algunos sistemas antiguos o con dependencias muy específicas necesitan una parada más larga, pero también se puede acotar y planificar.</p></details>
-        <details><summary>¿Y si algo no sale como estaba previsto durante la migración? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Para eso se prepara un plan de vuelta atrás en cada fase. Mientras el entorno antiguo sigue activo y sincronizado, se puede volver a él con un impacto mínimo en la operativa, revisar qué ha fallado y repetir el paso con calma.</p></details>
-        <details><summary>¿Cuánto dura una migración y cuánto tiempo pide al equipo interno? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Depende del volumen de sistemas y de datos, pero una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. El equipo interno participa sobre todo al principio, para explicar cómo se usan las aplicaciones, y al final, para validar las pruebas y la ventana de corte.</p></details>
+        <details open=""><summary>¿Toda migración de servidores se puede hacer sin parar la actividad? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Habitualmente sí, con una buena planificación y réplica de datos en paralelo. El corte final se reduce a una ventana breve. Se programa fuera del horario de producción o en el momento de menos actividad. Algunos sistemas antiguos o con dependencias muy específicas necesitan una parada más larga. Esa parada también se puede acotar y planificar, para que tu equipo sepa cuándo será.</p></details>
+        <details><summary>¿Y si algo no sale como estaba previsto durante la migración? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Para eso se prepara un plan de vuelta atrás en cada fase. El entorno antiguo sigue activo y sincronizado mientras tanto. Si algo falla, vuelves a él con un impacto mínimo en tu operativa. Luego se revisa qué ha fallado y se repite el paso con calma.</p></details>
+        <details><summary>¿Cuánto dura una migración y cuánto tiempo pide al equipo interno? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Depende del volumen de sistemas y de datos. Una migración por fases suele extenderse varias semanas, precisamente para no ir con prisas. Tu equipo participa sobre todo en dos momentos. Al principio, para explicar cómo se usan las aplicaciones. Y al final, para validar las pruebas y la ventana de corte.</p></details>
       </div>
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
-        <details><summary>¿Cómo se sincronizan los datos mientras el entorno antiguo sigue en producción? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Mediante réplica continua entre el entorno de origen y el de destino. Así, el corte final solo tiene que aplicar los últimos cambios, en lugar de mover todo el volumen de golpe, y la ventana de corte se mantiene corta.</p></details>
-        <details><summary>¿Cómo se decide el orden de migración de los sistemas? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se empieza por los menos críticos, para validar el proceso y detectar problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado.</p></details>
-        <details><summary>¿Qué pasa con las direcciones IP y la configuración de red al migrar? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se planifican de antemano para que los cambios visibles sean mínimos. En muchos casos se conserva el direccionamiento o se ajustan los nombres internos, de modo que el cambio de entorno resulta transparente para los usuarios.</p></details>
+        <details><summary>¿Cómo se sincronizan los datos mientras el entorno antiguo sigue en producción? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Mediante réplica continua entre el entorno de origen y el de destino. Así el corte final solo tiene que aplicar los últimos cambios. No hace falta mover todo el volumen de golpe, y la ventana de corte se mantiene corta.</p></details>
+        <details><summary>¿Cómo se decide el orden de migración de los sistemas? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se empieza por los menos críticos. Así se valida el proceso y se detectan problemas antes de tocar lo que no puede fallar. Las dependencias entre sistemas marcan qué debe moverse a la vez y qué puede ir por separado.</p></details>
+        <details><summary>¿Qué pasa con las direcciones IP y la configuración de red al migrar? <span class="pm"><svg><use href="#i-plus"></use></svg></span></summary><p>Se planifican de antemano para que los cambios visibles sean mínimos. En muchos casos se conserva el direccionamiento o se ajustan los nombres internos. Así tus usuarios no notan el cambio de entorno.</p></details>
       </div>
     </div>
   </div>
@@ -458,7 +459,7 @@
     <div class="contact-info rv">
       <span class="eyebrow eyebrow-on-pink">¿Hablamos?</span>
       <h2 id="h-contacto">¿Quieres que revisemos juntos cuál encaja mejor con tu empresa?</h2>
-      <p>Cuéntanos cómo trabajáis hoy y qué te preocupa. Lo miramos con calma y te proponemos el siguiente paso, sin compromiso.</p>
+      <p>Cuéntanos cómo trabajáis hoy y qué te gustaría cambiar. Lo miramos con calma y te proponemos el siguiente paso, sin compromiso.</p>
       <div class="ways">
         <a href="tel:+34938147380"><svg><use href="#i-phone"></use></svg>+34 938 147 380</a>
         <a href="mailto:info@adqa.com"><svg><use href="#i-mail"></use></svg>info@adqa.com</a>
