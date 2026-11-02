@@ -1,5 +1,10 @@
 <footer>
   <div class="wrap">
+    {#- Claim de marca, una sola vez y en su forma completa (decisión del cliente, revisión 1). -#}
+    <div class="foot-claim">
+      <p class="claim">Tocamos todas las <span class="accent">teclas</span><br class="br-wide"> para que solo tengas que tocar <kbd class="key">una</kbd>.</p>
+      <a class="btn btn-primary" href="/contacto/">Hablemos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
     <div class="foot">
       <div>
         <img class="logo" src="/assets/logo-adqa-blanco.svg" alt="ADQA" width="134" height="22">
@@ -26,8 +31,6 @@
         <li><a href="{{ site.anxanet }}" rel="noopener">Anxanet, nuestro operador</a></li>
       </ul></nav>
     </div>
-    <p class="claim-big" aria-hidden="true">Tocamos todas<br>las <span>teclas</span>.</p>
-    <p class="claim-sub">{{ site.claimFull }}.</p>
     <div class="legal">
       <span>© {{ "" | year }} ADQA · {{ site.legalName }}</span>
       <nav aria-label="Legal"><a href="/aviso-legal/">Aviso legal</a><a href="/politica-de-privacidad/">Privacidad</a><a href="/politica-de-seguridad/">Política de seguridad</a></nav>

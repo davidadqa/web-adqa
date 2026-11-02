@@ -123,15 +123,27 @@
 </section>
 {% endmacro %}
 
-{#- Caso anónimo heredado del WordPress (pendiente de decidir si se queda: data-origen="wp"). -#}
-{% macro anonCase(title, sector, challenge, solution, results=[]) %}
+{#- Caso anónimo heredado del WordPress (pendiente de decidir si se queda: data-origen="wp").
+    `hl` destaca el resultado principal: {n: "−30%", l: "en licencias", i: 0}. `n` es la cifra (vacía = resultado
+    en texto), `l` lo que mide e `i` el índice de `results` que ya se muestra destacado (no se repite en la lista). -#}
+{% macro anonCase(title, sector, challenge, solution, results=[], hl={}) %}
 <article class="card case-anon" data-origen="wp">
-  <span class="kind">{{ sector }}</span>
+  <div class="ca-top">
+    <span class="kind">{{ sector }}</span>
+    {%- if hl.n %}
+    <p class="ca-stat"><b>{{ hl.n }}</b><span>{{ hl.l }}</span></p>
+    {%- elif hl.l %}
+    <p class="ca-stat is-text"><svg aria-hidden="true"><use href="#i-check"/></svg><span>{{ hl.l }}</span></p>
+    {%- endif %}
+  </div>
   <h3>{{ title }}</h3>
-  <p><strong>Reto:</strong> {{ challenge }}</p>
-  <p><strong>Solución:</strong> {{ solution }}</p>
-  {%- if results.length %}
-  <ul class="case-kpis">{% for r in results %}<li>{{ r }}</li>{% endfor %}</ul>
+  <dl class="ca-steps">
+    <div><dt>El reto</dt><dd>{{ challenge }}</dd></div>
+    <div><dt>Lo que hicimos</dt><dd>{{ solution }}</dd></div>
+  </dl>
+  {%- set nrest = results.length - (1 if hl.i is defined else 0) %}
+  {%- if nrest > 0 %}
+  <ul class="ca-results">{% for r in results %}{% if loop.index0 != hl.i %}<li><svg aria-hidden="true"><use href="#i-check"/></svg>{{ r }}</li>{% endif %}{% endfor %}</ul>
   {%- endif %}
 </article>
 {% endmacro %}
