@@ -3,6 +3,8 @@ pagination:
   data: blog.categories
   size: 1
   alias: cat
+  # Sin esto, solo la primera categoría entra en collections.all y en el sitemap.
+  addAllPagesToCollections: true
 permalink: "/recursos/{{ cat.slug }}/"
 pageType: "CollectionPage"
 ---

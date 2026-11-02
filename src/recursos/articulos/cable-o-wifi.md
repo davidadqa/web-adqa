@@ -11,7 +11,7 @@ updated: 2026-11-02
 servicio: "/redes/"
 related: ["cuantos-puntos-de-acceso-necesita-tu-wifi", "wifi-domestico-o-wifi-profesional", "categorias-de-cableado"]
 imagen: "Puesto de trabajo con cable de red junto a un punto de acceso WiFi en el techo de una oficina"
-tldr: "El cableado estructurado da una velocidad estable, sin interferencias y sin límite práctico de dispositivos: es lo adecuado para todo lo que no se mueve y debe funcionar siempre, como servidores, puestos fijos, cámaras e impresoras de red. El WiFi aporta movilidad y se amplía con facilidad: es lo natural para portátiles, móviles e invitados. Una red de empresa bien diseñada combina los dos."
+tldr: "El cableado estructurado da una velocidad estable, sin interferencias y que no se reparte entre los dispositivos conectados: es lo adecuado para todo lo que no se mueve y debe funcionar siempre, como servidores, puestos fijos, cámaras e impresoras de red. El WiFi aporta movilidad y se amplía con facilidad: es lo natural para portátiles, móviles e invitados. Una red de empresa bien diseñada combina los dos."
 faq:
   manager:
     - q: "¿Cablear la oficina implica obra y molestias?"
@@ -56,7 +56,7 @@ Un error habitual es conectar por WiFi cámaras o servidores que deberían ir po
 | Movilidad | Ninguna | Total |
 | Interferencias | No | Posibles |
 | Seguridad física | Hace falta acceso al puerto | Basta con el alcance de la señal |
-| Ampliación | Requiere obra o canalización | Inmediata |
+| Ampliación | Requiere obra o canalización | Sencilla, si hay cobertura |
 | Uso recomendado | Servidores, puestos fijos, cámaras | Portátiles, móviles, invitados |
 
 Una guía rápida:

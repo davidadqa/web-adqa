@@ -703,8 +703,17 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .prose blockquote{border-left:3px solid var(--pink);padding:4px 0 4px 18px;color:var(--ink);font-weight:500}
 .prose code{font-size:.9em;background:var(--surface-2);border-radius:6px;padding:1px 6px}
 .prose hr{border:0;border-top:1px solid var(--line);margin:2em 0}
-.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);margin-top:1.4em}
+/* Tablas del blog. Si no caben (móvil), se desplazan dentro de .table-wrap: las sombras laterales
+   («scroll shadows») indican que hay más columnas. Las de 2 columnas no tienen ancho mínimo. */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-sm);margin-top:1.4em;
+  background:
+    linear-gradient(to right,var(--surface) 30%,rgba(255,255,255,0)) left center/40px 100% no-repeat local,
+    linear-gradient(to left,var(--surface) 30%,rgba(255,255,255,0)) right center/40px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%,rgba(20,20,20,.16),transparent) left center/14px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%,rgba(20,20,20,.16),transparent) right center/14px 100% no-repeat scroll,
+    var(--surface)}
 .prose table{width:100%;min-width:560px;border-collapse:collapse;font-size:.94rem;line-height:1.55}
+.prose table:not(:has(th:nth-child(3),td:nth-child(3))){min-width:0}
 .prose th,.prose td{text-align:left;vertical-align:top;padding:13px 16px;border-bottom:1px solid var(--line);color:var(--gray)}
 .prose thead th{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface-2)}
 .prose tbody td:first-child{font-weight:600;color:var(--ink)}
@@ -729,8 +738,15 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .toc{display:none}
 }
 @media (max-width:720px){
-  .art-meta{font-size:.84rem}
-  .art-meta span+span::before{margin:0 7px}
+  .art-meta{font-size:.84rem;gap:2px 14px}
+  /* En móvil los datos ocupan varias líneas: sin «·», que quedaría suelto al principio de línea. */
+  .art-meta span+span::before{content:none}
   .art-main{gap:26px}
   .chips a{padding:8px 13px;font-size:.88rem}
+  /* Que la etiqueta de la imagen provisional no tape el icono. */
+  .ph{padding-top:56px}
 }
+/* Migas de pan: si el último elemento (el titular del artículo) ocupa varias líneas, el «›» va con el texto
+   en lugar de quedarse solo a la izquierda. */
+.crumbs li:last-child{display:block;text-align:center}
+.crumbs li:last-child::before{margin-right:8px}

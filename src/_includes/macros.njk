@@ -202,13 +202,14 @@
 
 {#- ---------- Blog ---------- -#}
 
-{#- Tarjeta de artículo (índice, categorías y relacionados). -#}
+{#- Tarjeta de artículo (índice, categorías y relacionados). El extracto es el lead (la description
+    suele empezar repitiendo el titular); si no hay lead, la description. -#}
 {% macro articleCard(p, i=0, showCat=true) %}
 {%- set c = blog.bySlug[p.data.category] %}
 <a class="card art-card rv" style="--s:{{ i % 3 }}" href="{{ p.url }}">
   {%- if showCat and c %}<span class="cat">{{ c.short }}</span>{% endif %}
   <h3>{{ p.data.h1 }}</h3>
-  <p>{{ p.data.description }}</p>
+  <p>{{ p.data.lead or p.data.description }}</p>
 </a>
 {% endmacro %}
 

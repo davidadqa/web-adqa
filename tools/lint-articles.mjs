@@ -54,7 +54,7 @@ const BANNED = [
 const WARN = [
   [/\bCPD\b/, "glosario: «datacenter» (CPD solo si es el del cliente)"],
   [/24\s?\/\s?7|24x7/i, "vigilancia 24/7 (D7/D11): revisar"],
-  [/\bSLA\b|en (pocas|menos de \d+) horas/i, "SLA o tiempos garantizados (D8): revisar"],
+  [/(?<!\p{L})SLA(?!\p{L})|en (pocas|menos de \d+) horas/iu, "SLA o tiempos garantizados (D8): revisar"],
   [/\bMikroTik\b/i, "MikroTik: revisar (D9)"],
   [/\bnube\b/gi, null],
 ];
