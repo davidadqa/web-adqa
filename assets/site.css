@@ -335,7 +335,7 @@ p{color:var(--gray)}
 .form-ok{grid-column:1/-1;font-size:.95rem;color:var(--ink);background:var(--pink-50);border-radius:12px;padding:14px;display:none}
 
 /* ============ FOOTER ============ */
-footer{background:var(--night);color:#bdbdbd;margin-top:clamp(80px,10vw,120px);padding:80px 0 36px;border-radius:40px 40px 0 0}
+footer{background:var(--night);color:#bdbdbd;margin-top:clamp(80px,10vw,120px);padding:64px 0 36px;border-radius:40px 40px 0 0}
 .foot{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px}
 .foot img.logo{height:26px;width:auto;margin-bottom:18px}
 .foot p{color:#9a9a9a;font-size:.94rem}
@@ -343,8 +343,18 @@ footer{background:var(--night);color:#bdbdbd;margin-top:clamp(80px,10vw,120px);p
 .foot ul{list-style:none;display:grid;gap:9px}
 .foot a{font-size:.94rem;color:#bdbdbd;transition:color .2s}
 .foot a:hover,.foot a[aria-current="page"]{color:#fff}
-.claim-big{font-size:clamp(2.6rem,9vw,8rem);font-weight:600;letter-spacing:-.05em;line-height:.95;color:#262626;margin:70px 0 30px;user-select:none}
-.claim-big span{color:var(--pink)}
+/* Claim del pie: una frase, con «una» dibujada como una tecla que se pulsa al pasar por encima */
+.foot-claim{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap;padding-bottom:44px;margin-bottom:52px;border-bottom:1px solid var(--night-line)}
+.foot-claim .claim{font-size:clamp(1.45rem,2.9vw,2.2rem);font-weight:600;letter-spacing:-.03em;line-height:1.22;color:#fff;max-width:30ch}
+.foot-claim .accent{color:var(--pink)}
+.key{display:inline-block;font:inherit;font-size:.8em;line-height:1;padding:.2em .44em .28em;margin-left:.06em;border-radius:.3em;color:#fff;
+  background:linear-gradient(#2c2c2c,#1d1d1d);border:1px solid #3d3d3d;
+  box-shadow:0 .16em 0 #070707,inset 0 1px 0 rgba(255,255,255,.09);transform:translateY(-.08em);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .25s,border-color .25s}
+.foot-claim:hover .key{transform:translateY(.04em);box-shadow:0 .04em 0 #070707,inset 0 1px 0 rgba(255,255,255,.12);background:var(--pink);border-color:var(--pink)}
+@media (prefers-reduced-motion:reduce){.key{transition:none}}
+.foot+.legal{margin-top:56px}
+@media (max-width:720px){.br-wide{display:none}.foot-claim{padding-bottom:36px;margin-bottom:40px}}
 .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid var(--night-line);font-size:.84rem;color:#8a8a8a}
 .legal nav{display:flex;flex-wrap:wrap;gap:6px 18px}
 
@@ -459,7 +469,6 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .mega-wide{grid-column:span 3;display:grid;grid-template-columns:auto 1fr;gap:6px 20px;align-items:start;border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
 .mega-wide h4{margin:6px 0 0}
 .mega-wide ul{display:flex;flex-wrap:wrap;gap:0 18px}
-.claim-sub{color:#8a8a8a;font-size:1rem;margin:-14px 0 30px}
 .eyebrow-on-pink{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25);color:#fff}
 .req{color:var(--pink);font-style:normal}
 .note-src{margin-top:18px;font-size:.86rem;color:var(--muted)}
@@ -468,12 +477,28 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .ph svg{width:40px;height:40px}
 .ph figcaption{font-size:.9rem;font-weight:600;max-width:36ch}
 .ph-badge{position:absolute;top:12px;left:12px;background:var(--pink);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
-/* Casos heredados del WordPress (pendientes de validar) */
-.case-anon{display:grid;gap:10px;align-content:start;padding:26px}
-.case-anon .kind{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
-.case-anon p{font-size:.95rem}
-.case-kpis{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.case-kpis li{font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--pink-50);color:var(--pink-600)}
+/* Casos heredados del WordPress (pendientes de validar): el resultado, primero y en grande */
+.case-anon{display:flex;flex-direction:column;gap:18px;padding:0}
+.case-anon .ca-top{display:grid;gap:14px;padding:24px 26px 22px;border-bottom:1px solid var(--line);
+  background:radial-gradient(130% 150% at 0% 0%,var(--pink-50) 0%,rgba(252,233,241,.45) 38%,rgba(255,255,255,0) 72%)}
+.case-anon .kind{display:flex;align-items:baseline;gap:8px;font-size:.74rem;font-weight:600;line-height:1.4;color:var(--pink-600);letter-spacing:.05em;text-transform:uppercase}
+.case-anon .kind::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--pink);transform:translateY(-1px)}
+.ca-stat{display:grid;gap:8px;justify-items:start}
+.ca-stat b{font-size:clamp(2.5rem,4.4vw,3.3rem);font-weight:600;letter-spacing:-.045em;line-height:.95;color:var(--pink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ca-stat span{font-size:1rem;font-weight:600;line-height:1.3;color:var(--ink);max-width:30ch}
+.ca-stat.is-text{display:flex;align-items:flex-start;gap:12px}
+.ca-stat.is-text svg{width:30px;height:30px;flex:none;padding:6px;border-radius:50%;background:var(--pink);color:#fff}
+.ca-stat.is-text span{font-size:1.18rem;letter-spacing:-.015em;max-width:none}
+.case-anon h3{font-size:1.18rem;padding:0 26px}
+.ca-steps{display:grid;gap:14px;padding:0 26px}
+.ca-steps>div{padding-left:16px;border-left:2px solid var(--line)}
+.ca-steps>div+div{border-left-color:var(--pink)}
+.ca-steps dt{font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.ca-steps dd{font-size:.94rem;line-height:1.55;color:var(--gray)}
+.ca-results{list-style:none;display:grid;gap:8px;margin-top:auto;padding:16px 26px 24px;border-top:1px dashed var(--line-2)}
+.ca-results li{display:flex;gap:10px;font-size:.92rem;font-weight:600;line-height:1.4;color:var(--ink)}
+.ca-results svg{width:17px;height:17px;flex:none;margin-top:2px;color:var(--pink)}
+.case-anon>.ca-steps:last-child{padding-bottom:26px}
 
 /* ============ COMPONENTES DE PÁGINA (unificados en la fase 1) ============ */
 /* Rejillas de servicios y casos */
