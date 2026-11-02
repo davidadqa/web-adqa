@@ -1,0 +1,340 @@
+---
+title: "Datacenter de proximidad en Barcelona | ADQA"
+description: "Datacenter de proximidad en Barcelona: housing, servidores virtuales y backup remoto, unidos a tu oficina por un enlace privado que no pasa por Internet."
+keyword: "datacenter de proximidad en Barcelona"
+breadcrumbs:
+  - { name: "Sistemas y cloud", url: "/sistemas-cloud/" }
+  - { name: "Datacenter" }
+service:
+  name: "Datacenter de proximidad para empresas"
+  serviceType: "Housing, servidores virtuales y backup remoto"
+faq:
+  manager:
+    - q: "¿En qué se diferencia el datacenter de ADQA de contratar servidores en AWS o Azure?"
+      a: "Responden a necesidades distintas. AWS y Azure están pensados para escalar con mucha flexibilidad, con autoservicio y facturación por uso. El datacenter de ADQA está pensado para empresas que quieren sus sistemas cerca y controlados, con un coste previsible, un equipo que conoce su infraestructura y la posibilidad de unirlo a la oficina con un enlace privado que no pasa por Internet. Muchas empresas combinan los dos."
+    - q: "¿Dónde está el datacenter y quién tiene acceso a mis equipos?"
+      a: "Es un datacenter propio y de proximidad, en Barcelona. La sala tiene control de acceso, así que solo entra personal autorizado, y está preparada con refrigeración, alimentación redundante y monitorización. Los detalles de la instalación los revisamos contigo cuando estudiamos tu caso."
+    - q: "¿De quién son los datos y los equipos alojados?"
+      a: "Tuyos. En housing, los servidores son de tu propiedad y nosotros ponemos la sala, la energía, la conectividad y la supervisión. En servidores virtuales, los datos y las máquinas virtuales siguen siendo tuyos y se pueden exportar, porque no dependen de una plataforma cerrada."
+    - q: "¿Podré trabajar igual que ahora desde la oficina y desde fuera?"
+      a: "Sí. Con el enlace privado, los servidores del datacenter se integran en tu red como una parte más, así que desde la oficina se accede a ellos de forma directa. Desde fuera, el acceso se hace con una red privada virtual o con SASE, igual que harías para llegar a la oficina."
+  tecnico:
+    - q: "¿Cómo funciona técnicamente el enlace privado entre la oficina y el datacenter?"
+      a: "Es un enlace dedicado entre tu sede y el datacenter, por fibra óptica o por radioenlace según la distancia y los requisitos, que presta Anxanet, el operador de telecomunicaciones de ADQA. Se integra en tu arquitectura como un segmento más de la red corporativa, con sus VLAN, su enrutamiento y sus políticas de seguridad. El tráfico entre la oficina y los servidores no sale a Internet."
+    - q: "¿Housing o servidores virtuales: qué me conviene?"
+      a: "El housing tiene sentido si ya tienes servidores con vida útil por delante, o hardware específico que quieres conservar. Los servidores virtuales encajan cuando toca renovar equipos o cuando la carga cambia, porque procesador, memoria y almacenamiento se ajustan sin comprar hardware. Se pueden combinar: housing para un equipo concreto y servidores virtuales para el resto."
+    - q: "¿Cómo se integra el datacenter con la monitorización y la ciberseguridad?"
+      a: "Los sistemas alojados se supervisan junto con tus sistemas, tu red y tu seguridad: disponibilidad, rendimiento, consumo de recursos y conectividad. Tus políticas de ciberseguridad se extienden al entorno del datacenter, y las incidencias y las actuaciones quedan registradas en la extranet de ticketing de ADQA."
+    - q: "¿Se puede combinar con el cloud público o con edge computing?"
+      a: "Sí, y es habitual. Los sistemas críticos y estables pueden estar en el datacenter, los servicios que necesitan crecer a picos en el cloud público y el proceso que requiere respuesta inmediata en la propia planta, con edge computing. El datacenter hace de punto de consolidación y guarda las copias de los demás entornos."
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}
+<style>
+/* Datacenter: características de la sala junto al texto */
+.dc-feats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dc-feats .card{padding:22px;display:grid;gap:8px;align-content:start}
+.dc-feats .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
+.dc-feats .ico svg{width:19px;height:19px}
+.dc-feats h3{font-size:1.02rem}
+.dc-feats p{font-size:.93rem}
+@media (max-width:420px){.dc-feats{grid-template-columns:1fr}}
+</style>
+{% endblock %}
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Sistemas y cloud · Datacenter propio</span>
+    <h1 id="h-hero" data-words>Datacenter de proximidad en Barcelona, <span class="accent">unido a tu oficina sin pasar por Internet</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Alojamos tus servidores, o te damos servidores virtuales, en nuestro datacenter propio. Con Anxanet, nuestro operador, lo conectamos a tu oficina por un enlace privado: trabajas con tus sistemas como si estuvieran en tu propia red. Y los gestiona el mismo equipo que conoce tu montaje.</p>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="#contacto">Explícanos qué quieres alojar <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#enlace">Cómo funciona el enlace</a>
+    </div>
+    <div class="trust fade-in" style="--d:1.1s">
+      <span><svg><use href="#i-check"/></svg>Datacenter propio en Barcelona</span>
+      <span><svg><use href="#i-check"/></svg>Enlace privado con nuestro operador</span>
+      <span><svg><use href="#i-check"/></svg>Housing, servidores virtuales y backup</span>
+    </div>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding:clamp(56px,7vw,88px) 0 0">
+  <div class="wrap intro">
+    <div class="rv" style="display:grid;gap:22px">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">¿Qué es el datacenter de proximidad de ADQA?</h2>
+      <p class="tldr"><strong>ADQA tiene un datacenter propio y de proximidad en Barcelona donde aloja servidores de empresas e instituciones, propios del cliente o virtuales.</strong> Como también es operador de telecomunicaciones, a través de Anxanet, une la oficina y el datacenter con un enlace privado de fibra o radioenlace que no pasa por Internet. Lo gestiona el mismo equipo que mantiene la red y los sistemas del cliente.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv" style="--s:0"><b>Propio</b><span>datacenter de proximidad en Barcelona</span></div>
+      <div class="stat rv" style="--s:1"><b>Privado</b><span>enlace entre tu oficina y tus servidores, sin salir a Internet</span></div>
+      <div class="stat rv" style="--s:2"><b>3-2-1</b><span>copias de seguridad, con una lejos de tu oficina</span></div>
+      <div class="stat rv" style="--s:3"><b>Mismo</b><span>equipo para servidores, red y conexión, que sabe cómo está montado todo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ HACEMOS POSIBLE ============ -->
+<section class="sec" aria-labelledby="h-pos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Lo que hacemos posible</span>
+      <h2 id="h-pos">Tus servidores, en un sitio pensado para ellos</h2>
+      <p class="lead">El armario del fondo de la oficina cumple hasta que un verano aprieta el calor o salta la luz. Un datacenter cercano te da otra base, sin perder de vista tus sistemas.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-server"/></svg></span><h3>Una sala preparada</h3><p>Refrigeración, alimentación redundante, control de acceso y monitorización. Lo que cuesta montar bien en una oficina.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-clock"/></svg></span><h3>La copia, lejos del original</h3><p>Si pasa algo en la oficina, tus copias están en otro edificio, separadas de tu red y probadas.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Acceso directo desde tu red</h3><p>Con el enlace privado, tus aplicaciones responden con una latencia baja y estable, sin depender del tráfico de Internet.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Externalizar sin perder el control</h3><p>Sabes dónde están tus datos, quién accede y a quién llamar. Los equipos y los datos siguen siendo tuyos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENLACE PRIVADO (sección oscura) ============ -->
+<section class="sec dark-sec" id="enlace" aria-labelledby="h-enl">
+  <div class="wrap strengths">
+    <div class="sticky rv">
+      <span class="eyebrow">Enlace privado oficina-datacenter</span>
+      <h2 id="h-enl">¿Cómo llega tu oficina al datacenter sin salir a Internet?</h2>
+      <p class="lead">Con un enlace dedicado de nuestro propio operador. El datacenter pasa a ser una extensión de tu red corporativa, y el tráfico entre tu empresa y tus servidores viaja solo por ese camino.</p>
+      <div><a class="btn btn-primary" href="#contacto">Estudiemos tu conexión <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="stack">
+      <article class="st" style="--n:0">
+        <span class="num">01 · EL ENLACE</span>
+        <h3>Fibra o radioenlace, según tu sede</h3>
+        <p>Anxanet, nuestro operador de telecomunicaciones, despliega un enlace dedicado entre tu oficina y el datacenter. Elegimos fibra óptica o radioenlace según la distancia y lo que necesitas.</p>
+        <div class="row"><a class="badge" href="https://anxanet.com/" rel="noopener"><img src="/assets/sellos/anxanet.jpg" alt="Anxanet, operador de telecomunicaciones de ADQA" loading="lazy"></a></div>
+      </article>
+      <article class="st" style="--n:1">
+        <span class="num">02 · UNA PARTE MÁS DE TU RED</span>
+        <h3>Tus VLAN, tus reglas</h3>
+        <p>El enlace se integra en tu arquitectura como un segmento más: con tus VLAN, tu enrutamiento y tus políticas de seguridad. Para tus usuarios, el servidor está en la red de siempre.</p>
+      </article>
+      <article class="st" style="--n:2">
+        <span class="num">03 · LO QUE NOTAS</span>
+        <h3>Más estable y menos expuesto</h3>
+        <p>Sin saltos por redes públicas, la latencia es baja y, sobre todo, constante. Y el tráfico corporativo no se expone fuera. No sustituye al firewall: es una capa más.</p>
+        <ul><li>Latencia baja y predecible</li><li>Tráfico fuera de la red pública</li><li>Un solo responsable de conexión y servidores</li></ul>
+      </article>
+      <article class="st" style="--n:3">
+        <span class="num">04 · SI TRABAJAS FUERA</span>
+        <h3>También desde casa o de viaje</h3>
+        <p>Quien no está en la oficina llega a los servidores con una red privada virtual o con SASE, con los mismos permisos de siempre.</p>
+        <a class="go" href="/telecomunicaciones/">Telecomunicaciones con Anxanet <svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTALACIONES ============ -->
+<section class="sec" id="instalaciones" aria-labelledby="h-ins">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Las instalaciones</span>
+      <h2 id="h-ins">¿Qué tiene un datacenter que no tiene el armario de tu oficina?</h2>
+      <p>Un servidor necesita frío constante, corriente sin cortes y que solo lo toque quien debe. En una oficina, eso suele depender del aire acondicionado general, de un SAI pensado para otra cosa y de un armario que comparte espacio con el resto.</p>
+      <p>Nuestro datacenter está preparado para eso. Es propio, está en Barcelona y lo gestiona nuestro equipo: cuando hay que intervenir en un servidor, lo hacen técnicos que ya conocen tu montaje.</p>
+      <div class="dc-feats">
+        <div class="card rv" style="--s:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5 4.9 17.5"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/></svg></span><h3>Refrigeración</h3><p>Temperatura controlada para los equipos, todo el año.</p></div>
+        <div class="card rv" style="--s:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><h3>Alimentación redundante</h3><p>Más de un camino de energía para tus servidores.</p></div>
+        <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Control de acceso</h3><p>Solo entra personal autorizado a la sala.</p></div>
+        <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Monitorización</h3><p>Temperatura, disponibilidad, rendimiento y conectividad, a la vista.</p></div>
+      </div>
+    </div>
+    <div class="rv" style="--s:1">{{ m.placeholder("Sala del datacenter de ADQA en Barcelona, con racks de servidores y cableado ordenado", "4/5") }}</div>
+  </div>
+</section>
+
+<!-- ============ DATACENTER O CLOUD PÚBLICO ============ -->
+<section class="sec" id="cuando" aria-labelledby="h-cuando" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Datacenter o cloud público</span>
+      <h2 id="h-cuando">¿Cuándo tiene sentido un datacenter de proximidad?</h2>
+      <p class="lead">Responde a necesidades distintas de las del cloud público. Lo útil es saber qué pide cada sistema.</p>
+    </div>
+    <div class="compare">
+      <div class="cmp good rv">
+        <h3><span class="ico"><svg><use href="#i-pin"/></svg></span>Datacenter de proximidad</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span>Cargas de trabajo estables y críticas, como la gestión o la producción.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Quieres saber dónde están físicamente tus datos.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Necesitas conectividad privada con la oficina, sin pasar por Internet.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Valoras un coste previsible y un equipo que conoce tu entorno.</span></li>
+        </ul>
+      </div>
+      <div class="cmp opt rv" style="--s:1">
+        <h3><span class="ico"><svg><use href="#i-cloud"/></svg></span>Cloud público</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span>Picos de demanda muy variables o estacionales.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Servicios que necesitan estar en varias regiones del mundo.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Aplicaciones que ya usan servicios nativos de Azure, AWS o Google Cloud.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Crecer sin invertir en hardware propio.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note rv"><strong>No son excluyentes.</strong> Muchas empresas tienen los sistemas críticos en el datacenter y el resto en la nube. Diseñamos esa <a class="txt-link" href="/sistemas-cloud/#hibrido">arquitectura híbrida</a> según lo que pide cada sistema.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="sec" id="servicios" aria-labelledby="h-serv" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Servicios de datacenter</span>
+      <h2 id="h-serv">¿Qué puedes tener en nuestro datacenter?</h2>
+      <p class="lead">Desde un servidor tuyo en un rack hasta toda tu infraestructura virtualizada, con la conexión y las copias incluidas en la misma conversación.</p>
+    </div>
+    <div class="services">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-server"/></svg></span>
+        <h3>Housing de servidores propios</h3>
+        <p>Tus equipos siguen siendo tuyos. Nosotros ponemos la sala, la refrigeración, la energía redundante, el acceso controlado y la supervisión.</p>
+        <ul class="tags"><li>Housing</li><li>Rack</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
+        <h3>Servidores virtuales</h3>
+        <p>Procesador, memoria y almacenamiento en nuestra infraestructura, dimensionados para tus aplicaciones y ampliables cuando creces.</p>
+        <ul class="tags"><li>Escalables</li><li>Sin comprar hardware</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-clock"/></svg></span>
+        <h3>Backup remoto</h3>
+        <p>Copias con Veeam fuera de tu oficina, con la frecuencia y el tiempo de recuperación que pide cada sistema, y restauraciones de prueba.</p>
+        <ul class="tags"><li>Veeam</li><li>3-2-1</li><li>Pruebas</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-signal"/></svg></span>
+        <h3>Conectividad privada</h3>
+        <p>Enlace dedicado de Anxanet entre tu sede y el datacenter, por fibra o radioenlace, integrado en tu red corporativa.</p>
+        <ul class="tags"><li>Fibra</li><li>Radioenlace</li><li>VLAN</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-grid"/></svg></span>
+        <h3>Réplica de servidores locales</h3>
+        <p>Si tus servidores tienen que seguir en planta, los replicamos en el datacenter para recuperar el servicio si falla el local.</p>
+        <ul class="tags"><li>Réplica</li><li>Continuidad</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <h3>Monitorización de sistemas alojados</h3>
+        <p>Supervisamos disponibilidad, rendimiento, consumo de recursos, temperatura y conectividad, junto con el resto de tus sistemas.</p>
+        <ul class="tags"><li>Disponibilidad</li><li>Recursos</li></ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head rv">Servicios relacionados</h3>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Servidores, copias y migraciones</h4><p>El diseño de tu arquitectura, la virtualización y las copias de seguridad, estén donde estén tus servidores.</p></a>
+      <a class="card rv" style="--s:1" href="/telecomunicaciones/"><span class="cat">Telecomunicaciones</span><h4>Conectividad con operador propio</h4><p>Conexiones a Internet de hasta 10&nbsp;Gb, fibra y radioenlaces con Anxanet, el mismo operador que despliega tu enlace privado.</p></a>
+      <a class="card rv" style="--s:2" href="/ciberseguridad/"><span class="cat">Ciberseguridad</span><h4>Tus políticas, también en el datacenter</h4><p>Firewall, segmentación y protección de servidores aplicadas por igual en tu oficina y en el datacenter.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO ============ -->
+<section class="sec" id="metodo" aria-labelledby="h-met" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 id="h-met">Del armario de la oficina al datacenter, paso a paso</h2>
+      <p>Un traslado al datacenter empieza por entender qué tienes y termina cuando tu equipo trabaja igual o mejor que antes. Entre medio, decidimos contigo qué alojar, cómo conectarlo y cómo protegerlo.</p>
+      <p>Cuando algo necesita atención, hablas con técnicos que conocen tu infraestructura. Las incidencias y las actuaciones quedan en nuestra extranet de ticketing, donde las sigues en tiempo real.</p>
+      <p><a class="txt-link" href="/sistemas-cloud/#migracion">Cómo planificamos una <span class="nw">migración<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+    <ol class="steps rv" style="--s:1">
+      <li><b>Análisis</b><p>Revisamos tus servidores, tus copias, tu conexión y lo que necesita cada aplicación.</p></li>
+      <li><b>Propuesta concreta</b><p>Qué alojar, en housing o virtualizado, cómo conectarlo con tu oficina y cómo protegerlo.</p></li>
+      <li><b>Conexión</b><p>Desplegamos el enlace privado con Anxanet y lo integramos en tu red antes de mover nada.</p></li>
+      <li><b>Migración planificada</b><p>Por fases, con pruebas previas y un plan de vuelta atrás, para minimizar paradas.</p></li>
+      <li><b>Supervisión y soporte</b><p>Monitorización integrada con el resto de tus sistemas y seguimiento en la extranet.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section class="sec" aria-labelledby="h-aud" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Para quién</span>
+      <h2 id="h-aud">¿A quién le encaja un datacenter de proximidad?</h2>
+      <p class="lead">A empresas que quieren sacar los servidores de la oficina sin alejarse de ellos.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Servidores en una sala sin condiciones</h3><p>Equipos críticos en un armario sin climatización propia, sin SAI fiable o al alcance de cualquiera.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Copias en el mismo sitio que los datos</h3><p>Necesitas una copia fuera de la oficina, verificada y lejos de tu red de producción.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Datos sensibles o requisitos normativos</h3><p>Tienes que saber dónde están físicamente tus datos y poder demostrar quién accede a ellos.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Industria con sistemas de producción</h3><p>Aplicaciones que necesitan respuesta rápida y estable desde la planta, por un camino privado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS ============ -->
+<section class="sec" id="casos" aria-labelledby="h-casos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Casos de éxito</span>
+      <h2 id="h-casos">Aplicaciones que ya viven en nuestro cloud</h2>
+      <p class="lead">Empresas que alojan con nosotros sus aplicaciones corporativas y nos confían también la red y las telecomunicaciones.</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom · Cloud</span><h3>Granier</h3><p>Alojamos en nuestro cloud diferentes aplicaciones corporativas de Granier. También llevamos las redes de sus oficinas, fábricas y tiendas y la centralita virtual que interconecta sus sedes.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Aplicaciones corporativas en nuestro cloud</div></div></article>
+      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy" width="800" height="437"></figure><div class="body"><span class="kind">Software a medida · Cloud · Networking</span><h3>HITECSA</h3><p>Desde hace años nos confía su computación en la nube: alojamos sus aplicaciones corporativas en nuestro cloud. También desarrollamos sus programas de gestión y control a medida.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Infraestructura, telecomunicaciones y cloud</div></div></article>
+      <article class="proj rv" style="--s:2"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Instalaciones · Cloud · Ciberseguridad</span><h3>PIMEC</h3><p>Alojamiento cloud de aplicaciones corporativas, junto con la creación de un nuevo CPD en su sede, la interconexión de sedes y la gestión de networking y seguridad.</p><div class="hl"><svg><use href="#i-net"/></svg>Cloud y nuevo CPD en su sede</div></div></article>
+    </div>
+
+    <h3 class="sub-head rv">Más casos, con resultados medibles</h3>
+    <div class="res two cases-wp">
+      <div class="rv" style="--s:0">{{ m.anonCase(
+        "Una planta que dejó de parar por los servidores",
+        "Industria · Housing y enlace privado",
+        "Una empresa industrial tenía los servidores en un armario sin refrigeración adecuada, sin SAI y sin monitorización, y las copias en el mismo espacio. Dos incidencias en dos años habían parado la producción durante horas.",
+        "Traslado de los servidores a nuestro datacenter en housing, enlace privado directo entre la nave y el datacenter y copias remotas automatizadas con pruebas periódicas de restauración. Los sistemas de producción van más rápido que antes porque el enlace es directo.",
+        ["Paradas de producción por infraestructura: 0", "Acceso a producción sin pasar por Internet"]
+      ) }}</div>
+      <div class="rv" style="--s:1">{{ m.anonCase(
+        "Copias que ahora se sabe que funcionan",
+        "Servicios profesionales · Backup remoto",
+        "Una empresa de servicios hacía copias diarias, pero todas en la misma oficina que los servidores. Tras un ataque de ransomware, las copias también estaban afectadas y la recuperación fue parcial.",
+        "Estrategia de backup remoto con réplica en nuestro datacenter, copias inmutables aisladas de la red del cliente y pruebas de restauración documentadas cada mes.",
+        ["Tiempo de recuperación: de semanas a horas", "Procedimiento de restauración documentado y probado"]
+      ) }}</div>
+    </div>
+    <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre el datacenter") }}
+
+<!-- ============ RECURSOS ============ -->
+<section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Recursos</span>
+        <h2 id="h-res">Para decidir dónde alojar tus sistemas</h2>
+      </div>
+      <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/recursos/datacenter-de-proximidad/"><span class="cat">Cloud y datacenter</span><h3>Datacenter de proximidad: qué es</h3><p>Qué lo distingue de la nube pública y para qué cargas de trabajo encaja mejor.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/datacenter-propio-o-nube-publica/"><span class="cat">Cloud y datacenter</span><h3>Datacenter propio o nube pública</h3><p>Control, coste, latencia y escalabilidad: cómo comparar las dos opciones para cada sistema.</p></a>
+      <a class="card rv" style="--s:2" href="/recursos/enlace-privado-oficina-datacenter/"><span class="cat">Telecomunicaciones</span><h3>Enlace privado oficina-datacenter</h3><p>Qué es una conexión dedicada entre tu sede y tus servidores y en qué se diferencia de una VPN.</p></a>
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(title="¿Qué te gustaría tener más cerca?", text="Dinos qué servidores tienes, dónde están ahora y desde qué sedes se usan. Te proponemos qué alojar, cómo conectarlo con tu oficina y cómo protegerlo, sin compromiso y con un plan que puedas comparar.", area="Sistemas y cloud") }}
+
+{% endblock %}

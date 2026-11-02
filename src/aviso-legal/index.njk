@@ -1,0 +1,81 @@
+---
+title: "Aviso legal | ADQA"
+description: "Aviso legal de ADQA: datos identificativos de Ingeniería y Suministros Profesionales, S.L., finalidad de la web, legislación aplicable y propiedad intelectual."
+keyword: "aviso legal ADQA"
+breadcrumbs:
+  - { name: "Aviso legal" }
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO (compacto, sin animación de palabras) ============ -->
+<section class="hero page-hero doc-hero" aria-labelledby="h-hero">
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Información legal</span>
+    <h1 id="h-hero">Aviso legal</h1>
+    <p class="lead">Datos identificativos del titular de este sitio web y condiciones de uso.</p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!--
+  Texto migrado LITERALMENTE de la página «Aviso Legal» del WordPress (pages/aviso-legal.md).
+  Única adaptación: decisión D1 (titular único: Ingeniería y Suministros Profesionales, S.L.).
+  Cada cambio está marcado con un comentario «CAMBIO LEGAL» para que lo valide el asesor.
+-->
+<section class="sec doc-sec" aria-labelledby="h-adqa">
+  <div class="wrap">
+    <article class="doc">
+      <h2 id="h-adqa">ADQA</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE) a continuación se detallan los datos identificativos de la empresa:</p>
+      <!-- CAMBIO LEGAL: el WordPress decía «Razón social de las empresas de la marca ADQA (Aplicaciones y Desarrollo en Tecnología de la Información S.L, Ingenieria y Suministros Profesionales S.L, Electronica de Consumo y Mantenimientos Informaticos S.L)». Se adapta a una sola sociedad (D1), en singular. -->
+      <p>Razón social de la empresa de la marca <strong>ADQA (Ingeniería y Suministros Profesionales, S.L.)</strong></p>
+      <!-- CAMBIO LEGAL: la tabla del WordPress listaba tres sociedades. Se conserva solo la fila de Ingeniería y Suministros Profesionales, S.L. (CIF e inscripción registral literales del WordPress) y se eliminan las de Aplicaciones y Desarrollo en Tecnología de la Información S.L. (B63160709) y Electronica de Consumo y Mantenimientos Informaticos S.L. (B59962928). -->
+      <table class="doc-table">
+        <caption class="sr">Datos identificativos de la empresa</caption>
+        <tbody>
+          <tr><th scope="row">Razón social</th><td>Ingeniería y Suministros Profesionales, S.L.</td></tr>
+          <tr><th scope="row">CIF</th><td>B63160683</td></tr>
+          <tr><th scope="row">Inscripción Registral</th><td>Inscrita en el registro Mercantil de Barcelona, Tomo 35475,Folio 77, Hoja B 269066, Inscripción 1</td></tr>
+          <!-- CAMBIO LEGAL: filas añadidas. El texto del WordPress no incluía domicilio, teléfono ni correo electrónico, datos que pide el art. 10 LSSI. Validar con el asesor. -->
+          <tr><th scope="row">Domicilio</th><td>C. Masia d'en Notari 23, Nave 3, Polígono Masia d'en Frederic, 08800 Vilanova i la Geltrú, Barcelona</td></tr>
+          <tr><th scope="row">Teléfono</th><td><a href="tel:{{ site.phoneE164 }}">{{ site.phone }}</a></td></tr>
+          <tr><th scope="row">Correo electrónico</th><td><a href="mailto:{{ site.email }}">{{ site.email }}</a></td></tr>
+        </tbody>
+      </table>
+
+      <h3>FINALIDAD DE LA PÁGINA WEB</h3>
+      <p>Dar información de la empresa y los artículos que comercializa.</p>
+      <!-- AVISO ASESOR: el dominio citado es el del WordPress («www.adqa.com»). Confirmar el dominio definitivo de la web nueva antes de publicar. -->
+      <p>El presente aviso legal (en adelante, el «Aviso Legal») regula el uso del sitio web: <a href="http://www.adqa.com">www.adqa.com</a></p>
+
+      <h3>LEGISLACIÓN</h3>
+      <p>Con carácter general las relaciones entre <strong>ADQA</strong> con los Usuarios de sus servicios telemáticos, presentes en este sitio web, se encuentran sometidas a la legislación y jurisdicción españolas.</p>
+
+      <h3>USO Y ACCESO DE USUARIOS</h3>
+      <p>El Usuario queda informado, y acepta, que el acceso a la presente web no supone, en modo alguno, el inicio de una relación comercial con <strong>ADQA</strong> o cualquiera de sus delegaciones.</p>
+
+      <h3>PROPIEDAD INTELECTUAL E INDUSTRIAL</h3>
+      <p>Los derechos de propiedad intelectual del contenido de las páginas web, su diseño gráfico y códigos son titularidad de <strong>ADQA</strong> y, por tanto, queda prohibida su reproducción, distribución, comunicación pública, transformación o cualquier otra actividad que se pueda realizar con los contenidos de sus páginas web ni aun citando las fuentes, salvo consentimiento por escrito de <strong>ADQA</strong>.</p>
+
+      <h3>CONTENIDO DE LA WEB Y ENLACES (LINKS)</h3>
+      <p><strong>ADQA</strong> se reserva el derecho a actualizar, modificar o eliminar la información contenida en sus páginas web pudiendo incluso limitar o no permitir el acceso a dicha información a ciertos usuarios.</p>
+    </article>
+
+    <aside class="card doc-more" aria-labelledby="h-more">
+      <h2 id="h-more">Otros textos legales</h2>
+      <ul>
+        <li><a href="/politica-de-privacidad/">Política de privacidad <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/politica-de-seguridad/">Política de seguridad <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/contacto/">Contacto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+      <p>Si tienes alguna duda sobre este aviso legal, escríbenos a <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    </aside>
+  </div>
+</section>
+
+{% endblock %}

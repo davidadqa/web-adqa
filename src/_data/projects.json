@@ -4,7 +4,7 @@
   "name": "Consorci Sanitari Alt Penedès-Garraf",
   "image": "consorci-sanitari-hospital.webp",
   "alt": "Hospital del Consorci Sanitari Alt Penedès-Garraf",
-  "kind": "Proyecto y mantenimiento 24/7 · IT y telecom",
+  "kind": "Proyecto y mantenimiento 24/7 · Informática y telecom",
   "summary": "Interconexión de los hospitales mediante enlaces licenciados de muy alta capacidad y fibra oscura MUX-DEMUX, y redes WiFi en todos los centros para pacientes y usuarios.",
   "highlight": "100 Gb/s entre sedes",
   "icon": "i-signal"
@@ -24,7 +24,7 @@
   "name": "KUKA Robots Iberia",
   "image": "kuka-robots.webp",
   "alt": "Robots industriales KUKA",
-  "kind": "Dirección TI · Ciberseguridad · Telecom",
+  "kind": "Dirección TIC · Ciberseguridad · Telecom",
   "summary": "Asumimos la dirección del servicio TIC de esta multinacional alemana de robótica: red Ruckus en la central de España e implantación dirigida en delegaciones como Argentina y País Vasco.",
   "highlight": "Firewall y networking internacional",
   "icon": "i-shield"
@@ -45,8 +45,8 @@
   "image": "pimec-sede.webp",
   "alt": "Auditorio de la sede de PIMEC",
   "kind": "Instalaciones · Cloud · Ciberseguridad",
-  "summary": "Mantenimiento integral, telecomunicaciones y WiFi Ruckus, nuevo CPD de última generación, networking, seguridad, interconexión de sedes y suministro continuado.",
-  "highlight": "Nuevo CPD de última generación",
+  "summary": "Mantenimiento integral, telecomunicaciones y WiFi Ruckus, nuevo CPD, networking, seguridad, interconexión de sedes y suministro continuado.",
+  "highlight": "Nuevo CPD e interconexión de sedes",
   "icon": "i-cloud"
  },
  {

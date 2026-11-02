@@ -1,96 +1,174 @@
 ---
-title: "Diseño web y software a medida para empresas | ADQA"
-description: "Diseño y programación web, software a medida y mantenimiento web para empresas e instituciones, con dominios, alojamiento y correo en un único proveedor TIC."
+title: "Diseño y programación web para empresas en Barcelona | ADQA"
+description: "Diseño y programación web para empresas en Barcelona: webs corporativas y tiendas online con los textos incluidos, software a medida y mantenimiento web."
+keyword: "diseño y programación web para empresas en Barcelona"
+breadcrumbs:
+  - { name: "Diseño web y software" }
+service:
+  name: "Diseño y programación web para empresas"
+  serviceType: "Diseño web"
+faq:
+  manager:
+    - q: "¿Qué incluye un proyecto de diseño web con ADQA?"
+      a: "Un proyecto de diseño web con ADQA incluye la definición de los mensajes clave, la arquitectura de la información, la redacción de todos los textos, la orientación fotográfica, el diseño a medida, la programación con SEO técnico desde el primer día y la formación a tu equipo para que pueda actualizar la web. Si lo necesitas, también nos ocupamos del dominio, el alojamiento, el correo y el mantenimiento después de la publicación."
+    - q: "¿Necesito una web nueva o puedo mejorar la que tengo?"
+      a: "Depende de su estado. Si la base técnica es sólida y lo que ha envejecido es el diseño o el contenido, se puede mejorar sin reconstruirla. Si la tecnología está desfasada o la web no funciona bien en el móvil, normalmente es más eficiente empezar de nuevo. Lo revisamos contigo antes de proponerte una opción u otra."
+    - q: "¿Cuánto tarda en estar lista una web corporativa?"
+      a: "Habitualmente, una web corporativa está lista en un plazo de entre 4 y 8 semanas. Lo que más influye en el calendario es la entrega de materiales: fotografías, información y validaciones. Por eso te acompañamos en esa parte y te decimos en cada fase qué necesitamos y cuándo."
+    - q: "¿Hacéis webs para ayuntamientos y otras administraciones públicas?"
+      a: "Sí. Para el Ajuntament de Vilanova i la Geltrú aportamos la ordenación del contenido, la puesta en marcha de funcionalidades y el diseño gráfico de la web municipal, y en una segunda fase programamos en HTML y CSS toda la web. ADQA tiene además la certificación ENS en categoría ALTA, un requisito habitual en proyectos con la administración."
+  tecnico:
+    - q: "¿Con qué tecnologías hacéis las webs?"
+      a: "Las webs con gestor de contenidos las desarrollamos principalmente con WordPress y Elementor, y las tiendas online con WooCommerce o con otras tecnologías cuando el proyecto lo pide, por ejemplo por la integración con un ERP. Cuando el contenido cambia poco, también proponemos webs estáticas en HTML y CSS, que cargan muy rápido y necesitan menos mantenimiento."
+    - q: "¿Podéis integrar la web con un ERP, un CRM o una pasarela de pago?"
+      a: "Sí. Conectamos la web con ERP, CRM y pasarelas de pago mediante sus API o con extensiones específicas. Si el sistema es propietario o la integración es compleja, estudiamos el alcance caso a caso; cuando la integración necesita lógica propia, la planteamos como un desarrollo de software a medida."
+    - q: "¿Hacéis webs en varios idiomas con SEO independiente por idioma?"
+      a: "Sí. Cada idioma tiene sus propias URL y las etiquetas hreflang correctas, para que cada versión pueda posicionar en su mercado. Trabajamos habitualmente en castellano, catalán e inglés, y cada versión se revisa con criterio editorial antes de publicarse."
+    - q: "¿Qué hacéis para que la web cargue rápido?"
+      a: "Tomamos como referencia las métricas Core Web Vitals de Google: LCP, CLS e INP. Usamos imágenes en formato WebP, carga diferida, CSS crítico en línea y el mínimo JavaScript posible, y medimos el resultado antes de publicar. La velocidad ayuda al posicionamiento y, sobre todo, a quien visita la web desde el móvil."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
-{% block head %}
-<style>
-/* Diseño web: piezas propias (los componentes de página interior están en site.css) */
-.cmp .when{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:.95rem}
-.cmp .when strong{color:var(--ink);font-weight:600}
-.proj figure img.top-left{object-position:left top}
-</style>
-{% endblock %}
+{% block head %}{% endblock %}
 {% block content %}
 
 <!-- ============ HERO ============ -->
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.05s">Diseño web · Software a medida · Mantenimiento web</span>
-    <h1 id="h-hero" data-words>Diseño web y software a medida <span class="accent">al servicio de tu negocio</span></h1>
-    <p class="lead fade-in" style="--d:.8s">Webs que transmiten tu mensaje y programas que se ajustan a tu forma de trabajar. Y alrededor, todo lo que los hace funcionar: dominio, alojamiento, correo y mantenimiento, con el mismo equipo que puede ocuparse del resto de tu tecnología.</p>
+    <span class="eyebrow fade-in" style="--d:.05s">Diseño web · E-commerce · Software a medida · Mantenimiento</span>
+    <h1 id="h-hero" data-words>Diseño web para empresas en Barcelona, <span class="accent">del mensaje al código</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Empezamos por lo que quieres contar y a quién. Después escribimos los textos, diseñamos y programamos. Y cuando la web ya está publicada, la cuida el mismo equipo que puede llevar tu dominio, tu correo y el resto de tu tecnología.</p>
     <div class="hero-ctas fade-in" style="--d:.95s">
       <a class="btn btn-primary" href="#contacto">Cuéntanos tu proyecto <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#servicios">Ver qué incluye</a>
+      <a class="btn btn-ghost" href="#como-trabajamos">Ver cómo trabajamos</a>
     </div>
     <div class="trust fade-in" style="--d:1.1s">
-      <span><svg><use href="#i-check"/></svg>Más de 30 años de experiencia</span>
-      <span><svg><use href="#i-check"/></svg>Desarrollamos nuestro propio software</span>
-      <span><svg><use href="#i-check"/></svg>ISO 9001:2015 · ENS categoría ALTA</span>
+      <span><svg><use href="#i-check"/></svg>Más de 30 años</span>
+      <span><svg><use href="#i-check"/></svg>ISO 9001:2015</span>
+      <span><svg><use href="#i-check"/></svg>ENS categoría ALTA</span>
     </div>
   </div>
 </section>
 
-<nav class="crumbs wrap fade-in" style="--d:1.2s" aria-label="Ruta de navegación">
-  <ol>
-    <li><a href="/">Inicio</a></li>
-    <li><span aria-current="page">Diseño web y software a medida</span></li>
-  </ol>
-</nav>
+{{ m.crumbs(breadcrumbs) }}
 
-<!-- ============ EN RESUMEN (answer-first) ============ -->
-<section class="sec" id="en-resumen" aria-labelledby="h-sum" style="padding:clamp(56px,7vw,88px) 0 0">
+<!-- ============ EN RESUMEN ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding-top:clamp(56px,7vw,88px)">
   <div class="wrap intro">
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
-      <h2 id="h-sum" class="sr">¿Qué ofrece ADQA en diseño web y software a medida?</h2>
-      <p class="tldr"><strong>ADQA diseña y programa webs y desarrolla software a medida para empresas e instituciones públicas.</strong> Completa el servicio con dominios, alojamiento, soluciones de correo electrónico, marketing digital y mantenimiento web, gestionados por el mismo proveedor que se ocupa de la informática, las telecomunicaciones y la ciberseguridad de sus clientes. Tiene más de 30 años de experiencia y certificado de calidad ISO 9001:2015.</p>
+      <h2 id="h-resumen" class="sr">¿Qué ofrece ADQA en diseño y programación web?</h2>
+      <p class="tldr"><strong>ADQA diseña y programa webs corporativas y tiendas online para empresas e instituciones de Barcelona, con la redacción de los textos incluida en el proyecto.</strong> También desarrolla software de gestión a medida y mantiene webs ya publicadas. El dominio, el correo y el alojamiento en su datacenter propio y de proximidad quedan en manos del mismo equipo.</p>
     </div>
     <div class="stats">
-      <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en cada una de nuestras áreas de negocio</span></div>
-      <div class="stat rv" style="--s:1"><b>Propia</b><span>extranet de ticketing, desarrollada por ADQA y adaptable a cada cliente</span></div>
-      <div class="stat rv" style="--s:2"><b>ISO</b><span>9001:2015, certificado de calidad como garantía de servicio</span></div>
-      <div class="stat rv" style="--s:3"><b>ALTA</b><span>primera empresa del Garraf con certificación ENS en categoría ALTA</span></div>
+      <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en tecnología para empresas</span></div>
+      <div class="stat rv" style="--s:1"><b>Textos</b><span>redactados por nuestro equipo, incluidos en cada proyecto web</span></div>
+      <div class="stat rv" style="--s:2"><b>Propio</b><span>datacenter de proximidad en Barcelona para alojar tu web y tus aplicaciones</span></div>
+      <div class="stat rv" style="--s:3"><b>ISO</b><span>9001:2015, el certificado de calidad que ordena cómo trabajamos</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ QUÉ HACEMOS POSIBLE (pain points en positivo) ============ -->
+<!-- ============ LO QUE HACEMOS POSIBLE ============ -->
 <section class="sec" aria-labelledby="h-pos">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Lo que cambia en tu día a día</span>
-      <h2 id="h-pos">¿Qué hacemos posible con tu web y tu software?</h2>
-      <p class="lead">Una web clara y unas herramientas que encajan con tu forma de trabajar ahorran explicaciones, llamadas y hojas de cálculo paralelas. Ese es el objetivo.</p>
+      <span class="eyebrow">Lo que cambia con una buena web</span>
+      <h2 id="h-pos">Una web que trabaja contigo</h2>
+      <p class="lead">Una web clara ahorra explicaciones, llamadas y correos de ida y vuelta. Esto es lo que más nos piden cuando alguien renueva la suya.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-mail"/></svg></span><h3>Tu mensaje llega claro</h3><p>Ordenamos el contenido antes de diseñar, para que cada visitante encuentre lo que busca y entienda qué haces.</p></div>
-      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-code"/></svg></span><h3>El software se adapta a ti</h3><p>Programas de gestión y control pensados para tus procesos, en lugar de cambiar tus procesos para que encajen en un programa.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Web, dominio y correo, en orden</h3><p>Dominios, alojamiento y correo gestionados por el mismo equipo, con un único contacto para cualquier cambio.</p></div>
-      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-clock"/></svg></span><h3>Tu web, siempre al día</h3><p>Un mantenimiento web que la mantiene actualizada y en forma mientras tú te dedicas a tu negocio.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Que el visitante se reconozca</h3><p>Explicamos qué problemas resuelves, no solo qué servicios tienes. Quien llega entiende enseguida si eres lo que busca.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Que te encuentren y te escriban</h3><p>Estructura pensada para Google desde el primer día y llamadas a la acción donde ayudan a dar el paso.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-tool"/></svg></span><h3>Que la actualices tú</h3><p>Formamos a tu equipo para publicar noticias, páginas o documentos sin depender de nadie para cada cambio.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3>Que se lea bien en el móvil</h3><p>Diseñamos a la vez para el móvil y el ordenador, porque una buena parte de tus visitas llega desde el bolsillo.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ DISEÑO Y PROGRAMACIÓN WEB ============ -->
-<section class="sec" id="diseno-web" aria-labelledby="h-web" style="padding-top:0">
+<!-- ============ MÉTODO ============ -->
+<section class="sec" id="como-trabajamos" aria-labelledby="h-met" style="padding-top:0">
   <div class="wrap split">
     <div class="txt rv">
-      <span class="eyebrow">Diseño y programación web</span>
-      <h2 id="h-web">¿Cómo se construye una web que transmite tu mensaje?</h2>
-      <p>Una buena web empieza mucho antes del diseño. Primero hay que decidir <strong>qué quieres contar, a quién y en qué orden</strong>; después, qué tiene que poder hacer el visitante; y solo entonces darle forma visual y programarla.</p>
-      <p>Así trabajamos la web del <strong>Ajuntament de Vilanova i la Geltrú</strong>: aportamos la ordenación del contenido, la puesta en marcha de funcionalidades y el diseño gráfico, y en una segunda fase nos encargamos de la programación HTML y CSS de toda la web.</p>
-      <p>Podemos acompañarte en todas las fases o solo en las que necesites y, cuando la web ya esté publicada, seguir cuidándola con nuestro <a class="txt-link" href="#mantenimiento-web">mantenimiento web</a>.</p>
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 id="h-met">¿Por dónde empieza una buena web?</h2>
+      <p>Por unas preguntas, no por el diseño. ¿A quién le habla esta web? ¿Qué problema le resuelves? ¿Por qué tú y no otro? Con las respuestas ordenamos el contenido y decidimos qué tiene que poder hacer el visitante.</p>
+      <p>En el equipo conviven perfiles técnicos y de comunicación. Por eso <strong>escribimos todos los textos de la web</strong>: la recibes con el contenido listo para publicar. Y orientamos la fotografía, porque también forma parte del mensaje.</p>
+      <p>Así trabajamos la web del <strong>Ajuntament de Vilanova i la Geltrú</strong>: ordenación del contenido, funcionalidades y diseño gráfico, y en una segunda fase, la programación HTML y CSS de toda la web.</p>
     </div>
     <ol class="steps rv" style="--s:1">
-      <li><b>Ordenación del contenido</b><p>Qué secciones necesita la web, qué va en cada una y cómo se llega a ellas. Es la base de una navegación sencilla.</p></li>
-      <li><b>Funcionalidades</b><p>Lo que la web tiene que permitir: formularios, buscadores, áreas de descarga, varios idiomas o la conexión con otras herramientas.</p></li>
-      <li><b>Diseño gráfico</b><p>La imagen de tu marca aplicada a cada página, legible y coherente en el ordenador y en el móvil.</p></li>
-      <li><b>Programación HTML y CSS</b><p>El diseño convertido en páginas reales, ligeras y bien estructuradas para que los buscadores las entiendan.</p></li>
-      <li><b>Publicación y mantenimiento</b><p>Dominio, alojamiento y correo configurados, y la web mantenida al día después del lanzamiento.</p></li>
+      <li><b>Mensajes clave</b><p>A quién habla la web, qué le resuelves y qué te diferencia, por escrito antes de diseñar.</p></li>
+      <li><b>Arquitectura de la información</b><p>Qué secciones hay, qué va en cada una y cómo se llega a ellas.</p></li>
+      <li><b>Redacción de los textos</b><p>Todos los textos, incluidos en el proyecto, con las palabras que usan tus clientes.</p></li>
+      <li><b>Diseño a medida</b><p>Tu marca aplicada a cada página, con una jerarquía clara en el móvil y en el ordenador.</p></li>
+      <li><b>Programación y SEO técnico</b><p>Páginas ligeras, bien estructuradas y accesibles, que los buscadores entienden.</p></li>
+      <li><b>Publicación y formación</b><p>Dominio, alojamiento y correo configurados, y tu equipo preparado para actualizarla.</p></li>
     </ol>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="sec" id="servicios" aria-labelledby="h-serv" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Servicios web</span>
+      <h2 id="h-serv">¿Qué podemos hacer por tu web?</h2>
+      <p class="lead">De una web corporativa a una tienda online conectada con tu ERP, con el diseño, la programación y el mantenimiento a cargo del mismo equipo.</p>
+    </div>
+    <div class="services">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-code"/></svg></span>
+        <h3>Webs corporativas</h3>
+        <p>Diseño a medida, estructura pensada para que te contacten y un gestor de contenidos que tu equipo maneja desde el primer día.</p>
+        <ul class="tags"><li>Diseño a medida</li><li>Textos</li><li>Multiidioma</li></ul>
+      </div>
+      <!-- FASE 3 (D6): enlazar a /diseno-programacion-web/e-commerce/ cuando exista la página sectorial. -->
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-box"/></svg></span>
+        <h3>E-commerce a medida</h3>
+        <p>Tiendas online para venta a empresas (B2B) y a particulares (B2C), con catálogo, tarifas y pedidos integrados con el ERP de tu empresa.</p>
+        <ul class="tags"><li>B2B</li><li>B2C</li><li>Integración con ERP</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-clock"/></svg></span>
+        <h3>Rendimiento y SEO técnico</h3>
+        <p>Velocidad de carga, código limpio y una estructura que los buscadores entienden. Lo cuidamos al programar, no al final.</p>
+        <ul class="tags"><li>Velocidad</li><li>SEO técnico</li><li>Core Web Vitals</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-user"/></svg></span>
+        <h3>Accesibilidad</h3>
+        <p>Webs que pueden usar también las personas con discapacidad visual, auditiva o motora: contraste, textos alternativos y navegación con teclado.</p>
+        <ul class="tags"><li>Pautas WCAG</li><li>Lectores de pantalla</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-shield"/></svg></span>
+        <h3>Migraciones y rediseños</h3>
+        <p>Cambiamos la tecnología o el diseño sin perder lo que ya funciona: contenidos, direcciones y posicionamiento, con la seguridad al día.</p>
+        <ul class="tags"><li>Redirecciones</li><li>Contenidos</li><li>Seguridad</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-signal"/></svg></span>
+        <h3>Marketing digital</h3>
+        <p>Acciones para dar visibilidad a tu web y a lo que haces, con los mismos mensajes que trabajamos al diseñarla.</p>
+        <ul class="tags"><li>Visibilidad</li><li>Contenido</li></ul>
+      </div>
+      <a class="card svc wide rv" href="/desarrollo-software-medida/" style="--s:0">
+        <span class="ico"><svg><use href="#i-grid"/></svg></span>
+        <h3>Desarrollo de software a medida</h3>
+        <p>Intranets, portales de clientes, aplicaciones de gestión e integraciones, construidas a partir de tus procesos y con una especificación funcional antes de programar.</p>
+        <ul class="tags"><li>Intranets</li><li>Portales</li><li>Integraciones</li></ul>
+        <span class="more">Software a medida <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card svc wide rv" href="/diseno-programacion-web/mantenimiento-web-para-empresas/" style="--s:1">
+        <span class="ico"><svg><use href="#i-tool"/></svg></span>
+        <h3>Mantenimiento web</h3>
+        <p>Actualizaciones verificadas, copias de seguridad diarias que comprobamos, seguridad, certificado SSL y dominios. También para webs que no hemos hecho nosotros.</p>
+        <ul class="tags"><li>Actualizaciones</li><li>Copias verificadas</li><li>Soporte</li></ul>
+        <span class="more">Mantenimiento web <svg><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -107,172 +185,102 @@ description: "Diseño y programación web, software a medida y mantenimiento web
         <h3><span class="ico"><svg><use href="#i-code"/></svg></span>Web estática</h3>
         <ul>
           <li><svg><use href="#i-check"/></svg><span>Páginas HTML y CSS servidas tal cual: cargan muy rápido.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Menos piezas en el servidor, así que la superficie de ataque es menor.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Requiere poco mantenimiento técnico.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Menos piezas en el servidor, así que hay menos puntos que proteger.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Necesita poco mantenimiento técnico.</span></li>
         </ul>
         <p class="when"><strong>A tener en cuenta:</strong> cada cambio de contenido pasa por editar el código.<br><strong>Encaja si</strong> tu web cambia poco y prefieres delegar las actualizaciones.</p>
       </div>
       <div class="cmp opt rv" style="--s:1">
-        <h3><span class="ico"><svg><use href="#i-grid"/></svg></span>Web con gestor de contenidos (CMS)</h3>
+        <h3><span class="ico"><svg><use href="#i-grid"/></svg></span>Web con gestor de contenidos</h3>
         <ul>
           <li><svg><use href="#i-check"/></svg><span>Tu equipo publica noticias, páginas o documentos sin programar.</span></li>
           <li><svg><use href="#i-check"/></svg><span>Admite blog, varios idiomas o catálogos con facilidad.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Se amplía con extensiones cuando aparecen necesidades nuevas.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Crece con extensiones cuando aparecen necesidades nuevas.</span></li>
         </ul>
-        <p class="when"><strong>A tener en cuenta:</strong> el gestor y sus extensiones necesitan actualizaciones periódicas.<br><strong>Encaja si</strong> publicas a menudo y quieres hacerlo tú mismo.</p>
+        <p class="when"><strong>A tener en cuenta:</strong> el gestor y sus extensiones necesitan actualizaciones periódicas.<br><strong>Encaja si</strong> publicas a menudo y quieres hacerlo tú.</p>
       </div>
     </div>
     <p class="note rv">Te ayudamos a elegir según tu caso. <a class="txt-link" href="/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/">Web estática o web con gestor de <span class="nw">contenidos<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
   </div>
 </section>
 
-<!-- ============ SOFTWARE A MEDIDA (sección oscura) ============ -->
-<section class="sec dark-sec" id="software-a-medida" aria-labelledby="h-sw">
+<!-- ============ WEB + TECNOLOGÍA (sección oscura) ============ -->
+<section class="sec dark-sec" id="todo-conectado" aria-labelledby="h-con-tec">
   <div class="wrap strengths">
     <div class="sticky rv">
-      <span class="eyebrow">Software a medida</span>
-      <h2 id="h-sw">¿Qué aporta un software a medida frente a uno estándar?</h2>
-      <p class="lead" style="color:#bdbdbd">Un programa estándar resuelve lo que es común a muchas empresas. Un software a medida se construye a partir de tus procesos: recoge los datos que tú necesitas, en el orden en que trabajas, y crece cuando cambia tu actividad.</p>
-      <div><a class="btn btn-primary" href="#contacto">Habla con un especialista <svg><use href="#i-arrow"/></svg></a></div>
+      <span class="eyebrow">Web y tecnología, en las mismas manos</span>
+      <h2 id="h-con-tec">Tu web no vive sola</h2>
+      <p class="lead" style="color:#bdbdbd">Detrás de una web hay un dominio, un correo, un servidor y unos datos que proteger. Como también llevamos esa parte, cualquier cambio lo resuelve el mismo equipo, sin que tengas que coordinar a nadie.</p>
+      <div><a class="btn btn-primary" href="#contacto">Hablemos de tu web <svg><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="stack">
       <article class="st" style="--n:0">
-        <span class="num">01 · GESTIÓN Y CONTROL</span>
-        <h3>Programas pensados para tus procesos</h3>
-        <p>Desarrollamos programas de gestión y control a medida, como los que utiliza HITECSA, para quien quiere que la herramienta se adapte a su forma de trabajar y no al revés.</p>
-        <ul><li>Procesos propios que un estándar no recoge bien</li><li>Datos compartidos entre herramientas, sin duplicarlos</li><li>Evolución por fases, a medida que cambia tu actividad</li></ul>
+        <span class="num">01 · DOMINIO Y CORREO</span>
+        <h3>La web y el correo, coordinados</h3>
+        <p>Registramos y gestionamos tus dominios y configuramos el correo con tu dominio. Si un ajuste en la web afecta al correo, lo vemos antes de tocarlo, porque las dos piezas las llevamos nosotros.</p>
+        <ul><li>Registro y renovación de dominios</li><li>Correo corporativo con tu dominio</li><li>Google Workspace y Microsoft 365</li></ul>
       </article>
       <article class="st" style="--n:1">
-        <span class="num">02 · LO USAMOS CADA DÍA</span>
-        <h3>Nuestra extranet también es software a medida</h3>
-        <p>El centro de operaciones de nuestros servicios de instalaciones y mantenimiento es un sistema de ticketing desarrollado por ADQA. Por eso se ajusta a nuestras necesidades y a las de nuestros clientes, que dan de alta, controlan y verifican en tiempo real todas las incidencias y actuaciones en sus sedes.</p>
-        <p>Y como es nuestro, lo adaptamos a la forma de trabajar de cada cliente.</p>
+        <span class="num">02 · ALOJAMIENTO</span>
+        <h3>Tu web, en nuestro datacenter de Barcelona</h3>
+        <p>Alojamos webs y aplicaciones en nuestro datacenter propio y de proximidad en Barcelona. Sabes dónde están, quién las mantiene y a quién llamar si algo cambia.</p>
+        <a class="go" href="/sistemas-cloud/">Sistemas y cloud <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="st" style="--n:2">
-        <span class="num">03 · ALOJADO Y CONECTADO</span>
-        <h3>Tus aplicaciones, en nuestro cloud</h3>
-        <p>Podemos alojar tus aplicaciones corporativas en nuestro datacenter propio y de proximidad, como hacemos con las de HITECSA. Sabes dónde están, quién las mantiene y quién responde si algo cambia.</p>
-        <p><a class="txt-link" href="/sistemas-cloud/">Sistemas y cloud a <span class="nw">medida<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+        <span class="num">03 · SEGURIDAD</span>
+        <h3>La web, el correo y los datos, protegidos</h3>
+        <p>Seguridad web, correo seguro con Hornetsecurity y, si lo necesitas, un pentest de tu web y tus API. Lo hace el mismo equipo de ciberseguridad que puede proteger el resto de tus sistemas.</p>
+        <a class="go" href="/ciberseguridad/">Ciberseguridad <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="st" style="--n:3">
-        <span class="num">04 · MANTENER O MODERNIZAR</span>
-        <h3>No siempre hay que empezar de cero</h3>
-        <p>Si tu software de gestión actual funciona, a menudo lo más sensato es mantenerlo y ampliarlo por partes. Cuando ya no acompaña al negocio, lo modernizamos. Trabajamos contigo para decidir qué opción te conviene.</p>
-        <p><a class="txt-link" href="/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/">Mantener el software de gestión actual o <span class="nw">modernizarlo<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+        <span class="num">04 · CUANDO LA WEB SE QUEDA CORTA</span>
+        <h3>De la web al software a medida</h3>
+        <p>Un área privada para clientes, un portal para distribuidores o una conexión con tu programa de gestión. Cuando la web necesita lógica propia, la desarrollamos nosotros.</p>
+        <a class="go" href="/desarrollo-software-medida/">Software a medida <svg><use href="#i-arrow"/></svg></a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ MANTENIMIENTO WEB ============ -->
-<section class="sec" id="mantenimiento-web" aria-labelledby="h-mnt">
-  <div class="wrap split">
-    <div class="txt rv">
-      <span class="eyebrow">Mantenimiento web</span>
-      <h2 id="h-mnt">¿Qué incluye un mantenimiento web gestionado?</h2>
-      <p>Una web no se termina el día que se publica. El gestor de contenidos, sus plantillas y sus extensiones reciben actualizaciones; los certificados se renuevan; el contenido envejece. Un <strong>mantenimiento web gestionado</strong> se ocupa de todo eso de forma planificada, para que tu web siga rápida, segura y al día.</p>
-      <p>Un plugin de seguridad aporta protección automática básica, como escaneos y bloqueo de accesos sospechosos. El mantenimiento gestionado añade lo que un plugin no puede aportar: <strong>personas con criterio técnico</strong> que prueban cada cambio antes de aplicarlo y revisan la web de forma periódica.</p>
-      <p><a class="txt-link" href="/recursos/plugin-de-seguridad-o-mantenimiento-web-gestionado/">Plugin de seguridad o mantenimiento web <span class="nw">gestionado<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
-    </div>
-    <div class="cmp good rv" style="--s:1">
-      <h3>Lo que suele cubrir un mantenimiento gestionado</h3>
-      <ul>
-        <li><svg><use href="#i-check"/></svg><span><strong>Actualizaciones probadas</strong> del gestor, las plantillas y las extensiones.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Copias de seguridad</strong> verificadas, para volver a una versión anterior si hace falta.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Certificado SSL</strong> y configuración del dominio, siempre en vigor.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Revisión periódica</strong> del rendimiento y de la seguridad de la web.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Cambios y mejoras</strong> de contenido o funcionalidad cuando los necesitas.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GRAELLA DE SERVICIOS ============ -->
-<section class="sec" id="servicios" aria-labelledby="h-serv" style="padding-top:0">
+<!-- ============ WEBS POR SECTOR ============ -->
+<section class="sec" id="sectores" aria-labelledby="h-sect">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Web, mail y software</span>
-      <h2 id="h-serv">¿Qué incluye nuestro servicio de web y software?</h2>
-      <p class="lead">De la primera idea de tu web al correo con tu dominio, con el diseño, la programación, el alojamiento y el mantenimiento a cargo del mismo equipo.</p>
+      <span class="eyebrow">Webs por sector</span>
+      <h2 id="h-sect">Cada sector necesita una web distinta</h2>
+      <p class="lead">La web de una empresa industrial no se parece a la de una clínica o un restaurante. Cambian el visitante, lo que busca y lo que tiene que poder hacer.</p>
     </div>
-    <div class="services">
-      <a class="card svc rv" href="#diseno-web" style="--s:0">
-        <span class="ico"><svg><use href="#i-code"/></svg></span>
-        <h3>Diseño y programación web</h3>
-        <p>Ordenación del contenido, funcionalidades, diseño gráfico y programación HTML y CSS, por fases o de principio a fin.</p>
-        <ul class="tags"><li>Contenido</li><li>Diseño gráfico</li><li>HTML y CSS</li></ul>
-        <span class="more">Diseño web <svg><use href="#i-arrow"/></svg></span>
-      </a>
-      <a class="card svc rv" href="#software-a-medida" style="--s:1">
-        <span class="ico"><svg><use href="#i-box"/></svg></span>
-        <h3>Desarrollo de software a medida</h3>
-        <p>Programas de gestión y control construidos a partir de tus procesos, y evolución del software que ya tienes.</p>
-        <ul class="tags"><li>Gestión</li><li>Control</li><li>Modernización</li></ul>
-        <span class="more">Software a medida <svg><use href="#i-arrow"/></svg></span>
-      </a>
-      <a class="card svc rv" href="#mantenimiento-web" style="--s:2">
-        <span class="ico"><svg><use href="#i-tool"/></svg></span>
-        <h3>Mantenimiento web</h3>
-        <p>Tu web al día después del lanzamiento, con los cambios y las mejoras que vayas necesitando.</p>
-        <ul class="tags"><li>Actualizaciones</li><li>Cambios</li><li>Mejoras</li></ul>
-        <span class="more">Mantenimiento web <svg><use href="#i-arrow"/></svg></span>
-      </a>
-      <div class="card svc rv" style="--s:0">
-        <span class="ico"><svg><use href="#i-pin"/></svg></span>
-        <h3>Dominios</h3>
-        <p>Registro y gestión de tus dominios, con la configuración que conecta tu web y tu correo.</p>
-        <ul class="tags"><li>Registro</li><li>Renovación</li><li>DNS</li></ul>
-      </div>
-      <a class="card svc rv" href="/sistemas-cloud/" style="--s:1">
-        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
-        <h3>Alojamiento</h3>
-        <p>Alojamiento para tu web y tus aplicaciones. Nuestro datacenter propio y de proximidad nos permite hacerlo a medida de cada cliente.</p>
-        <ul class="tags"><li>Hosting</li><li>Datacenter propio</li></ul>
-        <span class="more">Sistemas y cloud <svg><use href="#i-arrow"/></svg></span>
-      </a>
-      <div class="card svc rv" style="--s:2">
-        <span class="ico"><svg><use href="#i-mail"/></svg></span>
-        <h3>Soluciones de e-mail</h3>
-        <p>Correo profesional con tu propio dominio, configurado y mantenido por el mismo equipo que gestiona tu web.</p>
-        <ul class="tags"><li>Correo corporativo</li><li>Tu dominio</li></ul>
-      </div>
-      <div class="card svc wide rv" style="--s:0">
-        <span class="ico"><svg><use href="#i-signal"/></svg></span>
-        <h3>Marketing digital</h3>
-        <p>Marketing digital para dar visibilidad a tu web y a lo que haces, dentro del mismo porfolio de web, mail y hosting.</p>
-        <ul class="tags"><li>Visibilidad</li><li>Contenido</li></ul>
-      </div>
-      <a class="card svc wide rv" href="/google-workspace/" style="--s:1">
-        <span class="ico"><svg><use href="#i-grid"/></svg></span>
-        <h3>Google Workspace y Microsoft 365</h3>
-        <p>Como partner oficial de Google y expertos en Microsoft 365, implantamos tu correo y tus herramientas de trabajo, con licencias, soporte a administradores y formación.</p>
-        <ul class="tags"><li>Google Partner</li><li>Microsoft 365</li><li>Formación</li></ul>
-        <span class="more">Workspace <svg><use href="#i-arrow"/></svg></span>
-      </a>
-    </div>
-
-    <h3 class="sub-head rv">Servicios que completan tu web</h3>
-    <div class="res">
-      <a class="card rv" style="--s:0" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Aplicaciones en un datacenter de proximidad</h4><p>Servidores virtuales flexibles y escalables, backup y migración del entorno, en nuestro datacenter propio o en tu CPD.</p></a>
-      <a class="card rv" style="--s:1" href="/google-workspace/"><span class="cat">Workspace</span><h4>Correo y colaboración</h4><p>Google Workspace y Microsoft 365: implantación, licenciamiento, soporte a administradores y formación a usuarios.</p></a>
-      <a class="card rv" style="--s:2" href="/ciberseguridad/"><span class="cat">Ciberseguridad</span><h4>Seguridad web y e-mail seguro</h4><p>Seguridad integral en telecomunicaciones, informática y cloud, con la certificación ENS en categoría ALTA.</p></a>
+    <!-- FASE 3 (D6): cada tarjeta tendrá página propia en la ruta de data-fase3. Cuando exista, volver a convertir la tarjeta en enlace <a href>. -->
+    <div class="res four">
+      <div class="card rv" style="--s:0" data-fase3="/diseno-programacion-web/e-commerce/"><span class="cat">Venta online</span><h3>E-commerce</h3><p>Tiendas B2B y B2C conectadas con tu ERP.</p></div>
+      <div class="card rv" style="--s:1" data-fase3="/diseno-programacion-web/empresas-industriales/"><span class="cat">Industria</span><h3>Empresas industriales</h3><p>Catálogo técnico y contacto comercial para quien compra a otras empresas.</p></div>
+      <div class="card rv" style="--s:2" data-fase3="/diseno-programacion-web/sector-publico/"><span class="cat">Administración</span><h3>Sector público</h3><p>Webs municipales con mucho contenido, accesibles y transparentes.</p></div>
+      <div class="card rv" style="--s:3" data-fase3="/diseno-programacion-web/servicios-profesionales/"><span class="cat">Servicios</span><h3>Servicios profesionales</h3><p>Despachos y consultoras que necesitan explicar bien lo que hacen.</p></div>
+      <div class="card rv" style="--s:0" data-fase3="/diseno-programacion-web/tecnologia-comunicacion/"><span class="cat">Tecnología</span><h3>Tecnología y comunicación</h3><p>Productos y servicios que no se explican en una sola frase.</p></div>
+      <div class="card rv" style="--s:1" data-fase3="/diseno-programacion-web/comercios-y-tiendas/"><span class="cat">Comercio</span><h3>Comercios y tiendas</h3><p>Que te encuentren cerca, sepan qué vendes y cuándo abres.</p></div>
+      <div class="card rv" style="--s:2" data-fase3="/diseno-programacion-web/restauracion-hosteleria/"><span class="cat">Hostelería</span><h3>Restauración y hostelería</h3><p>Carta, reservas y cómo llegar, fáciles desde el móvil.</p></div>
+      <div class="card rv" style="--s:3" data-fase3="/diseno-programacion-web/turismo-alojamiento/"><span class="cat">Turismo</span><h3>Turismo y alojamiento</h3><p>Reserva directa y toda la información del alojamiento a mano.</p></div>
+      <div class="card rv" style="--s:0" data-fase3="/diseno-programacion-web/salud-bienestar/"><span class="cat">Salud</span><h3>Salud y bienestar</h3><p>Servicios, profesionales y cita previa, explicados con claridad.</p></div>
+      <div class="card rv" style="--s:1" data-fase3="/diseno-programacion-web/entidades-asociaciones/"><span class="cat">Entidades</span><h3>Entidades y asociaciones</h3><p>Socios, actividades y noticias que la propia entidad actualiza.</p></div>
+      <div class="card rv" style="--s:2" data-fase3="/diseno-programacion-web/ocio-y-cultura/"><span class="cat">Cultura</span><h3>Ocio y cultura</h3><p>Programación, entradas y actividades al alcance del público.</p></div>
+      <div class="card rv" style="--s:3" data-fase3="/diseno-programacion-web/deporte/"><span class="cat">Deporte</span><h3>Deporte</h3><p>Clubes y entidades: equipos, horarios e inscripciones.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ ENCAJE DE CLIENTE ============ -->
+<!-- ============ PARA QUIÉN ============ -->
 <section class="sec" aria-labelledby="h-aud" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Para quién</span>
-      <h2 id="h-aud">¿Para quién es este servicio?</h2>
-      <p class="lead">Para empresas e instituciones que quieren una web y unas herramientas a su medida, con un proveedor que ya conoce el resto de su tecnología.</p>
+      <h2 id="h-aud">¿A quién le encaja este servicio?</h2>
+      <p class="lead">A empresas e instituciones que quieren una web que explique bien lo que hacen, con alguien que ya conoce el resto de su tecnología.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Empresas que renuevan su web</h3><p>Quieren explicar mejor lo que hacen y necesitan ayuda para ordenar el contenido, diseñar y programar.</p></div>
-      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Empresas con procesos propios</h3><p>Su forma de trabajar no cabe en un programa estándar y buscan software de gestión y control a medida.</p></div>
-      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Instituciones públicas</h3><p>Webs con mucho contenido y muchos usuarios, y un proveedor con certificación ENS en categoría ALTA.</p></div>
-      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Quien quiere un único interlocutor</h3><p>Web, dominio, correo, alojamiento, sistemas y seguridad con un único contacto que responde de todo.</p></div>
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Empresas que renuevan su web</h3><p>Quieren que alguien defina el mensaje y escriba los textos, no solo que monte páginas.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Empresas que venden online</h3><p>Necesitan una tienda para empresas o particulares que hable con su ERP y no duplique trabajo.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Webs en varios idiomas</h3><p>Se dirigen a mercados distintos y quieren que cada versión posicione por su cuenta.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Quien prefiere un solo interlocutor</h3><p>Web, dominio, correo, alojamiento y seguridad con una sola llamada para cualquier cambio.</p></div>
     </div>
   </div>
 </section>
@@ -283,43 +291,19 @@ description: "Diseño y programación web, software a medida y mantenimiento web
     <div class="proj-head" style="padding:0">
       <div class="sec-head rv" style="margin:0">
         <span class="eyebrow">Casos de éxito</span>
-        <h2 id="h-proj">Proyectos reales de web y software a medida</h2>
+        <h2 id="h-proj">Proyectos reales de web y software</h2>
       </div>
       <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="proj-grid">
-      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/web-vilanova.webp" alt="Web del Ajuntament de Vilanova i la Geltrú" loading="lazy" width="1400" height="788"></figure><div class="body"><span class="kind">Web · Telecom · Instalaciones</span><h3>Ajuntament de Vilanova i la Geltrú</h3><p>Aportamos la ordenación del contenido, la puesta en marcha de funcionalidades y el diseño gráfico de la web municipal. En una segunda fase nos encargamos de la programación HTML y CSS de toda la web. Varias empresas municipales nos confían, además, telecomunicaciones e instalaciones.</p><div class="hl"><svg><use href="#i-code"/></svg>Diseño y programación de toda la web</div></div></article>
-      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy" width="800" height="437"></figure><div class="body"><span class="kind">Software a medida · Cloud · Networking</span><h3>HITECSA</h3><p>Desde hace años confía a ADQA la gestión integral de sus infraestructuras informáticas, de telecomunicaciones y de computación en la nube. Desarrollamos sus programas de gestión y control a medida y alojamos sus aplicaciones corporativas en nuestro cloud.</p><div class="hl"><svg><use href="#i-box"/></svg>Programas de gestión y control a medida</div></div></article>
-      <article class="proj rv" style="--s:2"><figure><img class="top-left" src="/assets/proyectos/extranet.webp" alt="Pantalla de alta de incidencias en la extranet de ADQA" loading="lazy" width="1260" height="608"></figure><div class="body"><span class="kind">Software propio · Mantenimiento</span><h3>Extranet de ADQA</h3><p>Nuestro sistema de ticketing, desarrollado internamente, es el centro de operaciones de las instalaciones y los mantenimientos. Los clientes dan de alta, controlan y verifican en tiempo real las incidencias y actuaciones de sus sedes, y lo adaptamos a su forma de trabajar.</p><div class="hl"><svg><use href="#i-tool"/></svg>Desarrollada por ADQA</div></div></article>
+    <div class="proj-grid two">
+      {%- for id in ["ajuntament-vilanova", "hitecsa"] %}{% set k = loop.index0 %}{% for p in projects %}{% if p.id == id %}
+      <div class="rv" style="--s:{{ k }};display:grid">{{ m.projectCard(p) }}</div>
+      {%- endif %}{% endfor %}{% endfor %}
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section class="sec" id="faq" aria-labelledby="h-faq" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Preguntas frecuentes</span>
-      <h2 id="h-faq">Respuestas claras sobre web y software a medida</h2>
-    </div>
-    <div class="faq">
-      <div class="rv">
-        <h3>Para el manager</h3>
-        <details open><summary>¿Qué servicios web ofrece ADQA? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>ADQA ofrece diseño y programación web, desarrollo de software a medida y mantenimiento web, junto con dominios, alojamiento, soluciones de correo electrónico y marketing digital. También implantamos Google Workspace y Microsoft 365, así que web, correo y herramientas de trabajo quedan en manos del mismo equipo.</p></details>
-        <details><summary>¿Qué ventaja tiene encargar la web a tu proveedor de informática? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Que la web, el dominio, el alojamiento, el correo, los sistemas y la seguridad tienen un único responsable. Cuando hay que cambiar algo, por ejemplo un registro del dominio que afecta al correo, lo resuelve el mismo equipo, sin coordinar a varias empresas.</p></details>
-        <details><summary>¿Cuándo compensa desarrollar un software a medida? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Cuando tus procesos tienen particularidades que un programa estándar no recoge bien, cuando necesitas que varias herramientas compartan datos o cuando adaptar el estándar exige más esfuerzo que construir lo que necesitas. Si ya tienes un programa que funciona, a menudo lo más sensato es ampliarlo o modernizarlo por partes.</p></details>
-        <details><summary>¿Tenéis experiencia en webs de la administración pública? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sí. Para el Ajuntament de Vilanova i la Geltrú aportamos la ordenación del contenido, la puesta en marcha de funcionalidades y el diseño gráfico de la web, y en una segunda fase nos encargamos de la programación HTML y CSS de toda la web. Además, somos la primera empresa del Garraf con certificación ENS en categoría ALTA.</p></details>
-      </div>
-      <div class="rv" style="--s:1">
-        <h3>Para el responsable técnico</h3>
-        <details><summary>¿Web estática o web con gestor de contenidos (CMS)? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Depende de cuánto y quién vaya a actualizarla. Una web estática carga rápido, tiene una superficie de ataque menor y requiere poco mantenimiento, pero cada cambio pasa por editar el código. Un CMS permite que tu equipo publique contenidos sin programar, a cambio de mantener al día el gestor y sus extensiones.</p></details>
-        <details><summary>¿Dónde se alojan la web y las aplicaciones a medida? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Podemos alojarlas en nuestro datacenter propio y de proximidad, como hacemos con las aplicaciones corporativas de HITECSA, o en los servidores de tu propio CPD si lo prefieres. En los dos casos sabes dónde están y quién las mantiene.</p></details>
-        <details><summary>¿Basta con un plugin de seguridad o conviene un mantenimiento web gestionado? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Un plugin de seguridad aporta protección automática básica, como escaneos y bloqueo de accesos sospechosos. Un mantenimiento gestionado añade a personas que aplican y prueban las actualizaciones, hacen y verifican las copias de seguridad y revisan la web de forma periódica. Son complementarios: el plugin no sustituye al criterio técnico.</p></details>
-        <details><summary>¿Cómo se piden cambios o se comunican incidencias? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Con un único contacto en ADQA para todo. Además, nuestros servicios de instalaciones y mantenimiento se gestionan desde la extranet, un sistema de ticketing desarrollado por ADQA en el que das de alta incidencias y actuaciones, controlas su estado y las verificas en tiempo real.</p></details>
-      </div>
-    </div>
-  </div>
-</section>
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre diseño web") }}
 
 <!-- ============ RECURSOS ============ -->
 <section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
@@ -327,45 +311,19 @@ description: "Diseño y programación web, software a medida y mantenimiento web
     <div class="proj-head" style="padding:0">
       <div class="sec-head rv" style="margin:0">
         <span class="eyebrow">Recursos</span>
-        <h2 id="h-res">Decisiones sobre web y software, explicadas</h2>
+        <h2 id="h-res">Decisiones sobre tu web, explicadas</h2>
       </div>
-      <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost rv" href="/recursos/web/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="res">
-      <a class="card rv" style="--s:0" href="/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/"><span class="cat">Web</span><h3>Web estática o web con gestor de contenidos (CMS)</h3><p>Una web estática carga rápido, tiene una superficie de ataque menor y requiere poco mantenimiento, pero…</p></a>
-      <a class="card rv" style="--s:1" href="/recursos/plugin-de-seguridad-o-mantenimiento-web-gestionado/"><span class="cat">Mantenimiento web</span><h3>Plugin de seguridad o mantenimiento web gestionado</h3><p>Un plugin de seguridad aporta protección automática básica: escaneos, bloqueo de accesos sospechosos…</p></a>
-      <a class="card rv" style="--s:2" href="/recursos/mantener-el-software-de-gestion-actual-o-modernizarlo/"><span class="cat">Software</span><h3>Mantener el software de gestión actual o modernizarlo</h3><p>Un equipo interno de desarrollo ofrece control directo y disponibilidad inmediata para cambios diarios…</p></a>
+    <div class="res two">
+      <a class="card rv" style="--s:0" href="/recursos/web-a-medida-o-plantilla/"><span class="cat">Diseño web</span><h3>Web a medida o plantilla</h3><p>Qué aporta cada opción y qué preguntas hacerte antes de elegir cómo construir tu web.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/redisenar-la-web-desde-cero-o-evolucionarla-poco-a-poco/"><span class="cat">Diseño web</span><h3>Rediseñar la web desde cero o evolucionarla poco a poco</h3><p>Cuándo conviene empezar de nuevo y cuándo es mejor mejorar por partes lo que ya funciona.</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/diseno-web-centrado-en-estetica-o-en-conversion/"><span class="cat">Diseño web</span><h3>Diseño web centrado en estética o en conversión</h3><p>Cómo equilibrar una web bonita con una web que ayuda al visitante a dar el siguiente paso.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/contratar-diseno-y-programacion-por-separado-o-con-un-mismo-equipo/"><span class="cat">Diseño web</span><h3>Diseño y programación por separado o con un mismo equipo</h3><p>Qué cambia en plazos, coordinación y resultado según cómo repartas el proyecto.</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="sec" id="contacto" aria-labelledby="h-con" style="padding-top:0">
-  <div class="wrap contact">
-    <div class="contact-info rv">
-      <span class="eyebrow" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25);color:#fff">¿Podemos ayudarte?</span>
-      <h2 id="h-con">Cuéntanos tu proyecto web o de software</h2>
-      <p>Una web nueva, un programa a medida o alguien que mantenga lo que ya tienes. Además de la tecnología, se nos da bien escuchar y dar la respuesta ADQAda. Plantéanos tu situación con toda confianza: te diremos cómo podemos ayudarte, sin compromiso.</p>
-      <div class="ways">
-        <a href="tel:+34938147380"><svg><use href="#i-phone"/></svg>+34 938 147 380</a>
-        <a href="mailto:info@adqa.com"><svg><use href="#i-mail"/></svg>info@adqa.com</a>
-        <div><svg><use href="#i-pin"/></svg><span style="font-weight:500">C. Masia d'en Notari 23 · 08800 Vilanova i la Geltrú</span></div>
-      </div>
-    </div>
-    <form class="form rv" style="--s:1" action="/contacto/" method="post" novalidate>
-      <div class="field"><label for="f-nombre">Nombre <i>*</i></label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
-      <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" autocomplete="organization"></div>
-      <div class="field"><label for="f-email">E-mail <i>*</i></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel"></div>
-      <div class="field full"><label for="f-area">Área de interés</label>
-        <select id="f-area" name="area"><option value="">Selecciona una opción</option><option>Soporte y mantenimiento IT</option><option>Redes e instalaciones</option><option>Telecomunicaciones</option><option>Sistemas y cloud</option><option>Ciberseguridad</option><option selected>Web y software</option><option>Google Workspace / Microsoft 365</option><option>Hardware y software</option><option>Varias / no lo sé</option></select></div>
-      <div class="field full"><label for="f-msg">¿Qué necesitas?</label><textarea id="f-msg" name="mensaje"></textarea></div>
-      <input class="hp" name="linkedin" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="check"><input type="checkbox" name="consentimiento" required> <span>He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>. <i style="color:var(--pink);font-style:normal">*</i></span></label>
-      <button class="btn btn-primary" type="submit">Enviar <svg><use href="#i-arrow"/></svg></button>
-      <p class="form-ok" role="status">Gracias. Hemos recibido tu mensaje y te responderemos muy pronto.</p>
-    </form>
-  </div>
-</section>
+{{ m.contactBlock(title="¿Nos cuentas qué web tienes en mente?", text="Una web nueva, una tienda online, un programa a medida o alguien que cuide la web que ya tienes. Explícanos tu caso como se lo contarías a un compañero: lo estudiamos con calma y te damos la respuesta ADQAda, con qué haríamos, cómo y por qué.", area="Web y software") }}
 
 {% endblock %}

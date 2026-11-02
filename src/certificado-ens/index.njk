@@ -1,0 +1,75 @@
+---
+title: "Certificado ENS categoría ALTA | ADQA"
+description: "Certificado de conformidad de ADQA con el Esquema Nacional de Seguridad (ENS) en categoría ALTA. Consulta el certificado y qué significa para tu organización."
+keyword: "certificado ENS categoría ALTA ADQA"
+breadcrumbs:
+  - { name: "Certificado ENS" }
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO (compacto, sin animación de palabras) ============ -->
+<section class="hero page-hero doc-hero" aria-labelledby="h-hero">
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Certificaciones · Seguridad</span>
+    <h1 id="h-hero">Certificado ENS categoría ALTA</h1>
+    <p class="lead">Nuestro certificado de conformidad con el Esquema Nacional de Seguridad.</p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ CERTIFICADO + EN RESUMEN ============ -->
+<section class="sec doc-sec" id="certificado" aria-labelledby="h-resumen">
+  <div class="wrap cert">
+    <div class="cert-img">
+      <!-- PENDIENTE (D10): sustituir por la captura del nuevo certificado ENS en cuanto llegue. El certificado anterior del WordPress era «/wp-content/uploads/ENS-GRUPO-ADQA_signed_2024.pdf». -->
+      {{ m.placeholder("Captura del certificado ENS categoría ALTA (pendiente: llega el nuevo certificado)", "3/4") }}
+      <p class="seal"><img src="/assets/sellos/ens-alta.jpg" alt="Distintivo de certificación de conformidad con el Esquema Nacional de Seguridad, categoría ALTA" loading="lazy">Distintivo de conformidad con el ENS, categoría ALTA.</p>
+    </div>
+    <div class="cert-txt">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">El certificado ENS de ADQA en resumen</h2>
+      <p class="tldr">ADQA, marca de Ingeniería y Suministros Profesionales, S.L., tiene el certificado de conformidad con el Esquema Nacional de Seguridad (ENS) en categoría ALTA, el nivel más exigente del esquema. Lo emite una entidad de certificación acreditada por ENAC tras auditar los controles de seguridad de la empresa, que presta servicios a empresas e instituciones de Barcelona y Cataluña.</p>
+      <div class="card cert-facts">
+        <dl>
+          <dt>Esquema</dt><dd>Esquema Nacional de Seguridad · Real Decreto 311/2022</dd>
+          <dt>Categoría</dt><dd>ALTA</dd>
+          <!-- PENDIENTE: confirmar con el nuevo certificado la entidad de certificación (en el WordPress, Applus, acreditada por ENAC), el alcance y las fechas de emisión y validez. -->
+          <dt>Certificación</dt><dd>Entidad de certificación acreditada por ENAC</dd>
+          <dt>Organización</dt><dd>ADQA · Ingeniería y Suministros Profesionales, S.L.</dd>
+        </dl>
+      </div>
+      <div class="doc">
+        <h2 id="que-certifica">¿Qué certifica?</h2>
+        <p>El ENS es el marco de seguridad que se aplica a los sistemas de información de las administraciones públicas españolas y a los proveedores que trabajan con ellos. Tiene tres categorías: básica, media y alta.</p>
+        <p>El certificado acredita que los controles, los procedimientos y las medidas de seguridad de ADQA cumplen los requisitos de la categoría ALTA. Una entidad externa lo ha verificado con una auditoría.</p>
+      </div>
+      <div class="card cert-go">
+        <h2>Qué significa para tu organización</h2>
+        <p>Cómo se traduce el ENS en el trabajo diario con tus sistemas, tus redes y tus datos, y qué aporta si eres una administración pública o trabajas con una.</p>
+        <a class="txt-link" href="/ciberseguridad/certificado-ens/">Leer la explicación del ENS <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(56px,7vw,88px)">
+  <div class="wrap">
+    <aside class="card doc-more" aria-labelledby="h-more" style="margin-top:0">
+      <h2 id="h-more">Otras certificaciones y documentos</h2>
+      <ul>
+        <li><a href="/politica-de-seguridad/">Política de seguridad <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/certificado-bsi/">Certificado ISO 9001:2015 <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/ciberseguridad/">Ciberseguridad <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/contacto/">Contacto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+      <p>Si necesitas una copia del certificado para un expediente de contratación o una homologación de proveedores, pídenosla en <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    </aside>
+  </div>
+</section>
+
+{% endblock %}

@@ -8,7 +8,7 @@ export default {
     ] },
     { title: "Redes", icon: "i-net", links: [
       { label: "Redes informáticas", url: "/redes/" },
-      { label: "Soluciones WiFi", url: "/redes/wifi-entornos-complejos/" },
+      { label: "WiFi profesional", url: "/redes/wifi-entornos-complejos/" },
       { label: "Certificación de redes", url: "/redes/certificacion-redes/" },
     ] },
     { title: "Telecom", icon: "i-signal", links: [
@@ -31,7 +31,7 @@ export default {
     { title: "Workspace", icon: "i-grid", wide: true, links: [
       { label: "Google Workspace", url: "/google-workspace/" },
       { label: "Microsoft 365", url: "/microsoft-365/" },
-      { label: "Workspace vs Microsoft 365", url: "/google-workspace/google-workspace-vs-microsoft-365/" },
+      { label: "Google Workspace vs Microsoft 365", url: "/google-workspace/google-workspace-vs-microsoft-365/" },
       { label: "Licenciamiento mixto", url: "/google-workspace/licenciamiento-mixto-google-workspace/" },
     ] },
   ],

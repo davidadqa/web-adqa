@@ -1,0 +1,367 @@
+---
+title: "Certificación de redes en Barcelona: cobre y fibra | ADQA"
+description: "Certificación de redes en Barcelona: medimos cobre y fibra según ANSI/TIA-568 e ISO/IEC 11801, también instalaciones de terceros, con informe por punto."
+keyword: "certificación de redes en Barcelona"
+breadcrumbs:
+  - { name: "Redes y WiFi", url: "/redes/" }
+  - { name: "Certificación de redes" }
+service:
+  name: "Certificación de redes y cableado estructurado"
+  serviceType: "Certificación de redes"
+faq:
+  manager:
+    - q: "¿Es obligatorio certificar una red?"
+      a: "En la mayoría de casos no es una obligación legal. Es la forma de tener una garantía técnica documentada de que la instalación cumple su categoría. En entregas de obra, en contratos con la administración pública o en sectores regulados puede ser un requisito del contrato o de una auditoría, y conviene pedirla siempre que se recibe una instalación nueva."
+    - q: "¿Hay que parar la red para certificarla?"
+      a: "No toda a la vez. Cada enlace se desconecta mientras se mide, habitualmente unos minutos por punto, así que la certificación se organiza por zonas o fuera de horario, y los puestos y equipos críticos se acuerdan antes. El resto de la red sigue funcionando con normalidad mientras se trabaja."
+    - q: "¿Cuánto tarda una certificación de red?"
+      a: "Depende del número de puntos, de si hay enlaces de fibra y de cómo de accesibles están los armarios. Habitualmente, la medición de una oficina de tamaño medio se resuelve en pocos días, y los informes se entregan después. Con el inventario de puntos, ADQA propone un calendario orientativo antes de empezar."
+    - q: "¿Conviene certificar la red que ya tengo o rehacerla?"
+      a: "Si la red es relativamente reciente, certificar primero suele ser lo más sensato: a menudo la mayor parte está bien y basta con corregir puntos concretos, lo que ahorra tiempo y coste. Si la certificación detecta problemas generalizados, la instalación es muy antigua o no llega a la categoría que piden los nuevos servicios, rehacerla sale más a cuenta. Con el informe, la decisión se toma con datos."
+  tecnico:
+    - q: "¿Según qué normas certificáis?"
+      a: "Según ANSI/TIA-568, en concreto la parte 568.2 para cobre y la 568.3 para fibra óptica, y según la norma internacional ISO/IEC 11801. Cada enlace se evalúa contra los límites de su categoría o clase: Cat 5e o clase D, Cat 6 o clase E y Cat 6A o clase EA en cobre, y contra el presupuesto de pérdidas del enlace en fibra."
+    - q: "¿Qué parámetros se miden en un enlace de cobre?"
+      a: "El mapa de cableado, la longitud, la pérdida de inserción, la diafonía en el extremo cercano (NEXT y PS NEXT), la diafonía en el extremo lejano (ACR-F), la pérdida de retorno, el retardo de propagación y el desfase entre pares. Se puede certificar el enlace permanente, del panel de parcheo a la toma, o el canal completo con los latiguillos, según el alcance acordado."
+    - q: "En fibra óptica, ¿certificáis con OLTS o con OTDR?"
+      a: "Cada equipo responde a una pregunta distinta. El OLTS, una fuente de luz calibrada y un medidor de potencia, mide la pérdida de inserción total del enlace y la compara con su presupuesto de pérdidas: es la medida que dice si el enlace cumple. El OTDR dibuja la traza del enlace y localiza cada evento, como conectores, empalmes, curvaturas o roturas, con su posición y su pérdida. Se usa para documentar el trazado y para encontrar dónde está un problema."
+    - q: "¿Qué pasa si un punto no supera la certificación?"
+      a: "El informe indica qué parámetro falla y en qué punto. Las causas habituales son un conector mal terminado, un enlace demasiado largo, un radio de curvatura excesivo o componentes de una categoría inferior a la del proyecto. La corrección la puede hacer ADQA o el instalador del cliente y, después, se vuelve a certificar solo ese punto."
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Redes y WiFi · Certificación de redes</span>
+    <h1 id="h-hero" data-words>Certificación de redes en Barcelona, <span class="accent">punto por punto y con datos</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Medimos cada enlace de cobre y de fibra con un equipo certificador y lo comparamos con la norma de su categoría. Recibes un informe por punto: qué cumple, qué no y qué conviene corregir primero. Lo hace nuestro propio equipo de instaladores.</p>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="#contacto">Explícanos tu instalación <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#que-medimos">Qué medimos</a>
+    </div>
+    <div class="trust fade-in" style="--d:1.1s">
+      <span><svg><use href="#i-check"/></svg>Equipo propio · Telco 2</span>
+      <span><svg><use href="#i-check"/></svg>ISO 9001:2015</span>
+      <span><svg><use href="#i-check"/></svg>Más de 30 años</span>
+    </div>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding:clamp(56px,7vw,88px) 0 0">
+  <div class="wrap intro">
+    <div class="rv" style="display:grid;gap:22px">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">¿Qué es el servicio de certificación de redes de ADQA?</h2>
+      <p class="tldr"><strong>ADQA certifica redes de cobre y de fibra óptica para empresas e instituciones de Barcelona y Cataluña según las normas ANSI/TIA-568 e ISO/IEC 11801.</strong> Su propio equipo de instaladores mide cada enlace, también en instalaciones hechas por terceros, y entrega un informe ejecutivo y un informe técnico con el resultado de cada punto, apto o no apto, y las correcciones priorizadas.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv" style="--s:0"><b><span data-count="2">0</span><small> informes</small></b><span>ejecutivo y técnico, con el resultado de cada punto</span></div>
+      <div class="stat rv" style="--s:1"><b>Cat 6A</b><span>y fibra óptica: cada enlace, frente a los límites de su categoría</span></div>
+      <div class="stat rv" style="--s:2"><b>Apto</b><span>o no apto: un veredicto objetivo para cada punto medido</span></div>
+      <div class="stat rv" style="--s:3"><b>Telco 2</b><span>acreditación de nuestros técnicos, junto a altura y espacios confinados</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ HACEMOS POSIBLE ============ -->
+<section class="sec" aria-labelledby="h-pos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Lo que hacemos posible</span>
+      <h2 id="h-pos">De creer que la red funciona a saberlo</h2>
+      <p class="lead">Una red puede dar conexión y no estar bien ejecutada. La certificación convierte esa duda en un dato que sirve para decidir.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-award"/></svg></span><h3>Recibir una obra con garantías</h3><p>Evidencia objetiva del estado de la instalación el día de la entrega, antes de darla por buena.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Encontrar la causa física de los cortes</h3><p>Cuando la línea está bien y la red falla, la medición señala el punto exacto y el parámetro que no cumple.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Ampliar sin sorpresas</h3><p>Antes de añadir cámaras, puntos de acceso o servidores, sabes si el cableado actual está a la altura.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-file"/></svg></span><h3>Tener la red documentada</h3><p>Cada punto identificado, con su ubicación y sus valores. Útil para la próxima ampliación o para un auditor.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ ES CERTIFICAR ============ -->
+<section class="sec" id="que-es" aria-labelledby="h-que" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Qué es certificar</span>
+      <h2 id="h-que">¿En qué se diferencia certificar una red de comprobarla?</h2>
+      <p class="lead">Un comprobador dice si hay conexión. Un certificador mide si el enlace cumple los parámetros de su categoría en todo el rango de frecuencias que fija la norma, y da un veredicto.</p>
+    </div>
+    <div class="compare">
+      <div class="cmp rv">
+        <h3>Comprobación de continuidad</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span>Confirma que hay conexión de un extremo a otro del cable.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Detecta cables cortados, hilos sueltos o pares mal conectados.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Es útil durante la obra, pero no dice cuánto rinde el enlace.</span></li>
+        </ul>
+      </div>
+      <div class="cmp good rv" style="--s:1">
+        <h3>Certificación</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span>Mide cada parámetro que define la norma: pérdidas, diafonía, reflexiones, longitud y retardo.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Compara cada valor con los límites de la categoría y marca el punto como apto o no apto.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Genera un informe con los valores reales, válido como evidencia ante terceros.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note rv">Se puede certificar el <strong>enlace permanente</strong>, del panel de parcheo a la toma de usuario, o el <strong>canal completo</strong>, con los latiguillos incluidos. Lo acordamos contigo antes de empezar.</p>
+  </div>
+</section>
+
+<!-- ============ QUÉ SE MIDE ============ -->
+<section class="sec" id="que-medimos" aria-labelledby="h-med" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Qué medimos</span>
+      <h2 id="h-med">¿Qué se mide en cobre y qué se mide en fibra?</h2>
+      <p class="lead">El cobre y la fibra fallan de forma distinta, así que se miden con equipos y parámetros distintos. Estos son los que recoge el informe.</p>
+    </div>
+    <div class="compare">
+      <div class="cmp good rv">
+        <h3><span class="ico"><svg><use href="#i-grid"/></svg></span>Cobre (par trenzado)</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span><strong>Mapa de cableado:</strong> continuidad y orden correcto de cada par, sin cruces ni cortos.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Longitud:</strong> que el enlace no supere la distancia máxima que admite la norma.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Pérdida de inserción:</strong> cuánta señal se pierde a lo largo del enlace.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Diafonía (NEXT, PS NEXT y ACR-F):</strong> cuánto interfieren unos pares sobre otros, en los dos extremos.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Pérdida de retorno:</strong> cuánta señal se refleja por desajustes de impedancia.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Retardo y desfase:</strong> el tiempo de propagación y la diferencia entre pares.</span></li>
+        </ul>
+      </div>
+      <div class="cmp good rv" style="--s:1">
+        <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17c4 0 4.5-10 7.5-10s3.5 10 7.5 10"/><circle cx="3" cy="17" r="1.5"/><circle cx="21" cy="17" r="1.5"/></svg></span>Fibra óptica</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span><strong>OLTS, pérdida de inserción:</strong> con una fuente de luz calibrada y un medidor de potencia, la pérdida total de cada enlace frente a su presupuesto de pérdidas.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Longitud y polaridad:</strong> que cada fibra llega a su destino y con la orientación correcta.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>OTDR, localización de eventos:</strong> una traza del enlace que sitúa cada conector, empalme, curvatura o rotura, con su pérdida y su reflectancia.</span></li>
+          <li><svg><use href="#i-check"/></svg><span><strong>Estado por tramo:</strong> pérdidas por tramo y por conexión, para saber dónde intervenir sin tocar el resto.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note rv">El OLTS dice si el enlace de fibra cumple. El OTDR dice dónde está cada pérdida. Por eso el primero certifica y el segundo es el que localiza una rotura o un empalme defectuoso.</p>
+  </div>
+</section>
+
+<!-- ============ NORMAS ============ -->
+<section class="sec" id="normas" aria-labelledby="h-norm" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Normas</span>
+      <h2 id="h-norm">Normas <span class="nw">ANSI/TIA-568</span> e <span class="nw">ISO/IEC 11801</span></h2>
+      <p class="lead">Certificamos según ANSI/TIA-568, con la parte 568.2 para cobre y la 568.3 para fibra, y según la norma internacional ISO/IEC 11801. Cada enlace se evalúa contra los límites de la categoría o clase del proyecto.</p>
+    </div>
+    <div class="spec-wrap rv">
+      <table class="spec">
+        <thead><tr><th scope="col">Categoría (TIA)</th><th scope="col">Clase (ISO/IEC 11801)</th><th scope="col">Referencia de la medida</th><th scope="col">Uso habitual</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Cat 5e</th><td data-label="Clase ISO/IEC">Clase D</td><td data-label="Referencia">Hasta 100 MHz</td><td data-label="Uso habitual">Redes existentes a 1 Gb/s</td></tr>
+          <tr><th scope="row">Cat 6</th><td data-label="Clase ISO/IEC">Clase E</td><td data-label="Referencia">Hasta 250 MHz</td><td data-label="Uso habitual">1 Gb/s; 10 Gb/s solo en tramos cortos</td></tr>
+          <tr><th scope="row">Cat 6A</th><td data-label="Clase ISO/IEC">Clase E<sub>A</sub></td><td data-label="Referencia">Hasta 500 MHz</td><td data-label="Uso habitual">10 Gb/s hasta 100 m y puntos de acceso WiFi recientes</td></tr>
+          <tr><th scope="row">Fibra óptica</th><td data-label="Tipo">Multimodo y monomodo</td><td data-label="Referencia">Presupuesto de pérdidas del enlace</td><td data-label="Uso habitual">Troncales entre plantas, edificios y sedes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note rv"><a class="txt-link" href="/recursos/categorias-de-cableado/">Categorías de cableado: qué diferencia Cat 5e, Cat 6, Cat 6A y <span class="nw">fibra<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+  </div>
+</section>
+
+<!-- ============ MÉTODO (sección oscura) ============ -->
+<section class="sec dark-sec" id="metodo" aria-labelledby="h-met">
+  <div class="wrap strengths">
+    <div class="sticky rv">
+      <span class="eyebrow">Método</span>
+      <h2 id="h-met">¿Cómo es una certificación, paso a paso?</h2>
+      <p class="lead" style="color:#bdbdbd">Seis pasos con un mismo objetivo: que el informe te sirva para decidir y no se quede en una carpeta. De la medición a la corrección, con las mismas personas.</p>
+      <div><a class="btn btn-primary" href="#contacto">Planifiquemos tu certificación <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="stack">
+      <article class="st" style="--n:0">
+        <span class="num">01 · ALCANCE E INVENTARIO</span>
+        <h3>Qué se certifica y con qué criterio</h3>
+        <p>Listamos los puntos, la categoría de cada enlace, si hay fibra y si se certifica el enlace permanente o el canal completo. Es también la base de la documentación final.</p>
+      </article>
+      <article class="st" style="--n:1">
+        <span class="num">02 · PLANIFICACIÓN</span>
+        <h3>Por zonas o fuera de horario</h3>
+        <p>Cada enlace se desconecta mientras se mide, habitualmente unos minutos. Acordamos antes qué puestos y equipos son críticos y organizamos el trabajo para que el resto de la red siga en marcha.</p>
+      </article>
+      <article class="st" style="--n:2">
+        <span class="num">03 · MEDICIÓN</span>
+        <h3>Cada punto, con el equipo certificador</h3>
+        <p>Configuramos el equipo con la norma y el tipo de cable del proyecto y medimos punto por punto. En fibra, con OLTS y, cuando hace falta localizar eventos, con OTDR.</p>
+      </article>
+      <article class="st" style="--n:3">
+        <span class="num">04 · INFORMES</span>
+        <h3>Uno para decidir y otro para actuar</h3>
+        <p>El informe ejecutivo resume qué está bien, qué hay que revisar y por dónde empezar. El técnico recoge los valores medidos de cada punto frente a los límites de la norma.</p>
+      </article>
+      <article class="st" style="--n:4">
+        <span class="num">05 · CORRECCIÓN</span>
+        <h3>Solo donde hace falta</h3>
+        <p>Si hay puntos no aptos, localizamos la causa y la corregimos nosotros o tu instalador. Después volvemos a certificar esos puntos, no toda la red.</p>
+      </article>
+      <article class="st" style="--n:5">
+        <span class="num">06 · SEGUIMIENTO</span>
+        <h3>Todo queda registrado</h3>
+        <p>Cada actuación queda en nuestra extranet, dentro de nuestro sistema de calidad ISO 9001:2015. La documentación te sirve para la próxima ampliación.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="sec" id="servicios" aria-labelledby="h-serv">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Servicios de certificación</span>
+      <h2 id="h-serv">¿Qué podemos certificar?</h2>
+      <p class="lead">Desde una toma concreta que da problemas hasta un edificio entero o una red de fibra entre sedes.</p>
+    </div>
+    <div class="services">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-check"/></svg></span>
+        <h3>Puntos de red de cobre</h3>
+        <p>Certificamos que cada toma cumple los parámetros de su categoría, de Cat 5e a Cat 6A.</p>
+        <ul class="tags"><li>Enlace permanente</li><li>Canal</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17c4 0 4.5-10 7.5-10s3.5 10 7.5 10"/><circle cx="3" cy="17" r="1.5"/><circle cx="21" cy="17" r="1.5"/></svg></span>
+        <h3>Enlaces de fibra óptica</h3>
+        <p>Pérdida de inserción frente al presupuesto del enlace y traza OTDR para localizar conectores, empalmes o roturas.</p>
+        <ul class="tags"><li>OLTS</li><li>OTDR</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-grid"/></svg></span>
+        <h3>Cableado estructurado completo</h3>
+        <p>Todos los puntos, paneles, latiguillos y armarios de una instalación, con un informe técnico de conjunto.</p>
+        <ul class="tags"><li>Edificios</li><li>Multisede</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-file"/></svg></span>
+        <h3>Identificación y documentación</h3>
+        <p>Registro ordenado de puntos, armarios, paneles y correspondencias, para saber qué cable va a cada sitio.</p>
+        <ul class="tags"><li>Etiquetado</li><li>Correspondencias</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <h3>Diagnóstico de incidencias</h3>
+        <p>Pruebas para localizar el origen físico de cortes y lentitud, y resolverlo sin intervenir en toda la infraestructura.</p>
+        <ul class="tags"><li>Cortes intermitentes</li><li>Causa física</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-award"/></svg></span>
+        <h3>Recepción de obra y redes de terceros</h3>
+        <p>Certificamos instalaciones hechas por otra empresa, al recibir una obra o antes de ocupar una sede nueva.</p>
+        <ul class="tags"><li>Entrega de obra</li><li>Mudanzas</li></ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head rv">Servicios relacionados</h3>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/redes/"><span class="cat">Redes y WiFi</span><h4>Redes informáticas para empresas</h4><p>Diseño, cableado estructurado, fibra y switching, instalados por nuestro propio equipo.</p></a>
+      <a class="card rv" style="--s:1" href="/redes/wifi-entornos-complejos/"><span class="cat">Redes y WiFi</span><h4>WiFi profesional para empresas</h4><p>Estudio de cobertura y WiFi Ruckus para naves, cámaras frigoríficas, minas y alta densidad.</p></a>
+      <a class="card rv" style="--s:2" href="/telecomunicaciones/networking/"><span class="cat">Telecomunicaciones</span><h4>Networking</h4><p>La electrónica de red que va sobre el cableado: switches, routers y gestión entre sedes.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OBRA Y TERCEROS ============ -->
+<section class="sec" id="terceros" aria-labelledby="h-ter" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Entregas de obra e instalaciones de terceros</span>
+      <h2 id="h-ter">¿Certificáis redes que ha instalado otra empresa?</h2>
+      <p>Sí. Es un servicio pensado para promotores, constructoras, facility managers y empresas que contratan la instalación a un tercero. El instalador dice que la red está bien. La certificación lo demuestra con datos.</p>
+      <ul class="ticks">
+        <li><svg><use href="#i-check"/></svg><span><strong>Evidencia objetiva</strong> del estado de la instalación en el momento de la entrega.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Validación</strong> de los requisitos técnicos acordados en el proyecto.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Documentación en tus manos</strong>, no solo en las del instalador.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Base técnica</strong> para pedir correcciones si algún punto no cumple.</span></li>
+      </ul>
+      <p>También tiene sentido antes de mudarte a una sede con la red ya instalada: sabrás en qué estado está antes del primer día.</p>
+    </div>
+    <div class="rv" style="--s:1">{{ m.placeholder("Técnico de ADQA certificando un panel de parcheo con el equipo certificador", "4/3") }}</div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section class="sec" aria-labelledby="h-aud" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Para quién</span>
+      <h2 id="h-aud">¿Cuándo conviene certificar una red?</h2>
+      <p class="lead">Siempre que necesites saber, y poder demostrar, en qué estado está tu infraestructura.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Al estrenar una red</h3><p>Acabas de instalar cableado nuevo y quieres comprobar que está bien ejecutado antes de darlo por cerrado.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Antes de ampliar o mudarte</h3><p>Vas a añadir servicios críticos o a ocupar una sede nueva y necesitas saber si la red lo soportará.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Con incidencias sin explicación</h3><p>Cortes intermitentes o lentitud que nadie sabe explicar y quieres confirmar o descartar una causa física.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>En obras y proyectos técnicos</h3><p>Promotores, constructoras y facility managers que necesitan una validación técnica documentada en la entrega.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS ============ -->
+<section class="sec" id="casos" aria-labelledby="h-casos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Casos</span>
+      <h2 id="h-casos">Dos certificaciones que ayudaron a decidir</h2>
+      <p class="lead">Una para encontrar la causa de unos cortes; otra para entrar en una sede nueva sabiendo qué había.</p>
+    </div>
+    <div class="res two cases-wp">
+      <div class="rv" style="--s:0">{{ m.anonCase(
+        "La causa de unos cortes, localizada en una mañana",
+        "Industria · Diagnóstico con certificación",
+        "Una empresa industrial sufría cortes intermitentes que interrumpían la producción. El proveedor de internet confirmaba que la línea estaba bien y las incidencias no seguían ningún patrón.",
+        "Certificación completa de la infraestructura. La medición localizó varios puntos con errores físicos: pares cruzados, longitudes fuera de rango y conexiones mal terminadas que perdían señal bajo carga. Se intervino solo en esos puntos.",
+        ["Causa identificada en menos de 4 horas", "Cero incidencias desde la corrección"]
+      ) }}</div>
+      <div class="rv" style="--s:1">{{ m.anonCase(
+        "Una sede nueva, verificada antes de la mudanza",
+        "Oficinas · Red de terceros",
+        "Una empresa iba a trasladarse a una sede con la red instalada por los inquilinos anteriores y quería saber si podía confiar en ella antes de entrar.",
+        "Certificación de todos los puntos antes de la ocupación. Con el informe, la empresa negoció con el arrendador y planificó la intervención solo en los puntos que lo necesitaban.",
+        ["70% de puntos en buen estado", "20% con revisión menor", "10% a rehacer", "100% documentado antes de entrar"]
+      ) }}</div>
+    </div>
+    <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre certificación de redes") }}
+
+<!-- ============ RECURSOS ============ -->
+<section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Recursos</span>
+        <h2 id="h-res">Para entender la certificación</h2>
+      </div>
+      <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/recursos/certificacion-de-redes/"><span class="cat">Certificación</span><h3>Certificación de redes: qué es y cuándo se pide</h3><p>Qué comprueba realmente una certificación y en qué situaciones te la pueden pedir.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/asi-se-certifica-una-red/"><span class="cat">Certificación</span><h3>Así se certifica una red</h3><p>El proceso paso a paso, del inventario de puntos al informe final.</p></a>
+      <a class="card rv" style="--s:2" href="/recursos/mi-red-no-ha-pasado-la-certificacion/"><span class="cat">Certificación</span><h3>Mi red no ha pasado la certificación</h3><p>Las causas más habituales de un punto no apto y cómo corregirlas sin repetirlo todo.</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/categorias-de-cableado/"><span class="cat">Cableado</span><h3>Categorías de cableado</h3><p>Qué diferencia Cat 5e, Cat 6, Cat 6A y fibra, y qué se certifica en cada caso.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/certificacion-de-redes-y-ens/"><span class="cat">Certificación</span><h3>Certificación de redes y auditorías</h3><p>Qué papel puede tener la documentación del cableado cuando una auditoría revisa tu infraestructura.</p></a>
+      <a class="card rv" style="--s:2" href="/casos-de-exito/"><span class="cat">Casos de éxito</span><h3>Del fondo de una mina a la red de un hospital</h3><p>Proyectos reales de redes, fibra y WiFi para empresas e instituciones públicas.</p></a>
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(title="¿Qué red quieres certificar?", text="Dinos cuántos puntos hay, si incluye fibra y para qué necesitas la certificación: una entrega de obra, una mudanza o unos cortes que no se explican. Te proponemos el alcance y un calendario orientativo, sin compromiso.", area="Redes y WiFi") }}
+
+{% endblock %}

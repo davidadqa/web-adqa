@@ -1,0 +1,76 @@
+---
+title: "Política de seguridad de la información | ADQA"
+description: "Política de seguridad de la información de ADQA, ligada a su certificación ENS categoría ALTA: qué es, a quién se aplica y dónde descargar el documento en PDF."
+keyword: "política de seguridad de la información ADQA"
+breadcrumbs:
+  - { name: "Política de seguridad" }
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO (compacto, sin animación de palabras) ============ -->
+<section class="hero page-hero doc-hero" aria-labelledby="h-hero">
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Información legal · Seguridad</span>
+    <h1 id="h-hero">Política de seguridad de la información</h1>
+    <p class="lead">El documento que fija cómo protegemos la información y los servicios que te prestamos.</p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<section class="sec doc-sec" aria-labelledby="h-resumen">
+  <div class="wrap">
+    <article class="doc">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">La política de seguridad de ADQA en resumen</h2>
+      <p class="tldr">ADQA, marca de Ingeniería y Suministros Profesionales, S.L., publica su política de seguridad de la información como parte de su certificación en el Esquema Nacional de Seguridad, categoría ALTA. El documento, con la referencia POL-Org.01, recoge cómo protege la empresa la información y los servicios que presta a empresas e instituciones de Barcelona y Cataluña.</p>
+
+      <h2 id="que-es">¿Qué es una política de seguridad?</h2>
+      <p>Es el documento de más alto nivel del sistema de seguridad de una organización. Recoge los principios con los que se protege la información y quién se ocupa de cada cosa.</p>
+      <p>El Esquema Nacional de Seguridad (Real Decreto 311/2022) pide que la política esté aprobada formalmente y fija su contenido mínimo: los objetivos de seguridad, el marco legal aplicable, los roles y responsabilidades, y cómo se gestionan los riesgos.</p>
+      <p>El contenido concreto de la política de ADQA está en el propio documento. Lo puedes descargar más abajo.</p>
+
+      <h2 id="a-quien">¿A quién se aplica?</h2>
+      <p>En el marco del Esquema Nacional de Seguridad, la política la deben conocer y cumplir todas las personas de la organización. También alcanza, en lo que les afecte, a los terceros que acceden a su información o a sus sistemas.</p>
+      <p>Qué sistemas y servicios cubre en el caso de ADQA, y quién es responsable de cada uno, se detalla en el documento y en el alcance del certificado.</p>
+
+      <h2 id="por-que">¿Por qué te puede interesar?</h2>
+      <p>Si eres una administración pública o una empresa que evalúa a sus proveedores de tecnología, la política de seguridad y el certificado forman parte de la documentación que suele pedirse. Si necesitas otra documentación para tu expediente, escríbenos y lo revisamos contigo.</p>
+
+      <h2 id="documento">Descarga el documento</h2>
+      <!-- PENDIENTE: subir el PDF vigente a /assets/docs/politica-de-seguridad.pdf. En el WordPress era «/wp-content/uploads/POL-Org.01-Politica-de-Seguridad-ENS-PUB_v4-web.pdf» (versión pública v4). Confirmar la versión vigente con el nuevo certificado ENS y configurar la 301 desde la URL antigua del PDF. -->
+      <div class="doc-file">
+        <span class="ico"><svg aria-hidden="true"><use href="#i-file"/></svg></span>
+        <b>POL-Org.01 · Política de seguridad de la información (ENS)</b>
+        <span>Versión pública · PDF</span>
+        <!-- PENDIENTE: cuando el PDF esté en /assets/docs/politica-de-seguridad.pdf, sustituir este botón por:
+        <a class="btn btn-primary" href="/assets/docs/politica-de-seguridad.pdf" type="application/pdf">Descargar la política …</a> -->
+        <a class="btn btn-primary" href="/contacto/">Pídenos el documento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <h2 id="relacion">Cómo encaja con nuestras certificaciones</h2>
+      <ul>
+        <li><a href="/certificado-ens/">Certificado ENS categoría ALTA</a>: el certificado de conformidad con el Esquema Nacional de Seguridad.</li>
+        <li><a href="/ciberseguridad/certificado-ens/">Qué significa esta certificación para ti</a>: cómo se traduce en el trabajo diario con tus sistemas.</li>
+        <li><a href="/certificado-bsi/">Certificado ISO 9001:2015</a>: el sistema de gestión de la calidad, certificado por BSI.</li>
+        <li><a href="/recursos/politica-de-seguridad-y-cumplimiento-normativo/">Política de seguridad y cumplimiento normativo</a>: un artículo para preparar la de tu empresa.</li>
+      </ul>
+    </article>
+
+    <aside class="card doc-more" aria-labelledby="h-more">
+      <h2 id="h-more">Otros textos legales</h2>
+      <ul>
+        <li><a href="/aviso-legal/">Aviso legal <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/politica-de-privacidad/">Política de privacidad <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/contacto/">Contacto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+      <p>Para cualquier consulta sobre seguridad de la información, escríbenos a <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    </aside>
+  </div>
+</section>
+
+{% endblock %}

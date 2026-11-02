@@ -1,0 +1,242 @@
+---
+title: "Contacto: hablemos de la tecnología de tu empresa | ADQA"
+description: "Contacta con ADQA en Barcelona: cuéntanos qué necesitas en informática, telecomunicaciones, ciberseguridad o web y te proponemos el siguiente paso."
+keyword: "contactar con una empresa de informática y telecomunicaciones en Barcelona"
+pageType: "ContactPage"
+breadcrumbs:
+  - { name: "Contacto" }
+faq:
+  manager:
+    - q: "¿La primera conversación tiene algún coste o compromiso?"
+      a: "No. La primera conversación sirve para entender qué tienes y qué necesitas, y es sin compromiso. Si después tiene sentido avanzar, ADQA te propone el siguiente paso para que lo valores con calma."
+    - q: "¿Qué conviene explicar en el primer mensaje?"
+      a: "Lo que tengas a mano: qué tecnología usáis hoy, cuántas personas y sedes sois, qué os preocupa o qué queréis cambiar y si hay alguna fecha que condicione el proyecto. No hace falta usar términos técnicos. Cuanto más concreto sea el mensaje, más concreta será la respuesta."
+    - q: "¿Trabajáis con empresas de toda Barcelona y Cataluña?"
+      a: "Sí. ADQA trabaja con empresas e instituciones de Barcelona y del resto de Cataluña. Tiene la sede en Vilanova i la Geltrú y un datacenter propio y de proximidad en Barcelona. El soporte remoto, el cloud y buena parte de la ciberseguridad se prestan a distancia, y para las instalaciones y las visitas el equipo va a tu sede."
+    - q: "¿Atendéis también a administraciones públicas?"
+      a: "Sí. Entre los clientes de ADQA hay ayuntamientos, consejos comarcales y centros sanitarios públicos. La empresa tiene el certificado ISO 9001:2015 y la certificación ENS en categoría ALTA, que suelen pedirse en los expedientes de contratación de la administración."
+  tecnico:
+    - q: "Ya soy cliente: ¿dónde abro una incidencia?"
+      a: "En el área de clientes de ADQA, en extranet.adqa.com. Es el sistema de ticketing de ADQA: desde allí das de alta las incidencias y sigues el estado de las incidencias y actuaciones de cada una de tus sedes. Si lo prefieres, también puedes llamar al +34 938 147 380."
+    - q: "¿Puedo enviar planos, inventarios o facturas de telecomunicaciones?"
+      a: "Sí, y ayudan mucho. El formulario sirve para una primera descripción. Después puedes enviar a info@adqa.com planos de la oficina, un inventario de equipos o las últimas facturas de telefonía y conexión. Con esa información ADQA puede revisar la infraestructura o hacer una auditoría de telecomunicaciones con datos reales."
+    - q: "¿Con quién voy a hablar?"
+      a: "Con una persona del equipo de ADQA que conoce el área de tu consulta. Si afecta a varias áreas, por ejemplo la red, la conexión y la centralita, ADQA lo coordina internamente para que tengas un solo interlocutor desde la primera conversación."
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}
+<style>
+/* Contacto: vías de contacto y primera capa de protección de datos (propios de esta página) */
+.reach{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
+.reach .card{display:grid;gap:10px;align-content:start;padding:26px}
+.reach .ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
+.reach .ico svg{width:20px;height:20px}
+.reach .k{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.reach .v{font-size:1.08rem;font-weight:600;color:var(--ink);line-height:1.35;overflow-wrap:anywhere}
+.reach a.v:hover{color:var(--pink)}
+.reach p{font-size:.93rem}
+.reach .txt-link{font-size:.93rem}
+.contact-info .small{font-size:.95rem}
+.contact-info .small a{text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.layer{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:.86rem}
+.layer summary{cursor:pointer;padding:12px 14px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.layer summary::-webkit-details-marker{display:none}
+.layer summary svg{width:12px;height:12px;flex:none;transition:transform .3s var(--ease)}
+.layer[open] summary svg{transform:rotate(45deg)}
+.layer dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;padding:2px 14px 14px;color:var(--gray);line-height:1.5}
+.layer dt{font-weight:600;color:var(--ink)}
+.layer a{color:var(--pink-600);text-decoration:underline;text-underline-offset:2px}
+@media (max-width:1060px){.reach{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){
+  .reach{grid-template-columns:1fr}
+  .layer dl{grid-template-columns:1fr;gap:2px}
+  .layer dd{margin-bottom:8px}
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Contacto · Barcelona</span>
+    <h1 id="h-hero" data-words>Hablemos de tu <span class="accent">tecnología</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Informática, telecomunicaciones, ciberseguridad o web: cuéntanos qué tienes y qué necesitas, y te proponemos el siguiente paso. Un solo equipo para todo, desde la primera conversación.</p>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="#formulario">Escríbenos <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="tel:{{ site.phoneE164 }}">Llámanos al {{ site.phone }}</a>
+    </div>
+    <div class="trust fade-in" style="--d:1.1s">
+      <span><svg><use href="#i-check"/></svg>Sin compromiso</span>
+      <span><svg><use href="#i-check"/></svg>Un mismo equipo para todo</span>
+      <span><svg><use href="#i-check"/></svg>ISO 9001:2015</span>
+    </div>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN + VÍAS DE CONTACTO ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding:clamp(56px,7vw,88px) 0 0">
+  <div class="wrap">
+    <div class="rv" style="display:grid;gap:22px;max-width:860px">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">¿Cómo contactar con ADQA?</h2>
+      <p class="tldr"><strong>ADQA atiende a empresas e instituciones de Barcelona y Cataluña en informática, telecomunicaciones, ciberseguridad, cloud y desarrollo web.</strong> Se le puede escribir con el formulario de esta página o a info@adqa.com, y llamar al +34 938 147 380. <span class="dim">Su sede está en el Polígono Masia d'en Frederic, en Vilanova i la Geltrú (Barcelona), y sus clientes gestionan las incidencias desde el área de clientes.</span></p>
+    </div>
+    <div class="reach">
+      <div class="card rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-phone"/></svg></span>
+        <span class="k">Teléfono</span>
+        <a class="v" href="tel:{{ site.phoneE164 }}">{{ site.phone }}</a>
+        <p>Para hablar con nosotros directamente.</p>
+        <!-- PENDIENTE: horario de atención telefónica y de la sede (no consta en las fuentes). -->
+      </div>
+      <div class="card rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-mail"/></svg></span>
+        <span class="k">Correo</span>
+        <a class="v" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <p>Para una consulta detallada o para enviarnos documentación.</p>
+      </div>
+      <div class="card rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-pin"/></svg></span>
+        <span class="k">Oficinas</span>
+        <span class="v">C. Masia d'en Notari 23, Nave 3 · Vilanova i la Geltrú</span>
+        <a class="txt-link" href="https://maps.app.goo.gl/rPo6eAyhCnEQhMjm8" rel="noopener">Cómo llegar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="card rv" style="--s:3">
+        <span class="ico"><svg><use href="#i-user"/></svg></span>
+        <span class="k">Ya soy cliente</span>
+        <a class="v" href="{{ site.extranet }}">Área de clientes</a>
+        <p>Abre una incidencia y sigue su estado en la extranet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULARIO ============ -->
+<section class="sec" id="formulario" aria-labelledby="h-form" style="padding-top:clamp(56px,7vw,88px)">
+  <div class="wrap contact">
+    <div class="contact-info rv">
+      <span class="eyebrow eyebrow-on-pink">Formulario</span>
+      <h2 id="h-form">Cuéntanos qué necesitas</h2>
+      <p>Cuanto más nos cuentes, más concreta será nuestra respuesta. Y si aún no lo tienes claro, no pasa nada: para eso está la primera conversación.</p>
+      <ul class="ticks">
+        <li><svg><use href="#i-check"/></svg><span><strong>Qué tienes hoy:</strong> equipos, sedes, conexiones o proveedores.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Qué quieres cambiar</strong> o qué te preocupa.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Si hay una fecha</strong> que condicione el proyecto.</span></li>
+      </ul>
+      <p>Lo estudiamos con calma y te damos la respuesta ADQAda: qué haríamos en tu caso y por qué.</p>
+      <p class="small" style="margin-top:auto;position:relative;z-index:1">¿Prefieres llamar? <a href="tel:{{ site.phoneE164 }}">{{ site.phone }}</a></p>
+    </div>
+    <!-- PENDIENTE: conectar el formulario al Worker de Cloudflare con Turnstile (decisión de alojamiento). -->
+    <form class="form rv" style="--s:1" action="/contacto/" method="post" novalidate>
+      <div class="field"><label for="cf-nombre">Nombre <i>*</i></label><input id="cf-nombre" name="nombre" autocomplete="name" required></div>
+      <div class="field"><label for="cf-empresa">Empresa</label><input id="cf-empresa" name="empresa" autocomplete="organization"></div>
+      <div class="field"><label for="cf-email">E-mail <i>*</i></label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="cf-tel">Teléfono</label><input id="cf-tel" name="telefono" type="tel" autocomplete="tel"></div>
+      <div class="field full"><label for="cf-area">Área de interés</label>
+        <select id="cf-area" name="area">
+          <option value="">Selecciona una opción</option>
+          {%- for o in ["Soporte y mantenimiento IT", "Redes y WiFi", "Telecomunicaciones", "Sistemas y cloud", "Ciberseguridad", "Web y software", "Google Workspace / Microsoft 365", "Hardware y software", "Varias / no lo sé"] %}
+          <option>{{ o }}</option>
+          {%- endfor %}
+        </select></div>
+      <div class="field full"><label for="cf-msg">¿Qué necesitas?</label><textarea id="cf-msg" name="mensaje" placeholder="Explícanoslo como se lo contarías a un compañero."></textarea></div>
+      <input class="hp" name="linkedin" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <!-- CAMBIO LEGAL: primera capa informativa de protección de datos junto al formulario. Es un extracto LITERAL de la tabla «Información básica sobre Protección de Datos» de /politica-de-privacidad/ (Responsable adaptado a D1; de «Finalidad» solo el punto a). Validar con el asesor; si lo pide, añadir una casilla separada para comunicaciones comerciales. -->
+      <details class="layer">
+        <summary>Información básica sobre protección de datos <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <dl>
+          <dt>Responsable</dt><dd>ADQA (Ingeniería y Suministros Profesionales, S.L.)</dd>
+          <dt>Finalidad</dt><dd>Realizar la oferta o servicios solicitados, vender nuestros servicios, atender cualquier solicitud que puedas realizarnos.</dd>
+          <dt>Legitimación</dt><dd>Legitimación por consentimiento del interesado</dd>
+          <dt>Destinatarios</dt><dd>No se cederán datos a terceros, salvo obligación legal</dd>
+          <dt>Derechos</dt><dd>Tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos, como se explica en la información adicional</dd>
+          <dt>Información adicional</dt><dd><a href="/politica-de-privacidad/">Política de privacidad</a></dd>
+        </dl>
+      </details>
+      <label class="check"><input type="checkbox" name="consentimiento" required> <span>He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>. <i class="req">*</i></span></label>
+      <button class="btn btn-primary" type="submit">Enviar <svg><use href="#i-arrow"/></svg></button>
+      <p class="form-ok" role="status">Gracias. Hemos recibido tu mensaje y te responderemos muy pronto.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ QUÉ PASA DESPUÉS ============ -->
+<section class="sec" id="despues" aria-labelledby="h-despues" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Después de escribirnos</span>
+      <h2 id="h-despues">¿Qué pasa cuando nos escribes?</h2>
+      <p>Al otro lado hay un equipo que trabaja junto: sistemas, redes, telecomunicaciones, ciberseguridad y web. Si tu consulta toca varias áreas, lo coordinamos entre nosotros y tú hablas con una sola persona.</p>
+      <p>A partir de ahí, seguimos estos pasos. El ritmo lo marcas tú.</p>
+    </div>
+    <ol class="steps rv" style="--s:1">
+      <li><b>Leemos tu mensaje</b><p>Lo revisa la persona del equipo que lleva el área de tu consulta.</p></li>
+      <li><b>Te contactamos</b><p>Te llamamos o te escribimos para entender bien tu situación y resolver las primeras dudas.</p></li>
+      <li><b>Primera conversación</b><p>Sin compromiso. Si hace falta ver algo en persona o revisar tu infraestructura, lo acordamos contigo.</p></li>
+      <li><b>Te proponemos el siguiente paso</b><p>Qué haríamos, cómo y con qué alcance, para que lo valores con calma.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CÓMO LLEGAR ============ -->
+<section class="sec" id="como-llegar" aria-labelledby="h-llegar" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Dónde estamos</span>
+      <h2 id="h-llegar">Nuestras oficinas</h2>
+    </div>
+    <div class="where">
+      <div class="card addr rv">
+        <div class="info">
+          <address>{{ site.legalName }}<br>C. Masia d'en Notari 23, Nave 3<br>Polígono Masia d'en Frederic<br>08800 Vilanova i la Geltrú, Barcelona</address>
+          <!-- PENDIENTE: horario de atención de la sede (no consta en las fuentes). No inventarlo. -->
+          <p>Si quieres venir a vernos, llámanos antes y así te atiende la persona que lleva tu caso.</p>
+          <a class="txt-link" href="https://maps.app.goo.gl/rPo6eAyhCnEQhMjm8" rel="noopener">Abrir en Google Maps <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <a class="pinbox" href="https://maps.app.goo.gl/rPo6eAyhCnEQhMjm8" rel="noopener" aria-label="Ver la ubicación de ADQA en Google Maps">
+          <span class="pin"><i><svg aria-hidden="true"><use href="#i-pin"/></svg></i><span>ADQA · Nave 3</span></span>
+        </a>
+      </div>
+      <div class="side">
+        <div class="card rv" style="--s:1">
+          <h3>¿Ya eres cliente?</h3>
+          <p>Las incidencias se abren y se siguen en el área de clientes, el sistema de ticketing que hemos desarrollado nosotros. Ahí ves el estado de cada actuación en tus sedes.</p>
+          <a class="txt-link" href="{{ site.extranet }}">Ir al área de clientes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="card rv" style="--s:2">
+          <h3>¿Quieres trabajar con nosotros?</h3>
+          <p>Si te dedicas a sistemas, redes, telecomunicaciones o desarrollo, envíanos tu candidatura.</p>
+          <a class="txt-link" href="/trabaja-con-nosotros/">Trabaja con nosotros <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÁREAS ============ -->
+<section class="sec" id="areas" aria-labelledby="h-areas" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Sobre qué podemos hablar</span>
+      <h2 id="h-areas">Un mismo equipo para toda tu tecnología</h2>
+      <p class="lead">Si tu consulta toca varias áreas, mejor: lo vemos todo junto. Estas son las que llevamos.</p>
+    </div>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/soporte-it/"><span class="cat">Soporte IT</span><h3>Soporte y mantenimiento informático</h3><p>Para que alguien que ya conoce tus equipos atienda las incidencias y haga el preventivo.</p></a>
+      <a class="card rv" style="--s:1" href="/redes/"><span class="cat">Redes y WiFi</span><h3>Redes informáticas y WiFi</h3><p>Del cableado que pasa por el falso techo a la cobertura WiFi de una nave.</p></a>
+      <a class="card rv" style="--s:2" href="/telecomunicaciones/"><span class="cat">Telecomunicaciones</span><h3>Fibra, líneas y centralita</h3><p>Con Anxanet, nuestro operador de telecomunicaciones propio.</p></a>
+      <a class="card rv" style="--s:0" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h3>Servidores y cloud</h3><p>Tus sistemas en nuestro datacenter propio y de proximidad en Barcelona.</p></a>
+      <a class="card rv" style="--s:1" href="/ciberseguridad/"><span class="cat">Ciberseguridad</span><h3>Ciberseguridad para empresas</h3><p>Protección de conexiones, equipos, servidores y correo, con un método claro.</p></a>
+      <a class="card rv" style="--s:2" href="/diseno-programacion-web/"><span class="cat">Web y software</span><h3>Webs y software a medida</h3><p>Diseño, programación y mantenimiento hechos por nuestro equipo.</p></a>
+    </div>
+  </div>
+</section>
+
+{{ m.faqSection(faq, title="Antes de escribirnos") }}
+
+{% endblock %}

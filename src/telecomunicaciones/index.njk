@@ -1,15 +1,39 @@
 ---
-title: "Telecomunicaciones y networking para empresas | ADQA"
-description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión de sedes y centralitas IP con Anxanet, nuestro operador propio. Telecom e IT, un solo contacto."
+title: "Telecomunicaciones para empresas en Barcelona | ADQA"
+description: "Telecomunicaciones para empresas en Barcelona con operador propio, Anxanet: Internet hasta 10 Gb, enlaces entre sedes, SD-WAN, SASE y centralitas IP Wildix."
+keyword: "telecomunicaciones para empresas en Barcelona"
+breadcrumbs:
+  - { name: "Telecomunicaciones" }
+service:
+  name: "Telecomunicaciones para empresas"
+  serviceType: "Servicios de telecomunicaciones para empresas"
+faq:
+  manager:
+    - q: "¿Qué servicios de telecomunicaciones ofrece ADQA?"
+      a: "A través de Anxanet, su operador de telecomunicaciones propio, ADQA ofrece conexión a Internet de hasta 10 Gb, redes privadas virtuales (VPN), enlaces punto a punto, interconexión de sedes con SD-WAN o MPLS, traffic engineering, centralitas IP, telefonía fija y móvil, comunicaciones unificadas, acceso remoto con SASE y auditoría de telecomunicaciones. El mismo equipo gestiona también la red, los sistemas y la ciberseguridad de la empresa."
+    - q: "¿Qué ventaja tiene que el operador de telecomunicaciones sea propio?"
+      a: "Que la conexión, la red interna y los sistemas dependen del mismo equipo. Cuando algo falla, ADQA revisa la línea y la red a la vez a través de Anxanet, su operador propio, y localiza antes el origen. Altas, cambios de servicio e incidencias se gestionan con una sola llamada."
+    - q: "¿Puedo mantener mis números de teléfono si cambio de centralita o de operador?"
+      a: "Sí. La portabilidad numérica permite conservar todos los números al pasar a una centralita IP o en la nube, y los operadores están obligados a facilitarla. En ADQA gestionamos todo el proceso para que la migración sea transparente para tus clientes y tu equipo, con la fecha del cambio planificada de antemano."
+    - q: "¿Qué pasa con las comunicaciones si cae la conexión principal?"
+      a: "Depende de si la instalación tiene redundancia. Cuando las comunicaciones son críticas, ADQA diseña un acceso secundario, por otra tecnología o por otro camino, con conmutación automática si el principal falla. Como la conexión la da Anxanet, su operador propio, la incidencia la sigue el mismo equipo que conoce tu instalación, sin que tengas que tratar con terceros."
+  tecnico:
+    - q: "¿Qué diferencia hay entre una centralita IP y una centralita en la nube?"
+      a: "Una centralita IP instalada en la empresa es un equipo propio que gestiona las llamadas sobre la red de datos. Una centralita en la nube funciona en remoto, sin hardware local: el proveedor mantiene la infraestructura y la empresa usa el servicio por Internet. La de la nube es más flexible y evita mantener el equipo; la local tiene sentido cuando se necesita control total o la latencia es muy exigente. ADQA instala centralitas IP Wildix y centralitas virtuales, y ayuda a elegir la modalidad según cómo trabaja cada empresa."
+    - q: "¿Qué es SASE y en qué se diferencia de una VPN?"
+      a: "SASE (Secure Access Service Edge) es un modelo que une conectividad y seguridad en un mismo servicio en la nube. Una VPN tradicional cifra el tráfico entre el usuario y la empresa, pero todo pasa por un punto central, que puede convertirse en un cuello de botella. SASE aplica las políticas de seguridad cerca del usuario, sin enviar todo el tráfico a la central. El resultado es un acceso remoto más ágil y más fácil de gestionar, sobre todo con equipos repartidos y aplicaciones en el cloud."
+    - q: "¿SD-WAN o MPLS para conectar varias sedes?"
+      a: "MPLS es un servicio del operador que lleva el tráfico entre sedes por caminos privados y previsibles. SD-WAN gestiona por software varias conexiones a la vez, por ejemplo una fibra y un acceso de respaldo, prioriza el tráfico crítico y cambia de camino si una conexión falla. SD-WAN aporta flexibilidad y redundancia; MPLS, un comportamiento muy estable. Muchas empresas combinan los dos. La elección depende del número de sedes, de las aplicaciones y de la disponibilidad que se necesita."
+    - q: "¿Qué es la fibra oscura con MUX-DEMUX?"
+      a: "La fibra oscura es fibra dedicada que se ilumina con equipos propios del proyecto. Con multiplexación por longitud de onda (MUX-DEMUX), varios canales viajan por la misma fibra, cada uno en su color de luz, y la capacidad crece sin tender fibra nueva. Así interconecta ADQA los hospitales del Consorci Sanitari Alt Penedès-Garraf, a 100 Gb/s entre sedes."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
 {% block head %}
 <style>
-/* Telecomunicaciones: piezas propias (los componentes de página interior están en site.css) */
+/* Telecomunicaciones: pie «Encaja en / Caso» de las tarjetas de interconexión */
 .aud .case{margin-top:4px;padding-top:12px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
 .aud .case strong{color:var(--ink);font-weight:600}
-@media (min-width:1061px){.split.flip .shot{order:-1}}
 </style>
 {% endblock %}
 {% block content %}
@@ -18,58 +42,53 @@ description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión d
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.05s">Telecomunicaciones y networking · Operador propio</span>
-    <h1 id="h-hero" data-words>Telecomunicaciones y networking para empresas, con <span class="accent">operador propio</span></h1>
-    <p class="lead fade-in" style="--d:.8s">Internet, interconexión de sedes y telefonía a través de Anxanet, nuestro operador de telecomunicaciones. Y como también podemos ser tu equipo IT, gestionas las comunicaciones y la informática con un único contacto.</p>
+    <span class="eyebrow fade-in" style="--d:.05s">Telecomunicaciones · Internet, sedes y telefonía</span>
+    <h1 id="h-hero" data-words>Telecomunicaciones para empresas en Barcelona, con <span class="accent">operador propio</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Tu conexión a Internet, los enlaces entre tus sedes y tu telefonía, a través de Anxanet, nuestro operador de telecomunicaciones. Y como también llevamos tu red y tus sistemas, una sola llamada sirve para todo.</p>
     <div class="hero-ctas fade-in" style="--d:.95s">
-      <a class="btn btn-primary" href="#contacto">Cuéntanos qué necesitas conectar <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary" href="#contacto">Explícanos tu caso <svg><use href="#i-arrow"/></svg></a>
       <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
     </div>
     <div class="trust fade-in" style="--d:1.1s">
-      <span><svg><use href="#i-check"/></svg>Operador propio, no revendedor</span>
+      <span><svg><use href="#i-check"/></svg>Operador propio: Anxanet</span>
       <span><svg><use href="#i-check"/></svg>Internet hasta 10 Gb</span>
-      <span><svg><use href="#i-check"/></svg>Telecom e IT con un único contacto</span>
+      <span><svg><use href="#i-check"/></svg>Más de 30 años</span>
     </div>
   </div>
 </section>
 
-<nav class="crumbs wrap fade-in" style="--d:1.2s" aria-label="Ruta de navegación">
-  <ol>
-    <li><a href="/">Inicio</a></li>
-    <li><span aria-current="page">Telecomunicaciones y networking</span></li>
-  </ol>
-</nav>
+{{ m.crumbs(breadcrumbs) }}
 
-<!-- ============ EN RESUMEN (answer-first) ============ -->
+<!-- ============ EN RESUMEN ============ -->
 <section class="sec" id="en-resumen" aria-labelledby="h-sum" style="padding:clamp(56px,7vw,88px) 0 0">
   <div class="wrap intro">
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
-      <h2 id="h-sum" class="sr">¿Qué ofrece ADQA en telecomunicaciones y networking?</h2>
-      <p class="tldr"><strong>ADQA es una empresa TIC y operador de telecomunicaciones con licencia propia a través de Anxanet.</strong> Ofrece a empresas e instituciones conexiones a Internet de hasta 10 Gb, redes privadas virtuales, enlaces punto a punto, interconexión de sedes, traffic engineering, centralitas IP y telefonía fija y móvil, integradas con sus servicios IT y gestionadas con un único contacto.</p>
+      <h2 id="h-sum" class="sr">¿Qué ofrece ADQA en telecomunicaciones para empresas?</h2>
+      <p class="tldr"><strong>ADQA es una empresa de informática y telecomunicaciones con operador propio, Anxanet, que da servicio a empresas e instituciones de Barcelona y Cataluña.</strong> Ofrece conexión a Internet de hasta 10 Gb, interconexión de sedes, acceso remoto seguro, centralitas IP y telefonía fija y móvil, y lo gestiona junto con la red, los sistemas y la ciberseguridad, con un mismo equipo.</p>
     </div>
     <div class="stats">
-      <div class="stat rv" style="--s:0"><b><span data-count="10">0</span><small> Gb</small></b><span>conexiones a Internet con Anxanet, nuestro operador propio</span></div>
-      <div class="stat rv" style="--s:1"><b><span data-count="100">0</span><small> Gb/s</small></b><span>entre sedes en la interconexión de los hospitales del Consorci Sanitari Alt Penedès-Garraf</span></div>
-      <div class="stat rv" style="--s:2"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en cada una de nuestras áreas, también en telecom</span></div>
-      <div class="stat rv" style="--s:3"><b>Telco 2</b><span>acreditación de nuestros instaladores, junto a altura y espacios confinados</span></div>
+      <div class="stat rv" style="--s:0"><b><span data-count="10">0</span><small> Gb</small></b><span>de capacidad máxima de conexión a Internet con Anxanet, nuestro operador propio</span></div>
+      <div class="stat rv" style="--s:1"><b><span data-count="100">0</span><small> Gb/s</small></b><span>entre los hospitales del Consorci Sanitari Alt Penedès-Garraf</span></div>
+      <div class="stat rv" style="--s:2"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en informática y telecomunicaciones</span></div>
+      <div class="stat rv" style="--s:3"><b>Telco 2</b><span>acreditación de nuestros instaladores, además de trabajos en altura y en espacios confinados</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ QUÉ HACEMOS POSIBLE (pain points en positivo) ============ -->
+<!-- ============ QUÉ HACEMOS POSIBLE ============ -->
 <section class="sec" aria-labelledby="h-pos">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Lo que cambia en tu día a día</span>
       <h2 id="h-pos">¿Qué hacemos posible en tus comunicaciones?</h2>
-      <p class="lead">Unas telecomunicaciones bien resueltas se notan en todo lo que permiten hacer. Este es el resultado que buscamos en cada proyecto.</p>
+      <p class="lead">Teléfono, Internet, acceso remoto y sedes conectadas. Cuando están bien resueltos, ni se notan: simplemente trabajas.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Todas tus sedes, una sola red</h3><p>Oficinas, fábricas, tiendas o centros conectados entre sí para compartir aplicaciones, datos y telefonía como si estuvieran en el mismo edificio.</p></div>
-      <div class="card rv" style="--s:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Capacidad a la medida de tu actividad</h3><p>Conexiones a Internet de hasta 10 Gb y enlaces dedicados, dimensionados para el uso real que hace tu empresa de la red.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3>Telefonía que acompaña a tu equipo</h3><p>Centralitas IP y telefonía fija y móvil que unen sedes y personas, estén donde estén.</p></div>
-      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-check"/></svg></span><h3>Un único contacto para telecom e IT</h3><p>Conexión, red y sistemas con el mismo interlocutor: la solución correcta llega antes cuando una sola empresa ve el conjunto.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Conexión a punto en las horas punta</h3><p>Capacidad dimensionada para tu uso real y el tráfico ordenado por prioridades. La videollamada de las diez no compite con una descarga.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Todas tus sedes, una sola red</h3><p>Oficinas, fábricas, tiendas o centros que comparten aplicaciones, datos y telefonía como si estuvieran en el mismo edificio.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3>Te localizan estés donde estés</h3><p>Una centralita que suena en la oficina, en el móvil o en el portátil de casa. Tus clientes llaman al mismo número de siempre.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Acceso remoto cómodo y seguro</h3><p>Quien trabaja fuera entra a los sistemas que necesita, con su perfil y sus permisos, sin pelearse con la conexión.</p></div>
     </div>
   </div>
 </section>
@@ -80,77 +99,77 @@ description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión d
     <div class="sticky rv">
       <span class="eyebrow">Nuestro propio operador</span>
       <h2 id="h-op">¿Qué aporta trabajar con un operador propio?</h2>
-      <p class="lead" style="color:#bdbdbd">Anxanet es nuestro operador de telecomunicaciones y ofrece todos los servicios que una empresa necesita. No revendemos líneas de otros: las operamos.</p>
-      <div><a class="btn btn-primary" href="#contacto">Habla con un especialista <svg><use href="#i-arrow"/></svg></a></div>
+      <p class="lead" style="color:#bdbdbd">Anxanet es nuestro operador de telecomunicaciones y ofrece todos los servicios que una empresa necesita. La línea, la red y los sistemas pasan por las mismas manos, y eso se nota cuando hay que decidir o resolver algo.</p>
+      <div><a class="btn btn-primary" href="#contacto">Habla con nuestro equipo <svg><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="stack">
       <article class="st" style="--n:0">
         <span class="num">01 · ANXANET</span>
-        <h3>Un operador con licencia propia</h3>
-        <p>Anxanet es el operador de telecomunicaciones de ADQA. Te ofrecemos la conectividad y la telefonía directamente, con el mismo equipo que conoce tu infraestructura IT.</p>
+        <h3>Tu conexión, de nuestro propio operador</h3>
+        <p>La fibra, las líneas fijas y móviles y la centralita llegan a tu empresa a través de Anxanet. Cuando una conexión se comporta raro, revisamos la línea y tu red interna a la vez, y la incidencia la sigue quien ya conoce tu instalación.</p>
         <div class="row"><a class="badge" href="https://anxanet.com/" rel="noopener"><img src="/assets/sellos/anxanet.jpg" alt="Anxanet, operador de telecomunicaciones de ADQA" loading="lazy"></a></div>
       </article>
       <article class="st" style="--n:1">
-        <span class="num">02 · TELECOM + IT</span>
-        <h3>Soluciones a medida, no paquetes cerrados</h3>
-        <p>Combinando los servicios de telecomunicaciones con los de IT diseñamos la solución que encaja con tu empresa: la conexión, la red interna, los sistemas y la seguridad pensados como un todo.</p>
+        <span class="num">02 · TELECOMUNICACIONES + INFORMÁTICA</span>
+        <h3>Telecomunicaciones e informática, en un mismo plano</h3>
+        <p>Combinamos telecomunicaciones e informática para diseñar lo que encaja con tu empresa. La conexión, la red interna, los servidores y la seguridad se plantean a la vez, desde el primer día.</p>
       </article>
       <article class="st" style="--n:2">
-        <span class="num">03 · UN ÚNICO CONTACTO</span>
-        <h3>Una sola llamada para telecom e informática</h3>
-        <p>Con un único contacto gestionas tus necesidades de telecomunicaciones e IT. Así es más fácil encontrar la solución correcta y resolver cualquier problema que pueda surgir, sin coordinar a varios proveedores.</p>
+        <span class="num">03 · UNA SOLA LLAMADA</span>
+        <h3>Las gestiones con el operador, de nuestra cuenta</h3>
+        <p>Altas, cambios de servicio, portabilidades e incidencias: las tramitamos nosotros. Tú haces una llamada y seguimos desde ahí, con quien ya conoce tu instalación.</p>
       </article>
       <article class="st" style="--n:3">
         <span class="num">04 · EQUIPO PROPIO</span>
-        <h3>Instaladores propios, homologados y acreditados</h3>
-        <p>Nuestros técnicos están homologados por los proveedores de referencia en telecomunicaciones y disponen de acreditaciones para trabajos especiales:</p>
+        <h3>Instaladores propios y acreditados</h3>
+        <p>Nuestros técnicos están homologados por fabricantes de telecomunicaciones y acreditados para trabajos especiales, de una cubierta a una arqueta:</p>
         <ul><li>Trabajos en altura</li><li>Trabajos en espacios confinados</li><li>Telco 2</li></ul>
       </article>
       <article class="st" style="--n:4">
         <span class="num">05 · EXTRANET</span>
         <h3>Cada actuación, visible en tiempo real</h3>
-        <p>Desde nuestra extranet, un sistema de ticketing desarrollado por ADQA, das de alta, controlas y verificas las incidencias y actuaciones de todas tus sedes. La adaptamos a tu forma de trabajar.</p>
+        <p>Desde nuestra extranet, un sistema de ticketing desarrollado por ADQA, das de alta, controlas y verificas las incidencias y actuaciones de todas tus sedes. Todo dentro de nuestro sistema de calidad ISO 9001:2015.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ NETWORKING: INTERCONEXIÓN DE SEDES ============ -->
-<section class="sec" id="networking" aria-labelledby="h-net">
+<!-- ============ INTERCONEXIÓN DE SEDES ============ -->
+<section class="sec" id="interconexion" aria-labelledby="h-net">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Networking e interconexión de sedes</span>
+      <span class="eyebrow">Interconexión de sedes</span>
       <h2 id="h-net">¿Cómo se conectan las sedes de una empresa?</h2>
-      <p class="lead">No hay un enlace mejor que otro, sino el que encaja con cada ubicación, cada distancia y cada volumen de tráfico. Estas son las opciones con las que conectamos sedes.</p>
+      <p class="lead">No hay un enlace mejor que otro, sino el que encaja con cada ubicación, cada distancia y cada volumen de tráfico. Estas son las opciones con las que unimos sedes.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><h3>Red privada virtual (VPN)</h3><p>Un túnel cifrado sobre las conexiones a Internet de cada sede. Es flexible, se despliega rápido y también sirve para conectar a quien trabaja en remoto.</p><p class="case"><strong>Encaja en:</strong> sedes pequeñas y equipos en movilidad.</p></div>
-      <div class="card rv" style="--s:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><path d="M7.5 12h9"/></svg></span><h3>Enlace punto a punto</h3><p>Una conexión dedicada entre dos ubicaciones. La capacidad está reservada para ese tramo y el tráfico no comparte camino con Internet.</p><p class="case"><strong>Encaja en:</strong> sedes con mucho intercambio de datos o aplicaciones críticas.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-signal"/></svg></span><h3>Radioenlace</h3><p>Un enlace inalámbrico entre dos puntos con visión directa, útil cuando tender cable no es viable. En bandas licenciadas, la frecuencia es exclusiva del enlace y queda protegida de interferencias.</p><p class="case"><strong>Casos:</strong> las dos sedes administrativas del Consell Comarcal del Garraf y los enlaces licenciados del Consorci Sanitari Alt Penedès-Garraf.</p></div>
-      <div class="card rv" style="--s:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17c4 0 4.5-10 7.5-10s3.5 10 7.5 10"/><circle cx="3" cy="17" r="1.5"/><circle cx="21" cy="17" r="1.5"/></svg></span><h3>Fibra oscura con <span class="nw">MUX-DEMUX</span></h3><p>Fibra dedicada que se ilumina con equipos propios del proyecto. La multiplexación por longitud de onda lleva varios canales por la misma fibra.</p><p class="case"><strong>Caso:</strong> Consorci Sanitari Alt Penedès-Garraf, a 100 Gb/s entre sedes.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><h3>Red privada virtual</h3><p>Un túnel cifrado sobre la conexión a Internet de cada sede. Es flexible, se despliega rápido y también sirve para quien trabaja en remoto.</p><p class="case"><strong>Encaja en:</strong> sedes pequeñas y equipos en movilidad.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><path d="M7.5 12h9"/></svg></span><h3>Enlace punto a punto</h3><p>Una conexión dedicada entre dos ubicaciones. La capacidad está reservada para ese tramo y el tráfico no comparte camino con Internet.</p><p class="case"><strong>Encaja en:</strong> sedes con mucho intercambio de datos o la oficina con el datacenter.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-signal"/></svg></span><h3>Radioenlace</h3><p>Un enlace inalámbrico entre dos puntos con visión directa, útil cuando tender cable no es viable. En bandas licenciadas, la frecuencia es exclusiva del enlace y queda protegida de interferencias.</p><p class="case"><strong>Caso:</strong> las dos sedes administrativas del Consell Comarcal del Garraf.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17c4 0 4.5-10 7.5-10s3.5 10 7.5 10"/><circle cx="3" cy="17" r="1.5"/><circle cx="21" cy="17" r="1.5"/></svg></span><h3>Fibra oscura con <span class="nw">MUX-DEMUX</span></h3><p>Fibra dedicada que se ilumina con equipos propios del proyecto. La multiplexación por longitud de onda lleva varios canales por la misma fibra.</p><p class="case"><strong>Caso:</strong> los hospitales del Consorci Sanitari Alt Penedès-Garraf, a 100&nbsp;Gb/s y con enlaces licenciados.</p></div>
     </div>
+    <p class="note rv" style="margin-top:32px">Sobre estos enlaces, cada sede necesita su propio orden interno: segmentos, rutas y redundancia. Lo explicamos en <a class="txt-link" href="/telecomunicaciones/networking/">networking <span class="nw">empresarial<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
   </div>
 </section>
 
-<!-- ============ TRAFFIC ENGINEERING ============ -->
+<!-- ============ SD-WAN, MPLS Y TRAFFIC ENGINEERING ============ -->
 <section class="sec" id="traffic-engineering" aria-labelledby="h-te" style="padding-top:0">
   <div class="wrap split">
     <div class="txt rv">
-      <span class="eyebrow">Traffic engineering</span>
-      <h2 id="h-te">¿Qué es el traffic engineering y qué aporta?</h2>
-      <p>Cuando varias sedes, la voz, las aplicaciones en el cloud y la navegación comparten la misma red, no todo el tráfico tiene la misma urgencia. El traffic engineering decide por dónde circula cada tipo de tráfico y con qué prioridad.</p>
-      <p>El resultado es una red que aprovecha mejor la capacidad disponible, en la que una llamada o una aplicación crítica no compite con una descarga, y que dispone de caminos alternativos entre sedes.</p>
-      <p>Como gestionamos tanto las telecomunicaciones como la red interna, podemos plantear estas reglas de extremo a extremo: desde la conexión del operador hasta la red de cada sede.</p>
-      <p><a class="txt-link" href="/redes/">Redes informáticas y WiFi: la red interna de cada sede<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      <span class="eyebrow">SD-WAN, MPLS y traffic engineering</span>
+      <h2 id="h-te">¿Por dónde viaja el tráfico entre tus sedes?</h2>
+      <p>Cuando varias sedes, la voz, las aplicaciones en el cloud y la navegación comparten conexiones, no todo el tráfico tiene la misma urgencia. El traffic engineering decide por dónde circula cada tipo de tráfico y con qué prioridad.</p>
+      <p>Entre sedes lo aplicamos con dos modelos. Con MPLS, el operador lleva el tráfico por caminos privados y previsibles. Con SD-WAN, la red usa varias conexiones a la vez, da paso primero a lo crítico y cambia de camino si una conexión falla.</p>
+      <p>Elegimos uno, otro o una combinación según tus sedes, tus aplicaciones y la disponibilidad que necesitas. Y como la conexión también es nuestra, las reglas van de extremo a extremo: del operador a la red de cada sede.</p>
     </div>
     <div class="cmp good rv" style="--s:1">
-      <h3>Qué se define al hacer traffic engineering</h3>
+      <h3>Qué se define al ordenar el tráfico</h3>
       <ul>
         <li><svg><use href="#i-check"/></svg><span><strong>Prioridades:</strong> la voz y las aplicaciones críticas pasan primero.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Rutas:</strong> por qué enlace viaja cada tipo de tráfico entre sedes.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Reserva de capacidad:</strong> ancho de banda asegurado para los servicios que lo necesitan.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Caminos alternativos:</strong> si un enlace no está disponible, el tráfico sigue por otro.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Medición:</strong> el uso real de la red, para ajustar la capacidad cuando la empresa crece.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Medición:</strong> el uso real de cada enlace, para ajustar la capacidad cuando la empresa crece.</span></li>
       </ul>
     </div>
   </div>
@@ -161,20 +180,45 @@ description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión d
   <div class="wrap split flip">
     <div class="txt rv">
       <span class="eyebrow">Voz y telefonía</span>
-      <h2 id="h-tel">¿Qué es una centralita IP y cómo une tus sedes?</h2>
-      <p>Una centralita IP gestiona las llamadas de la empresa sobre la red de datos, en lugar de hacerlo sobre líneas telefónicas tradicionales. Puede estar instalada en tus oficinas o funcionar de forma virtual desde la nube.</p>
-      <p>Como funciona sobre la red, todas las sedes pueden compartir la misma centralita: extensiones internas entre oficinas, un plan de numeración común y llamadas que se transfieren de una sede a otra como si estuvieran en el mismo edificio.</p>
+      <h2 id="h-tel">¿Centralita IP en tu oficina o en la nube?</h2>
+      <p>Una centralita IP gestiona las llamadas sobre la red de datos. Puede estar instalada en tus oficinas o funcionar como centralita virtual en la nube, sin ningún equipo que mantener en el armario.</p>
+      <p>En los dos casos, todas las sedes comparten numeración y extensiones, y el móvil o el portátil funcionan como un teléfono más. Quien trabaja desde casa recibe las llamadas igual que en la oficina.</p>
       <ul class="ticks">
-        <li><svg><use href="#i-check"/></svg><span><strong>Centralitas IP:</strong> en tus instalaciones o virtuales, según cómo trabaje tu empresa.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Telefonía fija y móvil:</strong> con Anxanet, nuestro operador propio.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Centralita virtual entre sedes:</strong> la solución que interconecta las sedes de Granier.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Mantenimiento permanente:</strong> como el de los servicios de WiFi y telefonía de MIDBAN.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Centralitas IP Wildix:</strong> instaladas en tus oficinas, sobre tu propia red de datos.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Comunicaciones unificadas:</strong> llamadas, videollamadas, chat y reuniones desde la misma plataforma.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Telefonía fija y móvil:</strong> con Anxanet, y tus números de siempre gracias a la portabilidad.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Centralita virtual entre sedes:</strong> la que interconecta las sedes de Granier.</span></li>
       </ul>
+      <p><strong>¿Cuándo compensa cambiar?</strong> Cuando la centralita no llega al teletrabajo, cuando mantenerla cuesta más que un servicio en la nube o cuando quieres integrarla con tu CRM. Si funciona bien y tu equipo es presencial, quizá todavía no toque. Lo valoramos contigo antes de proponer nada.</p>
     </div>
     <figure class="shot rv" style="--s:1">
       <img src="/assets/proyectos/granier-tienda.webp" alt="Tienda de Granier" loading="lazy">
-      <figcaption>Granier: centralita virtual interconectando sus sedes, junto al diseño y montaje de la informática y las telecomunicaciones de su nueva sede central.</figcaption>
+      <figcaption>Granier: centralita virtual entre sedes, junto con la informática y las telecomunicaciones de su nueva sede central.</figcaption>
     </figure>
+  </div>
+</section>
+
+<!-- ============ ACCESO REMOTO Y SASE ============ -->
+<section class="sec" id="acceso-remoto" aria-labelledby="h-sase" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Acceso remoto y SASE</span>
+      <h2 id="h-sase">¿Cómo se conecta quien trabaja fuera de la oficina?</h2>
+      <p>Una VPN crea un túnel cifrado entre el portátil y la empresa. Va bien con pocos usuarios y con las aplicaciones en la oficina. Cuando el equipo está repartido y las aplicaciones viven en el cloud, todo el tráfico acaba pasando por el mismo punto.</p>
+      <p>SASE (Secure Access Service Edge) une conectividad y seguridad en un servicio en la nube. Aplica las políticas de acceso allí donde está cada persona, sin enviar todo el tráfico a la central.</p>
+      <p>Lo diseñamos junto con tu firewall y tus políticas de seguridad, así que el acceso remoto encaja con el resto de la protección.</p>
+      <p><a class="txt-link" href="/ciberseguridad/">Ciberseguridad en todas las <span class="nw">capas<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+    <div class="cmp good rv" style="--s:1">
+      <h3>Qué aporta SASE a tu equipo</h3>
+      <ul>
+        <li><svg><use href="#i-check"/></svg><span><strong>Desde cualquier lugar:</strong> acceso seguro desde cualquier dispositivo y ubicación.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Por perfiles:</strong> cada persona entra solo a lo que necesita para su trabajo.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Inspección cerca del usuario:</strong> el tráfico se revisa en origen, sin un único embudo.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Gestión centralizada:</strong> sin infraestructura local compleja que mantener.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Crece contigo:</strong> nuevas altas sin comprar hardware.</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -184,14 +228,14 @@ description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión d
     <div class="sec-head rv">
       <span class="eyebrow">Servicios de telecomunicaciones</span>
       <h2 id="h-serv">¿Qué incluye nuestro servicio de telecomunicaciones?</h2>
-      <p class="lead">Todos los servicios de telecomunicaciones que necesita una empresa, operados por nuestro propio equipo a través de Anxanet.</p>
+      <p class="lead">Todo lo que comunica tu empresa, de la fibra que entra en el edificio a la centralita que reparte las llamadas, con nuestro propio equipo y a través de Anxanet.</p>
     </div>
     <div class="services">
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-        <h3>Conexiones a Internet</h3>
-        <p>Conectividad de hasta 10 Gb con nuestro propio operador, dimensionada para lo que tu empresa necesita hoy y preparada para crecer.</p>
-        <ul class="tags"><li>Hasta 10 Gb</li><li>Operador propio</li></ul>
+        <h3>Conexión a Internet</h3>
+        <p>Conectividad de hasta 10 Gb con nuestro propio operador, dimensionada para lo que tu empresa hace hoy y con margen para crecer.</p>
+        <ul class="tags"><li>Hasta 10 Gb</li><li>Fibra</li><li>Anxanet</li></ul>
       </div>
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
@@ -201,118 +245,152 @@ description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión d
       </div>
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><path d="M7.5 12h9"/></svg></span>
-        <h3>Conexiones punto a punto</h3>
-        <p>Enlaces dedicados entre dos ubicaciones, por cable o radio, con la capacidad reservada para ese tramo.</p>
+        <h3>Enlaces punto a punto</h3>
+        <p>Conexiones dedicadas entre dos ubicaciones, por cable o por radio, con la capacidad reservada para ese tramo.</p>
         <ul class="tags"><li>Enlace dedicado</li><li>Radioenlace</li><li>Fibra</li></ul>
       </div>
-      <a class="card svc wide rv" href="#networking" style="--s:0">
+      <a class="card svc wide rv" href="#interconexion" style="--s:0">
         <span class="ico"><svg><use href="#i-net"/></svg></span>
         <h3>Interconexión de sedes</h3>
-        <p>Diseñamos cómo se conectan todas tus ubicaciones combinando VPN, enlaces punto a punto, radioenlaces o fibra oscura, según la distancia y el tráfico de cada una.</p>
+        <p>Diseñamos cómo se conectan todas tus ubicaciones combinando redes privadas, enlaces punto a punto, radioenlaces o fibra oscura, según la distancia y el tráfico de cada una.</p>
         <ul class="tags"><li>Enlaces licenciados</li><li>Fibra oscura</li><li>MUX-DEMUX</li></ul>
-        <span class="more">Networking <svg><use href="#i-arrow"/></svg></span>
+        <span class="more">Cómo unimos sedes <svg><use href="#i-arrow"/></svg></span>
       </a>
       <a class="card svc wide rv" href="#traffic-engineering" style="--s:1">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h6M14 17h6"/><circle cx="16" cy="7" r="2"/><circle cx="12" cy="17" r="2"/></svg></span>
-        <h3>Traffic engineering</h3>
-        <p>Definimos rutas y prioridades para que la voz y las aplicaciones críticas tengan su espacio en la red, con caminos alternativos entre sedes.</p>
-        <ul class="tags"><li>Prioridades</li><li>Rutas</li><li>Caminos alternativos</li></ul>
-        <span class="more">Traffic engineering <svg><use href="#i-arrow"/></svg></span>
+        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
+        <h3>SD-WAN y MPLS</h3>
+        <p>Redes entre sedes que reparten el tráfico entre varias conexiones o lo llevan por caminos privados del operador, con prioridad para lo crítico.</p>
+        <ul class="tags"><li>SD-WAN</li><li>MPLS</li><li>Redundancia</li></ul>
+        <span class="more">El tráfico entre sedes <svg><use href="#i-arrow"/></svg></span>
       </a>
       <a class="card svc rv" href="#telefonia" style="--s:0">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4M7.5 8h.01M12 8h.01M16.5 8h.01M7.5 12h.01M12 12h.01M16.5 12h.01"/></svg></span>
         <h3>Centralitas IP</h3>
-        <p>Centralitas sobre la red de datos, en tus instalaciones o virtuales, que dan servicio a todas tus sedes.</p>
-        <ul class="tags"><li>Centralita virtual</li><li>Multisede</li></ul>
+        <p>Centralitas IP Wildix o centralitas virtuales sobre la red de datos, con servicio a todas tus sedes.</p>
+        <ul class="tags"><li>Wildix</li><li>Centralita virtual</li><li>Multisede</li></ul>
         <span class="more">Telefonía <svg><use href="#i-arrow"/></svg></span>
       </a>
       <a class="card svc rv" href="#operador-propio" style="--s:1">
         <span class="ico"><svg><use href="#i-phone"/></svg></span>
         <h3>Telefonía fija y móvil</h3>
-        <p>Líneas fijas y móviles para tu empresa con Anxanet, con el mismo interlocutor que tu informática.</p>
-        <ul class="tags"><li>Fijo</li><li>Móvil</li><li>Operador propio</li></ul>
+        <p>Líneas fijas y móviles con Anxanet, con portabilidad gestionada por nosotros y el mismo interlocutor que tu informática.</p>
+        <ul class="tags"><li>Fijo</li><li>Móvil</li><li>Portabilidad</li></ul>
         <span class="more">Operador propio <svg><use href="#i-arrow"/></svg></span>
       </a>
-      <a class="card svc rv" href="/soporte-it/" style="--s:2">
+      <a class="card svc rv" href="#telefonia" style="--s:2">
+        <span class="ico"><svg><use href="#i-user"/></svg></span>
+        <h3>Comunicaciones unificadas</h3>
+        <p>Voz, vídeo, mensajería y reuniones en un mismo entorno, para que tu equipo hable con clientes y compañeros desde donde esté.</p>
+        <ul class="tags"><li>Voz</li><li>Vídeo</li><li>Chat</li></ul>
+        <span class="more">Telefonía <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card svc wide rv" href="#acceso-remoto" style="--s:0">
+        <span class="ico"><svg><use href="#i-lock"/></svg></span>
+        <h3>Acceso remoto con SASE</h3>
+        <p>Conexiones seguras para equipos distribuidos, con políticas de acceso por perfil y gestión centralizada, integradas con tu ciberseguridad.</p>
+        <ul class="tags"><li>SASE</li><li>Teletrabajo</li><li>Políticas por perfil</li></ul>
+        <span class="more">Acceso remoto <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card svc wide rv" href="#como-trabajamos" style="--s:1">
+        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <h3>Auditoría de telecomunicaciones</h3>
+        <p>Revisamos líneas, contratos, centralita y conexiones para ajustar el coste, la calidad y la seguridad de lo que tienes contratado.</p>
+        <ul class="tags"><li>Coste</li><li>Calidad</li><li>Seguridad</li></ul>
+        <span class="more">Cómo trabajamos <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card svc wide rv" href="#traffic-engineering" style="--s:0">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h6M14 17h6"/><circle cx="16" cy="7" r="2"/><circle cx="12" cy="17" r="2"/></svg></span>
+        <h3>Traffic engineering</h3>
+        <p>Definimos rutas y prioridades para que la voz y las aplicaciones críticas tengan su espacio, con caminos alternativos entre sedes.</p>
+        <ul class="tags"><li>Prioridades</li><li>Rutas</li><li>Caminos alternativos</li></ul>
+        <span class="more">Traffic engineering <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card svc wide rv" href="/soporte-it/" style="--s:1">
         <span class="ico"><svg><use href="#i-tool"/></svg></span>
         <h3>Mantenimiento de las comunicaciones</h3>
-        <p>Mantenemos tus enlaces, tu red y tu telefonía, con cada incidencia registrada y visible en nuestra extranet.</p>
-        <ul class="tags"><li>Mantenimiento</li><li>Extranet</li></ul>
+        <p>Mantenemos tus enlaces y tu telefonía, con cada incidencia registrada y visible en nuestra extranet.</p>
+        <ul class="tags"><li>Mantenimiento</li><li>Extranet</li><li>Ticketing</li></ul>
         <span class="more">Soporte IT <svg><use href="#i-arrow"/></svg></span>
       </a>
     </div>
 
     <h3 class="sub-head rv">Servicios que completan tus telecomunicaciones</h3>
     <div class="res">
-      <a class="card rv" style="--s:0" href="/redes/"><span class="cat">Redes</span><h4>La red interna de cada sede</h4><p>Cableado estructurado, fibra óptica y WiFi Ruckus, instalados y certificados por nuestro propio equipo.</p></a>
-      <a class="card rv" style="--s:1" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Tus aplicaciones, cerca de tus sedes</h4><p>Servidores virtuales en nuestro datacenter propio y de proximidad, con backup y migración del entorno.</p></a>
-      <a class="card rv" style="--s:2" href="/ciberseguridad/"><span class="cat">Ciberseguridad</span><h4>Seguridad también en las comunicaciones</h4><p>Trabajamos la seguridad de forma integral: en las telecomunicaciones, en la informática y en el cloud.</p></a>
+      <a class="card rv" style="--s:0" href="/telecomunicaciones/networking/"><span class="cat">Networking</span><h4>La arquitectura de tu red</h4><p>Segmentación, routing, calidad de servicio y alta disponibilidad, diseñados antes de tocar ningún equipo.</p></a>
+      <a class="card rv" style="--s:1" href="/redes/"><span class="cat">Redes y WiFi</span><h4>La red física de cada sede</h4><p>Cableado estructurado, fibra óptica y WiFi Ruckus, instalados y certificados por nuestro propio equipo.</p></a>
+      <a class="card rv" style="--s:2" href="/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h4>Tus aplicaciones, cerca de tus sedes</h4><p>Servidores en nuestro datacenter propio y de proximidad en Barcelona, enlazados con tus oficinas.</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ ENCAJE DE CLIENTE ============ -->
+<!-- ============ CÓMO TRABAJAMOS (AUDITORÍA) ============ -->
+<section class="sec" id="como-trabajamos" aria-labelledby="h-how" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Auditoría y método</span>
+      <h2 id="h-how">Empezamos por lo que ya tienes contratado</h2>
+      <p>Antes de proponer nada, revisamos tus líneas, tus contratos, tu centralita y tus conexiones. Es habitual encontrar servicios duplicados, líneas que nadie usa o capacidades que ya no encajan con tu actividad.</p>
+      <p>La auditoría de telecomunicaciones te da una foto clara del coste, la calidad y la seguridad de lo que pagas. Con ella decides con criterio qué mantener, qué ajustar y qué cambiar.</p>
+      <p>Después diseñamos cómo comunica tu empresa, no una lista de productos: cuántas personas sois, dónde trabajáis, cómo habláis con clientes y proveedores y qué disponibilidad necesitáis.</p>
+      <p><a class="txt-link" href="/recursos/enlace-privado-oficina-datacenter/">Enlace privado entre la oficina y el <span class="nw">datacenter<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+    <ol class="steps rv" style="--s:1">
+      <li><b>Análisis de lo que tienes</b><p>Servicios contratados, consumo real, centralita, enlaces y necesidades de cada sede.</p></li>
+      <li><b>Diseño de las comunicaciones</b><p>Conexión, enlaces, telefonía y acceso remoto, pensados como un sistema y con redundancia donde hace falta.</p></li>
+      <li><b>Implantación y portabilidad</b><p>Planificamos el cambio y la portabilidad de tus números para que clientes y equipo no noten el salto.</p></li>
+      <li><b>Soporte y seguimiento</b><p>Incidencias, cambios y ampliaciones con el mismo equipo, y cada actuación registrada en la extranet.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
 <section class="sec" id="para-quien" aria-labelledby="h-aud" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Para quién</span>
       <h2 id="h-aud">¿Para quién es este servicio?</h2>
-      <p class="lead">Para empresas e instituciones en las que las comunicaciones sostienen la operativa diaria, tengan o no equipo técnico propio.</p>
+      <p class="lead">Para empresas e instituciones en las que las comunicaciones sostienen el trabajo diario, tengan o no equipo técnico propio.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Empresas multisede</h3><p>Oficinas, fábricas y tiendas que necesitan compartir aplicaciones, datos y telefonía como una sola organización.</p></div>
-      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Sanidad e instituciones públicas</h3><p>Centros que trabajan en red, con un proveedor certificado en el Esquema Nacional de Seguridad en categoría ALTA.</p></div>
-      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Industria y entornos exigentes</h3><p>Instalaciones donde la conectividad tiene que llegar a lugares difíciles, como la fibra óptica a 1.000 m de profundidad de una mina.</p></div>
-      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Equipos IT internos</h3><p>Departamentos técnicos que quieren un operador que entienda también la parte IT y hable su mismo idioma.</p></div>
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Empresas multisede</h3><p>Oficinas, fábricas, almacenes y tiendas que necesitan compartir aplicaciones, datos y telefonía como una sola organización.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Equipos repartidos</h3><p>Personas en teletrabajo o en movilidad que necesitan un acceso fiable y seguro, y una centralita que las encuentre.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Sanidad e instituciones públicas</h3><p>Centros que trabajan en red, con un proveedor certificado en el Esquema Nacional de Seguridad, categoría ALTA.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Quien quiere revisar lo que paga</h3><p>Empresas con contratos, líneas y centralitas acumulados durante años, que quieren saber si siguen encajando.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ============ CASOS ============ -->
-<section class="sec" id="proyectos" aria-labelledby="h-proj" style="padding-top:0">
-  <div class="wrap proj-head">
-    <div class="sec-head rv" style="margin:0">
-      <span class="eyebrow">Casos de éxito</span>
-      <h2 id="h-proj">Sedes, hospitales y minas conectados</h2>
-    </div>
-    <div class="proj-nav rv"><button type="button" data-rail="-1" aria-label="Proyecto anterior"><svg><use href="#i-left"/></svg></button><button type="button" data-rail="1" aria-label="Proyecto siguiente"><svg><use href="#i-arrow"/></svg></button></div>
-  </div>
-  <div class="rail" id="rail" tabindex="0" aria-label="Proyectos de telecomunicaciones y networking">
-    <article class="proj"><figure><img src="/assets/proyectos/consorci-sanitari-hospital.webp" alt="Hospital del Consorci Sanitari Alt Penedès-Garraf" loading="lazy"></figure><div class="body"><span class="kind">Proyecto y mantenimiento 24/7 · IT y telecom</span><h3>Consorci Sanitari Alt Penedès-Garraf</h3><p>Interconexión de los hospitales del Garraf-Penedès con enlaces licenciados de muy alta capacidad y fibra oscura MUX-DEMUX, y redes WiFi en todos los centros. Proyecto finalizado en julio de 2021; mantenimiento en curso.</p><div class="hl"><svg><use href="#i-signal"/></svg>100 Gb/s entre sedes</div></div></article>
-    <article class="proj"><figure><img src="/assets/proyectos/consell-comarcal-garraf.webp" alt="Sede del Consell Comarcal del Garraf" loading="lazy"></figure><div class="body"><span class="kind">Telecom · Networking · Mantenimiento</span><h3>Consell Comarcal del Garraf</h3><p>Servicios de telecomunicaciones de la institución, tanto la red interna como el radioenlace entre sus dos sedes administrativas, junto al mantenimiento de sistemas y la gestión activa de la seguridad.</p><div class="hl"><svg><use href="#i-clock"/></svg>Más de 15 años trabajando juntos</div></div></article>
-    <article class="proj"><figure><img src="/assets/proyectos/iberpotash-mina.webp" alt="Galería de la mina de Súria" loading="lazy"></figure><div class="body"><span class="kind">Fibra óptica · Servicios telecom</span><h3>Iberpotash, Mines de Súria</h3><p>Instalación, conexionado y operación de la fibra óptica para las comunicaciones de servicio dentro de la mina, con soluciones propias resistentes a la explotación minera.</p><div class="hl"><svg><use href="#i-pin"/></svg>Trabajos a 1.000 m de profundidad</div></div></article>
-    <article class="proj"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy"></figure><div class="body"><span class="kind">Telecom · Networking · Interconexión</span><h3>PIMEC</h3><p>Proyecto integral de mantenimiento y servicio de telecomunicaciones y WiFi, gestión del networking y la seguridad, e interconexión de sedes.</p><div class="hl"><svg><use href="#i-net"/></svg>Interconexión de sedes</div></div></article>
-    <article class="proj"><figure><img src="/assets/proyectos/kuka-robots.webp" alt="Robots industriales KUKA" loading="lazy"></figure><div class="body"><span class="kind">Dirección TI · Telecom · Networking</span><h3>KUKA Robots Iberia</h3><p>Gestión del networking a nivel internacional para esta multinacional alemana de robótica, con implantación de firewall y despliegues dirigidos en delegaciones como Argentina y el País Vasco.</p><div class="hl"><svg><use href="#i-shield"/></svg>Networking internacional</div></div></article>
-    <article class="proj"><figure><img src="/assets/proyectos/midban-makro.webp" alt="Instalaciones logísticas de MIDBAN, empresa del sector HORECA" loading="lazy"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom</span><h3>MIDBAN</h3><p>Proyectos de telecomunicaciones, networking y microinformática para esta empresa del sector HORECA, con mantenimiento permanente de sus servicios de WiFi y telefonía.</p><div class="hl"><svg><use href="#i-phone"/></svg>Mantenimiento de WiFi y telefonía</div></div></article>
-  </div>
-  <div class="wrap rv" style="margin-top:8px"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
-</section>
+{{ m.projectsRail(["consorci-sanitari", "consell-comarcal-garraf", "granier", "pimec", "kuka", "midban", "iberpotash"], title="Sedes, hospitales y minas conectados", eyebrow="Casos de éxito") }}
 
-<!-- ============ FAQ ============ -->
-<section class="sec" id="faq" aria-labelledby="h-faq" style="padding-top:0">
+<section class="sec" id="casos" aria-labelledby="h-casos" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Preguntas frecuentes</span>
-      <h2 id="h-faq">Preguntas frecuentes sobre telecomunicaciones y networking</h2>
+      <span class="eyebrow">Más casos</span>
+      <h2 id="h-casos">Dos cambios que se notan cada día</h2>
+      <p class="lead">Una centralita que acompaña al equipo esté donde esté y un acceso remoto del que ya nadie habla.</p>
     </div>
-    <div class="faq">
-      <div class="rv">
-        <h3>Para el manager</h3>
-        <details open><summary>¿Qué servicios de telecomunicaciones ofrece ADQA? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>A través de Anxanet, nuestro propio operador, ofrecemos conexiones a Internet de hasta 10 Gb, redes privadas virtuales, conexiones punto a punto, interconexión de sedes, traffic engineering, centralitas IP y telefonía fija y móvil.</p></details>
-        <details><summary>¿Qué ventaja tiene que vuestro operador sea propio? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Que no revendemos servicios de otros: Anxanet es nuestro operador de telecomunicaciones. Combinamos telecom e IT para diseñar soluciones a medida y, con un único contacto, gestionas ambas cosas, así es más fácil encontrar la solución correcta o resolver cualquier problema.</p></details>
-        <details><summary>¿Podéis interconectar todas las sedes de mi empresa? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sí. Elegimos el enlace que encaja con cada ubicación: redes privadas virtuales, conexiones punto a punto, radioenlaces o fibra. Por ejemplo, conectamos los hospitales del Consorci Sanitari Alt Penedès-Garraf a 100 Gb/s y las dos sedes del Consell Comarcal del Garraf con un radioenlace.</p></details>
-        <details><summary>¿También gestionáis la telefonía de la empresa? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sí. Ofrecemos telefonía fija y móvil y centralitas IP, que pueden dar servicio a varias sedes como una sola. En Granier, por ejemplo, implantamos una centralita virtual que interconecta sus sedes.</p></details>
-      </div>
-      <div class="rv" style="--s:1">
-        <h3>Para el responsable técnico</h3>
-        <details><summary>¿Qué diferencia hay entre una VPN y un enlace punto a punto? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Una red privada virtual crea un túnel cifrado sobre conexiones a Internet, así que es flexible y se despliega rápido. Un enlace punto a punto es una conexión dedicada entre dos ubicaciones: la capacidad está reservada para ese tramo y el tráfico no comparte camino con Internet.</p></details>
-        <details><summary>¿Cuándo tiene sentido un radioenlace? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Cuando hay visión directa entre dos puntos y tender cable no es viable o no compensa. En bandas licenciadas, la frecuencia se asigna en exclusiva a ese enlace, lo que lo protege de interferencias. Un radioenlace une las dos sedes administrativas del Consell Comarcal del Garraf, y los enlaces licenciados de muy alta capacidad forman parte de la interconexión de los hospitales del Consorci Sanitari Alt Penedès-Garraf.</p></details>
-        <details><summary><span>¿Qué es la fibra oscura con <span class="nw">MUX-DEMUX</span>?</span> <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>La fibra oscura es fibra dedicada que se ilumina con equipos propios del proyecto. Con multiplexación por longitud de onda (MUX-DEMUX), varios canales viajan por la misma fibra, cada uno en su color de luz, y la capacidad crece sin tender fibra nueva. Así interconectamos los hospitales del Consorci Sanitari Alt Penedès-Garraf a 100 Gb/s entre sedes.</p></details>
-        <details><summary>¿Qué es el traffic engineering? <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Es la disciplina que decide por dónde circula cada tipo de tráfico de la red y con qué prioridad, para aprovechar la capacidad disponible, dar preferencia a la voz y a las aplicaciones críticas y disponer de caminos alternativos entre sedes.</p></details>
-      </div>
+    <div class="res two cases-wp">
+      <div class="rv" style="--s:0">{{ m.anonCase(
+        "De la centralita analógica a la nube",
+        "Empresa de 40 personas · Telefonía",
+        "La centralita analógica tenía más de diez años. No llegaba al teletrabajo, las extensiones se habían quedado cortas y el mantenimiento costaba más cada año. Cuando alguien trabajaba desde casa, sus clientes no lo localizaban.",
+        "Migración a una centralita IP en la nube con extensión para cada persona, acceso desde el móvil y el ordenador, integración con el CRM y gestión centralizada desde cualquier ubicación.",
+        ["-35% en el coste de telecomunicaciones", "Más funcionalidades y disponibilidad"]
+      ) }}</div>
+      <div class="rv" style="--s:1">{{ m.anonCase(
+        "Acceso remoto que funciona sin que nadie lo note",
+        "Empresa con producción · Acceso remoto",
+        "El equipo técnico necesitaba entrar a los sistemas de producción desde fuera. La VPN existente era lenta, difícil de gestionar y generaba incidencias a menudo.",
+        "Implantación de SASE con políticas de acceso por perfil de usuario, inspección del tráfico y gestión centralizada. El acceso remoto pasó a ser algo que simplemente funciona.",
+        ["-90% de incidencias de acceso remoto"]
+      ) }}</div>
     </div>
+    <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
+
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre telecomunicaciones para empresas") }}
 
 <!-- ============ RECURSOS ============ -->
 <section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
@@ -325,40 +403,13 @@ description: "Internet hasta 10 Gb, VPN, enlaces punto a punto, interconexión d
       <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="res">
-      <a class="card rv" style="--s:0" href="/recursos/mi-red-no-ha-pasado-la-certificacion/"><span class="cat">Redes</span><h3>Mi red no ha pasado la certificación</h3><p>Un punto de red «no apto» en una certificación indica que ese cable en concreto no cumple los márgenes…</p></a>
-      <a class="card rv" style="--s:1" href="/recursos/datacenter-propio-o-nube-publica-2/"><span class="cat">Cloud</span><h3>Datacenter propio o nube pública</h3><p>Un datacenter propio de proximidad ofrece control real sobre dónde están los datos, intervención física…</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/enlace-privado-oficina-datacenter/"><span class="cat">Telecomunicaciones</span><h3>Enlace privado oficina-datacenter</h3><p>Qué es una conexión directa y dedicada entre tu oficina y tus servidores, y qué cambia frente a ir por Internet.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/datacenter-propio-o-nube-publica/"><span class="cat">Cloud</span><h3>Datacenter propio o nube pública</h3><p>Qué aporta un datacenter de proximidad: control sobre dónde están los datos e intervención física cuando hace falta.</p></a>
       <a class="card rv" style="--s:2" href="/casos-de-exito/"><span class="cat">Casos de éxito</span><h3>Del fondo de una mina a la red de un hospital</h3><p>Proyectos reales de telecomunicaciones, redes, cloud y ciberseguridad para empresas e instituciones públicas.</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="sec" id="contacto" aria-labelledby="h-con" style="padding-top:0">
-  <div class="wrap contact">
-    <div class="contact-info rv">
-      <span class="eyebrow" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25);color:#fff">¿Podemos ayudarte?</span>
-      <h2 id="h-con">Cuéntanos qué necesitas conectar</h2>
-      <p>Además de la tecnología, se nos da bien escuchar y dar la respuesta ADQAda. Plantéanos tus sedes, tu conectividad o tu telefonía con toda confianza: te diremos cómo podemos ayudarte, sin compromiso y con respuesta rápida.</p>
-      <div class="ways">
-        <a href="tel:+34938147380"><svg><use href="#i-phone"/></svg>+34 938 147 380</a>
-        <a href="mailto:info@adqa.com"><svg><use href="#i-mail"/></svg>info@adqa.com</a>
-        <div><svg><use href="#i-pin"/></svg><span style="font-weight:500">C. Masia d'en Notari 23 · 08800 Vilanova i la Geltrú</span></div>
-      </div>
-    </div>
-    <form class="form rv" style="--s:1" action="/contacto/" method="post" novalidate>
-      <div class="field"><label for="f-nombre">Nombre <i>*</i></label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
-      <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" autocomplete="organization"></div>
-      <div class="field"><label for="f-email">E-mail <i>*</i></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel"></div>
-      <div class="field full"><label for="f-area">Área de interés</label>
-        <select id="f-area" name="area"><option value="">Selecciona una opción</option><option>Soporte y mantenimiento IT</option><option>Redes e instalaciones</option><option selected>Telecomunicaciones</option><option>Sistemas y cloud</option><option>Ciberseguridad</option><option>Web y software</option><option>Google Workspace / Microsoft 365</option><option>Hardware y software</option><option>Varias / no lo sé</option></select></div>
-      <div class="field full"><label for="f-msg">¿Qué necesitas?</label><textarea id="f-msg" name="mensaje"></textarea></div>
-      <input class="hp" name="linkedin" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="check"><input type="checkbox" name="consentimiento" required> <span>He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>. <i style="color:var(--pink);font-style:normal">*</i></span></label>
-      <button class="btn btn-primary" type="submit">Enviar <svg><use href="#i-arrow"/></svg></button>
-      <p class="form-ok" role="status">Gracias. Hemos recibido tu mensaje y te responderemos muy pronto.</p>
-    </form>
-  </div>
-</section>
+{{ m.contactBlock(title="Cuéntanos qué necesitas conectar", text="Cuántas sedes tienes, qué tienes contratado y qué te gustaría cambiar. Lo revisamos con calma y te damos la respuesta ADQAda: qué conexión, qué enlaces y qué telefonía encajan contigo, y por qué. Sin compromiso.", area="Telecomunicaciones") }}
 
 {% endblock %}

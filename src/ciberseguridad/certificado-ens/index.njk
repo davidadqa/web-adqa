@@ -1,6 +1,6 @@
 ---
 title: "Certificado ENS categoría ALTA: qué significa | ADQA"
-description: "ADQA tiene la certificación ENS en categoría ALTA, emitida por Applus, acreditada por ENAC. Qué es el Esquema Nacional de Seguridad y qué significa para ti."
+description: "ADQA tiene el certificado ENS en categoría ALTA, emitido por Applus, entidad acreditada por ENAC. Qué es el Esquema Nacional de Seguridad y qué te aporta."
 keyword: "certificado ENS categoría ALTA"
 breadcrumbs:
   - { name: "Ciberseguridad", url: "/ciberseguridad/" }
@@ -14,7 +14,7 @@ faq:
     - q: "¿Trabajar con ADQA me obliga a tener el ENS?"
       a: "No. La certificación es de ADQA como proveedor y no se traslada a sus clientes. Que tu organización deba cumplir el ENS depende de tu propia actividad, por ejemplo si eres una entidad pública o prestas servicios a una. Lo que sí aporta trabajar con ADQA es un proveedor con un sistema de gestión de la seguridad auditado externamente."
     - q: "¿Por qué se pide el ENS a los proveedores tecnológicos?"
-      a: "Porque las administraciones públicas deben garantizar que sus sistemas cumplen el ENS también cuando los presta o los mantiene un tercero. Por eso la certificación de conformidad es un requisito habitual en los contratos y licitaciones de servicios tecnológicos del sector público. Cada vez más empresas privadas la valoran también al elegir proveedor."
+      a: "Porque las administraciones públicas deben garantizar que sus sistemas cumplen el ENS también cuando los presta o los mantiene un tercero. Por eso la certificación de conformidad es un requisito habitual en los contratos y licitaciones de servicios tecnológicos del sector público. Algunas empresas privadas, sobre todo de sectores regulados, también la tienen en cuenta al elegir proveedor."
   tecnico:
     - q: "¿Qué diferencia hay entre las categorías BÁSICA, MEDIA y ALTA del ENS?"
       a: "La categoría de un sistema depende del impacto que tendría un incidente. Se valoran cinco dimensiones de seguridad (disponibilidad, integridad, confidencialidad, autenticidad y trazabilidad) con un nivel bajo, medio o alto. Si alguna dimensión alcanza el nivel alto, el sistema es de categoría ALTA; si la más alta es de nivel medio, de categoría MEDIA; y si todas son de nivel bajo, de categoría BÁSICA. A más categoría, más medidas de seguridad y más reforzadas."
@@ -29,7 +29,7 @@ faq:
 {% import "macros.njk" as m with context %}
 {% block head %}
 <style>
-/* Certificado ENS: piezas propias (candidatas a site.css en la fase de unificación) */
+/* Certificado ENS: sello y categorías (propios de esta página) */
 .ens-seal{display:grid;gap:18px;align-content:center;justify-items:center;text-align:center;padding:34px;background:linear-gradient(160deg,#fff 30%,var(--pink-50));border-color:#f2c4d6}
 .ens-seal img{height:110px;width:auto;border-radius:10px;background:#fff}
 .ens-seal b{display:block;font-size:2.4rem;font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--ink)}
@@ -41,12 +41,8 @@ faq:
 .cats .lvl{font-size:.8rem;font-weight:600;color:var(--pink);letter-spacing:.06em;text-transform:uppercase}
 .cats .cmp p{font-size:.97rem}
 .cats .cmp p.k{color:var(--ink);font-weight:600;border-top:1px solid var(--line);padding-top:14px;margin-top:4px}
-.svc-grid .svc{min-height:0}
-.note.card{margin:14px 0 0;max-width:none;text-align:left;font-size:1rem;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:26px 30px}
-.note.card p{max-width:680px;color:var(--ink)}
-.note.card .btns{display:flex;flex-wrap:wrap;gap:10px}
 @media (max-width:1060px){.cats{grid-template-columns:1fr}}
-@media (max-width:720px){.ens-seal{padding:26px}.note.card{padding:24px}}
+@media (max-width:720px){.ens-seal{padding:26px}}
 </style>
 {% endblock %}
 {% block content %}
@@ -209,7 +205,7 @@ faq:
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg><use href="#i-clock"/></svg></span>
         <h3>Respuesta ante incidentes</h3>
-        <p>Procedimientos escritos y probados: quién actúa, cómo se contiene el incidente, a quién se informa y cómo se recupera el servicio.</p>
+        <p>Procedimientos documentados y operativos: quién actúa, cómo se contiene el incidente, a quién se informa y cómo se recupera el servicio.</p>
       </div>
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-tool"/></svg></span>

@@ -1,0 +1,83 @@
+---
+title: "Certificado ISO 9001:2015 emitido por BSI | ADQA"
+description: "ADQA tiene el certificado ISO 9001:2015 de gestión de la calidad, emitido por BSI. Consulta el certificado y qué supone para los servicios que te prestamos."
+keyword: "certificado ISO 9001:2015 ADQA"
+breadcrumbs:
+  - { name: "Certificado ISO 9001" }
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO (compacto, sin animación de palabras) ============ -->
+<section class="hero page-hero doc-hero" aria-labelledby="h-hero">
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Certificaciones · Calidad</span>
+    <h1 id="h-hero">Certificado ISO 9001:2015</h1>
+    <p class="lead">Nuestro sistema de gestión de la calidad, auditado y certificado por BSI.</p>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ CERTIFICADO + EN RESUMEN ============ -->
+<section class="sec doc-sec" id="certificado" aria-labelledby="h-resumen">
+  <div class="wrap cert">
+    <div class="cert-img">
+      <!-- PENDIENTE: recuperar del servidor del WordPress la imagen del certificado («/wp-content/uploads/FS-661387-002-ADQA-CA-768x1086-1.jpg») o una captura del certificado vigente, y sustituir este marcador. -->
+      {{ m.placeholder("Captura del certificado ISO 9001:2015 de BSI", "3/4") }}
+      <p class="seal"><img src="/assets/sellos/iso-9001-bsi.png" alt="Sello BSI ISO 9001:2015 Quality Management" loading="lazy">Sello de certificación ISO 9001:2015 de BSI.</p>
+    </div>
+    <div class="cert-txt">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">El certificado ISO 9001:2015 de ADQA en resumen</h2>
+      <p class="tldr">ADQA, marca de Ingeniería y Suministros Profesionales, S.L., tiene certificado su sistema de gestión de la calidad según la norma ISO 9001:2015. El certificado lo emite BSI, entidad de certificación que audita el sistema de forma periódica. Para los clientes de ADQA en Barcelona y Cataluña, supone trabajar con procesos definidos, registrados y revisados.</p>
+      <div class="card cert-facts">
+        <dl>
+          <dt>Norma</dt><dd>ISO 9001:2015 · Sistemas de gestión de la calidad</dd>
+          <dt>Entidad de certificación</dt><dd>BSI</dd>
+          <!-- PENDIENTE: confirmar el número de certificado con el documento vigente (el FS 661387 sale del nombre del archivo en el WordPress), y añadir alcance, fecha de emisión y fecha de caducidad si se quieren publicar. -->
+          <dt>N.º de certificado</dt><dd>FS 661387</dd>
+          <dt>Organización</dt><dd>ADQA · Ingeniería y Suministros Profesionales, S.L.</dd>
+        </dl>
+      </div>
+      <div class="doc">
+        <h2 id="que-es">¿Qué es la ISO 9001:2015?</h2>
+        <p>Es la norma internacional que fija los requisitos de un sistema de gestión de la calidad. No certifica un producto concreto: certifica la forma de trabajar de la empresa.</p>
+        <p>La norma pide definir los procesos, medir sus resultados, escuchar a los clientes y corregir lo que no funciona. Una entidad de certificación independiente lo comprueba con auditorías periódicas.</p>
+
+        <h2 id="para-ti">¿Qué cambia para ti?</h2>
+        <ul>
+          <li><strong>Un método conocido.</strong> Las instalaciones, los mantenimientos y los proyectos siguen procesos definidos, con control de calidad.</li>
+          <li><strong>Todo queda registrado.</strong> Las incidencias y actuaciones de tus sedes constan en nuestra <a href="{{ site.extranet }}">área de clientes</a>, donde puedes consultarlas.</li>
+          <li><strong>Tu opinión cuenta.</strong> Medimos la satisfacción con una encuesta de calidad y la usamos para mejorar.</li>
+        </ul>
+
+        <h2 id="bsi">¿Quién es BSI?</h2>
+        <p>BSI (British Standards Institution) es el organismo de normalización del Reino Unido y una entidad de certificación de sistemas de gestión con actividad internacional. Es quien audita y certifica nuestro sistema de gestión de la calidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENCUESTA DE CALIDAD ============ -->
+{{ m.surveyMetrics(title="Lo que nos dicen nuestros clientes", eyebrow="Encuesta de calidad") }}
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <aside class="card doc-more" aria-labelledby="h-more" style="margin-top:0">
+      <h2 id="h-more">Otras certificaciones y documentos</h2>
+      <ul>
+        <li><a href="/certificado-ens/">Certificado ENS categoría ALTA <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/politica-de-seguridad/">Política de seguridad <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/quienes-somos/">Quiénes somos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="/contacto/">Contacto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+      <p>Si necesitas una copia del certificado para un expediente o una homologación de proveedores, pídenosla en <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    </aside>
+  </div>
+</section>
+
+{% endblock %}

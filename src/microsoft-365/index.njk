@@ -10,13 +10,13 @@ service:
 faq:
   manager:
     - q: "¿Sois partners oficiales de Microsoft?"
-      a: "No. Somos expertos en Microsoft 365 y trabajamos con las condiciones estándar de Microsoft, que son las que hacen falta para licenciar, configurar, migrar y administrar tu tenant, incluida la combinación de planes entre usuarios. Lo que aportamos es que el mismo equipo lleva tus sistemas, tu red y tu Microsoft 365, y sabe cómo encaja todo. Para Google Workspace sí somos partner oficial de Google."
+      a: "Nuestro partner oficial es Google, para Google Workspace. Con Microsoft 365 trabajamos como expertos, con las condiciones estándar de Microsoft, que son las que hacen falta para licenciar, configurar, migrar y administrar tu tenant, incluida la combinación de planes entre usuarios. Lo que aportamos es que el mismo equipo lleva tus sistemas, tu red y tu Microsoft 365, y sabe cómo encaja todo."
     - q: "¿Podéis ajustar el plan de cada usuario si sus necesidades cambian?"
       a: "Sí. Revisamos el uso real de cada persona y ajustamos su plan: si alguien cambia de puesto, le cambiamos la licencia, y si entra alguien nuevo, le asignamos desde el primer día el plan que le corresponde. Microsoft permite combinar planes distintos en el mismo tenant."
     - q: "¿Cuánto se tarda en migrar a Microsoft 365?"
       a: "Depende del número de usuarios, del volumen de archivos y de cuántos permisos de carpetas compartidas haya que revisar. Lo calculamos en la auditoría inicial y te damos un calendario por fases antes de empezar. El trabajo diario no se detiene, porque el sistema anterior sigue en uso hasta el cambio final del correo."
     - q: "¿Hace falta una copia de seguridad de Microsoft 365?"
-      a: "Es recomendable. Microsoft mantiene el servicio disponible y conserva los elementos eliminados durante un tiempo limitado, pero la custodia de los datos es responsabilidad de cada organización. Una copia propia permite recuperar un buzón, un archivo o un canal de Teams aunque haga meses que se borró. La hacemos con Hornetsecurity."
+      a: "Es recomendable. Microsoft mantiene el servicio disponible y conserva los elementos eliminados durante un tiempo limitado, pero la custodia de los datos es responsabilidad de cada organización. Una copia propia permite recuperar un buzón, un archivo o un canal de Teams aunque ya no esté en la papelera de Microsoft. La hacemos con Hornetsecurity."
   tecnico:
     - q: "¿Qué pasa si tenemos una incidencia con Microsoft 365?"
       a: "Nos llamas a nosotros. Somos el primer nivel de soporte y resolvemos directamente la mayoría de incidencias, porque conocemos la configuración de tu tenant. Cuando hace falta abrir una solicitud de soporte con Microsoft, la abrimos y la seguimos nosotros, sin que tengas que entrar en su sistema de soporte."
@@ -29,12 +29,7 @@ faq:
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
-{% block head %}
-<style>
-/* Microsoft 365: orden alterno de .split en escritorio */
-@media (min-width:1061px){.split.rev .txt{order:2}}
-</style>
-{% endblock %}
+{% block head %}{% endblock %}
 {% block content %}
 
 <!-- ============ HERO ============ -->
@@ -64,7 +59,7 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-sum" class="sr">¿Qué hace ADQA con Microsoft 365?</h2>
-      <p class="tldr"><strong>ADQA es experta en Microsoft 365 y lo gestiona para empresas e instituciones de Barcelona y Cataluña.</strong> Ajusta el plan de cada usuario a su uso real, configura el tenant y su seguridad, migra por fases desde Google Workspace u otros sistemas, hace copias de seguridad y es el primer nivel de soporte. Lo hace el mismo equipo que puede llevar sus sistemas, su red y su ciberseguridad.</p>
+      <p class="tldr"><strong>ADQA es experta en Microsoft 365 y lo gestiona para empresas e instituciones de Barcelona y Cataluña.</strong> Ajusta el plan de cada usuario a su uso real, configura el tenant y su seguridad, migra por fases desde Google Workspace u otros sistemas, hace copias de seguridad y es el primer nivel de soporte. El mismo equipo puede llevar también los sistemas, la red y la ciberseguridad de la empresa.</p>
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en informática y telecomunicaciones</span></div>
@@ -117,7 +112,7 @@ faq:
 
 <!-- ============ EXPERTOS ============ -->
 <section class="sec" id="expertos" aria-labelledby="h-exp" style="padding-top:0">
-  <div class="wrap split rev">
+  <div class="wrap split flip">
     <div class="txt rv">
       <span class="eyebrow">Expertos en Microsoft 365</span>
       <h2 id="h-exp">Lo que aporta que lo lleve tu equipo de informática</h2>
@@ -211,7 +206,7 @@ faq:
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg><use href="#i-file"/></svg></span>
         <h3>Gestión de licencias</h3>
-        <p>Altas, bajas, cambios de plan y renovaciones de todas las licencias de tu tenant, sin que tengas que tratar con Microsoft.</p>
+        <p>Nos pides el alta, la baja o el cambio de plan y lo dejamos hecho en tu tenant, renovaciones incluidas.</p>
         <ul class="tags"><li>Altas y bajas</li><li>Renovaciones</li></ul>
       </div>
       <a class="card svc rv" href="#planes" style="--s:1">
@@ -243,7 +238,7 @@ faq:
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-phone"/></svg></span>
         <h3>Soporte técnico</h3>
-        <p>Primer nivel de soporte para cualquier incidencia de Microsoft 365. Si hay que escalar a Microsoft, lo hacemos nosotros.</p>
+        <p>Outlook que no sincroniza, un permiso en SharePoint, una reunión de Teams que no arranca: nos llamas a nosotros y, si hace falta, abrimos la solicitud con Microsoft.</p>
         <ul class="tags"><li>Primer nivel</li><li>Escalado</li></ul>
       </div>
       <div class="card svc wide rv" style="--s:0">

@@ -17,35 +17,13 @@ faq:
     - q: "¿Cuál se integra mejor con herramientas de terceros?"
       a: "Depende del ecosistema. Microsoft 365 se integra de forma nativa con Microsoft Entra ID, Intune, Dynamics y Power Platform, así que si ya tienes infraestructura Microsoft suele ser la opción natural. Google Workspace tiene APIs abiertas y bien documentadas y se integra bien con herramientas externas, CRM y ERP, además de admitir inicio de sesión único."
     - q: "¿Cuál es más segura, Google Workspace o Microsoft 365?"
-      a: "Las dos ofrecen seguridad de nivel empresarial. Microsoft 365 tiene herramientas más amplias para requisitos de cumplimiento muy exigentes, como Microsoft Purview. Google Workspace ofrece un nivel de seguridad suficiente para la gran mayoría de empresas. En la práctica, la diferencia está menos en la plataforma que en cómo se configura: verificación en dos pasos, permisos y políticas de uso compartido."
+      a: "Las dos ofrecen seguridad de nivel empresarial. Para requisitos de cumplimiento muy exigentes, Microsoft 365 incluye herramientas como Microsoft Purview, y Google Workspace reserva sus controles más avanzados a las ediciones superiores. En la práctica, la diferencia está menos en la plataforma que en cómo se configura: verificación en dos pasos, permisos y políticas de uso compartido."
     - q: "¿Se pueden combinar planes distintos en las dos suites?"
       a: "Sí, pero de forma distinta. En Microsoft 365, cualquier organización puede asignar planes diferentes a cada usuario dentro del mismo tenant. En Google Workspace, asignar ediciones distintas en el mismo dominio se hace mediante Partial Domain Licensing (PDL), que con las condiciones actuales de Google solo está disponible cuando el dominio está vinculado a un partner oficial."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
-{% block head %}
-<style>
-/* Tabla comparativa (.vs): en móvil cada fila pasa a tarjeta con etiquetas */
-.vs{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.vs table{width:100%;border-collapse:collapse;text-align:left}
-.vs th,.vs td{padding:18px 24px;vertical-align:top;font-size:.97rem;color:var(--gray);border-top:1px solid var(--line)}
-.vs thead th{border-top:0;background:var(--surface-2);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.vs thead th+th{color:var(--ink)}
-.vs tbody th{width:22%;font-weight:600;color:var(--ink)}
-.vs tr.fit th,.vs tr.fit td{background:var(--pink-50);color:var(--ink)}
-@media (max-width:720px){
-  .vs thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .vs table,.vs tbody,.vs tr,.vs th,.vs td{display:block;width:auto}
-  .vs tr{padding:18px 20px;border-top:1px solid var(--line)}
-  .vs tbody tr:first-child{border-top:0}
-  .vs th,.vs td{border:0;padding:0}
-  .vs tbody th{width:auto;margin-bottom:10px;font-size:1.02rem}
-  .vs td+td{margin-top:10px}
-  .vs td::before{content:attr(data-l);display:block;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pink-600);margin-bottom:2px}
-  .vs tr.fit{background:var(--pink-50)}
-}
-</style>
-{% endblock %}
+{% block head %}{% endblock %}
 {% block content %}
 
 <!-- ============ HERO ============ -->
@@ -75,7 +53,7 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-sum" class="sr">¿Qué es mejor, Google Workspace o Microsoft 365?</h2>
-      <p class="tldr"><strong>ADQA gestiona Google Workspace, como partner oficial de Google, y Microsoft 365, como empresa experta, para organizaciones de Barcelona y Cataluña.</strong> Su criterio es que no hay una opción objetivamente mejor. Microsoft 365 encaja con el trabajo en aplicaciones de escritorio y el ecosistema de Microsoft; Google Workspace, con equipos que colaboran desde el navegador. ADQA ayuda a elegir y migra en los dos sentidos.</p>
+      <p class="tldr"><strong>ADQA gestiona Google Workspace, como partner oficial de Google, y Microsoft 365, como empresa experta en esta suite, para organizaciones de Barcelona y Cataluña.</strong> Su criterio es que no hay una opción objetivamente mejor. Microsoft 365 encaja con el trabajo en aplicaciones de escritorio y el ecosistema de Microsoft; Google Workspace, con equipos que colaboran desde el navegador. ADQA ayuda a elegir y migra en los dos sentidos.</p>
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b><span data-count="8">0</span></b><span>cosas que las dos hacen igual de bien</span></div>
@@ -171,7 +149,7 @@ faq:
         <p class="note-src"><a class="txt-link" href="/microsoft-365/">Microsoft 365 con <span class="nw">ADQA<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
       </div>
     </div>
-    <p class="note rv"><strong>¿Te encajan las dos?</strong> También pueden convivir: por ejemplo, Google Workspace para todo el equipo y las aplicaciones de escritorio de Microsoft solo para quien trabaja a fondo con Excel.</p>
+    <p class="note rv"><strong>¿Te encajan las dos?</strong> Pueden convivir en la misma empresa, con unos usuarios en cada suite según el departamento. Es posible, aunque en general recomendamos unificar: la administración es más sencilla.</p>
   </div>
 </section>
 
@@ -277,8 +255,8 @@ faq:
       <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="res two">
-      <a class="card rv" style="--s:0" href="/google-workspace/#casos"><span class="cat">De Microsoft 365 a Google Workspace</span><h3>Una empresa de servicios que usaba poco de lo que pagaba</h3><p>35 usuarios, sobre todo de correo y documentos compartidos. Pasaron a Google Workspace con licenciamiento mixto y redujeron un 30% el coste de sus licencias.</p></a>
-      <a class="card rv" style="--s:1" href="/microsoft-365/#casos"><span class="cat">De Google Workspace a Microsoft 365</span><h3>Una empresa industrial que vivía en Excel</h3><p>Su trabajo dependía de Excel avanzado. Migraron a Microsoft 365 por fases, con los permisos revisados a mano, sin ninguna incidencia de pérdida de datos.</p></a>
+      <a class="card rv" style="--s:0" href="/google-workspace/#casos"><span class="cat">De Microsoft 365 a Google Workspace</span><h3>Una empresa de servicios que trabajaba sobre todo con el correo</h3><p>35 usuarios que usaban el correo y algún documento compartido. Pasaron a Google Workspace con licenciamiento mixto y redujeron un 30% el coste de sus licencias.</p></a>
+      <a class="card rv" style="--s:1" href="/microsoft-365/#casos"><span class="cat">De Google Workspace a Microsoft 365</span><h3>Una empresa industrial que trabajaba a fondo con Excel</h3><p>Migraron de Google Workspace a Microsoft 365 por fases, con los permisos revisados a mano, sin ninguna incidencia de pérdida de datos.</p></a>
     </div>
   </div>
 </section>

@@ -1,0 +1,349 @@
+---
+title: "WiFi profesional para empresas en Barcelona | ADQA"
+description: "WiFi profesional para empresas en Barcelona: estudio de cobertura, Ruckus, Aruba o Huawei y diseño para naves, cámaras frigoríficas, minas y alta densidad."
+keyword: "WiFi profesional para empresas en Barcelona"
+breadcrumbs:
+  - { name: "Redes y WiFi", url: "/redes/" }
+  - { name: "WiFi profesional" }
+service:
+  name: "WiFi profesional para entornos complejos"
+  serviceType: "Diseño e instalación de redes WiFi"
+faq:
+  manager:
+    - q: "¿Cómo sé si mi WiFi necesita un rediseño o solo algunos ajustes?"
+      a: "Si los problemas vuelven aunque ya se hayan añadido puntos de acceso, si la red ha crecido a base de añadidos o si han cambiado los usos, con más personas, zonas nuevas o dispositivos distintos, lo habitual es que haga falta un rediseño. Si la base es correcta y el problema se limita a zonas concretas, suelen bastar ajustes o algún punto de acceso más. El estudio de cobertura previo lo aclara antes de proponer nada."
+    - q: "¿Cuánto tarda una instalación WiFi profesional?"
+      a: "Depende de la superficie, del número de puntos de acceso y de si hay que pasar cableado nuevo. Primero se hace el estudio de cobertura y, con él, ADQA entrega un calendario orientativo. Habitualmente, en una nave o un hotel de tamaño medio, la instalación se completa en uno o dos días. La instalación se planifica por zonas o fuera de horario para que la actividad siga con normalidad mientras se trabaja."
+    - q: "¿Se puede dar WiFi a invitados sin poner en riesgo la red de la empresa?"
+      a: "Sí. La red de invitados va en su propia red WiFi y su propia VLAN, con portal cautivo, accesos temporales y límite de ancho de banda por usuario. En el firewall solo tiene salida a internet, de modo que los invitados no ven los servidores, los equipos ni las aplicaciones internas."
+    - q: "¿Qué diferencia hay entre un WiFi doméstico y uno profesional?"
+      a: "Un punto de acceso profesional está pensado para muchas personas conectadas a la vez, admite varias redes separadas con su propia VLAN, se gestiona desde una controladora central junto con el resto de puntos de acceso y funciona de forma continua sin degradarse. Un router doméstico está diseñado para una casa: pocas personas, una sola red y gestión equipo a equipo."
+  tecnico:
+    - q: "¿Con qué marcas de WiFi trabajáis?"
+      a: "Con Ruckus, la marca que ADQA representa, incluidas las soluciones Ruckus Resilience para entornos exigentes como fábricas, cámaras frigoríficas o minas. También trabajamos con Aruba y Huawei según el entorno, la integración con el equipamiento existente y cómo se quiera gestionar la red. La elección del equipo se hace después del estudio de cobertura, no antes."
+    - q: "¿Cómo se integra el WiFi con la red cableada?"
+      a: "Cada red WiFi, o SSID, se asocia a una VLAN que viaja por los switches hasta el firewall, donde se aplican las mismas políticas de seguridad que a la red cableada. Los puntos de acceso se alimentan por PoE desde los switches, y su conexión se dimensiona para el tráfico que van a soportar."
+    - q: "¿Qué aporta una controladora WiFi centralizada?"
+      a: "Una sola consola para todos los puntos de acceso, también de varias sedes. Desde ella se aplica la misma configuración en todos, se actualiza el firmware, se ajustan canales y potencias, se coordina la itinerancia de los dispositivos y se ve el estado de cada punto de acceso, los usuarios conectados y la carga por zonas. Ampliar la red es añadir puntos de acceso a la misma controladora."
+    - q: "¿Cómo se evita que los dispositivos en movimiento pierdan la conexión?"
+      a: "Con un diseño que deje solape suficiente entre puntos de acceso, potencias ajustadas para que el dispositivo cambie de punto de acceso a tiempo y una controladora que coordine la itinerancia. Cuando los terminales lo admiten, se activan los mecanismos de itinerancia rápida 802.11k, 802.11v y 802.11r. Los terminales y lectores suelen ir en su propia red, separada del resto."
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Redes y WiFi · Ruckus, nuestra marca representada</span>
+    <h1 id="h-hero" data-words>WiFi profesional para empresas en Barcelona, <span class="accent">también donde cuesta</span></h1>
+    <p class="lead fade-in" style="--d:.8s">Diseñamos el WiFi a partir de tu espacio y de cómo lo usas, y lo desplegamos con Ruckus, nuestra marca representada. Para una planta llena de gente y también entre estanterías metálicas, dentro de una cámara frigorífica o en la galería de una mina.</p>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="#contacto">Explícanos tu espacio <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#proyectos">Ver proyectos WiFi</a>
+    </div>
+    <div class="trust fade-in" style="--d:1.1s">
+      <span><svg><use href="#i-check"/></svg>Ruckus, marca representada</span>
+      <span><svg><use href="#i-check"/></svg>Equipo propio de instaladores</span>
+      <span><svg><use href="#i-check"/></svg>ISO 9001:2015</span>
+    </div>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding:clamp(56px,7vw,88px) 0 0">
+  <div class="wrap intro">
+    <div class="rv" style="display:grid;gap:22px">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">¿Qué hace ADQA en WiFi profesional?</h2>
+      <p class="tldr"><strong>ADQA diseña, instala y mantiene WiFi profesional para empresas e instituciones de Barcelona y Cataluña, también en entornos difíciles</strong> como naves industriales, cámaras frigoríficas, centros sanitarios o el interior de una mina. Cada proyecto empieza con un estudio de cobertura, se gestiona desde una controladora centralizada y se integra con la red cableada. Trabaja con Ruckus, su marca representada, y con Aruba y Huawei.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv" style="--s:0"><b>Ruckus</b><span>nuestra marca representada, con Aruba y Huawei según el entorno</span></div>
+      <div class="stat rv" style="--s:1"><b>1.000<small> m</small></b><span>de profundidad: diseño de WiFi con geolocalización en la mina de Iberpotash</span></div>
+      <div class="stat rv" style="--s:2"><b>Todos</b><span>los centros del Consorci Sanitari Alt Penedès-Garraf, con WiFi para pacientes y usuarios</span></div>
+      <div class="stat rv" style="--s:3"><b>1<small> consola</small></b><span>para gestionar todos los puntos de acceso, también entre sedes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ HACEMOS POSIBLE ============ -->
+<section class="sec" aria-labelledby="h-pos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Lo que hacemos posible</span>
+      <h2 id="h-pos">Un WiFi del que nadie tiene que acordarse</h2>
+      <p class="lead">Cuando el WiFi está bien diseñado, no se nota: simplemente está. Esto es lo que buscamos en cada proyecto.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-signal"/></svg></span><h3>Cobertura donde se trabaja</h3><p>En los pasillos de la nave, en el muelle de carga, dentro de la cámara o en la última sala de la planta.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-arrow"/></svg></span><h3>Movilidad sin cortes</h3><p>Terminales, lectores y portátiles pasan de un punto de acceso a otro sin perder la sesión.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Cada perfil en su red</h3><p>Plantilla, invitados, máquinas y cámaras, cada uno en su red y con sus propias reglas de acceso.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Gestión desde un solo sitio</h3><p>Todos los puntos de acceso y todas las sedes en una controladora: cambios, avisos y estado en una misma consola.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTUDIO DE COBERTURA ============ -->
+<section class="sec" id="estudio" aria-labelledby="h-est" style="padding-top:0">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Estudio de cobertura</span>
+      <h2 id="h-est">¿Por qué empezamos con un estudio de cobertura?</h2>
+      <p>Un WiFi profesional no empieza con la compra de puntos de acceso. Empieza con el espacio: los materiales del edificio, la distribución de las zonas, cuántas personas y dispositivos se conectan, qué aplicaciones usan y qué seguridad necesita cada uno.</p>
+      <p>Con eso decidimos cuántos puntos de acceso hacen falta, dónde van y cómo se reparten canales y potencias. Más puntos de acceso no siempre es mejor: mal planificados, se interfieren entre ellos. La elección del equipo viene después.</p>
+      <ul class="ticks">
+        <li><svg><use href="#i-check"/></svg><span><strong>Ubicación de cada punto de acceso</strong> y la cobertura prevista por zona.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Equipos propuestos</strong>, con el porqué de cada elección.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Plan de redes</strong>: qué SSID habrá, para quién y con qué reglas.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Calendario orientativo</strong> de instalación, por zonas o fuera de horario.</span></li>
+      </ul>
+      <p><a class="txt-link" href="/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/">Cuántos puntos de acceso necesita tu <span class="nw">WiFi<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+    <div class="rv" style="--s:1">{{ m.placeholder("Plano de un estudio de cobertura WiFi con el mapa de señal sobre la planta de una nave", "4/5") }}</div>
+  </div>
+</section>
+
+<!-- ============ ENTORNOS DIFÍCILES (sección oscura) ============ -->
+<section class="sec dark-sec" id="entornos" aria-labelledby="h-ent">
+  <div class="wrap strengths">
+    <div class="sticky rv">
+      <span class="eyebrow">Entornos difíciles</span>
+      <h2 id="h-ent">¿Qué cambia en una nave, una cámara frigorífica o una mina?</h2>
+      <p class="lead" style="color:#bdbdbd">Cada entorno tiene algo que frena la señal. Lo estudiamos antes de proponer nada, y por eso los equipos, su ubicación y su configuración cambian de un proyecto a otro.</p>
+      <div><a class="btn btn-primary" href="#contacto">Cuéntanos tu entorno <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="stack">
+      <article class="st" style="--n:0">
+        <span class="num">01 · METAL Y MAQUINARIA</span>
+        <h3>Naves y fábricas</h3>
+        <p>Estanterías, depósitos y estructuras metálicas reflejan y bloquean la señal, y la maquinaria en marcha añade interferencias. Por eso elegimos la ubicación, la altura y las antenas pensando en cada pasillo y cada zona de carga. En la fábrica de HITECSA, un entorno especialmente complejo, implantamos una red WiFi Ruckus Resilience.</p>
+      </article>
+      <article class="st" style="--n:1">
+        <span class="num">02 · FRÍO</span>
+        <h3>Cámaras frigoríficas</h3>
+        <p>Paneles aislantes que atenúan la señal, frío intenso y condensación al abrir las puertas. Los equipos tienen que aguantar esas condiciones, y los terminales, mantener la conexión al entrar y salir. En las cámaras frigoríficas de Congelats Romero, delegación de MIDBAN, implantamos una solución Ruckus Resilience.</p>
+      </article>
+      <article class="st" style="--n:2">
+        <span class="num">03 · BAJO TIERRA</span>
+        <h3>Minas y galerías</h3>
+        <p>Galerías largas y estrechas, humedad, polvo y corrosión. En la mina de Iberpotash, a 1.000 metros de profundidad, diseñamos una red WiFi Ruckus Resilience para dar conectividad y geolocalización. Allí también instalamos la fibra óptica de servicio, con soluciones propias y materiales resistentes a la corrosión.</p>
+      </article>
+      <article class="st" style="--n:3">
+        <span class="num">04 · ALTA DENSIDAD</span>
+        <h3>Muchas personas a la vez</h3>
+        <p>Plantas llenas, salas de reuniones y auditorios: aquí el reto es la capacidad, no la cobertura. Planificamos canales y potencias, repartimos la carga entre puntos de acceso y limitamos el ancho de banda de invitados para que el tráfico de trabajo vaya primero.</p>
+      </article>
+      <article class="st" style="--n:4">
+        <span class="num">05 · VARIOS CENTROS</span>
+        <h3>Centros sanitarios y redes multisede</h3>
+        <p>Creamos redes WiFi para pacientes y usuarios en todos los centros del Consorci Sanitari Alt Penedès-Garraf. Cuando hay varias sedes, una controladora centralizada aplica la misma configuración en todas y permite gestionarlas desde un solo sitio.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRACIÓN Y ALTA DENSIDAD ============ -->
+<section class="sec" id="integracion" aria-labelledby="h-int">
+  <div class="wrap split">
+    <div class="txt rv">
+      <span class="eyebrow">Integración con tu red</span>
+      <h2 id="h-int">¿Cómo se integra el WiFi con tu red y tu seguridad?</h2>
+      <p>El WiFi es una extensión de la red corporativa, no un añadido. Cada red WiFi (SSID) se asocia a una VLAN, que viaja por los switches hasta el firewall. Ahí se aplican las mismas reglas que a la red cableada.</p>
+      <p>Así la red de invitados sale a internet sin ver tus servidores, los lectores de almacén solo llegan a su aplicación y las cámaras quedan aparte. Si un dispositivo da problemas, el problema se queda en su segmento.</p>
+      <p>Como también llevamos la red cableada, los switches y la <a class="txt-link" href="/ciberseguridad/">ciberseguridad</a>, todo se diseña a la vez y encaja desde el primer día.</p>
+    </div>
+    <div class="cmp good rv" style="--s:1">
+      <h3>Alta densidad, en detalle</h3>
+      <ul>
+        <li><svg><use href="#i-check"/></svg><span><strong>Controladora centralizada</strong> para todos los puntos de acceso.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Canales y potencias planificados</strong> para que los puntos de acceso no se interfieran.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Itinerancia transparente</strong> para dispositivos en movimiento.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Prioridad para el tráfico de trabajo</strong> frente al de invitados.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Portal cautivo y límites</strong> de ancho de banda por usuario.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Crecer sin rediseñar:</strong> nuevos puntos de acceso en la misma controladora.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REDISEÑAR O AÑADIR ============ -->
+<section class="sec" id="redisenar" aria-labelledby="h-red" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Antes de comprar más equipos</span>
+      <h2 id="h-red">¿Rediseñar el WiFi o añadir puntos de acceso?</h2>
+      <p class="lead">Las dos opciones tienen sentido. Depende de dónde esté el problema, y eso se ve midiendo.</p>
+    </div>
+    <div class="compare">
+      <div class="cmp good rv">
+        <h3>Añadir puntos de acceso, si…</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span>La arquitectura de base es correcta y está bien gestionada.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>El problema se limita a zonas concretas sin cobertura.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Los equipos actuales se pueden gestionar junto con los nuevos.</span></li>
+        </ul>
+      </div>
+      <div class="cmp good rv" style="--s:1">
+        <h3>Rediseñar, si…</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span>Los problemas vuelven aunque ya se hayan añadido equipos.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>La red ha crecido a base de añadidos, sin un plan de conjunto.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Han cambiado los usos: más personas, zonas nuevas o dispositivos distintos.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note rv">En los dos casos, el primer paso es el mismo: un estudio de cobertura que diga qué necesita cada zona.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="sec" id="servicios" aria-labelledby="h-serv" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Servicios WiFi</span>
+      <h2 id="h-serv">¿Qué incluye nuestro servicio de WiFi?</h2>
+      <p class="lead">Del estudio inicial al mantenimiento, con el mismo equipo y el WiFi integrado en el resto de tu red.</p>
+    </div>
+    <div class="services">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <h3>Estudio y diseño de cobertura</h3>
+        <p>Analizamos el espacio y el uso para decidir cuántos puntos de acceso, dónde y con qué configuración.</p>
+        <ul class="tags"><li>Cobertura</li><li>Capacidad</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-signal"/></svg></span>
+        <h3>Instalación de puntos de acceso</h3>
+        <p>Puntos de acceso profesionales instalados por nuestro equipo, acreditado para trabajos en altura.</p>
+        <ul class="tags"><li>Ruckus</li><li>Aruba</li><li>Huawei</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-server"/></svg></span>
+        <h3>Controladora centralizada</h3>
+        <p>Configuración común, actualizaciones y estado de todos los puntos de acceso desde una sola consola.</p>
+        <ul class="tags"><li>Gestión unificada</li><li>Multisede</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-lock"/></svg></span>
+        <h3>Segmentación y seguridad</h3>
+        <p>Redes separadas por perfil de usuario, cada una con su VLAN y sus propias políticas en el firewall.</p>
+        <ul class="tags"><li>SSID</li><li>VLAN</li><li>Firewall</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-user"/></svg></span>
+        <h3>Usuarios e invitados</h3>
+        <p>Portales cautivos, accesos temporales, límite de ancho de banda por usuario y políticas según el perfil.</p>
+        <ul class="tags"><li>Portal cautivo</li><li>Invitados</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-clock"/></svg></span>
+        <h3>Monitorización y mantenimiento</h3>
+        <p>Estado de los puntos de acceso, usuarios conectados y carga por zonas, con cada actuación en nuestra extranet.</p>
+        <ul class="tags"><li>Mantenimiento</li><li>Extranet</li></ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head rv">Servicios relacionados</h3>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/redes/"><span class="cat">Redes y WiFi</span><h4>Redes informáticas para empresas</h4><p>El cableado, la fibra y los switches sobre los que se apoya tu WiFi, con el mismo equipo.</p></a>
+      <a class="card rv" style="--s:1" href="/redes/certificacion-redes/"><span class="cat">Redes y WiFi</span><h4>Certificación de redes</h4><p>Comprobamos con datos que el cableado de cada punto de acceso cumple su categoría.</p></a>
+      <a class="card rv" style="--s:2" href="/ciberseguridad/pentesting/"><span class="cat">Ciberseguridad</span><h4>Pentest de redes WiFi</h4><p>Ponemos a prueba el cifrado, la autenticación y la separación entre la red interna y la de invitados.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section class="sec" aria-labelledby="h-aud" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Para quién</span>
+      <h2 id="h-aud">¿Para quién es este servicio?</h2>
+      <p class="lead">Para empresas e instituciones en las que el WiFi forma parte del trabajo, no solo de la comodidad.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Industria y logística</h3><p>Naves y almacenes con terminales, lectores de código de barras y carretillas en movimiento.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Alimentación y frío</h3><p>Cámaras frigoríficas, muelles y zonas de preparación donde la conexión tiene que aguantar el frío y la humedad.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Sanidad e instituciones</h3><p>Varios centros, pacientes, usuarios y personal, cada uno en su red y con la gestión centralizada.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Sedes con mucha gente</h3><p>Oficinas de varias plantas, salas de reuniones y auditorios, con red de invitados separada de la interna.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS CON NOMBRE ============ -->
+<section class="sec" id="proyectos" aria-labelledby="h-proyectos" style="padding-top:0">
+  <div class="wrap proj-head">
+    <div class="sec-head rv" style="margin:0">
+      <span class="eyebrow">Casos de éxito</span>
+      <h2 id="h-proyectos">WiFi en entornos que lo ponen difícil</h2>
+    </div>
+    <div class="proj-nav rv"><button type="button" data-rail="-1" aria-label="Proyecto anterior"><svg><use href="#i-left"/></svg></button><button type="button" data-rail="1" aria-label="Proyecto siguiente"><svg><use href="#i-arrow"/></svg></button></div>
+  </div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Proyectos WiFi">
+    <article class="proj"><figure><img src="/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy"></figure><div class="body"><span class="kind">WiFi industrial · Ruckus Resilience</span><h3>HITECSA</h3><p>Red WiFi Ruckus Resilience en su fábrica de Vilanova i la Geltrú, un entorno especialmente complejo, dentro de la gestión integral de su informática y sus telecomunicaciones.</p><div class="hl"><svg><use href="#i-signal"/></svg>WiFi en fábrica</div></div></article>
+    <article class="proj"><figure><img src="/assets/proyectos/midban-makro.webp" alt="Instalaciones logísticas del sector HORECA" loading="lazy"></figure><div class="body"><span class="kind">WiFi en frío · Ruckus Resilience</span><h3>MIDBAN</h3><p>Solución Ruckus Resilience en las cámaras frigoríficas de su delegación Congelats Romero, con mantenimiento permanente del WiFi y de la telefonía.</p><div class="hl"><svg><use href="#i-signal"/></svg>WiFi en cámaras frigoríficas</div></div></article>
+    <article class="proj"><figure><img src="/assets/proyectos/iberpotash-mina.webp" alt="Galería de la mina de Súria" loading="lazy"></figure><div class="body"><span class="kind">WiFi subterráneo · Fibra óptica</span><h3>Iberpotash, Mines de Súria</h3><p>Diseño de una red WiFi Ruckus Resilience en el interior de la mina para dar conectividad y geolocalización, junto con la fibra óptica de servicio de la mina.</p><div class="hl"><svg><use href="#i-pin"/></svg>A 1.000 m de profundidad</div></div></article>
+    <article class="proj"><figure><img src="/assets/proyectos/consorci-sanitari-hospital.webp" alt="Hospital del Consorci Sanitari Alt Penedès-Garraf" loading="lazy"></figure><div class="body"><span class="kind">WiFi sanitario · Multisede</span><h3>Consorci Sanitari Alt Penedès-Garraf</h3><p>Redes WiFi para pacientes y usuarios en todos los centros, dentro del proyecto de interconexión de los hospitales con enlaces de 100 Gb/s.</p><div class="hl"><svg><use href="#i-signal"/></svg>WiFi en todos los centros</div></div></article>
+    <article class="proj"><figure><img src="/assets/proyectos/kuka-robots.webp" alt="Robots industriales KUKA" loading="lazy"></figure><div class="body"><span class="kind">Red Ruckus · Internacional</span><h3>KUKA Robots Iberia</h3><p>Red Ruckus completa en la central de España e implantación dirigida en delegaciones como Argentina y el País Vasco.</p><div class="hl"><svg><use href="#i-net"/></svg>Red Ruckus en la central</div></div></article>
+    <article class="proj"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy"></figure><div class="body"><span class="kind">WiFi Ruckus · Mantenimiento</span><h3>PIMEC</h3><p>Proyecto integral de mantenimiento, telecomunicaciones y WiFi con equipos Ruckus, junto con la gestión del networking y la interconexión de sedes.</p><div class="hl"><svg><use href="#i-check"/></svg>WiFi Ruckus y mantenimiento</div></div></article>
+  </div>
+</section>
+
+<!-- ============ MÁS CASOS ============ -->
+<section class="sec" id="casos" aria-labelledby="h-casos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Más casos</span>
+      <h2 id="h-casos">Dos WiFi rediseñados, con resultados</h2>
+      <p class="lead">Un hotel con huéspedes sin señal y una nave con terminales que perdían la conexión.</p>
+    </div>
+    <div class="res two cases-wp">
+      <div class="rv" style="--s:0">{{ m.anonCase(
+        "WiFi estable para los huéspedes de un hotel",
+        "Hostelería · WiFi de huéspedes",
+        "Un hotel tenía puntos de acceso instalados sin estudio previo ni separación entre la red de huéspedes y la interna. Faltaba señal en las habitaciones más alejadas y la red se saturaba con alta ocupación.",
+        "Estudio de cobertura por plantas, nueva distribución de los puntos de acceso, sustitución de los equipos que se quedaban cortos y tres redes separadas: huéspedes con portal cautivo, red interna y red de gestión.",
+        ["0 quejas de WiFi desde la instalación", "Red de huéspedes separada de la interna"]
+      ) }}</div>
+      <div class="rv" style="--s:1">{{ m.anonCase(
+        "Terminales conectados en toda la nave",
+        "Industria · Logística",
+        "Los terminales de almacén y los lectores de código de barras perdían la conexión al pasar de una zona a otra de la nave, y el picking se interrumpía.",
+        "Estudio de la distribución de la nave, puntos de acceso industriales con itinerancia transparente y una red propia para los terminales, separada del resto de la infraestructura.",
+        ["0 cortes de conexión en terminales", "Picking sin interrupciones"]
+      ) }}</div>
+    </div>
+    <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre WiFi profesional") }}
+
+<!-- ============ RECURSOS ============ -->
+<section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Recursos</span>
+        <h2 id="h-res">Para diseñar mejor tu WiFi</h2>
+      </div>
+      <a class="btn btn-ghost rv" href="/recursos/">Ver todos los recursos <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      <a class="card rv" style="--s:0" href="/recursos/wifi-domestico-o-wifi-profesional/"><span class="cat">WiFi</span><h3>WiFi doméstico o WiFi profesional</h3><p>Qué diferencia de verdad las dos opciones y cuándo se queda corta cada una según el uso.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/"><span class="cat">WiFi</span><h3>Cuántos puntos de acceso necesita tu WiFi</h3><p>Los factores que lo determinan y por qué más puntos de acceso no siempre es mejor.</p></a>
+      <a class="card rv" style="--s:2" href="/recursos/wifi-en-naves-industriales/"><span class="cat">WiFi</span><h3>WiFi en naves industriales</h3><p>Por qué el metal y la maquinaria piden un diseño distinto al de una oficina.</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/wifi-multisede/"><span class="cat">WiFi</span><h3>WiFi multisede</h3><p>Cómo unificar la gestión del WiFi de varias oficinas en una sola consola.</p></a>
+      <a class="card rv" style="--s:1" href="/recursos/wifi-para-eventos-y-salas-de-formacion/"><span class="cat">WiFi</span><h3>WiFi para eventos y salas de formación</h3><p>Con muchos asistentes, el reto es la capacidad, no la cobertura. Así se plantea.</p></a>
+      <a class="card rv" style="--s:2" href="/casos-de-exito/"><span class="cat">Casos de éxito</span><h3>Del fondo de una mina a la red de un hospital</h3><p>Proyectos reales de redes, WiFi y telecomunicaciones para empresas e instituciones públicas.</p></a>
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(title="Explícanos dónde necesitas WiFi", text="Una nave, una cámara frigorífica, una planta llena de gente o varias sedes. Cuéntanos cómo es el espacio y quién se conecta: te proponemos el estudio de cobertura y los siguientes pasos, sin compromiso.", area="Redes y WiFi") }}
+
+{% endblock %}

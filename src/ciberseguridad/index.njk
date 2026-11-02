@@ -13,7 +13,7 @@ faq:
       a: "Incluye la auditoría de seguridad, las políticas de seguridad, la protección de equipos y servidores, la autenticación multifactor, el firewall y la segmentación de la red, el correo seguro, las copias de seguridad, la detección y respuesta gestionada, la seguridad del cloud y de la web, y el pentesting. ADQA combina estas piezas según el punto de partida de cada empresa y las mantiene con el mismo equipo que lleva su informática y sus telecomunicaciones."
     - q: "¿Por dónde se empieza a mejorar la ciberseguridad de una empresa?"
       a: "Por una auditoría de seguridad. Antes de implantar nada conviene saber qué sistemas hay, cómo están configurados y qué nivel de exposición real tienen. Con ese diagnóstico se decide qué proteger primero y qué puede esperar, y la inversión se dirige a las medidas con más impacto. Es el primer paso que proponemos a cualquier empresa nueva, sea cual sea su tamaño."
-    - q: "¿Quién vigila los sistemas fuera del horario de oficina?"
+    - q: "¿Quién vigila los sistemas en la detección y respuesta gestionada?"
       a: "En el servicio de detección y respuesta gestionada, la vigilancia continua, 24 horas al día, la realiza el SOC de WatchGuard, el fabricante de la tecnología. ADQA implanta y configura el servicio, lo integra con tu red, tus equipos y tu correo, y es tu interlocutor para todo el conjunto. En las revisiones periódicas te proponemos mejoras concretas a partir de lo que se observa."
     - q: "¿Necesito un departamento IT propio para trabajar con ADQA?"
       a: "No. ADQA actúa como departamento IT externo para empresas sin equipo técnico, también en ciberseguridad. Si ya tienes equipo interno, trabajamos como apoyo especializado en proyectos concretos, como una auditoría, un pentest o la implantación de la protección de equipos y correo."
@@ -31,24 +31,15 @@ faq:
 {% import "macros.njk" as m with context %}
 {% block head %}
 <style>
-/* Ciberseguridad: piezas propias (candidatas a site.css en la fase de unificación) */
+/* Ciberseguridad: lo que ganas (rejilla 2x2 con icono) */
 .gains{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .gains .card{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;padding:30px}
 .gains .card div{display:grid;gap:8px}
 .ico-sq{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
 .ico-sq svg{width:22px;height:22px}
-.svc-grid .svc{min-height:0}
-.svc-grid .svc .more{margin-top:auto}
-.note.card{margin:14px 0 0;max-width:none;text-align:left;font-size:1rem;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:26px 30px}
-.note.card p{max-width:680px;color:var(--ink)}
-.note.card .lft{display:flex;align-items:center;gap:20px}
-.note.card .lft img{height:64px;width:auto;border-radius:8px;flex:none}
-.cases-anon{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
 @media (max-width:720px){
   .gains{grid-template-columns:1fr}
   .gains .card{grid-template-columns:1fr;gap:14px;padding:26px}
-  .note.card{padding:24px}
-  .note.card .lft{flex-direction:column;align-items:flex-start}
 }
 </style>
 {% endblock %}
@@ -163,7 +154,7 @@ faq:
       <article class="st" style="--n:3">
         <span class="num">04 · DETECCIÓN Y RESPUESTA</span>
         <h3>Vigilancia continua, con un solo interlocutor</h3>
-        <p>Para los entornos que lo necesitan, implantamos y gestionamos la detección y respuesta gestionada de WatchGuard. La vigilancia 24/7 la realiza el SOC del fabricante; nosotros integramos el servicio con tu red, tus equipos y Microsoft 365, y respondemos ante ti de todo el conjunto.</p>
+        <p>Para los entornos que lo necesitan, implantamos y gestionamos el servicio de detección y respuesta de WatchGuard. La vigilancia 24/7 la realiza el SOC del fabricante; nosotros integramos el servicio con tu red, tus equipos y Microsoft 365, y respondemos ante ti de todo el conjunto.</p>
         <ul><li>Despliegue por fases, sede a sede</li><li>Revisiones periódicas con propuestas de mejora</li><li>Un mismo contacto para todo el ecosistema</li></ul>
       </article>
     </div>
@@ -190,7 +181,7 @@ faq:
         <p>Normas claras sobre contraseñas, permisos, uso de dispositivos y copias, que tu equipo entiende y aplica.</p>
       </div>
       <a class="card svc rv" href="/ciberseguridad/pentesting/" style="--s:2">
-        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <span class="ico"><svg><use href="#i-lock"/></svg></span>
         <h3>Pentesting</h3>
         <p>Un especialista comprueba, de forma controlada y autorizada, qué vulnerabilidades se pueden explotar y cómo corregirlas.</p>
         <span class="more">Pentesting para empresas <svg><use href="#i-arrow"/></svg></span>
@@ -223,7 +214,7 @@ faq:
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-mail"/></svg></span>
         <h3>Correo seguro</h3>
-        <p>Filtrado con Hornetsecurity y autenticación del dominio (SPF, DKIM y DMARC) para que llegue lo que importa.</p>
+        <p>Filtrado del correo entrante con Hornetsecurity, para que a tu equipo le llegue lo que importa.</p>
       </div>
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg><use href="#i-server"/></svg></span>
@@ -238,7 +229,7 @@ faq:
       <a class="card svc rv" href="/diseno-programacion-web/mantenimiento-web-para-empresas/" style="--s:2">
         <span class="ico"><svg><use href="#i-code"/></svg></span>
         <h3>Seguridad web</h3>
-        <p>Alojamiento bien configurado, actualizaciones al día y un mantenimiento que mantiene sana tu web.</p>
+        <p>Alojamiento bien configurado, actualizaciones al día y un mantenimiento continuo que cuida tu web.</p>
         <span class="more">Mantenimiento web <svg><use href="#i-arrow"/></svg></span>
       </a>
     </div>
@@ -251,7 +242,7 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Validar y acreditar</span>
       <h2 id="h-val">Comprobar que las medidas funcionan</h2>
-      <p class="lead">Una medida que nadie ha puesto a prueba es una hipótesis. Por eso cerramos el ciclo con pruebas reales y trabajamos con un sistema de gestión de la seguridad auditado por una entidad externa.</p>
+      <p class="lead">Cerramos el ciclo con pruebas reales sobre tus sistemas. Y trabajamos con un sistema de gestión de la seguridad auditado por una entidad externa.</p>
     </div>
     <div class="card note rv">
       <p><strong>Pentesting.</strong> Simulamos ataques controlados contra tus sistemas, tu web, tu WiFi o tu cloud para saber qué es explotable de verdad. Recibes un informe para la dirección, otro para tu equipo técnico, un plan de remediación y un re-test de lo corregido.</p>
@@ -260,7 +251,7 @@ faq:
     <div class="card note rv" style="--s:1">
       <div class="lft">
         <img src="/assets/sellos/ens-alta.jpg" alt="Distintivo de certificación ENS, categoría ALTA" loading="lazy" width="80" height="97">
-        <p><strong>Esquema Nacional de Seguridad, categoría ALTA.</strong> ADQA tiene la certificación de conformidad, emitida por Applus, entidad acreditada por ENAC. Es un requisito habitual para prestar servicios tecnológicos a la administración pública.</p>
+        <p><strong>Esquema Nacional de Seguridad, categoría ALTA.</strong> ADQA tiene la certificación de conformidad, emitida por Applus, entidad acreditada por ENAC. La administración pública la pide con frecuencia en sus contratos tecnológicos.</p>
       </div>
       <a class="btn btn-ghost" href="/ciberseguridad/certificado-ens/">Qué significa para ti <svg><use href="#i-arrow"/></svg></a>
     </div>
@@ -297,13 +288,28 @@ faq:
       {{ m.projectCard(p) }}
       {%- endif %}{% endfor %}
     </div>
-    <div class="cases-anon">
-      <div class="rv">{{ m.anonCase(
+    <h3 class="sub-head rv">Más casos, con resultados medibles</h3>
+    <div class="res cases-wp">
+      <div class="rv" style="--s:0">{{ m.anonCase(
         "Detección y respuesta gestionada para una cadena hotelera internacional",
         "Hostelería · Varias sedes en distintos países",
         "Unificar la seguridad de los equipos, la red, la identidad corporativa y Microsoft 365 bajo un mismo modelo gestionado, con un solo interlocutor. Un pentest inicial sirvió para medir el nivel real de protección y fijar prioridades.",
         "Despliegue de WatchGuard EPDR en todos los equipos y servidores, visibilidad de red con WatchGuard ThreatSync+ NDR en cada sede y activación de WatchGuard Total MDR, con el SOC del fabricante vigilando también Microsoft 365. ADQA integra el conjunto y es el punto de contacto. En las revisiones periódicas se añadió la gestión de parches.",
         ["Plan por fases de 8 semanas", "Equipos, red, identidad y Microsoft 365 en un mismo modelo", "Gestión de parches añadida tras una revisión"]
+      ) }}</div>
+      <div class="rv" style="--s:1">{{ m.anonCase(
+        "Un plan de recuperación que ya está probado",
+        "Producción continua · Copias y red",
+        "Una empresa con producción continua había sufrido un ransomware que cifró sus sistemas. Tenía antivirus y copias, pero las copias no se habían verificado, la red no estaba segmentada y no había un protocolo de respuesta.",
+        "Rediseño de la estrategia de copias con replicación externa y pruebas periódicas de restauración, segmentación de la red para contener cualquier incidente y detección de comportamientos anómalos en los equipos.",
+        ["Recuperación: de días a 4 horas", "Red segmentada", "Copias con pruebas de restauración"]
+      ) }}</div>
+      <div class="rv" style="--s:2">{{ m.anonCase(
+        "Accesos remotos con doble verificación y registro",
+        "Empresa · Accesos remotos",
+        "Un acceso remoto sin autenticación multifactor había permitido entrar con credenciales robadas, sin malware y sin dejar rastro. La empresa quería saber quién entra, desde dónde y cuándo.",
+        "Autenticación multifactor adaptada a la operativa del equipo, sin interferir en el trabajo diario, control de accesos con registro completo de la actividad y detección de comportamientos anómalos.",
+        ["0 accesos no autorizados desde la implantación", "Trazabilidad de todos los accesos"]
       ) }}</div>
     </div>
     <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>

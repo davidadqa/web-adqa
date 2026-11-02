@@ -30,37 +30,7 @@ faq:
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
-{% block head %}
-<style>
-/* Licenciamiento mixto: tablas (.vs), orden alterno de .split y rejilla de casos */
-.vs{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.vs table{width:100%;border-collapse:collapse;text-align:left}
-.vs th,.vs td{padding:18px 24px;vertical-align:top;font-size:.97rem;color:var(--gray);border-top:1px solid var(--line)}
-.vs thead th{border-top:0;background:var(--surface-2);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.vs thead th+th{color:var(--ink)}
-.vs tbody th{width:30%;font-weight:600;color:var(--ink)}
-.vs tr.fit th,.vs tr.fit td{background:var(--pink-50);color:var(--ink)}
-.vs.calc tbody th{width:50%}
-.vs td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
-.case-feat{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding:clamp(26px,4vw,44px)}
-.case-feat .txt{display:grid;gap:14px}
-.case-feat .kind{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
-.cases-wp{margin-top:14px}
-@media (min-width:1061px){.split.rev .txt{order:2}}
-@media (max-width:1060px){.case-feat{grid-template-columns:1fr;gap:28px}}
-@media (max-width:720px){
-  .vs thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .vs table,.vs tbody,.vs tr,.vs th,.vs td{display:block;width:auto}
-  .vs tr{padding:18px 20px;border-top:1px solid var(--line)}
-  .vs tbody tr:first-child{border-top:0}
-  .vs th,.vs td{border:0;padding:0}
-  .vs tbody th{width:auto;margin-bottom:10px;font-size:1.02rem}
-  .vs td+td{margin-top:10px}
-  .vs td::before{content:attr(data-l);display:block;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pink-600);margin-bottom:2px}
-  .vs tr.fit{background:var(--pink-50)}
-}
-</style>
-{% endblock %}
+{% block head %}{% endblock %}
 {% block content %}
 
 <!-- ============ HERO ============ -->
@@ -110,7 +80,7 @@ faq:
       <p class="lead">El plan se decide una vez, al contratar, y casi nunca se vuelve a mirar. Revisarlo con datos cambia cuatro cosas.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Cada persona, en su edición</h3><p>Backoffice en Business Starter, consultores en Standard y dirección en Plus, todos en el mismo dominio.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Cada persona, en su edición</h3><p>Starter para quien usa el correo y Drive, Standard para quien vive en reuniones y Plus para dirección, en el mismo dominio.</p></div>
       <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Decisiones con datos</h3><p>Miramos qué usa cada usuario: almacenamiento, grabaciones, controles de seguridad. Nada de suponer por el cargo.</p></div>
       <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-check"/></svg></span><h3>Altas con el plan correcto</h3><p>Quien entra empieza en la edición que le corresponde, no en la más alta por defecto.</p></div>
       <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-file"/></svg></span><h3>Una factura que se revisa</h3><p>Sin licencias de gente que ya no está ni planes que nadie ha vuelto a mirar desde el primer día.</p></div>
@@ -128,7 +98,7 @@ faq:
       <p>Con las condiciones actuales de Google, si compras directamente, el dominio queda vinculado a una sola edición para todos. El PDL se activa cuando el dominio está vinculado a un partner oficial: es una condición técnica de la plataforma, no una decisión comercial.</p>
       <p>En Microsoft 365, en cambio, combinar planes en el mismo tenant es estándar. Lo explicamos en <a class="txt-link" href="/microsoft-365/#planes">Microsoft <span class="nw">365<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
     </div>
-    <div class="vs rv" style="--s:1">
+    <div class="vs mid rv" style="--s:1">
       <table>
         <caption class="sr">Comprar Google Workspace directamente a Google o con un partner</caption>
         <thead><tr><th scope="col"><span class="sr">Aspecto</span></th><th scope="col">Directo a Google</th><th scope="col">Con partner</th></tr></thead>
@@ -168,22 +138,22 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Un ejemplo con números</span>
       <h2 id="h-calc">Cuánto se puede ahorrar: un ejemplo con 10 usuarios</h2>
-      <p class="lead">Diez personas con Business Plus. ¿Qué pasa si las que tienen un uso básico pasan a Business Starter? La horquilla habitual sale de aquí: depende de cuántas de cada diez lo necesitan.</p>
+      <p class="lead">Diez personas con Business Plus. ¿Qué pasa si las que tienen un uso básico pasan a Business Starter? El ahorro depende de cuántas personas pueden cambiar de edición.</p>
     </div>
     <div class="vs calc rv">
       <table>
         <caption class="sr">Coste anual de 10 licencias según cuántos usuarios pasan de Business Plus a Business Starter</caption>
-        <thead><tr><th scope="col">Reparto de los 10 usuarios</th><th scope="col">Coste anual</th><th scope="col">Ahorro</th></tr></thead>
+        <thead><tr><th scope="col">Reparto de los 10 usuarios</th><th scope="col">Coste anual sobre el inicial</th><th scope="col">Ahorro</th></tr></thead>
         <tbody>
-          <tr><th scope="row">10 en Business Plus (punto de partida)</th><td class="num" data-l="Coste anual">2.532,00 €</td><td data-l="Ahorro">—</td></tr>
-          <tr><th scope="row">7 en Plus y 3 en Starter</th><td class="num" data-l="Coste anual">2.017,20 €</td><td class="num" data-l="Ahorro">20%</td></tr>
-          <tr><th scope="row">6 en Plus y 4 en Starter</th><td class="num" data-l="Coste anual">1.845,60 €</td><td class="num" data-l="Ahorro">27%</td></tr>
-          <tr class="fit"><th scope="row">5 en Plus y 5 en Starter (como el caso real)</th><td class="num" data-l="Coste anual">1.674,00 €</td><td class="num" data-l="Ahorro">34%</td></tr>
-          <tr><th scope="row">4 en Plus y 6 en Starter</th><td class="num" data-l="Coste anual">1.502,40 €</td><td class="num" data-l="Ahorro">41%</td></tr>
+          <tr><th scope="row">10 en Business Plus (punto de partida)</th><td class="num" data-l="Coste anual sobre el inicial">100%</td><td data-l="Ahorro">—</td></tr>
+          <tr><th scope="row">7 en Plus y 3 en Starter</th><td class="num" data-l="Coste anual sobre el inicial">80%</td><td class="num" data-l="Ahorro">20%</td></tr>
+          <tr><th scope="row">6 en Plus y 4 en Starter</th><td class="num" data-l="Coste anual sobre el inicial">73%</td><td class="num" data-l="Ahorro">27%</td></tr>
+          <tr class="fit"><th scope="row">5 en Plus y 5 en Starter (como el caso real)</th><td class="num" data-l="Coste anual sobre el inicial">66%</td><td class="num" data-l="Ahorro">34%</td></tr>
+          <tr><th scope="row">4 en Plus y 6 en Starter</th><td class="num" data-l="Coste anual sobre el inicial">59%</td><td class="num" data-l="Ahorro">41%</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note-src rv">Cálculo con las tarifas anuales por usuario del caso real de esta página, publicado en agosto de 2026: 253,20 € en Business Plus y 81,60 € en Business Starter. Las tarifas de Google cambian; para tu empresa lo recalculamos con las vigentes. Si partís de Business Standard, la diferencia por puesto es menor y el ahorro también.</p>
+    <p class="note-src rv">Cálculo con la diferencia de tarifa entre Business Plus y Business Starter que recoge el caso real de esta página, publicado en agosto de 2026. Las tarifas de Google cambian; para tu empresa lo recalculamos con las vigentes. Si partís de Business Standard, la diferencia por puesto es menor y el ahorro también.</p>
   </div>
 </section>
 
@@ -304,15 +274,15 @@ faq:
         <p><strong>Punto de partida:</strong> los 40 puestos tenían Business Plus, con 5 TB por usuario. Iban a incorporar a 20 personas más, y un grupo de 10 quería usar las funciones de IA más avanzadas de Google Workspace.</p>
         <p><strong>Diagnóstico:</strong> revisamos el uso real de los 40 usuarios. La mitad necesitaba de verdad el almacenamiento y las funciones de Business Plus; la otra mitad podía pasar a Business Starter sin perder nada de lo que usaba.</p>
         <p><strong>Solución:</strong> 20 puestos se quedaron en Business Plus y 20 pasaron a Business Starter. Las 20 incorporaciones entraron directamente en Business Starter, y Google AI Ultra for Business se añadió solo a las 10 personas que lo iban a usar.</p>
-        <p class="note-src">Caso basado en un proyecto real de ADQA, con datos anonimizados. Tarifas de Google vigentes en agosto de 2026, cuando se publicó el caso.</p>
+        <p class="note-src">Caso basado en un proyecto real de ADQA, con datos anonimizados. Porcentajes calculados con las tarifas de Google que recoge el caso, publicado en agosto de 2026.</p>
       </div>
-      <div class="vs">
+      <div class="vs mid">
         <table>
           <caption class="sr">Antes y después del licenciamiento mixto en los 40 puestos existentes</caption>
           <thead><tr><th scope="col"><span class="sr">Concepto</span></th><th scope="col">Antes</th><th scope="col">Después</th></tr></thead>
           <tbody>
             <tr><th scope="row">Puestos existentes (40)</th><td data-l="Antes">40 Business Plus</td><td data-l="Después">20 Business Plus y 20 Business Starter</td></tr>
-            <tr class="fit"><th scope="row">Coste anual de esos 40 puestos</th><td class="num" data-l="Antes">10.128,00 €</td><td class="num" data-l="Después">6.696,00 € (-34%)</td></tr>
+            <tr class="fit"><th scope="row">Coste anual de esos 40 puestos</th><td class="num" data-l="Antes">100%</td><td class="num" data-l="Después">66% (-34%)</td></tr>
             <tr><th scope="row">Incorporaciones nuevas</th><td data-l="Antes">Por defecto, edición superior</td><td data-l="Después">20 Business Starter, según necesidad</td></tr>
             <tr><th scope="row">IA avanzada</th><td data-l="Antes">No disponible</td><td data-l="Después">10 Google AI Ultra, solo para quien la usa</td></tr>
           </tbody>

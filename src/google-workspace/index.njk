@@ -12,11 +12,11 @@ faq:
     - q: "¿Qué incluye la gestión de Google Workspace de ADQA?"
       a: "Incluye la gestión de las licencias, también en licenciamiento mixto, las altas, bajas y cambios de plan, la configuración inicial del dominio y de la seguridad, la migración desde el sistema anterior, la administración continuada, el soporte técnico de primer nivel y la formación a los usuarios. Si una incidencia necesita a Google, ADQA abre el caso y lo sigue por ti."
     - q: "¿Qué aporta trabajar con un partner oficial de Google?"
-      a: "Un interlocutor que conoce tu dominio y tu configuración, en lugar de un soporte genérico. Con un partner puedes combinar ediciones distintas de Google Workspace en el mismo dominio (licenciamiento mixto), delegar las altas, bajas y renovaciones, y tener a quien llamar cuando algo no funciona. ADQA es partner oficial de Google (Google Cloud Partner)."
+      a: "Un interlocutor que ya conoce tu dominio, tu configuración y cómo trabaja tu empresa. Con un partner puedes combinar ediciones distintas de Google Workspace en el mismo dominio (licenciamiento mixto), delegar las altas, bajas y renovaciones, y tener a quien llamar cuando algo no funciona. ADQA es partner oficial de Google (Google Cloud Partner)."
     - q: "¿Qué pasa con mis correos y archivos si migramos a Google Workspace?"
       a: "Se migran el correo, los calendarios, los contactos y los archivos. La migración se planifica por fases, empezando por un grupo piloto, y el sistema anterior sigue funcionando mientras tanto. El cambio de los registros del correo se hace al final, cuando todo está verificado, para que cada persona encuentre su información el primer día."
     - q: "¿Podemos tener Google Workspace y Microsoft 365 en la misma empresa?"
-      a: "Sí. Hay empresas que mantienen unos usuarios en Google Workspace y otros en Microsoft 365 según el departamento, y otras que usan Google Workspace para todos y licencian las aplicaciones de escritorio de Microsoft solo para quien las necesita. Se puede hacer con el mismo dominio, configurando el enrutamiento del correo. En general recomendamos unificar, porque simplifica la administración, salvo que haya un motivo claro para combinar."
+      a: "Sí, aunque no es lo más habitual. Hay empresas que mantienen unos usuarios en Google Workspace y otros en Microsoft 365 según el puesto o el departamento, con el mismo dominio y el enrutamiento del correo bien configurado. Lo valoramos caso a caso, pero en general recomendamos unificar, porque la administración es más sencilla."
   tecnico:
     - q: "¿Cómo se migra a Google Workspace desde Microsoft 365 u otro servidor de correo sin perder datos?"
       a: "Con herramientas de migración de Google y un proceso por fases. Primero se inventarían buzones, calendarios, contactos y archivos; después se migra un grupo piloto, luego el resto de usuarios, y se verifica la integridad de cada bloque antes de seguir. Los registros MX se cambian en el último paso, con una sincronización final para recoger lo más reciente."
@@ -29,13 +29,7 @@ faq:
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
-{% block head %}
-<style>
-/* Google Workspace (hub): orden alterno de .split y rejilla de casos heredados */
-@media (min-width:1061px){.split.rev .txt{order:2}}
-.cases-wp{margin-top:14px}
-</style>
-{% endblock %}
+{% block head %}{% endblock %}
 {% block content %}
 
 <!-- ============ HERO ============ -->
@@ -65,7 +59,7 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-sum" class="sr">¿Qué hace ADQA con Google Workspace?</h2>
-      <p class="tldr"><strong>ADQA es partner oficial de Google (Google Cloud Partner) y gestiona Google Workspace para empresas e instituciones de Barcelona y Cataluña.</strong> Se ocupa de las licencias, también en licenciamiento mixto, de las altas y bajas, de la configuración, de la migración y del soporte de primer nivel, y hace de interlocutor con Google. Es el mismo equipo que puede llevar su soporte IT, su cloud y su ciberseguridad.</p>
+      <p class="tldr"><strong>ADQA es partner oficial de Google (Google Cloud Partner) y gestiona Google Workspace para empresas e instituciones de Barcelona y Cataluña.</strong> Se ocupa de las licencias, también en licenciamiento mixto, de las altas y bajas, de la configuración, de la migración y del soporte de primer nivel, y hace de interlocutor con Google. El mismo equipo puede llevar el soporte IT, el cloud y la ciberseguridad de la empresa.</p>
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en informática y telecomunicaciones</span></div>
@@ -114,7 +108,7 @@ faq:
 
 <!-- ============ QUÉ ES GOOGLE WORKSPACE ============ -->
 <section class="sec" id="que-es" aria-labelledby="h-gw" style="padding-top:0">
-  <div class="wrap split rev">
+  <div class="wrap split flip">
     <div class="txt rv">
       <span class="eyebrow">Google Workspace</span>
       <h2 id="h-gw">¿Qué es Google Workspace y qué aporta a tu empresa?</h2>
@@ -243,7 +237,7 @@ faq:
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-phone"/></svg></span>
         <h3>Soporte técnico</h3>
-        <p>Primer nivel de soporte para cualquier incidencia de Google Workspace. Si hay que escalar a Google, lo hacemos nosotros.</p>
+        <p>Cualquier incidencia de Google Workspace, atendida por quien ya conoce tu dominio. Si hay que escalar a Google, lo hacemos nosotros.</p>
         <ul class="tags"><li>Primer nivel</li><li>Escalado a Google</li></ul>
       </div>
       <div class="card svc wide rv" style="--s:0">
