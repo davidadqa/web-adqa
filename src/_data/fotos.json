@@ -1,0 +1,77 @@
+{
+ "equipo-oficina-logo-adqa": {
+  "base": "/assets/fotos/equipo-oficina-logo-adqa",
+  "widths": [
+   640,
+   1146
+  ],
+  "ratio": "1146/400",
+  "w": 1146,
+  "h": 400,
+  "alt": "Una persona del equipo de ADQA trabaja frente a dos monitores, uno de ellos con el logotipo de ADQA",
+  "altRevisado": true,
+  "archivo": "equipo-4.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "equipo-programando-dos-monitores": {
+  "base": "/assets/fotos/equipo-programando-dos-monitores",
+  "widths": [
+   640,
+   1146
+  ],
+  "ratio": "1146/400",
+  "w": 1146,
+  "h": 400,
+  "alt": "Una persona del equipo de ADQA escribe código frente a dos monitores, con una botella de ADQA en la mesa",
+  "altRevisado": true,
+  "archivo": "equipo-3.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "equipo-soporte-auriculares": {
+  "base": "/assets/fotos/equipo-soporte-auriculares",
+  "widths": [
+   640,
+   1146
+  ],
+  "ratio": "1146/400",
+  "w": 1146,
+  "h": 400,
+  "alt": "Un técnico de soporte de ADQA con auriculares y micrófono, frente a varios monitores",
+  "altRevisado": true,
+  "archivo": "equipo-5.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "equipo-teclado-auriculares": {
+  "base": "/assets/fotos/equipo-teclado-auriculares",
+  "widths": [
+   640,
+   1146
+  ],
+  "ratio": "1146/400",
+  "w": 1146,
+  "h": 400,
+  "alt": "Manos tecleando en un teclado, junto a un ratón vertical y unos auriculares con micrófono",
+  "altRevisado": true,
+  "archivo": "equipo-2.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "equipo-telefono-codigo": {
+  "base": "/assets/fotos/equipo-telefono-codigo",
+  "widths": [
+   640,
+   1146
+  ],
+  "ratio": "1146/400",
+  "w": 1146,
+  "h": 400,
+  "alt": "Una persona del equipo de ADQA habla por teléfono frente a dos monitores con código",
+  "altRevisado": true,
+  "archivo": "equipo-6.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ }
+}
