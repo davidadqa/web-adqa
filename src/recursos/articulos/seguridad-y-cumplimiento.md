@@ -11,62 +11,64 @@ updated: 2026-11-02
 servicio: "/google-workspace/google-workspace-vs-microsoft-365/"
 related: ["politica-de-seguridad-y-cumplimiento-normativo", "seguridad-en-microsoft-365", "seguridad-en-google-workspace-que-protege-y-que-configurar"]
 imagen: "Responsable de cumplimiento revisando en un portátil las políticas de retención y el registro de actividad de la suite de su empresa"
-tldr: "Google Workspace y Microsoft 365 pueden usarse cumpliendo el RGPD y el Esquema Nacional de Seguridad, pero cada proveedor responde solo de su infraestructura. La empresa sigue siendo responsable de sus datos: aceptar las condiciones de tratamiento, saber dónde se almacenan, fijar cuánto tiempo se conservan, controlar quién accede y poder demostrarlo con registros. Las dos suites ofrecen herramientas para ello, con más alcance en los planes superiores."
+tldr: "Google Workspace y Microsoft 365 pueden usarse cumpliendo el RGPD y el Esquema Nacional de Seguridad. Cada proveedor responde solo de su infraestructura. La empresa sigue siendo responsable de sus datos. Debe aceptar las condiciones de tratamiento, saber dónde se almacenan y fijar cuánto tiempo se conservan. También debe controlar quién accede y demostrarlo con registros. Las dos suites ofrecen herramientas para ello, con más alcance en los planes superiores."
 faq:
   manager:
     - q: "¿Google Workspace y Microsoft 365 cumplen el RGPD?"
-      a: "Las dos ofrecen condiciones de tratamiento de datos, información sobre dónde se almacenan y herramientas para conservarlos y localizarlos. Con eso, una empresa puede cumplir el RGPD usando cualquiera de ellas. Pero el cumplimiento también depende de cómo la empresa configura la suite y de sus propios procedimientos."
+      a: "Las dos ofrecen condiciones de tratamiento de datos e información sobre dónde se almacenan. También incluyen herramientas para conservarlos y localizarlos. Con eso, tu empresa puede cumplir el RGPD con cualquiera de las dos. Pero el cumplimiento depende también de cómo configures la suite y de tus propios procedimientos."
     - q: "Si el proveedor tiene la certificación ENS, ¿nuestra empresa ya cumple el ENS?"
-      a: "No por sí solo. La certificación del proveedor cubre su infraestructura y los servicios incluidos en su alcance. Si tu empresa presta servicios a la administración en un sistema sujeto al ENS, la configuración de la suite y tus procedimientos forman parte de ese sistema y también se evalúan."
+      a: "No por sí solo. La certificación del proveedor cubre su infraestructura y los servicios incluidos en su alcance. Si das servicio a la administración en un sistema sujeto al ENS, la suite forma parte de él. Su configuración y tus procedimientos también se evalúan."
     - q: "¿Qué suite pone más fácil cumplir requisitos normativos exigentes?"
-      a: "Las dos tienen herramientas para conservar, buscar y proteger la información. Microsoft 365 las agrupa en Microsoft Purview, con más funciones de clasificación de documentos en los planes superiores. Google Workspace ofrece Vault y la prevención de fugas en determinadas ediciones. Lo que suele decidir es el plan contratado y su configuración, más que la suite."
+      a: "Las dos tienen herramientas para conservar, buscar y proteger la información. Microsoft 365 las agrupa en Microsoft Purview, con más funciones de clasificación de documentos en los planes superiores. Google Workspace ofrece Vault y la prevención de fugas en determinadas ediciones. Lo que suele decidir es el plan que contratas y cómo lo configuras, más que la suite."
   tecnico:
     - q: "¿Cómo se sabe en qué región se almacenan los datos de la suite?"
-      a: "Las dos suites lo indican en su documentación y en la consola de administración. En Microsoft 365, la ubicación está ligada al país del tenant; en Google Workspace, algunas ediciones permiten fijar una región de datos. Conviene comprobarlo y dejarlo documentado en el registro de actividades de tratamiento."
+      a: "Las dos suites lo indican en su documentación y en la consola de administración. En Microsoft 365, la ubicación está ligada al país del tenant. En Google Workspace, algunas ediciones permiten fijar una región de datos. Compruébalo y déjalo documentado en el registro de actividades de tratamiento."
     - q: "¿Cómo se atiende una solicitud de acceso o de supresión de datos de una persona?"
-      a: "Con las herramientas de búsqueda de cada suite, Google Vault o la búsqueda de contenido de Microsoft Purview, se localiza lo que hay sobre esa persona en el correo y en los archivos. Después se exporta o se elimina según la solicitud, y se deja constancia de lo que se ha hecho."
+      a: "Con las herramientas de búsqueda de cada suite: Google Vault o la búsqueda de contenido de Microsoft Purview. Con ellas localizas lo que hay sobre esa persona en el correo y en los archivos. Después lo exportas o lo eliminas, según la solicitud. Y dejas constancia de lo que has hecho."
     - q: "¿Qué registros de actividad conviene conservar para el ENS?"
-      a: "Los más útiles para demostrar la trazabilidad son los inicios de sesión, los cambios de configuración y de permisos de administración, y los accesos y el uso compartido de los documentos. Cuánto tiempo los guarda cada suite depende del plan: conviene comprobar si cubre lo que fija la política de seguridad y, si no, exportarlos a otro sistema."
+      a: "Para demostrar la trazabilidad, los más útiles son tres. Los inicios de sesión. Los cambios de configuración y de permisos de administración. Y los accesos y el uso compartido de los documentos. Cuánto tiempo los guarda cada suite depende del plan. Comprueba si cubre lo que fija tu política de seguridad. Si no, expórtalos a otro sistema."
 ---
-Cuando entran en juego el RGPD o el Esquema Nacional de Seguridad, la pregunta sobre la suite cambia. Ya no basta con saber si es segura: hay que poder demostrar cómo se protegen y se gestionan los datos. Google Workspace y Microsoft 365 permiten hacerlo, cada una con sus herramientas, pero ninguna lo hace por sí sola.
+Cuando entran en juego el RGPD o el Esquema Nacional de Seguridad, la pregunta sobre la suite cambia. Ya no basta con saber si es segura. Hay que poder demostrar cómo se protegen y se gestionan los datos. Google Workspace y Microsoft 365 permiten hacerlo, cada una con sus herramientas. Pero ninguna lo hace por sí sola.
 
-La configuración de seguridad de cada suite se explica en [Seguridad en Microsoft 365](/recursos/seguridad-en-microsoft-365/) y en [Seguridad en Google Workspace](/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/). Este artículo trata de lo que añade la normativa.
+La configuración de seguridad de Microsoft 365 la tienes en [Seguridad en Microsoft 365](/recursos/seguridad-en-microsoft-365/). La de Google Workspace, en [Seguridad en Google Workspace](/recursos/seguridad-en-google-workspace-que-protege-y-que-configurar/). Este artículo trata de lo que añade la normativa.
 
 ## Qué cubre el proveedor y qué cubre tu empresa
 
-El cumplimiento en una suite cloud es una responsabilidad compartida, con un reparto bastante claro.
+El cumplimiento en una suite cloud es una responsabilidad compartida. El reparto es bastante claro.
 
-- **El proveedor** responde de la seguridad de sus centros de datos, del cifrado de la plataforma, de la disponibilidad del servicio y de las certificaciones de su infraestructura.
-- **La empresa** responde de qué datos guarda, quién accede a ellos, cuánto tiempo se conservan, cómo se atienden los derechos de las personas y cómo se actúa ante un incidente.
+- **El proveedor** responde de la seguridad de sus centros de datos y del cifrado de la plataforma. Responde también de la disponibilidad del servicio y de las certificaciones de su infraestructura.
+- **Tu empresa** responde de qué datos guarda, quién accede a ellos y cuánto tiempo se conservan. Responde también de cómo se atienden los derechos de las personas y de cómo se actúa ante un incidente.
 
-Las certificaciones del proveedor son un buen punto de partida: acreditan que su infraestructura cumple determinados estándares. No certifican el uso que cada empresa hace de la suite.
+Las certificaciones del proveedor son un buen punto de partida. Acreditan que su infraestructura cumple determinados estándares. No certifican el uso que tu empresa hace de la suite. Quién puede abrir la carpeta con los contratos de tu plantilla no lo decide el proveedor. Lo decide tu empresa.
 
 ## RGPD: lo que la empresa debe tener resuelto
 
-- **Condiciones de tratamiento de datos.** Google y Microsoft actúan como encargados del tratamiento de los datos que la empresa guarda en la suite. Los dos publican sus condiciones. Conviene revisarlas, aceptarlas si la consola de administración lo solicita y conservarlas junto al registro de actividades de tratamiento.
-- **Ubicación de los datos.** Saber en qué región se almacenan y si hay transferencias fuera del Espacio Económico Europeo. Las dos suites lo informan y, según el plan o la edición, ofrecen opciones para fijar la región.
-- **Conservación y supresión.** El RGPD pide no guardar los datos más tiempo del necesario. Las políticas de retención permiten conservar lo que hay que conservar y eliminar el resto de forma ordenada.
-- **Derechos de las personas.** Responder a una solicitud de acceso o de supresión exige localizar todo lo que hay sobre alguien en buzones y archivos.
-- **Brechas de seguridad.** Si afectan a datos personales, el RGPD pide notificarlas a la autoridad de control sin dilación y, si es posible, en 72 horas como máximo desde que se conocen. No hace falta notificarlas cuando es improbable que supongan un riesgo para las personas. Los registros de actividad de la suite ayudan a reconstruir qué ha pasado.
+En la suite, el Reglamento General de Protección de Datos (RGPD) se concreta en estos puntos:
 
-Todo esto se apoya en la política de seguridad de la empresa. Por dónde empezarla se explica en [Política de seguridad y cumplimiento normativo](/recursos/politica-de-seguridad-y-cumplimiento-normativo/).
+- **Condiciones de tratamiento de datos.** Google y Microsoft actúan como encargados del tratamiento de los datos que tu empresa guarda en la suite. Los dos publican sus condiciones. Revísalas y acéptalas si la consola de administración lo solicita. Después, consérvalas junto al registro de actividades de tratamiento.
+- **Ubicación de los datos.** Saber en qué región se almacenan y si hay transferencias fuera del Espacio Económico Europeo. Las dos suites lo informan. Según el plan o la edición, ofrecen opciones para fijar la región.
+- **Conservación y supresión.** El RGPD pide no guardar los datos más tiempo del necesario. Las políticas de retención conservan lo que hay que conservar y eliminan el resto de forma ordenada.
+- **Derechos de las personas.** Un cliente puede pedirte por escrito qué datos suyos guardas, o que los borres. Es una solicitud de acceso o de supresión. Para responderla, hay que localizar todo lo que hay sobre él en buzones y archivos.
+- **Brechas de seguridad.** Si afectan a datos personales, el RGPD pide notificarlas a la autoridad de control sin dilación. Si es posible, en 72 horas como máximo desde que se conocen. No hace falta notificarlas cuando es improbable que supongan un riesgo para las personas. Los registros de actividad de la suite ayudan a reconstruir qué ha pasado.
+
+Todo esto se apoya en la política de seguridad de tu empresa. Por dónde empezarla lo explica [Política de seguridad y cumplimiento normativo](/recursos/politica-de-seguridad-y-cumplimiento-normativo/).
 
 ## ENS: cuando la suite entra en el alcance
 
-El Esquema Nacional de Seguridad, regulado por el Real Decreto 311/2022, obliga al sector público. También alcanza a los sistemas de las empresas privadas que le dan servicio o le aportan soluciones tecnológicas. Clasifica los sistemas en tres categorías, BÁSICA, MEDIA y ALTA, según el impacto que tendría un incidente sobre la información y los servicios.
+El Esquema Nacional de Seguridad (ENS), regulado por el Real Decreto 311/2022, obliga al sector público. También alcanza a los sistemas de las empresas privadas que le dan servicio o le aportan soluciones tecnológicas. Clasifica los sistemas en tres categorías: BÁSICA, MEDIA y ALTA. La categoría depende del impacto que tendría un incidente sobre la información y los servicios.
 
-Si el correo y los documentos que se usan para ese servicio están en Google Workspace o en Microsoft 365, la suite forma parte del sistema. Los proveedores suelen informar de qué servicios tienen certificados conforme al ENS y en qué categoría. Conviene comprobar que esa certificación cubre los servicios que se van a usar.
+El correo y los documentos que usas para ese servicio también cuentan. Si están en Google Workspace o en Microsoft 365, la suite forma parte del sistema. Los proveedores suelen informar de qué servicios tienen certificados conforme al ENS y en qué categoría. Comprueba que esa certificación cubre los servicios que vas a usar.
 
 <!-- PENDIENTE: confirmar con la documentación vigente de Google y de Microsoft qué servicios de cada suite están certificados conforme al ENS y en qué categoría antes de citarlo de forma concreta. -->
 
-La certificación del proveedor cubre su parte. La de la empresa se evalúa sobre su configuración y sus procedimientos. Varias medidas del ENS se traducen en ajustes concretos de la suite:
+La certificación del proveedor cubre su parte. La de tu empresa se evalúa sobre tu configuración y tus procedimientos. En la auditoría te preguntarán, por ejemplo, quién inició sesión y desde dónde. Varias medidas del ENS se traducen en ajustes concretos de la suite:
 
 - **Control de acceso:** autenticación reforzada con verificación en dos pasos y permisos ajustados a cada puesto.
-- **Trazabilidad:** registros de actividad conservados el tiempo que fija la política de la empresa.
+- **Trazabilidad:** registros de actividad conservados el tiempo que fija la política de tu empresa.
 - **Protección de la información:** cifrado, etiquetado de documentos y límites al uso compartido externo.
 - **Continuidad:** copias de seguridad propias, independientes de la papelera de la suite.
 
-Qué implica la categoría ALTA y cuándo la necesita una empresa privada se explica en [Certificación ENS categoría ALTA](/recursos/certificacion-ens-categoria-alta/).
+Qué implica la categoría ALTA y cuándo la necesita una empresa privada lo explica [Certificación ENS categoría ALTA](/recursos/certificacion-ens-categoria-alta/).
 
 ## Qué herramientas ofrece cada suite
 
@@ -79,7 +81,7 @@ Qué implica la categoría ALTA y cuándo la necesita una empresa privada se exp
 | Ubicación de los datos | Regiones de datos, en determinadas ediciones | Ligada al país del tenant, con opciones adicionales que se contratan aparte |
 | Control de acceso | Verificación en dos pasos y, en determinadas ediciones, acceso contextual | Verificación en dos pasos y, según el plan, acceso condicional de Microsoft Entra ID |
 
-Las funciones de cada plan o edición las fija cada proveedor y cambian con el tiempo. Conviene confirmarlas en su documentación antes de contratar o renovar.
+Si tu política obliga a conservar el correo durante años, empieza por la primera fila. Las funciones de cada plan o edición las fija cada proveedor y cambian con el tiempo. Confírmalas en su documentación antes de contratar o renovar.
 
 ## Cómo decidirlo
 
@@ -93,6 +95,6 @@ Las funciones de cada plan o edición las fija cada proveedor y cambian con el t
 
 Una guía rápida:
 
-- **La suite rara vez decide el cumplimiento por sí sola.** Lo deciden el plan contratado, la configuración y los procedimientos de la empresa.
-- **Si los requisitos son exigentes**, como retenciones largas, auditorías frecuentes o documentos confidenciales que hay que etiquetar, compara los planes superiores de las dos suites.
+- **La suite rara vez decide el cumplimiento por sí sola.** Lo deciden el plan contratado, la configuración y los procedimientos de tu empresa.
+- **Si los requisitos son exigentes**, compara los planes superiores de las dos suites. Es el caso de las retenciones largas, las auditorías frecuentes o los documentos confidenciales que hay que etiquetar.
 - **Si ya trabajas con una**, revisa primero si su plan cubre lo que pide la normativa. Un cambio de suite se justifica por un [motivo de fondo](/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/), no como atajo para cumplir.

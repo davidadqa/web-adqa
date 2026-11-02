@@ -11,46 +11,48 @@ updated: 2026-11-02
 servicio: "/google-workspace/"
 related: ["google-workspace-para-equipos-remotos-e-hibridos", "seguridad-y-cumplimiento", "seguridad-en-microsoft-365"]
 imagen: "Consola de administración de Google Workspace en un portátil, con la verificación en dos pasos activada para toda la organización"
-tldr: "La seguridad de Google Workspace tiene dos partes. De serie, Gmail filtra spam, phishing y malware, los datos viajan y se guardan cifrados y Google mantiene la infraestructura. Lo demás depende de cada empresa: exigir la verificación en dos pasos, gestionar los dispositivos, limitar qué se comparte fuera y revisar con regularidad los permisos y las aplicaciones conectadas."
+tldr: "La seguridad de Google Workspace tiene dos partes. De serie, Gmail filtra spam, phishing y malware. Los datos viajan y se guardan cifrados, y Google mantiene la infraestructura. Lo demás depende de cada empresa. Le toca exigir la verificación en dos pasos, gestionar los dispositivos y limitar qué se comparte fuera. También tiene que revisar con regularidad los permisos y las aplicaciones conectadas."
 faq:
   manager:
     - q: "¿Google Workspace es seguro para una empresa sin departamento de informática propio?"
-      a: "Sí, siempre que alguien configure bien la verificación en dos pasos, los permisos y las políticas de uso compartido. La plataforma da las herramientas, pero activarlas no es automático: conviene que lo haga alguien que conozca la consola de administración."
+      a: "Sí, siempre que alguien configure bien la verificación en dos pasos, los permisos y las políticas de uso compartido. La plataforma da las herramientas, pero no se activan solas. Conviene que lo haga alguien que conozca la consola de administración."
     - q: "¿Se puede retirar la información de la empresa de un móvil extraviado?"
-      a: "Sí. Con la gestión de dispositivos móviles configurada, se puede impedir que ese móvil siga accediendo a los datos de la empresa y borrar a distancia la cuenta corporativa, sin esperar a que la persona lo devuelva."
+      a: "Sí, si tienes configurada la gestión de dispositivos móviles. Desde la consola impides que ese móvil siga accediendo a los datos de la empresa. También puedes borrar a distancia la cuenta corporativa. No hace falta esperar a que la persona lo devuelva."
     - q: "¿Cómo sabemos si nuestra cuenta de Google Workspace está bien configurada?"
-      a: "Con una revisión de la configuración. Los primeros puntos que conviene mirar son la verificación en dos pasos, quién tiene permisos de administrador, las políticas de dispositivos y las aplicaciones conectadas a las cuentas."
+      a: "Con una revisión de la configuración. Lo primero es mirar la verificación en dos pasos y quién tiene permisos de administrador. Después, las políticas de dispositivos y las aplicaciones conectadas a las cuentas."
   tecnico:
     - q: "¿Cómo se obliga a usar la verificación en dos pasos en toda la organización?"
-      a: "Desde la consola de administración, activando la verificación obligatoria por unidad organizativa y dando un periodo de gracia para que cada usuario la configure antes de que se exija."
+      a: "Desde la consola de administración. Se activa la verificación obligatoria por unidad organizativa, es decir, por departamento o grupo de cuentas. Antes de exigirla, se da un periodo de gracia para que cada usuario la configure."
     - q: "¿Se puede limitar con quién se comparten los documentos de Drive?"
-      a: "Sí, con políticas de uso compartido a nivel de organización o de unidad organizativa. Lo habitual es restringir por defecto el uso compartido fuera del dominio y permitirlo como excepción, por ejemplo con dominios de confianza."
+      a: "Sí, con políticas de uso compartido para toda la organización o por unidad organizativa. Lo habitual es restringir por defecto el uso compartido fuera del dominio. Después se permite como excepción, por ejemplo con dominios de confianza."
     - q: "¿Cómo se controla qué aplicaciones externas acceden a Gmail o a Drive?"
-      a: "En la consola, el control de acceso de aplicaciones muestra cuáles han recibido permisos mediante OAuth y a qué datos llegan. Desde ahí se revocan las que ya no se usan y se decide cuáles pueden conectarse en adelante."
+      a: "En la consola está el control de acceso de aplicaciones. Muestra cuáles han recibido permisos mediante OAuth y a qué datos llegan. OAuth es el sistema que da acceso a una aplicación sin entregarle tu contraseña. Desde ahí se revocan las que ya no se usan. También se decide cuáles pueden conectarse en adelante."
 ---
-Google Workspace trae protecciones sólidas de serie. Otra parte de la seguridad se decide en la consola de administración: quién entra, desde qué dispositivos y qué se comparte con quién. Las dos se complementan.
+Google Workspace viene con varias protecciones activadas de serie. Otra parte de la seguridad la decides tú, en la consola de administración. Ahí se fija quién entra, desde qué dispositivos y qué se comparte con quién. Las dos se complementan.
 
-Por eso, más que preguntarse si Google Workspace es seguro, conviene comprobar si está bien configurado para tu empresa.
+Por eso, más que preguntarte si Google Workspace es seguro, comprueba si está bien configurado para tu empresa.
 
 ## Lo que Google Workspace protege desde el primer día
 
-- **Filtrado de spam, phishing y malware.** Gmail aparta la mayor parte del correo malicioso antes de que el usuario lo vea, con un filtrado que Google actualiza de forma continua.
-- **Cifrado en tránsito y en reposo.** Los correos y los archivos viajan cifrados y se guardan cifrados en los centros de datos de Google. Para este nivel no hay que activar nada.
-- **Infraestructura mantenida por Google.** Los centros de datos, las actualizaciones y los parches de la plataforma corren a cargo de Google, no de la empresa.
+- **Filtrado de spam, phishing y malware.** Gmail aparta la mayor parte del correo malicioso antes de que lo veas. El aviso falso de tu banco con un enlace trampa suele quedarse por el camino. Google actualiza ese filtrado de forma continua.
+- **Cifrado en tránsito y en reposo.** Los correos y los archivos viajan cifrados y se guardan cifrados en los centros de datos de Google. Para este nivel no tienes que activar nada.
+- **Infraestructura mantenida por Google.** Google se ocupa de los centros de datos, las actualizaciones y los parches de la plataforma. No le toca a tu empresa.
 
-Esta parte no requiere ninguna acción. La siguiente, sí.
+Esta parte no te pide ninguna acción. La siguiente, sí.
 
 ## Lo que se ajusta desde la consola de administración
 
-- **Verificación en dos pasos obligatoria.** Con ella, una contraseña filtrada ya no basta para entrar en una cuenta. Conviene exigirla a toda la organización, no dejarla a elección de cada persona.
-- **Gestión de dispositivos móviles.** Permite exigir bloqueo de pantalla y cifrado, y borrar los datos de la empresa de un móvil perdido.
-- **Control del uso compartido externo.** Es fácil compartir un documento con «cualquier persona con el enlace» sin pensar en el alcance. Una política de organización puede limitarlo por defecto y dejarlo como excepción.
-- **Revisión de permisos y aplicaciones conectadas.** Las aplicaciones de terceros con acceso al correo o a Drive pueden acumular permisos que nadie revisa después de instalarlas.
-- **Contraseñas y sesiones.** Exigir contraseñas robustas y cerrar las sesiones inactivas acota la exposición si un equipo se pierde o se comparte.
+- **Verificación en dos pasos obligatoria.** Con ella, una contraseña filtrada ya no basta. Si alguien consigue la tuya, le falta el segundo paso y se queda en la puerta. Conviene exigirla a toda la organización, no dejarla a elección de cada persona.
+- **Gestión de dispositivos móviles.** Puedes exigir bloqueo de pantalla y cifrado. Y si alguien se deja el móvil en un taxi, borras a distancia los datos de la empresa.
+- **Control del uso compartido externo.** Es fácil compartir una hoja con «cualquier persona con el enlace» sin pensar en el alcance. Ese enlace se puede reenviar a quien sea. Una política de organización lo limita por defecto y lo deja como excepción.
+- **Revisión de permisos y aplicaciones conectadas.** Las aplicaciones de terceros con acceso al correo o a Drive pueden acumular permisos que nadie revisa después. Por ejemplo, la aplicación de encuestas que alguien conectó un día a su cuenta.
+- **Contraseñas y sesiones.** Exigir contraseñas robustas y cerrar las sesiones inactivas reduce el riesgo. Sobre todo si un equipo se pierde o se comparte.
 
-Estos ajustes pesan todavía más cuando el equipo trabaja fuera de la oficina, como se explica en [Google Workspace para equipos remotos e híbridos](/recursos/google-workspace-para-equipos-remotos-e-hibridos/).
+Estos ajustes pesan todavía más cuando tu equipo trabaja fuera de la oficina. Lo explica [Google Workspace para equipos remotos e híbridos](/recursos/google-workspace-para-equipos-remotos-e-hibridos/).
 
 ## Errores de configuración habituales
+
+Suelen ser descuidos pequeños. Alguien recibió permisos de administrador para un ajuste puntual y todavía los conserva. Estos son los más comunes:
 
 - Dejar la verificación en dos pasos como opcional.
 - Tener más cuentas con permisos de administrador de las necesarias.
@@ -58,7 +60,7 @@ Estos ajustes pesan todavía más cuando el equipo trabaja fuera de la oficina, 
 - Tardar en dar de baja las cuentas de quien deja la empresa.
 - No revisar qué aplicaciones de terceros tienen acceso al correo o a Drive.
 
-Todos se corrigen desde la consola, y apenas cambian la forma de trabajar del equipo.
+Todos se corrigen desde la consola. Y apenas cambian la forma de trabajar de tu equipo.
 
 ## De la configuración inicial a la recomendada
 
@@ -75,6 +77,6 @@ Todos se corrigen desde la consola, y apenas cambian la forma de trabajar del eq
 
 ## Más allá de la suite
 
-La protección de Google Workspace llega hasta el correo y los documentos. Los equipos desde los que se trabaja, la red y las copias de seguridad necesitan su propio plan, dentro de una estrategia de [ciberseguridad](/ciberseguridad/) coherente con el resto de sistemas de la empresa.
+La protección de Google Workspace llega hasta el correo y los documentos. Si abres Gmail desde un portátil sin actualizar, ese portátil queda fuera de su alcance. Los equipos, la red y las copias de seguridad necesitan su propio plan. Ese plan encaja en una estrategia de [ciberseguridad](/ciberseguridad/) coherente con el resto de sistemas de la empresa.
 
-Si hay requisitos normativos concretos, [Seguridad y cumplimiento](/recursos/seguridad-y-cumplimiento/) repasa qué ofrece cada plataforma. Para quien también gestiona Microsoft 365, los ajustes de esa suite están en [Seguridad en Microsoft 365](/recursos/seguridad-en-microsoft-365/).
+Si tienes requisitos normativos concretos, [Seguridad y cumplimiento](/recursos/seguridad-y-cumplimiento/) repasa qué ofrece cada plataforma. Si también gestionas Microsoft 365, los ajustes de esa suite están en [Seguridad en Microsoft 365](/recursos/seguridad-en-microsoft-365/).

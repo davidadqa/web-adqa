@@ -10,22 +10,22 @@ service:
 faq:
   manager:
     - q: "¿Qué incluye el servicio de sistemas y cloud de ADQA?"
-      a: "Incluye el diseño de la arquitectura, el suministro e instalación de servidores físicos y virtuales, las copias de seguridad con pruebas de restauración, las migraciones y el mantenimiento. Los servidores pueden estar en tus instalaciones, en el datacenter propio y de proximidad de ADQA en Barcelona o en un entorno híbrido con el cloud público. Lo lleva el mismo equipo que gestiona tu red y tus telecomunicaciones."
+      a: "Incluye el diseño de la arquitectura y el suministro e instalación de servidores físicos y virtuales. También las copias de seguridad con pruebas de restauración, las migraciones y el mantenimiento. Tus servidores pueden estar en tus instalaciones o en el datacenter propio y de proximidad de ADQA, en Barcelona. O en un entorno híbrido con el cloud público. Lo lleva el mismo equipo que gestiona tu red y tus telecomunicaciones."
     - q: "¿Cuánto cuesta tener los sistemas en manos de ADQA?"
-      a: "Depende de cuántos servidores tienes, de dónde están y del nivel de servicio que necesitas. Por eso no partimos de paquetes cerrados: primero analizamos tu entorno actual y después te proponemos lo que tiene sentido para tu negocio. A veces la mejor propuesta es ajustar lo que ya tienes en lugar de comprar más."
+      a: "Depende de cuántos servidores tienes, de dónde están y del nivel de servicio que necesitas. Por eso no partimos de paquetes cerrados. Primero analizamos tu entorno actual. Después te proponemos lo que tiene sentido para tu negocio. A veces la mejor propuesta es ajustar lo que ya tienes en lugar de comprar más."
     - q: "¿Tengo que llevar mis servidores al cloud?"
-      a: "No necesariamente. Podemos mantener tus servidores en tu propia sala, alojarlos en nuestro datacenter de Barcelona o combinar los dos modelos con servicios de cloud público. La decisión depende de lo críticas que sean tus aplicaciones, de la latencia que necesitan, de tus requisitos normativos y de cómo prevés crecer."
+      a: "No necesariamente. Tus servidores pueden seguir en tu propia sala o alojarse en nuestro datacenter de Barcelona. También se pueden combinar los dos modelos con servicios de cloud público. Depende de lo críticas que sean tus aplicaciones y de la latencia que necesitan. Cuentan también tus requisitos normativos y cómo prevés crecer."
     - q: "¿Cuándo conviene renovar los servidores?"
-      a: "Habitualmente, cuando el equipo se queda sin garantía o sin soporte del fabricante, cuando ya no cabe la carga de trabajo o cuando el sistema operativo deja de recibir actualizaciones. Lo decidimos con datos de uso reales y dejando margen para crecer, para no pagar por una capacidad que no vas a usar."
+      a: "Suele tocar en alguno de estos casos. Cuando el equipo se queda sin garantía o sin soporte del fabricante. Cuando ya no cabe la carga de trabajo. O cuando el sistema operativo deja de recibir actualizaciones. Lo decidimos con datos de uso reales y dejando margen para crecer. Así no pagas por una capacidad que no vas a usar."
   tecnico:
     - q: "¿Cómo decidís entre servidores locales, cloud o arquitectura híbrida?"
-      a: "Partimos del análisis del entorno: criticidad de cada sistema, latencia necesaria, integración con maquinaria o aplicaciones específicas, requisitos normativos y evolución prevista. Con eso decidimos qué se queda en local, qué va al datacenter de ADQA y qué encaja mejor en el cloud público. No hay una respuesta que sirva para todos, y muchas empresas acaban combinando dos o tres de estas opciones."
+      a: "Partimos del análisis de tu entorno. Miramos lo crítico que es cada sistema y la latencia que necesita. También si se integra con maquinaria o aplicaciones específicas, qué normativa aplica y cómo prevés crecer. Con eso decidimos qué se queda en local, qué va al datacenter de ADQA y qué al cloud público. No hay una respuesta que sirva para todos. Muchas empresas acaban combinando dos o tres de estas opciones."
     - q: "¿Cómo se migra un entorno a servidores virtuales con las mínimas paradas?"
-      a: "Se documentan antes las dependencias entre servidores, aplicaciones y usuarios. Después se prepara el nuevo entorno, se replican los datos y se prueba en paralelo mientras el sistema actual sigue funcionando. El cambio definitivo se hace en una ventana acordada, con un plan de vuelta atrás. Así las paradas se reducen al mínimo y se pueden planificar."
+      a: "Primero se documentan las dependencias entre servidores, aplicaciones y usuarios. Después se prepara el nuevo entorno y se replican los datos. Se prueba en paralelo mientras el sistema actual sigue funcionando. El cambio definitivo se hace en una ventana acordada, con un plan de vuelta atrás. Así las paradas se reducen al mínimo y se pueden planificar."
     - q: "¿Cómo diseñáis y probáis las copias de seguridad?"
-      a: "Seguimos la regla 3-2-1: tres copias de los datos, en dos soportes distintos y una de ellas fuera de tus instalaciones. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema, y las copias se prueban restaurando datos de forma periódica."
+      a: "Seguimos la regla 3-2-1. Son tres copias de los datos, en dos soportes distintos, y una de ellas fuera de tus instalaciones. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica."
     - q: "¿Qué es el edge computing y cuándo tiene sentido?"
-      a: "Es procesar los datos cerca de donde se generan, por ejemplo en una planta de producción o en una tienda, en lugar de enviarlos todos a un servidor central. Tiene sentido cuando una máquina o una aplicación necesita respuesta inmediata o cuando la conexión con la sede no puede ser un punto de parada. Lo habitual es combinarlo con el datacenter, que consolida los datos y guarda las copias."
+      a: "Es procesar los datos cerca de donde se generan, en lugar de enviarlos todos a un servidor central. Por ejemplo, en una planta de producción o en una tienda. Tiene sentido cuando una máquina o una aplicación necesita respuesta inmediata. También cuando la conexión con la sede no puede ser un punto de parada. Lo habitual es combinarlo con el datacenter, que consolida los datos y guarda las copias."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
@@ -59,7 +59,7 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-resumen" class="sr">¿Qué hace ADQA en sistemas y cloud?</h2>
-      <p class="tldr"><strong>ADQA diseña, instala y mantiene los servidores físicos y virtuales de empresas e instituciones de Barcelona y de toda España.</strong> Los servidores pueden estar en las instalaciones del cliente, en el datacenter propio y de proximidad que ADQA tiene en Barcelona o en entornos híbridos con el cloud público. Incluye copias de seguridad con pruebas de restauración, migraciones planificadas y mantenimiento, con el mismo equipo que lleva la red y las telecomunicaciones.</p>
+      <p class="tldr"><strong>ADQA diseña, instala y mantiene los servidores físicos y virtuales de empresas e instituciones de Barcelona y de toda España.</strong> Los servidores pueden estar en el datacenter propio y de proximidad que ADQA tiene en Barcelona. También en las instalaciones del cliente o en entornos híbridos con el cloud público. Incluye copias de seguridad con pruebas de restauración, migraciones planificadas y mantenimiento. Lo lleva el mismo equipo que gestiona la red y las telecomunicaciones.</p>
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en tecnología para empresas e instituciones</span></div>
@@ -76,12 +76,12 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Lo que cambia en tu día a día</span>
       <h2 id="h-pos">Sistemas que no se notan, porque funcionan</h2>
-      <p class="lead">Unos sistemas bien planteados pasan desapercibidos: las aplicaciones responden, los datos están localizados y crecer no obliga a empezar de cero.</p>
+      <p class="lead">Unos sistemas bien planteados pasan desapercibidos. Las aplicaciones responden y los datos están localizados. Y crecer no obliga a empezar de cero.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-server"/></svg></span><h3>Un fallo no tiene por qué parar la empresa</h3><p>Diseñamos los sistemas críticos con alta disponibilidad, según lo que te cuesta de verdad una parada. Si cae un componente, otro puede tomar el relevo.</p></div>
-      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-clock"/></svg></span><h3>Copias que sabes que funcionan</h3><p>Restauramos las copias de forma periódica para comprobar que tus datos vuelven como estaban, y en cuánto tiempo.</p></div>
-      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Creces sin rehacerlo todo</h3><p>Dimensionamos a tu carga real y dejamos margen. Cuando necesitas más, se amplía lo que ya tienes en lugar de cambiarlo.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-server"/></svg></span><h3>Un fallo no tiene por qué parar la empresa</h3><p>Diseñamos los sistemas críticos con alta disponibilidad, según lo que te cuesta de verdad una parada. Si a media tarde falla una pieza del servidor, otra toma el relevo mientras tu equipo sigue facturando.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-clock"/></svg></span><h3>Copias que sabes que funcionan</h3><p>Restauramos las copias de forma periódica. Comprobamos que tus datos vuelven como estaban, y en cuánto tiempo. Si alguien borra sin querer la carpeta de un cliente, ya sabes que se puede recuperar.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Creces sin rehacerlo todo</h3><p>Calculamos la capacidad con tu carga real y dejamos margen. Cuando necesitas más, se amplía lo que ya tienes en lugar de cambiarlo.</p></div>
       <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-cloud"/></svg></span><h3>El cloud, bajo control</h3><p>Sabes qué tienes en la nube, por qué está ahí y cuánto cuesta. Antes de mover nada, decidimos contigo qué conviene subir y qué no.</p></div>
     </div>
   </div>
@@ -99,7 +99,7 @@ faq:
       <div class="cmp opt rv">
         <h3><span class="ico"><svg><use href="#i-grid"/></svg></span>En tus instalaciones</h3>
         <ul>
-          <li><svg><use href="#i-check"/></svg><span>Instalamos y mantenemos tus servidores físicos y virtuales en tu sala o en tu CPD.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Instalamos y mantenemos tus servidores físicos y virtuales. Van en tu sala o en tu centro de proceso de datos (CPD).</span></li>
           <li><svg><use href="#i-check"/></svg><span>Suministramos servidores Lenovo y HP, sistemas de alimentación ininterrumpida Salicru, almacenamiento NAS y licencias.</span></li>
           <li><svg><use href="#i-check"/></svg><span>Tiene sentido cuando una máquina de producción necesita el servidor a su lado.</span></li>
           <li><svg><use href="#i-check"/></svg><span>Mantenimiento preventivo, asistencia remota y reparaciones in situ.</span></li>
@@ -108,7 +108,7 @@ faq:
       <div class="cmp good rv" style="--s:1">
         <h3><span class="ico"><svg><use href="#i-server"/></svg></span>En nuestro datacenter</h3>
         <ul>
-          <li><svg><use href="#i-check"/></svg><span>Tus equipos alojados (housing) o servidores virtuales dimensionados para ti.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Tus equipos alojados (housing) o servidores virtuales con la capacidad que necesitas.</span></li>
           <li><svg><use href="#i-check"/></svg><span>Una sala preparada: refrigeración, alimentación redundante y control de acceso.</span></li>
           <li><svg><use href="#i-check"/></svg><span>Unido a tu oficina por un enlace privado de Anxanet que no sale a Internet.</span></li>
           <li><svg><use href="#i-check"/></svg><span><a class="txt-link" href="/sistemas-cloud/datacenter/">Cómo funciona el datacenter de <span class="nw">proximidad<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></span></li>
@@ -132,7 +132,7 @@ faq:
       <article class="st" style="--n:0">
         <span class="num">01 · ANÁLISIS</span>
         <h3>Qué tienes y qué necesitas</h3>
-        <p>Inventariamos servidores, aplicaciones y copias. Vemos qué sistemas son críticos, qué latencia necesitan, qué normativa aplica y cómo prevés crecer.</p>
+        <p>Inventariamos servidores, aplicaciones y copias. Vemos qué sistemas son críticos, qué latencia necesitan, qué normativa aplica y cómo prevés crecer. Te preguntamos, por ejemplo, qué pasa si el programa de pedidos se queda parado medio día.</p>
       </article>
       <article class="st" style="--n:1">
         <span class="num">02 · ARQUITECTURA</span>
@@ -154,7 +154,7 @@ faq:
       <article class="st" style="--n:4">
         <span class="num">05 · MANTENIMIENTO</span>
         <h3>Problemas detectados antes de que se noten</h3>
-        <p>Supervisamos disponibilidad, rendimiento, espacio y copias. Las incidencias y las actuaciones quedan registradas en nuestra extranet de ticketing, donde las sigues en tiempo real.</p>
+        <p>Supervisamos disponibilidad, rendimiento, espacio y copias. Si un disco se va llenando, lo vemos antes de que alguien no pueda guardar un archivo. Las incidencias y las actuaciones quedan registradas en nuestra extranet de ticketing. Ahí las sigues en tiempo real.</p>
       </article>
     </div>
   </div>
@@ -166,8 +166,8 @@ faq:
     <div class="txt rv">
       <span class="eyebrow">Servidores virtuales</span>
       <h2 id="h-vm">¿Qué es un servidor virtual y por qué es más flexible?</h2>
-      <p>Un servidor virtual es un servidor completo, con su sistema operativo y sus aplicaciones, que no ocupa una máquina física para él solo. Funciona sobre un <strong>hipervisor</strong>: el software que reparte el procesador, la memoria y el almacenamiento de un equipo físico entre varias máquinas virtuales aisladas entre sí.</p>
-      <p>Esa separación del hardware es lo que lo hace flexible. Los recursos se amplían sin comprar otra máquina, y el servidor se copia o se traslada de un equipo a otro sin reinstalarlo.</p>
+      <p>Un servidor virtual es un servidor completo, con su sistema operativo y sus aplicaciones. Pero no ocupa una máquina física para él solo. Funciona sobre un <strong>hipervisor</strong>, el software que reparte un equipo físico entre varias máquinas virtuales. Les asigna procesador, memoria y almacenamiento, y cada una queda aislada de las demás.</p>
+      <p>Esa separación del hardware es lo que lo hace flexible. Los recursos se amplían sin comprar otra máquina. Si necesitas un servidor más para el nuevo programa de nóminas, se crea en el mismo equipo físico. Además, el servidor se copia o se traslada de un equipo a otro sin reinstalarlo.</p>
       <p>Los montamos en tu sala o en nuestro datacenter, y los hacemos crecer contigo.</p>
     </div>
     <div class="cmp good rv" style="--s:1">
@@ -189,8 +189,8 @@ faq:
     <div class="txt rv">
       <span class="eyebrow">Copias de seguridad y continuidad</span>
       <h2 id="h-bk">¿Cómo sabes que tus copias de seguridad funcionan?</h2>
-      <p>Porque se han restaurado. Que la copia termine cada noche sin errores dice poco. Lo que importa es recuperar los datos, y en cuánto tiempo.</p>
-      <p>Por eso definimos dos cosas para cada sistema: cuántos datos te puedes permitir perder, el <strong>RPO</strong>, y cuánto puedes estar sin él, el <strong>RTO</strong>. Con eso decidimos la frecuencia de copia, dónde se guarda y cómo se recupera.</p>
+      <p>Porque se han restaurado. El aviso de «copia completada» de cada mañana dice poco. Lo que importa es recuperar los datos, y en cuánto tiempo.</p>
+      <p>Por eso definimos dos cosas para cada sistema. Una es cuántos datos te puedes permitir perder: el <strong>RPO</strong>. La otra, cuánto tiempo puedes estar sin ese sistema: el <strong>RTO</strong>. Con eso decidimos la frecuencia de copia, dónde se guarda y cómo se recupera.</p>
       <p>Trabajamos con <strong>Veeam</strong> para servidores y máquinas virtuales, y con <strong>Hornetsecurity</strong> para las copias de <a class="txt-link" href="/microsoft-365/">Microsoft 365</a>. Las copias forman parte de tu <a class="txt-link" href="/ciberseguridad/">ciberseguridad</a>: son lo que te permite volver a trabajar tras un incidente.</p>
       <p><a class="txt-link" href="/recursos/backup-y-continuidad-de-negocio/">Backup y continuidad de negocio: qué <span class="nw">preguntar<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
     </div>
@@ -210,12 +210,12 @@ faq:
       <span class="eyebrow">Migraciones</span>
       <h2 id="h-mig">¿Cómo se migran los servidores con las mínimas paradas?</h2>
       <p>Migrar a servidores virtuales, renovar el hardware o trasladar sistemas al datacenter tiene la misma clave: la preparación. Cuanto mejor se conoce lo que hay, más corto y controlado es el momento del cambio.</p>
-      <p>Planificamos la migración para minimizar paradas. Las fases son estas, y el calendario concreto lo acordamos contigo según tus aplicaciones, tus horarios y tus sedes.</p>
+      <p>Planificamos la migración para minimizar paradas. Mientras unos cuantos usuarios prueban el entorno nuevo, el resto sigue trabajando en el de siempre. Las fases son estas. El calendario concreto lo acordamos contigo según tus aplicaciones, tus horarios y tus sedes.</p>
       <p><a class="txt-link" href="/recursos/migrar-servidores-sin-parar-la-produccion/">Migrar servidores sin parar la <span class="nw">producción<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
     </div>
     <ol class="steps rv" style="--s:1">
       <li><b>Inventario y dependencias</b><p>Documentamos servidores, aplicaciones, quién las usa y qué depende de qué, antes de mover nada.</p></li>
-      <li><b>Preparación del nuevo entorno</b><p>Creamos y dimensionamos los servidores de destino y replicamos los datos mientras el sistema actual sigue funcionando.</p></li>
+      <li><b>Preparación del nuevo entorno</b><p>Creamos los servidores de destino con la capacidad que necesitan. Replicamos los datos mientras el sistema actual sigue funcionando.</p></li>
       <li><b>Pruebas en paralelo</b><p>Validamos las aplicaciones en el nuevo entorno con usuarios reales, sin afectar al trabajo diario.</p></li>
       <li><b>Cambio planificado</b><p>El paso definitivo se hace en una ventana acordada, con un plan de vuelta atrás preparado.</p></li>
       <li><b>Seguimiento</b><p>Revisamos el rendimiento tras el cambio y retiramos el entorno antiguo cuando todo está validado.</p></li>
@@ -235,8 +235,8 @@ faq:
       <div class="cmp good rv">
         <h3><span class="ico"><svg><use href="#i-cloud"/></svg></span>Entornos híbridos</h3>
         <ul>
-          <li><svg><use href="#i-check"/></svg><span>Integramos tus servidores locales con nuestro datacenter y con servicios de cloud público como Microsoft 365, Google Workspace o Azure.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Usuarios, permisos y accesos coherentes en todas partes, para que nadie tenga que saber dónde vive cada aplicación.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Integramos tus servidores locales con nuestro datacenter y con el cloud público. Por ejemplo, Microsoft 365, Google Workspace o Azure.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Usuarios, permisos y accesos coherentes en todas partes. Con el mismo usuario, tu equipo entra al correo y al programa de gestión. Nadie tiene que saber dónde vive cada aplicación.</span></li>
           <li><svg><use href="#i-check"/></svg><span>Los sistemas críticos y estables, cerca y controlados; lo que necesita crecer a picos, en la nube.</span></li>
         </ul>
       </div>
@@ -258,7 +258,7 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Servicios de sistemas y cloud</span>
       <h2 id="h-serv">¿Qué incluye nuestro servicio de sistemas y cloud?</h2>
-      <p class="lead">Del servidor de tu oficina al cloud en nuestro datacenter, con el diseño, el suministro, la migración, las copias y el mantenimiento en las mismas manos.</p>
+      <p class="lead">Del servidor de tu oficina al cloud en nuestro datacenter. Diseño, suministro, migración, copias y mantenimiento, en las mismas manos.</p>
     </div>
     <div class="services">
       <a class="card svc rv" href="#metodo" style="--s:0">
@@ -306,13 +306,13 @@ faq:
       <div class="card svc wide rv" style="--s:0">
         <span class="ico"><svg><use href="#i-box"/></svg></span>
         <h3>Suministro de servidores, SAI y almacenamiento</h3>
-        <p>Con más de 30 años en la cadena de suministro tecnológico, te proponemos el equipo adecuado: servidores Lenovo y HP, SAI Salicru, NAS y licencias de software.</p>
+        <p>Llevamos más de 30 años en la cadena de suministro tecnológico. Te proponemos el equipo adecuado. En servidores, Lenovo y HP; en SAI, Salicru. También NAS para el almacenamiento y licencias de software.</p>
         <ul class="tags"><li>Lenovo</li><li>HP</li><li>Salicru</li><li>Licencias</li></ul>
       </div>
       <a class="card svc wide rv" href="/soporte-it/" style="--s:1">
         <span class="ico"><svg><use href="#i-tool"/></svg></span>
         <h3>Monitorización y mantenimiento</h3>
-        <p>Supervisamos tus sistemas para detectar problemas antes de que afecten al trabajo, con mantenimiento preventivo, asistencia remota y reparaciones in situ.</p>
+        <p>Supervisamos tus sistemas para detectar problemas antes de que afecten al trabajo. Hacemos mantenimiento preventivo, asistencia remota y reparaciones in situ.</p>
         <ul class="tags"><li>Preventivo</li><li>Remoto</li><li>In situ</li><li>Extranet</li></ul>
         <span class="more">Soporte IT <svg><use href="#i-arrow"/></svg></span>
       </a>
@@ -333,10 +333,10 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Para quién</span>
       <h2 id="h-aud">¿Para quién es este servicio?</h2>
-      <p class="lead">Para empresas e instituciones cuyas aplicaciones sostienen el trabajo de cada día, tengan o no equipo técnico propio.</p>
+      <p class="lead">Para empresas e instituciones cuyo trabajo diario depende de sus aplicaciones. Con equipo técnico propio o sin él.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Industria con producción continua</h3><p>Plantas donde un servidor parado es una línea parada, y donde algunos sistemas tienen que estar junto a las máquinas.</p></div>
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Industria con producción continua</h3><p>Plantas donde un servidor parado es una línea parada. Algunos sistemas tienen que estar junto a las máquinas.</p></div>
       <div class="card rv" style="--s:1"><span class="n">02</span><h3>Empresas multisede</h3><p>Oficinas, fábricas y tiendas que trabajan con los mismos sistemas, con la conectividad en manos del mismo equipo.</p></div>
       <div class="card rv" style="--s:2"><span class="n">03</span><h3>Organizaciones con datos sensibles</h3><p>Requisitos normativos o servicio a la administración pública: los datos tienen que estar localizados y los accesos, bajo control.</p></div>
       <div class="card rv" style="--s:3"><span class="n">04</span><h3>Departamentos de informática que quieren delegar</h3><p>Departamentos técnicos que prefieren centrarse en sus aplicaciones y confiar servidores, copias y alojamiento a otro equipo.</p></div>
@@ -350,12 +350,12 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Casos de éxito</span>
       <h2 id="h-proj">Sistemas y cloud que ya funcionan</h2>
-      <p class="lead">Empresas que confían sus servidores y sus aplicaciones al mismo equipo que lleva su red y sus telecomunicaciones.</p>
+      <p class="lead">Servidores y aplicaciones en manos del mismo equipo que lleva la red y las telecomunicaciones de cada empresa.</p>
     </div>
     <div class="proj-grid">
-      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy" width="800" height="437"></figure><div class="body"><span class="kind">Software a medida · Cloud · Networking</span><h3>HITECSA</h3><p>Desde hace años nos confía la gestión integral de su infraestructura informática, de telecomunicaciones y de cloud. Alojamos sus aplicaciones corporativas en nuestro cloud y desarrollamos sus programas de gestión a medida.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Infraestructura y cloud en las mismas manos</div></div></article>
-      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Instalaciones · Cloud · Ciberseguridad</span><h3>PIMEC</h3><p>Creación de un nuevo CPD junto con las reformas de su sede, alojamiento cloud de aplicaciones corporativas y suministro continuado de servidores, microinformática, networking y software.</p><div class="hl"><svg><use href="#i-grid"/></svg>Nuevo CPD e interconexión de sedes</div></div></article>
-      <article class="proj rv" style="--s:2"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom · Cloud</span><h3>Granier</h3><p>Alojamiento cloud de diferentes aplicaciones corporativas, junto con la informática y las telecomunicaciones de la nueva sede central y las redes de oficinas, fábricas y tiendas.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Cloud para aplicaciones corporativas</div></div></article>
+      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy" width="800" height="437"></figure><div class="body"><span class="kind">Software a medida · Cloud · Networking</span><h3>HITECSA</h3><p>Desde hace años nos confía la gestión de toda su infraestructura informática, de telecomunicaciones y de cloud. Alojamos sus aplicaciones corporativas en nuestro cloud y desarrollamos sus programas de gestión a medida.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Infraestructura y cloud en las mismas manos</div></div></article>
+      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Instalaciones · Cloud · Ciberseguridad</span><h3>PIMEC</h3><p>Creación de un nuevo CPD junto con las reformas de su sede. Alojamiento cloud de aplicaciones corporativas. Suministro continuado de servidores, microinformática, networking y software.</p><div class="hl"><svg><use href="#i-grid"/></svg>Nuevo CPD e interconexión de sedes</div></div></article>
+      <article class="proj rv" style="--s:2"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom · Cloud</span><h3>Granier</h3><p>Alojamiento cloud de diferentes aplicaciones corporativas. Además, la informática y las telecomunicaciones de la nueva sede central, y las redes de oficinas, fábricas y tiendas.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Cloud para aplicaciones corporativas</div></div></article>
     </div>
 
     <h3 class="sub-head rv">Más casos, con resultados medibles</h3>
@@ -364,21 +364,21 @@ faq:
         "Una planta de producción continua que recupera sus sistemas en una hora",
         "Industria · Arquitectura híbrida",
         "Una empresa industrial con producción continua tenía el servidor principal al límite de capacidad. Por latencia y control sobre los sistemas de producción, no podía llevarlo todo al cloud público.",
-        "Arquitectura híbrida: servidor local virtualizado con alta disponibilidad, réplica automática en nuestro datacenter de proximidad y copias con pruebas periódicas de restauración. Con capacidad de crecimiento planificada.",
+        "Arquitectura híbrida. Servidor local virtualizado con alta disponibilidad y réplica automática en nuestro datacenter de proximidad. Copias con pruebas periódicas de restauración y capacidad de crecimiento planificada.",
         ["Tiempo de recuperación de 8 h a 60 min"], {n: "60 min", l: "de tiempo de recuperación, antes 8 h", i: 0}
       ) }}</div>
       <div class="rv" style="--s:1">{{ m.anonCase(
         "Tres sedes que ahora trabajan igual de bien",
         "Servicios · Multisede",
         "Una empresa de servicios tenía un servidor en cada sede, sin una estrategia común. Las copias no se verificaban y el acceso remoto era lento.",
-        "Centralización en un entorno virtualizado, cloud híbrido con los servicios críticos replicados, recuperación ante desastres probada e integración con la segmentación de red y la ciberseguridad.",
+        "Centralización en un entorno virtualizado y cloud híbrido con los servicios críticos replicados. Recuperación ante desastres probada e integración con la segmentación de red y la ciberseguridad.",
         ["0 puntos de fallo único", "Acceso unificado desde las tres sedes"], {n: "0", l: "puntos de fallo único", i: 0}
       ) }}</div>
       <div class="rv" style="--s:2">{{ m.anonCase(
         "Servidores renovados a la medida de la carga real",
         "Industria · Renovación de servidores",
         "Un fabricante de maquinaria multinacional tenía los servidores al final de su vida útil. Necesitaba más capacidad de cómputo y de almacenamiento, ajustada a su volumen de trabajo real.",
-        "Analizamos la carga real y las previsiones de crecimiento. Tres servidores configurados según su función, almacenamiento con ampliación prevista, migración planificada de las máquinas virtuales, copias con Veeam y red interna a 20 Gbps por servidor.",
+        "Analizamos la carga real y las previsiones de crecimiento. Tres servidores configurados según su función. Almacenamiento con ampliación prevista. Migración planificada de las máquinas virtuales. Copias con Veeam y red interna a 20 Gbps por servidor.",
         ["Más de un 25% de ahorro frente a la propuesta previa", "Año y medio después, el cliente sigue satisfecho"], {n: "+25%", l: "de ahorro frente a la propuesta previa", i: 0}
       ) }}</div>
     </div>
@@ -406,6 +406,6 @@ faq:
   </div>
 </section>
 
-{{ m.contactBlock(title="¿Dónde están hoy tus servidores?", text="Cuéntanos qué servidores tienes, qué aplicaciones dependen de ellos y qué te preocupa: una renovación, unas copias que nadie ha probado o un cloud que ha crecido sin orden. Lo estudiamos con calma y te damos la respuesta ADQAda: qué haríamos, cómo y por qué.", area="Sistemas y cloud") }}
+{{ m.contactBlock(title="¿Dónde están hoy tus servidores?", text="Cuéntanos qué servidores tienes, qué aplicaciones dependen de ellos y qué te preocupa. Quizá una renovación, unas copias que nadie ha probado o un cloud que ha crecido sin orden. Lo estudiamos con calma y te damos la respuesta ADQAda: qué haríamos, cómo y por qué.", area="Sistemas y cloud") }}
 
 {% endblock %}

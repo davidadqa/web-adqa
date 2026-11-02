@@ -11,22 +11,22 @@ service:
 faq:
   manager:
     - q: "¿Qué diferencia hay entre networking e instalar una red?"
-      a: "La instalación es la parte física: el cableado, la fibra, los armarios y los puntos de acceso WiFi. El networking es la parte lógica que va encima: cómo se separa el tráfico, por dónde circula, qué tiene prioridad, cómo se conectan las sedes y qué ocurre si un equipo o un enlace falla. ADQA hace las dos cosas con su propio equipo, así que el diseño lógico y la instalación encajan desde el principio."
+      a: "La instalación es la parte física: el cableado, la fibra, los armarios y los puntos de acceso WiFi. El networking es la parte lógica que va encima. Define cómo se separa el tráfico, por dónde circula y qué tiene prioridad. También cómo se conectan tus sedes y qué ocurre si un equipo o un enlace falla. ADQA hace las dos cosas con su propio equipo. Así el diseño lógico y la instalación encajan desde el principio."
     - q: "¿Cuánto tarda un proyecto de networking?"
-      a: "Depende del número de sedes, de equipos y de cambios. Habitualmente, el rediseño de la red de una empresa mediana se completa en dos a cuatro semanas, con las intervenciones críticas planificadas fuera de horario para no afectar a la actividad. Después del análisis inicial, ADQA entrega un calendario orientativo."
+      a: "Depende del número de sedes, de equipos y de cambios. En una empresa mediana, el rediseño de la red suele completarse en dos a cuatro semanas. Las intervenciones críticas se planifican fuera de horario, para no afectar a tu actividad. Después del análisis inicial, ADQA te entrega un calendario orientativo."
     - q: "¿Puedo reutilizar los equipos de red que ya tengo?"
-      a: "Muchas veces, sí: se puede aprovechar buena parte de la electrónica instalada. Otras veces hay limitaciones técnicas, como switches sin soporte de VLAN, routers con poca capacidad o firmware sin actualizaciones, que hacen más sensato sustituirlos. ADQA lo revisa equipo por equipo antes de proponer ninguna compra."
+      a: "Muchas veces, sí: se puede aprovechar buena parte de la electrónica que ya tienes. Otras veces hay limitaciones técnicas que hacen más sensato sustituirla. Por ejemplo, switches sin soporte de VLAN, routers con poca capacidad o firmware sin actualizaciones. ADQA lo revisa equipo por equipo antes de proponerte ninguna compra."
     - q: "¿Por qué conviene que el mismo equipo lleve la red, los sistemas y las telecomunicaciones?"
-      a: "Porque las incidencias no entienden de fronteras. Si un problema de red afecta a un servidor o a la telefonía, el mismo equipo diagnostica las dos cosas sin esperar a que otro proveedor confirme de quién es. Y como ADQA es también operador de telecomunicaciones a través de Anxanet, la conexión entre sedes entra en el mismo diseño."
+      a: "Porque las incidencias no entienden de fronteras. Un problema de red puede afectar a un servidor o a la telefonía. Cuando pasa, el mismo equipo diagnostica las dos cosas. No espera a que otro proveedor confirme de quién es. ADQA es además operador de telecomunicaciones a través de Anxanet. Por eso la conexión entre tus sedes entra en el mismo diseño."
   tecnico:
     - q: "¿Con qué fabricantes de networking trabajáis?"
-      a: "ADQA trabaja con MikroTik, Huawei y Aruba en switching y routing, y en WiFi con Ruckus, su marca representada. La elección del fabricante va siempre después del diseño de la arquitectura, según el entorno, la gestión que se necesita y el equipamiento que ya tiene el cliente."
+      a: "En switching y routing, ADQA trabaja con MikroTik, Huawei y Aruba. En WiFi, con Ruckus, su marca representada. El fabricante se elige siempre después de diseñar la arquitectura. Depende del entorno, de la gestión que necesitas y del equipamiento que ya tienes."
     - q: "¿VPN IPsec o SD-WAN para unir sedes?"
-      a: "Una VPN site-to-site con IPsec crea túneles cifrados fijos entre sedes y encaja bien con pocas ubicaciones y tráfico previsible. SD-WAN gestiona por software varias conexiones a la vez, prioriza las aplicaciones críticas y cambia de camino si un enlace falla, lo que compensa con más sedes o con requisitos altos de disponibilidad. La elección depende del ancho de banda, la latencia y la disponibilidad que necesita cada sede."
+      a: "Una VPN site-to-site con IPsec crea túneles cifrados fijos entre sedes. Encaja bien con pocas ubicaciones y tráfico previsible. SD-WAN gestiona por software varias conexiones a la vez y da prioridad a las aplicaciones críticas. Si un enlace falla, cambia de camino. Compensa con más sedes o con requisitos altos de disponibilidad. La elección depende del ancho de banda, la latencia y la disponibilidad que necesita cada sede."
     - q: "¿Qué es la QoS y cuándo hace falta?"
-      a: "La calidad de servicio (QoS) son las reglas que dicen a switches y routers qué tráfico pasa primero cuando la red va cargada. Hace falta cuando por la misma red circulan telefonía IP, aplicaciones de gestión, videovigilancia y navegación: sin prioridades, una descarga puede cortar una llamada. Se configura en cada equipo de forma coherente con la segmentación."
+      a: "La calidad de servicio (QoS) son las reglas que dicen a switches y routers qué tráfico pasa primero. Entran en juego cuando la red va cargada. Hace falta si por tu red circulan a la vez telefonía IP, aplicaciones de gestión, videovigilancia y navegación. Sin prioridades, una descarga puede cortar una llamada. Se configura en cada equipo, de forma coherente con la segmentación."
     - q: "¿Cómo se integra la red con la ciberseguridad?"
-      a: "La segmentación y las reglas del firewall se diseñan a la vez, para que cada segmento solo hable con los que necesita. Sobre esa base se integran el firewall con inspección profunda de paquetes, los sistemas de detección y prevención de intrusiones, el control de acceso a la red y el acceso remoto con SASE o VPN. ADQA lo plantea en el mismo proyecto que la red."
+      a: "La segmentación y las reglas del firewall se diseñan a la vez. Así cada segmento solo habla con los que necesita. Sobre esa base se suman varias capas. Una es el firewall con inspección profunda de paquetes. Otra, los sistemas de detección y prevención de intrusiones. La protección se completa con el control de acceso a la red y el acceso remoto con SASE o VPN. ADQA lo plantea en el mismo proyecto que la red."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
@@ -44,7 +44,7 @@ faq:
   <div class="wrap hero-inner">
     <span class="eyebrow fade-in" style="--d:.05s">Networking · Diseño y administración de redes</span>
     <h1 id="h-hero" data-words>Networking empresarial, con la arquitectura definida <span class="accent">antes de tocar ningún equipo</span></h1>
-    <p class="lead fade-in" style="--d:.8s">Diseñamos, configuramos y administramos la red de tu empresa: cómo se separa el tráfico, por dónde circula, qué pasa primero y qué ocurre si algo falla. Primero el plano, documentado. Después, los equipos.</p>
+    <p class="lead fade-in" style="--d:.8s">Diseñamos, configuramos y administramos la red de tu empresa. Decidimos cómo se separa el tráfico, por dónde circula y qué pasa primero. Y qué ocurre si algo falla. Primero el plano, documentado. Después, los equipos.</p>
     <div class="hero-ctas fade-in" style="--d:.95s">
       <a class="btn btn-primary" href="#contacto">Explícanos tu red <svg><use href="#i-arrow"/></svg></a>
       <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
@@ -65,7 +65,7 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-sum" class="sr">¿Qué hace ADQA en networking empresarial?</h2>
-      <p class="tldr"><strong>ADQA diseña, configura y administra redes corporativas para empresas e instituciones de Barcelona y de toda España.</strong> Define la arquitectura antes de instalar ningún equipo: segmentación, enrutamiento, prioridades de tráfico, conexión entre sedes y redundancia. Trabaja con MikroTik, Huawei y Aruba, entrega la documentación al cliente y gestiona la red junto con las telecomunicaciones, los sistemas y la ciberseguridad.</p>
+      <p class="tldr"><strong>ADQA diseña, configura y administra redes corporativas para empresas e instituciones de Barcelona y de toda España.</strong> Define la arquitectura antes de instalar ningún equipo. Eso incluye la segmentación, el enrutamiento y las prioridades de tráfico. También la conexión entre sedes y la redundancia. Trabaja con MikroTik, Huawei y Aruba y entrega la documentación al cliente. Gestiona la red junto con las telecomunicaciones, los sistemas y la ciberseguridad.</p>
     </div>
     <div class="cmp good rv" style="--s:1">
       <h3>Lo que te entregamos</h3>
@@ -85,13 +85,13 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Lo que cambia en tu día a día</span>
       <h2 id="h-pos">¿Qué cambia con una red bien planteada?</h2>
-      <p class="lead">Las redes que crecen a base de añadidos acaban siendo difíciles de entender. Cuando se diseñan, el día a día se nota así.</p>
+      <p class="lead">Las redes que crecen a base de añadidos acaban siendo difíciles de entender. Un switch bajo una mesa para sumar puestos. Otro en la sala de reuniones. Y un cable que nadie sabe adónde va. Cuando tu red se diseña, el día a día cambia así.</p>
     </div>
     <div class="aud">
-      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Incidencias que se localizan</h3><p>Con la arquitectura documentada y los equipos monitorizados, un corte intermitente deja de ser un misterio: se ve dónde está y se ataca la causa.</p></div>
-      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3>Lo importante pasa primero</h3><p>La telefonía y las aplicaciones de gestión tienen prioridad sobre la navegación o las cámaras, también a la hora de más trabajo.</p></div>
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Incidencias que se localizan</h3><p>La arquitectura está documentada y los equipos, monitorizados. Un corte intermitente deja de ser un misterio: se ve dónde está y se ataca la causa.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3>Lo importante pasa primero</h3><p>La telefonía y las aplicaciones de gestión van por delante de la navegación o las cámaras. También cuando tu red va más cargada.</p></div>
       <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Cada cosa en su segmento</h3><p>Equipos de oficina, servidores, cámaras e invitados en redes separadas. Si algo falla en una, el resto sigue trabajando.</p></div>
-      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Una red preparada para crecer</h3><p>Una sede nueva, más gente en remoto o una migración al cloud se suman al diseño sin rehacerlo desde cero.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Una red preparada para crecer</h3><p>Una sede nueva, más gente en remoto o una migración al cloud. Todo se suma al diseño sin rehacerlo desde cero.</p></div>
     </div>
   </div>
 </section>
@@ -115,13 +115,13 @@ faq:
       <article class="st" style="--n:1">
         <span class="num">02 · ACCESO REMOTO</span>
         <h3>SASE o VPN, según lo que pide cada perfil</h3>
-        <p>Quien trabaja fuera entra por el camino que encaja con sus permisos y con el nivel de seguridad que necesita cada sistema.</p>
+        <p>Quien trabaja fuera entra por el camino que encaja con sus permisos. El técnico externo que revisa una máquina no entra igual que tu responsable de administración.</p>
         <a class="go" href="/telecomunicaciones/#acceso-remoto">Acceso remoto y SASE <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="st" style="--n:2">
         <span class="num">03 · SEDES Y DATACENTER</span>
         <h3>Sedes, voz y servidores en el mismo diseño</h3>
-        <p>La conexión entre sedes se plantea junto con la telefonía IP y el acceso a tus servidores, también si están en nuestro datacenter propio y de proximidad en Barcelona.</p>
+        <p>La conexión entre sedes se plantea junto con la telefonía IP y el acceso a tus servidores. También si están en nuestro datacenter propio y de proximidad en Barcelona.</p>
         <a class="go" href="/sistemas-cloud/">Sistemas y cloud <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="st" style="--n:3">
@@ -133,7 +133,7 @@ faq:
       <article class="st" style="--n:4">
         <span class="num">05 · UN MISMO EQUIPO</span>
         <h3>Quien diseña la red la atiende cuando algo falla</h3>
-        <p>Si una incidencia de red afecta a un servidor o a la telefonía, el mismo equipo diagnostica las dos cosas. No tienes que hacer de puente entre proveedores.</p>
+        <p>Pongamos que el programa de gestión va lento en el almacén. El mismo equipo mira el switch, el servidor y la línea. No tienes que hacer de puente entre proveedores.</p>
       </article>
     </div>
   </div>
@@ -145,7 +145,7 @@ faq:
     <div class="txt rv">
       <span class="eyebrow">Arquitectura de red</span>
       <h2 id="h-arq">¿Qué se define antes de instalar ningún equipo?</h2>
-      <p>Diseñar una red es entender cómo trabaja tu empresa: qué sistemas son críticos, dónde están las personas, qué servicios necesitan poca latencia y qué tráfico conviene aislar. Con eso se dibuja el plano.</p>
+      <p>Diseñar una red empieza por entender cómo trabaja tu empresa. Vemos qué sistemas son críticos y quién trabaja en la oficina, en el taller o desde casa. Miramos qué servicios necesitan poca latencia y qué tráfico conviene aislar. Con eso se dibuja el plano.</p>
       <ul class="ticks">
         <li><svg><use href="#i-check"/></svg><span><strong>Topología:</strong> núcleo, distribución y acceso, y cómo se enlazan sedes y armarios.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Segmentación:</strong> qué VLAN hay, qué va en cada una y qué puede hablar con qué.</span></li>
@@ -166,8 +166,8 @@ faq:
       <span class="eyebrow">Segmentación</span>
       <h2 id="h-vlan">¿Cómo se separa una red en VLAN?</h2>
       <p>Una VLAN es una red lógica dentro de la red física. Los mismos switches llevan varias redes que no se ven entre sí, salvo que una regla lo permita.</p>
-      <p>En una red plana, la impresora, el servidor de facturación y el móvil de una visita comparten el mismo espacio. Al separarlos, cada grupo tiene sus propias normas: quién entra, a qué accede y con qué prioridad.</p>
-      <p>Las reglas entre segmentos se aplican en el firewall o en los switches de núcleo. Así, un equipo con problemas se queda en su segmento y el resto de la empresa sigue trabajando.</p>
+      <p>En una red plana, la impresora, el servidor de facturación y el móvil de una visita comparten espacio. Al separarlos, cada grupo tiene sus propias normas: quién entra, a qué accede y con qué prioridad.</p>
+      <p>Las reglas entre segmentos se aplican en el firewall o en los switches de núcleo. Si un equipo falla, el problema se queda en su segmento. El resto de tu empresa sigue trabajando.</p>
       <p><a class="txt-link" href="/recursos/red-plana-o-red-segmentada/">Red plana o red <span class="nw">segmentada<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
     </div>
     <div class="cmp good rv" style="--s:1">
@@ -190,43 +190,43 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Servicios de networking</span>
       <h2 id="h-serv">¿Qué incluye nuestro servicio de networking?</h2>
-      <p class="lead">Del primer plano a la administración diaria: todo lo que hace que tu red circule ordenada, segura y sin sorpresas.</p>
+      <p class="lead">Del primer plano a la administración diaria. Todo lo que hace que tu red circule ordenada, segura y sin sorpresas.</p>
     </div>
     <div class="services">
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg><use href="#i-net"/></svg></span>
         <h3>Diseño de arquitectura de red</h3>
-        <p>Definimos la topología, la segmentación, las políticas de enrutamiento y la redundancia, con el diagrama y la documentación como entregables.</p>
+        <p>Definimos la topología, la segmentación, las políticas de enrutamiento y la redundancia. Te entregamos el diagrama y la documentación.</p>
         <ul class="tags"><li>Topología</li><li>Plan de red</li><li>Documentación</li></ul>
       </div>
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-grid"/></svg></span>
         <h3>Segmentación con VLAN</h3>
-        <p>Separamos usuarios, servidores, telefonía, WiFi, invitados, cámaras e IoT en segmentos con su propio control de acceso.</p>
+        <p>Separamos usuarios, servidores, telefonía, WiFi, invitados, cámaras e IoT. Cada segmento tiene su propio control de acceso.</p>
         <ul class="tags"><li>VLAN</li><li>Control de acceso</li><li>Aislamiento</li></ul>
       </div>
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-box"/></svg></span>
         <h3>Routing, switching y QoS</h3>
-        <p>Switching de capa 2 y capa 3, enrutamiento estático y dinámico, y calidad de servicio para dar prioridad a la voz y a las aplicaciones de gestión.</p>
+        <p>Switching de capa 2 y capa 3, y enrutamiento estático y dinámico. Con la calidad de servicio, la voz y las aplicaciones de gestión pasan primero.</p>
         <ul class="tags"><li>Capa 2 y 3</li><li>Enrutamiento</li><li>QoS</li></ul>
       </div>
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg><use href="#i-lock"/></svg></span>
         <h3>VPN y SD-WAN entre sedes</h3>
-        <p>Configuramos la conexión lógica entre delegaciones, con túneles IPsec site-to-site o SD-WAN según el ancho de banda, la latencia y la disponibilidad.</p>
+        <p>Configuramos la conexión lógica entre tus delegaciones, con túneles IPsec site-to-site o SD-WAN. Lo elegimos según el ancho de banda, la latencia y la disponibilidad.</p>
         <ul class="tags"><li>IPsec</li><li>SD-WAN</li><li>Multisede</li></ul>
       </div>
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-shield"/></svg></span>
         <h3>Alta disponibilidad y redundancia</h3>
-        <p>Equipos y enlaces duplicados, rutas alternativas y conmutación automática, para que un fallo de un equipo o de un enlace no pare el servicio.</p>
+        <p>Equipos y enlaces duplicados, rutas alternativas y conmutación automática. Si falla un equipo o un enlace, el servicio sigue por otro camino.</p>
         <ul class="tags"><li>Redundancia</li><li>Conmutación</li><li>Continuidad</li></ul>
       </div>
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-clock"/></svg></span>
         <h3>Monitorización y administración</h3>
-        <p>Seguimos el estado y la capacidad de enlaces y equipos, gestionamos los cambios de configuración y mantenemos la documentación al día con cada cambio.</p>
+        <p>Vigilamos el estado y la capacidad de enlaces y equipos. Gestionamos los cambios de configuración y ponemos la documentación al día con cada uno.</p>
         <ul class="tags"><li>Monitorización</li><li>Cambios</li><li>Extranet</li></ul>
       </div>
     </div>
@@ -248,18 +248,18 @@ faq:
       <h2 id="h-fab">¿Con qué equipos trabajamos?</h2>
       <p>En switching y routing trabajamos con estos fabricantes. Elegimos después del diseño, según el entorno, la gestión que necesitas y lo que ya tienes instalado.</p>
       <ul class="pills" aria-label="Fabricantes de networking"><li>MikroTik</li><li>Huawei</li><li>Aruba</li></ul>
-      <p>Antes de comprar nada, revisamos la electrónica actual. Esto es lo que miramos en cada equipo:</p>
+      <p>Antes de comprar nada, revisamos tu electrónica actual. Quizá el switch que está en el armario desde la última reforma todavía tiene cuerda. Esto es lo que miramos en cada equipo:</p>
       <ul class="ticks">
         <li><svg><use href="#i-check"/></svg><span><strong>VLAN y capa 3:</strong> si separa segmentos y enruta entre ellos.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Capacidad:</strong> si aguanta el tráfico de hoy y el de los próximos años.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Firmware:</strong> si el fabricante todavía lo actualiza.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>PoE:</strong> si alimenta teléfonos, cámaras y puntos de acceso.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>PoE:</strong> si da corriente por el propio cable a teléfonos, cámaras y puntos de acceso.</span></li>
       </ul>
       <p><a class="txt-link" href="/recursos/switch-gestionado-o-no-gestionado/">Switch gestionado o no <span class="nw">gestionado<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
     </div>
     <figure class="shot rv" style="--s:1">
       <img src="/assets/proyectos/kuka-robots.webp" alt="Robots industriales KUKA" loading="lazy">
-      <figcaption>KUKA Robots Iberia: firewall y gestión del networking a nivel internacional, de la central de España a delegaciones como Argentina.</figcaption>
+      <figcaption>KUKA Robots Iberia: firewall y gestión internacional del networking, de la central de España a delegaciones como Argentina.</figcaption>
     </figure>
   </div>
 </section>
@@ -271,11 +271,11 @@ faq:
       <span class="eyebrow">Cómo trabajamos</span>
       <h2 id="h-how">Cinco pasos, de la red que tienes a la que necesitas</h2>
       <p>Definimos la arquitectura antes de configurar ningún equipo. Primero entendemos la red actual y lo que necesitas; después, el plano; y solo entonces, los cambios.</p>
-      <p>Las intervenciones que afectan al servicio se planifican fuera de horario o por fases, para que la actividad siga con normalidad. Como orientación, en una empresa mediana el rediseño habitualmente lleva de dos a cuatro semanas.</p>
+      <p>Las intervenciones que afectan al servicio se hacen fuera de horario o por fases. Tu equipo debería notar el cambio porque la red va mejor, no porque se haya quedado sin ella. Como orientación, en una empresa mediana el rediseño suele llevar de dos a cuatro semanas.</p>
       <p>Después seguimos contigo: los cambios, las incidencias y las ampliaciones quedan registrados en nuestra extranet.</p>
     </div>
     <ol class="steps rv" style="--s:1">
-      <li><b>Análisis de la red actual</b><p>Revisamos la arquitectura, los equipos y los requisitos reales de cada sede y de cada servicio.</p></li>
+      <li><b>Análisis de la red actual</b><p>Revisamos la arquitectura, los equipos y lo que pide de verdad cada sede y cada servicio.</p></li>
       <li><b>Diseño documentado</b><p>Topología, segmentos, rutas, prioridades y redundancia, sobre el papel y validados contigo.</p></li>
       <li><b>Implantación con el mínimo impacto</b><p>Cambios por fases y fuera de horario cuando afectan al servicio.</p></li>
       <li><b>Entrega de la documentación</b><p>Diagrama, tabla de segmentos y configuración de los equipos críticos, en tus manos.</p></li>
@@ -294,9 +294,9 @@ faq:
     </div>
     <div class="aud">
       <div class="card rv" style="--s:0"><span class="n">01</span><h3>Organizaciones multisede</h3><p>Delegaciones, almacenes y oficinas, también fuera de España, que necesitan una conexión estable y segura entre ellas.</p></div>
-      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Empresas con sistemas críticos</h3><p>Producción, gestión o atención al público que no pueden pararse, con segmentación, control de accesos y alta disponibilidad.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Empresas con sistemas críticos</h3><p>Producción, gestión o atención al público que no pueden pararse. Necesitan segmentación, control de accesos y alta disponibilidad.</p></div>
       <div class="card rv" style="--s:2"><span class="n">03</span><h3>Redes con mucho tipo de tráfico</h3><p>Voz, cámaras, terminales de producción, WiFi de visitas y aplicaciones en el cloud compartiendo la misma infraestructura.</p></div>
-      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Empresas que van a crecer</h3><p>Una sede nueva, una migración al cloud o nuevos servicios que la red tiene que soportar desde el primer día.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Empresas que van a crecer</h3><p>Vas a abrir una sede, migrar al cloud o sumar servicios nuevos. Tu red tiene que soportarlo desde el primer día.</p></div>
     </div>
   </div>
 </section>
@@ -315,15 +315,15 @@ faq:
       <div class="rv" style="--s:0">{{ m.anonCase(
         "Tres sedes, una red ordenada",
         "Empresa multisede · Rediseño de red",
-        "Usuarios, servidores, cámaras y WiFi de visitantes compartían un mismo segmento. La VPN entre las tres sedes arrastraba una configuración heredada con caídas intermitentes, y no había documentación de cómo estaba montado todo.",
-        "Rediseño completo: VLAN por función y perfil de usuario, políticas de acceso entre segmentos en el firewall, nueva conexión entre las tres sedes con redundancia de enlace y monitorización centralizada, con documentación técnica completa.",
+        "Usuarios, servidores, cámaras y WiFi de visitantes compartían un mismo segmento. La VPN entre las tres sedes arrastraba una configuración heredada con caídas intermitentes. Y no había documentación de cómo estaba montado todo.",
+        "Rediseño completo. VLAN por función y perfil de usuario, y políticas de acceso entre segmentos en el firewall. Nueva conexión entre las tres sedes, con redundancia de enlace y monitorización centralizada. Documentación técnica completa.",
         ["-85% de incidencias de red", "Conexión estable entre sedes"], {n: "−85%", l: "de incidencias de red", i: 0}
       ) }}</div>
       <div class="rv" style="--s:1">{{ m.anonCase(
         "Nuevos servicios sin tocar la producción",
         "Empresa industrial · Evolución de la red",
         "Había que incorporar videovigilancia IP, terminales de producción con WiFi y acceso remoto para el equipo técnico externo. La red no tenía segmentación ni prioridades para absorber ese tráfico junto a los sistemas de producción.",
-        "Análisis de la red y diseño de su evolución: VLAN propias para cámaras y terminales, QoS para dar prioridad a la producción, acceso remoto técnico segmentado con autenticación MFA y documentación de la arquitectura resultante.",
+        "Análisis de la red y diseño de su evolución. VLAN propias para cámaras y terminales, y QoS para dar prioridad a la producción. Acceso remoto técnico segmentado, con autenticación multifactor (MFA). Documentación de la arquitectura resultante.",
         ["Nuevos servicios integrados sin incidencias", "Red documentada y explicable"], {n: "", l: "Nuevos servicios integrados sin incidencias", i: 0}
       ) }}</div>
     </div>
@@ -344,7 +344,7 @@ faq:
       <a class="btn btn-ghost rv" href="/recursos/redes/">Más guías de redes y WiFi <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="res">
-      <a class="card rv" style="--s:0" href="/recursos/red-plana-o-red-segmentada/"><span class="cat">Redes y WiFi</span><h3>Red plana o red segmentada</h3><p>Qué aporta separar la red en VLAN y cómo ayuda a que un problema se quede en su sitio.</p></a>
+      <a class="card rv" style="--s:0" href="/recursos/red-plana-o-red-segmentada/"><span class="cat">Redes y WiFi</span><h3>Red plana o red segmentada</h3><p>Qué aporta separar la red en VLAN. Y cómo ayuda a que un problema se quede en su sitio.</p></a>
       <a class="card rv" style="--s:1" href="/recursos/switch-gestionado-o-no-gestionado/"><span class="cat">Redes y WiFi</span><h3>Switch gestionado o no gestionado</h3><p>Qué visibilidad y qué control aporta cada uno, y cuál necesita tu empresa.</p></a>
       <a class="card rv" style="--s:2" href="/recursos/monitorizacion-de-red/"><span class="cat">Redes y WiFi</span><h3>Monitorización de red</h3><p>Qué conviene vigilar en enlaces, switches y routers para ver venir los problemas.</p></a>
     </div>

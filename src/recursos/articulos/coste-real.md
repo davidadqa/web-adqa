@@ -11,64 +11,68 @@ updated: 2026-11-02
 servicio: "/google-workspace/licenciamiento-mixto-google-workspace/"
 related: ["licencias-de-microsoft-365", "cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves", "migracion-a-google-workspace-sin-parar-tu-negocio"]
 imagen: "Responsable de administración revisando en una hoja de cálculo el reparto de licencias por usuario de la suite de la empresa"
-tldr: "El coste real de Google Workspace o Microsoft 365 va más allá del precio por usuario. Suma el plan asignado a cada persona, las cuentas activas que nadie usa, el tiempo de gestionar las licencias y, si se cambia de suite, la migración. Como los planes equivalentes tienen tarifas parecidas, el mayor margen de ahorro suele estar en dar a cada persona la licencia que de verdad usa."
+tldr: "El coste real de Google Workspace o Microsoft 365 va más allá del precio por usuario. Suma el plan asignado a cada persona y las cuentas activas que nadie usa. También el tiempo de gestionar las licencias y, si se cambia de suite, la migración. Los planes equivalentes tienen tarifas parecidas. Por eso, el mayor margen de ahorro suele estar en ajustar cada licencia al uso real."
 faq:
   manager:
     - q: "¿Qué suite sale más económica para una empresa?"
-      a: "Depende más de la plantilla que de la tarifa. Entre planes de nivel parecido, la diferencia de precio es pequeña. Lo que inclina la balanza es cuántas personas tienen un uso básico y si cada una tiene asignado el plan que le corresponde. Bien ajustadas, las dos pueden costar menos de lo que sugiere el precio de lista."
+      a: "Depende más de tu plantilla que de la tarifa. Entre planes de nivel parecido, la diferencia de precio es pequeña. Lo que inclina la balanza es cuántas personas tienen un uso básico. Y si cada una tiene asignado el plan que le corresponde. Bien ajustadas, las dos pueden costar menos de lo que sugiere el precio de lista."
     - q: "¿Merece la pena cambiar de suite solo para ahorrar en licencias?"
-      a: "No siempre. El ahorro anual tiene que compensar el coste de la migración y el tiempo de adaptación del equipo. Además, conviene comparar con la suite actual ya ajustada, no con lo que se paga hoy: esa revisión, por sí sola, suele recortar una parte de la factura."
+      a: "No siempre. El ahorro anual tiene que compensar el coste de la migración y el tiempo de adaptación del equipo. Además, compara con tu suite actual ya ajustada, no con lo que pagas hoy. Esa revisión, por sí sola, suele recortar una parte de la factura."
     - q: "¿El licenciamiento mixto sirve también para empresas pequeñas?"
-      a: "Sí. Sirve a cualquier empresa en la que no todas las personas usan la suite igual, algo habitual también en pymes pequeñas. Cuantas más personas tienen un uso básico, mayor suele ser el margen de ahorro."
+      a: "Sí. Sirve a cualquier empresa en la que no todas las personas usan la suite igual. Eso es habitual también en pymes pequeñas. Cuantas más personas tienen un uso básico, mayor suele ser el margen de ahorro."
   tecnico:
     - q: "¿Cómo se detecta si se está pagando de más en licencias?"
-      a: "Revisando desde la consola de administración qué usa cada cuenta, como almacenamiento, grabación de reuniones, aplicaciones de escritorio o controles de seguridad, y comparándolo con el plan asignado. También conviene buscar cuentas sin actividad reciente."
+      a: "Revisando desde la consola de administración qué usa cada cuenta y comparándolo con el plan asignado. Mira el almacenamiento, la grabación de reuniones, las aplicaciones de escritorio y los controles de seguridad. También conviene buscar cuentas sin actividad reciente."
     - q: "¿Qué implica técnicamente combinar planes en la misma organización?"
-      a: "Gestionar distintos niveles de licencia bajo el mismo dominio o tenant, con funciones diferentes por usuario. La colaboración entre personas con planes distintos no cambia. En Google Workspace, antes de bajar de edición a alguien, hay que comprobar que su almacenamiento cabe en la nueva."
+      a: "Gestionar distintos niveles de licencia bajo el mismo dominio o tenant, con funciones diferentes por usuario. El tenant es el entorno de Microsoft 365 de tu empresa. La colaboración entre personas con planes distintos no cambia. Antes de bajar a alguien de edición en Google Workspace, comprueba que su almacenamiento cabe en la nueva."
     - q: "¿Qué incluye el coste de migrar de una suite a otra?"
-      a: "Además del traslado del correo, los calendarios y los documentos, la configuración del nuevo entorno, la validación de la seguridad y una formación básica del equipo. Es un coste puntual que se compara con el ahorro anual para saber en cuánto tiempo se recupera."
+      a: "El traslado del correo, los calendarios y los documentos. Además, la configuración del nuevo entorno, la validación de la seguridad y una formación básica del equipo. Es un coste puntual. Se compara con el ahorro anual para saber en cuánto tiempo se recupera."
 ---
-Al comparar Google Workspace y Microsoft 365, lo primero que se suele mirar es el precio por usuario del plan más conocido de cada una. Es un buen punto de partida, pero deja fuera casi todo lo que mueve la factura: cuántos planes distintos necesita la plantilla, cuántas licencias siguen activas sin que nadie las use y quién se ocupa de revisarlas.
+Al comparar Google Workspace y Microsoft 365, lo primero que sueles mirar es el precio por usuario. Normalmente, el del plan más conocido de cada una. Es un buen punto de partida, pero deja fuera casi todo lo que mueve la factura. ¿Cuántos planes distintos necesita tu plantilla? ¿Cuántas licencias siguen activas sin que nadie las use? ¿Y quién se ocupa de revisarlas?
 
-Este artículo trata solo del coste. Para el resto de diferencias entre las dos suites, la referencia es la [comparativa entre Google Workspace y Microsoft 365](/google-workspace/google-workspace-vs-microsoft-365/).
+Este artículo trata solo del coste. Para el resto de diferencias, tienes la [comparativa entre Google Workspace y Microsoft 365](/google-workspace/google-workspace-vs-microsoft-365/).
 
 ## Qué entra en el coste real de una suite
 
-- **El plan de cada persona.** No toda la plantilla necesita lo mismo. Quien usa sobre todo el correo y algún documento no aprovecha las funciones de quien graba reuniones o maneja información con requisitos de retención.
-- **Las licencias sin uso.** Cuentas de personas que ya no están, buzones que se mantienen «por si acaso» o planes que nadie ha revisado desde el primer día. No aparecen en el precio de lista, pero sí en la factura de cada mes.
-- **La gestión continuada.** Dar de alta y de baja, cambiar planes y revisar el reparto lleva tiempo, sea de alguien de la empresa o de un servicio externo.
-- **El cambio de suite, si lo hay.** Una migración tiene un coste puntual de preparación, traslado de datos y adaptación del equipo, que hay que comparar con el ahorro esperado.
+Imagina la factura de licencias: una línea por persona y el mismo plan en todas. Esa factura es solo una parte. El coste real tiene cuatro piezas:
+
+- **El plan de cada persona.** No toda tu plantilla necesita lo mismo. Quien usa sobre todo el correo y algún documento no aprovecha las funciones de quien graba reuniones. Tampoco las de quien maneja información con requisitos de retención, la que debe guardarse durante un plazo fijado.
+- **Las licencias sin uso.** Son cuentas de personas que ya no están y buzones que se mantienen «por si acaso». También planes que nadie ha revisado desde el primer día. No aparecen en el precio de lista, pero sí en tu factura de cada mes.
+- **La gestión continuada.** Dar de alta y de baja, cambiar planes y revisar el reparto lleva tiempo. Ese tiempo lo pone alguien de tu empresa o un servicio externo.
+- **El cambio de suite, si lo hay.** Una migración tiene un coste puntual de preparación, traslado de datos y adaptación del equipo. Ese coste se compara con el ahorro esperado.
 
 ## Ajustar cada licencia al uso: cómo funciona en cada suite
 
-Entre planes de nivel parecido, las tarifas de las dos suites no se alejan mucho. El margen está en dar a cada persona la licencia que corresponde a su trabajo, y ahí cada suite sigue reglas distintas.
+Entre planes de nivel parecido, las tarifas de las dos suites no se alejan mucho. El margen está en dar a cada persona la licencia que corresponde a su trabajo. Y ahí cada suite sigue reglas distintas.
 
 ### Google Workspace: licenciamiento mixto
 
-Google Workspace permite asignar ediciones distintas a usuarios distintos dentro del mismo dominio: Business Starter para unos, Business Standard o Business Plus para otros. Se llama licenciamiento mixto (Partial Domain Licensing, PDL). Con las condiciones actuales de Google, esta opción requiere gestionar el dominio a través de un partner oficial; comprando directamente, todo el dominio comparte una misma edición. La tarifa de cada licencia no cambia por contratarla con un partner.
+Google Workspace permite asignar ediciones distintas a usuarios distintos dentro del mismo dominio. Por ejemplo, Business Starter para unos y Business Standard o Business Plus para otros. Se llama licenciamiento mixto (Partial Domain Licensing, PDL). Con las condiciones actuales de Google, esta opción requiere gestionar el dominio a través de un partner oficial. Comprando directamente, todo el dominio comparte una misma edición. La tarifa de cada licencia no cambia por contratarla con un partner.
 
 <!-- PENDIENTE: la condición del PDL (compra directa = una sola edición por dominio) es una política comercial de Google que puede cambiar (informe, apartado 9); revisarla periódicamente. -->
 
-El ahorro depende de cuántas personas tienen un uso básico y de la edición de partida. Habitualmente, la factura de licencias baja entre un 20% y un 40%. Como referencia, en un caso real publicado en agosto de 2026, una empresa con 40 puestos en Business Plus pasó 20 de ellos a Business Starter y redujo un 34% el coste anual de esas licencias. Las tarifas de Google cambian, así que cada cálculo se rehace con las vigentes.
+Ordena tu lista de usuarios según lo que usa cada uno. Enseguida ves quién necesita las funciones avanzadas y quién no. El ahorro depende de cuántas personas tienen un uso básico y de la edición de partida. Habitualmente, la factura de licencias baja entre un 20% y un 40%.
+
+Un caso real, publicado en agosto de 2026, te sirve como referencia. Una empresa con 40 puestos en Business Plus pasó 20 de ellos a Business Starter. Así redujo un 34% el coste anual de esas licencias. Las tarifas de Google cambian, así que cada cálculo se rehace con las vigentes.
 
 <!-- PENDIENTE: comprobar que los datos del caso (40 puestos en Business Plus, 20 pasados a Business Starter, -34%, publicado en agosto de 2026) coinciden con la ficha del caso cuando se publique en la Fase 3. -->
 
-El funcionamiento paso a paso, un ejemplo con 10 usuarios y el caso completo están en [licenciamiento mixto de Google Workspace](/google-workspace/licenciamiento-mixto-google-workspace/).
+En [licenciamiento mixto de Google Workspace](/google-workspace/licenciamiento-mixto-google-workspace/) tienes el funcionamiento paso a paso. También un ejemplo con 10 usuarios y el caso completo.
 
 ### Microsoft 365: planes combinados en el mismo tenant
 
-Microsoft 365 permite de forma estándar que cada usuario del tenant tenga un plan distinto, sin intermediarios. El margen está en revisar el reparto: comprobar quién necesita de verdad las aplicaciones de escritorio o la seguridad avanzada y quién trabaja bien con un plan básico. Cómo se hace esa revisión se explica en [Licencias de Microsoft 365](/recursos/licencias-de-microsoft-365/).
+Microsoft 365 permite de forma estándar que cada usuario del tenant tenga un plan distinto, sin intermediarios. El tenant es el espacio de tu empresa dentro de Microsoft. El margen está en revisar el reparto. ¿Usa de verdad las aplicaciones de escritorio quien solo responde correos desde el navegador? Comprueba quién necesita esas aplicaciones o la seguridad avanzada y quién trabaja bien con un plan básico. Cómo se hace esa revisión lo explica [Licencias de Microsoft 365](/recursos/licencias-de-microsoft-365/).
 
 ## Cambiar de suite para ahorrar: cuándo compensa
 
-A veces la pregunta no es cómo ajustar la suite actual, sino si conviene pasarse a la otra. Para responderla hay que poner en la balanza:
+A veces la pregunta no es cómo ajustar tu suite, sino si te conviene pasarte a la otra. Para responderla, pon en la balanza cuatro cosas:
 
-- El **coste anual de licencias ya ajustado** en cada suite, no el precio de lista de un solo plan para todos.
+- El **coste anual de licencias ya ajustado** en cada suite. No el precio de lista de un solo plan para todos.
 - El **coste puntual de la migración**: preparación, traslado de correo y archivos, configuración y validación.
-- El **tiempo de adaptación** del equipo durante los primeros días, que no sale en ninguna factura.
+- El **tiempo de adaptación** del equipo durante los primeros días, que no sale en ninguna factura. Es el rato que alguien pasa buscando dónde ha ido a parar la carpeta de siempre.
 - Las **dependencias** de cada suite: aplicaciones de escritorio, integraciones o hábitos que habría que cambiar.
 
-Con esos datos se ve en cuánto tiempo se recupera la inversión del cambio. Muchas veces, revisar el reparto de licencias de la suite que ya se usa acerca buena parte del ahorro buscado sin migrar nada. Cuando el cambio sí compensa, una [migración por fases](/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/) mantiene el trabajo en marcha. Los motivos que justifican cambiar más allá del precio se repasan en [cuándo tiene sentido cambiar de Microsoft 365 a Google Workspace (o al revés)](/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/).
+Con esos datos ves en cuánto tiempo se recupera la inversión del cambio. Muchas veces, revisar el reparto de licencias de tu suite actual acerca buena parte del ahorro buscado. Y sin migrar nada. Cuando el cambio sí compensa, una [migración por fases](/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/) mantiene el trabajo en marcha. Más allá del precio, hay otros motivos para cambiar. Los repasa [cuándo tiene sentido cambiar de Microsoft 365 a Google Workspace (o al revés)](/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/).
 
 ## Cómo decidirlo
 
@@ -83,6 +87,6 @@ Con esos datos se ve en cuánto tiempo se recupera la inversión del cambio. Muc
 
 Una guía rápida:
 
-- **Si ya usas Google Workspace con toda la plantilla en la misma edición**, revisa el licenciamiento mixto antes de plantearte otra cosa.
+- **Si ya usas Google Workspace y toda la plantilla tiene la misma edición**, revisa primero el licenciamiento mixto.
 - **Si usas Microsoft 365**, empieza por revisar el plan de cada usuario dentro del tenant.
-- **Si te planteas cambiar de suite por precio**, compara las dos con las licencias ya ajustadas y suma la migración y la adaptación antes de decidir.
+- **Si te planteas cambiar de suite por precio**, compara las dos con las licencias ya ajustadas. Y antes de decidir, suma la migración y la adaptación.

@@ -11,52 +11,56 @@ updated: 2026-11-02
 servicio: "/redes/wifi-entornos-complejos/"
 related: ["cuantos-puntos-de-acceso-necesita-tu-wifi", "wifi-multisede", "red-plana-o-red-segmentada"]
 imagen: "Nave industrial con estanterías metálicas altas y un punto de acceso WiFi industrial instalado en la estructura del techo"
-tldr: "Una nave industrial plantea al WiFi retos que una oficina normalmente no tiene: estructuras metálicas que reflejan y bloquean la señal, maquinaria que puede generar interferencias, techos altos, polvo, humedad o frío y dispositivos en movimiento constante. Por eso su WiFi se diseña con un estudio de cobertura específico y con equipos preparados para el entorno, no trasladando el diseño de una oficina."
+tldr: "Una nave industrial plantea al WiFi retos que una oficina normalmente no tiene. Hay estructuras metálicas que reflejan y bloquean la señal y maquinaria que puede generar interferencias. Hay techos altos, polvo, humedad o frío, y dispositivos en movimiento constante. Por eso su WiFi se diseña con un estudio de cobertura específico y equipos preparados para el entorno. No se traslada el diseño de una oficina."
 faq:
   manager:
     - q: "¿Instalar WiFi en una nave cuesta mucho más que en una oficina?"
-      a: "Depende del tamaño y de las condiciones del espacio. Un buen diseño previo evita comprar puntos de acceso mal ubicados que después hay que corregir, que es lo que suele encarecer un proyecto a la larga."
+      a: "Depende del tamaño y de las condiciones del espacio. A la larga, lo que más encarece un proyecto es corregir puntos de acceso mal ubicados. Un buen diseño previo te ahorra ese gasto."
     - q: "¿Cuánto dura un proyecto de WiFi industrial?"
-      a: "Depende del tamaño de la nave. El estudio de cobertura y el diseño son la fase más importante, porque instalar sin ese paso previo es lo que después obliga a rehacer trabajo. La instalación se puede planificar por zonas para no frenar la actividad."
+      a: "Depende del tamaño de la nave. La fase más importante es el estudio de cobertura y el diseño. Instalar sin ese paso previo es lo que después te obliga a rehacer trabajo. La instalación se puede planificar por zonas para no frenar tu actividad."
     - q: "¿El WiFi interfiere con la maquinaria, o es al revés?"
-      a: "Lo habitual es que sea la maquinaria la que interfiere en el WiFi, sobre todo motores y variadores de frecuencia. Un WiFi profesional emite con potencias bajas y en bandas reguladas, y normalmente no afecta a los equipos industriales. Si hay maquinaria sensible a la radiofrecuencia, conviene revisar las indicaciones de su fabricante durante el estudio."
+      a: "Lo habitual es que sea la maquinaria la que interfiere en el WiFi. Sobre todo los motores y los variadores de frecuencia. Un WiFi profesional emite con potencias bajas y en bandas reguladas. Normalmente no afecta a los equipos industriales. Si tienes maquinaria sensible a la radiofrecuencia, durante el estudio se revisan las indicaciones de su fabricante."
   tecnico:
     - q: "¿Qué banda funciona mejor con interferencias industriales?"
       a: "Depende del tipo de interferencia que detecte el estudio de cobertura. A menudo se combinan 2,4 y 5 GHz según la zona y los equipos que generan más ruido. La banda de 2,4 GHz llega más lejos, pero es la más expuesta a interferencias."
     - q: "¿Cómo se resuelven las zonas de sombra detrás de estanterías o maquinaria?"
-      a: "Con puntos de acceso adicionales o antenas orientadas específicamente a esas zonas, identificados durante el estudio de cobertura. Añadirlos después a ciegas suele crear interferencias nuevas."
+      a: "Con puntos de acceso adicionales o con antenas orientadas específicamente a esas zonas. El estudio de cobertura indica dónde hacen falta. Añadirlos después a ciegas suele crear interferencias nuevas."
     - q: "¿Qué protección debe tener el equipamiento en zonas con polvo, humedad o frío?"
-      a: "Un grado de protección IP adecuado al entorno frente al polvo y el agua, y un rango de temperatura de funcionamiento acorde con el espacio, por ejemplo en cámaras frigoríficas. Los equipos de oficina estándar no están pensados para esas condiciones."
+      a: "Un grado de protección IP adecuado al entorno. Es el código que dice cuánto polvo y agua aguanta el equipo. También un rango de temperatura de funcionamiento acorde con el espacio, por ejemplo en cámaras frigoríficas. Los equipos de oficina estándar no están pensados para esas condiciones."
 ---
-Instalar WiFi en una nave con la misma lógica que en una oficina es una de las causas más habituales de los proyectos que no funcionan como se esperaba. Las paredes de pladur de una oficina y las estanterías metálicas, la maquinaria y los techos altos de una nave se comportan de forma muy distinta para una señal de radio.
+En la oficina de la entrada, tu WiFi va bien. En el muelle de carga, alguien camina con la tablet en alto buscando señal, y el camión espera. Detrás suele estar lo mismo: el WiFi de la nave se instaló con la lógica de una oficina. Es una de las causas más habituales de los proyectos que no funcionan como se esperaba.
 
-La parte buena es que esos factores se pueden medir. Y si se tienen en cuenta desde el principio, el WiFi de una nave puede funcionar tan bien como el de una oficina.
+Para una señal de radio, una oficina con paredes de pladur tiene poco que ver con tu nave. En la nave hay estanterías metálicas, maquinaria y techos altos. La parte buena es que todo eso se puede medir y tener en cuenta desde el principio. Así, el WiFi de tu nave puede funcionar tan bien como el de una oficina.
 
 ## Qué hace diferente a una nave industrial
 
-- **Estructuras metálicas.** Estanterías, maquinaria y la propia estructura del edificio reflejan y bloquean la señal. El pladur o el ladrillo de una oficina la frenan bastante menos.
+- **Estructuras metálicas.** Estanterías, maquinaria y la propia estructura del edificio reflejan y bloquean la señal. El pladur o el ladrillo de una oficina la frenan bastante menos. Incluso la mercancía cuenta: una estantería llena no se comporta igual que una vacía.
 - **Interferencias electromagnéticas.** Motores, variadores de frecuencia y algunos equipos industriales pueden generar ruido en las bandas que usa el WiFi.
-- **Techos altos y espacios abiertos.** La señal se dispersa de otra manera, y los puntos de acceso se ubican y se orientan pensando en la altura, no solo en la superficie.
-- **Condiciones duras.** Polvo, humedad, frío o calor exigen equipos preparados para el entorno, no los de una oficina climatizada.
-- **Movilidad constante.** Carretillas, escáneres y tablets recorren toda la nave y necesitan cobertura continua y cambio de punto de acceso sin cortes.
+- **Techos altos y espacios abiertos.** La señal se dispersa de otra manera. Los puntos de acceso se ubican y se orientan pensando en la altura, no solo en la superficie.
+- **Condiciones duras.** Si hay polvo, humedad, frío o calor, necesitas equipos preparados para el entorno. No sirven los de una oficina climatizada.
+- **Movilidad constante.** Las carretillas, los escáneres y las tablets de tu equipo recorren toda la nave. Necesitan cobertura continua y pasar de un punto de acceso a otro sin cortes.
 
 ## Por qué el diseño de oficina no se traslada
 
-Un [estudio de cobertura](/redes/wifi-entornos-complejos/) pensado para una oficina da por supuestos unos materiales y unas distancias que en una nave no se cumplen. Aplicado sin adaptar, el resultado suele ser previsible: puntos de acceso mal orientados, zonas con cobertura excelente junto a otras sin señal e interferencias entre equipos colocados demasiado cerca.
+Un [estudio de cobertura](/redes/wifi-entornos-complejos/) pensado para una oficina da por supuestos unos materiales y unas distancias. En tu nave no se cumplen. Si te limitas a copiarlo, el resultado suele ser previsible:
 
-Las zonas problemáticas también suelen repetirse: detrás de las estanterías altas, junto a la maquinaria pesada y en los extremos de las naves muy alargadas. Son justo las que un diseño genérico no anticipa, y las que una medición sobre el terreno identifica antes de decidir [cuántos puntos de acceso hacen falta](/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/).
+- puntos de acceso mal orientados;
+- zonas con cobertura excelente junto a otras sin señal;
+- interferencias entre equipos colocados demasiado cerca.
 
-Hay otro punto propio de la industria. Los terminales de almacén, los lectores y los equipos de producción conviene llevarlos en su propia red, separada de la de oficina y de la de invitados. Así, un problema en una no frena a las otras: es la lógica de una [red segmentada](/recursos/red-plana-o-red-segmentada/).
+Las zonas problemáticas también suelen repetirse. Detrás de las estanterías altas, junto a la maquinaria pesada y en los extremos de las naves muy alargadas. Un diseño genérico no las anticipa. Una medición sobre el terreno las identifica antes de decidir [cuántos puntos de acceso hacen falta](/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/).
+
+Hay otro punto propio de la industria. Tus terminales de almacén, los lectores y los equipos de producción van mejor en su propia red. La de oficina y la de invitados van aparte. Así, un fallo en la red de oficina no para la línea de producción, ni al revés. Es la lógica de una [red segmentada](/recursos/red-plana-o-red-segmentada/).
 
 ## Tres entornos industriales reales
 
 Tres proyectos muestran hasta qué punto el diseño depende del espacio:
 
 - **Una fábrica.** La fábrica de HITECSA es un espacio difícil para la señal. Su WiFi se resolvió con equipos pensados para entornos exigentes, no con puntos de acceso de oficina.
-- **Frío y condensación.** En Congelats Romero, delegación de MIDBAN, el WiFi llega al interior de las cámaras frigoríficas. Ahí la señal tiene que atravesar paneles aislantes y los equipos, soportar el frío y la humedad.
-- **Galerías bajo tierra.** En las minas de Iberpotash en Súria, con trabajos a 1.000 metros de profundidad, el diseño WiFi tenía que dar conectividad y geolocalización a lo largo de galerías largas y estrechas.
+- **Frío y condensación.** En Congelats Romero, delegación de MIDBAN, el WiFi llega al interior de las cámaras frigoríficas. Ahí la señal tiene que atravesar paneles aislantes. Y los equipos tienen que soportar el frío y la humedad.
+- **Galerías bajo tierra.** En las minas de Iberpotash en Súria hay trabajos a 1.000 metros de profundidad. El diseño WiFi tenía que dar conectividad y geolocalización a lo largo de galerías largas y estrechas.
 
-Los tres están recogidos, con más contexto, en [casos de éxito](/casos-de-exito/).
+Puedes leer los tres, con más contexto, en [casos de éxito](/casos-de-exito/).
 
 ## Cómo decidirlo
 
@@ -71,6 +75,6 @@ Los tres están recogidos, con más contexto, en [casos de éxito](/casos-de-exi
 
 Una guía rápida:
 
-- **Estudio de cobertura específico siempre** que vayas a instalar WiFi en una nave: el diseño de oficina no se traslada bien.
+- **Estudio de cobertura específico siempre** que vayas a instalar WiFi en una nave. El diseño de oficina no se traslada bien.
 - **Equipos con la protección adecuada** si hay polvo, humedad, frío o calor.
-- **Revisión del diseño** si ya tienes WiFi y falla: lo habitual es que el problema sea de diseño, no de equipos defectuosos.
+- **Revisión del diseño** si ya tienes WiFi y falla, por ejemplo siempre en los mismos pasillos. Lo habitual es que el problema sea de diseño, no de equipos defectuosos.

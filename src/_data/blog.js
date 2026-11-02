@@ -23,7 +23,7 @@ const blog = {
   reviewed: "2026-11-02",
   cta: {
     title: "¿Quieres que revisemos juntos cuál encaja mejor con tu empresa?",
-    text: "Cuéntanos cómo trabajáis hoy y qué te preocupa. Lo miramos con calma y te proponemos el siguiente paso, sin compromiso.",
+    text: "Cuéntanos cómo trabajáis hoy y qué te gustaría cambiar. Lo miramos con calma y te proponemos el siguiente paso, sin compromiso.",
   },
   // Destacados del índice /recursos/ (los que más enlaza el resto de la web).
   featured: [
@@ -46,7 +46,7 @@ const blog = {
       title: "Ciberseguridad para empresas: guías prácticas | ADQA",
       description: "Guías de ciberseguridad para empresas: pentesting, ENS, firewall gestionado y políticas de seguridad, explicados con claridad para decidir con criterio.",
       h1: "Ciberseguridad para empresas, explicada sin alarmismo",
-      intro: "Pentesting, Esquema Nacional de Seguridad, firewalls y políticas de seguridad: qué aporta cada medida, cuándo tiene sentido y cómo encaja en una empresa que no tiene un departamento de seguridad propio.",
+      intro: "Pentesting (pruebas de intrusión), Esquema Nacional de Seguridad, firewalls y políticas de seguridad. Quizá un cliente te ha pedido por escrito cómo proteges sus datos. Estas guías explican qué aporta cada medida y cuándo tiene sentido. También cómo encaja si tu empresa no tiene un departamento de seguridad propio.",
     },
     {
       slug: "redes",
@@ -59,7 +59,7 @@ const blog = {
       title: "Redes y WiFi para empresas: guías prácticas | ADQA",
       description: "Guías sobre redes y WiFi para empresas: cableado, certificación, switches, segmentación y cobertura WiFi en oficinas, naves y entornos con varias sedes.",
       h1: "Redes y WiFi: guías para una red que no da guerra",
-      intro: "Cableado, certificación, switches, segmentación y WiFi en oficinas, naves industriales y empresas con varias sedes. Lo que conviene saber antes de ampliar, renovar o certificar la red.",
+      intro: "Cableado, certificación, switches, segmentación y WiFi en oficinas, naves industriales y empresas con varias sedes. Que el WiFi vaya justo en el despacho del fondo suele tener arreglo. Lo que conviene saber antes de ampliar, renovar o certificar tu red.",
     },
     {
       slug: "telecomunicaciones",
@@ -72,7 +72,7 @@ const blog = {
       title: "Telecomunicaciones para empresas: guías | ADQA",
       description: "Guías sobre telecomunicaciones para empresas: conectividad, enlaces privados entre la oficina y el datacenter, y cómo elegir la conexión de cada sede.",
       h1: "Telecomunicaciones para empresas: guías prácticas",
-      intro: "Conectividad, enlaces privados y comunicaciones entre sedes y con el datacenter: cómo elegir la conexión que necesita cada parte de tu empresa.",
+      intro: "Conectividad, enlaces privados y comunicaciones entre sedes y con el datacenter. Tu sede central no pide la misma línea que una delegación pequeña. Cómo elegir la conexión que necesita cada parte de tu empresa.",
     },
     {
       slug: "cloud",
@@ -85,7 +85,7 @@ const blog = {
       title: "Cloud y datacenter para empresas: guías | ADQA",
       description: "Guías de cloud y datacenter para empresas: datacenter propio o nube pública, backup y continuidad de negocio, y cómo migrar servidores sin parar la actividad.",
       h1: "Cloud y datacenter: dónde y cómo viven tus datos",
-      intro: "Datacenter de proximidad o nube pública, copias de seguridad, continuidad de negocio y migración de servidores. Criterios claros para decidir dónde alojar tus sistemas.",
+      intro: "Datacenter de proximidad o nube pública, copias de seguridad, continuidad de negocio y migración de servidores. El día que necesites recuperar una carpeta borrada, querrás saber dónde está la copia. Criterios claros para decidir dónde alojar tus sistemas.",
     },
     {
       slug: "soporte-it",
@@ -98,7 +98,7 @@ const blog = {
       title: "Soporte IT para empresas: guías prácticas | ADQA",
       description: "Guías de soporte IT para empresas: mantenimiento informático reactivo o proactivo y cómo organizar el soporte para que la informática no frene el trabajo.",
       h1: "Soporte IT: guías para que la informática no frene el trabajo",
-      intro: "Cómo organizar el soporte y el mantenimiento informático de tu empresa: qué conviene prevenir, qué se resuelve sobre la marcha y cómo medir que funciona.",
+      intro: "Cómo organizar el soporte y el mantenimiento informático de tu empresa. El ordenador que cada mañana tarda un poco más en arrancar suele avisar antes de fallar. Qué conviene prevenir, qué se resuelve sobre la marcha y cómo medir que funciona.",
     },
     {
       slug: "web",
@@ -111,7 +111,7 @@ const blog = {
       title: "Diseño web y software a medida: guías | ADQA",
       description: "Guías de diseño web, mantenimiento y software a medida para empresas: plantilla o desarrollo propio, CMS, mantenimiento preventivo y cuándo modernizar.",
       h1: "Web y software a medida: guías para decidir bien",
-      intro: "Diseño y programación web, mantenimiento y software de gestión a medida: las preguntas que conviene hacerse antes de encargar, renovar o modernizar.",
+      intro: "Diseño y programación web, mantenimiento y software de gestión a medida. ¿Hay alguien en tu equipo que pase datos a mano de una hoja de cálculo a otra? Estas son las preguntas que conviene hacerse antes de encargar, renovar o modernizar.",
     },
     {
       slug: "workspace",
@@ -124,7 +124,7 @@ const blog = {
       title: "Google Workspace y Microsoft 365: guías | ADQA",
       description: "Guías sobre Google Workspace y Microsoft 365 para empresas: licencias, migración, seguridad, colaboración y cuándo tiene sentido cambiar de plataforma.",
       h1: "Google Workspace y Microsoft 365, sin letra pequeña",
-      intro: "Licencias, migraciones, seguridad y trabajo en equipo en las dos grandes plataformas de productividad. Información práctica para elegir, migrar y sacarles partido.",
+      intro: "Licencias, migraciones, seguridad y trabajo en equipo en las dos grandes plataformas de productividad. Quizá tu equipo se pasa archivos por correo y ya no sabes cuál es la última versión. Si te toca elegir, migrar o sacarles más partido, aquí tienes información práctica.",
     },
   ],
 };
