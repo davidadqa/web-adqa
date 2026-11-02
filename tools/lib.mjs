@@ -36,14 +36,18 @@ export async function serve(dir, prefix = "/") {
 }
 
 // Abre una página, hace scroll para disparar las animaciones y devuelve métricas básicas.
+// Cada página va en su propio contexto y se cierra entero al acabar: con browser.newPage() + page.close()
+// los contextos se acumulaban y, hacia la página 100, el navegador se quedaba sin memoria y check.mjs se colgaba.
 export async function inspect(browser, url, { width = 1440, height = 900, shot } = {}) {
-  const page = await browser.newPage({ viewport: { width, height } });
+  const context = await browser.newContext({ viewport: { width, height } });
+  const page = await context.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
   const failed = [];
   page.on("response", (r) => { if (r.status() >= 400 && !r.url().includes("/recursos/")) failed.push(`${r.status()} ${r.url()}`); });
-  const resp = await page.goto(url, { waitUntil: "networkidle" });
+  // «load» y no «networkidle»: las animaciones en bucle y los recursos diferidos pueden no dejar nunca la red quieta.
+  const resp = await page.goto(url, { waitUntil: "load", timeout: 45000 });
   const H = await page.evaluate(() => document.body.scrollHeight);
   for (let y = 0; y < H; y += 600) { await page.evaluate((v) => scrollTo(0, v), y); await page.waitForTimeout(40); }
   await page.evaluate(() => scrollTo(0, 0));
@@ -61,6 +65,6 @@ export async function inspect(browser, url, { width = 1440, height = 900, shot }
     text: document.querySelector("main")?.innerText || "",
   }));
   if (shot) await page.screenshot({ path: shot, fullPage: true });
-  await page.close();
+  await context.close();
   return { status: resp ? resp.status() : 0, errors, failed, ...info };
 }

@@ -51,8 +51,15 @@ try {
   const idsByPage = {};
   const linkList = [];
   for (const p of pages) {
-    const d = await inspect(browser, site.base + p);
-    const m = await inspect(browser, site.base + p, { width: 390, height: 844 });
+    let d, m;
+    try {
+      d = await inspect(browser, site.base + p);
+      m = await inspect(browser, site.base + p, { width: 390, height: 844 });
+    } catch (e) {
+      // Una página que falla no debe tumbar toda la revisión: se apunta y se sigue.
+      report.problems.push(`/${p}: no se ha podido inspeccionar (${String(e.message || e).split("\n")[0]})`);
+      continue;
+    }
     idsByPage["/" + p] = new Set(d.ids);
     const text = d.text;
     const count = (re) => (text.match(re) || []).length;
