@@ -125,7 +125,8 @@ p{color:var(--gray)}
 @keyframes fadeUp{to{opacity:1;transform:none}}
 
 /* orbit: one contact, all services */
-.orbit-wrap{position:relative;margin:56px auto 0;width:min(720px,100%);aspect-ratio:2/1;overflow:hidden;mask-image:linear-gradient(#000 65%,transparent);-webkit-mask-image:linear-gradient(#000 65%,transparent)}
+/* La máscara funde las órbitas hacia abajo, pero deja un hueco circular (--hole) alrededor del núcleo: el logo se ve entero. */
+.orbit-wrap{--hole:92px;--orbit-mask:linear-gradient(#000 65%,transparent),radial-gradient(circle at 50% 100%,#000 var(--hole),transparent calc(var(--hole) + 28px));position:relative;margin:56px auto 0;width:min(720px,100%);aspect-ratio:2/1;overflow:hidden;mask-image:var(--orbit-mask);-webkit-mask-image:var(--orbit-mask)}
 .orbit{position:absolute;left:50%;top:100%;width:86%;aspect-ratio:1;transform:translate(-50%,-50%)}
 .ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--line-2)}
 .ring.r2{inset:17%;border-style:dashed;border-color:var(--line-2)}
@@ -459,6 +460,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .node>span{font-size:.74rem;padding:6px 10px 6px 6px}
   .node i{width:20px;height:20px}
   .core{width:104px;height:104px}.core img{width:62px;margin-top:-28px}
+  .orbit-wrap{--hole:66px}
   .st{position:relative;top:auto}
 }
 @media (prefers-reduced-motion:reduce){

@@ -24,7 +24,9 @@
 .revisio-ui .revisio-count{min-width:44px;padding:0 14px 0 12px;font-variant-numeric:tabular-nums}
 .revisio-ui .revisio-count[aria-expanded="true"]{background-color:rgba(255,255,255,.12)}
 .revisio-count::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--r-pink)}
-.revisio-dock.is-away:not(:focus-within){transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+/* al bajar leyendo, el botón no se esconde: se queda en un círculo con el lápiz (el texto sigue para los lectores de pantalla) */
+.revisio-dock.is-away:not(:focus-within):not(:hover) .revisio-toggle{width:44px;padding:0}
+.revisio-dock.is-away:not(:focus-within):not(:hover) .revisio-toggle span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 body.menu-open .revisio-dock{opacity:0;visibility:hidden}
 
 /* capas de marcas (superposición fija, sin eventos): contorno discontinuo al pasar, filete rosa en lo ya corregido.
