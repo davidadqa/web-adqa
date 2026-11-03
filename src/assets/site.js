@@ -166,12 +166,15 @@
   /* P2-03 · Teclado: el foco nunca aterriza en algo invisible. El CSS ya muestra al instante el bloque (.rv:not(.in):focus-within);
      aquí, después de fijar ese estado, se marca como aparecido (.in) para que no vuelva a esconderse. Lo armado (.p-armed) se
      desarma: queda en su estado de base, el final, sin la entrada (que empezaría desde invisible). Y si el bloque ya estaba
-     apareciendo (el scroll del foco lo acaba de mostrar), su fundido termina ya. */
+     apareciendo (el scroll del foco lo acaba de mostrar), su fundido termina ya: solo con teclado (:focus-visible) y solo en
+     los bloques (.rv, .p-in). Un clic con ratón también enfoca, y acabar ahí las transiciones dejaba sin tempo la tecla. */
+  const fv = window.CSS && CSS.supports && CSS.supports('selector(:focus-visible)');
   document.addEventListener('focusin', e => {
+    const kb = !fv || e.target.matches(':focus-visible');
     for (let el = e.target; el && el.matches; el = el.parentElement) {
       if (el.matches('.rv:not(.in)')) { getComputedStyle(el).opacity; el.classList.add('in'); }
       if (el.matches('.p-armed:not(.p-in)')) el.classList.replace('p-armed', 'p-in');
-      if (el.getAnimations) el.getAnimations().forEach(a => /^(opacity|transform|filter)$/.test(a.transitionProperty) && a.finish());
+      if (kb && el.getAnimations && el.matches('.rv,.p-in')) el.getAnimations().forEach(a => /^(opacity|transform|filter)$/.test(a.transitionProperty) && a.finish());
     }
   });
 
