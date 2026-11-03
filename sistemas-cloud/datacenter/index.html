@@ -182,8 +182,9 @@
 .dc-feats .card{padding:22px;display:grid;gap:8px;align-content:start}
 .dc-feats .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
 .dc-feats .ico svg{width:19px;height:19px}
-.dc-feats h3{font-size:1.02rem}
-.dc-feats p{font-size:.93rem}
+.dc-feats h3{font-size:var(--fs-lead)}
+.dc-feats p{font-size:var(--fs-sm)}
+@media (max-width:1060px){.dc-feats p{font-size:var(--fs-body)}} /* a una columna (.split) las fichas son anchas: texto de lectura, no 14 px */
 @media (max-width:420px){.dc-feats{grid-template-columns:1fr}}
 </style>
 

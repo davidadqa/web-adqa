@@ -140,17 +140,17 @@
 <style>
 /* Casos de éxito: piezas propias (candidatas a site.css) */
 #tipos-de-proyecto .aud .card{display:flex;flex-direction:column}
-#tipos-de-proyecto .aud .txt-link{margin-top:auto;font-size:.92rem}
-.aud .case-links{margin-top:4px;padding-top:12px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted);line-height:1.7}
+#tipos-de-proyecto .aud .txt-link{margin-top:auto;font-size:var(--fs-sm)}
+.aud .case-links{margin-top:4px;padding-top:12px;border-top:1px solid var(--line);font-size:var(--fs-sm);color:var(--muted);line-height:1.7}
 .aud .case-links a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
 .aud .case-links a:hover{color:var(--pink)}
 /* Filtro por servicio (aria-pressed) */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
 .chips[hidden]{display:none}
-.chips button{height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.9rem;font-weight:600;color:var(--gray);transition:background .25s,color .25s,border-color .25s}
+.chips button{height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:var(--fs-sm);font-weight:600;color:var(--gray);transition:background .25s,color .25s,border-color .25s}
 .chips button:hover{border-color:var(--line-2);color:var(--ink)}
 .chips button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-.chips button small{font-size:.78rem;font-weight:600;opacity:.8;margin-left:4px}
+.chips button small{font-size:var(--fs-sm);font-weight:600;opacity:.8;margin-left:4px}
 /* Fichas de proyecto */
 .cases{display:grid;gap:18px}
 .case{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);scroll-margin-top:110px}
@@ -158,12 +158,12 @@
 .case figure{aspect-ratio:auto;height:100%;min-height:340px;position:relative}
 .case figure img{position:absolute;inset:0}
 .case .body{padding:34px 36px;gap:14px}
-.case h3{font-size:clamp(1.35rem,2.2vw,1.7rem)}
-.case .sum{font-size:1.02rem;color:var(--ink)}
-.case .ticks{gap:9px}
-.case .ticks li{gap:10px;font-size:.96rem}
-.case .ticks li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--pink);margin-top:10px}
-.case .note{margin:0;max-width:none;text-align:left;font-size:.9rem;background:var(--surface-2);border-radius:12px;padding:12px 14px}
+.case h3{font-size:var(--fs-xl)}
+.case .sum{font-size:var(--fs-lead);color:var(--ink);max-width:var(--measure)}
+.case .ticks{gap:9px;max-width:var(--measure)}
+.case .ticks li{gap:10px;font-size:var(--fs-body)}
+.case .ticks li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--pink);margin-top:calc(.75em - 2.5px)}
+.case .note{margin:0;max-width:var(--measure);text-align:left;font-size:var(--fs-sm);background:var(--surface-2);border-radius:12px;padding:12px 14px}
 .case .tags{margin-top:4px}
 .case .tags a{transition:color .2s}
 .case .tags a:hover{color:var(--pink)}
@@ -174,7 +174,7 @@
 .common article{background:var(--night-2);border:1px solid var(--night-line);border-radius:var(--radius);padding:30px;display:grid;gap:12px;align-content:start}
 .common figure{margin-top:6px;border-radius:14px;overflow:hidden;border:1px solid var(--night-line)}
 .common figure img{width:100%;height:auto}
-.common .num{font-size:.82rem;font-weight:600;color:var(--pink);letter-spacing:.06em}
+.common .num{font-size:var(--fs-sm);font-weight:600;color:var(--p-pink-night,#F04D8F);letter-spacing:var(--ls-caps)}
 @media (max-width:1060px){.case{grid-template-columns:1fr}.case figure{height:auto;min-height:0;aspect-ratio:16/10}}
 @media (max-width:720px){.case .body{padding:24px}.common article{padding:24px}}
 </style>
