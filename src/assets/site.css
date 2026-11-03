@@ -1790,3 +1790,20 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
   .case-anon .ca-top{grid-row:span 2;grid-template-rows:subgrid;row-gap:14px}
 }
 @media (max-width:720px){.quote{padding:28px}}
+
+/* --- content: FAQ, tablas, contacto y formulario, «Dónde estamos», notas y fichas de los textos legales --- */
+.faq summary{font-size:var(--fs-lead);line-height:1.35;padding:24px 0}
+.where h3,.cert-go h2{font-size:var(--fs-h3)}
+.where address,.doc-file b{font-size:var(--fs-lead)}
+.faq details p,.vs th,.vs td,.note,.note.card,.note-box p,.where .addr p,.where .side p,.cert-go p,.form-ok,
+.field input,.field textarea,.field select{font-size:var(--fs-body)}
+.faq h3,.sub-head,.vs thead th,.spec thead th,.prose thead th,.prose table,.spec,.doc-table,
+.cert-facts dt,.cert-facts dd,.doc-more h2,.doc-more a,.doc-more p,.doc-file span,.cert-img .seal,.pinbox .pin span,.note-src,
+.field label,.field .hint,.check,.field input[type=file]::file-selector-button{font-size:var(--fs-sm)}
+.faq h3,.sub-head,.doc-more h2,.vs thead th,.spec thead th,.prose thead th,.vs td::before,.spec td::before{letter-spacing:var(--ls-caps)}
+.contact-info p,.note:not(.card),.note.card p,.note-box p,.note-src,.cert-txt .doc{max-width:var(--measure)}
+@media (max-width:720px){
+  .vs tbody th,.vs.mid tbody th,.vs.calc tbody th,.spec tbody th{font-size:var(--fs-lead)}
+  .vs td::before,.spec td::before{font-size:var(--fs-sm)}
+  .prose table,.doc-table,.spec,.cert-facts dt,.cert-facts dd,.doc-more a,.doc-more p{font-size:var(--fs-body)}
+}
