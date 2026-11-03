@@ -1704,6 +1704,7 @@ h3{font-size:var(--fs-h3)}
    preguntas de FAQ, los títulos de ficha y las etiquetas de resultado) */
 h2,h3,h4,.page-hero h1,.foot-claim .claim,.faq summary,.ca-stat span{text-wrap:balance}
 .quote blockquote,.toc a{text-wrap:pretty}
+sub,sup{font-size:max(13px,.83em)} /* el subíndice de «Clase E<sub>A</sub>» (tabla a 15 px) bajaba a 12,5 px */
 .doc{font-size:var(--fs-body);max-width:var(--measure)}
 .doc h2{font-size:var(--fs-h3)}
 .doc h3{font-size:var(--fs-lead)}
@@ -1818,8 +1819,10 @@ h2,h3,h4,.page-hero h1,.foot-claim .claim,.faq summary,.ca-stat span{text-wrap:b
 .rail{row-gap:0}
 .rail>.proj,:is(.proj-grid,.proj-grid>.rv)>.proj{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:0}
 .proj-grid>.rv:has(>.proj){grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
-.proj .body{grid-row:span 4;grid-template-rows:subgrid}
-.proj .hl{margin-top:0;align-self:start} /* la línea del resultado, a la misma altura en toda la fila */
+/* Solo dentro del carril y de .proj-grid: en /casos-de-exito/ las fichas .proj.case (foto al lado, en .cases) no son
+   subgrid, y con «.proj .body» a secas la etiqueta ocupaba la fila de la foto (340 px de hueco antes del título). */
+:is(.rail,.proj-grid,.proj-grid>.rv)>.proj .body{grid-row:span 4;grid-template-rows:subgrid}
+:is(.rail,.proj-grid,.proj-grid>.rv)>.proj .hl{margin-top:0;align-self:start} /* la línea del resultado, a la misma altura en toda la fila */
 @media (max-width:720px){.quote{padding:28px}}
 
 /* --- content: FAQ, tablas, contacto y formulario, «Dónde estamos», notas y fichas de los textos legales --- */
