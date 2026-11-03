@@ -1807,3 +1807,22 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
   .vs td::before,.spec td::before{font-size:var(--fs-sm)}
   .prose table,.doc-table,.spec,.cert-facts dt,.cert-facts dd,.doc-more a,.doc-more p{font-size:var(--fs-body)}
 }
+
+/* --- blog: /recursos/, categorías, tarjetas de artículo, artículo con su índice e imágenes provisionales --- */
+.blog-cat-head p{max-width:var(--measure)}
+.res h3,.res h4,.art-card h3,.res.four h3{font-size:var(--fs-lead)}
+.res p,.art-card p{font-size:var(--fs-body)}
+.res .cat,.res.four p,.art-meta,.art-tags li,.toc-title,.toc a,.toc a::before,.art-main .prose h2::before,
+.ph-badge,.ph figcaption,.shot figcaption{font-size:var(--fs-sm)}
+.res .cat,.toc-title,.ph-badge{letter-spacing:var(--ls-caps)}
+.art-summary .tldr{font-size:var(--fs-lead);line-height:var(--lh-lead);max-width:none}
+/* Artículo: columna de 32em (66–73 caracteres) centrada con el índice; 18 px en todo el escritorio */
+.art-main .prose{max-width:var(--measure);line-height:1.7}
+@media (min-width:1061px){.art-main .prose{font-size:1.125rem}}
+.art-layout{grid-template-columns:minmax(0,var(--measure)) 300px;justify-content:center;column-gap:clamp(48px,8vw,120px)}
+@media (max-width:1060px){.art-layout{grid-template-columns:minmax(0,var(--measure))}}
+/* Índice: el número pasa de 12 a 15 px; hilo y nodo vuelven a su centro (x ≈ 8, y ≈ 18,5) */
+.toc li:not(:last-child)::before{left:7.5px;top:18.5px}
+.toc ol::after{left:7.5px;top:18.5px;bottom:18.5px}
+.toc a::after{left:5px;top:15.5px}
+@media (max-width:720px){.res h3,.art-card h3{font-size:var(--fs-h3)}}
