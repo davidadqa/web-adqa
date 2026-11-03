@@ -428,7 +428,7 @@
 
   /* Envío correcto («adqa:sent», con .form-ok ya visible): la flecha de «Enviar» sale volando y dos señales recorren el
      borde del formulario (radio 22, a .75 px) en sentidos opuestos, de debajo del botón al centro de arriba, donde aparece
-     un nodo con un ping. --p-dur: de 1,2 a 2 s según el tamaño (unos 600 px/s). Se retira al acabar. */
+     un nodo (punto de 7 px con halo de 4) con un ping. --p-dur: de 1,2 a 2 s según el tamaño (unos 600 px/s). Se retira al acabar. */
   document.querySelectorAll('.form').forEach(form => form.addEventListener('adqa:sent', () => {
     form.classList.remove('p-content-sent'); void form.offsetWidth; form.classList.add('p-content-sent');
     setTimeout(() => form.classList.remove('p-content-sent'), 950);
@@ -439,7 +439,7 @@
     const c = (k, rr) => `<circle class="${k}" cx="${m}" cy="${i}" r="${rr}"/>`;
     const box = document.createElement('div');
     box.className = 'p-content-loop'; box.setAttribute('aria-hidden', 'true'); box.style.setProperty('--p-dur', d.toFixed(2) + 's');
-    box.innerHTML = `<svg focusable="false"><path pathLength="1" d="${side(0)}"/><path pathLength="1" d="${side(1)}"/><g class="n">${c('h', 7.5)}${c('d', 3.5)}</g>${c('p', 3.5)}</svg>`;
+    box.innerHTML = `<svg focusable="false"><path pathLength="1" d="${side(0)}"/><path pathLength="1" d="${side(1)}"/>${c('n', 5.5)}${c('p', 3.5)}</svg>`;
     form.append(box);
     setTimeout(() => box.remove(), (d + 1.95) * 1000);
   }));
