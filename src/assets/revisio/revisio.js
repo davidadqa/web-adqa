@@ -448,8 +448,8 @@
   addEventListener('resize', redraw);
   if (window.visualViewport) { visualViewport.addEventListener('resize', redraw); visualViewport.addEventListener('scroll', redraw); }
   addEventListener('storage', (e) => { if (e.key === KEY) { items = load(); refresh(); scan(); } });
-  // el botón se aparta al bajar leyendo (también en el escritorio: allí tapaba el principio de las líneas de la columna
-  // izquierda) y vuelve al subir, al recibir el foco o al guardar
+  // al bajar leyendo, el botón se encoge a un círculo con el lápiz (no tapa el principio de las líneas, pero siempre
+  // se ve) y recupera el texto al subir, al pasar el ratón, al recibir el foco o al guardar
   addEventListener('scroll', () => {
     const y = scrollY; if (Date.now() < quiet) { lastY = y; return; } // los desplazamientos propios no cuentan
     if (Math.abs(y - lastY) < 6) return;
@@ -457,5 +457,7 @@
   }, { passive: true });
 
   refresh();
+  // ?corregir en la dirección activa el modo directamente (para enlaces del tipo …/web-adqa/redes/?corregir)
   if (get(MODE, 1) === '1') setMode(true, 1);
+  else if (/[?&]corregir(=|&|$)/.test(location.search)) setMode(true);
 })();
