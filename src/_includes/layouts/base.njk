@@ -25,12 +25,15 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
+{%- if site.env == "preview" %}
+<link rel="stylesheet" href="/assets/revisio/revisio.css">
+{%- endif %}
 <script type="application/ld+json">
 {% block jsonld %}{{ { url: page.url, title: title, description: description, isHome: isHome, pageType: pageType, service: service, breadcrumbs: breadcrumbs, faq: faq, extra: jsonldExtra } | jsonld | safe }}{% endblock %}
 </script>
 {% block head %}{% endblock %}
 </head>
-<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %} data-area="{{ page.url.split('/')[1] or 'home' }}"{% if category %} data-cat="{{ category }}"{% endif %}>
 <a class="skip" href="#main">Saltar al contenido</a>
 
 {% include "partials/sprite.njk" %}
@@ -44,6 +47,10 @@
 {% include "partials/footer.njk" %}
 
 <script src="/assets/site.js" defer></script>
+{%- if site.env == "preview" %}
+{#- Modo corrección: solo en la vista previa, nunca en producción. -#}
+<script src="/assets/revisio/revisio.js" defer></script>
+{%- endif %}
 {% block scripts %}{% endblock %}
 </body>
 </html>

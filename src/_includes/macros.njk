@@ -29,7 +29,7 @@
       <div class="rv">
         <h3>Para el manager</h3>
         {%- for q in faq.manager %}
-        <details{% if loop.first %} open{% endif %}><summary>{{ q.q }} <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
+        <details{% if loop.first %} open{% endif %}><summary>{{ q.q }} <span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
         {%- endfor %}
       </div>
       {%- endif %}
@@ -37,14 +37,14 @@
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
         {%- for q in faq.tecnico %}
-        <details><summary>{{ q.q }} <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
+        <details><summary>{{ q.q }} <span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
         {%- endfor %}
       </div>
       {%- endif %}
       {%- if faq.items and faq.items.length %}
       <div class="rv">
         {%- for q in faq.items %}
-        <details{% if loop.first %} open{% endif %}><summary>{{ q.q }} <span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
+        <details{% if loop.first %} open{% endif %}><summary>{{ q.q }} <span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>{{ q.a }}</p></details>
         {%- endfor %}
       </div>
       {%- endif %}
@@ -73,9 +73,9 @@
       <p>{{ text | safe }}</p>
       {%- endif %}
       <div class="ways">
-        <a href="tel:{{ site.phoneE164 }}"><svg><use href="#i-phone"/></svg>{{ site.phone }}</a>
-        <a href="mailto:{{ site.email }}"><svg><use href="#i-mail"/></svg>{{ site.email }}</a>
-        <div><svg><use href="#i-pin"/></svg><span style="font-weight:500">{{ site.address.short }}</span></div>
+        <a href="tel:{{ site.phoneE164 }}"><svg aria-hidden="true"><use href="#i-phone"/></svg>{{ site.phone }}</a>
+        <a href="mailto:{{ site.email }}"><svg aria-hidden="true"><use href="#i-mail"/></svg>{{ site.email }}</a>
+        <div><svg aria-hidden="true"><use href="#i-pin"/></svg><span style="font-weight:500">{{ site.address.short }}</span></div>
       </div>
     </div>
     <form class="form rv" style="--s:1" action="/contacto/" method="post" novalidate>
@@ -93,7 +93,7 @@
       <div class="field full"><label for="{{ id }}-msg">¿Qué necesitas?</label><textarea id="{{ id }}-msg" name="mensaje"></textarea></div>
       <input class="hp" name="linkedin" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="check"><input type="checkbox" name="consentimiento" required> <span>He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>. <i class="req">*</i></span></label>
-      <button class="btn btn-primary" type="submit">Enviar <svg><use href="#i-arrow"/></svg></button>
+      <button class="btn btn-primary" type="submit">Enviar <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
       <p class="form-ok" role="status">Gracias. Hemos recibido tu mensaje y te responderemos muy pronto.</p>
     </form>
   </div>
@@ -102,7 +102,7 @@
 
 {#- Tarjeta de un proyecto con nombre (datos en _data/projects.json). -#}
 {% macro projectCard(p) %}
-<article class="proj" id="proj-{{ p.id }}"><figure><img src="/assets/proyectos/{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></figure><div class="body"><span class="kind">{{ p.kind }}</span><h3>{{ p.name }}</h3><p>{{ p.summary }}</p><div class="hl"><svg><use href="#{{ p.icon }}"/></svg>{{ p.highlight }}</div></div></article>
+<article class="proj" id="proj-{{ p.id }}"><figure><img src="/assets/proyectos/{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></figure><div class="body"><span class="kind">{{ p.kind }}</span><h3>{{ p.name }}</h3><p>{{ p.summary }}</p><div class="hl"><svg aria-hidden="true"><use href="#{{ p.icon }}"/></svg>{{ p.highlight }}</div></div></article>
 {% endmacro %}
 
 {#- Carril de proyectos con nombre. `ids`: lista de ids de _data/projects.json (vacío = todos). -#}
@@ -113,7 +113,7 @@
       <span class="eyebrow">{{ eyebrow }}</span>
       <h2 id="h-{{ id }}">{{ title }}</h2>
     </div>
-    <div class="proj-nav rv"><button type="button" data-rail="-1" aria-label="Proyecto anterior"><svg><use href="#i-left"/></svg></button><button type="button" data-rail="1" aria-label="Proyecto siguiente"><svg><use href="#i-arrow"/></svg></button></div>
+    <div class="proj-nav rv"><button type="button" data-rail="-1" aria-label="Proyecto anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button><button type="button" data-rail="1" aria-label="Proyecto siguiente"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
   </div>
   <div class="rail" id="rail" tabindex="0" aria-label="{{ title }}">
     {%- for p in projects %}{% if not ids.length or p.id in ids %}
@@ -203,9 +203,9 @@
       <h2 id="h-{{ id }}">{{ title }}</h2>
     </div>
     <div class="metrics">
-      <div class="metric rv" style="--s:0"><b><span data-count="{{ site.survey.response }}">0</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.response }}"></i></div><p>valoran nuestro <strong>tiempo de respuesta</strong> como bueno o muy bueno.</p></div>
-      <div class="metric rv" style="--s:1"><b><span data-count="{{ site.survey.knowledge }}">0</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.knowledge }}"></i></div><p>valoran el <strong>conocimiento de nuestro equipo técnico</strong> como bueno o muy bueno.</p></div>
-      <div class="metric rv" style="--s:2"><b><span data-count="{{ site.survey.recommend }}">0</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.recommend }}"></i></div><p>recomendarían ADQA por su <strong>capacidad de integración</strong> tecnológica.</p></div>
+      <div class="metric rv" style="--s:0"><b><span data-count="{{ site.survey.response }}">{{ site.survey.response }}</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.response }}" style="--w:{{ site.survey.response }}%"></i></div><p>valoran nuestro <strong>tiempo de respuesta</strong> como bueno o muy bueno.</p></div>
+      <div class="metric rv" style="--s:1"><b><span data-count="{{ site.survey.knowledge }}">{{ site.survey.knowledge }}</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.knowledge }}" style="--w:{{ site.survey.knowledge }}%"></i></div><p>valoran el <strong>conocimiento de nuestro equipo técnico</strong> como bueno o muy bueno.</p></div>
+      <div class="metric rv" style="--s:2"><b><span data-count="{{ site.survey.recommend }}">{{ site.survey.recommend }}</span><span>%</span></b><div class="bar"><i data-w="{{ site.survey.recommend }}" style="--w:{{ site.survey.recommend }}%"></i></div><p>recomendarían ADQA por su <strong>capacidad de integración</strong> tecnológica.</p></div>
     </div>
     <p class="note-src rv">{{ site.survey.source }}.</p>
   </div>
