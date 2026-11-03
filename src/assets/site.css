@@ -744,7 +744,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .toc ol{list-style:none;display:grid;gap:2px;counter-reset:toc}
 .toc li{counter-increment:toc}
 .toc a{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:6px 0;font-size:.9rem;line-height:1.4;color:var(--gray);transition:color .2s}
-.toc a::before{content:counter(toc,decimal-leading-zero);font-size:.75rem;font-weight:600;padding-top:2px}
+.toc a::before{content:counter(toc,decimal-leading-zero);content:counter(toc,decimal-leading-zero) / "";font-size:.75rem;font-weight:600;padding-top:2px}
 .toc a:hover{color:var(--ink)}
 .svc-card{display:grid;gap:8px;padding:22px}
 .svc-card .cat{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
@@ -920,6 +920,9 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .legal nav{gap:24px 18px}
   .foot ul a,.legal nav a{position:relative}
   .foot ul a::after,.legal nav a::after{content:"";position:absolute;inset:-14px -6px}
+  /* Enlaces sueltos (flecha, vías de contacto, logo): el mismo pseudo invisible, centrado, lleva el área táctil a 44 px de alto */
+  :is(.txt-link,.st .go,.ways a,.cert-links a,.reach a.v,.nav-logo){position:relative}
+  :is(.txt-link,.st .go,.ways a,.cert-links a,.reach a.v,.nav-logo)::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
 }
 
 /* ---------- Transiciones entre páginas: la nav se queda quieta y el contenido funde (mejora progresiva) ----------
@@ -1630,7 +1633,7 @@ body .ficha dl>:nth-last-child(-n+2){background:none}
 .toc a[aria-current]{color:var(--ink)}
 .toc a[aria-current]::before{color:transparent;transition-delay:.25s}
 .toc a[aria-current]::after{transform:none;transition:transform .35s var(--ease) .25s}
-/* Con reduced-motion, la regla global de reduced-motion (base, más arriba) (*::before,*::after{transition:none!important}) deja los cambios instantáneos. */
+/* Con reduced-motion, la regla global de la base (*,*::before,*::after{transition:none!important}) deja los cambios instantáneos. */
 
 /* ---------- Móvil (≤ 720 px) ---------- */
 @media (max-width:720px){

@@ -305,8 +305,13 @@
   /* «El contador mecánico»: cada dígito es una columna 0–9 que se desliza en vertical, primero las unidades
      (que dan una vuelta entera) y después las decenas. Se quita data-count para que site.js no cuente también;
      el valor queda en un .sr para los lectores de pantalla y el rodillo es aria-hidden.
-     Con reduced-motion no se toca nada: site.js ya deja el valor final, quieto. */
-  if (calm) return;
+     Con reduced-motion no hay rodillo: el valor final y la barra llena se escriben ya al cargar (sin esperar a que
+     la cifra entre en pantalla, para que nunca se vea un «0»). */
+  if (calm) {
+    document.querySelectorAll('[data-count]').forEach((el) => { el.textContent = el.dataset.count; });
+    document.querySelectorAll('.metric [data-w]').forEach((b) => { b.style.width = b.dataset.w + '%'; });
+    return;
+  }
   document.querySelectorAll('.stat [data-count], .metric [data-count]').forEach((el) => {
     const v = el.dataset.count;
     if (!/^\d{1,4}$/.test(v)) return;
