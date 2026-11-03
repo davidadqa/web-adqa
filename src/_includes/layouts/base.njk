@@ -25,10 +25,6 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
-{#- Diseño «poesía»: una hoja por familia de componentes mientras se trabaja; al final se integran en site.css. -#}
-{%- for g in ["chrome", "heroes", "cards", "proof", "content", "blog"] %}
-<link rel="stylesheet" href="/assets/poesia/{{ g }}.css">
-{%- endfor %}
 {%- if site.env == "preview" %}
 <link rel="stylesheet" href="/assets/revisio/revisio.css">
 {%- endif %}
@@ -51,9 +47,6 @@
 {% include "partials/footer.njk" %}
 
 <script src="/assets/site.js" defer></script>
-{%- for g in ["chrome", "heroes", "cards", "proof", "content", "blog"] %}
-<script src="/assets/poesia/{{ g }}.js" defer></script>
-{%- endfor %}
 {%- if site.env == "preview" %}
 {#- Modo corrección: solo en la vista previa, nunca en producción. -#}
 <script src="/assets/revisio/revisio.js" defer></script>
