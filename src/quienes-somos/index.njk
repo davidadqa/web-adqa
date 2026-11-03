@@ -30,9 +30,9 @@ faq:
 /* Quiénes somos: piezas propias de esta página */
 /* Ficha «ADQA en datos» junto a la historia */
 .ficha{padding:30px;align-self:start}
-.ficha h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.ficha h3{font-size:var(--fs-sm);text-transform:uppercase;letter-spacing:var(--ls-caps);color:var(--muted);margin-bottom:6px}
 .ficha dl{display:grid;grid-template-columns:auto 1fr;gap:0 22px}
-.ficha dt,.ficha dd{padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.ficha dt,.ficha dd{padding:12px 0;border-bottom:1px solid var(--line);font-size:var(--fs-sm)}
 .ficha dt{color:var(--muted);font-weight:500}
 .ficha dd{color:var(--ink);font-weight:600}
 .ficha dd a{color:var(--pink)}
@@ -40,7 +40,7 @@ faq:
 #historia .split{align-items:start}
 /* Especialidades del equipo: enlace al pie de cada tarjeta */
 #equipo .aud .card{display:flex;flex-direction:column}
-#equipo .aud .txt-link{margin-top:auto;padding-top:4px;font-size:.92rem}
+#equipo .aud .txt-link{margin-top:auto;padding-top:4px;font-size:var(--fs-sm)}
 #equipo .split{margin-bottom:clamp(40px,5vw,56px)}
 /* Enlaces de certificados y partners, bajo la entradilla */
 .cert-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:6px}
@@ -53,6 +53,7 @@ faq:
   .ficha dl{grid-template-columns:1fr}
   .ficha dt{padding-bottom:0;border-bottom:0}
   .ficha dd{padding-top:2px}
+  .ficha dt,.ficha dd{font-size:var(--fs-body)} /* a una columna, la ficha se lee como texto */
   /* Especialidades compactas: icono a la izquierda */
   #equipo .aud .card{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:22px}
   #equipo .aud .ico{grid-row:span 3;width:42px;height:42px;border-radius:12px}

@@ -26,7 +26,7 @@ faq:
 {% block head %}
 <style>
 /* Trabaja con nosotros: cifras con palabra y perfiles */
-.stat b.word{font-size:clamp(1.45rem,5.4vw,2.2rem)}
+.stat b.word{font-size:var(--fs-xl)} /* un paso por debajo de las cifras: «Datacenter» cabe a 1061 px */
 .profiles .svc{min-height:0}
 .profiles .svc .more{margin-top:4px}
 </style>
