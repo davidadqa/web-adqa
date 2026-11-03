@@ -108,7 +108,9 @@
   const tog = $(dock, '.revisio-toggle'), cnt = $(dock, '.revisio-count');
   const pLbl = $(panel, '#revisio-p-l'), pOrig = $(panel, '.revisio-orig'), ta = $(panel, 'textarea'), nt = $(panel, 'input'), del = $(panel, '.revisio-del'), save = $(panel, '.revisio-save');
   const list = $(drawer, '.revisio-list'), conf = $(drawer, '.revisio-confirm'), manual = $(drawer, '.revisio-manual'), share = $(drawer, '.revisio-share');
-  d.body.append(dock, scrim, panel, drawer, toastEl);
+  // el botón, justo después de «Saltar al contenido»: segunda parada del tabulador (sigue fijo abajo a la izquierda)
+  const skip = d.querySelector('body > .skip'); if (skip) skip.after(dock); else d.body.prepend(dock);
+  d.body.append(scrim, panel, drawer, toastEl);
   share.hidden = !navigator.share;
 
   // aviso breve; con el cajón abierto solo se anuncia (el propio cajón ya muestra el cambio)
@@ -184,7 +186,8 @@
   let cur = null, panelOpen = false, back = null, lastSel = null, quiet = 0, lastY = scrollY;
   const drafts = new Map();
   const clean = (s) => s.split('\n').map((l) => l.replace(/[ \t\u00a0\u200b]+/g, ' ').trim()).join('\n').replace(/\n{3,}/g, '\n\n').trim();
-  const sync = () => { save.disabled = !cur || (clean(ta.value) === cur.original && !nt.value.trim() && !cur.it); ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight + 2, innerHeight * 0.45) + 'px'; };
+  const tight = () => panel.classList.contains('is-compact');
+  const sync = () => { save.disabled = !cur || (clean(ta.value) === cur.original && !nt.value.trim() && !cur.it); ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight + 2, (cur && cur.cap) || innerHeight * (tight() ? 0.25 : 0.45)) + 'px'; };
   function open(el, it, key) {
     const url = it ? it.url : here(), original = it ? it.original : textOf(el);
     if (!original) return;
@@ -192,11 +195,11 @@
     if (panelOpen && cur && clean(ta.value) !== (cur.it ? cur.it.text : cur.original)) drafts.set(cur.k, [ta.value, nt.value]);
     const k = url + '\n' + original, dr = drafts.get(k);
     if (!panelOpen) back = key ? d.activeElement : null;
-    cur = { el, url, original, it, k };
+    const c = cur = { el, url, original, it, k };
     pOrig.textContent = original; pLbl.textContent = el ? 'Text actual' : `Text actual · ${url}`; // sin bloque a la vista: de qué página es
     ta.value = dr ? dr[0] : it ? it.text : original; nt.value = dr ? dr[1] : (it && it.note) || '';
     del.hidden = !it; panelOpen = true; toastEl.classList.remove('is-open');
-    panel.classList.toggle('is-free', !el); panel.classList.add('is-open');
+    panel.classList.toggle('is-free', !el); panel.classList.remove('is-compact'); panel.classList.add('is-open');
     sync(); place(); draw();
     // si había un trozo seleccionado dentro del bloque, queda marcado en el área de texto
     let a = ta.value.length, z = a; const s = lastSel; lastSel = null;
@@ -211,11 +214,45 @@
       }
     }
     ta.focus({ preventScroll: true }); ta.setSelectionRange(a, z);
-    if (el) requestAnimationFrame(() => { // bloque y panel a la vista a la vez: si no caben, el bloque sube bajo la navegación
-      const r = el.getBoundingClientRect(), h = panel.offsetHeight, vh = innerHeight;
-      const fits = r.top >= 84 && (narrow.matches ? r.bottom <= vh - h - 12 : r.bottom + h + 24 <= vh || r.top - h - 24 >= 0);
-      if (!fits) { quiet = Date.now() + 900; scrollBy({ top: r.top - 96, behavior: calm.matches ? 'instant' : 'smooth' }); }
+    if (el) requestAnimationFrame(() => { // con la altura real del panel ya lleno
+      if (cur !== c || !panelOpen) return;
+      if (!narrow.matches) settle();
+      else { const r = el.getBoundingClientRect(); if (r.top < 84 || r.bottom > innerHeight - panel.offsetHeight - 12) go(r.top - 96); } // hoja inferior: el bloque, encima
+      c.ready = true;
     });
+  }
+  const go = (dy) => { if (Math.abs(dy) > 1) { quiet = Date.now() + 900; scrollBy({ top: dy, behavior: calm.matches ? 'instant' : 'smooth' }); } };
+  // escritorio: bloque y panel a la vista a la vez. Si ya caben (el bloque se ve, o el principio si es muy alto, y el panel va
+  // debajo, encima o al lado sin taparlo), nada se mueve; si no, el bloque sube bajo la navegación, y si ni así cabe el panel
+  // entero en ningún lado, se compacta (texto actual y área de texto más bajos, con scroll propio) hasta el próximo bloque
+  function settle() {
+    const r = cur.el.getBoundingClientRect(), vh = innerHeight, w = panel.offsetWidth;
+    if (r.top >= 84 && (r.bottom <= vh - 12 || r.top <= 120) && spot(r, w, panel.offsetHeight)[2]) return;
+    const dy = Math.max(-scrollY, Math.min(r.top - 96, root.scrollHeight - vh - scrollY)); // lo que de verdad podrá moverse
+    const r2 = { top: r.top - dy, bottom: r.bottom - dy, left: r.left, right: r.right };
+    if (!tight() && !spot(r2, w, panel.offsetHeight)[2]) {
+      panel.classList.add('is-compact'); sync();
+      // si aún le falta poco para caber debajo o encima, el área de texto encoge lo justo (nunca por debajo de unas tres líneas)
+      const room = Math.max(vh - 12 - Math.max(12, r2.bottom + 12), r2.top - 12 <= vh - 12 ? r2.top - 24 : vh - 24);
+      const cap = Math.max(88, ta.offsetHeight - (panel.offsetHeight - room));
+      if (cap < ta.offsetHeight) { cur.cap = cap; sync(); }
+      // el área de texto ha encogido: que el cursor (o lo seleccionado) siga a la vista
+      if (d.activeElement === ta) ta.scrollTop = ta.selectionEnd >= ta.value.length ? ta.scrollHeight : ta.scrollHeight * ta.selectionStart / ta.value.length - ta.clientHeight / 3;
+    }
+    go(dy); place();
+  }
+  /* dónde va el panel (escritorio): debajo del bloque, encima o al lado (derecha o izquierda) sin taparlo; si nada de eso
+     cabe, abajo del todo como último recurso. Devuelve [left, top, ¿sin taparlo?]. Si el bloque sale de la ventana (el
+     usuario se desplaza), el panel se va con él: no se queda clavado tapando la página */
+  function spot(r, w, h) {
+    const vw = root.clientWidth, vh = innerHeight, m = 12, g = 12, x = Math.max(m, Math.min(r.left - 4, vw - w - m));
+    const below = r.bottom + g, above = r.top - g - h;
+    if (below + h <= vh - m) return [x, below, 1];
+    if (above >= m) return [x, above, 1];
+    const y = Math.max(m, Math.min(r.top - 2, vh - m - h));
+    if (r.right + g + w <= vw - m) return [r.right + g, y, 1];
+    if (r.left - g - w >= m) return [r.left - g - w, y, 1];
+    return [x, Math.max(m, vh - m - h), 0];
   }
   let kbWas = -1;
   function place() {
@@ -223,10 +260,8 @@
     if (kb !== kbWas) { kbWas = kb; panel.style.setProperty('--revisio-kb', kb + 'px'); drawer.style.setProperty('--revisio-kb', kb + 'px'); }
     if (!panelOpen) return;
     if (narrow.matches || !cur.el || !cur.el.isConnected) { panel.style.left = panel.style.top = ''; return; }
-    const r = cur.el.getBoundingClientRect(), w = panel.offsetWidth, h = panel.offsetHeight, vw = root.clientWidth, vh = innerHeight, m = 12;
-    let top = r.bottom + 12;
-    if (top + h > vh - m) { top = r.top - 12 - h; if (top < m) top = Math.max(m, vh - m - h); }
-    const left = Math.round(Math.max(m, Math.min(r.left - 4, vw - w - m))) + 'px'; top = Math.round(top) + 'px';
+    const s = spot(cur.el.getBoundingClientRect(), panel.offsetWidth, panel.offsetHeight);
+    const left = Math.round(s[0]) + 'px', top = Math.round(s[1]) + 'px';
     if (panel.style.left !== left) panel.style.left = left;
     if (panel.style.top !== top) panel.style.top = top;
   }
@@ -250,8 +285,9 @@
   /* cajón con la lista */
   let drawerOpen = false, back2 = null;
   const groups = () => { const g = new Map(); items.forEach((i) => { if (!g.has(i.url)) g.set(i.url, []); g.get(i.url).push(i); }); return g; };
+  const words = (s) => s.replace(/\n/g, ' \n ').split(' ').filter(Boolean); // cada salto de línea, una «palabra» aparte
   function diff(a, b) { // diferencia por palabras (LCS) para ver de un vistazo qué cambia
-    const A = a.split(' '), B = b.split(' '), n = A.length, m = B.length;
+    const A = words(a), B = words(b), n = A.length, m = B.length;
     if (n * m > 250000) return [[[a, 0]], [[b, 0]]];
     const L = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
     for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) L[i][j] = A[i] === B[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
@@ -263,9 +299,11 @@
     }
     return [was, now];
   }
+  // tramos seguidos con el mismo estado; un salto de línea va suelto, sin marcar y sin espacios alrededor (el <p> es pre-wrap)
   const runs = (p, toks, tag, pre) => {
-    const r = []; toks.forEach(([w, c]) => { const l = r[r.length - 1]; if (l && l[1] === c) l[0] += ' ' + w; else r.push([w, c]); });
-    p.append(pre + '«'); r.forEach(([t, c], i) => { if (i) p.append(' '); p.append(c ? mk(tag, '', t) : t); }); p.append('»'); return p;
+    const nl = (x) => x && x[0] === '\n', r = [];
+    toks.forEach(([w, c]) => { const l = r[r.length - 1]; if (w !== '\n' && l && !nl(l) && l[1] === c) l[0] += ' ' + w; else r.push([w, w === '\n' ? 0 : c]); });
+    p.append(pre + '«'); r.forEach(([t, c], i) => { if (i && !nl(r[i]) && !nl(r[i - 1])) p.append(' '); p.append(c ? mk(tag, '', t) : t); }); p.append('»'); return p;
   };
   function render() {
     const n = items.length;
@@ -351,7 +389,12 @@
   $(panel, '.revisio-cancel').addEventListener('click', closePanel);
   save.addEventListener('click', commit);
   del.addEventListener('click', () => { const id = cur.it && cur.it.id; drafts.delete(cur.k); items = items.filter((i) => i.id !== id); persist(); closePanel(); scan(); toast(`Esborrada · ${plural(items.length)}`); });
-  ta.addEventListener('input', sync); nt.addEventListener('input', sync);
+  // al escribir, el área de texto crece: si el panel ya no cabe sin tapar el bloque, se recoloca como al abrirlo
+  ta.addEventListener('input', () => {
+    sync();
+    if (panelOpen && cur.ready && cur.el && cur.el.isConnected && !narrow.matches && Date.now() > quiet && !spot(cur.el.getBoundingClientRect(), panel.offsetWidth, panel.offsetHeight)[2]) settle();
+  });
+  nt.addEventListener('input', sync);
   $(drawer, '.revisio-x').addEventListener('click', () => closeDrawer());
   scrim.addEventListener('click', () => closeDrawer());
   $(drawer, '.revisio-copy').addEventListener('click', copy);
