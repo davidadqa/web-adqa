@@ -1613,6 +1613,26 @@ body .ficha dl>:nth-last-child(-n+2){background:none}
 @keyframes p-content-node{from{transform:scale(0)}12.5%,81%{transform:none;opacity:1}to{transform:none;opacity:0}}
 @media (prefers-reduced-motion:reduce){.field input[type=file]:active::file-selector-button{transform:none}}
 
+/* — 2a passada: P2-02 · «La respuesta del ingeniero» (FAQ) ----------
+   «Para el manager» / «Para el responsable técnico»: etiqueta + filete que se dibuja al entrar la columna (receta de heroes).
+   La respuesta abierta cuelga de un filete rosa de 2 px, el de «Lo que hicimos», que se dibuja de arriba abajo al abrirla
+   (al cerrar no se anima nada). La bola «+» es una tecla pequeña: borde de tecla en reposo, se hunde al pulsar la pregunta
+   y, abierta, es rosa con el borde de .btn-primary. La macro faqSection no cambia; details.layer no se toca. */
+.faq h3{display:flex;align-items:center;gap:14px}
+.faq h3::after{content:"";flex:1;height:1px;background:var(--line);transform-origin:left}
+.faq details p{position:relative;padding:0 44px 22px 18px}
+.faq details p::before{content:"";position:absolute;left:0;top:.3em;bottom:22px;width:2px;border-radius:1px;background:var(--pink);transform-origin:top}
+.faq summary .pm{box-shadow:var(--p-lip);transition:.3s var(--ease),transform .26s var(--ease),box-shadow .26s var(--ease)}
+.faq details[open] summary .pm{box-shadow:inset 0 -2px 0 rgba(0,0,0,.16)}
+.faq details summary:active .pm{transform:translateY(1px);box-shadow:none;transition-duration:var(--p-t-press)}
+@keyframes p-content-rule{from{transform:scaleY(0)}}
+@media (prefers-reduced-motion:no-preference){
+  .faq h3::after{transition:transform var(--p-t-draw,1.2s) var(--ease) calc(var(--s,0)*80ms + .35s)}
+  .adqa-js .faq>.rv:not(.in)>h3::after{transform:scaleX(0)}
+  .faq details[open] p::before{animation:p-content-rule .6s var(--ease) .1s backwards}
+}
+@media (prefers-reduced-motion:reduce){.faq details summary:active .pm{transform:none}}
+
 /* ======================= Poesía · blog — /recursos/, categorías, tarjetas de artículo, artículo (índice y secciones) e imágenes provisionales.
    Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
 
