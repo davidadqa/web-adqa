@@ -54,12 +54,37 @@
 {% endmacro %}
 
 {#- Imagen provisional, muy visible, hasta tener la definitiva. -#}
+{#- Foto definitiva de src/_data/fotos.json (la genera tools/fotos.py): AVIF, WebP y JPEG a varios anchos.
+    `sizes` describe el ancho con el que se pinta; `eager` solo para la foto de la primera pantalla. -#}
+{% macro foto(f, cls="", sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)", eager=false) %}
+<figure class="foto {{ cls }}" style="aspect-ratio:{{ f.ratio }}">
+  <picture>
+    {%- for fmt in ["avif", "webp"] %}
+    <source type="image/{{ fmt }}" srcset="{% for w in f.widths %}{{ f.base }}-{{ w }}.{{ fmt }} {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ sizes }}">
+    {%- endfor %}
+    <img src="{{ f.base }}-{{ f.widths | last }}.jpg" srcset="{% for w in f.widths %}{{ f.base }}-{{ w }}.jpg {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ sizes }}" width="{{ f.w }}" height="{{ f.h }}" alt="{{ f.alt }}" decoding="async"{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+  </picture>
+</figure>
+{%- endmacro %}
+
+{#- Foto del equipo (fotos.json, clave = slug). Franja en blanco y negro con dos marcas de registro rosa. -#}
+{% macro teamPhoto(slug, cls="", sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)") %}
+{%- set f = fotos[slug] -%}
+{%- if f %}{{ foto(f, "team-photo " + cls, sizes) }}{% endif -%}
+{%- endmacro %}
+
+{#- Imagen provisional. Cuando fotos.json tiene una foto con esta misma descripción, pinta la foto. -#}
 {% macro placeholder(label, ratio="16/10", cls="") %}
+{%- set f = fotos[label] if fotos else null -%}
+{%- if f -%}
+{{ foto(f, cls) }}
+{%- else -%}
 <figure class="ph {{ cls }}" style="aspect-ratio:{{ ratio }}" role="img" aria-label="Imagen provisional: {{ label }}">
   <span class="ph-badge">Imagen provisional · cal substituir</span>
   <svg aria-hidden="true"><use href="#i-image"/></svg>
   <figcaption>{{ label }}</figcaption>
 </figure>
+{%- endif %}
 {% endmacro %}
 
 {#- Bloque de contacto con formulario. `area` preselecciona el área de interés. -#}

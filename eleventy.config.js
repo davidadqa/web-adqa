@@ -182,7 +182,11 @@ function jsonldGraph(d) {
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // El modo corrección (assets/revisio) solo existe en la vista previa (ELEVENTY_ENV=preview).
+  const preview = process.env.ELEVENTY_ENV === "preview";
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" }, {
+    filter: (p) => preview || !/^revisio(\/|$)/.test(String(p).replace(/\\/g, "/")),
+  });
   eleventyConfig.addFilter("jsonld", jsonldGraph);
   eleventyConfig.addFilter("absUrl", (path) => site.url + path);
   eleventyConfig.addFilter("startsWith", (str, prefix) => String(str || "").startsWith(prefix));

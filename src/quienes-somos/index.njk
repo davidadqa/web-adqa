@@ -92,10 +92,10 @@ faq:
       <p class="tldr"><strong>ADQA es una empresa de informática y telecomunicaciones de Vilanova i la Geltrú (Barcelona), con un equipo propio de 18 personas que trabaja en toda España.</strong> Empezó como empresa de informática. Hoy también es operador de telecomunicaciones propio, a través de Anxanet. Además, tiene datacenter propio y de proximidad en Barcelona. <span class="dim">Suma más de 30 años de experiencia, el certificado ISO 9001:2015 y la certificación ENS en categoría ALTA.</span></p>
     </div>
     <div class="stats">
-      <div class="stat rv" style="--s:0"><b><span data-count="30">0</span><small>+</small></b><span>años de experiencia en informática y suministro de tecnología</span></div>
-      <div class="stat rv" style="--s:1"><b><span data-count="18">0</span></b><span>personas en el equipo, entre perfiles técnicos y de gestión</span></div>
-      <div class="stat rv" style="--s:2"><b><span data-count="8">0</span></b><span>especialidades en el mismo equipo, del cable al cloud</span></div>
-      <div class="stat rv" style="--s:3"><b><span data-count="4">0</span></b><span>piezas propias: instaladores, operador, datacenter y extranet</span></div>
+      <div class="stat rv" style="--s:0"><b><span data-count="30">30</span><small>+</small></b><span>años de experiencia en informática y suministro de tecnología</span></div>
+      <div class="stat rv" style="--s:1"><b><span data-count="18">18</span></b><span>personas en el equipo, entre perfiles técnicos y de gestión</span></div>
+      <div class="stat rv" style="--s:2"><b><span data-count="8">8</span></b><span>especialidades en el mismo equipo, del cable al cloud</span></div>
+      <div class="stat rv" style="--s:3"><b><span data-count="4">4</span></b><span>piezas propias: instaladores, operador, datacenter y extranet</span></div>
     </div>
   </div>
 </section>
@@ -139,7 +139,11 @@ faq:
         <p>Un equipo propio de 18 personas que llevan años trabajando juntas. Hay perfiles técnicos de todas las áreas y también dirección, administración, comercial y almacén. Nos coordinamos entre nosotros para que tú no tengas que hacerlo.</p>
         <p>Piensa en una sede nueva con red, fibra, centralita y servidores. Los especialistas de cada área la preparan juntos desde el principio. Si la centralita no da tono, la revisan entre quien la configuró y quien montó la red. Lo habitual es que el mismo equipo que hace la instalación se ocupe después de mantenerla.</p>
       </div>
-      <div class="rv" style="--s:1">{{ m.placeholder("Foto del equipo de ADQA en la oficina (sin nombres ni datos personales)", "4/3") }}</div>
+      <div class="team-sheet rv" style="--s:1">
+        {{ m.teamPhoto("equipo-oficina-logo-adqa", "", "(min-width: 1212px) 558px, (min-width: 900px) calc(50vw - 48px), calc(100vw - 32px)") }}
+        {{ m.teamPhoto("equipo-programando-dos-monitores", "", "(min-width: 1212px) 558px, (min-width: 900px) calc(50vw - 48px), calc(100vw - 32px)") }}
+        {{ m.teamPhoto("equipo-soporte-auriculares", "", "(min-width: 1212px) 558px, (min-width: 900px) calc(50vw - 48px), calc(100vw - 32px)") }}
+      </div>
     </div>
     <h3 class="sub-head rv">Especialistas en cada área</h3>
     <div class="aud">

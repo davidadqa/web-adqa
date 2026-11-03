@@ -355,6 +355,7 @@ footer{background:var(--night);color:#bdbdbd;margin-top:clamp(80px,10vw,120px);p
 @media (max-width:720px){.br-wide{display:none}.foot-claim{padding-bottom:36px;margin-bottom:40px}}
 .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid var(--night-line);font-size:.84rem;color:#8a8a8a}
 .legal nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.legal-slogan{color:#b5b5b5;font-weight:500;white-space:nowrap}
 
 /* ============ INTERIOR PAGES (componentes compartidos) ============ */
 main section[id],main article[id]{scroll-margin-top:96px}
@@ -468,6 +469,20 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .req{color:var(--pink);font-style:normal}
 .note-src{margin-top:18px;font-size:.86rem;color:var(--muted)}
 /* Imagen provisional: visible a propósito hasta tener la definitiva */
+/* Fotos definitivas (macro foto, src/_data/fotos.json) */
+.foto{margin:0;position:relative;width:100%}
+.foto picture,.foto img{display:block;width:100%;height:100%}
+.foto img{object-fit:cover;border-radius:var(--radius-sm);background:var(--surface-2)}
+/* Fotos del equipo: franja en blanco y negro con dos marcas de registro (L de 16 px) en rosa, el motivo «el plano» */
+.team-photo,.team-sheet{position:relative}
+.team-photo::before,.team-photo::after,.team-sheet::before,.team-sheet::after{content:"";position:absolute;z-index:1;width:16px;height:16px;border:1.5px solid var(--pink);pointer-events:none}
+.team-photo::before,.team-sheet::before{top:-9px;left:-9px;border-right:0;border-bottom:0}
+.team-photo::after,.team-sheet::after{bottom:-9px;right:-9px;border-left:0;border-top:0}
+.team-band{margin-top:clamp(48px,6vw,80px)}
+/* «Hoja de contactos»: varias franjas seguidas, con las marcas de registro solo en el conjunto */
+.team-sheet{display:grid;gap:10px}
+.team-sheet .team-photo::before,.team-sheet .team-photo::after{content:none}
+@media (max-width:720px){.team-photo::before,.team-sheet::before{top:-6px;left:-6px}.team-photo::after,.team-sheet::after{bottom:-6px;right:-6px}}
 .ph{position:relative;display:grid;place-items:center;gap:10px;align-content:center;width:100%;border-radius:var(--radius-sm);border:2px dashed var(--pink);color:var(--pink-600);text-align:center;padding:24px}
 .ph svg{width:40px;height:40px}
 .ph figcaption{font-size:.9rem;font-weight:600;max-width:36ch}
