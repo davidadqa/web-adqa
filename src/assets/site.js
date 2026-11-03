@@ -163,6 +163,18 @@
     });
   }
 
+  /* P2-03 · Teclado: el foco nunca aterriza en algo invisible. El CSS ya muestra al instante el bloque (.rv:not(.in):focus-within);
+     aquí, después de fijar ese estado, se marca como aparecido (.in) para que no vuelva a esconderse. Lo armado (.p-armed) se
+     desarma: queda en su estado de base, el final, sin la entrada (que empezaría desde invisible). Y si el bloque ya estaba
+     apareciendo (el scroll del foco lo acaba de mostrar), su fundido termina ya. */
+  document.addEventListener('focusin', e => {
+    for (let el = e.target; el && el.matches; el = el.parentElement) {
+      if (el.matches('.rv:not(.in)')) { getComputedStyle(el).opacity; el.classList.add('in'); }
+      if (el.matches('.p-armed:not(.p-in)')) el.classList.replace('p-armed', 'p-in');
+      if (el.getAnimations) el.getAnimations().forEach(a => /^(opacity|transform|filter)$/.test(a.transitionProperty) && a.finish());
+    }
+  });
+
   /* «Saltar al contenido»: con Enter, la tecla también se hunde. */
   const skip = document.querySelector('.skip');
   if (skip && !calm) skip.addEventListener('keydown', e => {

@@ -965,6 +965,38 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .btn:active,.btn.rv.in:active,.skip:active,.skip.p-chrome-down{transform:none}
 }
 
+/* — 2a passada: P2-03 · «La tecla en los dedos» (menú móvil, hamburguesa, táctil y teclado) ----------
+   Servicios del menú móvil: cada uno con su tecla de icono (la receta de .svc .ico, a 28 px y radio 9, el del mega). Al
+   pulsar, se hunde 2 px y se vuelve rosa; la del servicio en el que estás queda pulsada. La página actual del menú lleva el
+   nodo de las migas. La hamburguesa es una tecla oscura redonda, como .key del pie: rosa al pulsar y enclavada (hundida)
+   mientras el menú está abierto. En táctil, las tarjetas enlace bajan 1 px al tocarlas. */
+.mobile-menu .sub{grid-template-columns:1fr}
+@media (min-width:560px){.mobile-menu .sub{grid-template-columns:1fr 1fr}}
+.mobile-menu .sub a{gap:12px}
+.mobile-menu .sub .ico{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;color:var(--pink);
+  background:linear-gradient(#fff3f8,var(--pink-50));box-shadow:0 2px 0 #f2c4d6,inset 0 1px 0 #fff;
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),color .26s}
+.mobile-menu .sub .ico svg{width:15px;height:15px}
+.mobile-menu .sub a:is(:active,[aria-current="page"]) .ico{background:var(--pink);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+  transform:translateY(2px);transition-duration:var(--p-t-press)}
+.mobile-menu>a[aria-current="page"]::after{content:"";flex:none;width:7px;height:7px;margin-right:4px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo,0 0 0 4px var(--pink-50))}
+.mobile-menu summary svg{transition:transform .3s var(--ease)}
+.mobile-menu details[open] summary svg{transform:rotate(180deg)}
+.burger{background:linear-gradient(#2c2c2c,#1d1d1d);border:1px solid #3d3d3d;box-shadow:0 3px 0 #070707,inset 0 1px 0 rgba(255,255,255,.09);
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),background .25s,border-color .25s}
+.menu-open .burger{transform:translateY(2px);box-shadow:0 1px 0 #070707,inset 0 1px 0 rgba(255,255,255,.12)}
+.burger:active{transform:translateY(2px);box-shadow:0 1px 0 #070707,inset 0 1px 0 rgba(255,255,255,.12);background:var(--pink);border-color:var(--pink);transition-duration:var(--p-t-press)}
+@media (hover:none){
+  a.card{-webkit-tap-highlight-color:transparent}
+  a.card:active{transform:translateY(1px);border-color:#f2c4d6;transition:transform var(--p-t-press) var(--ease),border-color var(--p-t-press)}
+}
+/* Teclado: si el foco cae en un bloque que aún no ha aparecido, el bloque (y lo que lleva hasta el foco) pasa al estado final
+   al instante. El JS de chrome le pone además .in para que no vuelva a esconderse al salir el foco. */
+.adqa-js .rv:not(.in):focus-within,.adqa-js .rv:not(.in):focus-within :focus-within{opacity:1;transform:none;filter:none;transition:none}
+@media (prefers-reduced-motion:reduce){
+  .mobile-menu .sub a:is(:active,[aria-current="page"]) .ico,.burger:active,.menu-open .burger,a.card:active{transform:none}
+}
+
 /* ======================= Poesía · heroes — heros, ilustración por área, «En resumen» y cabeceras de sección.
    El estado de base es el final; lo que «antes» está oculto cuelga de no-preference. */
 
@@ -1166,13 +1198,15 @@ body:not(:is([data-area=home],[data-area=redes],[data-area=ciberseguridad],[data
    se hunde 2 px y se vuelve rosa, como la tecla «una» del pie. 180 ms abajo, 260 ms arriba.
    Solo se hunden las que llevan a algún sitio (a.svc o .svc con enlace): pulsar algo que no hace nada engaña, sobre todo
    con el dedo. :focus-visible y no :focus-within: tras un clic con ratón, la tecla no se queda pulsada al volver atrás. */
-.svc .ico{--p-cards-dy:2px;background:linear-gradient(#fff3f8,var(--pink-50));box-shadow:0 2px 0 #f2c4d6,inset 0 1px 0 #fff;
+/* — 2a passada: P2-03 · las vías de contacto de /contacto/ (.reach) también son teclas: tocar una para llegar a ADQA.
+   Mismo código que .svc; body … gana al <style> de la página. */
+.svc .ico,body .reach .ico{--p-cards-dy:2px;background:linear-gradient(#fff3f8,var(--pink-50));box-shadow:0 2px 0 #f2c4d6,inset 0 1px 0 #fff;
   transition:transform .26s var(--ease),box-shadow .26s var(--ease),color .26s}
-@media (prefers-reduced-motion:reduce){.svc .ico{--p-cards-dy:0}}
+@media (prefers-reduced-motion:reduce){.svc .ico,body .reach .ico{--p-cards-dy:0}}
 .svc.dark .ico{background:rgba(227,39,114,.18);box-shadow:0 2px 0 rgba(227,39,114,.42),inset 0 1px 0 rgba(255,255,255,.06)}
-:is(a.svc,.svc:has(a)):is(:active,:focus-visible,:has(:focus-visible)) .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
+:is(a.svc,.svc:has(a),body .reach .card:has(a)):is(:active,:focus-visible,:has(:focus-visible)) .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
 @media (hover:hover) and (pointer:fine){
-  :is(a.svc,.svc:has(a)):hover .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
+  :is(a.svc,.svc:has(a),body .reach .card:has(a)):hover .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
 }
 
 /* ---------- .svc .more y .st .go: «la flecha que atraviesa» (valores de chrome, idénticos) ----------

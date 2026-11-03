@@ -39,9 +39,11 @@
 
   <div class="mobile-menu" id="mobile-menu">
     <details><summary>Servicios <svg width="14" height="14" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      {#- P2-03: cada servicio lleva su tecla de icono (decorativa; las etiquetas son las de nav.services) -#}
+      {%- set svcIco = {"/ciberseguridad/": "i-shield", "/redes/": "i-net", "/telecomunicaciones/": "i-signal", "/sistemas-cloud/": "i-cloud", "/soporte-it/": "i-tool", "/diseno-programacion-web/": "i-code", "/google-workspace/": "i-grid", "/microsoft-365/": "i-grid"} %}
       <div class="sub">
         {%- for s in nav.services %}
-        {{ navLink(s.url, s.label) }}
+        <a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}><span class="ico" aria-hidden="true"><svg><use href="#{{ svcIco[s.url] or 'i-grid' }}"/></svg></span>{{ s.label }}</a>
         {%- endfor %}
       </div>
     </details>
