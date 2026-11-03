@@ -1746,3 +1746,19 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
   .btn{height:auto;min-height:52px;padding:12px 20px;line-height:1.25;white-space:normal;text-align:center;max-width:100%}
   .foot p,.foot a{font-size:var(--fs-body)}
 }
+
+/* --- cards: tarjetas de servicio, pila oscura, «Para quién», pasos, cifras, comparativas y cápsulas --- */
+.svc h3,.st h3,.cmp h3,.aud h3{font-size:var(--fs-h3)}
+.svc-card b,.steps b{font-size:var(--fs-lead)}
+.svc p,.aud p,.metric p,.st li,.cmp li,.split .cmp li,.cmp .when,.cmp .q,.steps p,.svc .more,.st .go{font-size:var(--fs-body)}
+.stat b{font-size:var(--fs-2xl)}
+.stat b small{font-size:var(--fs-lead)}
+.metric b{font-size:var(--fs-display)}
+.stat>span,.tags li,.pills li,.chips a,.chips a span,.aud .n,.svc-card .cat,.st .num,.steps li::before{font-size:var(--fs-sm)}
+.aud .n,.svc-card .cat,.st .num{letter-spacing:var(--ls-caps)}
+.tags li{padding:6px 12px}
+:is(.card,.st) p,.strengths p,.steps p{max-width:var(--measure)}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+/* «Para quién» en 2 × 2: con la letra a 18 px, a cuatro columnas el texto quedaba en 26–28 caracteres por línea */
+@media (min-width:1061px){.aud{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.stat b{font-size:var(--fs-h2)}}
