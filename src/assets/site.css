@@ -1710,6 +1710,7 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .prose h3{font-size:var(--fs-h3);line-height:var(--lh-h3)}
 /* Rejillas: ningún hijo (un eyebrow largo, una cifra) ensancha su columna */
 .intro>*,.split>*,.strengths>*,.contact>*{min-width:0}
+.strengths .sticky{grid-template-columns:minmax(0,1fr)} /* su columna ya no crece con el eyebrow (360 px: +12 px recortados) */
 .split .txt>p{max-width:var(--measure)}
 
 /* --- heroes: titulares, entradilla, «En resumen», respuesta y cabeceras de sección --- */
