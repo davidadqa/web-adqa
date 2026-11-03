@@ -61,6 +61,10 @@
     io.unobserve(el);
   }),{threshold:.15,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  window.__adqaRv=1; /* el script del <head> deja html.adqa-js (contenido oculto hasta aparecer) solo si llegamos aquí */
+  addEventListener('beforeprint',()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>{
+    el.classList.add('in');el.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
+  }));
 
   /* card spotlight follows pointer */
   document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{

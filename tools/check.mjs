@@ -14,8 +14,9 @@ const prefix = args.prefix || "/";
 const root = resolve(dirname(new URL(import.meta.url).pathname), "..");
 const out = await mkdtemp(join(tmpdir(), "adqa-check-"));
 
-// Pendientes conocidos (fases posteriores): no cuentan como enlaces rotos.
-const LATER = [/^\/casos-de-exito\/.+/, /^\/ca\//];
+// Pendientes conocidos (fases posteriores): no cuentan como enlaces rotos. Las páginas de caso de la fase 3 ya no están
+// aquí: un <a href> a una que no existe es un 404 para quien hace clic; las tarjetas pendientes van con data-fase3, sin href.
+const LATER = [/^\/ca\//];
 const BANNED = [
   [/primera empresa del Garraf|primera del Garraf/i, "«primera del Garraf» (decisión: eliminar)"],
   [/licencia propia/i, "«licencia propia» (decisión: no decirlo)"],
