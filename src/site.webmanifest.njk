@@ -1,0 +1,20 @@
+---
+permalink: /site.webmanifest
+eleventyExcludeFromCollections: true
+---
+{#- Rutas relativas al propio manifest: así funcionan igual en adqa.com y en la vista previa con prefijo (/web-adqa/). -#}
+{
+  "name": "{{ site.name }}",
+  "short_name": "{{ site.name }}",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "theme_color": "#E32772",
+  "background_color": "#FAFAF9",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
