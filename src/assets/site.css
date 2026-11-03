@@ -1757,8 +1757,36 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .stat>span,.tags li,.pills li,.chips a,.chips a span,.aud .n,.svc-card .cat,.st .num,.steps li::before{font-size:var(--fs-sm)}
 .aud .n,.svc-card .cat,.st .num{letter-spacing:var(--ls-caps)}
 .tags li{padding:6px 12px}
+/* Iconos y puntos de lista centrados en la primera línea, sea cual sea la letra (antes, en px para 15-16 px) */
+.cmp li svg,.ticks svg{margin-top:calc(.75em - 9.5px)}
+.st li::before{margin-top:calc(.75em - 2.5px)}
 :is(.card,.st) p,.strengths p,.steps p{max-width:var(--measure)}
 .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 /* «Para quién» en 2 × 2: con la letra a 18 px, a cuatro columnas el texto quedaba en 26–28 caracteres por línea */
 @media (min-width:1061px){.aud{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:720px){.stat b{font-size:var(--fs-h2)}}
+
+/* --- proof: proyectos, muro de clientes, logos, partners, testimonios, casos y sellos --- */
+.proj h3{font-size:var(--fs-h3)}
+.proj .hl,.case-anon h3{font-size:var(--fs-lead)}
+.proj p,.ca-steps dd,.ca-stat span,.ca-results li,.quote figcaption b{font-size:var(--fs-body)}
+.ca-results li{line-height:1.45}
+.ca-results svg{margin-top:calc(.75em - 9px)} /* el check, centrado en la primera línea */
+.ca-stat b{font-size:var(--fs-h2)}
+.ca-stat.is-text span{font-size:var(--fs-h3)}
+.proj .kind,.case-feat .kind,.case-anon .kind,.ca-steps dt,.partners h3,.logos p.k,.wall-tabs button,.seals .s-txt,
+.quote .av,.quote figcaption span{font-size:var(--fs-sm)}
+.proj .kind,.case-feat .kind,.case-anon .kind,.ca-steps dt,.partners h3{letter-spacing:var(--ls-caps)}
+.proj .kind,.case-feat .kind,.case-anon .kind{text-wrap:balance}
+.ca-steps dd{max-width:var(--measure)}
+.quote{padding:40px}
+.quote blockquote{font-size:var(--fs-h3);line-height:1.4}
+/* Casos con resultados: con la etiqueta a 15 px, una etiqueta larga ocupa dos líneas. En una fila de tarjetas, etiqueta,
+   cifra, título, pasos y resultados comparten filas (subgrid a través del envoltorio .rv y de .ca-top): las cifras y
+   las líneas divisorias quedan a la misma altura en todas las tarjetas. */
+@media (min-width:721px){
+  .res>.rv:has(>.case-anon){grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+  :is(.res,.res>.rv)>.case-anon{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:18px}
+  .case-anon .ca-top{grid-row:span 2;grid-template-rows:subgrid;row-gap:14px}
+}
+@media (max-width:720px){.quote{padding:28px}}
