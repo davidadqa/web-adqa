@@ -997,6 +997,26 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .mobile-menu .sub a:is(:active,[aria-current="page"]) .ico,.burger:active,.menu-open .burger,a.card:active{transform:none}
 }
 
+/* — 2a passada: P2-05 · «Las capas de noche» (megamenú) ----------
+   En el hueco negro de la tarjeta del ENS, un plano nocturno de las capas de seguridad: cuatro rectángulos anidados en
+   #3a3a3a y un solo nodo rosa en el centro, lo que protege el ENS. Cada vez que se abre el mega, después de la cascada,
+   las capas se dibujan de fuera adentro, el nodo aparece y hace un ping; al cerrarse, se reinicia cuando ya no se ve.
+   Si no cabe, se encoge hasta 0 sin tapar nada; los márgenes de −6 px dejan 12 px de aire y compensan el hueco nuevo. */
+.p-chrome-layers{flex:1 1 0;min-height:0;max-height:150px;width:100%;display:block;margin:-6px 0;position:relative;z-index:1}
+.p-chrome-layers .t{fill:none;stroke:var(--p-night-stroke,#3a3a3a);stroke-width:1.5;stroke-dasharray:1}
+.p-chrome-layers .h{fill:rgba(227,39,114,.2)}
+.p-chrome-layers .n{fill:var(--pink)}
+.p-chrome-layers .p{fill:none;stroke:var(--pink);opacity:0}
+.p-chrome-layers circle{transform-box:fill-box;transform-origin:center}
+.p-chrome-layers .t:nth-of-type(2){--i:1}.p-chrome-layers .t:nth-of-type(3){--i:2}.p-chrome-layers .t:nth-of-type(4){--i:3}
+@media (prefers-reduced-motion:no-preference){
+  .adqa-js .mega:not(.open) .p-chrome-layers .t{stroke-dashoffset:1;transition:stroke-dashoffset 0s .3s}
+  .adqa-js .mega:not(.open) .p-chrome-layers :is(.h,.n){transform:scale(0);transition:transform 0s .3s}
+  .mega.open .p-chrome-layers .t{transition:stroke-dashoffset .9s var(--ease) calc(.28s + var(--i,0)*80ms)}
+  .mega.open .p-chrome-layers :is(.h,.n){transition:transform .3s var(--ease) 1.2s}
+  .mega.open .p-chrome-layers .p{animation:p-chrome-ping 1.1s var(--ease) 1.5s}
+}
+
 /* ======================= Poesía · heroes — heros, ilustración por área, «En resumen» y cabeceras de sección.
    El estado de base es el final; lo que «antes» está oculto cuelga de no-preference. */
 
