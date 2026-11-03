@@ -88,13 +88,19 @@
     tabs.forEach(x=>{const on=x===tb;x.setAttribute('aria-selected',on);const p=document.getElementById(x.getAttribute('aria-controls'));p.hidden=!on;if(on){p.classList.remove('in');requestAnimationFrame(()=>p.classList.add('rv','in'))}});
   }));
 
-  /* form (front-end only: connect to your backend / form handler) */
-  const f=document.querySelector('.form');
-  if(f)f.addEventListener('submit',e=>{
+  /* form (front-end only: connect to your backend / form handler).
+     No válido: .p-content-tried (bordes en rosa) y la burbuja del navegador. Válido: .form-ok, aviso «adqa:sent» y el texto
+     se desvanece 250 ms (.p-content-clear) antes de vaciarse; con reduced-motion, se vacía al instante. */
+  document.querySelectorAll('.form').forEach(f=>f.addEventListener('submit',e=>{
     e.preventDefault();
-    if(!f.checkValidity()){f.reportValidity();return}
-    const ok=f.querySelector('.form-ok');if(ok)ok.style.display='block';f.reset();
-  });
+    if(!f.checkValidity()){f.classList.add('p-content-tried');f.reportValidity();return}
+    f.classList.remove('p-content-tried');
+    const ok=f.querySelector('.form-ok');if(ok)ok.style.display='block';
+    f.dispatchEvent(new CustomEvent('adqa:sent')); /* cuando haya backend: solo con la respuesta OK del servidor */
+    if(reduce)return f.reset();
+    f.classList.add('p-content-clear');
+    setTimeout(()=>{f.reset();f.classList.remove('p-content-clear')},250);
+  }));
 })();
 
 /* ==========================================================================
@@ -408,17 +414,23 @@
     if (document.body.dataset.area !== 'home') document.querySelectorAll('.contact-info').forEach(el => live.observe(el));
   }
 
-  /* .form-ok: cuando site.js lo muestra (envío válido), la flecha de «Enviar» sale volando */
-  if ('MutationObserver' in window) {
-    document.querySelectorAll('.form .form-ok').forEach(ok => {
-      const form = ok.closest('.form');
-      new MutationObserver(() => {
-        if (getComputedStyle(ok).display === 'none') return;
-        form.classList.remove('p-content-sent'); void form.offsetWidth; form.classList.add('p-content-sent');
-        setTimeout(() => form.classList.remove('p-content-sent'), 950);
-      }).observe(ok, { attributes: true, attributeFilter: ['style'] });
-    });
-  }
+  /* Envío correcto («adqa:sent», con .form-ok ya visible): la flecha de «Enviar» sale volando y dos señales recorren el
+     borde del formulario (radio 22, a .75 px) en sentidos opuestos, de debajo del botón al centro de arriba, donde aparece
+     un nodo con un ping. --p-dur: de 1,2 a 2 s según el tamaño (unos 600 px/s). Se retira al acabar. */
+  document.querySelectorAll('.form').forEach(form => form.addEventListener('adqa:sent', () => {
+    form.classList.remove('p-content-sent'); void form.offsetWidth; form.classList.add('p-content-sent');
+    setTimeout(() => form.classList.remove('p-content-sent'), 950);
+    const old = form.querySelector('.p-content-loop'); if (old) old.remove();
+    const W = form.offsetWidth, H = form.offsetHeight, i = .75, r = 21.25, m = W / 2, y = H - i, b = form.querySelector('.btn');
+    const x = b ? b.offsetLeft + form.clientLeft + b.offsetWidth / 2 : m, d = Math.min(2, Math.max(1.2, (W + H) / 600));
+    const side = (s) => `M${x} ${y}H${s ? W - i - r : i + r}A${r} ${r} 0 0 ${1 - s} ${s ? W - i : i} ${y - r}V${i + r}A${r} ${r} 0 0 ${1 - s} ${s ? W - i - r : i + r} ${i}H${m}`;
+    const c = (k, rr) => `<circle class="${k}" cx="${m}" cy="${i}" r="${rr}"/>`;
+    const box = document.createElement('div');
+    box.className = 'p-content-loop'; box.setAttribute('aria-hidden', 'true'); box.style.setProperty('--p-dur', d.toFixed(2) + 's');
+    box.innerHTML = `<svg focusable="false"><path pathLength="1" d="${side(0)}"/><path pathLength="1" d="${side(1)}"/><g class="n">${c('h', 7.5)}${c('d', 3.5)}</g>${c('p', 3.5)}</svg>`;
+    form.append(box);
+    setTimeout(() => box.remove(), (d + 1.95) * 1000);
+  }));
 })();
 
 /* ======================= Poesía · blog: «el índice sigue la lectura» (.toc del artículo).
