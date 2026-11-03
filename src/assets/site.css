@@ -1706,7 +1706,7 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .doc{font-size:var(--fs-body);max-width:var(--measure)}
 .doc h2{font-size:var(--fs-h3)}
 .doc h3{font-size:var(--fs-lead)}
-.prose h2{font-size:var(--fs-xl);line-height:var(--lh-xl);letter-spacing:var(--ls-xl)}
+.prose h2{font-size:var(--fs-xl);line-height:var(--lh-xl);letter-spacing:var(--ls-xl);margin-top:calc(1em + 24px)} /* 56 / 47 px: 2,2em daría 70 */
 .prose h3{font-size:var(--fs-h3);line-height:var(--lh-h3)}
 /* Rejillas: ningún hijo (un eyebrow largo, una cifra) ensancha su columna */
 .intro>*,.split>*,.strengths>*,.contact>*{min-width:0}
