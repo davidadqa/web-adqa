@@ -21,13 +21,14 @@
 // categoría arriba a la derecha), empresa (órbita), certificados y legal (una hoja dibujada con su sello) e índice de
 // recursos (las baldosas de las categorías). JPEG de calidad 82; si pasa de 100 KB, baja la calidad.
 import { mkdtemp, mkdir, readFile, readdir, writeFile, rm } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join, dirname, resolve } from "node:path";
 import { tmpdir } from "node:os";
-import { pathToFileURL } from "node:url";
+import { pathToFileURL, fileURLToPath } from "node:url";
 import { chromium } from "./lib.mjs";
 
-const root = resolve(dirname(new URL(import.meta.url).pathname), "..");
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const assets = join(root, "src", "assets");
 const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/, "").split("=")));
 const outDir = resolve(args.out || join(assets, "og"));
@@ -82,7 +83,15 @@ const CAT_ART = {
 // por arriba. Aquí se recortan las dos mitades (x0, y0, x1, y1 en coordenadas del SVG) y se juntan, de modo que los
 // cables que cruzaban el hueco del titular empalman solos. «col» las apila en vez de ponerlas lado a lado.
 const ART = {
-  ciberseguridad: { pieces: [[48, 80, 268, 560], [1076, 80, 1296, 560]] },
+  // Las tres capas acababan en x=256.5 y x=1088.5, a 12 unidades de cada corte, y al juntar las mitades quedaba una
+  // muesca arriba y abajo. Aquí se alargan hasta el corte para que cada capa se cierre.
+  ciberseguridad: { pieces: [[48, 80, 268, 560], [1076, 80, 1296, 560]],
+    patch: [["M256.5 96.5H", "M268.5 96.5H"], ["104.5 544.5H256.5", "104.5 544.5H268.5"],
+      ["M256.5 128.5H", "M268.5 128.5H"], ["158.5 512.5H256.5", "158.5 512.5H268.5"],
+      ["M256.5 160.5H", "M268.5 160.5H"], ["214.5 480.5H256.5", "214.5 480.5H268.5"],
+      ["M1088.5 96.5H", "M1075.5 96.5H"], ["1240.5 544.5H1088.5", "1240.5 544.5H1075.5"],
+      ["M1088.5 128.5H", "M1075.5 128.5H"], ["1186.5 512.5H1088.5", "1186.5 512.5H1075.5"],
+      ["M1088.5 160.5H", "M1075.5 160.5H"], ["1130.5 480.5H1088.5", "1130.5 480.5H1075.5"]] },
   redes: { pieces: [[24, 112, 248, 464], [1104, 112, 1320, 464]] },
   // El arco antena → edificio cruzaba el hueco por arriba; aquí se rehace para que empalme sobre el corte.
   telecomunicaciones: { pieces: [[24, 128, 236, 528], [1108, 128, 1320, 528]],
@@ -90,8 +99,12 @@ const ART = {
   "sistemas-cloud": { pieces: [[48, 112, 216, 528], [1088, 112, 1320, 528]] },
   "soporte-it": { pieces: [[40, 112, 272, 400], [1072, 112, 1272, 400]] },
   "diseno-programacion-web": { pieces: [[48, 112, 264, 432], [1136, 112, 1264, 432]] },
-  "desarrollo-software-medida": { pieces: [[48, 112, 264, 376], [1080, 112, 1248, 376]] },
-  "google-workspace": { pieces: [[44, 112, 264, 448], [1080, 112, 1296, 448]] },
+  // En estas dos, el cable de arriba pasa a discontinuo entre x=256.5 y x=1088.5 (el puente sobre el titular): al
+  // juntar las mitades quedaba un trocito discontinuo en el empalme. Se alarga el tramo continuo hasta el corte.
+  "desarrollo-software-medida": { pieces: [[48, 112, 264, 376], [1080, 112, 1248, 376]],
+    patch: [["V128.5H256.5", "V128.5H264.5"], ["M1088.5 128.5H1192.5", "M1079.5 128.5H1192.5"]] },
+  "google-workspace": { pieces: [[44, 112, 264, 448], [1080, 112, 1296, 448]],
+    patch: [["V128.5H256.5", "V128.5H264.5"], ["M1088.5 128.5H1216.5", "M1079.5 128.5H1216.5"]] },
   "microsoft-365": { col: true, pieces: [[40, 184, 240, 336], [1096, 248, 1336, 328]] },
 };
 
@@ -109,17 +122,38 @@ const docArt = (seal) => `<path class="t" d="M48.5 32.5H216.5L256.5 72.5V368.5H4
 for (const k of Object.keys(SEAL)) ART["doc-" + k] = { pieces: [[0, 16, 272, 408]], svg: docArt(k) };
 
 // ---------- Lectura del HTML construido ----------
-const decode = (s) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'")
-  .replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#(\d+);/g, (m, n) => String.fromCharCode(+n));
-// H1 → trozos [{t, a (acento), br}] sin HTML: el acento (span.accent, em) se pinta en rosa, como en la web.
+// Entidades: numéricas (decimales y hexadecimales) y las con nombre habituales. &nbsp; se queda como espacio
+// irrompible (si la web lo pone, es para que esas palabras no se separen); &shy; desaparece.
+const ENT = { nbsp: "\u00A0", amp: "&", quot: '"', apos: "'", lt: "<", gt: ">", laquo: "«", raquo: "»",
+  hellip: "…", ndash: "–", mdash: "—", iexcl: "¡", iquest: "¿", middot: "·", euro: "€", shy: "" };
+// …y las letras acentuadas por su nombre (&aacute;, &ntilde;, &Uuml;, &ccedil;…).
+for (const [suf, mark] of [["acute", "\u0301"], ["grave", "\u0300"], ["uml", "\u0308"], ["tilde", "\u0303"], ["cedil", "\u0327"]])
+  for (const l of "aeiouncAEIOUNC") ENT[l + suf] = (l + mark).normalize("NFC");
+const decode = (s) => s.replace(/&(#x[\da-f]+|#\d+|[a-z]+);/gi, (m, e) => e[0] !== "#" ? (ENT[e] ?? ENT[e.toLowerCase()] ?? m)
+  : String.fromCodePoint(/^#x/i.test(e) ? parseInt(e.slice(2), 16) : +e.slice(1)));
+const VOID = new Set(["br", "img", "wbr", "hr", "input", "meta", "link", "source"]);
+// H1 → trozos [{t, a (acento), br}] sin HTML. El acento (cualquier elemento con la clase «accent», o <em>) se pinta
+// en rosa, como en la web, aunque lleve otras etiquetas dentro (palabras envueltas en <span>, por ejemplo). El texto
+// oculto a la vista (sr-only, visually-hidden, aria-hidden) no se pinta.
 function h1Parts(html) {
-  const parts = [];
-  const re = /<br\s*\/?>|<(span class="accent"|em)[^>]*>([\s\S]*?)<\/(?:span|em)>|<[^>]+>|([^<]+)/g;
+  const parts = [], stack = [];
+  const re = /<!--[\s\S]*?-->|<(\/?)([a-z][\w-]*)([^>]*)>|([^<]+)/gi;
   let m;
   while ((m = re.exec(html))) {
-    if (/^<br/.test(m[0])) parts.push({ br: true });
-    else if (m[1]) parts.push({ t: decode(m[2].replace(/<[^>]+>/g, "")), a: true });
-    else if (m[3]) parts.push({ t: decode(m[3]) });
+    if (m[4] != null) {
+      if (stack.some((s) => s.hidden)) continue;
+      const t = decode(m[4]), a = stack.some((s) => s.accent), last = parts.at(-1);
+      if (last && !last.br && last.a === a) last.t += t; else if (t) parts.push({ t, a });
+      continue;
+    }
+    if (!m[2]) continue; // comentario
+    const name = m[2].toLowerCase(), attrs = m[3] || "";
+    if (name === "br") { parts.push({ br: true }); continue; }
+    if (VOID.has(name) || /\/\s*$/.test(attrs)) continue;
+    if (m[1]) { const i = stack.map((s) => s.name).lastIndexOf(name); if (i >= 0) stack.length = i; continue; }
+    const cls = (attrs.match(/\bclass\s*=\s*["']([^"']*)["']/i) || [])[1] || "";
+    stack.push({ name, accent: name === "em" || /(^|\s)accent(\s|$)/.test(cls),
+      hidden: /(^|\s)(sr-only|visually-hidden)(\s|$)/.test(cls) || /\baria-hidden\s*=\s*["']true["']/i.test(attrs) });
   }
   return parts;
 }
@@ -127,37 +161,40 @@ const plainText = (parts) => parts.map((p) => (p.br || p.nl ? " " : p.t)).join("
 
 function describe(url, html) {
   const area = url.split("/")[1] || "home";
-  const cat = (html.match(/<body[^>]*data-cat="([^"]+)"/) || [])[1];
-  const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || "";
-  const title = decode((html.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "").replace(/\s*\|\s*ADQA$/, "");
+  const cat = (html.match(/<body[^>]*\sdata-cat="([^"]+)"/) || [])[1];
+  const h1 = (html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || "";
+  const title = decode((html.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "").replace(/\s*\|\s*ADQA$/, "").trim();
   let parts = h1Parts(h1);
-  const d = { url, slug: url.replace(/^\/|\/$/g, "").replace(/\//g, "-") || "home", area, parts, text: plainText(parts) || title };
+  if (!plainText(parts)) parts = [{ t: title || site.name }]; // sin H1 (o vacío): el título de la página
+  const d = { url, slug: url.replace(/^\/|\/$/g, "").replace(/\//g, "-") || "home", area, parts, text: plainText(parts) };
+  const mins = (html.match(/(\d+) min de lectura/) || [])[1];
+  const article = (c) => {
+    let art = c && CAT_ART[c.slug];
+    if (c?.slug === "workspace" && /Microsoft 365/.test(d.text) && !/Google/.test(d.text)) art = "microsoft-365";
+    if (c?.slug === "web" && /software/i.test(d.text)) art = "desarrollo-software-medida";
+    return { kind: "article", eyebrow: c ? `Recursos · ${c.name}` : "Recursos", art, foot: mins ? `Guía · ${mins} min de lectura` : "Guía" };
+  };
 
   if (area === "home") {
-    // El lema de la web, con «teclas» en rosa y «una» como la tecla del pie.
-    const [, a, b] = site.claimFull.match(/^(.*?)\bteclas\b(.*?)\buna$/);
+    // El lema de la web, con «teclas» en rosa y «una» como la tecla del pie (si el lema cambia de forma, tal cual).
+    const m = site.claimFull.match(/^(.*?)\bteclas\b(.*?)\buna\.?$/);
     Object.assign(d, { kind: "home", eyebrow: "Informática · Telecom · Ciberseguridad", deco: "orbit",
-      parts: [{ t: a }, { t: "teclas", a: true }, { nl: true }, ...b.trim().replace(/(tengas) /, "$1\n").split("\n")
-        .flatMap((t, i) => (i ? [{ nl: true }, { t }] : [{ t: " " + t }])), { t: " " }, { t: "una", key: true }, { t: "." }],
+      parts: !m ? [{ t: site.claimFull }] : [{ t: m[1] }, { t: "teclas", a: true }, { nl: true },
+        ...m[2].trim().replace(/(tengas) /, "$1\n").split("\n").flatMap((t, i) => (i ? [{ nl: true }, { t }] : [{ t: " " + t }])),
+        { t: " " }, { t: "una", key: true }, { t: "." }],
       foot: "Más de 30 años · ENS categoría ALTA · ISO 9001:2015" });
   } else if (AREA[area]) {
     const sub = url.split("/").filter(Boolean).length > 1;
-    const eyebrow = SUB[url] || (sub ? `${AREA[area]} · ${navLabel(url) || ""}` : AREA[area]);
+    const eyebrow = SUB[url] || [AREA[area], sub && navLabel(url)].filter(Boolean).join(" · ");
     Object.assign(d, { kind: "service", eyebrow, art: area, foot: site.claim });
-  } else if (area === "recursos" && cat) {
-    const c = blog.bySlug[cat];
-    const mins = (html.match(/(\d+) min de lectura/) || [])[1];
-    let art = CAT_ART[cat];
-    if (cat === "workspace" && /Microsoft 365/.test(d.text) && !/Google/.test(d.text)) art = "microsoft-365";
-    if (cat === "web" && /software/i.test(d.text)) art = "desarrollo-software-medida";
-    Object.assign(d, { kind: "article", eyebrow: `Recursos · ${c ? c.name : cat}`, icon: c ? c.icon.replace(/^i-/, "") : "file",
-      art, foot: mins ? `Guía · ${mins} min de lectura` : "Guía" });
   } else if (area === "recursos") {
-    const slug = url.split("/")[2];
-    const c = slug && blog.bySlug[slug];
-    if (c) Object.assign(d, { kind: "service", eyebrow: `Recursos · ${c.name}`, art: CAT_ART[c.slug], foot: "Guías prácticas" });
-    else Object.assign(d, { kind: "blog", eyebrow: "Recursos", deco: "tiles", foot: "Guías prácticas para empresas",
+    const seg = url.split("/").filter(Boolean);
+    const c = blog.bySlug[cat] || null, catPage = !cat && seg.length === 2 && blog.bySlug[seg[1]];
+    if (cat) Object.assign(d, article(c)); // artículo (la categoría la marca <body data-cat>)
+    else if (catPage) Object.assign(d, { kind: "service", eyebrow: `Recursos · ${catPage.name}`, art: CAT_ART[catPage.slug], foot: "Guías prácticas" });
+    else if (seg.length === 1) Object.assign(d, { kind: "blog", eyebrow: "Recursos", deco: "tiles", foot: "Guías prácticas para empresas",
       tiles: blog.categories.map((x) => x.icon.replace(/^i-/, "")) });
+    else Object.assign(d, article(null)); // un artículo sin categoría reconocible
   } else {
     const c = COMPANY[area] || { eyebrow: title };
     Object.assign(d, { kind: c.kind || "company", eyebrow: c.eyebrow, art: c.icon ? "doc-" + c.icon : undefined,
@@ -168,6 +205,7 @@ function describe(url, html) {
 }
 
 // ---------- Plantilla ----------
+const warn = [];
 const sprite = await readFile(join(root, "src/_includes/partials/sprite.njk"), "utf8");
 const icons = Object.fromEntries([...sprite.matchAll(/<symbol id="i-([\w-]+)" viewBox="([^"]+)"[^>]*>([\s\S]*?)<\/symbol>/g)]
   .map((m) => [m[1], { vb: m[2], body: m[3] }]));
@@ -176,12 +214,23 @@ for (const f of await readdir(join(assets, "art"))) {
   const m = f.match(/^heroes-(.+)\.svg$/);
   if (m) arts[m[1]] = (await readFile(join(assets, "art", f), "utf8")).replace(/^[\s\S]*?<svg[^>]*>|<\/svg>\s*$/g, "");
 }
+// Retoques de las ilustraciones (ART[*].patch). Si el SVG de origen cambia y un retoque ya no encaja, se avisa.
+for (const [k, def] of Object.entries(ART)) for (const [a, b] of def.patch || []) {
+  if (arts[k]?.includes(a)) arts[k] = arts[k].replace(a, b);
+  else warn.push(`heroes-${k}.svg: el retoque «${a.slice(0, 40)}…» ya no encaja; revisa la ilustración`);
+}
+// Figtree local: las mismas caras que declara site.css (con su unicode-range) y, si no se encuentran, todos los
+// figtree-*.woff2 de src/assets/fonts. Si no hay ninguna, se para: sin la tipografía de la web no hay imagen.
 const font = (f) => pathToFileURL(join(assets, "fonts", f)).href;
 const css = await readFile(join(assets, "site.css"), "utf8");
-const ranges = [...css.matchAll(/@font-face\{[^}]*src:url\(fonts\/([^)]+)\)[^}]*unicode-range:([^;}]+)/g)];
+let faces = [...css.matchAll(/@font-face\s*\{([^}]*)\}/g)].map(([, b]) => [
+  (b.match(/src:\s*url\(\s*["']?fonts\/([^)"'\s]+)["']?\s*\)/) || [])[1], (b.match(/unicode-range:\s*([^;}]+)/) || [])[1],
+  /font-family:\s*["']?Figtree/i.test(b)]).filter(([f, , fig]) => fig && f && existsSync(join(assets, "fonts", f)));
+if (!faces.length) faces = (await readdir(join(assets, "fonts"))).filter((f) => /^figtree.*\.woff2$/i.test(f)).map((f) => [f]);
+if (!faces.length) throw new Error("No encuentro Figtree (src/assets/fonts/figtree-*.woff2)");
 
 const TEMPLATE = `<!doctype html><html lang="es"><head><meta charset="utf-8"><style>
-${ranges.map(([, f, r]) => `@font-face{font-family:"Figtree";font-weight:300 900;src:url(${font(f)}) format("woff2");unicode-range:${r}}`).join("\n")}
+${faces.map(([f, r]) => `@font-face{font-family:"Figtree";font-weight:300 900;src:url(${font(f)}) format("woff2")${r ? `;unicode-range:${r.trim()}` : ""}}`).join("\n")}
 :root{--pink:#E32772;--pink-50:#FCE9F1;--ink:#242424;--gray:#444;--muted:#6b6b6b;--line:#e7e5e4;--line-2:#d6d3d1;--bg:#FAFAF9;
   --c:#cdc8c4;--sw:2.25px}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -199,7 +248,8 @@ body{font-family:"Figtree",sans-serif;color:var(--ink);-webkit-font-smoothing:an
 /* Texto */
 .txt{position:absolute;left:88px;width:var(--tw,1024px);display:flex;flex-direction:column;align-items:flex-start}
 .eb{display:inline-flex;align-items:center;gap:14px;font-size:23px;font-weight:600;letter-spacing:.01em;color:var(--gray);
-  padding:9px 22px 9px 15px;border:2px solid var(--line);border-radius:999px;background:#fff;white-space:nowrap}
+  padding:9px 22px 9px 15px;border:2px solid var(--line);border-radius:999px;background:#fff;white-space:nowrap;max-width:min(100%,720px)}
+.eb span{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .eb::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 6px var(--pink-50)}
 h1{margin-top:26px;font-weight:600;letter-spacing:-.035em;line-height:1.07;text-wrap:balance;hyphens:none;overflow-wrap:normal;word-break:normal}
 h1 .a{color:var(--pink)}
@@ -272,10 +322,16 @@ async function paint(d, ctx) {
 
   // Texto: eyebrow + H1.
   const txt = el("div", "txt");
-  const eb = el("span", "eb"); eb.textContent = d.eyebrow; txt.append(eb);
+  const eb = el("span", "eb"), ebt = el("span"); ebt.textContent = d.eyebrow || ""; eb.append(ebt); txt.append(eb);
+  if (!d.eyebrow) eb.style.display = "none";
   const h1 = el("h1");
-  // Las palabras con guion («oficina-datacenter») no se parten por el guion.
-  const words = (t, into) => t.split(/(\S+-\S+)/).forEach((w, i) => {
+  // Ortotipografía del titular (solo en la imagen; el texto no cambia): las palabras de una letra (a, e, o, u, y)
+  // no se quedan al final de la línea, un número va con la palabra de delante («Microsoft 365», «Cat 6A»,
+  // «ISO 9001»), «Google Workspace» y «por qué» no se separan, y las palabras con guion («oficina-datacenter») no se
+  // parten por el guion.
+  const tie = (t) => t.replace(/(?<=^|[\s(¿¡«"])([aeouyAEOUY])\s+(?=\S)/g, "$1\u00A0")
+    .replace(/(?<=\S)\s+(?=\d)/g, "\u00A0").replace(/\bGoogle\s+Workspace\b|\bpor\s+qué(?!\p{L})/gu, (m) => m.replace(/\s+/, "\u00A0"));
+  const words = (t, into) => tie(t).split(/(\S+-\S+)/).forEach((w, i) => {
     if (!(i % 2)) return w && into.append(w);
     const n = el("span"); n.style.whiteSpace = "nowrap"; n.textContent = w; into.append(n);
   });
@@ -293,7 +349,10 @@ async function paint(d, ctx) {
   const left = el("span"); left.textContent = d.foot || ""; strip.append(left, el("i", "sig"), el("i", "node"));
   const url = el("span", "url"); url.textContent = "adqa.com"; strip.append(url);
   c.append(strip);
+  // La tipografía de la web o nada: se piden las caras que usa el texto y se comprueba que han cargado.
+  const loaded = (await Promise.all(["600 72px", "600 23px", "500 21px"].map((f) => document.fonts.load(`${f} "Figtree"`, c.textContent)))).flat();
   await document.fonts.ready;
+  if (!loaded.length || !document.fonts.check(`600 72px "Figtree"`, c.textContent)) throw new Error("Figtree no ha cargado");
 
   // Ajuste del H1: el tamaño más grande (72 → 56 px) que cabe en 3 líneas sin partir palabras. Con ilustración,
   // la columna de texto puede ensancharse (y la ilustración, encoger) antes de bajar de 56 px.
@@ -338,7 +397,7 @@ async function paint(d, ctx) {
       const svg = document.createElementNS(NS, "svg");
       svg.setAttribute("viewBox", `${x0} ${y0} ${x1 - x0} ${y1 - y0}`);
       svg.setAttribute("width", (x1 - x0) * s); svg.setAttribute("height", (y1 - y0) * s);
-      svg.innerHTML = (def.patch || []).reduce((t, [a, b]) => t.replace(a, b), def.svg || arts[d.art]);
+      svg.innerHTML = def.svg || arts[d.art];
       a.append(svg);
     }
     c.append(a);
@@ -439,7 +498,11 @@ async function makeImages() {
     pages.sort((a, b) => a.url.localeCompare(b.url));
     const sel = pages.filter((p) => !only || only.some((o) => (o === "home" ? p.url === "/" : p.url.replace(/^\//, "").startsWith(o))));
     const list = [];
-    for (const p of sel) list.push(describe(p.url, await readFile(p.file, "utf8")));
+    for (const p of sel) {
+      const d = describe(p.url, await readFile(p.file, "utf8"));
+      if (d.art && !(ART[d.art]?.svg || arts[d.art])) { warn.push(`${d.url}: falta la ilustración heroes-${d.art}.svg; va sin ella`); delete d.art; }
+      list.push(d);
+    }
 
     await mkdir(outDir, { recursive: true });
     const tpl = join(work, "og.html");
@@ -450,7 +513,6 @@ async function makeImages() {
     await page.goto(pathToFileURL(tpl).href);
     const ctx = { arts, icons, ART, logo: pathToFileURL(join(assets, "logo-adqa.svg")).href };
     let total = 0;
-    const warn = [];
     for (const d of list) {
       const r = await page.evaluate(([fn, d, ctx]) => (0, eval)(`(${fn})`)(d, ctx), [paint.toString(), d, ctx]);
       await page.evaluate(() => new Promise((ok) => { const i = document.querySelector(".logo"); i.complete ? ok() : (i.onload = ok); }));

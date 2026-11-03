@@ -4,8 +4,8 @@ eleventyExcludeFromCollections: true
 ---
 {#- Rutas relativas al propio manifest: así funcionan igual en adqa.com y en la vista previa con prefijo (/web-adqa/). -#}
 {
-  "name": "{{ site.name }}",
-  "short_name": "{{ site.name }}",
+  "name": {{ site.name | dump | safe }},
+  "short_name": {{ site.name | dump | safe }},
   "lang": "es",
   "start_url": "./",
   "scope": "./",
