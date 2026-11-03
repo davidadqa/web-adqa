@@ -974,7 +974,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .mobile-menu>a[aria-current=page]::after{content:"";flex:none;width:7px;height:7px;margin-right:4px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo)}
 .mobile-menu summary svg{transition:transform .3s var(--ease)}
 .mobile-menu [open] summary svg{transform:rotate(180deg)}
-.burger{background:linear-gradient(#2c2c2c,#1d1d1d);border:1px solid #3d3d3d;box-shadow:0 3px 0 #070707,inset 0 1px 0 rgba(255,255,255,.09);transition:.26s var(--ease)}
+.burger{background:linear-gradient(#2c2c2c,#1d1d1d) #1d1d1d;border:1px solid #3d3d3d;box-shadow:0 3px 0 #070707,inset 0 1px 0 rgba(255,255,255,.09);transition:.26s var(--ease)}
 .menu-open .burger,.burger:active{transform:translateY(2px);box-shadow:0 1px 0 #070707,inset 0 1px 0 rgba(255,255,255,.12)}
 .burger:active{background:var(--pink);border-color:var(--pink);transition-duration:var(--p-t-press)}
 @media (hover:none){
@@ -983,7 +983,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
 }
 .adqa-js .rv:not(.in):focus-within,.adqa-js .rv:not(.in) :focus-within{opacity:1;transform:none;filter:none;transition:none}
 @media (prefers-reduced-motion:reduce){ /* también las teclas de P2-01 y P2-02 (content) */
-  .burger:active,.menu-open .burger,a.card:active,.faq summary:active .pm,.field input[type=file]:active::file-selector-button{transform:none}
+  .burger:active,.menu-open .burger,a.card:active,body .faq summary:active .pm,body .field input[type=file]:active::file-selector-button{transform:none}
 }
 
 /* — 2a passada: P2-05 · «Las capas de noche» (mega): se dibujan al abrirlo; si no caben, se encogen (−6 px: sin hueco nuevo) */
