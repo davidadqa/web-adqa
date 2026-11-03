@@ -182,7 +182,7 @@ function describe(url, html) {
       parts: !m ? [{ t: site.claimFull }] : [{ t: m[1] }, { t: "teclas", a: true }, { nl: true },
         ...m[2].trim().replace(/(tengas) /, "$1\n").split("\n").flatMap((t, i) => (i ? [{ nl: true }, { t }] : [{ t: " " + t }])),
         { t: " " }, { t: "una", key: true }, { t: "." }],
-      foot: "Más de 30 años · ENS categoría ALTA · ISO 9001:2015" });
+      foot: "We make I.T. better" });
   } else if (AREA[area]) {
     const sub = url.split("/").filter(Boolean).length > 1;
     const eyebrow = SUB[url] || [AREA[area], sub && navLabel(url)].filter(Boolean).join(" · ");

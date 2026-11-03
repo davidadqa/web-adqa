@@ -31,6 +31,7 @@ h3{font-size:1.25rem;letter-spacing:-.015em;line-height:1.25}
 p{color:var(--gray)}
 .lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--gray);max-width:640px}
 .accent{color:var(--pink)}
+.eyebrow-accent{color:var(--pink-600)} /* rosa de marca en texto pequeño (AA sobre claro) */
 .eyebrow{justify-self:start;width:max-content;max-width:100%;display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--gray);padding:6px 14px 6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
 .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px var(--pink-50)}
 .sec{padding:clamp(80px,11vw,140px) 0}
