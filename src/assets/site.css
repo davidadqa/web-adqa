@@ -1700,9 +1700,10 @@ body{font-size:var(--fs-body)}
 h1{font-size:var(--fs-display);line-height:var(--lh-display)}
 h2{font-size:var(--fs-h2)}
 h3{font-size:var(--fs-h3)}
-/* Con títulos más grandes, una palabra sola en la última línea se nota más: líneas equilibradas (no en el h1 de la home,
-   que tiene su corte propio) */
-h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
+/* Con títulos más grandes, una palabra sola en la última línea se nota más: líneas equilibradas (también en las
+   preguntas de FAQ, los títulos de ficha y las etiquetas de resultado) */
+h2,h3,h4,.page-hero h1,.foot-claim .claim,.faq summary,.ca-stat span{text-wrap:balance}
+.quote blockquote,.toc a{text-wrap:pretty}
 .doc{font-size:var(--fs-body);max-width:var(--measure)}
 .doc h2{font-size:var(--fs-h3)}
 .doc h3{font-size:var(--fs-lead)}
@@ -1715,6 +1716,11 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 
 /* --- heroes: titulares, entradilla, «En resumen», respuesta y cabeceras de sección --- */
 .page-hero h1{font-size:var(--fs-h1);line-height:var(--lh-h1);max-width:1000px}
+/* H1 de la home: la frase en rosa, en su propia línea y equilibrada como la primera. Sin esto, entre 600 y 1060 px
+   «empresa.» quedaba sola en una línea (a 57 px ya no cabe junto a «ciberseguridad para tu») y a 390 «equipo.» también.
+   Mismo número de líneas a todas las anchuras: el CTA no se mueve. */
+.hero:not(.page-hero) h1{text-wrap:balance}
+.hero:not(.page-hero) h1 .accent{display:block} /* solo la home: en los interiores el .accent sigue en línea («Hablemos de tu tecnología») */
 .doc-hero h1{font-size:var(--fs-h2);line-height:var(--lh-h2)}
 .art-hero h1{max-width:1000px}
 .lead,.doc-hero .lead{font-size:var(--fs-lead);line-height:var(--lh-lead)}
@@ -1734,11 +1740,15 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .nav-links>li>a,.nav-links>li>button,.nav-cta .link,.nav-cta .btn,
 .mega-col h4,.mega-col a,.mega-feature p,.mega-feature a,.mega-feature .tel{font-size:var(--fs-sm)}
 .mega-feature h5{font-size:var(--fs-lead)}
-.btn,.mobile-menu .sub a,.mega-feature .tel strong{font-size:var(--fs-body)}
+.btn,.mega-feature .tel strong{font-size:var(--fs-body)}
 .btn{height:54px;padding:0 26px}
 .nav-cta .btn{height:46px;padding:0 20px}
-.mobile-menu .sub a{display:block;padding-block:10px} /* zona táctil de 46 px */
-.eyebrow{font-size:var(--fs-sm);padding:7px 16px 7px 12px}
+/* Submenú del menú móvil: los mismos enlaces que .mega-col a, a la misma medida (sm). A 16 px «Diseño web y software»
+   no cabía en su columna a 390 y partía en dos líneas. La zona táctil de 44 px ya la da Poesía (min-height). */
+.mobile-menu .sub a{font-size:var(--fs-sm)}
+@media (min-width:721px){.mobile-menu .sub a{font-size:var(--fs-body)}}
+/* text-wrap: a 390 px diez eyebrows no caben en una línea (seis ya partían antes): en dos mitades, sin palabra sola */
+.eyebrow{font-size:var(--fs-sm);padding:7px 16px 7px 12px;text-wrap:balance}
 .eyebrow::after{left:12px} /* el anillo del «ping» sigue centrado en el punto */
 .foot-claim .claim{font-size:var(--fs-2xl)}
 .foot p,.foot a,.foot h4,.legal{font-size:var(--fs-sm)}
@@ -1762,9 +1772,20 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .cmp li svg,.ticks svg{margin-top:calc(.75em - 9.5px)}
 .st li::before{margin-top:calc(.75em - 2.5px)}
 :is(.card,.st) p,.strengths p,.steps p{max-width:var(--measure)}
+/* Párrafos de tarjeta sin palabra sola en la última línea («…un hospital o una / mina.» a 1440) */
+:is(.card,.svc,.st,.proj,.metric) p,.steps p{text-wrap:pretty}
+/* Cifras de encuesta (.metric): la tarjeta más alta de la fila ya no reparte su altura entre las filas de las demás
+   (a 768 la barra de «97 %» quedaba 17 px más arriba que las otras dos) */
+.metric{align-content:start}
 .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 /* «Para quién» en 2 × 2: con la letra a 18 px, a cuatro columnas el texto quedaba en 26–28 caracteres por línea */
 @media (min-width:1061px){.aud{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Tarjetas en tres columnas (.res) en tableta: a 721–1060 cada columna dejaba 170–250 px de texto y los títulos de
+   artículo llegaban a 8 líneas. Dos columnas y, si queda una sola al final, a todo el ancho (como .proj-grid). */
+@media (min-width:721px) and (max-width:1060px){
+  .res:not(.four,.two){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .res:not(.four,.two)>:last-child:nth-child(odd){grid-column:1/-1}
+}
 @media (max-width:720px){.stat b{font-size:var(--fs-h2)}}
 
 /* --- proof: proyectos, muro de clientes, logos, partners, testimonios, casos y sellos --- */
@@ -1778,7 +1799,8 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .proj .kind,.case-feat .kind,.case-anon .kind,.ca-steps dt,.partners h3,.logos p.k,.wall-tabs button,.seals .s-txt,
 .quote .av,.quote figcaption span{font-size:var(--fs-sm)}
 .proj .kind,.case-feat .kind,.case-anon .kind,.ca-steps dt,.partners h3{letter-spacing:var(--ls-caps)}
-.proj .kind,.case-feat .kind,.case-anon .kind{text-wrap:balance}
+/* Las etiquetas (.kind) van sin text-wrap:balance: al equilibrar, la línea partía antes del «·» y la segunda empezaba
+   por «· Telecom» (16 casos a 1440, 21 a 768). Con el corte normal, el «·» se queda al final de la línea. */
 .ca-steps dd{max-width:var(--measure)}
 .quote{padding:40px}
 .quote blockquote{font-size:var(--fs-h3);line-height:1.4}
@@ -1790,6 +1812,14 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
   :is(.res,.res>.rv)>.case-anon{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:18px}
   .case-anon .ca-top{grid-row:span 2;grid-template-rows:subgrid;row-gap:14px}
 }
+/* Proyectos con nombre (.proj, en el carril y en .proj-grid): lo mismo. Con la etiqueta a 15 px, «Proyecto y
+   mantenimiento 24/7 · Informática y telecom» ocupa dos líneas y el título, el texto y la línea del resultado de esa
+   tarjeta bajaban 33 px respecto a sus vecinas. Foto, etiqueta, título, texto y resultado comparten filas. */
+.rail{row-gap:0}
+.rail>.proj,:is(.proj-grid,.proj-grid>.rv)>.proj{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:0}
+.proj-grid>.rv:has(>.proj){grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+.proj .body{grid-row:span 4;grid-template-rows:subgrid}
+.proj .hl{margin-top:0;align-self:start} /* la línea del resultado, a la misma altura en toda la fila */
 @media (max-width:720px){.quote{padding:28px}}
 
 /* --- content: FAQ, tablas, contacto y formulario, «Dónde estamos», notas y fichas de los textos legales --- */
@@ -1803,6 +1833,15 @@ h2,h3,.page-hero h1,.foot-claim .claim{text-wrap:balance}
 .field label,.field .hint,.check,.field input[type=file]::file-selector-button{font-size:var(--fs-sm)}
 .faq h3,.sub-head,.doc-more h2,.vs thead th,.spec thead th,.prose thead th,.vs td::before,.spec td::before{letter-spacing:var(--ls-caps)}
 .contact-info p,.note:not(.card),.note.card p,.note-box p,.note-src,.cert-txt .doc{max-width:var(--measure)}
+/* «Otros textos legales», al ancho del texto legal que cierra (576 px a 1440, antes 72ch ≈ 800 px bajo una columna de
+   576). En los certificados (bajo la rejilla imagen + texto) se queda como estaba. */
+.doc~.doc-more{max-width:var(--measure)}
+/* Tablas del blog en la columna de 32em (537–576 px): fuera del móvil ya no llevan el mínimo de 560 px, que a 721–1060
+   las hacía desplazarse 4–40 px en 51 artículos. Las de cuatro columnas ganan 6 px por celda para caber sin scroll. */
+@media (min-width:721px){
+  .prose table{min-width:0}
+  .prose table:has(tr>:nth-child(4)) :is(th,td){padding-inline:10px}
+}
 @media (max-width:720px){
   .vs tbody th,.vs.mid tbody th,.vs.calc tbody th,.spec tbody th{font-size:var(--fs-lead)}
   .vs td::before,.spec td::before{font-size:var(--fs-sm)}
