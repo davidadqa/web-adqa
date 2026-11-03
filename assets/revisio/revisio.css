@@ -1,0 +1,118 @@
+/* Modo corrección de textos (solo vista previa). Una herramienta, no el escaparate:
+   oscuro (--night), Figtree, cápsulas y paneles de radio 14; el rosa solo marca el estado activo y los textos editados.
+   Todo cuelga de .revisio-*: con el modo apagado no toca nada de la página. */
+.revisio-ui{--r-bg:#141414;--r-bg2:#1d1d1d;--r-line:#2e2e2e;--r-line2:#3a3a3a;--r-mute:#bdbdbd;--r-pink:#E32772;--r-on:#c91d61;--r-ease:var(--ease,cubic-bezier(.22,.8,.24,1));--r-lift:0 0 0 1px rgba(255,255,255,.13),0 14px 36px -14px rgba(20,20,20,.6);
+  font:500 14px/1.45 var(--font,"Figtree",system-ui,sans-serif);color:#fff;letter-spacing:0;text-align:left;-webkit-font-smoothing:antialiased}
+.revisio-ui :where(*){box-sizing:border-box;margin:0;padding:0}
+.revisio-ui [hidden]{display:none!important}
+.revisio-ui :where(p){color:inherit}
+.revisio-ui button{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;font:600 14px/1 var(--font,"Figtree",system-ui,sans-serif);color:#fff;white-space:nowrap;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .2s var(--r-ease),color .2s var(--r-ease),opacity .2s var(--r-ease)}
+.revisio-ui button:disabled{opacity:.4;cursor:default;background-color:transparent}
+.revisio-ui button.revisio-main{background-color:#fff;color:var(--r-bg)}
+.revisio-ui button.revisio-main:disabled{background-color:#fff}
+.revisio-ui button.revisio-ghost{box-shadow:inset 0 0 0 1px var(--r-line2)}
+.revisio-ui :focus-visible{outline:2px solid var(--r-pink);outline-offset:2px}
+.revisio-label{display:block;font-size:13px;font-weight:600;color:var(--r-mute)}
+.revisio-label span{font-weight:500}
+
+/* botón flotante: abajo a la izquierda, lejos de la hamburguesa (arriba a la derecha) */
+.revisio-dock{position:fixed;z-index:310;left:max(16px,env(safe-area-inset-left));bottom:max(16px,env(safe-area-inset-bottom));display:flex;gap:2px;padding:3px;border-radius:999px;background:var(--r-bg);box-shadow:var(--r-lift);transition:transform .25s var(--r-ease),opacity .25s var(--r-ease)}
+.revisio-ui.revisio-dock button{min-height:44px}
+.revisio-ui .revisio-toggle{padding:0 18px 0 14px}
+.revisio-ui .revisio-toggle svg{flex:none}
+.revisio-ui .revisio-toggle[aria-pressed="true"],.revisio-ui .revisio-toggle[aria-pressed="true"]:hover{background-color:var(--r-on)}
+.revisio-ui .revisio-count{min-width:44px;padding:0 14px 0 12px;font-variant-numeric:tabular-nums}
+.revisio-ui .revisio-count[aria-expanded="true"]{background-color:rgba(255,255,255,.12)}
+.revisio-count::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--r-pink)}
+.revisio-dock.is-away:not(:focus-within){transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+body.menu-open .revisio-dock{opacity:0;visibility:hidden}
+
+/* capas de marcas (superposición fija, sin eventos): contorno discontinuo al pasar, filete rosa en lo ya corregido.
+   La de la página queda bajo la navegación (z 100) para no pintar encima de la cápsula ni del menú abierto; la de la navegación, encima. */
+.revisio-layer{position:fixed;inset:0;z-index:99;pointer-events:none;overflow:hidden}
+.revisio-layer.is-top{z-index:300}
+.revisio-hl,.revisio-mark{position:absolute;left:0;top:0;display:none;border-radius:6px;background:rgba(227,39,114,.1)}
+.revisio-hl{outline:1px dashed var(--r-pink)}
+.revisio-hl.is-sel{outline:1.5px solid var(--r-pink)}
+.revisio-mark{border-radius:2px 6px 6px 2px;box-shadow:inset 2px 0 0 var(--r-pink)}
+/* sobre el bloque rosa (.contact-info), el rosa desaparece: la marca pasa a blanco */
+.revisio-hl.is-pink,.revisio-mark.is-pink{background:rgba(255,255,255,.12)}
+.revisio-hl.is-pink{outline-color:#fff}
+.revisio-mark.is-pink{box-shadow:inset 2px 0 0 #fff}
+
+/* panel y cajón: anclados (escritorio) u hoja inferior (móvil) */
+.revisio-panel,.revisio-drawer{position:fixed;z-index:320;background:var(--r-bg);border:1px solid var(--r-line2);border-radius:14px;box-shadow:0 30px 80px -30px rgba(20,20,20,.35),var(--r-lift);visibility:hidden;opacity:0;transform:translateY(6px);transition:opacity .2s var(--r-ease),transform .25s var(--r-ease),visibility 0s linear .25s}
+.revisio-panel.is-open,.revisio-drawer.is-open{visibility:visible;opacity:1;transform:none;transition-delay:0s}
+/* mientras se cierran (250 ms) ya no capturan clics: el siguiente clic llega a la página */
+.revisio-panel:not(.is-open),.revisio-drawer:not(.is-open),.revisio-scrim:not(.is-open){pointer-events:none}
+.revisio-panel{left:12px;top:12px;width:min(440px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;padding:12px 16px 16px}
+.revisio-panel.is-free{left:0;right:0;top:12vh;margin-inline:auto}
+.revisio-grip{display:none}
+.revisio-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:4px}
+.revisio-ui button.revisio-x{width:40px;min-height:40px;padding:0;margin-right:-10px;font-size:22px;font-weight:400;color:var(--r-mute)}
+.revisio-orig{margin-bottom:14px;padding:1px 0 1px 12px;border-left:2px solid var(--r-line2);color:var(--r-mute);max-height:7.4em;overflow:auto;overscroll-behavior:contain;overflow-wrap:anywhere}
+.revisio-field{display:block;width:100%;margin:6px 0 12px;padding:10px 12px;background:var(--r-bg2);border:1px solid var(--r-line);border-radius:12px;color:#fff;font:500 15px/1.5 var(--font,"Figtree",system-ui,sans-serif);outline:none;transition:border-color .2s var(--r-ease),box-shadow .2s var(--r-ease)}
+textarea.revisio-field{min-height:76px;resize:vertical;overflow:auto}
+.revisio-field::placeholder{color:#8f8f8f;opacity:1}
+.revisio-field:focus{border-color:var(--r-pink);box-shadow:0 0 0 3px rgba(227,39,114,.25)}
+.revisio-field::selection{background:rgba(227,39,114,.55);color:#fff}
+.revisio-actions{position:sticky;bottom:-16px;display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:0 -16px -16px;padding:4px 16px 16px;background:var(--r-bg)}
+.revisio-ui button.revisio-del{margin-right:auto;padding:0 12px;margin-left:-12px;color:var(--r-mute)}
+
+.revisio-drawer{left:max(16px,env(safe-area-inset-left));bottom:calc(max(16px,env(safe-area-inset-bottom)) + 58px);width:min(460px,calc(100vw - 32px));max-height:calc(100dvh - 110px);display:flex;flex-direction:column;overflow:hidden;transform-origin:left bottom}
+.revisio-drawer .revisio-head{padding:12px 16px 10px;margin:0;border-bottom:1px solid var(--r-line)}
+.revisio-title{font-size:15px;font-weight:600}
+.revisio-list{flex:1 1 auto;overflow:auto;overscroll-behavior:contain;padding:0 16px}
+.revisio-empty{padding:18px 0;color:var(--r-mute)}
+.revisio-group{padding:14px 0;border-bottom:1px solid var(--r-line)}
+.revisio-group:last-child{border-bottom:0}
+.revisio-page{color:#fff;font-weight:600;text-decoration:underline;text-decoration-color:var(--r-line2);text-underline-offset:3px;overflow-wrap:anywhere;transition:text-decoration-color .2s var(--r-ease)}
+.revisio-here{margin-left:8px;font-size:12px;color:var(--r-mute)}
+.revisio-items{list-style:none;display:grid;gap:14px;margin-top:10px}
+.revisio-item{display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px}
+.revisio-n{color:var(--r-mute);font-weight:600;font-variant-numeric:tabular-nums}
+.revisio-item p{overflow-wrap:anywhere;white-space:pre-wrap}
+.revisio-was{color:var(--r-mute)}
+.revisio-was del{color:#fff;text-decoration:line-through;text-decoration-color:var(--r-pink);text-decoration-thickness:1.5px}
+.revisio-now{margin-top:3px}
+.revisio-now ins{text-decoration:none;background:rgba(227,39,114,.3);border-radius:3px;box-shadow:0 0 0 2px rgba(227,39,114,.3)}
+.revisio-note{margin-top:3px;color:var(--r-mute)}
+.revisio-item-act{display:flex;gap:4px;margin:8px 0 0 -2px}
+.revisio-ui .revisio-item-act button{min-height:34px;padding:0 14px;font-size:13px;color:var(--r-mute)}
+.revisio-manual,.revisio-confirm{padding:12px 16px 0;border-top:1px solid var(--r-line)}
+.revisio-manual .revisio-field{font-size:13px;margin-bottom:0}
+.revisio-confirm{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-bottom:14px}
+.revisio-confirm p{flex:1 1 100%}
+.revisio-confirm:not([hidden])+.revisio-foot{display:none}
+.revisio-foot{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 14px;border-top:1px solid var(--r-line)}
+.revisio-ui button.revisio-clear{margin-left:auto;padding:0 12px;color:var(--r-mute)}
+.revisio-scrim{position:fixed;inset:0;z-index:305;background:rgba(20,20,20,.28);opacity:0;visibility:hidden;transition:opacity .25s var(--r-ease),visibility 0s linear .25s}
+.revisio-scrim.is-open{opacity:1;visibility:visible;transition-delay:0s}
+
+.revisio-toast{position:fixed;z-index:330;left:max(16px,env(safe-area-inset-left));bottom:calc(max(16px,env(safe-area-inset-bottom)) + 58px);max-width:min(380px,calc(100vw - 32px));padding:10px 16px;border-radius:14px;background:var(--r-bg);box-shadow:var(--r-lift);pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .2s var(--r-ease),transform .25s var(--r-ease)}
+.revisio-toast.is-open{opacity:1;transform:none}
+.revisio-toast:empty{display:none}
+
+/* hover solo con ratón: en el móvil el «hover» se queda pegado después de tocar */
+@media (hover:hover) and (pointer:fine){
+  .revisio-ui button:not(:disabled):hover{background-color:rgba(255,255,255,.08)}
+  .revisio-ui button.revisio-main:not(:disabled):hover{background-color:#e7e5e4}
+  .revisio-ui :is(button.revisio-x,button.revisio-del,button.revisio-clear,.revisio-item-act button):not(:disabled):hover{color:#fff}
+  .revisio-page:hover{text-decoration-color:var(--r-pink)}
+}
+@media (pointer:coarse){
+  .revisio-ui button,.revisio-ui .revisio-item-act button{min-height:44px}
+}
+@media (max-width:640px){
+  .revisio-panel,.revisio-drawer,.revisio-panel.is-free{left:0;right:0;top:auto;bottom:var(--revisio-kb,0px);width:auto;margin:0;max-height:calc(88dvh - var(--revisio-kb,0px));border-radius:14px 14px 0 0;border-width:1px 0 0;padding-bottom:calc(16px + env(safe-area-inset-bottom))}
+  .revisio-panel:not(.is-open),.revisio-drawer:not(.is-open){transform:translateY(24px)}
+  .revisio-drawer{padding-bottom:env(safe-area-inset-bottom)}
+  .revisio-panel{padding-top:8px}
+  .revisio-grip{display:block;width:36px;height:4px;margin:0 auto 6px;border-radius:999px;background:var(--r-line2)}
+  .revisio-drawer .revisio-grip{margin-top:8px}
+  .revisio-field{font-size:16px}
+  .revisio-orig{max-height:5.9em}
+}
+@media (prefers-reduced-motion:reduce){
+  .revisio-ui,.revisio-ui *{transition-duration:0s!important;transition-delay:0s!important}
+}

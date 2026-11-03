@@ -19,7 +19,7 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:6px}
 .wrap{width:min(1180px,100% - 32px);margin-inline:auto}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;z-index:200}
+.skip{position:absolute;left:-999px;top:8px;color:#fff;padding:10px 16px;border-radius:10px;z-index:200}
 .skip:focus{left:16px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
@@ -42,8 +42,8 @@ p{color:var(--gray)}
 .btn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 24px;border-radius:999px;font-weight:600;font-size:.98rem;transition:transform .35s var(--ease),background .25s,box-shadow .35s var(--ease),color .25s;white-space:nowrap}
 .btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
 .btn:hover svg{transform:translateX(3px)}
-.btn-primary{background:var(--pink);color:#fff;box-shadow:0 8px 24px -10px rgba(227,39,114,.6),inset 0 1px 0 rgba(255,255,255,.2)}
-.btn-primary:hover{background:var(--pink-600);transform:translateY(-1px);box-shadow:0 14px 30px -12px rgba(227,39,114,.7)}
+.btn-primary{background:var(--pink);color:#fff}
+.btn-primary:hover{background:var(--pink-600);transform:translateY(-1px)}
 .btn-ghost{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--line-2);transform:translateY(-1px)}
 .btn-dark{background:var(--ink);color:#fff}
@@ -75,7 +75,7 @@ p{color:var(--gray)}
 .mega-col h4 .ico svg{width:15px;height:15px}
 .mega-col ul{list-style:none;display:grid}
 .mega-col a{display:block;padding:6px 10px;margin-left:-10px;border-radius:10px;font-size:.95rem;font-weight:500;color:var(--ink);transition:background .2s,color .2s}
-.mega-col a:hover{background:var(--surface-2);color:var(--pink)}
+.mega-col a:hover{background:var(--surface-2)}
 .mega-col a[aria-current="page"]{color:var(--pink-600)}
 .mega-feature{border-radius:20px;background:var(--night);color:#fff;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;position:relative;overflow:hidden}
 .mega-feature::after{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;background:radial-gradient(closest-side,rgba(227,39,114,.55),transparent);filter:blur(10px)}
@@ -92,14 +92,14 @@ p{color:var(--gray)}
 .menu-open .burger span{background:transparent}
 .menu-open .burger span::before{top:0;transform:rotate(45deg)}
 .menu-open .burger span::after{top:0;transform:rotate(-45deg)}
-.mobile-menu{pointer-events:auto;position:fixed;inset:88px 12px auto;max-height:calc(100dvh - 100px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:10px;box-shadow:0 30px 80px -30px rgba(20,20,20,.4);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.3s var(--ease)}
-.menu-open .mobile-menu{opacity:1;visibility:visible;transform:none}
+.mobile-menu{pointer-events:auto;position:fixed;inset:88px 12px auto;max-height:calc(100dvh - 100px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:10px;box-shadow:0 30px 80px -30px rgba(20,20,20,.4);opacity:0;visibility:hidden;transition:.3s var(--ease)}
+.menu-open .mobile-menu{opacity:1;visibility:visible}
 .mobile-menu details{border-bottom:1px solid var(--line)}
 .mobile-menu summary,.mobile-menu>a{display:flex;justify-content:space-between;align-items:center;padding:14px 14px;font-weight:600;list-style:none;cursor:pointer}
 .mobile-menu summary::-webkit-details-marker{display:none}
 .mobile-menu>a{border-bottom:1px solid var(--line)}
 .mobile-menu .sub{display:grid;grid-template-columns:1fr 1fr;gap:2px 10px;padding:0 14px 14px}
-.mobile-menu .sub a{font-size:.93rem;color:var(--gray);padding:6px 0}
+.mobile-menu .sub a{font-size:.93rem;color:var(--gray)}
 .mobile-menu a[aria-current="page"]{color:var(--pink-600)}
 .mobile-menu .m-cta{display:grid;gap:8px;padding:14px 4px 4px}
 .mobile-menu .m-cta .btn{justify-content:center}
@@ -166,7 +166,7 @@ p{color:var(--gray)}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
 .stat b{display:block;font-size:2.2rem;font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink);margin-bottom:8px}
-.stat b small{font-size:1.1rem;color:var(--pink)}
+.stat b small{font-size:1.1rem}
 .stat>span{font-size:.92rem;color:var(--gray);line-height:1.4;display:block}
 
 /* ============ SERVICES ============ */
@@ -177,17 +177,15 @@ p{color:var(--gray)}
 .card:hover::before{opacity:1}
 .svc{grid-column:span 2;display:flex;flex-direction:column;gap:14px;min-height:300px}
 .svc.wide{grid-column:span 3}
-.svc .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
+.svc .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:var(--pink)}
 .svc .ico svg{width:22px;height:22px}
 .svc p{font-size:.98rem}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;list-style:none}
 .tags li{font-size:.78rem;font-weight:500;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--gray)}
-.svc .more{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:600;color:var(--pink)}
+.svc .more{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:600}
 .svc .more svg{width:14px;height:14px;transition:transform .3s var(--ease)}
-.svc:hover .more svg{transform:translateX(4px)}
 .svc.dark{background:var(--night);border-color:var(--night);color:#fff}
 .svc.dark h3{color:#fff}.svc.dark p{color:#bdbdbd}
-.svc.dark .ico{background:rgba(227,39,114,.18)}
 .svc.dark .tags li{background:var(--night-2);color:#cfcfcf}
 .svc.dark::after{content:"";position:absolute;right:-120px;bottom:-140px;width:340px;height:340px;background:radial-gradient(closest-side,rgba(227,39,114,.45),transparent);filter:blur(20px);pointer-events:none}
 
@@ -214,7 +212,7 @@ p{color:var(--gray)}
 .strengths .sticky{position:sticky;top:130px;display:grid;gap:22px}
 .stack{display:grid;gap:22px}
 .st{position:sticky;top:calc(120px + var(--n)*14px);background:var(--night-2);border:1px solid var(--night-line);border-radius:var(--radius);padding:32px;display:grid;gap:14px;box-shadow:0 -20px 40px -20px rgba(0,0,0,.6);transform-origin:center top}
-.st .num{font-size:.82rem;font-weight:600;color:var(--pink);letter-spacing:.06em}
+.st .num{font-size:.82rem;font-weight:600;letter-spacing:.06em}
 .st ul{list-style:none;display:grid;gap:8px;margin-top:4px}
 .st li{display:flex;gap:10px;color:#d4d4d4;font-size:.97rem}
 .st li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--pink);margin-top:10px}
@@ -229,21 +227,21 @@ p{color:var(--gray)}
 .metric{border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);padding:30px;display:grid;gap:12px}
 .metric b{font-size:clamp(3rem,6vw,4.4rem);font-weight:600;letter-spacing:-.045em;line-height:1}
 .metric b span{color:var(--pink)}
-.metric .bar{height:6px;border-radius:9px;background:var(--surface-2);overflow:hidden}
-.metric .bar i{display:block;height:100%;width:0;background:var(--pink);border-radius:9px;transition:width 1.6s var(--ease)}
+.metric .bar{height:6px;border-radius:9px;background:var(--surface-2)}
+.metric .bar i{display:block;height:100%;background:var(--pink);border-radius:9px;transition:width 1.6s var(--ease)}
 .metric p{font-size:.98rem}
 
 /* ============ AUDIENCE ============ */
 .aud{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .aud .card{padding:26px;display:grid;gap:12px;align-content:start}
-.aud .n{font-size:.8rem;font-weight:600;color:var(--pink);letter-spacing:.06em}
+.aud .n{font-size:.8rem;font-weight:600;letter-spacing:.06em}
 .aud h3{font-size:1.08rem}
 .aud p{font-size:.95rem}
 
 /* ============ PROJECTS ============ */
 .proj-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px}
 .proj-nav{display:flex;gap:8px}
-.proj-nav button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;transition:.25s}
+.proj-nav button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center}
 .proj-nav button:hover{border-color:var(--ink);background:var(--ink);color:#fff}
 .proj-nav svg{width:18px;height:18px}
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(420px,82vw);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(16px,calc((100vw - 1180px)/2)) 30px;scrollbar-width:none;cursor:grab}
@@ -254,7 +252,7 @@ p{color:var(--gray)}
 .proj figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .proj:hover figure img{transform:scale(1.05)}
 .proj .body{padding:24px;display:grid;gap:10px;align-content:start;flex:1}
-.proj .kind{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
+.proj .kind{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .proj h3{font-size:1.25rem}
 .proj p{font-size:.95rem}
 .proj .hl{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:.88rem;color:var(--ink);font-weight:600;display:flex;gap:8px;align-items:center}
@@ -275,9 +273,9 @@ p{color:var(--gray)}
 .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .quote{display:flex;flex-direction:column;justify-content:space-between;gap:28px;padding:34px}
 .quote blockquote{font-size:clamp(1.12rem,1.7vw,1.32rem);line-height:1.45;letter-spacing:-.01em;color:var(--ink);font-weight:500}
-.quote blockquote::before{content:"“";display:block;font-size:3.2rem;line-height:.6;color:var(--pink);margin-bottom:14px;font-weight:600}
+.quote blockquote::before{content:"“";display:block;color:var(--pink);font-weight:600}
 .quote figcaption{display:flex;align-items:center;gap:12px}
-.quote .av{width:42px;height:42px;border-radius:50%;background:var(--pink-50);color:var(--pink);display:grid;place-items:center;font-weight:600;font-size:.9rem;flex:none}
+.quote .av{width:42px;height:42px;border-radius:50%;background:var(--pink-50);display:grid;place-items:center;font-weight:600;font-size:.9rem;flex:none}
 .quote figcaption b{display:block;font-size:.95rem;font-weight:600}
 .quote figcaption span{font-size:.86rem;color:var(--muted)}
 
@@ -296,7 +294,7 @@ p{color:var(--gray)}
 /* ============ RESOURCES ============ */
 .res{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .res a.card{display:grid;gap:12px;align-content:start;padding:26px}
-.res .cat{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
+.res .cat{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .res h3{font-size:1.1rem}
 .res p{font-size:.93rem}
 
@@ -323,12 +321,12 @@ p{color:var(--gray)}
 .field{display:grid;gap:6px}
 .field.full{grid-column:1/-1}
 .field label{font-size:.86rem;font-weight:600;color:var(--ink)}
-.field label i{color:var(--pink);font-style:normal}
+.field label i{font-style:normal}
 .field input,.field textarea,.field select{font:inherit;font-size:.97rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px;transition:border-color .2s,box-shadow .2s;width:100%}
 .field textarea{min-height:120px;resize:vertical}
 .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 4px var(--pink-50)}
-.check{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--gray)}
-.check input{margin-top:4px;accent-color:var(--pink);width:16px;height:16px}
+.check{grid-column:1/-1;display:flex;gap:10px;font-size:.88rem;color:var(--gray)}
+.check input{accent-color:var(--pink)}
 .check a{text-decoration:underline;text-underline-offset:2px}
 .form .btn{grid-column:1/-1;justify-content:center;height:54px}
 .hp{position:absolute;left:-9999px}
@@ -357,6 +355,7 @@ footer{background:var(--night);color:#bdbdbd;margin-top:clamp(80px,10vw,120px);p
 @media (max-width:720px){.br-wide{display:none}.foot-claim{padding-bottom:36px;margin-bottom:40px}}
 .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid var(--night-line);font-size:.84rem;color:#8a8a8a}
 .legal nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.legal-slogan{color:#b5b5b5;font-weight:500;white-space:nowrap}
 
 /* ============ INTERIOR PAGES (componentes compartidos) ============ */
 main section[id],main article[id]{scroll-margin-top:96px}
@@ -365,9 +364,8 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .page-hero .glow.g1{top:170px;height:360px}
 .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px;font-size:.88rem;color:var(--muted)}
 .crumbs li{display:inline-flex;align-items:center;gap:8px}
-.crumbs li+li::before{content:"›";color:var(--line-2)}
+.crumbs li+li::before{color:var(--line-2)}
 .crumbs a{color:var(--gray);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
-.crumbs a:hover{color:var(--pink)}
 .crumbs [aria-current]{color:var(--ink);font-weight:600}
 .tldr{font-size:clamp(1.12rem,1.8vw,1.36rem);line-height:1.5;letter-spacing:-.01em;color:var(--ink);font-weight:500}
 .aud .ico,.cmp h3 .ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink);flex:none}
@@ -389,12 +387,11 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .ticks svg{flex:none;width:20px;height:20px;color:var(--pink);margin-top:3px}
 .steps{list-style:none;display:grid;gap:10px;counter-reset:st}
 .steps li{counter-increment:st;display:grid;grid-template-columns:40px 1fr;gap:2px 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px}
-.steps li::before{content:counter(st,decimal-leading-zero);grid-row:span 2;width:40px;height:40px;border-radius:12px;background:var(--pink-50);color:var(--pink);display:grid;place-items:center;font-weight:600;font-size:.88rem}
+.steps li::before{content:counter(st,decimal-leading-zero);grid-row:span 2;width:40px;height:40px;border-radius:12px;background:var(--pink-50);display:grid;place-items:center;font-weight:600;font-size:.88rem}
 .steps b{font-weight:600;color:var(--ink)}
 .steps p{font-size:.94rem}
 .txt-link{font-weight:600;color:var(--pink-600)}
 .txt-link svg{width:15px;height:15px;margin-left:6px;vertical-align:-2px;transition:transform .3s var(--ease)}
-.txt-link:hover svg{transform:translateX(3px)}
 .dark-sec .txt-link{color:#fff;text-decoration:underline;text-decoration-color:var(--pink);text-underline-offset:4px}
 .nw{white-space:nowrap}
 .sub-head{margin:56px 0 18px;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
@@ -405,7 +402,6 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .cases-foot{display:flex;justify-content:center;margin-top:30px}
 .st .go{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.94rem;color:#fff;margin-top:4px}
 .st .go svg{width:14px;height:14px;color:var(--pink);transition:transform .3s var(--ease)}
-.st .go:hover svg{transform:translateX(4px)}
 @media (max-width:1060px){
   .split{grid-template-columns:1fr;gap:36px}
   .shot{aspect-ratio:16/10}
@@ -473,7 +469,21 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .req{color:var(--pink);font-style:normal}
 .note-src{margin-top:18px;font-size:.86rem;color:var(--muted)}
 /* Imagen provisional: visible a propósito hasta tener la definitiva */
-.ph{position:relative;display:grid;place-items:center;gap:10px;align-content:center;width:100%;border-radius:var(--radius-sm);border:2px dashed var(--pink);background:repeating-linear-gradient(135deg,var(--pink-50) 0 14px,#fff 14px 28px);color:var(--pink-600);text-align:center;padding:24px;overflow:hidden}
+/* Fotos definitivas (macro foto, src/_data/fotos.json) */
+.foto{margin:0;position:relative;width:100%}
+.foto picture,.foto img{display:block;width:100%;height:100%}
+.foto img{object-fit:cover;border-radius:var(--radius-sm);background:var(--surface-2)}
+/* Fotos del equipo: franja en blanco y negro con dos marcas de registro (L de 16 px) en rosa, el motivo «el plano» */
+.team-photo,.team-sheet{position:relative}
+.team-photo::before,.team-photo::after,.team-sheet::before,.team-sheet::after{content:"";position:absolute;z-index:1;width:16px;height:16px;border:1.5px solid var(--pink);pointer-events:none}
+.team-photo::before,.team-sheet::before{top:-9px;left:-9px;border-right:0;border-bottom:0}
+.team-photo::after,.team-sheet::after{bottom:-9px;right:-9px;border-left:0;border-top:0}
+.team-band{margin-top:clamp(48px,6vw,80px)}
+/* «Hoja de contactos»: varias franjas seguidas, con las marcas de registro solo en el conjunto */
+.team-sheet{display:grid;gap:10px}
+.team-sheet .team-photo::before,.team-sheet .team-photo::after{content:none}
+@media (max-width:720px){.team-photo::before,.team-sheet::before{top:-6px;left:-6px}.team-photo::after,.team-sheet::after{bottom:-6px;right:-6px}}
+.ph{position:relative;display:grid;place-items:center;gap:10px;align-content:center;width:100%;border-radius:var(--radius-sm);border:2px dashed var(--pink);color:var(--pink-600);text-align:center;padding:24px}
 .ph svg{width:40px;height:40px}
 .ph figcaption{font-size:.9rem;font-weight:600;max-width:36ch}
 .ph-badge{position:absolute;top:12px;left:12px;background:var(--pink);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
@@ -530,7 +540,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .note.card .lft{display:flex;align-items:center;gap:20px}
 .note.card .lft img{height:64px;width:auto;border-radius:8px;flex:none}
 /* Nota discreta con borde discontinuo */
-.note-box{margin-top:22px;padding:22px 26px;border-radius:var(--radius-sm);border:1px dashed var(--line-2);background:var(--surface);display:flex;gap:14px;align-items:flex-start}
+.note-box{margin-top:22px;padding:22px 26px;border-radius:var(--radius-sm);border:1px dashed var(--line-2);display:flex;gap:14px;align-items:flex-start}
 .note-box svg{flex:none;width:20px;height:20px;color:var(--pink);margin-top:3px}
 .note-box p{font-size:.97rem}
 .note-box strong{color:var(--ink);font-weight:600}
@@ -556,7 +566,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
 /* Caso destacado: texto + tabla */
 .case-feat{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding:clamp(26px,4vw,44px)}
 .case-feat .txt{display:grid;gap:14px}
-.case-feat .kind{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
+.case-feat .kind{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 /* Bloque de contacto: listas y enlaces sobre el fondo rosa */
 .contact-info p a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .contact-info .ticks li{color:rgba(255,255,255,.92)}
@@ -613,7 +623,6 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .doc-more ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px}
 .doc-more a{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--pink-600)}
 .doc-more a svg{width:14px;height:14px;transition:transform .3s var(--ease)}
-.doc-more a:hover svg{transform:translateX(4px)}
 .doc-more p{font-size:.95rem}
 .doc-file{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:start;padding:24px 26px;border-radius:var(--radius-sm);border:1px solid #f2c4d6;background:linear-gradient(160deg,#fff 30%,var(--pink-50))}
 .doc .doc-file{margin-top:1.4em}
@@ -660,7 +669,6 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .vs tbody th,.vs.mid tbody th,.vs.calc tbody th{width:auto;margin-bottom:10px;font-size:1.02rem}
   .vs td+td{margin-top:10px}
   .vs td::before{content:attr(data-l);display:block;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--pink-600);margin-bottom:2px}
-  .vs tr.fit{background:var(--pink-50)}
   .spec{min-width:0}
   .spec thead{display:none}
   .spec tr{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;padding:18px 20px;border-bottom:1px solid var(--line)}
@@ -689,10 +697,9 @@ main section[id],main article[id]{scroll-margin-top:96px}
    ========================================================= */
 /* Navegación por categorías */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
-.chips a{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.93rem;font-weight:600;color:var(--gray);transition:border-color .25s,color .25s,background .25s}
+.chips a{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.93rem;font-weight:600;color:var(--gray)}
 .chips a span{font-size:.78rem;font-weight:600;color:var(--muted);background:var(--surface-2);border-radius:999px;padding:1px 8px}
 .chips a:hover{border-color:#f2c4d6;color:var(--ink)}
-.chips a[aria-current]{background:var(--ink);border-color:var(--ink);color:#fff}
 .chips a[aria-current] span{background:rgba(255,255,255,.16);color:#fff}
 .blog-intro{padding-bottom:clamp(40px,6vw,72px)}
 .blog-intro .sec-head{margin-bottom:0;max-width:860px}
@@ -752,10 +759,10 @@ main section[id],main article[id]{scroll-margin-top:96px}
 .toc ol{list-style:none;display:grid;gap:2px;counter-reset:toc}
 .toc li{counter-increment:toc}
 .toc a{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:6px 0;font-size:.9rem;line-height:1.4;color:var(--gray);transition:color .2s}
-.toc a::before{content:counter(toc,decimal-leading-zero);font-size:.75rem;font-weight:600;color:var(--pink);padding-top:2px}
+.toc a::before{content:counter(toc,decimal-leading-zero);content:counter(toc,decimal-leading-zero) / "";font-size:.75rem;font-weight:600;padding-top:2px}
 .toc a:hover{color:var(--ink)}
 .svc-card{display:grid;gap:8px;padding:22px}
-.svc-card .cat{font-size:.78rem;font-weight:600;color:var(--pink);letter-spacing:.04em;text-transform:uppercase}
+.svc-card .cat{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .svc-card b{font-size:1.05rem;line-height:1.3;color:var(--ink)}
 @media (max-width:1060px){
   .art-layout{grid-template-columns:minmax(0,1fr)}
@@ -775,3 +782,879 @@ main section[id],main article[id]{scroll-margin-top:96px}
    en lugar de quedarse solo a la izquierda. */
 .crumbs li:last-child{display:block;text-align:center}
 .crumbs li:last-child::before{margin-right:8px}
+
+/* ==========================================================================
+   Poesía: los detalles de cada componente (tecla, señal, nodo y plano).
+   Una sección por familia, en el orden en que se cargaban (chrome, heroes, cards, proof, content, blog).
+   Regla de oro: el estado de base es el final; los «antes» cuelgan de .rv:not(.in), .p-armed:not(.p-in) o
+   de prefers-reduced-motion:no-preference. Prefijos p-<familia>-… en clases, keyframes y elementos inyectados.
+   ========================================================================== */
+
+/* ======================= Poesía · chrome — navegación, botones, enlaces, eyebrows, migas, foco, salto y pie */
+
+/* Tokens compartidos (DIRECCIO §3.1). Las demás familias los usan siempre con fallback. */
+:root{
+  --p-ease-io:cubic-bezier(.65,0,.35,1); /* viatjar: el senyal */
+  --p-t-press:.18s;  --p-t-hover:.3s;  --p-t-in:.9s;  --p-t-draw:1.2s;  --p-t-travel:1.6s;
+  --p-step:80ms;     /* escalonat entre germans (= --s de .rv) */
+  --p-step-sm:40ms;  /* escalonat d'elements petits: logos, càpsules, ítems de menú */
+  --p-stroke:1.5px;  /* traç d'il·lustració */
+  --p-ink-line:#d6d3d1;     /* traç de plànol sobre clar (= --line-2) */
+  --p-night-stroke:#3a3a3a; /* traç de plànol sobre fosc */
+  --p-halo:0 0 0 4px var(--pink-50);
+  --p-halo-night:0 0 0 4px rgba(227,39,114,.2);
+  --p-lip:inset 0 -2px 0 rgba(20,20,20,.12);  /* vora de tecla sobre clar */
+  --p-pink-night:#F04D8F;   /* NOMÉS text rosa petit sobre fons fosc (AA 4,9:1) */
+}
+
+/* ---------- Foco: «el nodo que aterriza» ----------
+   :where() deja la especificidad a 0: si el elemento ya tiene su propia animación (.fade-in…), manda la suya. */
+:where(:focus-visible){animation:p-chrome-land var(--p-t-press) var(--ease)}
+@keyframes p-chrome-land{from{outline-offset:6px}to{outline-offset:3px}}
+/* Sobre rosa y sobre oscuro, el anillo es blanco (el rosa no se veía dentro del bloque de contacto). */
+:is(.contact-info,.eyebrow-on-pink,.dark-sec,.svc.dark,.mega-feature,body>footer) :focus-visible{outline-color:#fff}
+
+/* ---------- «Saltar al contenido»: una tecla de verdad ---------- */
+.skip{font-weight:600;line-height:1.3;background:linear-gradient(#2c2c2c,#1d1d1d);border:1px solid #3d3d3d;
+  box-shadow:0 .16em 0 #070707,inset 0 1px 0 rgba(255,255,255,.09);
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),background .25s,border-color .25s}
+.skip:focus{animation:p-chrome-rise .26s var(--ease),p-chrome-land var(--p-t-press) var(--ease)}
+.skip:active,.skip.p-chrome-down{transform:translateY(.12em);box-shadow:0 .04em 0 #070707,inset 0 1px 0 rgba(255,255,255,.12);
+  background:var(--pink);border-color:var(--pink);transition-duration:var(--p-t-press)}
+@keyframes p-chrome-rise{from{transform:translateY(.12em);box-shadow:0 .04em 0 #070707,inset 0 1px 0 rgba(255,255,255,.12)}}
+
+/* ---------- Botones: «la tecla» ----------
+   Reposo con borde de tecla; al pulsar se hunde 1 px y lo pierde. Se mantiene el hover actual (sube 1 px). */
+.btn{box-shadow:var(--p-lip)}
+.btn:not(.rv){transition:transform .26s var(--ease),background .25s,box-shadow .26s var(--ease),color .25s,border-color .25s} /* .btn.rv conserva la transición de aparición */
+/* .btn.rv ya aparecido: al pasar el ratón y al soltar, el tiempo de tecla (no los 0,9 s de .rv). Y la misma tecla que
+   los demás botones: .rv.in{transform:none} (base) ganaba al translateY(-1px) del hover de .btn-ghost/-primary/-dark. */
+.btn.rv.in:hover{transform:translateY(-1px);transition:transform .26s var(--ease),background .25s,box-shadow .26s var(--ease),color .25s,border-color .25s,opacity .9s var(--ease),filter .9s var(--ease)}
+.btn:active{transform:translateY(1px);box-shadow:inset 0 0 0 transparent;transition-duration:var(--p-t-press)}
+.btn.rv.in:active{transform:translateY(1px);transition-duration:var(--p-t-press)}
+.btn-primary{box-shadow:inset 0 -2px 0 rgba(0,0,0,.16),0 8px 24px -10px rgba(227,39,114,.6),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:hover{box-shadow:inset 0 -2px 0 rgba(0,0,0,.16),0 14px 30px -12px rgba(227,39,114,.7),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:active{background:var(--pink-600);box-shadow:inset 0 0 0 transparent,0 5px 14px -9px rgba(227,39,114,.6),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-ghost:active{background:var(--surface-2)}
+
+/* ---------- «La flecha que atraviesa» (.txt-link, .mega-feature a) ----------
+   Un solo @keyframes para toda la web (también .svc .more, .st .go, .doc-more, .res a.card y .art-card):
+   animation:p-chrome-pass .5s var(--ease)  ·  en :hover (dentro de @media (hover:hover) and (pointer:fine)) y en :focus-visible  ·  sustituye el translateX(3–4px) */
+@keyframes p-chrome-pass{0%{transform:none;opacity:1}45%{transform:translateX(9px);opacity:0}46%{transform:translateX(-9px);opacity:0}100%{transform:none;opacity:1}}
+@media (hover:hover) and (pointer:fine){
+  .txt-link:hover svg,.mega-feature a:hover svg{animation:p-chrome-pass .5s var(--ease)}
+}
+.txt-link:focus-visible svg,.mega-feature a:focus-visible svg{animation:p-chrome-pass .5s var(--ease)}
+
+/* ---------- Enlaces dentro del texto: «el hilo que se carga» ---------- */
+:is(.prose,.doc,.tldr,.lead,.note,.cmp,.ticks,.faq,.case-links,.cert-txt) a:not(.btn):not(.txt-link){
+  text-decoration:none;
+  background:linear-gradient(var(--pink),var(--pink)) no-repeat 0 100%/0 1px,
+             linear-gradient(rgba(227,39,114,.35),rgba(227,39,114,.35)) no-repeat 0 100%/100% 1px;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  transition:background-size .35s var(--ease),color .25s}
+@media (hover:hover) and (pointer:fine){
+  :is(.prose,.doc,.tldr,.lead,.note,.cmp,.ticks,.faq,.case-links,.cert-txt) a:not(.btn):not(.txt-link):hover{background-size:100% 1px,100% 1px;color:var(--pink-600)}
+}
+:is(.prose,.doc,.tldr,.lead,.note,.cmp,.ticks,.faq,.case-links,.cert-txt) a:not(.btn):not(.txt-link):focus-visible{background-size:100% 1px,100% 1px;color:var(--pink-600)}
+
+/* ---------- Nav: «la cápsula que se desliza» ----------
+   el JS de chrome (site.js) inserta .p-chrome-pill en .nav; mientras existe, se apaga el fondo de hover de cada enlace. */
+.nav{position:relative;isolation:isolate}
+.p-chrome-pill{position:absolute;left:0;top:0;width:0;height:40px;border-radius:999px;background:rgba(36,36,36,.06);
+  z-index:-1;pointer-events:none;opacity:0;
+  transition:transform var(--p-t-hover) var(--ease),width var(--p-t-hover) var(--ease),opacity .2s var(--ease)}
+.p-chrome-pill.p-chrome-jump{transition:opacity .2s var(--ease)}
+.nav.p-chrome-pilled .nav-links>li>:is(a,button),.nav.p-chrome-pilled .nav-cta .link{background:transparent}
+@media (max-width:1060px){.p-chrome-pill{display:none}}
+
+/* ---------- Mega: «apertura en cascada» ---------- */
+.mega-col a:hover{color:var(--pink-600)}
+@media (prefers-reduced-motion:no-preference){
+  .mega .mega-col{transition:opacity .35s var(--ease),transform .35s var(--ease)}
+  .mega:not(.open) .mega-col{opacity:0;transform:translateY(6px);transition-duration:.2s}
+  .mega.open .mega-col:nth-child(2){transition-delay:40ms}
+  .mega.open .mega-col:nth-child(3){transition-delay:80ms}
+  .mega.open .mega-col:nth-child(4){transition-delay:120ms}
+  .mega.open .mega-col:nth-child(5){transition-delay:160ms}
+  .mega.open .mega-col:nth-child(6){transition-delay:200ms}
+  .mega.open .mega-col:nth-child(7){transition-delay:240ms}
+}
+
+/* ---------- Menú móvil: «el menú sale de la tecla» ---------- */
+.mobile-menu{transform-origin:calc(100% - 31px) -44px;transform:scale(.96)}
+.menu-open .mobile-menu{transform:none}
+.mobile-menu .sub a{display:flex;align-items:center;min-height:44px;padding:0}
+@media (prefers-reduced-motion:no-preference){
+  .mobile-menu>*{transition:opacity .3s var(--ease),transform .3s var(--ease)}
+  body:not(.menu-open) .mobile-menu>*{opacity:0;transform:translateY(-6px);transition-duration:.15s}
+  .menu-open .mobile-menu>:nth-child(2){transition-delay:35ms}
+  .menu-open .mobile-menu>:nth-child(3){transition-delay:70ms}
+  .menu-open .mobile-menu>:nth-child(4){transition-delay:105ms}
+  .menu-open .mobile-menu>:nth-child(5){transition-delay:140ms}
+  .menu-open .mobile-menu>:nth-child(6){transition-delay:175ms}
+}
+
+/* ---------- Eyebrows: «el nodo hace ping» ----------
+   Un solo anillo desde el punto: en el hero a 0,7 s; en las secciones, 350 ms después de que entre su .rv. */
+.eyebrow{position:relative}
+.eyebrow::after{content:"";position:absolute;left:10px;top:50%;width:7px;height:7px;margin-top:-3.5px;box-sizing:border-box;
+  border:1px solid var(--pink);border-radius:50%;opacity:0;pointer-events:none}
+.eyebrow-on-pink::after{border-color:#fff}
+.hero .eyebrow::after{animation:p-chrome-ping 1.1s var(--ease) .7s}
+.rv.in .eyebrow::after,.eyebrow.rv.in::after,.eyebrow.p-armed.p-in::after{animation:p-chrome-ping 1.1s var(--ease) calc(var(--s,0)*80ms + .35s)}
+@keyframes p-chrome-ping{from{transform:scale(1);opacity:.6}to{transform:scale(3.4);opacity:0}}
+
+/* ---------- Migas: «el camino» ----------
+   El «›» pasa a ser un filete de 14 px que acaba en un nodo inactivo; la página actual lleva delante un nodo rosa. */
+.crumbs li+li::before{content:"";display:inline-block;vertical-align:middle;flex:none;width:19px;height:5px;
+  background:radial-gradient(circle closest-side,transparent 45%,var(--line-2) 55% 90%,transparent) no-repeat 100% 50%/5px 5px,
+             linear-gradient(var(--line-2),var(--line-2)) no-repeat 0 50%/14px 1px}
+/* El último li es display:block (base, más arriba): vertical-align:middle lo deja 1 px más abajo que los separadores
+   centrados por flex; top:-1px los alinea en la misma línea. */
+.crumbs li:last-child::before{position:relative;top:-1px;background:radial-gradient(circle closest-side,var(--pink) 80%,transparent) no-repeat 100% 50%/5px 5px,
+             linear-gradient(var(--line-2),var(--line-2)) no-repeat 0 50%/14px 1px}
+/* Zona táctil de 46 px: el pseudo va por debajo del texto (z-index -1 dentro de ol aislado), así cuando las migas
+   ocupan dos filas el área ampliada de un enlace nunca tapa el texto de otro. */
+.crumbs ol{isolation:isolate}
+.crumbs a{position:relative}
+.crumbs a::after{content:"";position:absolute;inset:-12px -4px;z-index:-1}
+.crumbs a:hover{color:var(--pink-600)}
+
+/* ---------- Pie: «la tecla tiene consecuencia» ----------
+   Al hundirse «una», una señal rosa sale de debajo de la tecla y corre por el filete inferior hasta la derecha. */
+.foot-claim{position:relative}
+.foot-claim::after{content:"";position:absolute;left:var(--p-from,0px);right:0;bottom:-1.25px;height:1.5px;opacity:0;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--pink) 88px,transparent) no-repeat -96px 0/96px 100%}
+.foot-claim.p-chrome-run::after{animation:p-chrome-sig var(--p-dur,1.4s) var(--p-ease-io) var(--p-t-press)}
+@keyframes p-chrome-sig{from{background-position:-96px 0;opacity:1}85%{opacity:1}to{background-position:100% 0;opacity:0}}
+.foot-claim.p-chrome-press .key{transform:translateY(.04em);box-shadow:0 .04em 0 #070707,inset 0 1px 0 rgba(255,255,255,.12);background:var(--pink);border-color:var(--pink)}
+/* Zonas táctiles de 44 px en el pie (solo móvil): un pseudo invisible amplía el área sin agrandar el anillo de foco */
+@media (max-width:720px){
+  .foot ul{gap:20px}
+  .legal nav{gap:24px 18px}
+  .foot ul a,.legal nav a{position:relative}
+  .foot ul a::after,.legal nav a::after{content:"";position:absolute;inset:-14px -6px}
+  /* Enlaces sueltos (flecha, vías de contacto, logo): el mismo pseudo invisible, centrado, lleva el área táctil a 44 px de alto */
+  :is(.txt-link,.st .go,.ways a,.cert-links a,.reach a.v,.nav-logo){position:relative}
+  :is(.txt-link,.st .go,.ways a,.cert-links a,.reach a.v,.nav-logo)::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
+}
+
+/* ---------- Transiciones entre páginas: la nav se queda quieta y el contenido funde (mejora progresiva) ----------
+   El nombre va en .nav y NO en .nav-shell: un view-transition-name convierte al elemento en «backdrop root», y en
+   .nav-shell dejaba sin desenfoque el backdrop-filter de la cápsula y del megamenú (el texto se veía nítido detrás). */
+@view-transition{navigation:auto}
+.nav{view-transition-name:p-nav}
+::view-transition-group(*){animation-duration:.25s;animation-timing-function:cubic-bezier(.22,.8,.24,1)}
+::view-transition-group(p-nav),::view-transition-new(p-nav){animation:none}
+::view-transition-old(p-nav){display:none}
+
+@media (prefers-reduced-motion:reduce){
+  @view-transition{navigation:none}
+  .btn:active,.btn.rv.in:active,.skip:active,.skip.p-chrome-down{transform:none}
+}
+
+/* ======================= Poesía · heroes — heros, ilustración por área, «En resumen» y cabeceras de sección.
+   El estado de base es el final; lo que «antes» está oculto cuelga de no-preference. */
+
+/* ---------- Bucles en pausa fuera de pantalla (.p-heroes-io / .p-live, del JS de heroes en site.js) */
+.p-heroes-io:not(.p-live) :is(.glow,.spin,.node>span,.p-heroes-art *),
+.p-heroes-io:not(.p-live) .core::before{animation-play-state:paused}
+
+/* RM ≤ 720 px: anillo interior 12° antes, que «Workspace» no tape «Telecom» */
+@media (max-width:720px) and (prefers-reduced-motion:reduce){
+  .spin.rev{transform:rotate(-12deg)}
+  .spin.rev .node>span{transform:translate(-50%,-50%) rotate(calc(var(--a)*-1 + 12deg))}
+}
+
+/* ---------- Ilustración de área: «el plano del área» (assets/art, vía el JS de heroes) */
+.page-hero::before{background-position:50% 0} /* la retícula cae en x = 64k del SVG */
+/* Máscara: elipse ∩ desvanecido ∩ hueco del texto (el JS de heroes lo mide: --x media anchura, --y0/--y1 filas) */
+.p-heroes-art{--c:var(--p-ink-line,#d6d3d1);--x:0px;--y0:-99px;--y1:-99px;position:absolute;inset:0 0 auto;height:576px;z-index:-2;pointer-events:none;overflow:hidden;
+  --mk:radial-gradient(ellipse 520px 300px at 50% 360px,transparent 55%,#000 80%),linear-gradient(#000 72%,transparent 97%),
+    linear-gradient(90deg,#000 calc(50% - var(--x) - 24px),transparent calc(50% - var(--x)),transparent calc(50% + var(--x)),#000 calc(50% + var(--x) + 24px)),
+    linear-gradient(#000 calc(var(--y0) - 24px),transparent var(--y0),transparent var(--y1),#000 calc(var(--y1) + 24px));
+  -webkit-mask-image:var(--mk);-webkit-mask-composite:source-in,source-in,source-over;
+  mask-image:var(--mk);mask-composite:intersect,intersect,add}
+.p-heroes-art *{--dr:p-heroes-draw 1.2s var(--ease) calc(1.2s + var(--g,0)*60ms) backwards}
+.p-heroes-art svg{position:absolute;top:0;left:calc(50% - 672px);width:1344px;height:576px;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.p-heroes-art :is(.t,.t2,.l,.d,.u){stroke:var(--c)}
+.p-heroes-art .t{stroke-width:var(--p-stroke,1.5px)}
+.p-heroes-art .t2{stroke-width:1;stroke-dasharray:4 6}
+.p-heroes-art .l{stroke-width:1}
+.p-heroes-art .d{stroke-width:3;stroke-dasharray:0 var(--sp,24px)}
+.p-heroes-art .u{stroke-width:6;stroke-dasharray:1 15;stroke-linecap:butt}
+.p-heroes-art .n{fill:#fff;stroke:var(--c);stroke-width:1.5}
+.p-heroes-art .a{stroke:var(--pink);stroke-width:1.5}
+.p-heroes-art .af{fill:var(--pink)}
+.p-heroes-art .fl{fill:var(--c)}
+.p-heroes-art .hl,.p-heroes-art .rg{fill:var(--pink-50)}
+.p-heroes-art .w{stroke:var(--ink);opacity:.2}
+.p-heroes-art .ckc{fill:#fff;stroke:rgba(227,39,114,.25);stroke-width:1.5}
+.p-heroes-art .led{fill:var(--muted)}
+.p-heroes-art .led.pk{fill:var(--pink)}
+.p-heroes-art .rb{stroke:var(--pink)}
+.p-heroes-art .cur{stroke:var(--ink);stroke-width:1.5}
+.p-heroes-art :is(.ck,.tk){transform-box:fill-box;transform-origin:center}
+.p-heroes-art .s{stroke:none}
+/* El señal: dos colas y una cabeza sobre cada camino .s (clones del JS de heroes, con --len) */
+.p-heroes-run{stroke:var(--pink);opacity:0;stroke-dasharray:var(--d) calc(var(--len)*1px + 200px);stroke-dashoffset:var(--d)}
+.p-heroes-run.k1{--d:96px;stroke-width:1.5;stroke-opacity:.22}
+.p-heroes-run.k2{--d:36px;stroke-width:1.5;stroke-opacity:.5}
+.p-heroes-run.k3{--d:0px;stroke-width:5}
+[data-scene=soporte-it]{--p:9s}
+@media (max-width:1060px){.p-heroes-art{opacity:.7}}
+@media (max-width:900px){.p-heroes-art{display:none}}
+
+@media (prefers-reduced-motion:no-preference){
+  /* Dibujo desde 1,2 s (60 ms entre grupos), el rosa al final; primer señal a los 3 s */
+  .p-heroes-art :is(.t,.l){animation:var(--dr)}
+  .p-heroes-art :is(.t2,.d,.u,.n,.led,.fl){animation:p-heroes-fade .9s var(--ease) calc(1.2s + var(--g,0)*60ms) backwards}
+  .p-heroes-art :is(.a,.af,.hl,.ckc){animation:p-heroes-fade .6s var(--ease) 2.3s backwards}
+  .p-heroes-run{animation:p-heroes-run var(--p,8s) cubic-bezier(.65,0,.35,1) calc(3s + var(--o,0s)) infinite}
+  :is([data-scene=sistemas-cloud],[data-scene=diseno-programacion-web]) .p-heroes-run,[data-scene=microsoft-365] .p-heroes-run:not(.m){animation-iteration-count:1}
+  [data-scene=microsoft-365] .p-heroes-run:not(.m){animation-timing-function:linear}
+  [data-scene=microsoft-365] .p-heroes-run.m{--p:9s;animation-delay:5.4s}
+  /* redes, telecom: ola al llegar el señal */
+  .p-heroes-art .w{animation:var(--dr),p-heroes-wave 8s linear var(--t) infinite}
+  /* ciberseguridad: cada capa se enciende al cruzarla; check en la interior */
+  .p-heroes-art .k{animation:var(--dr),p-heroes-gate 8s linear var(--t) infinite}
+  .p-heroes-art .ck{animation:p-heroes-check var(--p,8s) var(--ease) var(--t) infinite backwards}
+  /* cloud: LED de arriba abajo; solo el rosa respira */
+  .p-heroes-art .led{animation:p-heroes-fade .9s var(--ease) 1.5s backwards,p-heroes-on .3s linear var(--t) backwards}
+  .p-heroes-art .led.pk{animation:p-heroes-fade .9s var(--ease) 1.5s backwards,p-heroes-on .3s linear var(--t) backwards,p-heroes-breathe 3s ease-in-out calc(var(--t) + .4s) infinite}
+  /* soporte: el señal cierra cada anillo */
+  .p-heroes-art .rg{animation:var(--dr),p-heroes-ring var(--p,8s) linear var(--t) infinite backwards}
+  /* desarrollo: el rombo, rosa tras el testigo */
+  .p-heroes-art .rb{animation:var(--dr),p-heroes-mark 8s linear var(--t) infinite backwards}
+  /* web: el cursor parpadea tres veces */
+  .p-heroes-art .cur{animation:p-heroes-fade .6s var(--ease) 2.3s backwards,p-heroes-blink .5s step-end var(--t) 3}
+  /* google: el cursor rosa escribe su línea */
+  .p-heroes-art .wr{animation:p-heroes-type 8s var(--t) infinite backwards}
+  .p-heroes-art .cw{animation:p-heroes-caret 8s var(--t) infinite backwards}
+  /* microsoft: un check por ficha, una sola vez */
+  .p-heroes-art .tk{animation:p-heroes-pop .35s var(--ease) var(--t) backwards}
+}
+@keyframes p-heroes-draw{from{stroke-dasharray:1;stroke-dashoffset:1}to{stroke-dasharray:1;stroke-dashoffset:0}}
+@keyframes p-heroes-fade{from{opacity:0}}
+@keyframes p-heroes-pop{from{opacity:0;transform:scale(.6)}}
+@keyframes p-heroes-run{0%{opacity:1;stroke-dashoffset:var(--d)}22%{opacity:1;stroke-dashoffset:calc(var(--d) - var(--len)*1px)}27%,to{opacity:0;stroke-dashoffset:calc(var(--d) - var(--len)*1px)}}
+@keyframes p-heroes-wave{0%{opacity:.2}4%{opacity:.6}12%,to{opacity:.2}}
+@keyframes p-heroes-gate{0%,2.5%{stroke:rgba(227,39,114,.6)}6%,to{stroke:var(--c)}}
+@keyframes p-heroes-check{0%{opacity:0;transform:scale(.6)}5%,88%{opacity:1;transform:none}95%,to{opacity:0}}
+@keyframes p-heroes-on{from{fill:var(--c)}}
+@keyframes p-heroes-breathe{50%{opacity:.35}}
+@keyframes p-heroes-ring{0%{fill-opacity:0}3%,86%{fill-opacity:1}93%,to{fill-opacity:0}}
+@keyframes p-heroes-mark{0%{stroke:var(--c)}3%,90%{stroke:var(--pink)}97%,to{stroke:var(--c)}}
+@keyframes p-heroes-blink{50%{opacity:0}}
+@keyframes p-heroes-type{0%{stroke-dasharray:1;stroke-dashoffset:1;opacity:1;animation-timing-function:steps(12,end)}20%,88%{stroke-dasharray:1;stroke-dashoffset:0;opacity:1}94%,to{stroke-dasharray:1;stroke-dashoffset:0;opacity:0}}
+@keyframes p-heroes-caret{0%{transform:translateX(-96px);animation-timing-function:steps(12,end)}20%{transform:none}88%{opacity:1}94%,to{opacity:0}}
+
+/* ---------- ≤ 900 px (la ilustración ya no cabe), áreas de servicio: la firma (filete, nodo, ping, señal) */
+.p-heroes-mark{display:none}
+html{--p-heroes-pb0:60px}
+@media (max-width:900px){
+  .page-hero:not(.doc-hero){padding-bottom:var(--p-heroes-pb,96px)} /* sitio para la firma; sobrias: el de la base */
+  .p-heroes-mark{display:block;position:absolute;left:0;right:0;bottom:44px;height:2px;z-index:-1;pointer-events:none}
+  .p-heroes-mark::before{content:"";position:absolute;inset:0;--l:var(--line-2);mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent)}
+  .p-heroes-mark i{position:absolute;left:50%;top:1px;width:32px;height:32px;margin:-16px 0 0 -16px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--pink)}
+  .p-heroes-mark svg{width:16px;height:16px}
+  .p-heroes-mark i::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--pink);opacity:0}
+}
+@media (max-width:900px) and (prefers-reduced-motion:no-preference){
+  .p-heroes-mark::before{animation:p-heroes-grow .6s var(--ease) 1.3s backwards,p-heroes-wire 1.4s cubic-bezier(.65,0,.35,1) 2.3s}
+  .p-heroes-mark i{animation:p-heroes-fade .6s var(--ease) 1.3s backwards}
+  .p-heroes-mark i::after{animation:p-chrome-ping 1.1s var(--ease) 1.9s}
+}
+@keyframes p-heroes-grow{from{transform:scaleX(0)}}
+@keyframes p-heroes-wire{from{background-position:-104px 0,0 100%}to{background-position:calc(100% + 104px) 0,0 100%}}
+/* filete (--l) con su señal, que p-heroes-wire hace cruzar una vez: la firma y .sub-head */
+.p-heroes-mark::before,.sub-head::after{background:linear-gradient(90deg,transparent,var(--pink) 96px,transparent 104px) no-repeat -104px 0/104px 2px,linear-gradient(var(--l),var(--l)) no-repeat 0 100%/100% 1px}
+
+/* ---------- Hero sobrio (ni home ni área de servicio): «el cajetín» — marcas de registro, cota, un nodo y el cajetín
+   (64|24|24, colgado de la marca inferior derecha, bajo todo el texto). Solo CSS: los pseudos existen donde body define --p-heroes-sheet. */
+body:not(:is([data-area=home],[data-area=redes],[data-area=ciberseguridad],[data-area=telecomunicaciones],[data-area=sistemas-cloud],[data-area=soporte-it],[data-area=diseno-programacion-web],[data-area=desarrollo-software-medida],[data-area=google-workspace],[data-area=microsoft-365])){--p-heroes-sheet:"";--p-heroes-pb:var(--p-heroes-pb0)}
+.page-hero>.hero-inner{position:relative;--m:linear-gradient(var(--p-ink-line,#d6d3d1),var(--p-ink-line,#d6d3d1))}
+.page-hero>.hero-inner::before,.page-hero>.hero-inner::after{content:var(--p-heroes-sheet,none);position:absolute;z-index:-1;pointer-events:none;
+  left:max(-8px,calc(50% - 508px));right:max(-8px,calc(50% - 508px));bottom:-30px;background-repeat:no-repeat}
+.page-hero>.hero-inner::before{top:-36px;background-image:radial-gradient(circle,var(--pink) 3px,var(--pink-50) 3.5px 7px,transparent 7.5px),var(--m),var(--m),var(--m),var(--m),var(--m),var(--m),var(--m),var(--m);
+  background-size:17px 17px,16px 1px,1px 16px,16px 1px,1px 16px,16px 1px,1px 16px,16px 1px,1px 16px;
+  background-position:0 0,8px 8px,8px 8px,right 8px top 8px,right 8px top 8px,left 8px bottom 8px,left 8px bottom 8px,right 8px bottom 8px,right 8px bottom 8px}
+.page-hero>.hero-inner::after{top:-54px;background-image:var(--m),var(--m),var(--m),var(--m),var(--m),var(--m),var(--m),var(--m),var(--m);
+  background-size:calc(100% - 16px) 1px,1px 9px,1px 9px,112px 1px,112px 1px,1px 17px,1px 17px,1px 17px,1px 17px;
+  background-position:8px 8px,8px 4px,right 8px top 4px,right 8px bottom 24px,right 8px bottom 8px,right 119px bottom 8px,right 55px bottom 8px,right 31px bottom 8px,right 8px bottom 8px}
+@media (max-width:900px){.page-hero>.hero-inner::after{background-size:calc(100% - 16px) 1px,1px 9px,1px 9px,0 0,0 0,0 0,0 0,0 0,0 0}}
+@media (max-width:720px){
+  html{--p-heroes-pb0:44px}
+  .page-hero>.hero-inner::before{background-size:17px 17px,16px 1px,1px 16px,16px 1px,1px 16px,0 0,0 0,0 0,0 0}
+  .page-hero>.hero-inner::after{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .page-hero>.hero-inner::before,.page-hero>.hero-inner::after{animation:p-heroes-unveil .9s var(--ease) 1.2s backwards}
+}
+@keyframes p-heroes-unveil{from{clip-path:inset(0 50%)}}
+
+/* ---------- .trust: «los sellos se encienden de uno en uno» (solo heros interiores) */
+@media (prefers-reduced-motion:no-preference){
+  .page-hero .trust>span{animation:p-heroes-fade .35s var(--ease) 1.15s backwards}
+  .page-hero .trust svg{animation:p-heroes-pop .35s var(--ease) 1.15s backwards}
+  .page-hero .trust>:nth-child(2),.page-hero .trust>:nth-child(2) svg{animation-delay:1.24s}
+  .page-hero .trust>:nth-child(3),.page-hero .trust>:nth-child(3) svg{animation-delay:1.33s}
+}
+
+/* ---------- «En resumen»: «la anotación del ingeniero» — subrayado de rotulador bajo la respuesta */
+.tldr>strong:first-child{background:linear-gradient(transparent 46%,var(--pink-50) 46%,var(--pink-50) 84%,transparent 84%) no-repeat 0 0/100% 100%;
+  transition:background-size 1.2s var(--ease) .3s}
+.art-summary .tldr>strong:first-child{background:none}
+@media (prefers-reduced-motion:no-preference){.rv:not(.in) .tldr>strong:first-child{background-size:0 100%}}
+
+/* ---------- .sub-head: «etiqueta + filete con señal» */
+.sub-head{display:flex;align-items:flex-end;gap:14px}
+.sub-head::after{content:"";flex:1 1 32px;min-width:32px;height:2px;margin-bottom:.62em;transform-origin:left;--l:var(--line);
+  transition:transform 1.2s var(--ease) .3s}
+.dark-sec .sub-head::after{--l:var(--night-line)}
+@media (prefers-reduced-motion:no-preference){
+  .sub-head.rv:not(.in)::after{transform:scaleX(0)}
+  .sub-head.rv.in::after{animation:p-heroes-wire 1.4s cubic-bezier(.65,0,.35,1) 1.5s}
+}
+
+/* ---------- .sec-head: «la cabecera se escribe en orden» (eyebrow, h2 y lead, 80 ms entre cada uno) */
+@media (prefers-reduced-motion:no-preference){
+  .sec-head.rv>:is(.eyebrow,h2,p){transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .sec-head.rv>:is(.eyebrow,h2,p):nth-child(2){transition-delay:80ms}
+  .sec-head.rv>:is(.eyebrow,h2,p):nth-child(3){transition-delay:160ms}
+  .sec-head.rv>:is(.eyebrow,h2,p):nth-child(n+4){transition-delay:240ms}
+  .sec-head.rv:not(.in)>:is(.eyebrow,h2,p){opacity:0;transform:translateY(12px)}
+}
+
+/* ---------- .answer (home): «la lectura que se enciende» — del 25 % a su tono al avanzar */
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+  .p-heroes-w{display:inline-block;animation:p-heroes-read linear both;animation-timeline:view();animation-range:entry 10% cover 42%}
+}}
+@keyframes p-heroes-read{from{opacity:.25}}
+
+/* ======================= Poesía · cards — tarjetas y rejillas: servicios, pila oscura, pasos, cifras, comparativas, cápsulas y checks.
+   Regla de oro: el estado de base es el final. Los estados «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
+
+/* Índice de hermano para los escalonados (máx. 8 pasos; el resto, a la vez) */
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(2){--p-k:1}
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(3){--p-k:2}
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(4){--p-k:3}
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(5){--p-k:4}
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(6){--p-k:5}
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(7){--p-k:6}
+:is(.ticks,.cmp,.pills,.steps) li:nth-child(n+8){--p-k:7}
+
+/* ---------- .card: el foco de luz ----------
+   Sobre oscuro, un poco más presente; en táctil no hay puntero que seguir, así que no se enciende. */
+:is(.svc.dark,.dark-sec .card)::before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(227,39,114,.12),transparent 45%)}
+@media (hover:none),(pointer:coarse){.card:hover::before{opacity:0}}
+
+/* ---------- .svc .ico: «las teclas de servicio» ----------
+   Bajo «Tocamos todas las teclas…», cada servicio es una tecla de color. Al pasar por la tarjeta (o al enfocarla)
+   se hunde 2 px y se vuelve rosa, como la tecla «una» del pie. 180 ms abajo, 260 ms arriba.
+   Solo se hunden las que llevan a algún sitio (a.svc o .svc con enlace): pulsar algo que no hace nada engaña, sobre todo
+   con el dedo. :focus-visible y no :focus-within: tras un clic con ratón, la tecla no se queda pulsada al volver atrás. */
+.svc .ico{--p-cards-dy:2px;background:linear-gradient(#fff3f8,var(--pink-50));box-shadow:0 2px 0 #f2c4d6,inset 0 1px 0 #fff;
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),color .26s}
+@media (prefers-reduced-motion:reduce){.svc .ico{--p-cards-dy:0}}
+.svc.dark .ico{background:rgba(227,39,114,.18);box-shadow:0 2px 0 rgba(227,39,114,.42),inset 0 1px 0 rgba(255,255,255,.06)}
+:is(a.svc,.svc:has(a)):is(:active,:focus-visible,:has(:focus-visible)) .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
+@media (hover:hover) and (pointer:fine){
+  :is(a.svc,.svc:has(a)):hover .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
+}
+
+/* ---------- .svc .more y .st .go: «la flecha que atraviesa» (valores de chrome, idénticos) ----------
+   En .svc sale 120 ms después: primero baja la tecla y luego viaja la flecha (causa y consecuencia, un solo gesto). */
+.svc .more{color:var(--pink-600)}
+.svc.dark .more{color:var(--p-pink-night,#F04D8F)}
+@media (hover:hover) and (pointer:fine){
+  .svc:hover .more svg{animation:p-chrome-pass .5s var(--ease) .12s}
+  .st .go:hover svg{animation:p-chrome-pass .5s var(--ease)}
+}
+:is(.svc:focus-visible .more,.svc .more:focus-visible) svg{animation:p-chrome-pass .5s var(--ease) .12s}
+.st .go:focus-visible svg{animation:p-chrome-pass .5s var(--ease)}
+
+/* ---------- .steps: «el proceso corre por el cable» ----------
+   Un cable vertical une los números (01–05) por los huecos entre tarjetas. Cuando la lista entra, una señal baja
+   por el cable y cada número se enciende al llegarle. El número sigue siendo el li::before (misma medida y radio). */
+.steps li{position:relative}
+.steps li::before{color:var(--pink-600);font-variant-numeric:tabular-nums}
+.steps li:not(:last-child)::after{content:"";position:absolute;z-index:1;left:39.25px;top:58px;width:1.5px;
+  height:calc(100% - 28px);pointer-events:none;
+  background:linear-gradient(180deg,transparent,var(--pink) 88%,transparent) no-repeat 0 -40px/100% 40px var(--line-2)}
+@keyframes p-cards-down{from{background-position:0 -40px}to{background-position:0 calc(100% + 40px)}}
+@keyframes p-cards-lit{0%,100%{background:var(--pink-50);color:var(--pink-600)}14%,78%{background:var(--pink);color:#fff}}
+@media (prefers-reduced-motion:no-preference) and (min-width:721px){
+  .steps.rv.in li,.rv.in .steps:not(.rv) li{--p-t:calc(var(--s,0)*80ms + .6s + var(--p-k,0)*.36s)}
+  .steps.rv.in li::before,.rv.in .steps:not(.rv) li::before{animation:p-cards-lit .55s var(--ease) var(--p-t)}
+  .steps.rv.in li:not(:last-child)::after,.rv.in .steps:not(.rv) li:not(:last-child)::after{animation:p-cards-down .36s var(--p-ease-io,cubic-bezier(.65,0,.35,1)) calc(var(--p-t) + .06s) both}
+}
+
+/* ---------- .strengths / .stack / .st: «las capas se apilan» ----------
+   Cuando una tarjeta nueva sube y tapa la anterior, la de debajo se aleja (escala .96) y se oscurece hasta el 35 %.
+   Usa la línea de tiempo de la tarjeta SIGUIENTE: la tarjeta pegada no se mueve. Sin soporte, queda como estaba. */
+.st .num{color:var(--p-pink-night,#F04D8F)}
+/* El mismo rótulo «01 · …» en las tarjetas oscuras de «En común» (/casos-de-exito/): su <style> lo pone en #E32772, 3,9:1 sobre --night-2 */
+body .common .num{color:var(--p-pink-night,#F04D8F)}
+@keyframes p-cards-recede{to{transform:scale(.96)}}
+@keyframes p-cards-dim{to{opacity:.35}}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference) and (min-width:721px){
+    .stack{timeline-scope:--p-cards-s2,--p-cards-s3,--p-cards-s4,--p-cards-s5,--p-cards-s6,--p-cards-s7,--p-cards-s8}
+    .st:nth-child(2){view-timeline:--p-cards-s2 block}.st:nth-child(1){--p-tl:--p-cards-s2}
+    .st:nth-child(3){view-timeline:--p-cards-s3 block}.st:nth-child(2){--p-tl:--p-cards-s3}
+    .st:nth-child(4){view-timeline:--p-cards-s4 block}.st:nth-child(3){--p-tl:--p-cards-s4}
+    .st:nth-child(5){view-timeline:--p-cards-s5 block}.st:nth-child(4){--p-tl:--p-cards-s5}
+    .st:nth-child(6){view-timeline:--p-cards-s6 block}.st:nth-child(5){--p-tl:--p-cards-s6}
+    .st:nth-child(7){view-timeline:--p-cards-s7 block}.st:nth-child(6){--p-tl:--p-cards-s7}
+    .st:nth-child(8){view-timeline:--p-cards-s8 block}.st:nth-child(7){--p-tl:--p-cards-s8}
+    .st:not(:last-child)::after{content:"";position:absolute;inset:-1px;border-radius:inherit;background:#000;opacity:0;pointer-events:none}
+    /* De cuando la siguiente asoma (su borde superior al 80 % de la pantalla) a cuando se pega en su sitio (120 px + n·14 px) */
+    .st:not(:last-child){animation:p-cards-recede linear both}
+    .st:not(:last-child)::after{animation:p-cards-dim linear both}
+    .st:not(:last-child),.st:not(:last-child)::after{animation-timeline:var(--p-tl);
+      animation-range:cover 20vh cover calc(100vh - 134px - var(--n,0)*14px)}
+  }
+}
+
+/* ---------- Cifras: .stat y .metric ---------- */
+/* Cifras tabulares desde la base: el rodillo del contador ocupa exactamente lo mismo (sin saltos) */
+.stat b,.metric b{font-variant-numeric:tabular-nums}
+.stat b small{color:var(--pink-600)}
+.svc-card .cat{color:var(--pink-600)}
+
+/* surveyMetrics: la barra ya llena en la base (--w desde la macro); se vacía solo mientras la tarjeta no ha entrado */
+.metric .bar{overflow:visible}
+.metric .bar i{position:relative;width:var(--w,0)}
+@media (prefers-reduced-motion:no-preference){.metric.rv:not(.in) .bar i{width:0}}
+/* «El nodo en la punta»: un nodo rosa marca la punta mientras se llena; al llegar, un ping */
+.metric .bar i::after,.metric .bar i::before{content:"";position:absolute;right:-5px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;pointer-events:none}
+.metric .bar i::after{background:var(--pink);box-shadow:var(--p-halo,0 0 0 4px var(--pink-50))}
+.metric .bar i::before{box-sizing:border-box;border:1px solid var(--pink);opacity:0}
+.metric .bar.p-cards-ping i::before{animation:p-chrome-ping 1.1s var(--ease)}
+
+/* «El contador mecánico» (el JS de cards monta el rodillo; el valor está en .sr y en el marcador invisible) */
+.p-cards-odo .p-cards-d{position:relative;display:inline-block;visibility:hidden;clip-path:inset(.06em -.2em)}
+.p-cards-odo .p-cards-r{position:absolute;left:0;right:0;top:0;visibility:visible;white-space:pre;text-align:center;user-select:none;
+  transform:translateY(calc(var(--p-y,0)*-1em));
+  transition:transform 1.5s var(--ease) calc(var(--s,0)*80ms + .25s + var(--p-j,0)*.14s)}
+/* Dígitos en contenido generado: no se seleccionan ni se buscan. La 1.ª línea es el respaldo si no se entiende «/ ""» */
+.p-cards-r::before{content:"0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";content:"0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9" / ""}
+@media (prefers-reduced-motion:no-preference){.rv:not(.in) .p-cards-r{transform:none}}
+
+/* ---------- .aud .n: «etiqueta + filete» ----------
+   «01» seguido de un filete que llega al borde de la tarjeta y se dibuja al entrar, con el escalonado de la tarjeta. */
+.aud .n{display:flex;align-items:center;gap:14px;margin-right:-26px;color:var(--pink-600);font-variant-numeric:tabular-nums}
+.aud .n::after{content:"";flex:1;height:1px;background:var(--line);transform-origin:left;
+  transition:transform var(--p-t-draw,1.2s) var(--ease) calc(var(--s,0)*80ms + .3s)}
+@media (prefers-reduced-motion:no-preference){.aud .rv:not(.in) .n::after{transform:scaleX(0)}}
+
+/* ---------- .ticks, .cmp.good, .cmp.opt: «los checks se marcan» ----------
+   Cuando la lista entra, cada check pasa de escala .6 a 1 (350 ms, 90 ms entre uno y otro). Las cruces no se mueven. */
+@keyframes p-cards-tick{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:no-preference){
+  :is(.rv.in .ticks,.ticks.rv.in,.cmp.rv.in:is(.good,.opt),.rv.in .cmp:is(.good,.opt)) li>svg{
+    animation:p-cards-tick .35s var(--ease) both;animation-delay:calc(var(--s,0)*80ms + .45s + var(--p-k,0)*90ms)}
+}
+
+/* ---------- .check: «la casilla que se marca» ----------
+   Input nativo (foco visible intacto). Marcada, se vuelve rosa y el tick blanco se dibuja de izquierda a derecha. */
+/* Fila de 44 px como mínimo (zona táctil); la casilla, alineada con la primera línea del texto */
+.check{min-height:44px;padding-block:10px;align-items:flex-start}
+/* Borde sin marcar a 3,6:1 sobre blanco (WCAG 1.4.11: es lo que identifica la casilla; --line-2 daba 1,5:1) */
+.check input{-webkit-appearance:none;appearance:none;flex:none;width:20px;height:20px;margin:1px 0 0;border:1.5px solid #8c8681;border-radius:6px;cursor:pointer;
+  --p-cards-tick:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 10.5 3.2 3.2L15 6.8'/%3E%3C/svg%3E");
+  background:linear-gradient(#fff,#fff) no-repeat 100% 0/100% 100%,var(--p-cards-tick) no-repeat 50% 50%/100% 100% #fff;
+  transition:background-size .25s var(--ease),border-color .2s}
+.check input:checked{border-color:var(--pink);background-color:var(--pink);
+  background-image:linear-gradient(var(--pink),var(--pink)),var(--p-cards-tick);background-size:0 100%,100% 100%}
+@media (hover:hover) and (pointer:fine){.check:hover input:not(:checked){border-color:var(--pink)}}
+/* Alto contraste (forced-colors): los fondos desaparecen, así que vuelve la casilla nativa */
+@media (forced-colors:active){.check input{-webkit-appearance:auto;appearance:auto;background:none}}
+
+/* ---------- .chips: «el teclado de filtros» ----------
+   Sin seleccionar: tecla con borde inferior; al pulsar, se hunde. La seleccionada: tecla oscura ya pulsada.
+   body .chips button: en /casos-de-exito/ el <style> de la página se carga después de esta capa. */
+.chips a,body .chips button{min-height:44px;box-shadow:inset 0 -2px 0 var(--line);
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),background .25s,color .25s,border-color .25s}
+.chips a:active,body .chips button:active{box-shadow:inset 0 0 0 transparent;transition-duration:var(--p-t-press,.18s)}
+.chips a[aria-current],body .chips button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:inset 0 2px 0 rgba(0,0,0,.35)}
+@media (prefers-reduced-motion:no-preference){.chips a:active,body .chips button:active{transform:translateY(1px)}}
+
+/* ---------- .pills: «oleada» (40 ms entre cápsulas al entrar) ---------- */
+@keyframes p-cards-rise{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:no-preference){
+  :is(.rv.in .pills,.pills.rv.in) li{animation:p-cards-rise .5s var(--ease) both;animation-delay:calc(var(--s,0)*80ms + .3s + var(--p-k,0)*40ms)}
+}
+
+/* ---------- .vs tr.fit: un filete rosa de 2 px a la izquierda de la fila destacada, de arriba abajo al entrar ---------- */
+.vs tr.fit th{background:linear-gradient(var(--pink),var(--pink)) no-repeat 0 0/2px 100% var(--pink-50);transition:background-size .9s var(--ease) .5s}
+@media (max-width:720px){
+  .vs tr.fit th{background-image:none}
+  .vs tr.fit{background:linear-gradient(var(--pink),var(--pink)) no-repeat 0 0/2px 100% var(--pink-50);transition:background-size .9s var(--ease) .5s}
+}
+@media (prefers-reduced-motion:no-preference){
+  :is(.rv:not(.in) .vs,.vs.rv:not(.in)) tr.fit,:is(.rv:not(.in) .vs,.vs.rv:not(.in)) tr.fit th{background-size:2px 0}
+}
+
+/* ---------- .note-box: el discontinuo, en 4 6 como el resto de la web ---------- */
+.note-box{border-color:transparent;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' rx='14' fill='none' stroke='%23d6d3d1' stroke-width='2' stroke-dasharray='4 6'/%3E%3C/svg%3E") border-box 0 0/100% 100% no-repeat var(--surface)}
+
+/* ======================= Poesía · proof — proyectos, muro de clientes, logos, partners, testimonios, casos y sellos.
+   Regla de oro: el estado de base es el final. El «antes» solo cuelga de .rv:not(.in) o .p-armed:not(.p-in),
+   siempre dentro de prefers-reduced-motion:no-preference. */
+
+/* ---------- Rosa AA en texto pequeño (DIRECCIO §4) ---------- */
+.proj .kind,.case-feat .kind,.quote .av{color:var(--pink-600)}
+body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-exito/ los define en su <style>, que carga después */
+
+/* ---------- .proj y .case: «el plano sobre la foto» ----------
+   Al pasar por encima, la vista del técnico: rejilla de 32 px en blanco al 22 % y cuatro marcas de registro
+   (L de 14 px) a 12 px de las esquinas, que se cierran un pelo hasta quedar en registro. Se mantiene el zoom. */
+.proj figure{position:relative}
+.proj figure::before,.proj figure::after{content:"";position:absolute;z-index:1;pointer-events:none;opacity:0;
+  transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.proj figure::before{inset:0;background:
+  linear-gradient(90deg,rgba(255,255,255,.22) 1px,transparent 1px) 12px 12px/32px 32px,
+  linear-gradient(rgba(255,255,255,.22) 1px,transparent 1px) 12px 12px/32px 32px,
+  rgba(20,20,20,.14)}
+.proj figure::after{--m:linear-gradient(#fff 0 0);inset:12px;transform:scale(1.03);background:
+  var(--m) 0 0/14px 1.5px,var(--m) 0 0/1.5px 14px,var(--m) 100% 0/14px 1.5px,var(--m) 100% 0/1.5px 14px,
+  var(--m) 0 100%/14px 1.5px,var(--m) 0 100%/1.5px 14px,var(--m) 100% 100%/14px 1.5px,var(--m) 100% 100%/1.5px 14px;
+  background-repeat:no-repeat}
+@media (hover:hover) and (pointer:fine){
+  .proj:hover figure::before,.proj:hover figure::after{opacity:1;transform:none}
+}
+.proj:has(:focus-visible) figure::before,.proj:has(:focus-visible) figure::after{opacity:1;transform:none}
+
+/* ---------- .proj-nav: «la tecla» ---------- */
+.proj-nav button{box-shadow:var(--p-lip,inset 0 -2px 0 rgba(20,20,20,.12));
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),background .25s,color .25s,border-color .25s}
+@media (hover:hover) and (pointer:fine){.proj-nav button:hover{box-shadow:inset 0 -2px 0 rgba(0,0,0,.5)}}
+/* Táctil: sin el hover «pegado» de la base (la tecla quedaba negra tras el toque); se pulsa rosa y vuelve a subir */
+@media (hover:none){.proj-nav button:hover{background:var(--surface);border-color:var(--line);color:inherit}}
+.proj-nav button:active{transform:translateY(1px);box-shadow:inset 0 0 0 transparent;background:var(--pink);border-color:var(--pink);color:#fff;
+  transition-duration:var(--p-t-press,.18s)} /* como la tecla «una» del pie: oscura al pasar, rosa al pulsar */
+@media (prefers-reduced-motion:reduce){.proj-nav button:active{transform:none}}
+
+/* ---------- .rail: «dónde estás del carril» ----------
+   Filete de 1 px con un tramo rosa: posición y proporción visible. Vive dentro del padding inferior del carril
+   (margen neto 0: no mueve nada). El snap respeta el mismo margen que .wrap: sin scroll-padding, el navegador
+   re-encajaba la primera tarjeta contra el borde de la ventana (x = 0) en lugar de alinearla con el título. */
+.rail{scroll-padding-inline:max(16px,calc((100vw - 1180px)/2))}
+.p-proof-rail{width:min(1180px,100% - 32px);height:2px;margin:-16px auto 14px;position:relative;overflow:hidden;
+  background:linear-gradient(var(--line) 0 0) 0 50%/100% 1px no-repeat}
+.p-proof-rail i{display:block;height:100%;border-radius:2px;background:var(--pink);width:calc(var(--w,1)*100%);
+  transform:translateX(calc(var(--p,0)*(1/var(--w,1) - 1)*100%));transition:transform .2s var(--ease),width .3s var(--ease)}
+
+/* ---------- .wall-tabs: «la cápsula que desliza» ---------- */
+.wall-tabs.p-proof-tabs{position:relative}
+.p-proof-tabs button{position:relative;z-index:1}
+.p-proof-tabs button[aria-selected="true"]{background:none;box-shadow:none}
+.p-proof-pill{position:absolute;left:0;top:4px;bottom:4px;width:0;border-radius:999px;background:#fff;box-shadow:var(--shadow)}
+.p-proof-tabs.p-proof-on .p-proof-pill{transition:transform .3s var(--ease),width .3s var(--ease)}
+@media (pointer:coarse){.wall-tabs button{height:44px}} /* zona táctil de 44 px */
+
+/* ---------- .wall: «la ola» ----------
+   Al entrar el muro y en cada cambio de pestaña, los logos aparecen en diagonal: (fila + columna) × 40 ms.
+   La ola sustituye la aparición en bloque del .rv del panel. La animación se reinicia sola al volver a mostrarse
+   el panel (display:none → visible). */
+@keyframes p-proof-wave{from{opacity:0;transform:translateY(8px) scale(.98)}}
+@media (prefers-reduced-motion:no-preference){
+  .wall.rv{opacity:1;transform:none;filter:none;transition:none}
+  .wall.rv:not(.in) li{opacity:0}
+  .wall.rv.in li,.wall:not(.rv) li{animation:p-proof-wave .6s var(--ease) both;animation-delay:calc(var(--p-i,0)*var(--p-step-sm,40ms))}
+}
+
+/* ---------- .marquee: solo corre en pantalla ----------
+   Sin JS sigue como ahora; con JS se pausa fuera de pantalla. */
+.marquee.p-proof-io:not(.p-live) .track{animation-play-state:paused}
+
+/* ---------- Sellos: «el sello se estampa» ----------
+   Escala 1,06 → 1 y opacidad 0 → 1 en 450 ms, con una sombra de contacto breve (drop-shadow: sigue la silueta
+   del sello; es un gesto puntual, no un bucle). Sin giros ni rebotes.
+   .seals y .ens-seal ya están en un .rv; .cert-img .seal y .st .badge los arma el JS de proof (.p-armed). */
+@keyframes p-proof-stamp{
+  from{opacity:0;transform:scale(1.06)}
+  55%{opacity:1;transform:none;filter:drop-shadow(0 2px 2px rgba(20,20,20,.3))}
+  to{opacity:1;transform:none}}
+.seals a+a img,.st .badge+.badge{--p-d:.12s}
+@media (prefers-reduced-motion:no-preference){
+  .rv.in .seals img,.ens-seal.rv.in img{animation:p-proof-stamp .45s var(--ease) both;
+    animation-delay:calc(var(--s,0)*80ms + .5s + var(--p-d,0s))}
+  :is(.cert-img .seal img,.st .badge).p-armed:not(.p-in){opacity:0}
+  :is(.cert-img .seal img,.st .badge).p-armed.p-in{animation:p-proof-stamp .45s var(--ease) both;animation-delay:calc(.15s + var(--p-d,0s))}
+}
+
+/* ---------- .quote: «la comilla colgada» ----------
+   La « “ » rosa deja de ser un bloque encima del texto: cuelga en el margen izquierdo y la primera línea
+   empieza alineada con el resto, como en los buenos libros. Tamaño en em del texto (2×): la comilla y su hueco
+   siguen al clamp() del blockquote, y top:.05em pone el remate de la comilla a la altura de las mayúsculas. */
+.quote blockquote{position:relative}
+.quote blockquote::before{position:absolute;left:-.6em;top:.05em;margin:0;font-size:2em;line-height:1}
+
+/* ---------- .case-anon: armonizar (validado: no se rediseña) ----------
+   El filete rosa de «Lo que hicimos» se dibuja de arriba abajo; los checks se marcan como en cards. */
+.case-anon .ca-steps>div+div{position:relative;border-left-color:var(--line)}
+.case-anon .ca-steps>div+div::before{content:"";position:absolute;left:-2px;top:0;bottom:0;width:2px;background:var(--pink);
+  transform-origin:top;transition:transform .9s var(--ease) calc(var(--s,0)*80ms + .35s)}
+.ca-results li:nth-child(2){--p-k:1}.ca-results li:nth-child(3){--p-k:2}.ca-results li:nth-child(4){--p-k:3}.ca-results li:nth-child(n+5){--p-k:4}
+@media (prefers-reduced-motion:no-preference){
+  :is(.rv:not(.in) .case-anon,.case-anon.rv:not(.in)) .ca-steps>div+div::before{transform:scaleY(0)}
+  :is(.rv.in .case-anon,.case-anon.rv.in) .ca-results svg{animation:p-cards-tick .35s var(--ease) both;
+    animation-delay:calc(var(--s,0)*80ms + .8s + var(--p-k,0)*90ms)}
+}
+
+/* ---------- .cert-facts: «la ficha se escribe» (valores idénticos a .ficha de content) ----------
+   Filas en secuencia (60 ms; aparecen en 500 ms subiendo 6 px) y el filete inferior de cada fila se dibuja de
+   izquierda a derecha: dt en 600 ms y dd 200 ms después, en 1,2 s. El borde pasa a un fondo de 1 px (mismo sitio,
+   mismo color) para poder dibujarlo. La arma el JS de proof (.p-armed) solo si está por debajo de la primera pantalla. */
+.cert-facts :is(dt,dd){border-bottom-color:transparent;background:linear-gradient(var(--line) 0 0) 0 100%/100% 1px no-repeat border-box}
+.cert-facts dl>:nth-last-child(-n+2){background:none}
+.cert-facts :is(dt,dd):nth-of-type(2){--p-r:1}.cert-facts :is(dt,dd):nth-of-type(3){--p-r:2}.cert-facts :is(dt,dd):nth-of-type(n+4){--p-r:3}
+@media (max-width:720px){.cert-facts dt{background:none}}
+@media (prefers-reduced-motion:no-preference){
+  .cert-facts.p-armed :is(dt,dd){--p-dl:calc(var(--p-r,0)*60ms);
+    transition:opacity .5s var(--ease) var(--p-dl),transform .5s var(--ease) var(--p-dl),background-size .6s var(--ease) calc(var(--p-dl) + .15s)}
+  .cert-facts.p-armed dd{transition-property:opacity,transform,background-size;transition-duration:.5s,.5s,var(--p-t-draw,1.2s);
+    transition-delay:var(--p-dl),var(--p-dl),calc(var(--p-dl) + .35s)}
+  .cert-facts.p-armed:not(.p-in) :is(dt,dd){opacity:0;transform:translateY(6px);background-size:0 1px}
+}
+
+/* ======================= Poesía · content — FAQ, tablas, bloque de contacto y formulario, «Dónde estamos», textos legales y bloques propios.
+   Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
+
+/* ---------- Rosa pequeño en AA (DIRECCIO §4): sobre claro, --pink-600 ----------
+   body … sube la especificidad sobre los <style> de página, que se cargan después de esta capa. */
+.res .cat,.field label i,.form .req,body .cats .lvl,body .ficha dd a{color:var(--pink-600)}
+
+/* ---------- .faq details y details.layer: «se abre con calma» ----------
+   La respuesta se abre y se cierra en 350 ms y el texto hace un fundido. El «+» sigue como está.
+   Mejora progresiva: sin interpolate-size o ::details-content se abre como antes. El teclado no cambia. */
+@supports (interpolate-size:allow-keywords) and selector(::details-content){
+  @media (prefers-reduced-motion:no-preference){
+    .faq details,details.layer{interpolate-size:allow-keywords}
+    .faq details::details-content,details.layer::details-content{height:0;opacity:0;overflow:clip;
+      transition:height .35s var(--ease),opacity .35s var(--ease),content-visibility .35s allow-discrete}
+    .faq details[open]::details-content,details.layer[open]::details-content{height:auto;opacity:1}
+  }
+}
+
+/* ---------- .contact-info: «la onda de la llamada» ----------
+   Desde el centro de los círculos que ya hay, cada 6 s nace un anillo blanco muy suave (30 % → 0) que se ensancha
+   y se desvanece. Único bucle de esta pantalla; pausado fuera de pantalla (.p-live, JS de content).
+   isolation: el anillo va detrás del texto y por encima del rosa. Con reduced-motion, solo los círculos fijos.
+   La primera onda espera 1,2 s: que el bloque (.rv) se asiente y el ping del eyebrow termine antes de «llamar».
+   En la home no: ya tiene la órbita, el glow y el marquee, y no se le añade ningún movimiento autónomo (DIRECCIO §3.3). */
+.contact-info{isolation:isolate}
+@media (prefers-reduced-motion:no-preference){
+  .contact-info::before{content:"";position:absolute;z-index:-1;right:-160px;bottom:-200px;width:480px;height:480px;
+    border-radius:50%;border:1px solid #fff;opacity:0;transform:scale(.6);pointer-events:none;
+    animation:p-content-wave 6s linear 1.2s infinite paused}
+  .contact-info.p-live::before{animation-play-state:running}
+  [data-area=home] .contact-info::before{content:none}
+}
+/* 2,3 s de onda y 3,7 s de reposo (≥ 60 %) */
+@keyframes p-content-wave{
+  0%{transform:scale(.6);opacity:0;animation-timing-function:cubic-bezier(.22,.8,.24,1)}
+  6%{opacity:.3;animation-timing-function:ease-in}
+  38%,100%{transform:scale(1.4);opacity:0}
+}
+
+/* ---------- .form-ok: «mensaje enviado» ----------
+   Al salir bien el envío (el JS del formulario muestra .form-ok), la flecha de «Enviar» sale volando a la derecha y vuelve,
+   y .form-ok aparece con un check que se marca (receta «check que se marca»). La tecla del .btn es de chrome. */
+.form-ok{position:relative;padding-left:44px}
+.form-ok::before{content:"";position:absolute;left:16px;top:calc(14px + .8em - 9px);width:18px;height:18px;background:var(--pink);
+  -webkit-mask:var(--p-content-check) center/contain no-repeat;mask:var(--p-content-check) center/contain no-repeat}
+:root{--p-content-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10' opacity='.25'/%3E%3Cpath d='m8 12.5 2.7 2.7L16.5 9'/%3E%3C/svg%3E");
+  --p-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")}
+@media (prefers-reduced-motion:no-preference){
+  .form-ok::before{animation:p-cards-tick .35s var(--ease) .15s both}
+  .form.p-content-sent .btn svg{animation:p-content-fly .9s var(--ease)}
+}
+@keyframes p-content-fly{0%{transform:none;opacity:1}35%{transform:translateX(40px);opacity:0}36%,62%{transform:translateX(-10px);opacity:0}100%{transform:none;opacity:1}}
+
+/* ---------- .pinbox y .pin (Dónde estamos): «las coordenadas» ----------
+   Al entrar la tarjeta: 1) el pin cae 10 px hasta su sitio (450 ms); 2) dos líneas de coordenadas de 1 px en rosa al 30 %
+   cruzan el mapa por la vertical y la horizontal del pin, dibujándose desde el pin hacia los lados (900 ms); 3) ping.
+   Las líneas son pseudos de .pin (el ::before de .pinbox es el resplandor). container-type da el tamaño del mapa (cqw/cqh).
+   Base = final: pin en su sitio y líneas dibujadas (390 px y reduced-motion). */
+/* La retícula de 32 px se alinea con el pin: su centro cae en medio de una celda y las líneas no se confunden con la retícula */
+.pinbox{container-type:size;background-position:50% calc(50% - 24px)}
+.pinbox .pin{z-index:1}
+/* La etiqueta, posicionada después del círculo: el ping pasa POR DEBAJO de ella, no por encima del texto */
+.pinbox .pin i,.pinbox .pin>span{position:relative}
+.pinbox .pin::before,.pinbox .pin::after{content:"";position:absolute;z-index:-1;left:50%;top:27px;background:rgba(227,39,114,.3);pointer-events:none}
+.pinbox .pin::before{width:100cqw;height:1px;margin:-.5px 0 0 -50cqw}
+.pinbox .pin::after{width:1px;height:calc(100cqh + 64px);margin:calc(-50cqh - 32px) 0 0 -.5px}
+.pinbox .pin i::after{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid var(--pink);opacity:0;pointer-events:none}
+/* Tiempos: la tarjeta (.rv) sube y se desenfoca 900 ms; hasta ~550 ms no está asentada. Si el pin cayera antes, la caída
+   quedaría disuelta dentro de la subida de la tarjeta. Por eso: caída 550–1.000 ms, líneas 1.000–1.900 ms, ping a 1.300 ms. */
+@media (prefers-reduced-motion:no-preference){
+  .pinbox .pin i{transition:transform .45s var(--ease) .55s}
+  .pinbox .pin::before,.pinbox .pin::after{transition:transform .9s var(--ease) 1s}
+  .rv:not(.in) .pinbox .pin i{transform:translateY(-10px)}
+  .rv:not(.in) .pinbox .pin::before{transform:scaleX(0)}
+  .rv:not(.in) .pinbox .pin::after{transform:scaleY(0)}
+  .rv.in .pinbox .pin i::after{animation:p-chrome-ping 1.1s var(--ease) 1.3s}
+}
+
+/* ---------- .doc h2 (textos legales): «el marcador de sección» ----------
+   Nodo rosa de 7 px con halo, colgado en el margen izquierdo (−22 px) a la altura de la primera línea. Aquí no se mueve nada.
+   Solo textos legales e institucionales: los artículos (.prose.doc) llevan su número de sección (blog). */
+.doc:not(.prose) h2{position:relative}
+.doc:not(.prose) h2::before{content:"";position:absolute;left:-22px;top:calc(.625em - 3.5px);width:7px;height:7px;border-radius:50%;
+  background:var(--pink);box-shadow:var(--p-halo,0 0 0 4px var(--pink-50))}
+/* Sin margen donde colgar (certificados a una columna, o menos de 860 px): el nodo pasa en línea, delante del título */
+@media (max-width:1060px){
+  .cert-txt .doc h2::before{position:static;display:inline-block;vertical-align:.18em;margin:0 10px 0 4px}
+}
+@media (max-width:860px){
+  .doc:not(.prose) h2::before{position:static;display:inline-block;vertical-align:.18em;margin:0 10px 0 4px}
+}
+
+/* ---------- .res a.card y .art-card (blog): «la flecha» ----------
+   Flecha discreta de 16 px (--pink-600 al 40 %) arriba a la derecha, a la altura de .cat (o del título si no hay .cat).
+   Con hover o foco pasa a opacidad 1 y atraviesa (p-chrome-pass). Una sola regla para las tarjetas de recursos (content)
+   y las de artículo (blog), que eran idénticas. El foco de luz de .card (cards) se queda como base. */
+:is(.res a.card,.art-card)::after{content:"";position:absolute;top:29px;right:26px;width:16px;height:16px;background:var(--pink-600);opacity:.4;pointer-events:none;
+  -webkit-mask:var(--p-arrow) center/contain no-repeat;mask:var(--p-arrow) center/contain no-repeat;
+  transition:opacity var(--p-t-hover,.3s) var(--ease)}
+.res a.card:not(.art-card) .cat{padding-right:28px}
+:is(.res a.card,.art-card):focus-visible::after{opacity:1;animation:p-chrome-pass .5s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  :is(.res a.card,.art-card):hover::after{opacity:1;animation:p-chrome-pass .5s var(--ease)}
+}
+
+/* ---------- .doc-more a svg: «la flecha que atraviesa» (valores de chrome) ---------- */
+.doc-more a:focus-visible svg{animation:p-chrome-pass .5s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .doc-more a:hover svg{animation:p-chrome-pass .5s var(--ease)}
+}
+
+/* ---------- .spec y .doc-table: «la fila que se está leyendo» ----------
+   Solo con ratón: la fila bajo el puntero toma --surface-2 y un filete rosa de 2 px a la izquierda. */
+@media (hover:hover) and (pointer:fine) and (min-width:721px){
+  .spec tbody tr>*,.doc-table tr>*{transition:background-color .25s var(--ease),box-shadow .25s var(--ease)}
+  .spec tbody tr:hover>*,.doc-table tr:hover>td{background-color:var(--surface-2)}
+  .spec tbody tr:hover>:first-child,.doc-table tr:hover>:first-child{box-shadow:inset 2px 0 0 var(--pink)}
+}
+
+/* ---------- .lvl (categorías ENS): «el nivel» ----------
+   Bajo «Categoría», tres segmentos de 18 × 4 px: BÁSICA 1 lleno (tinta), MEDIA 2, ALTA 3 en rosa. Estático y sin texto. */
+body .cats .lvl::after{content:"";display:block;width:62px;height:4px;margin-top:8px;--p-a:var(--line-2);--p-b:var(--line-2);--p-c:var(--line-2);
+  background:linear-gradient(90deg,var(--p-a) 0 20px,var(--p-b) 20px 42px,var(--p-c) 42px);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 4'%3E%3Crect width='18' height='4' rx='2'/%3E%3Crect x='22' width='18' height='4' rx='2'/%3E%3Crect x='44' width='18' height='4' rx='2'/%3E%3C/svg%3E");
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 4'%3E%3Crect width='18' height='4' rx='2'/%3E%3Crect x='22' width='18' height='4' rx='2'/%3E%3Crect x='44' width='18' height='4' rx='2'/%3E%3C/svg%3E")}
+.cats .cmp:nth-child(1) .lvl::after{--p-a:var(--ink)}
+.cats .cmp:nth-child(2) .lvl::after{--p-a:var(--ink);--p-b:var(--ink)}
+.cats .cmp:nth-child(3) .lvl::after{--p-a:var(--pink);--p-b:var(--pink);--p-c:var(--pink)}
+
+/* ---------- .ficha (Quiénes somos, «ADQA en datos»): «la ficha se escribe» ----------
+   Valores idénticos a .cert-facts (proof): filas en secuencia (60 ms; aparecen en 500 ms subiendo 6 px) y el filete
+   inferior de cada fila se dibuja de izquierda a derecha (dt en 600 ms; dd 200 ms después, en 1,2 s). Como la ficha es
+   una tarjeta .rv, cuelga de .rv.in y empieza 300 ms tarde para no perderse dentro de la aparición de la propia tarjeta.
+   body … gana al <style> de la página, que se carga después. */
+body .ficha :is(dt,dd){border-bottom-color:transparent;background:linear-gradient(var(--line) 0 0) 0 100%/100% 1px no-repeat border-box}
+body .ficha dl>:nth-last-child(-n+2){background:none}
+.ficha :is(dt,dd):nth-of-type(2){--p-r:1}.ficha :is(dt,dd):nth-of-type(3){--p-r:2}.ficha :is(dt,dd):nth-of-type(4){--p-r:3}
+.ficha :is(dt,dd):nth-of-type(5){--p-r:4}.ficha :is(dt,dd):nth-of-type(6){--p-r:5}.ficha :is(dt,dd):nth-of-type(7){--p-r:6}
+.ficha :is(dt,dd):nth-of-type(8){--p-r:7}.ficha :is(dt,dd):nth-of-type(n+9){--p-r:8}
+@media (max-width:720px){body .ficha dt{background:none}}
+@media (prefers-reduced-motion:no-preference){
+  .ficha.rv :is(dt,dd){--p-dl:calc(var(--p-r,0)*60ms + .3s);
+    transition:opacity .5s var(--ease) var(--p-dl),transform .5s var(--ease) var(--p-dl),background-size .6s var(--ease) calc(var(--p-dl) + .15s)}
+  .ficha.rv dd{transition-property:opacity,transform,background-size;transition-duration:.5s,.5s,var(--p-t-draw,1.2s);
+    transition-delay:var(--p-dl),var(--p-dl),calc(var(--p-dl) + .35s)}
+  .ficha.rv:not(.in) :is(dt,dd){opacity:0;transform:translateY(6px);background-size:0 1px}
+}
+
+/* ======================= Poesía · blog — /recursos/, categorías, tarjetas de artículo, artículo (índice y secciones) e imágenes provisionales.
+   Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
+
+/* ---------- .ph / .art-ph: «el plano pendiente de dibujar» ----------
+   Las franjas pasan a ser un plano por dibujar: papel blanco, rejilla de 16 px en --pink-50 y, en la esquina, el motivo
+   del área en rosa al 22 %. Se quedan el borde discontinuo, la etiqueta «Imagen provisional», el icono y el pie: tiene
+   que seguir viéndose que es provisional. Rejilla y motivo se anclan abajo a la derecha: caen en las mismas líneas.
+   Estático, sin JS. overflow visible: la caja crece con su contenido en vez de recortarlo (en móvil, la etiqueta
+   tapaba el icono de .art-ph porque el 21/9 no daba alto suficiente). */
+.ph{overflow:visible;
+  background:
+    var(--p-blog-m,none) var(--p-blog-mp,right bottom)/var(--p-blog-ms,256px 256px) var(--p-blog-mr,no-repeat),
+    linear-gradient(90deg,var(--pink-50) 1px,transparent 1px) right bottom/16px 16px,
+    linear-gradient(var(--pink-50) 1px,transparent 1px) right bottom/16px 16px,
+    var(--surface,#fff)}
+/* El icono y el pie se rotulan como en un plano: un halo de papel alrededor de cada letra, no un recuadro. Ninguna
+   línea cruza el texto y el motivo se ve entero (un recuadro blanco lo tapaba casi todo en .art-ph a 390). Estático. */
+.ph figcaption{text-shadow:0 0 2px #fff,0 0 3px #fff,0 0 5px #fff,0 0 8px #fff}
+.ph svg{filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px #fff)}
+/* Motivo por categoría (artículos: data-cat) o por área (resto de páginas: data-area). Por defecto, solo la rejilla. */
+:is([data-cat=redes],[data-area=redes]) .ph{--p-blog-mp:right bottom;--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath d='M160 224a64 64 0 0 1 64-64M96 224a128 128 0 0 1 128-128M32 224A192 192 0 0 1 224 32'/%3E%3Cpath stroke-width='1' stroke-dasharray='4 6' d='M0 224h144'/%3E%3Cpath stroke-width='12' d='M224 224h0'/%3E%3C/svg%3E")}
+:is([data-cat=ciberseguridad],[data-area=ciberseguridad]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='48' y='48' width='320' height='320' rx='40'/%3E%3Crect x='96' y='96' width='320' height='320' rx='30'/%3E%3Crect x='144' y='144' width='320' height='320' rx='22'/%3E%3C/svg%3E")}
+:is([data-cat=cloud],[data-area=sistemas-cloud]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='80' y='32' width='144' height='272' rx='6'/%3E%3Cpath d='M96 64h96M96 96h96M96 128h96M96 160h96M96 192h96M96 224h96'/%3E%3Cpath stroke-width='5' d='M208 64h0m0 32h0m0 32h0m0 32h0m0 32h0m0 32h0'/%3E%3C/svg%3E")}
+:is([data-cat=telecomunicaciones],[data-area=telecomunicaciones]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 64' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath d='M0 28h128M0 44h128'/%3E%3Cpath stroke-width='6' d='M32 28h0M96 44h0'/%3E%3C/svg%3E");--p-blog-ms:128px 64px;--p-blog-mr:repeat-x;--p-blog-mp:right bottom}
+:is([data-cat=soporte-it],[data-area=soporte-it]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath stroke-width='3' stroke-dasharray='0 8' d='M16 224h80a16 16 0 0 0 16-16v-64a16 16 0 0 1 16-16h64a16 16 0 0 0 16-16V64'/%3E%3Ccircle cx='208' cy='48' r='8'/%3E%3C/svg%3E")}
+:is([data-cat=web],[data-area=diseno-programacion-web],[data-area=desarrollo-software-medida]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='48' y='48' width='256' height='256' rx='14'/%3E%3Cpath d='M48 80h208M192 144h48M192 160h48M192 176h32'/%3E%3Cpath stroke-width='5' d='M64 64h0m12 0h0m12 0h0'/%3E%3Crect x='64' y='96' width='176' height='16' rx='4'/%3E%3Crect x='64' y='128' width='112' height='64' rx='6'/%3E%3Crect x='64' y='208' width='48' height='32' rx='6'/%3E%3Crect x='128' y='208' width='48' height='32' rx='6'/%3E%3Crect x='192' y='208' width='48' height='32' rx='6'/%3E%3C/svg%3E")}
+:is([data-cat=workspace],[data-area=google-workspace],[data-area=microsoft-365]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cdefs%3E%3Cpattern id='f' x='64' y='112' width='48' height='48' patternUnits='userSpaceOnUse'%3E%3Crect x='1' y='1' width='32' height='32' rx='6'/%3E%3Cpath d='M10 27a7 7 0 0 1 14 0'/%3E%3Cpath stroke-width='6' d='M17 14h0'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='64' y='112' width='192' height='144' fill='url(%23f)' stroke='none'/%3E%3C/svg%3E")}
+
+/* ---------- .art-card: «la flecha» ----------
+   La flecha es la misma regla que .res a.card (sección content, más arriba). Aquí, solo el hueco del primer hijo para
+   que el texto no choque con ella. */
+.art-card>:first-child{padding-right:28px}
+
+/* ---------- .blog-cat-head: «etiqueta + filete» ----------
+   Un filete de 1 px une el bloque del título con el botón «Ver N guías», a la altura del centro del botón (50/2 px):
+   empieza a 28 px del texto y acaba a 12 px del botón. Ocupa 0 px netos (base 0 y márgenes −12/−28 = −40, el hueco
+   que añade), así que nunca hace saltar el botón de línea. Se dibuja de izquierda a derecha al entrar el bloque
+   (.rv.in). Hasta 1120 px no se pone: el botón baja de línea o el filete sería un muñón (< 54 px en las categorías). */
+.blog-cat-head::after{content:"";order:1;flex:1 1 0;height:1px;margin:0 -28px 25px -12px;background:var(--line);transform-origin:left}
+.blog-cat-head>.btn{order:2}
+@media (prefers-reduced-motion:no-preference){
+  .blog-cat-head::after{transition:transform var(--p-t-draw,1.2s) var(--ease) .35s}
+  .blog-cat-head.rv:not(.in)::after{transform:scaleX(0)}
+}
+@media (max-width:1120px){
+  .blog-cat-head::after{display:none}
+}
+
+/* ---------- .prose h2: «el número de la sección» ----------
+   Cada h2 del artículo lleva el mismo número que el índice («01», «02»…): withToc numera todos los h2 de .prose.
+   «/ ""»: los lectores de pantalla no lo leen (la primera declaración es el respaldo para navegadores antiguos).
+   Con margen (≥ 1300 px) cuelga a la izquierda, alineado con la línea base del título; si no, va encima, pequeño. */
+.art-main .prose{counter-reset:p-blog-sec}
+.art-main .prose h2{counter-increment:p-blog-sec}
+.art-main .prose h2::before{content:counter(p-blog-sec,decimal-leading-zero);content:counter(p-blog-sec,decimal-leading-zero) / "";
+  display:block;margin-bottom:8px;font-size:.75rem;font-weight:600;line-height:1.4;letter-spacing:.02em;color:var(--pink-600);font-variant-numeric:tabular-nums}
+@media (min-width:1300px){
+  .art-main .prose h2::before{display:inline-block;width:40px;margin:0 0 0 -40px;line-height:1}
+}
+
+/* ---------- .toc: «el índice sigue la lectura» ----------
+   Un hilo vertical de 1 px (--line) enhebra los números; el JS de blog marca con aria-current="location" la sección que se lee
+   y da a --p la fracción del hilo hasta ella: un segmento rosa crece hasta allí y el número se convierte en un nodo
+   (punto de 6 px con halo) cuando el segmento llega. El enlace activo pasa a tinta. Sin JS, el índice de siempre con su hilo.
+   Geometría: el centro del número está a 16 px de la parte de arriba del <li> y a 7,5 px de la izquierda («01» = 15 px). */
+.toc ol,.toc li{position:relative}
+.toc li:not(:last-child)::before{content:"";position:absolute;left:7px;top:16px;width:1px;height:calc(100% + 2px);background:var(--line)}
+.toc ol::after{content:"";position:absolute;left:7px;top:16px;bottom:16px;width:1px;background:var(--pink);
+  transform-origin:top;transform:scaleY(var(--p,0));transition:transform .6s var(--ease)}
+.toc a{position:relative;z-index:1}
+.toc a::before{align-self:start;padding-bottom:2px;background:var(--surface,#fff);color:var(--pink-600);font-variant-numeric:tabular-nums;transition:color .2s}
+.toc a::after{content:"";position:absolute;left:4.5px;top:13.4px;width:6px;height:6px;border-radius:50%;background:var(--pink);
+  box-shadow:var(--p-halo,0 0 0 4px var(--pink-50));transform:scale(0);transition:transform .2s var(--ease)}
+.toc a[aria-current]{color:var(--ink)}
+.toc a[aria-current]::before{color:transparent;transition-delay:.25s}
+.toc a[aria-current]::after{transform:none;transition:transform .35s var(--ease) .25s}
+/* Con reduced-motion, la regla global de la base (*,*::before,*::after{transition:none!important}) deja los cambios instantáneos. */
+
+/* ---------- Móvil (≤ 720 px) ---------- */
+@media (max-width:720px){
+  /* En cajas bajas el motivo se asoma desde la esquina: 32 px fuera (2 módulos, sigue en la rejilla). Redes (el punto de
+     acceso está en la esquina) y telecom (tira a lo ancho) no se mueven. */
+  .ph{--p-blog-mp:right -32px bottom -32px}
+  /* Una franja libre bajo el pie (40 px) para que se vea la base del motivo: el punto de acceso, las fibras. */
+  .art-ph{padding-bottom:40px}
+}
