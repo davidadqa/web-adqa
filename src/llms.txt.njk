@@ -27,8 +27,12 @@ Datos clave:
 - [{{ (p.data.llmsTitle or p.data.title) | replace(' | ADQA','') | replace('ADQA · ','') | safe }}]({{ p.url | absUrl }}): {{ p.data.description | safe }}{% endif %}{% endfor %}
 
 ## Empresa
-{% for p in collections.all | sort(false, false, "url") %}{% if not (p.url in serviceUrls) and not p.data.noindex and not (p.url | startsWith("/recursos/")) %}
+{% for p in collections.all | sort(false, false, "url") %}{% if not (p.url in serviceUrls) and not p.data.noindex and not (p.url | startsWith("/recursos/")) and not (p.data.c and p.data.c.titulo) %}
 - [{{ (p.data.llmsTitle or p.data.title) | replace(' | ADQA','') | replace('ADQA · ','') | safe }}]({{ p.url | absUrl }}): {{ p.data.description | safe }}{% endif %}{% endfor %}
+
+## Casos de éxito
+{% for c in casos %}
+- [{{ c.titulo | safe }}]({{ c.url | absUrl }}): {{ c.seo.description | safe }}{% endfor %}
 
 ## Recursos
 

@@ -86,7 +86,7 @@ function jsonldGraph(d) {
     isPartOf: { "@id": `${base}/#website` },
     about: org,
     ...(d.breadcrumbs ? { breadcrumb: { "@id": `${url}#breadcrumb` } } : {}),
-    ...(d.article ? { mainEntity: { "@id": `${url}#article` } } : {}),
+    ...(d.article || d.caso ? { mainEntity: { "@id": `${url}#article` } } : {}),
     ...(d.itemList ? { mainEntity: { "@id": `${url}#itemlist` } } : {}),
   });
 
@@ -128,6 +128,28 @@ function jsonldGraph(d) {
       ...(a.wordCount ? { wordCount: a.wordCount } : {}),
       image: base + ogImage(d.url).src,
       inLanguage: "es-ES",
+    });
+  }
+
+  // Página de un caso de éxito (src/casos-de-exito/caso.njk). Los casos anónimos no llevan «mentions».
+  if (d.caso) {
+    const c = d.caso;
+    graph.push({
+      "@type": "Article",
+      "@id": `${url}#article`,
+      headline: c.titulo,
+      description: d.description,
+      url,
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+      articleSection: "Casos de éxito",
+      author: org,
+      publisher: org,
+      image: base + ogImage(d.url).src,
+      inLanguage: "es-ES",
+      datePublished: c.publicado,
+      dateModified: c.publicado,
+      about: c.servicios.map((s) => ({ "@type": "Service", name: s.label, url: base + s.href.split("#")[0] })),
+      ...(c.cliente ? { mentions: { "@type": "Organization", name: c.cliente } } : {}),
     });
   }
 
@@ -194,7 +216,31 @@ function jsonldGraph(d) {
     .replace(/</g, "\\u003c");
 }
 
+// Casos de éxito (src/_data/casos.json): comprobación barata en cada build.
+function checkCasos() {
+  const read = (f) => JSON.parse(readFileSync(new URL(f, import.meta.url), "utf8"));
+  const casos = read("./src/_data/casos.json");
+  const fotos = read("./src/_data/fotos.json");
+  const ids = new Set(casos.map((c) => c.id));
+  const urls = new Set();
+  const err = [];
+  for (const c of casos) {
+    for (const k of ["id", "slug", "url", "corto", "titulo", "sector", "sectorTag", "resumen", "highlight", "foto", "servicios", "seo", "publicado"])
+      if (c[k] == null || c[k] === "") err.push(`${c.id}: falta «${k}»`);
+    if (c.url !== `/casos-de-exito/${c.slug}/`) err.push(`${c.id}: url y slug no cuadran`);
+    if (urls.has(c.url)) err.push(`${c.id}: url duplicada`);
+    urls.add(c.url);
+    for (const o of c.otros || []) if (!ids.has(o) || o === c.id) err.push(`${c.id}: «otros» apunta a «${o}»`);
+    if (c.foto && c.foto.tipo === "equipo" && !fotos[c.foto.slug]) err.push(`${c.id}: la foto «${c.foto.slug}» no está en fotos.json`);
+    if (c.foto && c.foto.tipo === "cliente" && !existsSync(new URL(`./src${c.foto.src}`, import.meta.url))) err.push(`${c.id}: no existe ${c.foto.src}`);
+    if (c.anon && c.cliente) err.push(`${c.id}: anónimo con cliente`);
+  }
+  if (ids.size !== casos.length) err.push("ids duplicados");
+  if (err.length) throw new Error("casos.json:\n  " + err.join("\n  "));
+}
+
 export default function (eleventyConfig) {
+  checkCasos();
   eleventyConfig.addPlugin(HtmlBasePlugin);
   // El modo corrección (assets/revisio) solo existe en la vista previa (ELEVENTY_ENV=preview).
   const preview = process.env.ELEVENTY_ENV === "preview";
@@ -232,6 +278,17 @@ export default function (eleventyConfig) {
     [...all].filter((p) => p.data.category === category).sort((a, b) => b.date - a.date).forEach(add);
     return out;
   });
+  // Casos de éxito: uno por id, y el área del formulario de contacto según el primer servicio del caso.
+  eleventyConfig.addFilter("byId", (items, id) => (items || []).find((c) => c.id === id));
+  // Hub: casos que pasan una tecla del filtro («svc:wifi», «sec:sanidad» o «all») y la lista para el ItemList.
+  const casoHas = (c, f) => { if (f === "all") return true; const [k, v] = f.split(":");
+    return k === "svc" ? c.filtros.includes(v) : c.sectorTag === v; };
+  eleventyConfig.addFilter("casoCount", (items, f) => (items || []).filter((c) => casoHas(c, f)).length);
+  eleventyConfig.addFilter("caseItemList", (items) => (items || []).map((c) => ({ url: c.url, name: c.titulo })));
+  const AREA_FORM = { redes: "Redes y WiFi", telecomunicaciones: "Telecomunicaciones", "sistemas-cloud": "Sistemas y cloud",
+    "soporte-it": "Soporte y mantenimiento IT", ciberseguridad: "Ciberseguridad", "desarrollo-software-medida": "Web y software",
+    "diseno-programacion-web": "Web y software", "google-workspace": "Google Workspace / Microsoft 365", "microsoft-365": "Google Workspace / Microsoft 365" };
+  eleventyConfig.addFilter("formArea", (href) => AREA_FORM[String(href || "").split("/")[1]] || "Varias / no lo sé");
   eleventyConfig.addFilter("exclude", (items, url) => (items || []).filter((p) => p.url !== url));
   eleventyConfig.addFilter("navLabel", (url) => {
     for (const g of nav.groups) for (const l of g.links) if (l.url === url) return l.label;

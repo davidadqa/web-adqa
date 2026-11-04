@@ -1,0 +1,141 @@
+---
+pagination:
+  data: casos
+  size: 1
+  alias: c
+  addAllPagesToCollections: true
+permalink: "/casos-de-exito/{{ c.slug }}/"
+ogType: "article"
+---
+{#- Página de un caso de éxito («plano de detalle»): la plantilla de la guía (art-layout) con la ficha del caso en el
+    cajetín del hero. Datos: src/_data/casos.json. Lo «pendiente» (en catalán, para los socios) solo sale en la vista previa. -#}
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+
+{% block jsonld %}{{ { url: page.url, title: title, description: description, breadcrumbs: breadcrumbs, caso: c } | jsonld | safe }}{% endblock %}
+
+{% block head %}
+<meta property="article:published_time" content="{{ c.publicado }}">
+<meta property="article:section" content="Casos de éxito">
+{% endblock %}
+
+{% block content %}
+{%- set toc = [{id: "el-reto", text: "El reto"}, {id: "lo-que-hicimos", text: "Lo que hicimos"}, {id: "el-resultado", text: "El resultado"}] %}
+{%- if c.antesDespues %}{% set toc = (toc.push({id: "antes-y-ahora", text: "Antes y ahora"}), toc) %}{% endif %}
+
+<!-- ============ CABECERA DEL CASO ============ -->
+<section class="hero page-hero doc-hero art-hero cx-hero" aria-labelledby="h-hero">
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Caso de éxito · {{ c.sector.split(" · ")[0] }}</span>
+    <h1 id="h-hero">{{ c.titulo }}</h1>
+    <p class="lead">{{ c.resumen }}</p>
+    <dl class="cx-meta">
+      <div><dt>Cliente</dt><dd>{{ c.cliente or "Confidencial" }}</dd></div>
+      <div><dt>Sector</dt><dd>{{ c.sector }}</dd></div>
+      <div><dt>Servicios</dt><dd>{% for s in c.servicios %}{{ s.label }}{% if not loop.last %} · {% endif %}{% endfor %}</dd></div>
+      <div><dt>Destacado</dt><dd>{% if c.highlight.n %}<b>{{ c.highlight.n }}</b> {% endif %}{{ c.highlight.l }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ CUERPO ============ -->
+<section class="sec art-sec">
+  <div class="wrap art-layout">
+    <article class="art-main cx-main" aria-labelledby="h-hero">
+      <figure class="foto team-photo cx-photo">{{ m.casePhoto(c, sizes="(min-width: 1061px) 720px, calc(100vw - 32px)", eager=true) }}</figure>
+      <div class="prose doc">
+        <h2 id="el-reto">El reto</h2>
+        {%- for p in c.reto %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+        <h2 id="lo-que-hicimos">Lo que hicimos</h2>
+        <ol class="steps rv">
+          {%- for h in c.hicimos %}
+          <li><b>{{ h.titulo }}</b><p>{{ h.texto }}</p></li>
+          {%- endfor %}
+        </ol>
+        <h2 id="el-resultado">El resultado</h2>
+        {%- if c.resultado.cifras.length %}
+        <ul class="cx-figs rv{% if c.resultado.cifras.length == 1 %} cx-figs-1{% endif %}">
+          {%- for f in c.resultado.cifras %}
+          <li><b>{{ f.n }}</b><span>{{ f.l }}</span></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        {%- for p in c.resultado.texto %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+        {%- if c.antesDespues %}{% set t = c.antesDespues %}
+        <h2 id="antes-y-ahora">Antes y ahora</h2>
+        <div class="table-wrap cx-ad"><table>
+          <thead><tr>{% for h in t.cols %}<th scope="col">{% if h %}{{ h }}{% else %}<span class="sr">Aspecto</span>{% endif %}</th>{% endfor %}</tr></thead>
+          <tbody>
+            {%- for r in t.rows %}
+            <tr><th scope="row">{{ r[0] }}</th>{% for v in r.slice(1) %}<td data-l="{{ t.cols[loop.index] }}">{{ v }}</td>{% endfor %}</tr>
+            {%- endfor %}
+          </tbody>
+        </table></div>
+        {%- endif %}
+        {%- if c.nota %}
+        <div class="note-box"><svg aria-hidden="true"><use href="#i-file"/></svg><p><strong>{{ c.nota.titulo }}</strong> {{ c.nota.texto }}</p></div>
+        {%- endif %}
+        {%- if c.anon %}
+        <p class="note-src">Por confidencialidad, no publicamos el nombre del cliente.</p>
+        {%- endif %}
+      </div>
+      <ul class="art-tags cx-tags" aria-label="Servicios del caso">
+        {%- for s in c.servicios %}<li><a href="{{ s.href }}">{{ s.label }}</a></li>{% endfor %}
+      </ul>
+    </article>
+    <aside class="art-aside" aria-label="Más sobre este caso">
+      <nav class="toc card" aria-label="En este caso">
+        <p class="toc-title">En este caso</p>
+        <ol>
+          {%- for t in toc %}
+          <li><a href="#{{ t.id }}">{{ t.text }}</a></li>
+          {%- endfor %}
+        </ol>
+      </nav>
+      {%- set s0 = c.servicios[0] %}
+      <a class="card svc-card" href="{{ s0.href }}">
+        <span class="cat">Servicio relacionado</span>
+        <b>{{ (s0.href | navLabel) or s0.label }}</b>
+        <span class="txt-link">Cómo trabajamos <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      {%- if site.env == "preview" and c.pendiente.length %}
+      <div class="cx-pend" lang="ca" role="note" aria-label="Pendent de confirmar">
+        <p class="cx-pend-t">Pendent de confirmar · només a la vista prèvia</p>
+        <ul>
+          {%- for p in c.pendiente %}
+          <li>{{ p }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endif %}
+    </aside>
+  </div>
+</section>
+
+<!-- ============ OTROS CASOS ============ -->
+<section class="sec cx-otros" id="otros-casos" aria-labelledby="h-otros" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Más casos</span>
+        <h2 id="h-otros">Otros casos de éxito</h2>
+      </div>
+      <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver los {{ casos.length }} casos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="proj-grid">
+      {%- for id in c.otros %}
+      {{ m.caseCard(casos | byId(id), sizes="(min-width: 1212px) 384px, (min-width: 721px) calc(50vw - 23px), calc(100vw - 32px)", cls="rv", style="--s:" + loop.index0) }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(title="¿Tienes un proyecto parecido?", text="Cuéntanos qué necesitas con tus palabras. Lo estudiamos con calma y te damos la respuesta ADQAda: cómo lo plantearíamos y qué pasos seguiríamos.", area=(c.servicios[0].href | formArea)) }}
+{% endblock %}

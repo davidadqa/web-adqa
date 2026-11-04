@@ -26,7 +26,7 @@
 //   4. lo compartido que no consta que use (_includes, _data); 5. el resto.
 //   En la salida: «(fuente de la página)», «(lo usa la página)», «(no parece verse)» y «(bloque entero)».
 //   Si dos fuentes empatan (el mismo texto en el menú y en el pie), salen las dos: el Markdown no dice cuál se tocó.
-// --selftest: JSON con [{ "url": "/redes/", "text": "…", "expect": "src/_data/projects.json:4" }, …]; «expect» puede
+// --selftest: JSON con [{ "url": "/redes/", "text": "…", "expect": "src/_data/casos.json:4" }, …]; «expect» puede
 //   ir sin línea (solo el fichero). Las líneas cambian al editar las fuentes: si falla un caso, mira primero si se ha
 //   movido el texto. Sale con 0 si todos están bien.
 // Salida: 0 si hay coincidencia exacta (con --md, en todas); 2 si alguna solo tiene candidatos parecidos; 1 si alguna no tiene nada.
@@ -129,7 +129,7 @@ const hit = (f, i, len, extra) => {
 };
 
 /* ---------- páginas: qué fichero genera cada URL y qué fuentes usa (para ordenar los resultados) ---------- */
-const DATA = new Map(); // nombre global → fichero de src/_data (projects → src/_data/projects.json)
+const DATA = new Map(); // nombre global → fichero de src/_data (casos → src/_data/casos.json)
 for (const f of files) { const m = f.file.match(/^src\/_data\/([\w-]+)\.(?:js|json)$/); if (m) DATA.set(m[1], f.file); }
 const MODS = new Map();
 const loadMod = async (file) => { // valor de un fichero de datos (.json o export default de un .js); null si falla

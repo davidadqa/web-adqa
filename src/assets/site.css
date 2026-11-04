@@ -1375,7 +1375,7 @@ body .common .num{color:var(--p-pink-night,#F04D8F)}
 
 /* ---------- .chips: «el teclado de filtros» ----------
    Sin seleccionar: tecla con borde inferior; al pulsar, se hunde. La seleccionada: tecla oscura ya pulsada.
-   body .chips button: en /casos-de-exito/ el <style> de la página se carga después de esta capa. */
+   body .chips button: la tecla del filtro de /casos-de-exito/ (.cx-filter button, más abajo). */
 .chips a,body .chips button{min-height:44px;box-shadow:inset 0 -2px 0 var(--line);
   transition:transform .26s var(--ease),box-shadow .26s var(--ease),background .25s,color .25s,border-color .25s}
 .chips a:active,body .chips button:active{box-shadow:inset 0 0 0 transparent;transition-duration:var(--p-t-press,.18s)}
@@ -1414,9 +1414,8 @@ body .common .num{color:var(--p-pink-night,#F04D8F)}
 
 /* ---------- Rosa AA en texto pequeño (DIRECCIO §4) ---------- */
 .proj .kind,.case-feat .kind,.quote .av{color:var(--pink-600)}
-body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-exito/ los define en su <style>, que carga después */
 
-/* ---------- .proj y .case: «el plano sobre la foto» ----------
+/* ---------- .proj: «el plano sobre la foto» ----------
    Al pasar por encima, la vista del técnico: rejilla de 32 px en blanco al 22 % y cuatro marcas de registro
    (L de 14 px) a 12 px de las esquinas, que se cierran un pelo hasta quedar en registro. Se mantiene el zoom. */
 .proj figure{position:relative}
@@ -1533,8 +1532,8 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
 .proj .hl{position:relative;border-top-color:transparent}
 .proj .hl::before{content:"";position:absolute;left:0;right:0;top:-5px;height:9px;pointer-events:none;--m:linear-gradient(var(--line-2) 0 0);
   background:var(--m) 0 4px/100% 1px,var(--m) 0 0/1px 9px,var(--m) 100% 0/1px 9px;background-repeat:no-repeat}
-.adqa-js .case:target{opacity:1;transform:none;filter:none} /* llegar: ya visible */
-.cases .case{view-transition-class:p-proof-case}
+.adqa-js .cx-grid>.proj:target{opacity:1;transform:none;filter:none} /* llegar: ya visible */
+.cx-grid>.proj{view-transition-class:p-proof-case}
 ::view-transition-group(*.p-proof-case){animation-duration:.6s;animation-timing-function:var(--ease)}
 ::view-transition-old(*.p-proof-case):only-child{animation:p-proof-out .3s var(--ease) both}
 ::view-transition-new(*.p-proof-case):only-child{animation:p-proof-in .45s var(--ease) .15s both}
@@ -1544,9 +1543,9 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
 @media (prefers-reduced-motion:no-preference){
   .proj .hl::before{transition:transform var(--p-t-draw,1.2s) var(--ease) .35s}
   .hl.p-armed:not(.p-in)::before{transform:scaleX(0)} /* armada sola: el carril o la ficha entran mucho antes que su línea */
-  .case:target figure::before,.case:target figure::after{animation:p-proof-target 2.2s var(--ease) .6s backwards}
+  .cx-grid>.proj:target figure::before,.cx-grid>.proj:target figure::after{animation:p-proof-target 2.2s var(--ease) .6s backwards}
 }
-@media (prefers-reduced-motion:reduce){.case:target figure::before,.case:target figure::after{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.cx-grid>.proj:target figure::before,.cx-grid>.proj:target figure::after{opacity:1;transform:none}}
 
 /* ======================= Poesía · content — FAQ, tablas, bloque de contacto y formulario, «Dónde estamos», textos legales y bloques propios.
    Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
@@ -1970,8 +1969,8 @@ sub,sup{font-size:max(13px,.83em)} /* el subíndice de «Clase E<sub>A</sub>» (
 .rail{row-gap:0}
 .rail>.proj,:is(.proj-grid,.proj-grid>.rv)>.proj{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:0}
 .proj-grid>.rv:has(>.proj){grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
-/* Solo dentro del carril y de .proj-grid: en /casos-de-exito/ las fichas .proj.case (foto al lado, en .cases) no son
-   subgrid, y con «.proj .body» a secas la etiqueta ocupaba la fila de la foto (340 px de hueco antes del título). */
+/* Solo dentro del carril y de .proj-grid: con «.proj .body» a secas, una .proj fuera de una rejilla subgrid
+   ponía la etiqueta en la fila de la foto. */
 :is(.rail,.proj-grid,.proj-grid>.rv)>.proj .body{grid-row:span 4;grid-template-rows:subgrid}
 :is(.rail,.proj-grid,.proj-grid>.rv)>.proj .hl{margin-top:0;align-self:start} /* la línea del resultado, a la misma altura en toda la fila */
 @media (max-width:720px){.quote{padding:28px}}
@@ -2020,3 +2019,174 @@ sub,sup{font-size:max(13px,.83em)} /* el subíndice de «Clase E<sub>A</sub>» (
 .toc ol::after{left:7.5px;top:18.5px;bottom:18.5px}
 .toc a::after{left:5px;top:15.5px}
 @media (max-width:720px){.res h3,.art-card h3{font-size:var(--fs-h3)}}
+
+/* ======================= Casos de éxito: la tarjeta única (.proj) y la página de cada caso (.cx-*).
+   Una sola tarjeta en toda la web (macro caseCard). Las fotos de los casos, en blanco y negro con una sola regla
+   (reversible); el rosa queda para la cifra. Regla de oro de poesía: el estado de base es el final. */
+.proj{position:relative}
+.proj[data-sec] figure img,.cx-photo img{filter:grayscale(1) contrast(1.04)} /* no se anima (DIRECCIO §4) */
+.proj figure picture{display:block}
+.proj figure :is(img,picture){width:100%;height:100%;object-fit:cover}
+.proj h3 a{color:inherit;transition:color .2s}
+.proj h3 a::after{content:"";position:absolute;inset:0;z-index:2} /* toda la tarjeta es el enlace del título */
+.proj h3 a:focus-visible{outline:none}
+.proj:has(h3 a:focus-visible){outline:2px solid var(--pink);outline-offset:3px}
+.proj .hl b{color:var(--pink-600);font-weight:600}
+@media (hover:hover) and (pointer:fine){.proj:hover h3 a{color:var(--pink-600)}}
+@media (hover:none){.proj:has(h3 a:active){transform:translateY(1px);border-color:#f2c4d6;transition-duration:var(--p-t-press,.18s)}}
+@media (hover:none) and (prefers-reduced-motion:reduce){.proj:has(h3 a:active){transform:none}}
+.cases-foot{flex-wrap:wrap;gap:10px}
+p.case a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+p.case a:hover,p.case a:focus-visible{color:var(--pink-600);text-decoration-color:currentColor}
+
+/* — Hub /casos-de-exito/: el teclado (servicio o sector, una sola tecla), la cota que mide lo que queda y la rejilla */
+.cx-filter{display:grid;gap:10px;margin-bottom:22px}
+.cx-filter[hidden]{display:none}
+.cx-filter .chips{margin:0;align-items:center}
+.cx-flabel{font-size:var(--fs-sm);font-weight:600;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--muted);min-width:76px}
+.cx-filter button{height:auto;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);
+  font-size:var(--fs-sm);font-weight:600;color:var(--gray)}
+@media (hover:hover) and (pointer:fine){.cx-filter button:not([aria-pressed="true"]):hover{border-color:var(--line-2);color:var(--ink)}}
+.cx-filter button small{font-size:var(--fs-sm);font-weight:600;opacity:.8;margin-left:4px}
+.cx-cota{position:relative;display:flex;justify-content:center;margin:0 0 26px;height:22px;font-size:var(--fs-sm);line-height:22px;font-weight:600;
+  color:var(--muted);font-variant-numeric:tabular-nums}
+.cx-cota::before{content:"";position:absolute;inset:6px 0 auto;height:9px;--m:linear-gradient(var(--line-2) 0 0);
+  background:var(--m) 0 4px/100% 1px,var(--m) 0 0/1px 9px,var(--m) 100% 0/1px 9px;background-repeat:no-repeat;transform-origin:center}
+.cx-cota span{position:relative;padding:0 12px;background:var(--bg)}
+@media (prefers-reduced-motion:no-preference){
+  .cx-cota.p-armed.p-in::before{transition:transform .6s var(--ease)}
+  .cx-cota.p-armed:not(.p-in)::before{transform:scaleX(0)}
+}
+.cx-grid>.proj{scroll-margin-top:110px}
+.cx-grid>.proj[hidden]{display:none}
+@media (min-width:721px) and (max-width:1060px){
+  .proj-grid.cx-grid>.proj:last-child:nth-child(odd){grid-column:auto}
+  .proj-grid.cx-grid>.proj:last-child:nth-child(odd) figure{aspect-ratio:16/10}
+}
+@media (max-width:720px){
+  .cx-filter .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding:2px 16px 4px;
+    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+  .cx-filter .chips::-webkit-scrollbar{display:none}
+  .cx-filter button,.cx-flabel{flex:none}
+  /* La etiqueta se queda fija a la izquierda mientras las teclas pasan por debajo */
+  .cx-flabel{position:sticky;left:-16px;z-index:1;align-self:stretch;display:flex;align-items:center;min-width:0;margin:0 -2px 0 -16px;padding:0 12px 0 16px;
+    background:linear-gradient(90deg,var(--bg) calc(100% - 12px),transparent)}
+}
+
+/* — Hub: «Ejemplos de aplicación», la relación de piezas: 15 servicios y sus ejemplos breves */
+.cx-ej{columns:3 300px;column-gap:48px}
+.cx-ej-g{break-inside:avoid;display:grid;gap:6px;margin-bottom:40px}
+.cx-ej h3{display:flex;align-items:center;gap:10px;font-size:var(--fs-sm);font-weight:600;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--muted)}
+.cx-ej h3 .ico{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
+.cx-ej h3 .ico svg{width:15px;height:15px}
+.cx-ej ul{list-style:none;margin:0;padding:0}
+.cx-ej li>a{display:flex;align-items:baseline;gap:10px;min-height:44px;padding-top:10px;font-size:var(--fs-lead);font-weight:600;color:var(--ink);transition:color .2s}
+.cx-ej li>a i{flex:1;min-width:24px;height:1px;align-self:center;
+  background:linear-gradient(90deg,var(--pink) 0 0) 0 0/0 100% no-repeat,repeating-linear-gradient(90deg,var(--line-2) 0 4px,transparent 4px 10px)}
+.cx-ej li>a small{font-size:var(--fs-sm);font-weight:600;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cx-ej li>a:is(:hover,:focus-visible){color:var(--pink-600)}
+.cx-ej li>a:is(:hover,:focus-visible) i{background-size:100% 100%,auto} /* el hilo se carga, como los enlaces del texto */
+@media (prefers-reduced-motion:no-preference){.cx-ej li>a i{transition:background-size .35s var(--ease)}}
+.cx-ej .cx-ej-t{display:grid;gap:4px;padding:2px 0 8px}
+.cx-ej-t li{position:relative;padding-left:16px;font-size:var(--fs-sm);color:var(--gray);line-height:1.45}
+.cx-ej-t li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;border-radius:50%;border:1.5px solid var(--line-2);box-sizing:border-box}
+@media (max-width:720px){.cx-ej{columns:1}}
+
+/* — Hub: «¿Qué tienen en común?» (sección oscura) */
+.common{display:grid;gap:14px}
+.common article{background:var(--night-2);border:1px solid var(--night-line);border-radius:var(--radius);padding:30px;display:grid;gap:12px;align-content:start}
+.common figure{margin-top:6px;border-radius:14px;overflow:hidden;border:1px solid var(--night-line)}
+.common figure img{width:100%;height:auto}
+.common .num{font-size:var(--fs-sm);font-weight:600;letter-spacing:var(--ls-caps)}
+@media (max-width:720px){.common article{padding:24px}}
+@media print{.cx-filter,.cx-cota{display:none}.cx-ej-g{break-inside:avoid}}
+
+/* — Página de caso: cajetín del hero con la ficha técnica (calco de .art-hero .art-meta) */
+.cx-meta{display:inline-grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1px;justify-self:center;width:min(100%,900px);margin-top:6px;
+  border:1px solid var(--line-2);background:var(--line-2);text-align:left;font-variant-numeric:tabular-nums}
+.cx-meta>div{display:grid;align-content:start;gap:2px;padding:8px 14px;background:var(--surface)}
+.cx-meta dt{font-size:var(--fs-sm);font-weight:600;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--muted)}
+.cx-meta dd{font-size:var(--fs-sm);font-weight:600;color:var(--ink);line-height:1.35}
+.cx-meta>div:first-child{position:relative;padding-left:28px}
+.cx-meta>div:first-child::after{content:"";position:absolute;left:12px;top:14px;width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo)}
+.cx-meta b{color:var(--pink-600);font-weight:600}
+@media (max-width:999px){.cx-meta{grid-auto-flow:row;grid-template-columns:1fr 1fr;width:100%}.cx-meta>div:nth-child(n+3){grid-column:span 2}.cx-meta>div:nth-child(3){order:4}}
+@media (prefers-reduced-motion:no-preference){.cx-meta{animation:p-heroes-unveil .9s var(--ease) 1.2s backwards}}
+
+/* — Cuerpo: foto con las marcas de .team-photo, pasos, tabla y servicios */
+.cx-photo{aspect-ratio:21/9}
+.cx-photo :is(img,picture){width:100%;height:100%;object-fit:cover}
+.prose .steps{padding:0;gap:10px;margin-top:1em}
+.prose .steps li{color:var(--gray)}
+.prose .steps li p{margin:0}
+.prose tbody th{text-align:left;font-weight:600;color:var(--ink)}
+.cx-tags a{display:block;padding:4px 12px;color:inherit;transition:color .2s}
+.cx-tags li:has(a){padding:0;transition:border-color .2s}
+@media (hover:hover) and (pointer:fine){.cx-tags li:has(a:hover){border-color:#f2c4d6}.cx-tags a:hover{color:var(--ink)}}
+
+/* — «El resultado»: cotas encadenadas; cada cifra cuelga de su línea de cota, que se abre desde el centro al entrar */
+.cx-figs{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin:1.2em 0 .4em;padding:0}
+.cx-figs li{position:relative;display:grid;gap:6px;align-content:start;padding:22px 16px 18px 0}
+.cx-figs li::before{content:"";position:absolute;left:0;right:0;top:0;height:9px;--m:linear-gradient(var(--line-2) 0 0);
+  background:var(--m) 0 4px/100% 1px,var(--m) 0 0/1px 9px,var(--m) 100% 0/1px 9px;background-repeat:no-repeat;transform-origin:center}
+.cx-figs b{font-size:var(--fs-h2);line-height:1.1;font-weight:600;color:var(--pink);font-variant-numeric:tabular-nums;text-wrap:balance}
+.cx-figs span{font-size:var(--fs-body);line-height:1.45;color:var(--gray);max-width:24ch}
+.cx-figs li:nth-child(2){--p-k:1}.cx-figs li:nth-child(3){--p-k:2}
+@media (prefers-reduced-motion:no-preference){
+  .cx-figs li::before{transition:transform var(--p-t-draw,1.2s) var(--ease) calc(.35s + var(--p-k,0)*120ms)}
+  .adqa-js .cx-figs.rv:not(.in) li::before{transform:scaleX(0)}
+}
+
+/* — Vista previa: lo que deben confirmar los socios (no se publica) */
+.cx-pend{padding:18px 20px;border-radius:var(--radius-sm);
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' rx='14' fill='none' stroke='%23d6d3d1' stroke-width='2' stroke-dasharray='4 6'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat,var(--surface)}
+.cx-pend-t{font-size:var(--fs-sm);font-weight:600;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--pink-600);margin-bottom:8px}
+.cx-pend ul{display:grid;gap:6px}
+.cx-pend li{font-size:var(--fs-sm);line-height:1.45;color:var(--gray);margin-left:1.1em}
+@media print{.cx-figs li,.proj{break-inside:avoid}.proj h3 a::after{content:none}}
+.proj .hl{align-items:flex-start}
+.proj .hl svg{margin-top:calc((1lh - 16px)/2)} /* el icono, centrado en la primera línea del resultado */
+
+/* — Casos, segunda vuelta (críticas de contenido y diseño) */
+.proj-bn figure img{filter:grayscale(1) contrast(1.04)} /* tarjeta que no es un caso, junto a casos: mismo blanco y negro */
+.prose .cx-figs{padding:0} /* .prose ul ganaba y desplazaba las cifras respecto al texto */
+.cx-figs-1{max-width:min(100%,340px)} /* una sola cifra: la cota no cruza toda la columna */
+/* Hub: dos piezas cierran la rejilla (solo con «Todos»): los ejemplos y la invitación a contar tu caso */
+.cx-more{display:flex;flex-direction:column;justify-content:flex-end;gap:12px;min-height:240px;padding:28px;border-radius:var(--radius);
+  border:1px dashed var(--line-2);background:var(--surface);color:var(--ink);transition:border-color .3s var(--ease),background-color .3s var(--ease)}
+.cx-grid>.cx-more{grid-row:span 5} /* la rejilla es subgrid: cada tarjeta ocupa 5 filas (foto, etiqueta, título, texto, resultado) */
+.cx-more[hidden]{display:none}
+.cx-more-n{font-size:clamp(3rem,6vw,4.5rem);line-height:1;font-weight:600;color:var(--pink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.cx-more-q{font-size:var(--fs-h2);line-height:1.1;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.cx-more-t{font-size:var(--fs-body);line-height:1.45;color:var(--gray);max-width:30ch}
+.cx-more-cta{border-style:solid;border-color:#f2c4d6;background:var(--pink-50)}
+@media (hover:hover) and (pointer:fine){.cx-more:hover{border-color:var(--pink)}.cx-more:hover .txt-link svg{transform:translateX(4px)}}
+.cx-more:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+/* Ejemplos que tienen su caso completo arriba: enlazan a él */
+.cx-ej .cx-ej-t li>a{display:inline;min-height:0;padding:0;font-size:inherit;font-weight:500;line-height:inherit;color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+.cx-ej .cx-ej-t li>a:is(:hover,:focus-visible){color:var(--pink-600);text-decoration-color:currentColor}
+.cx-ej-c{color:var(--pink-600);font-weight:600;white-space:nowrap}
+/* Hub en móvil: la misma tarjeta, más compacta (foto en franja y resumen en tres líneas) */
+@media (max-width:720px){
+  .cx-grid>.proj figure{aspect-ratio:16/7}
+  .cx-grid>.proj .body{padding:20px;gap:8px}
+  .cx-grid>.proj p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+  .cx-more{min-height:0;padding:24px}
+}
+/* «Antes y ahora» en móvil: cada fila, apilada (el aspecto arriba; después «Antes» y «Ahora») */
+@media (max-width:600px){
+  .prose .cx-ad table{min-width:0}
+  .prose .cx-ad thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .prose .cx-ad :is(tbody,tr,th,td){display:block}
+  .prose .cx-ad tr{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .prose .cx-ad tr:last-child{border-bottom:0}
+  .prose .cx-ad tbody th{padding:0 0 6px;border:0;color:var(--ink);font-weight:600}
+  .prose .cx-ad td{padding:4px 0 0;border:0}
+  .prose .cx-ad td::before{content:attr(data-l) " · ";font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .table-wrap.cx-ad{overflow:visible;background:var(--surface)}
+}
+@media print{
+  .sec-head,.prose h2{break-after:avoid}
+  .prose h2,.cx-figs,.table-wrap{break-inside:avoid}
+  .cx-otros,.cx-more{display:none}
+}

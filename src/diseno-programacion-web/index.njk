@@ -297,9 +297,9 @@ faq:
       <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="proj-grid two">
-      {%- for id in ["ajuntament-vilanova", "hitecsa"] %}{% set k = loop.index0 %}{% for p in projects %}{% if p.id == id %}
-      <div class="rv" style="--s:{{ k }};display:grid">{{ m.projectCard(p) }}</div>
-      {%- endif %}{% endfor %}{% endfor %}
+      {%- for id in ["ajuntament-vilanova", "hitecsa"] %}
+      <div class="rv" style="--s:{{ loop.index0 }};display:grid">{{ m.caseCard(casos | byId(id)) }}</div>
+      {%- endfor %}
     </div>
   </div>
 </section>

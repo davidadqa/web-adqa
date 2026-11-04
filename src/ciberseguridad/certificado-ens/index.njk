@@ -253,9 +253,9 @@ faq:
       <p class="lead">Mantenimiento, redes, telecomunicaciones y seguridad para organismos con requisitos exigentes.</p>
     </div>
     <div class="proj-grid two">
-      {%- for p in projects %}{% if p.id in ["consell-comarcal-garraf", "consorci-sanitari"] %}
-      {{ m.projectCard(p) }}
-      {%- endif %}{% endfor %}
+      {%- for id in ["consorci-sanitari", "consell-comarcal-garraf"] %}
+      {{ m.caseCard(casos | byId(id)) }}
+      {%- endfor %}
     </div>
     <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
   </div>

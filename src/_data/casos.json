@@ -1,0 +1,1803 @@
+[
+ {
+  "id": "consorci-sanitari",
+  "slug": "consorci-sanitari-alt-penedes-garraf",
+  "url": "/casos-de-exito/consorci-sanitari-alt-penedes-garraf/",
+  "orden": 1,
+  "destacado": true,
+  "anon": false,
+  "cliente": "Consorci Sanitari Alt Penedès-Garraf",
+  "corto": "Consorci Sanitari Alt Penedès-Garraf",
+  "titulo": "Consorci Sanitari Alt Penedès-Garraf: hospitales conectados entre sí",
+  "sector": "Sanidad · Consorcio público, varios hospitales",
+  "sectorTag": "sanidad",
+  "resumen": "Proyecto y mantenimiento 24/7 de informática y telecomunicaciones para conectar entre sí los hospitales del consorcio. Es uno de los proyectos más grandes que hemos hecho.",
+  "highlight": {
+   "n": "100 Gb/s",
+   "l": "entre sedes con fibra oscura MUX-DEMUX"
+  },
+  "icon": "i-signal",
+  "filtros": [
+   "wifi",
+   "fibra",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "Telecomunicaciones",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Interconexión de sedes",
+    "href": "/telecomunicaciones/networking/"
+   },
+   {
+    "label": "WiFi",
+    "href": "/redes/wifi-entornos-complejos/"
+   },
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   }
+  ],
+  "reto": [
+   "Conectar entre sí los hospitales del Garraf y el Penedès con enlaces de muy alta capacidad. Y, en el mismo proyecto, llevar el WiFi a todos los centros del consorcio, para pacientes y usuarios.",
+   "El encargo incluía también el mantenimiento de la informática y las telecomunicaciones una vez terminado el proyecto."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Hospitales interconectados",
+    "texto": "Unimos los hospitales del Garraf y el Penedès con enlaces licenciados de muy alta capacidad."
+   },
+   {
+    "titulo": "Fibra oscura a 100 Gb/s",
+    "texto": "Entre sedes, enlaces de fibra oscura MUX-DEMUX con una capacidad de 100 Gb/s."
+   },
+   {
+    "titulo": "WiFi en todos los centros",
+    "texto": "Creamos redes WiFi en todos los centros del consorcio, para pacientes y usuarios."
+   },
+   {
+    "titulo": "Mantenimiento en curso",
+    "texto": "El proyecto terminó en julio de 2021. El mantenimiento sigue en curso."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "100 Gb/s",
+     "l": "de capacidad entre sedes, con fibra oscura MUX-DEMUX"
+    }
+   ],
+   "texto": [
+    "Los hospitales del consorcio están conectados entre sí y todos sus centros tienen WiFi para pacientes y usuarios."
+   ]
+  },
+  "antesDespues": null,
+  "nota": {
+   "titulo": "¿Qué es la fibra oscura MUX-DEMUX?",
+   "texto": "Fibra óptica dedicada que se entrega sin iluminar. El usuario la ilumina con su propio equipamiento. La multiplexación (MUX) combina varios canales de luz en la misma fibra. La demultiplexación (DEMUX) los separa en el otro extremo. Así se multiplica la capacidad del enlace."
+  },
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/consorci-sanitari-hospital.webp",
+   "alt": "Hospital del Consorci Sanitari Alt Penedès-Garraf",
+   "width": 1400,
+   "height": 933
+  },
+  "otros": [
+   "iberpotash",
+   "consell-comarcal-garraf",
+   "midban"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra a més dels 100 Gb/s: p. ex. quants hospitals i centres hi ha interconnectats, quants punts d'accés WiFi o quants usuaris s'hi connecten en un dia.",
+   "Confirmar que el manteniment segueix en curs avui i des de quin any treballem amb el Consorci.",
+   "Foto: prou gran però tova (sembla un fotograma de vídeo) i cal confirmar-ne els drets d'ús. Ideal: la feina a l'hospital (un enllaç o un armari) o la façana en alta resolució, amb permís."
+  ],
+  "seo": {
+   "title": "Consorci Sanitari Alt Penedès-Garraf: hospitales en red | ADQA",
+   "description": "Interconectamos los hospitales del Consorci Sanitari Alt Penedès-Garraf con enlaces licenciados y fibra oscura a 100 Gb/s, y llevamos WiFi a todos sus centros."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "iberpotash",
+  "slug": "iberpotash-mines-de-suria",
+  "url": "/casos-de-exito/iberpotash-mines-de-suria/",
+  "orden": 2,
+  "destacado": true,
+  "anon": false,
+  "cliente": "Iberpotash, Mines de Súria",
+  "corto": "Iberpotash, Mines de Súria",
+  "titulo": "Iberpotash, Mines de Súria: fibra óptica a 1.000 m de profundidad",
+  "sector": "Industria y minería · Mina de Súria",
+  "sectorTag": "industria",
+  "resumen": "Fibra óptica y servicios de telecomunicaciones en el interior de la mina, de la instalación al mantenimiento.",
+  "highlight": {
+   "n": "1.000 m",
+   "l": "de profundidad: trabajos en el interior de la mina"
+  },
+  "icon": "i-pin",
+  "filtros": [
+   "wifi",
+   "fibra",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "Fibra óptica",
+    "href": "/redes/"
+   },
+   {
+    "label": "WiFi Ruckus",
+    "href": "/redes/wifi-entornos-complejos/"
+   },
+   {
+    "label": "Telecomunicaciones",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   }
+  ],
+  "reto": [
+   "Llevar por fibra óptica las comunicaciones de servicio al interior de la mina de Súria, con trabajos a 1.000 m de profundidad. La instalación tenía que aguantar las condiciones de la explotación minera, empezando por la corrosión.",
+   "El encargo incluía también el diseño de una red WiFi para el interior de la mina, con conectividad y geolocalización a lo largo de galerías largas y estrechas."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Fibra óptica de servicio",
+    "texto": "Instalamos la fibra óptica para las comunicaciones de servicio dentro de la mina, con el conexionado y la operación."
+   },
+   {
+    "titulo": "Soluciones propias para la mina",
+    "texto": "Nuestro equipo diseñó las soluciones para que la instalación aguante las condiciones de la explotación minera."
+   },
+   {
+    "titulo": "A 1.000 m de profundidad",
+    "texto": "Trabajamos a 1.000 m de profundidad, con materiales resistentes a la corrosión."
+   },
+   {
+    "titulo": "Diseño de la red WiFi",
+    "texto": "Diseñamos una red WiFi Ruckus Resilience para el interior de la mina, con conectividad y geolocalización."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "1.000 m",
+     "l": "de profundidad, con materiales resistentes a la corrosión"
+    }
+   ],
+   "texto": [
+    "La mina tiene fibra óptica para sus comunicaciones de servicio, con una instalación pensada para las condiciones de la explotación. La llevamos de la instalación al mantenimiento."
+   ]
+  },
+  "antesDespues": null,
+  "nota": null,
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/iberpotash-mina.webp",
+   "alt": "Galería de la mina de Súria",
+   "width": 704,
+   "height": 442
+  },
+  "otros": [
+   "consorci-sanitari",
+   "midban",
+   "hitecsa"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra a part dels 1.000 m: p. ex. quants quilòmetres de fibra hem instal·lat, quantes galeries o punts de la mina queden connectats, o des de quin any en fem el manteniment.",
+   "Confirmar si la xarxa WiFi Ruckus Resilience es va arribar a implantar o només se'n va fer el disseny (ara el text diu «diseño»).",
+   "Confirmar que el manteniment de la fibra segueix en curs.",
+   "Foto: 704 px d'ample i amb compressió de vídeo; cal confirmar-ne els drets d'ús. Ideal: la feina d'ADQA dins la mina (la fibra o un punt d'accés a la galeria), amb permís del client i sense cares."
+  ],
+  "seo": {
+   "title": "Iberpotash, Mines de Súria: fibra a 1.000 m de profundidad | ADQA",
+   "description": "Fibra óptica de servicio en el interior de la mina de Súria, a 1.000 m de profundidad y con materiales resistentes a la corrosión. Y el diseño de su red WiFi."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "deteccion-hotel",
+  "slug": "deteccion-y-respuesta-gestionada-para-una-cadena-hotelera",
+  "url": "/casos-de-exito/deteccion-y-respuesta-gestionada-para-una-cadena-hotelera/",
+  "orden": 3,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Detección y respuesta gestionada para una cadena hotelera",
+  "titulo": "Detección y respuesta gestionada para una cadena hotelera internacional",
+  "sector": "Hostelería y HORECA · Cadena hotelera internacional",
+  "sectorTag": "horeca",
+  "resumen": "Equipos, red y Microsoft 365 en un mismo modelo, con WatchGuard EPDR, NDR y Total MDR. Lo desplegamos sede a sede en un plan de 8 semanas y somos su punto de contacto.",
+  "highlight": {
+   "n": "8 semanas",
+   "l": "de plan por fases, sede a sede"
+  },
+  "icon": "i-shield",
+  "filtros": [
+   "seguridad"
+  ],
+  "servicios": [
+   {
+    "label": "Ciberseguridad",
+    "href": "/ciberseguridad/"
+   },
+   {
+    "label": "Microsoft 365",
+    "href": "/microsoft-365/"
+   }
+  ],
+  "reto": [
+   "Una cadena hotelera internacional, con sedes en varios países, quería unificar la seguridad de sus equipos, su red, su identidad corporativa y Microsoft 365. Un mismo modelo gestionado y un solo interlocutor.",
+   "Las herramientas de cada capa funcionaban por separado. Faltaba relacionar lo que pasaba en cada una para ver el conjunto."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Protección de los equipos",
+    "texto": "Desplegamos WatchGuard EPDR en todos los equipos y servidores de todas las sedes, con Windows, macOS y Linux."
+   },
+   {
+    "titulo": "Visibilidad de la red",
+    "texto": "Instalamos WatchGuard ThreatSync+ NDR, con un equipo dedicado en cada sede. Lo integramos con los firewalls, la electrónica de red y el directorio corporativo."
+   },
+   {
+    "titulo": "Detección y respuesta gestionada",
+    "texto": "Activamos WatchGuard Total MDR. El SOC de WatchGuard vigila los equipos, la red y Microsoft 365, y puede contener un incidente en remoto."
+   },
+   {
+    "titulo": "Despliegue por fases",
+    "texto": "Primero, inventario y pilotos de EPDR sede a sede. Después, instalación y ajuste del NDR. Al final, activación del MDR y de la vigilancia de Microsoft 365. Todo en un plan de 8 semanas."
+   },
+   {
+    "titulo": "Un solo interlocutor",
+    "texto": "Integramos el conjunto y somos el punto de contacto de la cadena. En las revisiones periódicas proponemos mejoras a partir de lo que vemos."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "8 semanas",
+     "l": "de plan por fases"
+    },
+    {
+     "n": "3 servicios",
+     "l": "de WatchGuard en un mismo modelo: EPDR, NDR y Total MDR"
+    }
+   ],
+   "texto": [
+    "La seguridad de los equipos, la red y Microsoft 365 funciona ahora en un mismo modelo, con un mismo contacto para todo.",
+    "El trabajo sigue después de la puesta en marcha. En una de las revisiones periódicas propusimos añadir la gestión de parches, y la cadena la incorporó."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Herramientas de seguridad",
+     "Cada capa funcionaba por separado",
+     "Equipos, red y Microsoft 365 en un mismo modelo"
+    ],
+    [
+     "Lo que pasa en cada capa",
+     "Cada herramienta veía su parte",
+     "El SOC de WatchGuard lo relaciona y responde"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "equipo-oficina-logo-adqa",
+   "pos": "100% 50%"
+  },
+  "otros": [
+   "salud",
+   "kuka",
+   "pimec"
+  ],
+  "pendiente": [
+   "Objectius de servei de WatchGuard Total MDR (detecció en menys de 15 min, resposta en menys de 2 h): són objectius del fabricant, no resultats mesurats. Si es volen publicar, només com a objectius del SOC de WatchGuard.",
+   "Confirmar que el pla de 8 setmanes es va complir.",
+   "Any de posada en marxa i data de la revisió en què es va afegir la gestió de pegats.",
+   "Si la cadena és el mateix client que el cas de pentest: no s'enllacen entre ells ni es presenten com un mateix client.",
+   "Valoració del client («lo que más valora es el seguimiento posterior»): només si hi ha testimoni amb permís."
+  ],
+  "seo": {
+   "title": "MDR para una cadena hotelera internacional | ADQA",
+   "description": "Cadena hotelera con sedes en varios países: WatchGuard EPDR, NDR y Total MDR en un plan de 8 semanas, con Microsoft 365 y ADQA como interlocutor."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "kuka",
+  "slug": "kuka-robots-iberia",
+  "url": "/casos-de-exito/kuka-robots-iberia/",
+  "orden": 4,
+  "destacado": true,
+  "anon": false,
+  "cliente": "KUKA Robots Iberia",
+  "corto": "KUKA Robots Iberia",
+  "titulo": "KUKA Robots Iberia: dirección TIC y networking internacional",
+  "sector": "Industria y minería · Robótica, multinacional alemana",
+  "sectorTag": "industria",
+  "resumen": "Esta multinacional alemana de robótica nos confía el mantenimiento y la mejora de sus infraestructuras. Además, ha puesto en nuestras manos la dirección de su servicio TIC.",
+  "highlight": {
+   "n": "Networking internacional",
+   "l": "y firewall, de la central de España a las delegaciones"
+  },
+  "icon": "i-shield",
+  "filtros": [
+   "networking",
+   "seguridad",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "Dirección TIC y mantenimiento",
+    "href": "/soporte-it/"
+   },
+   {
+    "label": "Red Ruckus",
+    "href": "/redes/"
+   },
+   {
+    "label": "Firewall",
+    "href": "/ciberseguridad/"
+   },
+   {
+    "label": "Networking internacional",
+    "href": "/telecomunicaciones/networking/"
+   }
+  ],
+  "reto": [
+   "Mantener y mejorar las infraestructuras de esta multinacional alemana de robótica, y asumir la dirección de su servicio TIC.",
+   "Con la central en España y delegaciones dentro y fuera del país, como el País Vasco y Argentina, la red se gestiona a escala internacional."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Dirección del servicio TIC",
+    "texto": "Llevamos la dirección de su servicio TIC, con el mantenimiento y la mejora de las infraestructuras."
+   },
+   {
+    "titulo": "Red Ruckus en la central",
+    "texto": "Montamos una red Ruckus completa en la central de España."
+   },
+   {
+    "titulo": "Implantación en delegaciones",
+    "texto": "Dirigimos la implantación de la red en delegaciones como Argentina y el País Vasco, entre otras."
+   },
+   {
+    "titulo": "Firewall y networking internacional",
+    "texto": "Implantamos el firewall y gestionamos el networking a escala internacional."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "Llevamos la dirección de su servicio TIC: el mantenimiento, la mejora de las infraestructuras, el firewall y el networking internacional, de la central de España a delegaciones como Argentina."
+   ]
+  },
+  "antesDespues": null,
+  "nota": null,
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/kuka-robots.webp",
+   "alt": "Robots industriales KUKA",
+   "width": 980,
+   "height": 560
+  },
+  "otros": [
+   "pimec",
+   "consell-comarcal-garraf",
+   "deteccion-hotel"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra: p. ex. en quantes delegacions i països hem dirigit la implantació, quants usuaris o llocs de treball gestionem, o des de quin any portem la direcció TIC.",
+   "Confirmar la denominació: «KUKA Robots Iberia» (web) o «Kuka Robots Iberia» (presentació).",
+   "Foto: sembla una foto de premsa del fabricant; cal confirmar-ne els drets d'ús. Ideal: la xarxa Ruckus a la central (un punt d'accés en una nau amb robots), amb permís."
+  ],
+  "seo": {
+   "title": "KUKA Robots Iberia: dirección TIC y networking | ADQA",
+   "description": "Dirección del servicio TIC de KUKA Robots Iberia: red Ruckus en la central de España, implantación en delegaciones como Argentina, firewall y networking."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "consell-comarcal-garraf",
+  "slug": "consell-comarcal-del-garraf",
+  "url": "/casos-de-exito/consell-comarcal-del-garraf/",
+  "orden": 5,
+  "destacado": true,
+  "anon": false,
+  "cliente": "Consell Comarcal del Garraf",
+  "corto": "Consell Comarcal del Garraf",
+  "titulo": "Consell Comarcal del Garraf: sistemas, seguridad y radioenlace",
+  "sector": "Administración e instituciones · Consell comarcal, dos sedes",
+  "sectorTag": "administracion",
+  "resumen": "Mantenimiento, seguridad y telecomunicaciones para una institución que trabaja con ADQA desde hace más de 15 años.",
+  "highlight": {
+   "n": "Más de 15 años",
+   "l": "trabajando juntos"
+  },
+  "icon": "i-clock",
+  "filtros": [
+   "fibra",
+   "networking",
+   "seguridad",
+   "workspace",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   },
+   {
+    "label": "Ciberseguridad",
+    "href": "/ciberseguridad/"
+   },
+   {
+    "label": "Radioenlace",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Networking",
+    "href": "/telecomunicaciones/networking/"
+   },
+   {
+    "label": "Google Workspace",
+    "href": "/google-workspace/"
+   }
+  ],
+  "reto": [
+   "Mantener al día los sistemas informáticos de una institución con dos sedes administrativas, resolver sus incidencias y gestionar su ciberseguridad de forma activa.",
+   "También unir las dos sedes, llevar la red interna y gestionar su Google Workspace."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Mantenimiento e incidencias",
+    "texto": "Mantenemos sus sistemas informáticos y resolvemos sus incidencias."
+   },
+   {
+    "titulo": "Ciberseguridad activa",
+    "texto": "Gestionamos su ciberseguridad de forma activa."
+   },
+   {
+    "titulo": "Red interna y radioenlace",
+    "texto": "Llevamos la red interna y el radioenlace entre las dos sedes administrativas."
+   },
+   {
+    "titulo": "Google Workspace",
+    "texto": "Gestionamos sus servicios de Google Workspace."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "Más de 15 años",
+     "l": "trabajando con ADQA"
+    },
+    {
+     "n": "2",
+     "l": "sedes administrativas unidas por radioenlace"
+    }
+   ],
+   "texto": [
+    "El Consell Comarcal del Garraf trabaja con ADQA desde hace más de 15 años. Sus dos sedes administrativas están unidas por radioenlace, y el mismo equipo lleva sus sistemas, su seguridad y su Google Workspace."
+   ]
+  },
+  "antesDespues": null,
+  "nota": {
+   "titulo": "¿Qué es un radioenlace?",
+   "texto": "Una conexión inalámbrica punto a punto entre dos edificios, mediante antenas enfrentadas. Transporta datos sin necesidad de tender cable entre ellos."
+  },
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/consell-comarcal-garraf.webp",
+   "alt": "Sede del Consell Comarcal del Garraf",
+   "width": 1333,
+   "height": 1000
+  },
+  "otros": [
+   "ajuntament-vilanova",
+   "granier",
+   "kuka"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra a part dels 15 anys: p. ex. quants llocs de treball o usuaris mantenim, la distància o la capacitat del radioenllaç, o quantes incidències resolem a l'any.",
+   "Any exacte d'inici de la relació, per escriure «desde 20XX» i no haver d'actualitzar «más de 15 años»."
+  ],
+  "seo": {
+   "title": "Consell Comarcal del Garraf: más de 15 años juntos | ADQA",
+   "description": "Mantenimiento, ciberseguridad, red interna, radioenlace entre sus dos sedes y Google Workspace para el Consell Comarcal del Garraf, desde hace más de 15 años."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "licenciamiento",
+  "slug": "licenciamiento-mixto-google-workspace",
+  "url": "/casos-de-exito/licenciamiento-mixto-google-workspace/",
+  "orden": 6,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Licenciamiento mixto de Google Workspace",
+  "titulo": "Licenciamiento mixto: −34 % en los 40 puestos de Google Workspace",
+  "sector": "Empresas y entidades · Pyme, 40 puestos",
+  "sectorTag": "empresas",
+  "resumen": "Revisamos el uso real de cada persona. La mitad de los 40 puestos pasó a Business Starter sin perder nada de lo que usaba, y el coste anual de esas licencias bajó un 34 %.",
+  "highlight": {
+   "n": "−34 %",
+   "l": "en las licencias de los 40 puestos existentes"
+  },
+  "icon": "i-cloud",
+  "filtros": [
+   "workspace"
+  ],
+  "servicios": [
+   {
+    "label": "Google Workspace",
+    "href": "/google-workspace/"
+   },
+   {
+    "label": "Licenciamiento mixto de Google Workspace",
+    "href": "/google-workspace/licenciamiento-mixto-google-workspace/"
+   }
+  ],
+  "reto": [
+   "Una pyme tenía sus 40 puestos de Google Workspace en Business Plus, con 5 TB de almacenamiento por usuario. Todo el equipo estaba en el mismo plan.",
+   "Además, iba a incorporar a 20 personas. Y un grupo de 10 quería empezar a usar las funciones de inteligencia artificial más avanzadas. La empresa quería que cada persona tuviera el plan que de verdad usa."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Uso real, persona a persona",
+    "texto": "Revisamos qué usaba cada uno de los 40 usuarios, más allá del plan que tenía asignado."
+   },
+   {
+    "titulo": "Cada puesto, en su plan",
+    "texto": "La mitad necesitaba el almacenamiento y las funciones de Business Plus, y se quedó en ese plan. Los otros 20 puestos pasaron a Business Starter, con 30 GB, sin perder nada de lo que usaban. Como partner oficial de Google, podemos combinar ediciones en un mismo dominio."
+   },
+   {
+    "titulo": "Altas nuevas, en el plan adecuado",
+    "texto": "Las 20 incorporaciones entraron directamente en Business Starter, según el uso previsto."
+   },
+   {
+    "titulo": "IA solo para quien la usa",
+    "texto": "Añadimos el complemento de IA avanzada solo a las 10 personas que lo iban a usar."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "−34 %",
+     "l": "de coste anual en las licencias de los 40 puestos existentes"
+    },
+    {
+     "n": "20",
+     "l": "altas nuevas directamente en Business Starter"
+    }
+   ],
+   "texto": [
+    "El coste anual de las licencias de los 40 puestos que ya tenía bajó un 34 %. Nadie perdió una función que estuviera usando.",
+    "Las 20 altas y el complemento de IA se contrataron aparte, cada uno en el plan que le correspondía."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Puestos existentes (40)",
+     "40 en Business Plus",
+     "20 en Business Plus y 20 en Business Starter"
+    ],
+    [
+     "Coste anual de esos 40 puestos",
+     "100 %",
+     "66 % (−34 %)"
+    ],
+    [
+     "Incorporaciones",
+     "20 personas por incorporar",
+     "20 altas en Business Starter, según su uso"
+    ],
+    [
+     "IA avanzada",
+     "Sin activar",
+     "Complemento solo para las 10 personas que lo usan"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "equipo-llamada-oficina",
+   "pos": "50% 50%"
+  },
+  "otros": [
+   "granier",
+   "consell-comarcal-garraf",
+   "servidores"
+  ],
+  "pendiente": [
+   "Decidir si es publiquen els imports anuals dels 40 llocs (abans i després), amb la data de les tarifes, o només els percentatges, com ara.",
+   "Sector de la pime (sectorTag provisional: empresas, «Empresas y entidades»).",
+   "Any del canvi de llicències.",
+   "Les dades de Google (5 TB a Business Plus, 30 GB a Business Starter) són de quan es va fer el cas: revisar si han canviat.",
+   "Complement d'IA: no se'n diu el nom comercial (el del WP ja no existeix). Confirmar quin complement tenen ara aquestes 10 persones.",
+   "El −34 % només val per als 40 llocs existents. A /google-workspace/licenciamiento-mixto-google-workspace/, l'h3 del cas i el TL;DR encara el generalitzen a tota la factura.",
+   "301 de l'URL amb «-2» només si existeix a www.adqa.com (D12)."
+  ],
+  "seo": {
+   "title": "Google Workspace: −34 % en 40 puestos | ADQA",
+   "description": "Licenciamiento mixto de Google Workspace en una pyme: 20 de sus 40 puestos pasaron a Business Starter y el coste anual de esas licencias bajó un 34 %."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "granier",
+  "slug": "granier",
+  "url": "/casos-de-exito/granier/",
+  "orden": 7,
+  "destacado": true,
+  "anon": false,
+  "cliente": "Granier",
+  "corto": "Granier",
+  "titulo": "Granier: redes y centralita virtual, de la sede a las tiendas",
+  "sector": "Empresas y entidades · Sede central, fábricas y tiendas",
+  "sectorTag": "empresas",
+  "resumen": "Informática, telecomunicaciones y cloud para toda la organización, de la nueva sede central a cada tienda.",
+  "highlight": {
+   "n": "Centralita virtual",
+   "l": "que interconecta las sedes"
+  },
+  "icon": "i-phone",
+  "filtros": [
+   "fibra",
+   "networking",
+   "cloud",
+   "workspace",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "Redes e instalaciones",
+    "href": "/redes/"
+   },
+   {
+    "label": "Centralita virtual",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Cloud",
+    "href": "/sistemas-cloud/"
+   },
+   {
+    "label": "Google Workspace",
+    "href": "/google-workspace/"
+   },
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   }
+  ],
+  "reto": [
+   "Poner en marcha la informática y las telecomunicaciones de la nueva sede central, y llevar las redes de las oficinas, las fábricas y las tiendas. Interconectar todas las sedes con una sola centralita y alojar en un cloud las aplicaciones corporativas.",
+   "Y, en el día a día, mantener todas las instalaciones y ayudar con los servicios de Google tanto a los administradores como a los usuarios."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Nueva sede central",
+    "texto": "Diseñamos y montamos la informática y las telecomunicaciones de la nueva sede central."
+   },
+   {
+    "titulo": "Oficinas, fábricas y tiendas",
+    "texto": "Instalamos y gestionamos las redes de las oficinas, las fábricas y las tiendas."
+   },
+   {
+    "titulo": "Centralita virtual",
+    "texto": "Una centralita virtual interconecta las sedes."
+   },
+   {
+    "titulo": "Cloud para aplicaciones corporativas",
+    "texto": "Alojamos en cloud distintas aplicaciones corporativas."
+   },
+   {
+    "titulo": "Google Workspace",
+    "texto": "Gestionamos sus servicios de Google, damos soporte a sus administradores y formamos a sus usuarios."
+   },
+   {
+    "titulo": "Mantenimiento completo",
+    "texto": "Mantenemos todas las instalaciones."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "Llevamos el mantenimiento completo de todas las instalaciones, de la sede central a las tiendas. Las sedes comparten una centralita virtual y las aplicaciones corporativas están alojadas en cloud."
+   ]
+  },
+  "antesDespues": null,
+  "nota": {
+   "titulo": "¿Qué es una centralita virtual?",
+   "texto": "Una centralita telefónica que funciona en servidores, no en un aparato instalado en cada oficina. Todas las sedes comparten la misma centralita. Se llaman entre sí como extensiones, estén donde estén."
+  },
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/granier-tienda.webp",
+   "alt": "Tienda Granier",
+   "width": 768,
+   "height": 540
+  },
+  "otros": [
+   "pimec",
+   "consell-comarcal-garraf",
+   "licenciamiento"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra: p. ex. quantes botigues, fàbriques i oficines gestionem, quantes extensions té la centraleta virtual o quants usuaris de Google Workspace hem format.",
+   "Sector d'activitat de Granier: no surt a les fonts; ara diem «Empresas y entidades · Sede central, fábricas y tiendas» (el sector, provisional).",
+   "Any d'inici de la relació i any de la nova seu central.",
+   "Foto: 768 px d'ample; ja és a la llista de fotos (la botiga o la seu central en alta resolució, amb permís).",
+   "Cloud: si les aplicacions són al cloud d'ADQA (el nostre datacenter), es pot dir «en nuestro cloud»; ara diem només «en cloud», com la font. Atenció: /sistemas-cloud/ («Los dos modelos a la vez») i /sistemas-cloud/datacenter/ («Aplicaciones que ya viven en nuestro cloud») ja ho afirmen: alinear-ho tot amb el que es confirmi."
+  ],
+  "seo": {
+   "title": "Granier: redes y centralita virtual entre sedes | ADQA",
+   "description": "Informática y telecomunicaciones de la nueva sede central de Granier, redes en oficinas, fábricas y tiendas, centralita virtual, cloud y Google Workspace."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "salud",
+  "slug": "redes-y-ciberseguridad-para-el-sector-salud",
+  "url": "/casos-de-exito/redes-y-ciberseguridad-para-el-sector-salud/",
+  "orden": 8,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Redes y ciberseguridad para una organización sanitaria",
+  "titulo": "Conexión redundante y red segmentada para una organización sanitaria",
+  "sector": "Sanidad · Organización con varias sedes",
+  "sectorTag": "sanidad",
+  "resumen": "Dos proveedores de internet en balanceo, la red interna separada por tipo de tráfico y WatchGuard EPDR en los equipos. Si un operador corta, el tráfico pasa solo al otro enlace.",
+  "highlight": {
+   "n": "4 redes",
+   "l": "separadas por tipo de tráfico"
+  },
+  "icon": "i-net",
+  "filtros": [
+   "networking",
+   "seguridad",
+   "fibra"
+  ],
+  "servicios": [
+   {
+    "label": "Redes informáticas",
+    "href": "/redes/"
+   },
+   {
+    "label": "Networking e interconexión de sedes",
+    "href": "/telecomunicaciones/networking/"
+   },
+   {
+    "label": "Ciberseguridad",
+    "href": "/ciberseguridad/"
+   }
+  ],
+  "reto": [
+   "Una organización sanitaria tiene varias sedes, entre ellas un laboratorio y consultas externas. La sede principal da servicio al resto y tenía contratados dos proveedores de internet.",
+   "La telefonía IP y la conexión con las demás sedes iban por uno solo de los dos. El objetivo era que un corte de operador no afectara al trabajo diario.",
+   "También quería ordenar la red interna, que compartía un mismo rango para todo el tráfico. Y gestionar desde un solo punto la protección de los equipos."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Dos operadores, trabajando juntos",
+    "texto": "Instalamos en la sede principal firewalls WatchGuard Firebox en clúster, con SD-WAN. Reparten el tráfico entre los proveedores de internet y, si uno corta, pasan al otro de forma automática."
+   },
+   {
+    "titulo": "La red, separada por tipo de tráfico",
+    "texto": "Dividimos la red en cuatro: datos, voz, gestión y dispositivos especiales. Así, una incidencia queda aislada en su propia red."
+   },
+   {
+    "titulo": "Redundancia dentro de cada sede",
+    "texto": "Montamos enlaces de alta capacidad entre plantas y equipos de red en clúster. Están pensados para que una avería de hardware no deje una planta sin red."
+   },
+   {
+    "titulo": "Protección de los equipos",
+    "texto": "Desplegamos WatchGuard EPDR en todos los equipos, con detección por comportamiento y gestión centralizada."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "4",
+     "l": "redes separadas por tipo de tráfico"
+    }
+   ],
+   "texto": [
+    "Cuando un operador tiene un corte puntual, el tráfico pasa solo al otro enlace y las sedes siguen trabajando.",
+    "La red interna está ordenada por tipo de tráfico, y la protección de todos los equipos se gestiona desde un mismo sitio."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Internet en la sede principal",
+     "Dos proveedores, sin balanceo entre ellos",
+     "Balanceo y conmutación automática con SD-WAN"
+    ],
+    [
+     "Telefonía IP y conexión entre sedes",
+     "Por uno solo de los proveedores",
+     "Por cualquiera de los dos enlaces"
+    ],
+    [
+     "Red interna",
+     "Todo el tráfico en un mismo rango",
+     "Cuatro redes: datos, voz, gestión y dispositivos"
+    ],
+    [
+     "Protección de los equipos",
+     "Sin gestión centralizada",
+     "WatchGuard EPDR con gestión centralizada"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "soporte-tecnico-pantallas",
+   "pos": "100% 50%"
+  },
+  "otros": [
+   "pimec",
+   "kuka",
+   "deteccion-hotel"
+  ],
+  "pendiente": [
+   "Confirmar que és un sol client real, no un cas compost (si fos compost, no es pot publicar com a cas d'èxit), i que no és el Consorci Sanitari Alt Penedès-Garraf, ni Sant Joan de Déu, ni cap altre client amb nom.",
+   "Amb el filtre «Sanidad» només queden aquest cas i el del Consorci, i al mur de clients surten el Consorci i Sant Joan de Déu: si el client és al mur, cal treure'l del sector «Sanidad» o del mur, perquè no es pugui deduir qui és.",
+   "Data de posada en marxa i període observat per a «0 caídas totales de conectividad» i «sin incidencias de telefonía IP» (font: monitoratge o client). Mentrestant no es publiquen.",
+   "Xifra d'amenaces bloquejades per WatchGuard EPDR, amb període, treta de la consola (el WP deia «miles»). Fins llavors no es publica.",
+   "Quants proveïdors d'internet hi ha ara a la seu principal (el WP deia «dos» al punt de partida i «varios» a la solució).",
+   "Si ADQA en fa el manteniment (per afegir-hi el filtre «mant»).",
+   "Filtre «fibra» (fibra i interconnexió de seus): posat per la connexió entre seus; treure'l si no s'hi va tocar."
+  ],
+  "seo": {
+   "title": "Redes y ciberseguridad para el sector salud | ADQA",
+   "description": "Organización sanitaria con varias sedes: conexión redundante con SD-WAN, red interna segmentada por tipo de tráfico y WatchGuard EPDR en los equipos."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "midban",
+  "slug": "midban",
+  "url": "/casos-de-exito/midban/",
+  "orden": 9,
+  "destacado": true,
+  "anon": false,
+  "cliente": "MIDBAN",
+  "corto": "MIDBAN",
+  "titulo": "MIDBAN: WiFi en cámaras frigoríficas",
+  "sector": "Hostelería y HORECA · Cámaras frigoríficas",
+  "sectorTag": "horeca",
+  "resumen": "WiFi en las cámaras frigoríficas de su delegación Congelats Romero, con mantenimiento permanente del WiFi y de la telefonía.",
+  "highlight": {
+   "n": "Cámaras frigoríficas",
+   "l": "con WiFi Ruckus Resilience"
+  },
+  "icon": "i-signal",
+  "filtros": [
+   "wifi",
+   "networking",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "WiFi Ruckus",
+    "href": "/redes/wifi-entornos-complejos/"
+   },
+   {
+    "label": "Telefonía",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Networking",
+    "href": "/telecomunicaciones/networking/"
+   },
+   {
+    "label": "Microinformática",
+    "href": "/#ingenieria-compras"
+   },
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   }
+  ],
+  "reto": [
+   "Llevar el WiFi al interior de las cámaras frigoríficas de Congelats Romero, delegación de MIDBAN. Ahí la señal tiene que atravesar paneles aislantes, y los equipos tienen que soportar el frío y la humedad.",
+   "Además, el WiFi y la telefonía necesitaban un mantenimiento permanente."
+  ],
+  "hicimos": [
+   {
+    "titulo": "WiFi en frío",
+    "texto": "Implantamos una solución Ruckus Resilience en las cámaras frigoríficas de Congelats Romero."
+   },
+   {
+    "titulo": "Telecomunicaciones y networking",
+    "texto": "Llevamos también proyectos de telecomunicaciones, networking y microinformática."
+   },
+   {
+    "titulo": "Mantenimiento permanente",
+    "texto": "Mantenemos de forma permanente los servicios de WiFi y telefonía."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "El WiFi llega al interior de las cámaras frigoríficas de Congelats Romero. Y tanto el WiFi como la telefonía tienen mantenimiento permanente."
+   ]
+  },
+  "antesDespues": null,
+  "nota": null,
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/midban-makro.webp",
+   "alt": "Instalaciones logísticas del sector HORECA",
+   "width": 674,
+   "height": 420
+  },
+  "otros": [
+   "hitecsa",
+   "iberpotash",
+   "consorci-sanitari"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra: p. ex. quantes cambres o quants metres quadrats cobreix el WiFi, a quina temperatura treballen els equips o quants punts d'accés hi ha.",
+   "Foto: mostra un establiment Makro (marca d'un tercer), té compressió de vídeo i només 674 px. Demanar una foto de les cambres de Congelats Romero, amb permís; si no n'hi ha, proposem substituir-la per una foto de l'equip d'ADQA."
+  ],
+  "seo": {
+   "title": "MIDBAN: WiFi en cámaras frigoríficas | ADQA",
+   "description": "WiFi Ruckus Resilience en las cámaras frigoríficas de Congelats Romero, delegación de MIDBAN, con mantenimiento permanente del WiFi y la telefonía."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "expedientes",
+  "slug": "software-a-medida-para-gestion-de-expedientes",
+  "url": "/casos-de-exito/software-a-medida-para-gestion-de-expedientes/",
+  "orden": 10,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Software a medida para la gestión de expedientes",
+  "titulo": "Software a medida para expedientes: −75 % de tiempo administrativo",
+  "sector": "Administración e instituciones · Apoyo a emprendedores",
+  "sectorTag": "administracion",
+  "resumen": "Una aplicación a medida para una entidad que tramita unos 300 expedientes al año. Las memorias se generan solas y cada expediente pide una cuarta parte del tiempo administrativo.",
+  "highlight": {
+   "n": "−75 %",
+   "l": "de tiempo de gestión administrativa por expediente"
+  },
+  "icon": "i-code",
+  "filtros": [
+   "web"
+  ],
+  "servicios": [
+   {
+    "label": "Desarrollo de software a medida",
+    "href": "/desarrollo-software-medida/"
+   }
+  ],
+  "reto": [
+   "Una institución de apoyo a emprendedores gestiona sus planes de empresa: unos 300 expedientes al año. Sus técnicos les dedicaban, en total, unas 3.000 horas anuales.",
+   "Una parte importante de ese tiempo se iba en preparar a mano las memorias justificativas que la entidad presenta ante las administraciones. El programa que usaba tenía ya muchos años.",
+   "La entidad quería dedicar más horas a asesorar. También quería recoger el consentimiento de los datos personales conforme al Reglamento General de Protección de Datos (RGPD). Y saber cuánto tiempo pide cada expediente."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Primero, una base técnica al día",
+    "texto": "Renovamos la base técnica del programa y protegimos la entrada de datos. Era el paso previo a cualquier mejora."
+   },
+   {
+    "titulo": "El consentimiento, dentro de la plataforma",
+    "texto": "Construimos un módulo que recoge y guarda el consentimiento de cada persona atendida para el tratamiento de sus datos."
+   },
+   {
+    "titulo": "Horas por expediente y por técnico",
+    "texto": "Unificamos el registro de horas en un solo sistema. Ahora se ve el tiempo de cada expediente y de cada técnico, y se puede auditar."
+   },
+   {
+    "titulo": "Memorias que se generan solas",
+    "texto": "Diseñamos una exportación con el formato que piden las administraciones. Las memorias justificativas ya no se preparan a mano."
+   },
+   {
+    "titulo": "Una herramienta más sencilla",
+    "texto": "En lugar de añadir funciones, simplificamos la aplicación para que sea más fácil de usar en el día a día."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "−75 %",
+     "l": "de tiempo de gestión administrativa por expediente"
+    },
+    {
+     "n": "> 1.000",
+     "l": "expedientes gestionados desde la puesta en marcha"
+    }
+   ],
+   "texto": [
+    "Desde la puesta en marcha, la entidad ha gestionado más de 1.000 expedientes. Cada uno pide una cuarta parte del tiempo administrativo que pedía antes.",
+    "Las horas que se ahorran en papeleo van ahora al asesoramiento directo de los emprendedores, que es la razón de ser de la entidad."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Memorias justificativas",
+     "Se preparaban a mano",
+     "Se exportan con el formato que piden las administraciones"
+    ],
+    [
+     "Consentimiento de datos personales",
+     "El programa no lo recogía",
+     "Se recoge y se guarda en la plataforma"
+    ],
+    [
+     "Horas por expediente",
+     "Registro repartido, difícil de auditar",
+     "Un solo registro por expediente y por técnico"
+    ],
+    [
+     "Base técnica",
+     "Un programa con muchos años de uso",
+     "Renovada, con la entrada de datos protegida"
+    ],
+    [
+     "Tiempo de los técnicos",
+     "Buena parte, en tareas administrativas",
+     "Más horas para asesorar a emprendedores"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "equipo-telefono-codigo",
+   "pos": "50% 50%"
+  },
+  "otros": [
+   "hitecsa",
+   "museo",
+   "licenciamiento"
+  ],
+  "pendiente": [
+   "Què mesura el −75 %: el temps de gestió administrativa per expedient (com diu ara el text) o el temps total. Si és el total, no quadra amb que el temps alliberat passi a assessorament.",
+   "«De ~10 h a ~2,5 h per expedient» no surt a la fitxa: les 10 h surten de 3.000 h / 300 expedients, que són hores totals (amb assessorament). Decidir si es corregeix també a l'anonCase de /desarrollo-software-medida/ (xifra destacada «~2,5 h») i a l'stat «-75%» del resum de la mateixa pàgina.",
+   "Confirmar les xifres del client: uns 300 expedients l'any, unes 3.000 hores anuals dels tècnics i més de 1.000 expedients gestionats.",
+   "Any de posada en marxa (el WP deia «cuatro años después de la implantación», sense data).",
+   "Si l'entitat és pública (sectorTag administracion, provisional) o privada / associació. Ara surt al filtre «Administración e instituciones»; si és privada, passar-la a «Empresas y entidades».",
+   "Base legal del tractament de dades: confirmar que és el consentiment (en una entitat pública pot ser una altra). El text ja no parla de «datos sensibles».",
+   "Testimoni del WP sense autor («Antes dedicábamos gran parte del tiempo…»): demanar-ne l'autoria i el permís, o descartar-lo."
+  ],
+  "seo": {
+   "title": "Software a medida: −75 % de tiempo administrativo | ADQA",
+   "description": "Aplicación a medida para una entidad de apoyo a emprendedores: memorias automáticas, consentimiento RGPD y un 75 % menos de tiempo administrativo."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "hitecsa",
+  "slug": "hitecsa",
+  "url": "/casos-de-exito/hitecsa/",
+  "orden": 11,
+  "destacado": true,
+  "anon": false,
+  "cliente": "HITECSA",
+  "corto": "HITECSA",
+  "titulo": "HITECSA: WiFi en la fábrica y programas a medida",
+  "sector": "Industria y minería · Fábrica en Vilanova i la Geltrú",
+  "sectorTag": "industria",
+  "resumen": "Desde hace años, HITECSA nos confía toda la gestión de su informática, sus telecomunicaciones y su cloud.",
+  "highlight": {
+   "n": "Programas a medida",
+   "l": "de gestión y control"
+  },
+  "icon": "i-code",
+  "filtros": [
+   "wifi",
+   "networking",
+   "cloud",
+   "web",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "WiFi Ruckus",
+    "href": "/redes/wifi-entornos-complejos/"
+   },
+   {
+    "label": "Software a medida",
+    "href": "/desarrollo-software-medida/"
+   },
+   {
+    "label": "Cloud en nuestro datacenter",
+    "href": "/sistemas-cloud/datacenter/"
+   },
+   {
+    "label": "Networking",
+    "href": "/telecomunicaciones/networking/"
+   },
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   }
+  ],
+  "reto": [
+   "Llevar toda la informática, las telecomunicaciones y el cloud de HITECSA desde un mismo equipo. Eso incluía el WiFi de su fábrica de Vilanova i la Geltrú, un entorno especialmente complejo para la señal.",
+   "También hacían falta programas de gestión y control hechos a su medida, y un sitio donde alojar sus aplicaciones corporativas."
+  ],
+  "hicimos": [
+   {
+    "titulo": "WiFi en la fábrica",
+    "texto": "Implantamos una red WiFi Ruckus Resilience en su fábrica de Vilanova i la Geltrú, con equipos pensados para entornos exigentes."
+   },
+   {
+    "titulo": "Programas a medida",
+    "texto": "Desarrollamos sus programas de gestión y control a medida."
+   },
+   {
+    "titulo": "Cloud en nuestro datacenter",
+    "texto": "Alojamos sus aplicaciones corporativas en nuestro datacenter propio y de proximidad en Barcelona."
+   },
+   {
+    "titulo": "Instalaciones y mantenimiento",
+    "texto": "Llevamos las instalaciones, el mantenimiento, las telecomunicaciones y el networking."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "Desde hace años, HITECSA nos confía toda la gestión de su informática, sus telecomunicaciones y su cloud. La red de la fábrica, sus programas y su cloud los lleva el mismo equipo."
+   ]
+  },
+  "antesDespues": null,
+  "nota": null,
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/hitecsa-fabrica.webp",
+   "alt": "Vista aérea de la fábrica de HITECSA",
+   "width": 800,
+   "height": 437
+  },
+  "otros": [
+   "midban",
+   "ajuntament-vilanova",
+   "pimec"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra: p. ex. des de quin any treballem amb HITECSA (ara diem «desde hace años»), quants metres quadrats o punts d'accés cobreix el WiFi de la fàbrica, o quants programes a mida fan servir.",
+   "Foto: 800 px d'ample i vista aèria; ja és a la llista de fotos (l'interior de la fàbrica amb la xarxa, amb permís)."
+  ],
+  "seo": {
+   "title": "HITECSA: WiFi en la fábrica y programas a medida | ADQA",
+   "description": "WiFi Ruckus Resilience en la fábrica de HITECSA, programas de gestión y control a medida y aplicaciones corporativas en nuestro cloud. Desde hace años."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "pentest-hotel",
+  "slug": "pentesting-web-y-apis-para-una-cadena-hotelera",
+  "url": "/casos-de-exito/pentesting-web-y-apis-para-una-cadena-hotelera/",
+  "orden": 12,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Pentesting web y APIs para una cadena hotelera",
+  "titulo": "Pentest de web y APIs: un hallazgo crítico cerrado en menos de 72 horas",
+  "sector": "Hostelería y HORECA · Cadena hotelera con varias marcas",
+  "sectorTag": "horeca",
+  "resumen": "Revisamos con un pentest la web, las APIs de reservas y los micrositios de una cadena hotelera. Un hallazgo crítico quedó corregido y verificado en menos de 72 horas.",
+  "highlight": {
+   "n": "< 72 h",
+   "l": "para cerrar y verificar el hallazgo crítico"
+  },
+  "icon": "i-shield",
+  "filtros": [
+   "seguridad"
+  ],
+  "servicios": [
+   {
+    "label": "Pentesting",
+    "href": "/ciberseguridad/pentesting/"
+   },
+   {
+    "label": "Ciberseguridad",
+    "href": "/ciberseguridad/"
+   }
+  ],
+  "reto": [
+   "Una cadena hotelera con varias marcas tenía una decena de activos digitales en producción: la web corporativa, APIs de reservas y de servicios, gestores de contenidos y micrositios de marca.",
+   "Todo eso estaba expuesto a internet y conectado entre sí. La cadena quería saber, con pruebas reales, qué podía conseguir un atacante externo. Era la primera vez que revisaba toda esa superficie con un pentest."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Mapa de la superficie expuesta",
+    "texto": "Antes de probar nada, listamos todo lo que se ve desde internet: la web, las APIs, los gestores de contenidos y los micrositios."
+   },
+   {
+    "titulo": "Pentest desde fuera",
+    "texto": "Probamos el conjunto como lo haría un atacante externo, sin información previa. Combinamos pruebas manuales y herramientas, y validamos cada hallazgo con una explotación controlada."
+   },
+   {
+    "titulo": "Hallazgos documentados y ordenados",
+    "texto": "Documentamos cada hallazgo con evidencias, impacto y recomendaciones, y lo clasificamos con CVSS 3.1. Después los ordenamos por riesgo: correcciones rápidas, de medio plazo y estratégicas."
+   },
+   {
+    "titulo": "Aviso del hallazgo crítico",
+    "texto": "Al detectar un fallo crítico en producción, avisamos al equipo del cliente por el canal acordado, en menos de 24 horas. Su equipo aplicó la corrección y nosotros preparamos la verificación."
+   },
+   {
+    "titulo": "Re-test del hallazgo crítico",
+    "texto": "Repetimos la prueba sobre el mismo vector y comprobamos que la corrección impedía reproducirlo."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "< 24 h",
+     "l": "para avisar del hallazgo crítico"
+    },
+    {
+     "n": "< 72 h",
+     "l": "para cerrarlo y verificarlo con un re-test"
+    }
+   ],
+   "texto": [
+    "Un fallo crítico en producción quedó identificado, corregido y verificado en menos de 72 horas desde su detección.",
+    "Además, la cadena tiene una visión ordenada de su superficie digital y un plan para el resto de mejoras, priorizado por severidad e impacto."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Superficie web y APIs",
+     "Pendiente de una revisión completa con pentest",
+     "Revisada de punta a punta desde fuera"
+    ],
+    [
+     "Hallazgos",
+     "Por descubrir",
+     "Documentados con evidencias y clasificados con CVSS 3.1"
+    ],
+    [
+     "Hallazgo crítico",
+     "En producción, sin detectar",
+     "Corregido y verificado en menos de 72 horas"
+    ],
+    [
+     "Resto de mejoras",
+     "Por ordenar",
+     "Plan priorizado por severidad e impacto"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "equipo-soporte-auriculares",
+   "pos": "100% 50%"
+  },
+  "otros": [
+   "salud",
+   "museo",
+   "kuka"
+  ],
+  "pendiente": [
+   "Avís del crític: la fitxa canònica diu «en menos de 24 horas» i el duplicat, «el mismo día». El text diu «en menos de 24 horas», que és cert en tots dos casos. Confirmar.",
+   "Caixa grisa (amb credencials limitades) als fluxos d'accés i de reserves: només surt a la fitxa canònica. No es publica fins que es confirmi. L'anonCase de /ciberseguridad/pentesting/ ja l'afirma.",
+   "Re-test: de totes les correccions (fitxa canònica) o només del vector crític, amb la resta en un pla (duplicat)? El text diu el segon, que és cert en tots dos casos. L'anonCase de /ciberseguridad/pentesting/ diu «Un ciclo completo de re-test confirmó las correcciones».",
+   "Severitats trobades (crítica, alta i mitjana): només surten al duplicat.",
+   "Nombre d'actius («una decena»: només a la fitxa canònica) i any del projecte.",
+   "Si la cadena és el mateix client que el cas de detecció i resposta gestionada: no s'enllacen entre ells ni es presenten com un mateix client."
+  ],
+  "seo": {
+   "title": "Pentest de web y APIs para una cadena hotelera | ADQA",
+   "description": "Pentest externo de la web, las APIs de reservas y los micrositios de una cadena hotelera. Un hallazgo crítico, corregido y verificado en menos de 72 horas."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "pimec",
+  "slug": "pimec",
+  "url": "/casos-de-exito/pimec/",
+  "orden": 13,
+  "destacado": true,
+  "anon": false,
+  "cliente": "PIMEC",
+  "corto": "PIMEC",
+  "titulo": "PIMEC: un nuevo CPD junto con la reforma de su sede",
+  "sector": "Empresas y entidades · Sede corporativa y varias sedes",
+  "sectorTag": "empresas",
+  "resumen": "Mantenimiento, telecomunicaciones, WiFi y un nuevo CPD junto con la reforma de su sede. También llevamos su cloud, su seguridad y el suministro continuado de tecnología.",
+  "highlight": {
+   "n": "Nuevo CPD",
+   "l": "junto con la reforma de su sede"
+  },
+  "icon": "i-cloud",
+  "filtros": [
+   "wifi",
+   "fibra",
+   "networking",
+   "cloud",
+   "seguridad",
+   "mant"
+  ],
+  "servicios": [
+   {
+    "label": "WiFi Ruckus",
+    "href": "/redes/wifi-entornos-complejos/"
+   },
+   {
+    "label": "Telecomunicaciones",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Networking",
+    "href": "/telecomunicaciones/networking/"
+   },
+   {
+    "label": "Cloud",
+    "href": "/sistemas-cloud/"
+   },
+   {
+    "label": "Ciberseguridad",
+    "href": "/ciberseguridad/"
+   },
+   {
+    "label": "Suministro TIC",
+    "href": "/#ingenieria-compras"
+   },
+   {
+    "label": "Mantenimiento",
+    "href": "/soporte-it/"
+   }
+  ],
+  "reto": [
+   "Crear un nuevo CPD, la sala que concentra sus servidores, junto con la reforma de su sede. Y, en el día a día, tener en las mismas manos el mantenimiento, las telecomunicaciones, el WiFi, la seguridad y la interconexión de sus sedes.",
+   "Además, hacía falta alojar en un cloud sus aplicaciones corporativas y contar con un suministro continuado de equipos y software."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Nuevo CPD",
+    "texto": "Creamos un nuevo CPD junto con las reformas de su sede."
+   },
+   {
+    "titulo": "WiFi Ruckus y telecomunicaciones",
+    "texto": "Llevamos el mantenimiento y el servicio de telecomunicaciones y WiFi, con equipos Ruckus, la marca que representamos."
+   },
+   {
+    "titulo": "Networking, seguridad e interconexión",
+    "texto": "Gestionamos el networking y la seguridad, e interconectamos sus sedes."
+   },
+   {
+    "titulo": "Cloud",
+    "texto": "Alojamos en cloud sus aplicaciones corporativas."
+   },
+   {
+    "titulo": "Suministro continuado",
+    "texto": "Les suministramos de forma continuada microinformática, servidores, networking, software y tecnología."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "Creamos un nuevo CPD junto con la reforma de su sede, y alojamos en cloud sus aplicaciones corporativas. Seguimos con su mantenimiento y con el suministro continuado de equipos."
+   ]
+  },
+  "antesDespues": null,
+  "nota": {
+   "titulo": "¿Qué es un CPD?",
+   "texto": "El centro de proceso de datos es el espacio que concentra servidores, almacenamiento y electrónica de red. Tiene la alimentación y la climatización que necesitan para funcionar sin interrupciones."
+  },
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/pimec-sede.webp",
+   "alt": "Auditorio de la sede de PIMEC",
+   "width": 900,
+   "height": 485
+  },
+  "otros": [
+   "granier",
+   "kuka",
+   "hitecsa"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra: p. ex. quantes seus hi ha interconnectades, quants punts d'accés WiFi mantenim, quants equips subministrem a l'any o l'any del nou CPD.",
+   "Tipus d'organització de PIMEC: no surt a les fonts; ara diem «Empresas y entidades · Sede corporativa y varias sedes» (el sector, provisional).",
+   "Confirmar que la reforma i el CPD ja estan acabats: la presentació en parlava en present («las reformas que están desarrollando»).",
+   "Foto: 900 px d'ample; ja és a la llista de fotos (el nou CPD o l'auditori en alta resolució, amb permís).",
+   "Cloud: si les aplicacions són al cloud d'ADQA (el nostre datacenter), es pot dir «en nuestro cloud»; ara diem només «en cloud», com la font. Atenció: /sistemas-cloud/ («Los dos modelos a la vez») i /sistemas-cloud/datacenter/ («Aplicaciones que ya viven en nuestro cloud») ja ho afirmen: alinear-ho tot amb el que es confirmi."
+  ],
+  "seo": {
+   "title": "PIMEC: nuevo CPD, WiFi Ruckus y mantenimiento | ADQA",
+   "description": "Creamos el nuevo CPD de PIMEC junto con la reforma de su sede. Llevamos su mantenimiento, WiFi Ruckus, networking, seguridad, cloud y suministro continuado."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "ajuntament-vilanova",
+  "slug": "ajuntament-de-vilanova-i-la-geltru",
+  "url": "/casos-de-exito/ajuntament-de-vilanova-i-la-geltru/",
+  "orden": 14,
+  "destacado": true,
+  "anon": false,
+  "cliente": "Ajuntament de Vilanova i la Geltrú",
+  "corto": "Ajuntament de Vilanova i la Geltrú",
+  "titulo": "Ajuntament de Vilanova i la Geltrú: la web municipal",
+  "sector": "Administración e instituciones · Web municipal",
+  "sectorTag": "administracion",
+  "resumen": "La web municipal, de la ordenación del contenido a la programación, y telecomunicaciones e instalaciones para empresas municipales.",
+  "highlight": {
+   "n": "Diseño y programación",
+   "l": "de toda la web municipal"
+  },
+  "icon": "i-code",
+  "filtros": [
+   "web"
+  ],
+  "servicios": [
+   {
+    "label": "Diseño y programación web",
+    "href": "/diseno-programacion-web/"
+   },
+   {
+    "label": "Telecomunicaciones",
+    "href": "/telecomunicaciones/"
+   },
+   {
+    "label": "Instalaciones",
+    "href": "/redes/"
+   }
+  ],
+  "reto": [
+   "Ordenar el contenido de la web municipal, poner en marcha sus funcionalidades y darle un diseño gráfico. En una segunda fase, programar toda la web.",
+   "Aparte de la web, varias empresas municipales necesitaban servicios de telecomunicaciones e instalaciones."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Contenido y funcionalidades",
+    "texto": "Ordenamos el contenido y pusimos en marcha las funcionalidades de la web."
+   },
+   {
+    "titulo": "Diseño gráfico",
+    "texto": "Hicimos el diseño gráfico de la web."
+   },
+   {
+    "titulo": "Programación HTML y CSS",
+    "texto": "En una segunda fase, programamos toda la web en HTML y CSS."
+   },
+   {
+    "titulo": "Empresas municipales",
+    "texto": "Varias empresas municipales nos confían servicios de telecomunicaciones e instalaciones."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "Nos ocupamos de la web municipal del contenido a la programación: la ordenamos, la diseñamos y programamos toda la web en HTML y CSS. Además, varias empresas municipales nos confían sus telecomunicaciones e instalaciones."
+   ]
+  },
+  "antesDespues": null,
+  "nota": null,
+  "foto": {
+   "tipo": "cliente",
+   "src": "/assets/proyectos/web-vilanova.webp",
+   "alt": "Web del Ajuntament de Vilanova i la Geltrú",
+   "width": 1400,
+   "height": 788
+  },
+  "otros": [
+   "consell-comarcal-garraf",
+   "hitecsa",
+   "pimec"
+  ],
+  "pendiente": [
+   "Falta un resultat amb xifra: p. ex. l'any de publicació de cada fase, quantes pàgines o seccions es van ordenar, o les visites mensuals de la web.",
+   "Confirmar quines empreses municipals es poden citar (ara no en diem cap) i què hi fem.",
+   "Foto: la captura és tova en pantalles retina; refer-la a 2800 px d'ample i comprovar que la web en línia és encara la que vam fer."
+  ],
+  "seo": {
+   "title": "Ajuntament de Vilanova i la Geltrú: la web municipal | ADQA",
+   "description": "Ordenamos el contenido de la web del Ajuntament de Vilanova i la Geltrú, pusimos en marcha funcionalidades e hicimos su diseño y su programación HTML y CSS."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "servidores",
+  "slug": "renovacion-de-servidores-y-almacenamiento-sin-sobrecoste",
+  "url": "/casos-de-exito/renovacion-de-servidores-y-almacenamiento-sin-sobrecoste/",
+  "orden": 15,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Servidores y almacenamiento a la medida de la carga real",
+  "titulo": "Servidores a la medida de la carga real: más de un 25 % de ahorro",
+  "sector": "Industria y minería · Fabricante de maquinaria",
+  "sectorTag": "industria",
+  "resumen": "Tres servidores según su función, almacenamiento con la ampliación prevista, copias con Veeam y red interna a 20 Gbps. Más de un 25 % de ahorro frente a la propuesta previa.",
+  "highlight": {
+   "n": "> 25 %",
+   "l": "de ahorro frente a la propuesta previa"
+  },
+  "icon": "i-tool",
+  "filtros": [
+   "cloud",
+   "networking"
+  ],
+  "servicios": [
+   {
+    "label": "Sistemas y cloud",
+    "href": "/sistemas-cloud/"
+   },
+   {
+    "label": "Redes informáticas",
+    "href": "/redes/"
+   }
+  ],
+  "reto": [
+   "Una empresa industrial que fabrica maquinaria tenía los servidores al final de su vida útil. Necesitaba más capacidad de cómputo y de almacenamiento para los próximos años.",
+   "Quería renovar con margen para crecer, pero pagando solo la capacidad que iba a usar. Ya tenía otra propuesta sobre la mesa y nos pidió la nuestra."
+  ],
+  "hicimos": [
+   {
+    "titulo": "La carga real, medida",
+    "texto": "Analizamos la carga de trabajo, las máquinas virtuales en producción y el crecimiento previsto a medio plazo. La prioridad era reforzar las copias de seguridad y preparar la red interna para crecer."
+   },
+   {
+    "titulo": "Tres servidores, cada uno con su papel",
+    "texto": "Configuramos cada servidor según la función que iba a tener, con la capacidad que esa función pedía."
+   },
+   {
+    "titulo": "Almacenamiento con la ampliación prevista",
+    "texto": "Dos cabinas de almacenamiento con bandejas de expansión ya incluidas en el diseño. Pueden crecer sin cambiar la infraestructura."
+   },
+   {
+    "titulo": "Migración planificada",
+    "texto": "Acordamos con la empresa un plan de actuación. Migramos las máquinas virtuales al nuevo entorno y lo probamos antes del cambio definitivo."
+   },
+   {
+    "titulo": "Copias y red preparadas para crecer",
+    "texto": "Pasamos las copias de seguridad a Veeam Data Platform. Llevamos la red interna a 20 Gbps por servidor, con un backbone de fibra entre los racks del CPD de la empresa."
+   }
+  ],
+  "resultado": {
+   "cifras": [
+    {
+     "n": "> 25 %",
+     "l": "de ahorro frente a la propuesta previa"
+    },
+    {
+     "n": "20 Gbps",
+     "l": "de red interna por servidor"
+    },
+    {
+     "n": "3",
+     "l": "servidores, cada uno según su función"
+    }
+   ],
+   "texto": [
+    "Ajustamos el proyecto a lo que la empresa necesitaba, con margen para crecer. El coste quedó más de un 25 % por debajo de la propuesta que ya tenía.",
+    "Cuando necesite más espacio, el almacenamiento crece con las bandejas ya previstas. Las copias y la red interna están preparadas para ese crecimiento."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Servidores",
+     "Al final de su vida útil",
+     "Tres nuevos, configurados según su función"
+    ],
+    [
+     "Almacenamiento",
+     "Necesitaba más capacidad",
+     "Dos cabinas, con bandejas de expansión previstas"
+    ],
+    [
+     "Copias de seguridad",
+     "Punto a reforzar",
+     "Veeam Data Platform"
+    ],
+    [
+     "Red interna",
+     "Por preparar para crecer",
+     "20 Gbps por servidor y backbone de fibra entre racks"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "equipo-grupo-reunion",
+   "pos": "50% 45%"
+  },
+  "otros": [
+   "pimec",
+   "licenciamiento",
+   "granier"
+  ],
+  "pendiente": [
+   "Confirmar qui és el client i que no és KUKA Robots Iberia ni HITECSA (ni cap client amb nom). Si ho fos, no es pot publicar com a cas anònim al costat del cas amb nom.",
+   "Base de càlcul del «més d'un 25 %» respecte de la proposta prèvia.",
+   "Any de posada en marxa (el WP deia «año y medio después», sense data). Si es pot dir que el client continua satisfet, o que en fem el manteniment.",
+   "Edició de Veeam: el WP deia «Premium Universal» al text i «Premium» a la taula. El text nou diu només «Veeam Data Platform».",
+   "Marca i model dels servidors i de les cabines: no es publiquen (D9) tret que el client ho autoritzi.",
+   "L'anonCase de /sistemas-cloud/ encara diu «multinacional», «Año y medio después, el cliente sigue satisfecho» i «+25%»: alinear-lo amb la fitxa.",
+   "301 de /recursos/cloud/… només si l'URL existeix a www.adqa.com (D12)."
+  ],
+  "seo": {
+   "title": "Servidores a la medida de la carga real | ADQA",
+   "description": "Renovación de servidores y almacenamiento para una empresa industrial: copias con Veeam, red a 20 Gbps y más de un 25 % de ahorro."
+  },
+  "publicado": "2026-11-04"
+ },
+ {
+  "id": "museo",
+  "slug": "nueva-web-para-un-museo",
+  "url": "/casos-de-exito/nueva-web-para-un-museo/",
+  "orden": 16,
+  "destacado": false,
+  "anon": true,
+  "cliente": null,
+  "corto": "Nueva web para un museo",
+  "titulo": "Nueva web para un museo: un acceso claro para cada tipo de público",
+  "sector": "Administración e instituciones · Museo",
+  "sectorTag": "administracion",
+  "resumen": "Ordenamos la web de un museo con un acceso para cada tipo de público. Diseño nuevo con su identidad de siempre, base técnica actualizada y dos idiomas en lugar de tres.",
+  "highlight": {
+   "n": "",
+   "l": "Accesos diferenciados para cada tipo de público"
+  },
+  "icon": "i-grid",
+  "filtros": [
+   "web"
+  ],
+  "servicios": [
+   {
+    "label": "Diseño y programación web",
+    "href": "/diseno-programacion-web/"
+   }
+  ],
+  "reto": [
+   "Un museo quería renovar su web. El contenido había crecido con los años, y cada tipo de visitante tenía que buscar lo suyo entre todo lo demás.",
+   "La plataforma necesitaba poner al día su base técnica. Y la web se mantenía en tres idiomas, con el trabajo que supone repetir cada cambio en tres versiones."
+  ],
+  "hicimos": [
+   {
+    "titulo": "Auditoría de la web",
+    "texto": "Repasamos todas las páginas, cómo se relacionaban entre ellas, las extensiones instaladas y los idiomas disponibles."
+   },
+   {
+    "titulo": "Una entrada para cada público",
+    "texto": "Rediseñamos la navegación y clasificamos los contenidos. Cada tipo de público tiene su acceso, y cada sección, un mensaje propio que la presenta."
+   },
+   {
+    "titulo": "Base técnica al día",
+    "texto": "Actualizamos la plataforma y su base técnica, para que la web sea más sencilla de mantener."
+   },
+   {
+    "titulo": "Diseño nuevo, identidad de siempre",
+    "texto": "Un diseño más actual que conserva la paleta de colores, el logotipo y la identidad visual del museo."
+   },
+   {
+    "titulo": "Menos piezas que mantener",
+    "texto": "Dejamos solo las extensiones necesarias y pasamos de tres idiomas a dos: catalán y castellano."
+   }
+  ],
+  "resultado": {
+   "cifras": [],
+   "texto": [
+    "La web tiene ahora una navegación clara, con un acceso para cada tipo de público y los contenidos bien clasificados. Cada sección se presenta con su propio mensaje.",
+    "Por dentro, renovamos la base técnica, redujimos las extensiones y dejamos dos idiomas. Así, cada actualización pide menos trabajo al equipo del museo."
+   ]
+  },
+  "antesDespues": {
+   "cols": [
+    "",
+    "Antes",
+    "Ahora"
+   ],
+   "rows": [
+    [
+     "Navegación",
+     "Una misma entrada para todos los públicos",
+     "Un acceso para cada tipo de público"
+    ],
+    [
+     "Mensajes",
+     "Secciones sin un mensaje propio",
+     "Un mensaje propio en cada sección"
+    ],
+    [
+     "Diseño",
+     "El de la web anterior",
+     "Nuevo, con la paleta, el logotipo y la identidad del museo"
+    ],
+    [
+     "Base técnica",
+     "Pendiente de actualizar",
+     "Actualizada en el proyecto"
+    ],
+    [
+     "Extensiones",
+     "Las acumuladas con los años",
+     "Solo las necesarias"
+    ],
+    [
+     "Idiomas",
+     "Tres",
+     "Dos: catalán y castellano"
+    ]
+   ]
+  },
+  "nota": null,
+  "foto": {
+   "tipo": "equipo",
+   "slug": "equipo-programando-dos-monitores",
+   "pos": "0% 50%"
+  },
+  "otros": [
+   "expedientes",
+   "hitecsa",
+   "licenciamiento"
+  ],
+  "pendiente": [
+   "Permís del museu per publicar-ne el nom (D14). Fins llavors el cas és anònim: sense nom, ciutat, especialitat, plantilla ni URL del museu.",
+   "Si donen permís: slug amb el nom, captura pròpia de la web i logo al mur de clients (tot amb permís), i 301 des de les URL antigues.",
+   "Comprovar que la web en línia del museu continua sent la versió que va fer ADQA.",
+   "Any del projecte.",
+   "Nombre d'extensions (plugins) abans i després, si es vol una xifra per a la targeta (ara la dada destacada és només text).",
+   "Quin idioma es va deixar i per què (el WP deia que «no aportaba tráfico real», sense cap dada). Confirmar que la web continua en català i castellà.",
+   "Estabilitat: el WP deia «Problemas constantes» → «Web estable», sense mètrica. Si es vol dir, cal una dada d'incidències i el vistiplau del museu.",
+   "Si el museu és una entitat pública: ara surt al filtre «Administración e instituciones» (sectorTag administracion, provisional). Si és privat, passar-lo a «Empresas y entidades»."
+  ],
+  "seo": {
+   "title": "Nueva web para un museo, con accesos por público | ADQA",
+   "description": "Nueva web para un museo: navegación con un acceso para cada tipo de público, diseño fiel a su identidad, base técnica actualizada y dos idiomas."
+  },
+  "publicado": "2026-11-04"
+ }
+]
