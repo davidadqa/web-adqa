@@ -56,14 +56,19 @@
 {#- Imagen provisional, muy visible, hasta tener la definitiva. -#}
 {#- Foto definitiva de src/_data/fotos.json (la genera tools/fotos.py): AVIF, WebP y JPEG a varios anchos.
     `sizes` describe el ancho con el que se pinta; `eager` solo para la foto de la primera pantalla. -#}
-{% macro foto(f, cls="", sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)", eager=false) %}
-<figure class="foto {{ cls }}" style="aspect-ratio:{{ f.ratio }}">
-  <picture>
+{#- Solo el <picture> de una foto de fotos.json. `alt` = null usa el de fotos.json; "" la marca como decorativa. -#}
+{% macro picture(f, sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)", eager=false, alt=none, style="") %}
+<picture>
     {%- for fmt in ["avif", "webp"] %}
     <source type="image/{{ fmt }}" srcset="{% for w in f.widths %}{{ f.base }}-{{ w }}.{{ fmt }} {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ sizes }}">
     {%- endfor %}
-    <img src="{{ f.base }}-{{ f.widths | last }}.jpg" srcset="{% for w in f.widths %}{{ f.base }}-{{ w }}.jpg {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ sizes }}" width="{{ f.w }}" height="{{ f.h }}" alt="{{ f.alt }}" decoding="async"{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+    <img src="{{ f.base }}-{{ f.widths | last }}.jpg" srcset="{% for w in f.widths %}{{ f.base }}-{{ w }}.jpg {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ sizes }}" width="{{ f.w }}" height="{{ f.h }}" alt="{{ f.alt if alt === none else alt }}" decoding="async"{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}{% if style %} style="{{ style }}"{% endif %}>
   </picture>
+{%- endmacro %}
+
+{% macro foto(f, cls="", sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)", eager=false) %}
+<figure class="foto {{ cls }}" style="aspect-ratio:{{ f.ratio }}">
+  {{ picture(f, sizes, eager) }}
 </figure>
 {%- endmacro %}
 
@@ -125,12 +130,27 @@
 </section>
 {% endmacro %}
 
-{#- Tarjeta de un proyecto con nombre (datos en _data/projects.json). -#}
-{% macro projectCard(p) %}
-<article class="proj" id="proj-{{ p.id }}"><figure><img src="/assets/proyectos/{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></figure><div class="body"><span class="kind">{{ p.kind }}</span><h3>{{ p.name }}</h3><p>{{ p.summary }}</p><div class="hl"><svg aria-hidden="true"><use href="#{{ p.icon }}"/></svg>{{ p.highlight }}</div></div></article>
+{#- Foto de un caso (src/_data/casos.json): la del cliente (src/assets/proyectos) o, si es anónimo, una del equipo
+    (fotos.json). Siempre en blanco y negro por CSS (.proj figure img, .cx-photo img). `alt` = null usa el de la foto. -#}
+{% macro casePhoto(c, sizes="(min-width: 721px) 420px, 82vw", eager=false, alt=none) %}
+{%- set pos = "object-position:" + (c.foto.pos or "50% 50%") %}
+{%- if c.foto.tipo == "equipo" -%}
+{{ picture(fotos[c.foto.slug], sizes, eager, alt, pos) }}
+{%- else -%}
+<img src="{{ c.foto.src }}" alt="{{ c.foto.alt if alt === none else alt }}" width="{{ c.foto.width }}" height="{{ c.foto.height }}" decoding="async"{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} style="{{ pos }}">
+{%- endif %}
+{%- endmacro %}
+
+{#- Tarjeta única de un caso de éxito (hub, carriles, rejillas de servicio y «Otros casos»). Toda la tarjeta enlaza
+    a la página del caso (el ::after del enlace del título la cubre). `idp`: prefijo del id ("" en el hub). -#}
+{% macro caseCard(c, idp="proj-", sizes="(min-width: 721px) 420px, 82vw", cls="") %}
+<article class="proj{% if cls %} {{ cls }}{% endif %}" id="{{ idp }}{{ c.id }}" data-svc="{{ c.filtros | join(' ') }}" data-sec="{{ c.sectorTag }}"><figure>{{ casePhoto(c, sizes, alt=("" if c.foto.tipo == "equipo" else none)) }}</figure><div class="body"><span class="kind">{{ c.sector }}</span><h3><a href="{{ c.url }}">{{ c.corto }}</a></h3><p>{{ c.resumen }}</p><div class="hl"><svg aria-hidden="true"><use href="#{{ c.icon }}"/></svg><span>{% if c.highlight.n %}<b>{{ c.highlight.n }}</b> {% endif %}{{ c.highlight.l }}</span></div></div></article>
 {% endmacro %}
 
-{#- Carril de proyectos con nombre. `ids`: lista de ids de _data/projects.json (vacío = todos). -#}
+{#- Compatibilidad: antes, tarjeta de _data/projects.json. -#}
+{% macro projectCard(p) %}{{ caseCard(p) }}{% endmacro %}
+
+{#- Carril de casos. `ids`: ids de _data/casos.json, en ese orden (vacío = los destacados, en el orden del hub). -#}
 {% macro projectsRail(ids=[], title="Proyectos reales", eyebrow="Casos", id="proyectos") %}
 <section class="sec" id="{{ id }}" aria-labelledby="h-{{ id }}" style="padding-top:0">
   <div class="wrap proj-head">
@@ -141,9 +161,15 @@
     <div class="proj-nav rv"><button type="button" data-rail="-1" aria-label="Proyecto anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button><button type="button" data-rail="1" aria-label="Proyecto siguiente"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
   </div>
   <div class="rail" id="rail" tabindex="0" aria-label="{{ title }}">
-    {%- for p in projects %}{% if not ids.length or p.id in ids %}
-    {{ projectCard(p) }}
+    {%- if ids.length %}
+    {%- for i in ids %}{% set c = casos | byId(i) %}{% if c %}
+    {{ caseCard(c) }}
     {%- endif %}{% endfor %}
+    {%- else %}
+    {%- for c in casos %}{% if c.destacado %}
+    {{ caseCard(c) }}
+    {%- endif %}{% endfor %}
+    {%- endif %}
   </div>
 </section>
 {% endmacro %}

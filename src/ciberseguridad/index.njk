@@ -293,9 +293,9 @@ faq:
       <p class="lead">Así trabajamos la seguridad junto a las redes, las telecomunicaciones y el cloud de nuestros clientes.</p>
     </div>
     <div class="proj-grid">
-      {%- for p in projects %}{% if p.id in ["kuka", "consell-comarcal-garraf", "pimec"] %}
-      {{ m.projectCard(p) }}
-      {%- endif %}{% endfor %}
+      {%- for id in ["kuka", "pimec", "consell-comarcal-garraf"] %}
+      {{ m.caseCard(casos | byId(id)) }}
+      {%- endfor %}
     </div>
     <h3 class="sub-head rv">Más casos, con resultados medibles</h3>
     <div class="res cases-wp">
