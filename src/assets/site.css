@@ -984,6 +984,75 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .btn:active,.btn.rv.in:active,.skip:active,.skip.p-chrome-down{transform:none}
 }
 
+/* — 2a passada: P2-03 · «La tecla en los dedos»: menú móvil, hamburguesa (tecla enclavada), táctil y foco siempre visible */
+.mobile-menu .sub{grid-template-columns:1fr}
+@media (min-width:560px){.mobile-menu .sub{grid-template-columns:1fr 1fr}}
+.mobile-menu .sub a{gap:12px}
+.mobile-menu .sub .ico{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;color:var(--pink)}
+.mobile-menu .sub .ico svg{width:15px;height:15px}
+.mobile-menu>a[aria-current=page]::after{content:"";flex:none;width:7px;height:7px;margin-right:4px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo)}
+.mobile-menu summary svg{transition:transform .3s var(--ease)}
+.mobile-menu [open] summary svg{transform:rotate(180deg)}
+.burger{background:linear-gradient(#2c2c2c,#1d1d1d) #1d1d1d;border:1px solid #3d3d3d;box-shadow:0 3px 0 #070707,inset 0 1px 0 rgba(255,255,255,.09);transition:.26s var(--ease)}
+.menu-open .burger,.burger:active{transform:translateY(2px);box-shadow:0 1px 0 #070707,inset 0 1px 0 rgba(255,255,255,.12)}
+.burger:active{background:var(--pink);border-color:var(--pink);transition-duration:var(--p-t-press)}
+@media (hover:none){
+  a.card{-webkit-tap-highlight-color:transparent}
+  a.card:active{transform:translateY(1px);border-color:#f2c4d6;transition:var(--p-t-press) var(--ease)}
+}
+.adqa-js .rv:not(.in):focus-within,.adqa-js .rv:not(.in) :focus-within{opacity:1;transform:none;filter:none;transition:none}
+@media (prefers-reduced-motion:reduce){ /* también las teclas de P2-01 y P2-02 (content) */
+  .burger:active,.menu-open .burger,a.card:active,body .faq summary:active .pm,body .field input[type=file]:active::file-selector-button{transform:none}
+}
+
+/* — 2a passada: P2-05 · «Las capas de noche» (mega): se dibujan al abrirlo; si no caben, se encogen (−6 px: sin hueco nuevo) */
+.p-chrome-layers{flex:1 1 0;min-height:0;max-height:150px;width:100%;margin:-6px 0;position:relative;z-index:1}
+.p-chrome-layers circle,.p-content-loop :is(.n,.p){transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){
+  .adqa-js .mega:not(.open) .p-chrome-layers .t{stroke-dashoffset:1;transition:stroke-dashoffset 0s .3s}
+  .adqa-js .mega:not(.open) .p-chrome-layers :is(.h,.n){transform:scale(0);transition:transform 0s .3s}
+  .mega.open .p-chrome-layers .t{transition:stroke-dashoffset .9s var(--ease) calc(.28s + var(--i,0)*80ms)}
+  .mega.open .p-chrome-layers :is(.h,.n){transition:transform .3s var(--ease) 1.2s}
+  .mega.open .p-chrome-layers .p{animation:p-chrome-ping 1.1s var(--ease) 1.5s}
+}
+
+/* — 2a passada: P2-06 · seleccionar es subrayar (la banda de .tldr) */
+::selection{background:var(--pink-50);color:var(--ink)}
+:is(.art-summary,.form-ok,.fit) ::selection,.form-ok::selection{background:#f6cfdf}
+:is(.dark-sec,body>footer,.svc.dark,.mega-feature) ::selection{background:rgba(227,39,114,.35);color:#fff}
+:is(.contact-info,.btn-primary) ::selection,.btn-primary::selection{background:#fff;color:var(--pink-600)}
+
+/* — 2a passada: P2-09 · imprimir es un plano. Cajetín (texto central: JS, beforeprint) en cajas de margen: Chromium ≥ 131 */
+@media print{
+  @page{size:A4;margin:14mm 14mm 26mm;
+    @top-left-corner{content:"";border:solid #bdb7b2;border-width:0 .75pt .75pt 0;margin:6mm 3mm 3mm 6mm}
+    @top-right-corner{content:"";border:solid #bdb7b2;border-width:0 0 .75pt .75pt;margin:6mm 6mm 3mm 3mm}
+    @bottom-left-corner{content:"";border:solid #bdb7b2;border-width:.75pt .75pt 0 0;margin:3mm 3mm 18mm 6mm}
+    @bottom-right-corner{content:"";border:solid #bdb7b2;border-width:.75pt 0 0 .75pt;margin:3mm 6mm 18mm 3mm}
+    @bottom-left{content:"A·D·Q·A";font:700 8pt Figtree,sans-serif;letter-spacing:.06em;color:#E32772;border:.75pt solid #bdb7b2;margin:5mm 0 8mm;padding:0 3mm;width:22mm}
+    @bottom-center{font:500 7.5pt/1.3 Figtree,sans-serif;color:#444;border:solid #bdb7b2;border-width:.75pt 0;margin:5mm 0 8mm;padding:0 3mm;text-align:left}
+    @bottom-right{content:counter(page) " / " counter(pages);font:600 7.5pt Figtree,sans-serif;color:#444;border:.75pt solid #bdb7b2;margin:5mm 0 8mm;padding:0 3mm;width:22mm;text-align:center}
+  }
+  .nav-shell,.skip,.glow,.p-heroes-art,.p-heroes-mark,.p-heroes-404,.form,.hero-ctas,.btn,.proj-nav,.p-proof-rail,.marquee,.orbit-wrap,.p-content-loop,[class*=revisio-],footer nav,.foot-claim,.ph,
+  :is(.contact-info,.svc.dark,.st)::after,.contact-info::before{display:none!important}
+  *,::before,::after{animation:none!important;transition:none!important}
+  .adqa-js .rv,.fade-in,.hero h1 .w{opacity:1!important;transform:none!important;filter:none!important}
+  html{font-size:14px}
+  body{zoom:.84}
+  .hero,.page-hero{padding:4mm 0}
+  .sec{padding:7mm 0}
+  .card,.st,.cmp,.metric,.stat{padding:16px 18px}
+  .svc{min-height:0}
+  .shot{aspect-ratio:21/9}
+  :is(.dark-sec,.svc.dark,.st,.contact-info,body>footer),:is(.dark-sec,.svc.dark,.st,.contact-info,body>footer) *{background:none!important;color:var(--ink)!important;border-color:var(--line)!important;box-shadow:none!important}
+  :is(.dark-sec,.svc.dark,.st,.contact-info){border:1px solid var(--line);position:static}
+  body>footer{border-top:1px solid var(--line);border-radius:0;margin-top:3mm;padding-top:3mm}
+  .foot+.legal{margin-top:3mm;padding-top:2mm}
+  body>footer img{filter:invert(1)}
+  .card,.cmp,.case-anon,.metric,.stat,.quote,.steps li,.st{break-inside:avoid}
+  :is(.prose,.doc,.cert-txt) a[href^="http"]::after{content:" (" attr(href) ")";font-size:.85em;color:var(--muted);overflow-wrap:anywhere}
+}
+
 /* ======================= Poesía · heroes — heros, ilustración por área, «En resumen» y cabeceras de sección.
    El estado de base es el final; lo que «antes» está oculto cuelga de no-preference. */
 
@@ -1185,13 +1254,14 @@ body:not(:is([data-area=home],[data-area=redes],[data-area=ciberseguridad],[data
    se hunde 2 px y se vuelve rosa, como la tecla «una» del pie. 180 ms abajo, 260 ms arriba.
    Solo se hunden las que llevan a algún sitio (a.svc o .svc con enlace): pulsar algo que no hace nada engaña, sobre todo
    con el dedo. :focus-visible y no :focus-within: tras un clic con ratón, la tecla no se queda pulsada al volver atrás. */
-.svc .ico{--p-cards-dy:2px;background:linear-gradient(#fff3f8,var(--pink-50));box-shadow:0 2px 0 #f2c4d6,inset 0 1px 0 #fff;
+/* — 2a passada: P2-03 · también son teclas .reach (/contacto/; body gana a su <style>) y los servicios del menú móvil */
+.svc .ico,body .reach .ico,.mobile-menu .sub .ico{--p-cards-dy:2px;background:linear-gradient(#fff3f8,var(--pink-50));box-shadow:0 2px 0 #f2c4d6,inset 0 1px 0 #fff;
   transition:transform .26s var(--ease),box-shadow .26s var(--ease),color .26s}
-@media (prefers-reduced-motion:reduce){.svc .ico{--p-cards-dy:0}}
+@media (prefers-reduced-motion:reduce){.svc .ico,body .reach .ico,.mobile-menu .sub .ico{--p-cards-dy:0}}
 .svc.dark .ico{background:rgba(227,39,114,.18);box-shadow:0 2px 0 rgba(227,39,114,.42),inset 0 1px 0 rgba(255,255,255,.06)}
-:is(a.svc,.svc:has(a)):is(:active,:focus-visible,:has(:focus-visible)) .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
+:is(a.svc,.svc:has(a),body .reach .card:has(a)):is(:active,:focus-visible,:has(:focus-visible)) .ico,.mobile-menu .sub a:is(:active,[aria-current=page]) .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
 @media (hover:hover) and (pointer:fine){
-  :is(a.svc,.svc:has(a)):hover .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
+  :is(a.svc,.svc:has(a),body .reach .card:has(a)):hover .ico{background:var(--pink);color:#fff;box-shadow:0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.2);transform:translateY(var(--p-cards-dy));transition-duration:var(--p-t-press,.18s)}
 }
 
 /* ---------- .svc .more y .st .go: «la flecha que atraviesa» (valores de chrome, idénticos) ----------
@@ -1332,6 +1402,12 @@ body .common .num{color:var(--p-pink-night,#F04D8F)}
 .note-box{border-color:transparent;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' rx='14' fill='none' stroke='%23d6d3d1' stroke-width='2' stroke-dasharray='4 6'/%3E%3C/svg%3E") border-box 0 0/100% 100% no-repeat var(--surface)}
 
+/* — 2a passada: P2-04 (A) · el icono se traza al entrar (72 > 63,3, el trazo más largo) */
+@media (prefers-reduced-motion:no-preference){
+  :is(.aud,.services,.dc-feats,.reach)>.card:not(.dark) .ico svg{stroke-dasharray:72;transition:stroke-dashoffset .6s var(--ease) calc(.35s + var(--s,0)*80ms)}
+  .adqa-js :is(.aud,.services,.dc-feats,.reach)>.rv:not(.in):not(.dark) .ico svg{stroke-dashoffset:72}
+}
+
 /* ======================= Poesía · proof — proyectos, muro de clientes, logos, partners, testimonios, casos y sellos.
    Regla de oro: el estado de base es el final. El «antes» solo cuelga de .rv:not(.in) o .p-armed:not(.p-in),
    siempre dentro de prefers-reduced-motion:no-preference. */
@@ -1453,6 +1529,25 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
   .cert-facts.p-armed:not(.p-in) :is(dt,dd){opacity:0;transform:translateY(6px);background-size:0 1px}
 }
 
+/* — 2a passada: P2-07 · la cota de .hl, el filtro que desliza (<script> de /casos-de-exito/) y la llegada a #caso */
+.proj .hl{position:relative;border-top-color:transparent}
+.proj .hl::before{content:"";position:absolute;left:0;right:0;top:-5px;height:9px;pointer-events:none;--m:linear-gradient(var(--line-2) 0 0);
+  background:var(--m) 0 4px/100% 1px,var(--m) 0 0/1px 9px,var(--m) 100% 0/1px 9px;background-repeat:no-repeat}
+.adqa-js .case:target{opacity:1;transform:none;filter:none} /* llegar: ya visible */
+.cases .case{view-transition-class:p-proof-case}
+::view-transition-group(*.p-proof-case){animation-duration:.6s;animation-timing-function:var(--ease)}
+::view-transition-old(*.p-proof-case):only-child{animation:p-proof-out .3s var(--ease) both}
+::view-transition-new(*.p-proof-case):only-child{animation:p-proof-in .45s var(--ease) .15s both}
+@keyframes p-proof-out{to{opacity:0;transform:scale(.98)}}
+@keyframes p-proof-in{from{opacity:0;transform:translateY(12px)}}
+@keyframes p-proof-target{0%{opacity:0}18%,73%{opacity:1;transform:none}100%{opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .proj .hl::before{transition:transform var(--p-t-draw,1.2s) var(--ease) .35s}
+  .hl.p-armed:not(.p-in)::before{transform:scaleX(0)} /* armada sola: el carril o la ficha entran mucho antes que su línea */
+  .case:target figure::before,.case:target figure::after{animation:p-proof-target 2.2s var(--ease) .6s backwards}
+}
+@media (prefers-reduced-motion:reduce){.case:target figure::before,.case:target figure::after{opacity:1;transform:none}}
+
 /* ======================= Poesía · content — FAQ, tablas, bloque de contacto y formulario, «Dónde estamos», textos legales y bloques propios.
    Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
 
@@ -1568,9 +1663,9 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
 /* ---------- .spec y .doc-table: «la fila que se está leyendo» ----------
    Solo con ratón: la fila bajo el puntero toma --surface-2 y un filete rosa de 2 px a la izquierda. */
 @media (hover:hover) and (pointer:fine) and (min-width:721px){
-  .spec tbody tr>*,.doc-table tr>*{transition:background-color .25s var(--ease),box-shadow .25s var(--ease)}
-  .spec tbody tr:hover>*,.doc-table tr:hover>td{background-color:var(--surface-2)}
-  .spec tbody tr:hover>:first-child,.doc-table tr:hover>:first-child{box-shadow:inset 2px 0 0 var(--pink)}
+  .spec tbody tr>*,.doc-table tr>*,.table-wrap tbody tr>*{transition:background-color .25s var(--ease),box-shadow .25s var(--ease)}
+  .spec tbody tr:hover>*,.doc-table tr:hover>td,.table-wrap tbody tr:hover>*{background-color:var(--surface-2)}
+  .spec tbody tr:hover>:first-child,.doc-table tr:hover>:first-child,.table-wrap tbody tr:hover>:first-child{box-shadow:inset 2px 0 0 var(--pink)}
 }
 
 /* ---------- .lvl (categorías ENS): «el nivel» ----------
@@ -1602,6 +1697,40 @@ body .ficha dl>:nth-last-child(-n+2){background:none}
   .adqa-js .ficha.rv:not(.in) :is(dt,dd){opacity:0;transform:translateY(6px);background-size:0 1px}
 }
 
+/* — 2a passada: P2-01 · «El mensaje sale»: validación, select, tecla del fichero y, al enviar, dos señales por el borde (JS de content) */
+.form{position:relative}
+.field :is(input,textarea){caret-color:var(--pink)}
+:is(.field :user-invalid,.p-content-tried .field :invalid){border-color:var(--pink-600)}
+.field select{appearance:none;padding-right:40px;line-height:1.34;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b6b6b' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 16px center/12px no-repeat var(--bg)}
+.field input[type=file]::file-selector-button{box-shadow:var(--p-lip);transition:.26s var(--ease)}
+.field input[type=file]:active::file-selector-button{transform:translateY(1px);box-shadow:none;transition-duration:var(--p-t-press)}
+/* color transparente ya; el fundido es de text-fill-color */
+.p-content-clear .field :is(input,textarea,select){color:transparent;animation:p-content-clear .25s var(--ease)}
+.p-content-clear .field ::placeholder{-webkit-text-fill-color:currentcolor}
+@keyframes p-content-clear{from{-webkit-text-fill-color:var(--ink)}to{-webkit-text-fill-color:transparent}}
+.p-content-loop{position:absolute;inset:-1px;z-index:2;pointer-events:none}
+.p-content-loop svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke:var(--pink)}
+.p-content-loop path{stroke-width:1.5;stroke-linecap:round;stroke-dasharray:.12 1.2;animation:p-content-loop var(--p-dur) var(--p-ease-io) .35s both}
+.p-content-loop .n{fill:var(--pink);stroke:var(--pink-50);stroke-width:4;animation:p-content-node 1.6s var(--ease) calc(.35s + var(--p-dur)) both}
+.p-content-loop .p{opacity:0;animation:p-chrome-ping 1.1s var(--ease) calc(.35s + var(--p-dur))}
+@keyframes p-content-loop{from{stroke-dashoffset:.12}88%{opacity:1}to{stroke-dashoffset:-.88;opacity:0}}
+@keyframes p-content-node{from{transform:scale(0)}12.5%,81%{transform:none;opacity:1}to{transform:none;opacity:0}}
+
+/* — 2a passada: P2-02 · «La respuesta del ingeniero»: etiqueta + filete, filete rosa de la respuesta y «+» como tecla */
+.faq h3{display:flex;align-items:center;gap:14px}
+.faq h3::after{content:"";flex:1;height:1px;background:var(--line);transform-origin:left}
+.faq details p{position:relative;padding-left:18px}
+.faq details p::before{content:"";position:absolute;left:0;top:.3em;bottom:22px;width:2px;border-radius:1px;background:var(--pink);transform-origin:top}
+.faq summary .pm{box-shadow:var(--p-lip)}
+.faq [open] .pm{box-shadow:inset 0 -2px 0 rgba(0,0,0,.16)}
+.faq summary:active .pm{transform:translateY(1px);box-shadow:none;transition-duration:var(--p-t-press)}
+@keyframes p-content-rule{from{transform:scaleY(0)}}
+@media (prefers-reduced-motion:no-preference){
+  .faq h3::after{transition:transform var(--p-t-draw) var(--ease) calc(var(--s,0)*80ms + .35s)}
+  .adqa-js .faq>.rv:not(.in)>h3::after{transform:scaleX(0)}
+  .faq details[open] p::before{animation:p-content-rule .6s var(--ease) .1s backwards}
+}
+
 /* ======================= Poesía · blog — /recursos/, categorías, tarjetas de artículo, artículo (índice y secciones) e imágenes provisionales.
    Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
 
@@ -1622,13 +1751,17 @@ body .ficha dl>:nth-last-child(-n+2){background:none}
 .ph figcaption{text-shadow:0 0 2px #fff,0 0 3px #fff,0 0 5px #fff,0 0 8px #fff}
 .ph svg{filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px #fff)}
 /* Motivo por categoría (artículos: data-cat) o por área (resto de páginas: data-area). Por defecto, solo la rejilla. */
-:is([data-cat=redes],[data-area=redes]) .ph{--p-blog-mp:right bottom;--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath d='M160 224a64 64 0 0 1 64-64M96 224a128 128 0 0 1 128-128M32 224A192 192 0 0 1 224 32'/%3E%3Cpath stroke-width='1' stroke-dasharray='4 6' d='M0 224h144'/%3E%3Cpath stroke-width='12' d='M224 224h0'/%3E%3C/svg%3E")}
-:is([data-cat=ciberseguridad],[data-area=ciberseguridad]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='48' y='48' width='320' height='320' rx='40'/%3E%3Crect x='96' y='96' width='320' height='320' rx='30'/%3E%3Crect x='144' y='144' width='320' height='320' rx='22'/%3E%3C/svg%3E")}
-:is([data-cat=cloud],[data-area=sistemas-cloud]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='80' y='32' width='144' height='272' rx='6'/%3E%3Cpath d='M96 64h96M96 96h96M96 128h96M96 160h96M96 192h96M96 224h96'/%3E%3Cpath stroke-width='5' d='M208 64h0m0 32h0m0 32h0m0 32h0m0 32h0m0 32h0'/%3E%3C/svg%3E")}
-:is([data-cat=telecomunicaciones],[data-area=telecomunicaciones]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 64' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath d='M0 28h128M0 44h128'/%3E%3Cpath stroke-width='6' d='M32 28h0M96 44h0'/%3E%3C/svg%3E");--p-blog-ms:128px 64px;--p-blog-mr:repeat-x;--p-blog-mp:right bottom}
-:is([data-cat=soporte-it],[data-area=soporte-it]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath stroke-width='3' stroke-dasharray='0 8' d='M16 224h80a16 16 0 0 0 16-16v-64a16 16 0 0 1 16-16h64a16 16 0 0 0 16-16V64'/%3E%3Ccircle cx='208' cy='48' r='8'/%3E%3C/svg%3E")}
-:is([data-cat=web],[data-area=diseno-programacion-web],[data-area=desarrollo-software-medida]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='48' y='48' width='256' height='256' rx='14'/%3E%3Cpath d='M48 80h208M192 144h48M192 160h48M192 176h32'/%3E%3Cpath stroke-width='5' d='M64 64h0m12 0h0m12 0h0'/%3E%3Crect x='64' y='96' width='176' height='16' rx='4'/%3E%3Crect x='64' y='128' width='112' height='64' rx='6'/%3E%3Crect x='64' y='208' width='48' height='32' rx='6'/%3E%3Crect x='128' y='208' width='48' height='32' rx='6'/%3E%3Crect x='192' y='208' width='48' height='32' rx='6'/%3E%3C/svg%3E")}
-:is([data-cat=workspace],[data-area=google-workspace],[data-area=microsoft-365]) .ph{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cdefs%3E%3Cpattern id='f' x='64' y='112' width='48' height='48' patternUnits='userSpaceOnUse'%3E%3Crect x='1' y='1' width='32' height='32' rx='6'/%3E%3Cpath d='M10 27a7 7 0 0 1 14 0'/%3E%3Cpath stroke-width='6' d='M17 14h0'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='64' y='112' width='192' height='144' fill='url(%23f)' stroke='none'/%3E%3C/svg%3E")}
+:is([data-cat=redes],[data-area=redes]) .ph,a.card[data-cat=redes]{--p-blog-mp:right bottom;--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath d='M160 224a64 64 0 0 1 64-64M96 224a128 128 0 0 1 128-128M32 224A192 192 0 0 1 224 32'/%3E%3Cpath stroke-width='1' stroke-dasharray='4 6' d='M0 224h144'/%3E%3Cpath stroke-width='12' d='M224 224h0'/%3E%3C/svg%3E")}
+:is([data-cat=ciberseguridad],[data-area=ciberseguridad]) .ph,a.card[data-cat=ciberseguridad]{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='48' y='48' width='320' height='320' rx='40'/%3E%3Crect x='96' y='96' width='320' height='320' rx='30'/%3E%3Crect x='144' y='144' width='320' height='320' rx='22'/%3E%3C/svg%3E")}
+:is([data-cat=cloud],[data-area=sistemas-cloud]) .ph,a.card[data-cat=cloud]{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='80' y='32' width='144' height='272' rx='6'/%3E%3Cpath d='M96 64h96M96 96h96M96 128h96M96 160h96M96 192h96M96 224h96'/%3E%3Cpath stroke-width='5' d='M208 64h0m0 32h0m0 32h0m0 32h0m0 32h0m0 32h0'/%3E%3C/svg%3E")}
+:is([data-cat=telecomunicaciones],[data-area=telecomunicaciones]) .ph,a.card[data-cat=telecomunicaciones]{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 64' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath d='M0 28h128M0 44h128'/%3E%3Cpath stroke-width='6' d='M32 28h0M96 44h0'/%3E%3C/svg%3E");--p-blog-ms:128px 64px;--p-blog-mr:repeat-x;--p-blog-mp:right bottom}
+:is([data-cat=soporte-it],[data-area=soporte-it]) .ph,a.card[data-cat=soporte-it]{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cpath stroke-width='3' stroke-dasharray='0 8' d='M16 224h80a16 16 0 0 0 16-16v-64a16 16 0 0 1 16-16h64a16 16 0 0 0 16-16V64'/%3E%3Ccircle cx='208' cy='48' r='8'/%3E%3C/svg%3E")}
+:is([data-cat=web],[data-area=diseno-programacion-web],[data-area=desarrollo-software-medida]) .ph,a.card[data-cat=web]{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Crect x='48' y='48' width='256' height='256' rx='14'/%3E%3Cpath d='M48 80h208M192 144h48M192 160h48M192 176h32'/%3E%3Cpath stroke-width='5' d='M64 64h0m12 0h0m12 0h0'/%3E%3Crect x='64' y='96' width='176' height='16' rx='4'/%3E%3Crect x='64' y='128' width='112' height='64' rx='6'/%3E%3Crect x='64' y='208' width='48' height='32' rx='6'/%3E%3Crect x='128' y='208' width='48' height='32' rx='6'/%3E%3Crect x='192' y='208' width='48' height='32' rx='6'/%3E%3C/svg%3E")}
+:is([data-cat=workspace],[data-area=google-workspace],[data-area=microsoft-365]) .ph,a.card[data-cat=workspace]{--p-blog-m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='none' stroke='%23E32772' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='.22'%3E%3Cdefs%3E%3Cpattern id='f' x='64' y='112' width='48' height='48' patternUnits='userSpaceOnUse'%3E%3Crect x='1' y='1' width='32' height='32' rx='6'/%3E%3Cpath d='M10 27a7 7 0 0 1 14 0'/%3E%3Cpath stroke-width='6' d='M17 14h0'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='64' y='112' width='192' height='144' fill='url(%23f)' stroke='none'/%3E%3C/svg%3E")}
+
+/* — 2a passada: P2-04 (B) · motivo de la categoría en la tarjeta de guía: luminosity lo deja en #ddd (--gray encima, 7,1:1) */
+@media (min-width:721px){a.card[data-cat]:has(>.cat){background:var(--p-blog-m,none) var(--p-blog-cp,right -16px bottom -16px)/var(--p-blog-cs,128px) var(--p-blog-cr,no-repeat),var(--surface);background-blend-mode:luminosity,normal}}
+a.card[data-cat=telecomunicaciones]{--p-blog-cs:64px 32px;--p-blog-cp:left 0 bottom 10px;--p-blog-cr:repeat-x}
 
 /* ---------- .art-card: «la flecha» ----------
    La flecha es la misma regla que .res a.card (sección content, más arriba). Aquí, solo el hueco del primer hijo para
@@ -1679,6 +1812,23 @@ body .ficha dl>:nth-last-child(-n+2){background:none}
 .toc a[aria-current]::before{color:transparent;transition-delay:.25s}
 .toc a[aria-current]::after{transform:none;transition:transform .35s var(--ease) .25s}
 /* Con reduced-motion, la regla global de la base (*,*::before,*::after{transition:none!important}) deja los cambios instantáneos. */
+
+/* — 2a passada: P2-06 · .art-meta, el cajetín del plano (los «·» eran pseudos); ≤ 1060 px, el número del h2 leído es un nodo */
+.art-hero .art-meta{display:inline-grid;grid-auto-flow:column;gap:1px;border:1px solid var(--line-2);background:var(--line-2);line-height:1.35;text-align:left;font-variant-numeric:tabular-nums}
+.art-meta span{padding:6px 14px;background:var(--surface)}
+.art-meta span+span::before{content:none}
+.art-meta span:first-child{position:relative;padding-left:28px;color:var(--ink);font-weight:600}
+.art-meta span:first-child::after,.art-main .prose h2::after{content:"";position:absolute;left:12px;top:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo)}
+.art-hero>.hero-inner::after{background-size:calc(100% - 16px) 1px,1px 9px,1px 9px,0 0,0 0,0 0,0 0,0 0,0 0} /* heroes: sin su cajetín vacío */
+@media (max-width:999px){
+  .art-hero .art-meta{grid-auto-flow:row;grid-template-columns:1fr 1fr;width:100%;font-size:var(--fs-sm,.8rem);text-wrap:balance}
+  .art-meta span:nth-child(3):last-child{grid-column:span 2}
+}
+@media (prefers-reduced-motion:no-preference){.art-hero .art-meta{animation:p-heroes-unveil .9s var(--ease) 1.2s backwards}}
+.art-main .prose h2{position:relative}
+.art-main .prose h2::before{transition:color .2s}
+.art-main .prose h2::after{font-size:var(--fs-sm,.75rem);left:calc(.62em - 3px);top:calc(.7em - 3px);transform:scale(0);transition:transform .35s var(--ease)}
+@media (max-width:1060px){.prose h2.p-blog-now::before{color:transparent}.prose h2.p-blog-now::after{transform:none}}
 
 /* ---------- Móvil (≤ 720 px) ---------- */
 @media (max-width:720px){

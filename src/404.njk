@@ -1,0 +1,66 @@
+---
+permalink: /404.html
+eleventyExcludeFromCollections: true
+noindex: true
+area: "404"
+title: "Página no encontrada | ADQA"
+description: "La página que buscas no existe o ha cambiado de sitio."
+---
+{#- Página 404 (P2-08, «Aquí no llega la señal»). GitHub Pages sirve /web-adqa/404.html y Cloudflare Pages /404.html para
+    cualquier ruta que no existe: todas las URL son absolutas y HtmlBasePlugin les pone el prefijo. -#}
+{% extends "layouts/base.njk" %}
+{% block jsonld %}{"@context":"https://schema.org"}{% endblock %}
+{#- P2-08 · La escena: un cable que acaba en un RJ45 (capuchón, cuerpo con 8 contactos y pestaña), 50 px de vacío y una toma
+    de pared (placa r 6, puerto con muesca y LED de enlace). El cable llega por debajo de la clavija (va hasta x = 462, tapado):
+    al conectar no queda tramo vacío detrás. La señal (colas de 96 y 48 px y cabeza de 8, receta de heroes) recorre el cable
+    hasta la punta y hace un ping que se pierde (un solo @keyframes para los dos: es un solo bucle): bucle de 8 s desde 2,2 s (1,5 s de recorrido, 67 % en reposo), en pausa
+    fuera de pantalla (.p-live, JS de heroes; sin JS no se pausa). Al pasar por «Volver al inicio» o enfocarlo, --p4 (un
+    interruptor: vacío = encendido) conecta: la clavija avanza 54 px y entra tras la placa, la señal .g cruza una vez y el LED
+    se enciende (lo único rosa, con la señal). Con reduced-motion, la regla global de site.css quita animaciones y
+    transiciones: quieta y desconectada, y el hover conecta sin transición. Las teclas de servicio son las de .svc .ico (primera
+    pasada, cards: se hunden al pasar, enfocar o pulsar; con RM, sin desplazamiento), no las del menú móvil. -#}
+{% block head %}
+<style>
+.p-heroes-404{display:flex;width:min(1000px,100vw);height:96px;mask:linear-gradient(90deg,#0000,#000 15% 85%,#0000)}
+.p-heroes-404 .pl{transition:transform .45s var(--ease);transform:var(--p4) translateX(54px)}
+.p-heroes-404 .led{fill:var(--p4) var(--pink);transition:fill .3s var(--ease) var(--p4) .9s}
+.p-heroes-404 :is(use,.pg){opacity:0}
+.p-heroes-404 .s{--p4t:translateX(470px);--p4u:var(--p4t);animation:p-heroes-404-run 8s var(--p-ease-io) 2.2s infinite}
+.p-heroes-404 .g{animation:var(--p4) p-heroes-404-go 1.3s var(--p-ease-io) .45s backwards}
+.p-heroes-404 .pg{--p4o:0;--p4p:.6;--p4u:scale(3.4);transform-box:fill-box;transform-origin:center;animation:p-heroes-404-run 8s var(--ease) 2.2s infinite}
+.p-heroes-404 :is(.s,.pg){visibility:var(--p4) hidden}
+.p-heroes-io:not(.p-live) .p-heroes-404 *{animation-play-state:paused}
+.page-hero:has(.btn-primary:focus-visible){--p4: }
+@keyframes p-heroes-404-run{0%,18.75%{opacity:var(--p4o,1)}18.75%{transform:var(--p4t,none)}18.8%{opacity:var(--p4p,0)}32.5%,to{opacity:0;transform:var(--p4u)}}
+@keyframes p-heroes-404-go{0%,90%{opacity:1}to{opacity:0;transform:translateX(1096px)}}
+.p-heroes-404-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:8px 0 clamp(64px,8vw,104px)}
+.p-heroes-404-keys .svc{grid-column:auto;flex-direction:row;align-items:center;min-height:0;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:600;line-height:1.25}
+@media (hover:hover) and (pointer:fine){.page-hero:has(.btn-primary:hover){--p4: }}
+@media (max-width:1060px){.p-heroes-404-keys{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.p-heroes-404-keys .svc{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+{% endblock %}
+{% block content %}
+{%- set svcIco = {"/ciberseguridad/": "i-shield", "/redes/": "i-net", "/telecomunicaciones/": "i-signal", "/sistemas-cloud/": "i-cloud", "/soporte-it/": "i-tool", "/diseno-programacion-web/": "i-code", "/google-workspace/": "i-grid", "/microsoft-365/": "i-grid"} %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Error 404</span>
+    <h1 id="h-hero" data-words>Aquí no llega <span class="accent">la señal</span></h1>
+    <p class="lead fade-in" style="--d:.8s">La página que buscas no existe o ha cambiado de sitio. Vuelve al inicio o cuéntanos qué buscabas.</p>
+    <div class="p-heroes-404 fade-in" style="--d:.9s" aria-hidden="true"><svg viewBox="0 0 1000 96" preserveAspectRatio="xMidYMid slice" width="100%" height="96" fill="none" stroke="#bdb7b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><defs><g id="p-heroes-404-s" stroke="#E32772"><path d="M-96 48h96" stroke-opacity=".25"/><path d="M-48 48h48" stroke-opacity=".55"/><path d="M-8 48h8" stroke-width="2"/></g></defs><path d="M0 48h462M584 48h416" stroke="#d6d3d1"/><g class="pl" fill="#fff"><path d="M390 43.5l22-3.5v16l-22-3.5z"/><path d="M397 42.4v11.2M404 41.3v13.4" stroke-width="1"/><rect x="412" y="34" width="58" height="28" rx="3"/><path d="M442 37v6m3.6-6v6m3.6-6v6m3.6-6v6m3.6-6v6m3.6-6v6m3.6-6v6m3.6-6v6" stroke-width="1"/><path d="M466 62l-28 8"/></g><use class="s" href="#p-heroes-404-s"/><use class="g" href="#p-heroes-404-s"/><rect x="520" y="16" width="64" height="64" rx="6" fill="#fff"/><path d="M538 38h28v16h-9v5h-10v-5h-9z"/><path d="M543.5 39v4m2.6-4v4m2.6-4v4m2.6-4v4m2.6-4v4m2.6-4v4m2.6-4v4m2.6-4v4" stroke-width="1"/><circle class="led" cx="573" cy="27" r="3.5"/><circle class="pg" cx="470" cy="48" r="4" stroke="#E32772" stroke-width="1"/></svg></div>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="/">Volver al inicio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="/contacto/">Hablemos</a>
+    </div>
+  </div>
+</section>
+
+<nav class="wrap p-heroes-404-keys" aria-label="Servicios">
+  {%- for s in nav.services %}
+  <a class="svc" href="{{ s.url }}"><span class="ico" aria-hidden="true"><svg><use href="#{{ svcIco[s.url] }}"/></svg></span>{{ s.label }}</a>
+  {%- endfor %}
+</nav>
+{% endblock %}

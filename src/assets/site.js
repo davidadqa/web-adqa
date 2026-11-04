@@ -10,9 +10,12 @@
       [...node.childNodes].forEach(n=>{
         if(n.nodeType===3){
           const frag=document.createDocumentFragment();
-          n.textContent.split(/(\s+)/).forEach(t=>{
+          n.textContent.split(/(\s+)/).forEach((t,k)=>{
             if(!t) return;
             if(/^\s+$/.test(t)){frag.append(t);return}
+            /* «ALTA</span>:» — la puntuación pegada a un elemento entra en su última palabra (con el color de aquí): no empieza línea */
+            const pw=!k&&/^[:;,.!?)»]+$/.test(t)&&[...n.previousSibling?.querySelectorAll?.('.w')||[]].pop();
+            if(pw){const c=document.createElement('span');c.style.color=getComputedStyle(node).color;c.textContent=t;pw.append(c);return}
             const s=document.createElement('span');s.className='w';s.style.setProperty('--i',i++);s.textContent=t;frag.append(s);
           });
           n.replaceWith(frag);
@@ -62,9 +65,16 @@
   }),{threshold:.15,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   window.__adqaRv=1; /* el script del <head> deja html.adqa-js (contenido oculto hasta aparecer) solo si llegamos aquí */
-  addEventListener('beforeprint',()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>{
+  addEventListener('beforeprint',()=>{document.querySelectorAll('.rv:not(.in)').forEach(el=>{
     el.classList.add('in');el.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
-  }));
+  });
+    document.querySelectorAll('.p-armed').forEach(el=>el.classList.add('p-in')); /* sellos, ficha, cotas: en papel, enteros */
+    /* P2-09: la celda central del cajetín de cada hoja (@page, CSS de chrome): titular · dirección · fecha */
+    const d=new Date().toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'});
+    const t=[(document.querySelector('h1')||{}).textContent||document.title,location.host+location.pathname,d].map(x=>x.replace(/\s+/g,' ').trim()).join(' · ').replace(/["\\]/g,'\\$&');
+    let s=document.getElementById('p-chrome-print');if(!s){s=document.createElement('style');s.id='p-chrome-print';document.head.append(s)}
+    s.textContent='@media print{@page{@bottom-center{content:"'+t+'"}}}';
+  });
 
   /* card spotlight follows pointer */
   document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{
@@ -88,13 +98,19 @@
     tabs.forEach(x=>{const on=x===tb;x.setAttribute('aria-selected',on);const p=document.getElementById(x.getAttribute('aria-controls'));p.hidden=!on;if(on){p.classList.remove('in');requestAnimationFrame(()=>p.classList.add('rv','in'))}});
   }));
 
-  /* form (front-end only: connect to your backend / form handler) */
-  const f=document.querySelector('.form');
-  if(f)f.addEventListener('submit',e=>{
+  /* form (front-end only: connect to your backend / form handler).
+     No válido: .p-content-tried (bordes en rosa) y la burbuja del navegador. Válido: .form-ok, aviso «adqa:sent» y el texto
+     se desvanece 250 ms (.p-content-clear) antes de vaciarse; con reduced-motion, se vacía al instante. */
+  document.querySelectorAll('.form').forEach(f=>f.addEventListener('submit',e=>{
     e.preventDefault();
-    if(!f.checkValidity()){f.reportValidity();return}
-    const ok=f.querySelector('.form-ok');if(ok)ok.style.display='block';f.reset();
-  });
+    if(!f.checkValidity()){f.classList.add('p-content-tried');f.reportValidity();return}
+    f.classList.remove('p-content-tried');
+    const ok=f.querySelector('.form-ok');if(ok)ok.style.display='block';
+    f.dispatchEvent(new CustomEvent('adqa:sent')); /* cuando haya backend: solo con la respuesta OK del servidor */
+    if(reduce)return f.reset();
+    f.classList.add('p-content-clear');
+    setTimeout(()=>{f.reset();f.classList.remove('p-content-clear')},250);
+  }));
 })();
 
 /* ==========================================================================
@@ -156,6 +172,21 @@
       if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('p-armed'); io.observe(el); }
     });
   }
+
+  /* P2-03 · Teclado: el foco nunca aterriza en algo invisible. El CSS ya muestra al instante el bloque (.rv:not(.in):focus-within);
+     aquí, después de fijar ese estado, se marca como aparecido (.in) para que no vuelva a esconderse. Lo armado (.p-armed) se
+     desarma: queda en su estado de base, el final, sin la entrada (que empezaría desde invisible). Y si el bloque ya estaba
+     apareciendo (el scroll del foco lo acaba de mostrar), su fundido termina ya: solo con teclado (:focus-visible) y solo en
+     los bloques (.rv, .p-in). Un clic con ratón también enfoca, y acabar ahí las transiciones dejaba sin tempo la tecla. */
+  const fv = window.CSS && CSS.supports && CSS.supports('selector(:focus-visible)');
+  document.addEventListener('focusin', e => {
+    const kb = !fv || e.target.matches(':focus-visible');
+    for (let el = e.target; el && el.matches; el = el.parentElement) {
+      if (el.matches('.rv:not(.in)')) { getComputedStyle(el).opacity; el.classList.add('in'); }
+      if (el.matches('.p-armed:not(.p-in)')) el.classList.replace('p-armed', 'p-in');
+      if (kb && el.getAnimations && el.matches('.rv,.p-in')) el.getAnimations().forEach(a => /^(opacity|transform|filter)$/.test(a.transitionProperty) && a.finish());
+    }
+  });
 
   /* «Saltar al contenido»: con Enter, la tecla también se hunde. */
   const skip = document.querySelector('.skip');
@@ -347,12 +378,12 @@
     d.querySelectorAll('.marquee').forEach((m) => { m.classList.add('p-proof-io'); live.observe(m); });
   }
 
-  /* Sellos fuera de un .rv y la ficha del certificado: se arman solo si están por debajo de la primera pantalla. */
+  /* Sellos fuera de un .rv, la ficha del certificado y la cota de .hl (P2-07): se arman solo si están por debajo de la primera pantalla. */
   if (!calm && IO) {
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('p-in'); io.unobserve(e.target); }
     }), { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
-    d.querySelectorAll('.cert-img .seal img, .st .badge, .cert-facts').forEach((el) => {
+    d.querySelectorAll('.cert-img .seal img, .st .badge, .cert-facts, .proj .hl').forEach((el) => {
       if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('p-armed'); io.observe(el); }
     });
   }
@@ -408,37 +439,45 @@
     if (document.body.dataset.area !== 'home') document.querySelectorAll('.contact-info').forEach(el => live.observe(el));
   }
 
-  /* .form-ok: cuando site.js lo muestra (envío válido), la flecha de «Enviar» sale volando */
-  if ('MutationObserver' in window) {
-    document.querySelectorAll('.form .form-ok').forEach(ok => {
-      const form = ok.closest('.form');
-      new MutationObserver(() => {
-        if (getComputedStyle(ok).display === 'none') return;
-        form.classList.remove('p-content-sent'); void form.offsetWidth; form.classList.add('p-content-sent');
-        setTimeout(() => form.classList.remove('p-content-sent'), 950);
-      }).observe(ok, { attributes: true, attributeFilter: ['style'] });
-    });
-  }
+  /* Envío correcto («adqa:sent», con .form-ok ya visible): la flecha de «Enviar» sale volando y dos señales recorren el
+     borde del formulario (radio 22, a .75 px) en sentidos opuestos, de debajo del botón al centro de arriba, donde aparece
+     un nodo (punto de 7 px con halo de 4) con un ping. --p-dur: de 1,2 a 2 s según el tamaño (unos 600 px/s). Se retira al acabar. */
+  document.querySelectorAll('.form').forEach(form => form.addEventListener('adqa:sent', () => {
+    form.classList.remove('p-content-sent'); void form.offsetWidth; form.classList.add('p-content-sent');
+    setTimeout(() => form.classList.remove('p-content-sent'), 950);
+    const old = form.querySelector('.p-content-loop'); if (old) old.remove();
+    const W = form.offsetWidth, H = form.offsetHeight, i = .75, r = 21.25, m = W / 2, y = H - i, b = form.querySelector('.btn');
+    const x = b ? b.offsetLeft + form.clientLeft + b.offsetWidth / 2 : m, d = Math.min(2, Math.max(1.2, (W + H) / 600));
+    const side = (s) => `M${x} ${y}H${s ? W - i - r : i + r}A${r} ${r} 0 0 ${1 - s} ${s ? W - i : i} ${y - r}V${i + r}A${r} ${r} 0 0 ${1 - s} ${s ? W - i - r : i + r} ${i}H${m}`;
+    const c = (k, rr) => `<circle class="${k}" cx="${m}" cy="${i}" r="${rr}"/>`;
+    const box = document.createElement('div');
+    box.className = 'p-content-loop'; box.setAttribute('aria-hidden', 'true'); box.style.setProperty('--p-dur', d.toFixed(2) + 's');
+    box.innerHTML = `<svg focusable="false"><path pathLength="1" d="${side(0)}"/><path pathLength="1" d="${side(1)}"/>${c('n', 5.5)}${c('p', 3.5)}</svg>`;
+    form.append(box);
+    setTimeout(() => box.remove(), (d + 1.95) * 1000);
+  }));
 })();
 
 /* ======================= Poesía · blog: «el índice sigue la lectura» (.toc del artículo).
    Marca con aria-current="location" el enlace de la sección que se está leyendo (el último h2 que ha pasado del 35 %
-   superior de la pantalla) y da a --p la fracción del hilo del índice hasta ella. Sin JS, el índice de siempre. */
+   superior de la pantalla) y da a --p la fracción del hilo del índice hasta ella. Sin JS, el índice de siempre.
+   P2-06: ese h2 lleva .p-blog-now (≤ 1060 px, sin índice, su número es el nodo); también en los artículos sin .toc. */
 (() => {
   const ol = document.querySelector(".toc ol");
   const hs = [...document.querySelectorAll(".art-main .prose h2[id]")];
-  if (!ol || !hs.length) return;
-  const links = new Map([...ol.querySelectorAll('a[href^="#"]')].map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
+  if (!hs.length) return;
+  const links = new Map(ol ? [...ol.querySelectorAll('a[href^="#"]')].map((a) => [decodeURIComponent(a.hash.slice(1)), a]) : []);
   let cur = null;
   const fill = () => {
     // El hilo va del centro del primer número (16 px) al del último (16 px antes del final): ver el CSS de blog en site.css.
     const p = cur ? (cur.parentElement.offsetTop - ol.firstElementChild.offsetTop) / Math.max(1, ol.clientHeight - 32) : 0;
-    ol.style.setProperty("--p", Math.min(1, Math.max(0, p)).toFixed(4));
+    if (ol) ol.style.setProperty("--p", Math.min(1, Math.max(0, p)).toFixed(4));
   };
   const set = () => {
     const y = innerHeight * 0.35;
     let h = null;
     for (const x of hs) { if (x.getBoundingClientRect().top < y) h = x; else break; }
+    hs.forEach((x) => x.classList.toggle("p-blog-now", x === h));
     const a = (h && links.get(h.id)) || null;
     if (a === cur) return;
     if (cur) cur.removeAttribute("aria-current");

@@ -40,7 +40,7 @@
 </script>
 {% block head %}{% endblock %}
 </head>
-<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %} data-area="{{ page.url.split('/')[1] or 'home' }}"{% if category %} data-cat="{{ category }}"{% endif %}>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %} data-area="{{ area or (page.url.split('/')[1] or 'home') }}"{% if category %} data-cat="{{ category }}"{% endif %}>
 <a class="skip" href="#main">Saltar al contenido</a>
 
 {% include "partials/sprite.njk" %}
