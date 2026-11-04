@@ -374,12 +374,12 @@
     d.querySelectorAll('.marquee').forEach((m) => { m.classList.add('p-proof-io'); live.observe(m); });
   }
 
-  /* Sellos fuera de un .rv, la ficha del certificado y el carril (P2-07, la cota): se arman solo si están por debajo de la primera pantalla. */
+  /* Sellos fuera de un .rv, la ficha del certificado y la cota de .hl (P2-07): se arman solo si están por debajo de la primera pantalla. */
   if (!calm && IO) {
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('p-in'); io.unobserve(e.target); }
     }), { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
-    d.querySelectorAll('.cert-img .seal img, .st .badge, .cert-facts, .rail').forEach((el) => {
+    d.querySelectorAll('.cert-img .seal img, .st .badge, .cert-facts, .proj .hl').forEach((el) => {
       if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('p-armed'); io.observe(el); }
     });
   }

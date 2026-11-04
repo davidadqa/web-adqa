@@ -462,7 +462,7 @@ faq:
   const vt=document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches;let last;
   btns.forEach(b=>b.addEventListener('click',()=>{
     if(!vt)return apply(b);
-    cases.forEach(c=>{c.classList.add('in');c.getAnimations({subtree:true}).forEach(a=>a.finish());c.style.viewTransitionName='p-proof-case-'+c.id});
+    cases.forEach(c=>{c.classList.add('in');c.querySelector('.hl')?.classList.replace('p-armed','p-in');c.getAnimations({subtree:true}).forEach(a=>a.finish());c.style.viewTransitionName='p-proof-case-'+c.id});
     const t=last=document.startViewTransition(()=>apply(b));
     t.finished.finally(()=>{if(last===t)cases.forEach(c=>c.style.viewTransitionName='')});
   }));

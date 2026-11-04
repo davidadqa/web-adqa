@@ -1543,7 +1543,7 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
 @keyframes p-proof-target{0%{opacity:0}18%,73%{opacity:1;transform:none}100%{opacity:0}}
 @media (prefers-reduced-motion:no-preference){
   .proj .hl::before{transition:transform var(--p-t-draw,1.2s) var(--ease) .35s}
-  .adqa-js .rv:not(.in) .hl::before,.rail.p-armed:not(.p-in) .hl::before{transform:scaleX(0)}
+  .hl.p-armed:not(.p-in)::before{transform:scaleX(0)} /* armada sola: el carril o la ficha entran mucho antes que su línea */
   .case:target figure::before,.case:target figure::after{animation:p-proof-target 2.2s var(--ease) .6s backwards}
 }
 @media (prefers-reduced-motion:reduce){.case:target figure::before,.case:target figure::after{opacity:1;transform:none}}
