@@ -32,9 +32,9 @@ faq:
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.05s">Casos de éxito · Proyectos reales</span>
+    <span class="eyebrow fade-in" style="--d:.05s">Casos de éxito</span>
     <h1 id="h-hero" data-words>Casos de éxito: tecnología que <span class="accent">funciona cada día</span></h1>
-    <p class="lead fade-in" style="--d:.8s">Hospitales conectados entre sí y fibra óptica en el interior de una mina. Redes en fábricas y cámaras frigoríficas, la seguridad de una cadena hotelera, cloud, software a medida y una web municipal. Dieciséis casos reales: lo que necesitaba cada cliente y lo que hicimos.</p>
+    <p class="lead fade-in" style="--d:.8s">Hospitales conectados entre sí y fibra óptica en el interior de una mina. Redes en fábricas y cámaras frigoríficas, la seguridad de una cadena hotelera, cloud, software a medida y una web municipal. Dieciséis casos: lo que necesitaba cada cliente y lo que hicimos.</p>
     <div class="hero-ctas fade-in" style="--d:.95s">
       <a class="btn btn-primary" href="#contacto">Explícanos tu proyecto <svg><use href="#i-arrow"/></svg></a>
       <a class="btn btn-ghost" href="#casos">Ver los casos</a>
@@ -77,7 +77,7 @@ faq:
 {%- set svcKeys = [["wifi","WiFi","con WiFi"],["fibra","Fibra e interconexión","con fibra e interconexión"],["networking","Networking","con networking"],["cloud","Cloud y CPD","con cloud y CPD"],["seguridad","Ciberseguridad","con ciberseguridad"],["web","Web y software","con web y software"],["workspace","Google Workspace","con Google Workspace"],["mant","Mantenimiento","con mantenimiento"]] %}
 {%- set secKeys = [["sanidad","Sanidad","de sanidad"],["industria","Industria y minería","de industria y minería"],["administracion","Administración e instituciones","de administración e instituciones"],["horeca","Hostelería y HORECA","de hostelería y HORECA"],["empresas","Empresas y entidades","de empresas y entidades"]] %}
 
-    <div class="cx-filter rv" data-filter hidden>
+    <div class="cx-filter" data-filter hidden>
       <div class="chips" role="group" aria-labelledby="cx-l1">
         <span class="cx-flabel" id="cx-l1">Servicio</span>
         <button type="button" aria-pressed="true" data-f="all" data-l="">Todos <small>{{ casos | length }}</small></button>
@@ -99,6 +99,33 @@ faq:
     <div class="proj-grid cx-grid">
       {%- for c in casos %}
       {{ m.caseCard(c, idp="", sizes="(min-width: 1212px) 384px, (min-width: 721px) calc(50vw - 23px), calc(100vw - 32px)", cls="rv", style="--s:" + (loop.index0 % 3)) }}
+      {%- endfor %}
+      {#- Cierre de la rejilla (16 + 2 = 18, sin huecos a 3 ni a 2 columnas). No son casos: el filtro las oculta. #}
+      <a class="cx-more rv" style="--s:0" href="#ejemplos" data-more><span class="cx-more-n">{{ ejemplos.total }}</span><span class="cx-more-t">ejemplos breves más, en {{ ejemplos.servicios }} páginas de servicio</span><span class="txt-link">Ver los ejemplos <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="cx-more cx-more-cta rv" style="--s:1" href="#contacto" data-more><span class="cx-more-q">¿Tu caso no está?</span><span class="cx-more-t">Cuéntanos qué necesitas con tus palabras y te decimos cómo lo plantearíamos.</span><span class="txt-link">Explícanoslo <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EJEMPLOS DE APLICACIÓN (las tarjetas breves de cada página de servicio) ============ -->
+<section class="sec" id="ejemplos" aria-labelledby="h-ej" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Ejemplos de aplicación</span>
+      <h2 id="h-ej">Más ejemplos, servicio a servicio</h2>
+      <p class="lead">Cada página de servicio tiene ejemplos breves: el reto, lo que hicimos y el resultado, en una tarjeta. Son {{ ejemplos.total }} en {{ ejemplos.servicios }} servicios. Los {{ ejemplos.conCaso }} que tienen arriba su caso completo llevan el enlace. Empieza por el tuyo.</p>
+    </div>
+    <div class="cx-ej">
+      {%- for g in ejemplos.grupos %}
+      <div class="cx-ej-g rv" style="--s:{{ loop.index0 % 3 }}">
+        <h3><span class="ico" aria-hidden="true"><svg><use href="#{{ g.icon }}"/></svg></span>{{ g.title }}</h3>
+        <ul>
+          {%- for s in g.items %}
+          <li><a href="{{ s.url }}{{ s.anchor }}"><span>{{ s.label }}</span><i aria-hidden="true"></i><small>{{ s.titles.length }} {{ "ejemplo" if s.titles.length == 1 else "ejemplos" }}</small></a>
+            <ul class="cx-ej-t">{% for t in s.titles %}<li>{% if t.url %}<a href="{{ t.url }}">{{ t.t }}<span class="cx-ej-c"> · caso completo</span></a>{% else %}{{ t.t }}{% endif %}</li>{% endfor %}</ul></li>
+          {%- endfor %}
+        </ul>
+      </div>
       {%- endfor %}
     </div>
   </div>
@@ -158,30 +185,6 @@ faq:
 <!-- ============ CLIENTES ============ -->
 {{ m.clientWall(title="Más empresas e instituciones que trabajan con nosotros") }}
 
-<!-- ============ EJEMPLOS DE APLICACIÓN (las tarjetas breves de cada página de servicio) ============ -->
-<section class="sec" id="ejemplos" aria-labelledby="h-ej" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Ejemplos de aplicación</span>
-      <h2 id="h-ej">Más ejemplos, servicio a servicio</h2>
-      <p class="lead">Además de estos casos, cada página de servicio tiene ejemplos breves: el reto, lo que hicimos y el resultado, en una tarjeta. Son {{ ejemplos.total }} en {{ ejemplos.servicios }} servicios. Empieza por el tuyo.</p>
-    </div>
-    <div class="cx-ej">
-      {%- for g in ejemplos.grupos %}
-      <div class="cx-ej-g rv" style="--s:{{ loop.index0 % 3 }}">
-        <h3><span class="ico" aria-hidden="true"><svg><use href="#{{ g.icon }}"/></svg></span>{{ g.title }}</h3>
-        <ul>
-          {%- for s in g.items %}
-          <li><a href="{{ s.url }}{{ s.anchor }}"><span>{{ s.label }}</span><i aria-hidden="true"></i><small>{{ s.titles.length }} {{ "ejemplo" if s.titles.length == 1 else "ejemplos" }}</small></a>
-            <ul class="cx-ej-t">{% for t in s.titles %}<li>{{ t }}</li>{% endfor %}</ul></li>
-          {%- endfor %}
-        </ul>
-      </div>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
 {{ m.faqSection(faq, title="Preguntas sobre nuestros proyectos") }}
 
 <!-- ============ RECURSOS ============ -->
@@ -210,7 +213,7 @@ faq:
 /* Filtro de casos por servicio o por sector, una sola tecla pulsada (mejora progresiva: sin JS se ven todos) */
 (()=>{
   const bar=document.querySelector('[data-filter]');if(!bar)return;
-  const cases=[...document.querySelectorAll('.cx-grid>.proj')],st=document.getElementById('filter-status');
+  const cases=[...document.querySelectorAll('.cx-grid>.proj')],more=[...document.querySelectorAll('[data-more]')],st=document.getElementById('filter-status');
   const btns=[...bar.querySelectorAll('button[data-f]')],cota=document.querySelector('.cx-cota span');
   const has=(c,f)=>{if(f==='all')return true;const[k,v]=f.split(':');return k==='svc'?c.dataset.svc.split(' ').includes(v):c.dataset.sec===v};
   /* Recuentos calculados a partir de las tarjetas, para que nunca se desajusten */
@@ -224,6 +227,7 @@ faq:
     const f=b.dataset.f;let n=0;
     btns.forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
     cases.forEach(c=>{const on=has(c,f);c.hidden=!on;if(on){n++;c.classList.add('in')}});
+    more.forEach(x=>{x.hidden=f!=='all';x.classList.add('in')});
     const t=n+(n===1?' caso':' casos')+(f==='all'?'':' '+b.dataset.l);
     cota.textContent=t;
     st.textContent=f==='all'?'Mostrando los '+n+' casos':'Mostrando '+t;

@@ -59,7 +59,7 @@ ogType: "article"
         </ol>
         <h2 id="el-resultado">El resultado</h2>
         {%- if c.resultado.cifras.length %}
-        <ul class="cx-figs rv">
+        <ul class="cx-figs rv{% if c.resultado.cifras.length == 1 %} cx-figs-1{% endif %}">
           {%- for f in c.resultado.cifras %}
           <li><b>{{ f.n }}</b><span>{{ f.l }}</span></li>
           {%- endfor %}
@@ -70,11 +70,11 @@ ogType: "article"
         {%- endfor %}
         {%- if c.antesDespues %}{% set t = c.antesDespues %}
         <h2 id="antes-y-ahora">Antes y ahora</h2>
-        <div class="table-wrap"><table>
+        <div class="table-wrap cx-ad"><table>
           <thead><tr>{% for h in t.cols %}<th scope="col">{% if h %}{{ h }}{% else %}<span class="sr">Aspecto</span>{% endif %}</th>{% endfor %}</tr></thead>
           <tbody>
             {%- for r in t.rows %}
-            <tr><th scope="row">{{ r[0] }}</th>{% for v in r.slice(1) %}<td>{{ v }}</td>{% endfor %}</tr>
+            <tr><th scope="row">{{ r[0] }}</th>{% for v in r.slice(1) %}<td data-l="{{ t.cols[loop.index] }}">{{ v }}</td>{% endfor %}</tr>
             {%- endfor %}
           </tbody>
         </table></div>
@@ -120,7 +120,7 @@ ogType: "article"
 </section>
 
 <!-- ============ OTROS CASOS ============ -->
-<section class="sec" id="otros-casos" aria-labelledby="h-otros" style="padding-top:0">
+<section class="sec cx-otros" id="otros-casos" aria-labelledby="h-otros" style="padding-top:0">
   <div class="wrap">
     <div class="proj-head" style="padding:0">
       <div class="sec-head rv" style="margin:0">
@@ -131,7 +131,7 @@ ogType: "article"
     </div>
     <div class="proj-grid">
       {%- for id in c.otros %}
-      <div class="rv" style="--s:{{ loop.index0 }};display:grid">{{ m.caseCard(casos | byId(id), sizes="(min-width: 1212px) 384px, (min-width: 721px) calc(50vw - 23px), calc(100vw - 32px)") }}</div>
+      {{ m.caseCard(casos | byId(id), sizes="(min-width: 1212px) 384px, (min-width: 721px) calc(50vw - 23px), calc(100vw - 32px)", cls="rv", style="--s:" + loop.index0) }}
       {%- endfor %}
     </div>
   </div>

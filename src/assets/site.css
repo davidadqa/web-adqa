@@ -2146,3 +2146,47 @@ p.case a:hover,p.case a:focus-visible{color:var(--pink-600);text-decoration-colo
 @media print{.cx-figs li,.proj{break-inside:avoid}.proj h3 a::after{content:none}}
 .proj .hl{align-items:flex-start}
 .proj .hl svg{margin-top:calc((1lh - 16px)/2)} /* el icono, centrado en la primera línea del resultado */
+
+/* — Casos, segunda vuelta (críticas de contenido y diseño) */
+.proj-bn figure img{filter:grayscale(1) contrast(1.04)} /* tarjeta que no es un caso, junto a casos: mismo blanco y negro */
+.prose .cx-figs{padding:0} /* .prose ul ganaba y desplazaba las cifras respecto al texto */
+.cx-figs-1{max-width:min(100%,340px)} /* una sola cifra: la cota no cruza toda la columna */
+/* Hub: dos piezas cierran la rejilla (solo con «Todos»): los ejemplos y la invitación a contar tu caso */
+.cx-more{display:flex;flex-direction:column;justify-content:flex-end;gap:12px;min-height:240px;padding:28px;border-radius:var(--radius);
+  border:1px dashed var(--line-2);background:var(--surface);color:var(--ink);transition:border-color .3s var(--ease),background-color .3s var(--ease)}
+.cx-grid>.cx-more{grid-row:span 5} /* la rejilla es subgrid: cada tarjeta ocupa 5 filas (foto, etiqueta, título, texto, resultado) */
+.cx-more[hidden]{display:none}
+.cx-more-n{font-size:clamp(3rem,6vw,4.5rem);line-height:1;font-weight:600;color:var(--pink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.cx-more-q{font-size:var(--fs-h2);line-height:1.1;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.cx-more-t{font-size:var(--fs-body);line-height:1.45;color:var(--gray);max-width:30ch}
+.cx-more-cta{border-style:solid;border-color:#f2c4d6;background:var(--pink-50)}
+@media (hover:hover) and (pointer:fine){.cx-more:hover{border-color:var(--pink)}.cx-more:hover .txt-link svg{transform:translateX(4px)}}
+.cx-more:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+/* Ejemplos que tienen su caso completo arriba: enlazan a él */
+.cx-ej .cx-ej-t li>a{display:inline;min-height:0;padding:0;font-size:inherit;font-weight:500;line-height:inherit;color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+.cx-ej .cx-ej-t li>a:is(:hover,:focus-visible){color:var(--pink-600);text-decoration-color:currentColor}
+.cx-ej-c{color:var(--pink-600);font-weight:600;white-space:nowrap}
+/* Hub en móvil: la misma tarjeta, más compacta (foto en franja y resumen en tres líneas) */
+@media (max-width:720px){
+  .cx-grid>.proj figure{aspect-ratio:16/7}
+  .cx-grid>.proj .body{padding:20px;gap:8px}
+  .cx-grid>.proj p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+  .cx-more{min-height:0;padding:24px}
+}
+/* «Antes y ahora» en móvil: cada fila, apilada (el aspecto arriba; después «Antes» y «Ahora») */
+@media (max-width:600px){
+  .prose .cx-ad table{min-width:0}
+  .prose .cx-ad thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .prose .cx-ad :is(tbody,tr,th,td){display:block}
+  .prose .cx-ad tr{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .prose .cx-ad tr:last-child{border-bottom:0}
+  .prose .cx-ad tbody th{padding:0 0 6px;border:0;color:var(--ink);font-weight:600}
+  .prose .cx-ad td{padding:4px 0 0;border:0}
+  .prose .cx-ad td::before{content:attr(data-l) " · ";font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .table-wrap.cx-ad{overflow:visible;background:var(--surface)}
+}
+@media print{
+  .sec-head,.prose h2{break-after:avoid}
+  .prose h2,.cx-figs,.table-wrap{break-inside:avoid}
+  .cx-otros,.cx-more{display:none}
+}
