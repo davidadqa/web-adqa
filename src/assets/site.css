@@ -1821,7 +1821,7 @@ a.card[data-cat=telecomunicaciones]{--p-blog-cs:64px 32px;--p-blog-cp:left 0 bot
 .art-meta span:first-child::after,.art-main .prose h2::after{content:"";position:absolute;left:12px;top:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo)}
 .art-hero>.hero-inner::after{background-size:calc(100% - 16px) 1px,1px 9px,1px 9px,0 0,0 0,0 0,0 0,0 0,0 0} /* heroes: sin su cajetín vacío */
 @media (max-width:999px){
-  .art-hero .art-meta{grid-auto-flow:row;grid-template-columns:1fr 1fr;width:100%;font-size:var(--fs-sm,.8rem)}
+  .art-hero .art-meta{grid-auto-flow:row;grid-template-columns:1fr 1fr;width:100%;font-size:var(--fs-sm,.8rem);text-wrap:balance}
   .art-meta span:nth-child(3):last-child{grid-column:span 2}
 }
 @media (prefers-reduced-motion:no-preference){.art-hero .art-meta{animation:p-heroes-unveil .9s var(--ease) 1.2s backwards}}
