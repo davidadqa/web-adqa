@@ -10,9 +10,12 @@
       [...node.childNodes].forEach(n=>{
         if(n.nodeType===3){
           const frag=document.createDocumentFragment();
-          n.textContent.split(/(\s+)/).forEach(t=>{
+          n.textContent.split(/(\s+)/).forEach((t,k)=>{
             if(!t) return;
             if(/^\s+$/.test(t)){frag.append(t);return}
+            /* «ALTA</span>:» — la puntuación pegada a un elemento entra en su última palabra (con el color de aquí): no empieza línea */
+            const pw=!k&&/^[:;,.!?)»]+$/.test(t)&&[...n.previousSibling?.querySelectorAll?.('.w')||[]].pop();
+            if(pw){const c=document.createElement('span');c.style.color=getComputedStyle(node).color;c.textContent=t;pw.append(c);return}
             const s=document.createElement('span');s.className='w';s.style.setProperty('--i',i++);s.textContent=t;frag.append(s);
           });
           n.replaceWith(frag);
