@@ -450,12 +450,21 @@ faq:
   btns.forEach(b=>{const s=b.querySelector('small');if(s)s.textContent=cases.filter(c=>has(c,b.dataset.f)).length});
   const alt=()=>{let i=0;cases.forEach(c=>{if(!c.hidden)c.classList.toggle('alt',i++%2===1)})};
   bar.hidden=false;if(list)list.classList.add('js');alt();
-  btns.forEach(b=>b.addEventListener('click',()=>{
+  const apply=b=>{
     const f=b.dataset.f;let n=0;
     btns.forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
     cases.forEach(c=>{const on=has(c,f);c.hidden=!on;if(on){n++;c.classList.add('in')}});
     alt();
     st.textContent=f==='all'?'Mostrando los '+n+' proyectos':'Mostrando '+n+' proyectos con '+b.dataset.l;
+  };
+  /* El filtro que desliza (View Transitions): todos aparecidos y sin transición a medias (nada de desenfoque), un nombre por
+     caso solo mientras dura (si no, cada navegación entre páginas capturaría 9 grupos). Sin soporte o con reduced-motion, como siempre. */
+  const vt=document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches;let last;
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    if(!vt)return apply(b);
+    cases.forEach(c=>{c.classList.add('in');c.getAnimations({subtree:true}).forEach(a=>a.finish());c.style.viewTransitionName='p-proof-case-'+c.id});
+    const t=last=document.startViewTransition(()=>apply(b));
+    t.finished.finally(()=>{if(last===t)cases.forEach(c=>c.style.viewTransitionName='')});
   }));
 })();
 </script>

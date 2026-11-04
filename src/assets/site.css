@@ -1479,6 +1479,27 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
   .cert-facts.p-armed:not(.p-in) :is(dt,dd){opacity:0;transform:translateY(6px);background-size:0 1px}
 }
 
+/* — 2a passada: P2-07 · «Los casos, medidos»: la cifra de .hl cuelga de una cota (línea y dos ticks de 9 px, en el sitio del
+   borde) que se abre desde el centro al entrar; el filtro de /casos-de-exito/ desliza (su <script>); llegar a #caso enciende
+   un momento la vista del técnico. */
+.proj .hl{position:relative;border-top-color:transparent}
+.proj .hl::before{content:"";position:absolute;left:0;right:0;top:-5px;height:9px;pointer-events:none;--m:linear-gradient(var(--line-2) 0 0);
+  background:var(--m) 0 4px/100% 1px,var(--m) 0 0/1px 9px,var(--m) 100% 0/1px 9px;background-repeat:no-repeat}
+.adqa-js .case:target{opacity:1;transform:none;filter:none} /* el caso al que se llega ya está a la vista, sin desenfoque */
+.cases .case{view-transition-class:p-proof-case}
+::view-transition-group(*.p-proof-case){animation-duration:.6s;animation-timing-function:var(--ease)}
+::view-transition-old(*.p-proof-case):only-child{animation:p-proof-out .3s var(--ease) both}
+::view-transition-new(*.p-proof-case):only-child{animation:p-proof-in .45s var(--ease) .15s both}
+@keyframes p-proof-out{to{opacity:0;transform:scale(.98)}}
+@keyframes p-proof-in{from{opacity:0;transform:translateY(12px)}}
+@keyframes p-proof-target{0%{opacity:0}18%,73%{opacity:1;transform:none}100%{opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .proj .hl::before{transition:transform var(--p-t-draw,1.2s) var(--ease) .35s}
+  .adqa-js .rv:not(.in) .hl::before,.rail.p-armed:not(.p-in) .hl::before{transform:scaleX(0)}
+  .case:target figure::before,.case:target figure::after{animation:p-proof-target 2.2s var(--ease) .6s backwards}
+}
+@media (prefers-reduced-motion:reduce){.case:target figure::before,.case:target figure::after{opacity:1;transform:none}}
+
 /* ======================= Poesía · content — FAQ, tablas, bloque de contacto y formulario, «Dónde estamos», textos legales y bloques propios.
    Regla de oro: el estado de base es el final. Los «antes» cuelgan de .rv:not(.in) y solo con movimiento permitido. */
 
