@@ -5,6 +5,7 @@ h1: "Varias herramientas sueltas o un software de gestión centralizado: conecta
 lead: "Antes de llevarlo todo a un sistema nuevo, hay un paso intermedio: conectar las aplicaciones que ya tienes."
 keyword: "herramientas sueltas o software centralizado"
 category: web
+tipo: elegir
 etiquetas: ["Software a medida"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -98,7 +99,7 @@ Puedes combinar los dos caminos. Centralizas el núcleo de la gestión y mantien
 
 Vuelve a la tabla de herramientas del ejercicio anterior. Los datos que más se repiten en ella te dicen por dónde empezar.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Herramientas sueltas** si cada área trabaja de forma independiente y los datos compartidos son pocos.
 - **Conectarlas** si tus herramientas encajan con su área y lo que te frena es copiar datos de una a otra.

@@ -5,6 +5,7 @@ h1: "Rediseñar la web desde cero o evolucionarla poco a poco: cómo elegir"
 lead: "Los dos caminos llevan a una web mejor. Cambian el ritmo, la inversión y lo que tienes que proteger por el camino."
 keyword: "rediseñar la web desde cero o evolucionarla"
 category: web
+tipo: elegir
 etiquetas: ["Diseño web", "Migración"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -77,7 +78,7 @@ Para el contenido, abre tu sección de servicios. ¿Aparece alguno que ya no ofr
 | Tiempo hasta ver el resultado completo | Más largo | Progresivo |
 | Cambio para el visitante habitual | Mayor | Menor |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Rediseño completo** si la web tiene problemas de base, como una tecnología antigua o una estructura confusa. También si tu marca ha cambiado de forma significativa.
 - **Evolución progresiva** si tu web funciona razonablemente bien y necesita mejoras puntuales de diseño o de contenido.

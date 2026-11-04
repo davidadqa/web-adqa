@@ -5,6 +5,7 @@ h1: "Google Workspace para equipos remotos e híbridos: cómo trabajar igual des
 lead: "Qué cambia en el día a día cuando el equipo no coincide en la misma oficina, y qué ajustar para trabajar con seguridad."
 keyword: "Google Workspace para equipos remotos e híbridos"
 category: workspace
+tipo: hacer
 etiquetas: ["Google Workspace", "Colaboración"]
 date: 2026-07-05
 updated: 2026-11-02

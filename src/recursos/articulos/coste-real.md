@@ -5,6 +5,7 @@ h1: "Coste real de Google Workspace y Microsoft 365: qué mirar además del prec
 lead: "El precio por usuario es la parte visible de la factura. El resto depende de cómo se reparten y se gestionan las licencias."
 keyword: "coste real de Google Workspace y Microsoft 365"
 category: workspace
+tipo: entender
 etiquetas: ["Licencias", "Google Workspace", "Microsoft 365"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -85,7 +86,7 @@ Con esos datos ves en cuánto tiempo se recupera la inversión del cambio. Mucha
 | Licencias sin uso | Revisión periódica de altas y bajas | Revisión periódica de altas y bajas |
 | Cambiar de suite | Coste puntual de migración y adaptación | Coste puntual de migración y adaptación |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Si ya usas Google Workspace y toda la plantilla tiene la misma edición**, revisa primero el licenciamiento mixto.
 - **Si usas Microsoft 365**, empieza por revisar el plan de cada usuario dentro del tenant.

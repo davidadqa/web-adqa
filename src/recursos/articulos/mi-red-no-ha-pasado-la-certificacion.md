@@ -5,6 +5,7 @@ h1: "Mi red no ha pasado la certificación: qué significa y qué hacer"
 lead: "Un punto no apto casi nunca obliga a rehacer la red. Suele ser algo concreto, localizado y con solución."
 keyword: "red no pasa la certificación"
 category: redes
+tipo: hacer
 etiquetas: ["Certificación", "Cableado"]
 date: 2026-07-05
 updated: 2026-11-02
@@ -74,7 +75,7 @@ Lo más habitual es que los puntos no aptos sean excepciones dentro de una insta
 | Interferencias | Separar el cableado de la fuente de ruido | Los puntos del mismo recorrido |
 | Componente de categoría inferior | Sustituirlo por uno de la categoría correcta | Todos los enlaces con ese componente |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Trata cada punto no apto como una tarea concreta**. Se localiza, se corrige y se vuelve a medir.
 - **Corrige antes de cerrar el proyecto**, sobre todo si el contrato o una auditoría piden la certificación.

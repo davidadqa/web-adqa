@@ -5,6 +5,7 @@ h1: "Monitorización de red: qué vigilar para anticiparse a los problemas"
 lead: "Ver las primeras señales de un fallo cuando todavía hay margen para actuar. De eso trata monitorizar la red."
 keyword: "monitorización de red"
 category: redes
+tipo: hacer
 etiquetas: ["Monitorización", "Mantenimiento"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -80,7 +81,7 @@ Una red ordenada se monitoriza mejor. Si tienes los segmentos bien definidos, co
 
 Si no sabes por dónde empezar, hazte una pregunta. ¿Qué equipo, si se apaga, deja a más gente sin trabajar? Ese va primero.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Empieza por lo crítico** si no puedes vigilarlo todo. Son la conexión a internet, el firewall, el núcleo de la red y los servidores.
 - **Amplía por capas** a medida que la red crece: WiFi, sedes y equipos de planta.

@@ -5,6 +5,7 @@ h1: "WiFi doméstico o WiFi profesional: cuándo el router de casa deja de basta
 lead: "La diferencia no está en la marca ni en la potencia. Está en cómo se reparte la red por el espacio."
 keyword: "WiFi doméstico o WiFi profesional"
 category: redes
+tipo: elegir
 etiquetas: ["WiFi"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -74,7 +75,7 @@ Pueden servir de apoyo puntual en un espacio pequeño. Si el problema es de capa
 
 <!-- PENDIENTE: el WordPress daba una cifra orientativa para el router doméstico («hasta ~15-20» dispositivos). Confirmar con ADQA si se quiere publicar una cifra; de momento se describe sin número. -->
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Router doméstico** si tu equipo es pequeño, trabaja en un solo espacio y no prevés crecer pronto.
 - **WiFi profesional** si se conectan muchas personas a la vez o si tienes varias plantas, una nave o zonas con interferencias.

@@ -5,6 +5,7 @@ h1: "Certificación de redes y ENS: qué aporta el informe del cableado en una a
 lead: "El ENS no pide certificar el cableado de forma expresa, pero sí conocer y documentar la infraestructura."
 keyword: "certificación de redes y ENS"
 category: redes
+tipo: entender
 etiquetas: ["Certificación", "ENS", "Cumplimiento"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -82,7 +83,7 @@ Tampoco cubre el WiFi, que se evalúa con sus propios criterios de seguridad.
 | Trabajas con la administración sin requisitos sobre el cableado | Buena práctica, sobre todo en instalaciones nuevas |
 | Empresa sin requisitos normativos | No es obligatoria; útil como garantía de la obra |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Certifica antes de la auditoría**, con margen para corregir los puntos que no cumplan.
 - **Reúne la documentación**: informe de certificación, esquema de red e inventario, juntos y fáciles de localizar.

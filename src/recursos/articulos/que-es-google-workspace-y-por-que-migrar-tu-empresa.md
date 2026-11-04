@@ -5,6 +5,7 @@ h1: "Qué es Google Workspace y por qué cada vez más empresas migran su correo
 lead: "Correo, archivos, documentos y videollamadas en un mismo entorno, con los usuarios y los permisos en un solo lugar."
 keyword: "qué es Google Workspace"
 category: workspace
+tipo: entender
 etiquetas: ["Google Workspace", "Migración"]
 date: 2026-07-01
 updated: 2026-11-02

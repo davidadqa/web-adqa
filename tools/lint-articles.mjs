@@ -47,7 +47,8 @@ const BANNED = [
   [/preguntas reales que nos hacen|Para la dirección de la empresa/i, "texto heredado del WordPress"],
   [/hemos ayudado a|en las (webs|empresas|instalaciones|oficinas) que hemos|hemos visto (muchas|muchos|cómo|casos)|en nuestra experiencia/i, "prueba social en primera persona"],
   [/nou\.adqa\.com|www\.adqa\.com\/recursos/i, "enlace al WordPress"],
-  [/la respuesta ADQAda/i, "«la respuesta ADQAda» no va en el blog"],
+  // El claim va una vez en el CTA común de la plantilla (blog.cta), nunca en el texto del artículo.
+  [/la respuesta ADQAda/i, "«la respuesta ADQAda» no va en el texto del artículo (ya está en el CTA de la plantilla)"],
   [/\bTI\b/, "glosario: «informática», no «TI»"],
   [/seguridad informática/i, "glosario: «ciberseguridad»"],
 ];
@@ -86,6 +87,7 @@ for (const f of files) {
   if (fm.lead && fm.lead.length > 140) w.push(`lead de ${fm.lead.length} caracteres (recomendado ≤ 140)`);
   if (!fm.keyword) e.push("falta keyword");
   if (!blog.bySlug[fm.category]) e.push(`category «${fm.category}» no existe (${Object.keys(blog.bySlug).join(", ")})`);
+  if (!blog.tipos.includes(fm.tipo)) e.push(`tipo «${fm.tipo ?? ""}» no válido (${blog.tipos.join(", ")}: orden del índice)`);
   if (!/^\d{4}-\d\d-\d\d$/.test(iso(fm.date))) e.push("date debe ser AAAA-MM-DD (fecha del WordPress)");
   if (!/^\d{4}-\d\d-\d\d$/.test(iso(fm.updated))) e.push("updated debe ser AAAA-MM-DD");
   if (fm.servicio && !valid.has(fm.servicio)) e.push(`servicio «${fm.servicio}» no es una página existente`);
@@ -99,7 +101,7 @@ for (const f of files) {
   if (!Array.isArray(fm.etiquetas) || fm.etiquetas.length < 1 || fm.etiquetas.length > 3) e.push("etiquetas: entre 1 y 3");
   else for (const t of fm.etiquetas) if (!TAGS.includes(t)) w.push(`etiqueta «${t}» fuera de la lista común`);
   const tw = words(fm.tldr);
-  if (!fm.tldr) e.push("falta tldr («En resumen»)");
+  if (!fm.tldr) e.push("falta tldr («La respuesta corta»)");
   else if (tw < 40 || tw > 75) e.push(`tldr de ${tw} palabras (40–70)`);
   const man = fm.faq?.manager?.length || 0, tec = fm.faq?.tecnico?.length || 0;
   if (man < 2 || tec < 2 || man + tec < 6 || man + tec > 8) e.push(`faq: ${man} manager + ${tec} técnico (2–4 + 2–4, total 6–8)`);
@@ -109,7 +111,7 @@ for (const f of files) {
   }
   // Cuerpo
   if (/^#\s/m.test(body)) e.push("el cuerpo no lleva H1 (#): el h1 va en el front matter");
-  if (/^#{2,3}\s+En resumen/im.test(body)) e.push("«En resumen» va en tldr, no en el cuerpo");
+  if (/^#{2,3}\s+(En resumen|La respuesta corta)/im.test(body)) e.push("«La respuesta corta» va en tldr, no en el cuerpo");
   if (/^#{2,4}\s+Preguntas frecuentes/im.test(body)) e.push("las FAQ van en el front matter, no en el cuerpo");
   const h2 = (body.match(/^##\s/gm) || []).length;
   if (h2 < 3) e.push(`solo ${h2} secciones H2 (mín. 3)`);

@@ -5,6 +5,7 @@ h1: "Seguridad en Microsoft 365: qué protege de serie y qué queda en manos de 
 lead: "Microsoft se ocupa de la plataforma. Cómo se configura y se usa en tu empresa es lo que la convierte en protección real."
 keyword: "seguridad en Microsoft 365"
 category: workspace
+tipo: entender
 etiquetas: ["Microsoft 365", "Seguridad"]
 date: 2026-07-04
 updated: 2026-11-02

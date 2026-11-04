@@ -5,6 +5,7 @@ h1: "Licencias de Microsoft 365: cómo evitar pagar por planes que nadie usa"
 lead: "Las licencias se contratan una vez, pero la plantilla no deja de cambiar. Revisarlas cada cierto tiempo mantiene la factura ajustada."
 keyword: "licencias de Microsoft 365"
 category: workspace
+tipo: hacer
 etiquetas: ["Licencias", "Microsoft 365"]
 date: 2026-07-05
 updated: 2026-11-02

@@ -1,5 +1,5 @@
 {#- Plantilla de artículo del blog. El cuerpo viene del Markdown; el resto, del front matter:
-    title, description, h1, lead, category, etiquetas, date, updated, tldr, related, servicio, imagen, faq. -#}
+    title, description, h1, lead, category, tipo, etiquetas, date, updated, tldr, related, servicio, imagen, faq. -#}
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
 
@@ -45,7 +45,7 @@
     <article class="art-main" aria-labelledby="h-hero">
       {{ m.placeholder(imagen or ("Imagen destacada del artículo «" + h1 + "»"), "21/9", "art-ph") }}
       <div class="art-summary card">
-        <span class="eyebrow">En resumen</span>
+        <span class="eyebrow">La respuesta corta</span>
         <p class="tldr">{{ tldr }}</p>
       </div>
       <div class="prose doc">
@@ -88,7 +88,7 @@
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Sigue leyendo</span>
-      <h2 id="h-rel">Artículos relacionados</h2>
+      <h2 id="h-rel">Respuestas relacionadas</h2>
     </div>
     <div class="res">
       {%- for p in rel %}{{ m.articleCard(p, loop.index0) }}{% endfor %}

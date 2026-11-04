@@ -5,6 +5,7 @@ h1: "Cuántos puntos de acceso necesita tu WiFi: se calcula, no se adivina"
 lead: "No hay una cifra por metro cuadrado que sirva para todos. El número sale de medir el espacio y su uso."
 keyword: "cuántos puntos de acceso necesita tu WiFi"
 category: redes
+tipo: hacer
 etiquetas: ["WiFi"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -77,7 +78,7 @@ Hay espacios con reglas propias. Cada uno tiene su artículo: [naves industriale
 
 Si vas a pedir un estudio, ten a mano el plano de tu planta. Y apunta cuánta gente se sienta en cada zona.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Estudio de cobertura siempre** que haya más de una planta, estructura industrial o materiales que frenan la señal.
 - **Revisión antes de ampliar** si ya tienes puntos de acceso y el WiFi sigue fallando. Puede ser un problema de ubicación, no de cantidad.

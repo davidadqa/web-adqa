@@ -5,6 +5,7 @@ h1: "Cable o WiFi: qué conectar con cada uno en una oficina moderna"
 lead: "La pregunta útil no es cuál de los dos elegir. Es qué va por cada uno."
 keyword: "cable o WiFi en la oficina"
 category: redes
+tipo: elegir
 etiquetas: ["WiFi", "Cableado"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -65,7 +66,7 @@ Un error habitual es conectar por WiFi cámaras o servidores que deberían ir po
 
 ¿Dudas con un aparato? Fíjate dónde pasa el día. Si vive en la mesa o en el armario, cable. Si va contigo de un lado a otro, WiFi.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Cable** para todo lo fijo y crítico, como servidores, switches, cámaras y puestos de trabajo estables.
 - **WiFi** para todo lo que se mueve, como portátiles, móviles, tablets y los dispositivos de las visitas.

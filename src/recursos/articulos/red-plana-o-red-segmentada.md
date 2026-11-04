@@ -5,6 +5,7 @@ h1: "Red plana o red segmentada: cómo organizar la red de tu empresa por zonas"
 lead: "Separar la red por zonas apenas cambia el día a día. Y ayuda a que un problema se quede donde empieza."
 keyword: "red plana o red segmentada"
 category: redes
+tipo: elegir
 etiquetas: ["Segmentación", "Seguridad"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -77,7 +78,7 @@ Los cambios que afectan al servicio se programan por zonas o fuera de horario. A
 
 Una prueba sencilla: abre en tu portátil la lista de dispositivos de la red. Si ves las cámaras y las máquinas de producción, lo más probable es que tu red sea plana.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Red plana** solo en redes muy pequeñas, sin invitados ni sistemas críticos.
 - **Red segmentada** si tienes WiFi de invitados, producción, videovigilancia o cualquier mezcla de dispositivos distintos.

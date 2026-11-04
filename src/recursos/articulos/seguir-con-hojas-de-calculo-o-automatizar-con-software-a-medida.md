@@ -5,6 +5,7 @@ h1: "Seguir con hojas de cálculo o automatizar con software a medida: cuándo d
 lead: "La hoja no es el problema. Lo es cuando todo un equipo depende de un archivo que solo entiende una persona."
 keyword: "hojas de cálculo o software a medida"
 category: web
+tipo: elegir
 etiquetas: ["Software a medida"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -95,7 +96,7 @@ Antes de construir nada, descarta que un programa del mercado ya resuelva ese pr
 
 Si al leer la tabla te viene a la cabeza una hoja concreta, empieza por esa.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Hojas de cálculo** si el volumen de datos es bajo y solo una o dos personas las gestionan.
 - **Una hoja compartida** como paso intermedio, si tu problema principal son las versiones.

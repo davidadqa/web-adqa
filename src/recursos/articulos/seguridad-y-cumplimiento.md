@@ -5,6 +5,7 @@ h1: "Seguridad y cumplimiento: RGPD y ENS en Google Workspace y Microsoft 365"
 lead: "El proveedor certifica su infraestructura. Demostrar cómo se tratan los datos sigue siendo tarea de cada empresa."
 keyword: "RGPD y ENS en Google Workspace y Microsoft 365"
 category: workspace
+tipo: entender
 etiquetas: ["Cumplimiento", "Google Workspace", "Microsoft 365"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -93,7 +94,7 @@ Si tu política obliga a conservar el correo durante años, empieza por la prime
 | Necesita clasificar y proteger documentos confidenciales | Etiquetado y prevención de fugas | Etiquetas de confidencialidad de Purview, según el plan; prevención de fugas de Google Workspace, en ediciones superiores |
 | Ya trabaja con una suite y quiere cumplir mejor | Plan y configuración actuales | Revisar ambos antes de plantear un cambio de suite |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **La suite rara vez decide el cumplimiento por sí sola.** Lo deciden el plan contratado, la configuración y los procedimientos de tu empresa.
 - **Si los requisitos son exigentes**, compara los planes superiores de las dos suites. Es el caso de las retenciones largas, las auditorías frecuentes o los documentos confidenciales que hay que etiquetar.

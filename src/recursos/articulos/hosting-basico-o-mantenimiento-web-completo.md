@@ -5,6 +5,7 @@ h1: "Hosting básico o mantenimiento web completo: qué cubre cada uno"
 lead: "El hosting pone la web en línea. El mantenimiento se ocupa de todo lo que funciona por encima del servidor."
 keyword: "hosting básico o mantenimiento web completo"
 category: web
+tipo: elegir
 etiquetas: ["Mantenimiento", "Backup"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -84,7 +85,7 @@ Si varias respuestas son «nadie» o «no lo sé», esas tareas están pendiente
 | Optimización de la velocidad | Solo la del servidor | Incluida |
 | Coste | Bajo | Cuota de servicio más amplia |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Hosting básico solo** si la web es [estática](/recursos/web-estatica-o-web-con-gestor-de-contenidos-cms/), apenas cambia y no es una vía de negocio activa.
 - **Mantenimiento web completo** si la web genera contactos o ventas, o es la primera impresión que reciben tus clientes.

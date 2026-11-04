@@ -5,6 +5,7 @@ h1: "Ciberseguridad gestionada o equipo interno: cómo repartir el trabajo sin d
 lead: "No se trata de hacerlo dentro o fuera, sino de decidir quién cubre cada parte de la seguridad."
 keyword: "ciberseguridad gestionada o equipo interno"
 category: ciberseguridad
+tipo: elegir
 etiquetas: ["Gestión de la seguridad", "Seguridad"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -79,7 +80,7 @@ El firewall es un buen ejemplo de pieza que se puede delegar sin perder el contr
 | Capacidad de crecer | Lenta: depende de contratar | Más ágil: se amplía el alcance del servicio |
 | Respuesta ante un incidente | La coordina el equipo interno | La coordina el proveedor, con un interlocutor definido |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Equipo interno** si tu empresa tiene tamaño y presupuesto suficientes, y la ciberseguridad es crítica para su actividad.
 - **Ciberseguridad gestionada** si necesitas una cobertura amplia sin asumir el coste de un equipo completo.

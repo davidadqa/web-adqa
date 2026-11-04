@@ -5,6 +5,7 @@ h1: "Cuándo renovar la red de tu empresa: señales de que se ha quedado corta"
 lead: "Lentitud, cortes y falta de margen: qué indican y cómo plantear la renovación con calma."
 keyword: "cuándo renovar la red de tu empresa"
 category: redes
+tipo: entender
 etiquetas: ["Mantenimiento", "Switching", "WiFi"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -72,7 +73,7 @@ Un escenario frecuente es la red que se ha ido renovando pieza a pieza durante a
 | Fallos en los momentos de más uso | Capacidad insuficiente para la carga actual | Medir el tráfico y redimensionar |
 | Equipos sin actualizaciones o con muchos años | Final de la vida útil razonable | Renovación planificada por fases |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Revisión, no sustitución inmediata**, si los síntomas son puntuales: primero hay que confirmar la causa.
 - **Renovación planificada** si la electrónica tiene varios años y los síntomas se repiten.

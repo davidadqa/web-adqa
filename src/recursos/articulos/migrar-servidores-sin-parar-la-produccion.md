@@ -5,6 +5,7 @@ h1: "Migrar servidores sin parar la producción: cómo se planifica bien"
 lead: "Bien planificada, una migración suele reducirse a un corte breve, en el momento que menos afecta al trabajo."
 keyword: "migrar servidores sin parar la producción"
 category: cloud
+tipo: hacer
 etiquetas: ["Migración", "Datacenter"]
 date: 2026-07-05
 updated: 2026-11-02

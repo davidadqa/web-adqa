@@ -5,6 +5,7 @@ h1: "Datacenter de proximidad: qué es y cuándo le conviene a tu empresa"
 lead: "Una tercera vía entre dejar los servidores en la oficina y llevarlos a la nube pública."
 keyword: "datacenter de proximidad"
 category: cloud
+tipo: entender
 etiquetas: ["Datacenter"]
 date: 2026-07-01
 updated: 2026-11-02

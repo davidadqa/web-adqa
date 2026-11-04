@@ -34,11 +34,11 @@ Datos clave:
 {% for c in casos %}
 - [{{ c.titulo | safe }}]({{ c.url | absUrl }}): {{ c.seo.description | safe }}{% endfor %}
 
-## Recursos
+## Respuestas
 
-- [Recursos: guías para empresas]({{ "/recursos/" | absUrl }}): guías prácticas de ADQA sobre redes y WiFi, ciberseguridad, cloud, telecomunicaciones, soporte IT, web y software, Google Workspace y Microsoft 365.
+- [Respuestas de ADQA para empresas]({{ "/recursos/" | absUrl }}): respuestas prácticas a las preguntas de las empresas sobre redes y WiFi, ciberseguridad, cloud, telecomunicaciones, soporte IT, web y software, Google Workspace y Microsoft 365.
 {%- for c in blog.categories %}
-{%- set items = collections.articulos | byCategory(c.slug) | newestFirst %}
+{%- set items = collections.articulos | byCategory(c.slug) | byTipo %}
 {%- if items.length %}
 
 ### {{ c.name }}

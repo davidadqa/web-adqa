@@ -5,6 +5,7 @@ h1: "Desarrollar el software a medida con equipo interno o externalizado: cómo 
 lead: "Lo que decide no es quién programa mejor. Es si el software es el centro de tu negocio o una herramienta para hacerlo funcionar."
 keyword: "software a medida con equipo interno o externalizado"
 category: web
+tipo: elegir
 etiquetas: ["Software a medida"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -84,7 +85,7 @@ En los proyectos web aparece el mismo reto de coordinación, cuando diseño y pr
 
 Hazte una pregunta sencilla. ¿Vendes el software o lo usas para que tu negocio funcione?
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Equipo interno** si el desarrollo de software es una actividad central y constante de tu negocio.
 - **Externalizado** si el software es una herramienta de gestión y programar no es tu actividad principal.

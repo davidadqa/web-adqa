@@ -5,6 +5,7 @@ h1: "Soporte IT reactivo o proactivo: la diferencia que se nota en el día a dí
 lead: "Qué aporta cada modelo, qué se vigila en el proactivo y cómo saber cuál necesita tu empresa."
 keyword: "soporte IT reactivo o proactivo"
 category: soporte-it
+tipo: elegir
 etiquetas: ["Soporte", "Mantenimiento", "Monitorización"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -76,7 +77,7 @@ El cambio no suele exigir parar nada. Tu gente sigue trabajando mientras se prep
 | Interrupciones para el equipo | Imprevistas | Menos frecuentes: muchas se resuelven antes de notarse |
 | Encaja con | Pocos equipos y poca dependencia de los sistemas | Empresas que dependen de sus sistemas para trabajar |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Reactivo** si tienes pocos equipos, no hay servidores propios y una parada puntual no frena el negocio.
 - **Proactivo** si dependes de tus sistemas para producir, facturar o atender a tus clientes.

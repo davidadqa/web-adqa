@@ -5,6 +5,7 @@ h1: "Datacenter propio o nube pública: cómo elegir sin perder proximidad ni es
 lead: "No se trata de buscar un ganador, sino de ver qué necesita cada uno de tus sistemas."
 keyword: "datacenter propio o nube pública"
 category: cloud
+tipo: elegir
 etiquetas: ["Datacenter"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -72,7 +73,7 @@ El reto es que las piezas no vayan cada una por su lado. Quien se incorpora a tu
 | Conexión con la oficina | Normalmente por internet, con VPN (túnel cifrado) | Por internet o por un enlace privado |
 | Coste | Variable, según el consumo | Estable y previsible |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Nube pública** si tu prioridad es crecer rápido, estar presente en varias regiones o evitar la inversión inicial.
 - **Datacenter de proximidad** si te importa saber dónde están tus datos, tener un coste previsible y un equipo cercano que conozca tus sistemas.

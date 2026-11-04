@@ -5,6 +5,7 @@ h1: "Así se certifica una red: el proceso paso a paso"
 lead: "Del inventario de puntos al informe final: qué se hace en cada fase y cómo te afecta."
 keyword: "cómo se certifica una red"
 category: redes
+tipo: hacer
 etiquetas: ["Certificación", "Cableado"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -80,7 +81,7 @@ Si algún punto no pasa, se busca la causa. Puede ser un conector mal terminado,
 | Informe | Resultado y valores de cada punto | Ninguno |
 | Corrección | Solo en los puntos no aptos | Localizado en esos puntos |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Acuerda el alcance antes de empezar**: enlace permanente o canal completo, y qué puntos entran.
 - **Reserva las zonas críticas para fuera de horario**: servidores, recepción o producción.

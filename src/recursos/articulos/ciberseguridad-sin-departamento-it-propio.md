@@ -5,6 +5,7 @@ h1: "Ciberseguridad sin departamento IT propio: lista de comprobación para tu e
 lead: "Doce preguntas para saber qué tiene cubierto tu empresa y qué conviene revisar primero."
 keyword: "ciberseguridad sin departamento IT"
 category: ciberseguridad
+tipo: hacer
 etiquetas: ["Gestión de la seguridad", "Soporte"]
 date: 2026-07-05
 updated: 2026-11-02

@@ -87,6 +87,8 @@ try {
       // Blog: sin la columna lateral ni las tarjetas de artículos relacionados (son textos de otras páginas).
       .replace(/<aside class="art-aside"[\s\S]*?<\/aside>/g, " ")
       .replace(/<section[^>]*aria-labelledby="h-rel"[\s\S]*?<\/section>/g, " ")
+      // Índice de /recursos/: la lista de todas las respuestas son los titulares de otras páginas.
+      .replace(/<ul class="qa-list"[\s\S]*?<\/ul>/g, " ")
       .replace(/<!--[\s\S]*?-->/g, " ");
     const text = main
       .replace(/<\/(p|li|h[1-6]|dd|dt|td|th|blockquote|figcaption|summary)>/g, "\n")

@@ -5,6 +5,7 @@ h1: "Web a medida o plantilla: cómo elegir según lo que le vas a pedir a tu we
 lead: "La plantilla gana en rapidez; la web a medida, en margen para crecer. Lo que decide es qué le pedirás a la web dentro de un año."
 keyword: "web a medida o plantilla"
 category: web
+tipo: elegir
 etiquetas: ["Diseño web"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -82,7 +83,7 @@ Si la mayoría de respuestas apuntan a una web sencilla y estable, la plantilla 
 
 A lo mejor ya tienes una lista de cosas que «la web no deja hacer». Si es larga, esa lista decide por ti.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Plantilla** si necesitas una web sencilla, pronto y con un presupuesto ajustado.
 - **Web a medida** si la web vende de forma activa o necesita funciones que una plantilla no ofrece.

@@ -5,6 +5,7 @@ h1: "Certificación ENS categoría ALTA: ¿la necesita tu empresa o es solo para
 lead: "El ENS nace para el sector público, pero alcanza a muchas empresas que le prestan servicio."
 keyword: "certificación ENS categoría ALTA"
 category: ciberseguridad
+tipo: entender
 etiquetas: ["ENS", "Cumplimiento"]
 date: 2026-07-01
 updated: 2026-11-02
