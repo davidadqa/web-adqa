@@ -143,8 +143,8 @@
 
 {#- Tarjeta única de un caso de éxito (hub, carriles, rejillas de servicio y «Otros casos»). Toda la tarjeta enlaza
     a la página del caso (el ::after del enlace del título la cubre). `idp`: prefijo del id ("" en el hub). -#}
-{% macro caseCard(c, idp="proj-", sizes="(min-width: 721px) 420px, 82vw", cls="") %}
-<article class="proj{% if cls %} {{ cls }}{% endif %}" id="{{ idp }}{{ c.id }}" data-svc="{{ c.filtros | join(' ') }}" data-sec="{{ c.sectorTag }}"><figure>{{ casePhoto(c, sizes, alt=("" if c.foto.tipo == "equipo" else none)) }}</figure><div class="body"><span class="kind">{{ c.sector }}</span><h3><a href="{{ c.url }}">{{ c.corto }}</a></h3><p>{{ c.resumen }}</p><div class="hl"><svg aria-hidden="true"><use href="#{{ c.icon }}"/></svg><span>{% if c.highlight.n %}<b>{{ c.highlight.n }}</b> {% endif %}{{ c.highlight.l }}</span></div></div></article>
+{% macro caseCard(c, idp="proj-", sizes="(min-width: 721px) 420px, 82vw", cls="", style="") %}
+<article class="proj{% if cls %} {{ cls }}{% endif %}" id="{{ idp }}{{ c.id }}"{% if style %} style="{{ style }}"{% endif %} data-svc="{{ c.filtros | join(' ') }}" data-sec="{{ c.sectorTag }}"><figure>{{ casePhoto(c, sizes, alt=("" if c.foto.tipo == "equipo" else none)) }}</figure><div class="body"><span class="kind">{{ c.sector }}</span><h3><a href="{{ c.url }}">{{ c.corto }}</a></h3><p>{{ c.resumen }}</p><div class="hl"><svg aria-hidden="true"><use href="#{{ c.icon }}"/></svg><span>{% if c.highlight.n %}<b>{{ c.highlight.n }}</b> {% endif %}{{ c.highlight.l }}</span></div></div></article>
 {% endmacro %}
 
 {#- Compatibilidad: antes, tarjeta de _data/projects.json. -#}

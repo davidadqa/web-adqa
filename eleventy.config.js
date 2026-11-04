@@ -280,6 +280,11 @@ export default function (eleventyConfig) {
   });
   // Casos de éxito: uno por id, y el área del formulario de contacto según el primer servicio del caso.
   eleventyConfig.addFilter("byId", (items, id) => (items || []).find((c) => c.id === id));
+  // Hub: casos que pasan una tecla del filtro («svc:wifi», «sec:sanidad» o «all») y la lista para el ItemList.
+  const casoHas = (c, f) => { if (f === "all") return true; const [k, v] = f.split(":");
+    return k === "svc" ? c.filtros.includes(v) : c.sectorTag === v; };
+  eleventyConfig.addFilter("casoCount", (items, f) => (items || []).filter((c) => casoHas(c, f)).length);
+  eleventyConfig.addFilter("caseItemList", (items) => (items || []).map((c) => ({ url: c.url, name: c.titulo })));
   const AREA_FORM = { redes: "Redes y WiFi", telecomunicaciones: "Telecomunicaciones", "sistemas-cloud": "Sistemas y cloud",
     "soporte-it": "Soporte y mantenimiento IT", ciberseguridad: "Ciberseguridad", "desarrollo-software-medida": "Web y software",
     "diseno-programacion-web": "Web y software", "google-workspace": "Google Workspace / Microsoft 365", "microsoft-365": "Google Workspace / Microsoft 365" };
