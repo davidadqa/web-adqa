@@ -245,7 +245,7 @@
         <h5>Certificación ENS categoría ALTA</h5>
         <p>El nivel más exigente del Esquema Nacional de Seguridad: preparados para trabajar con la administración pública.</p>
         <a href="/web-adqa/ciberseguridad/certificado-ens/">Qué significa para ti <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      </div>
+      </div><svg class="p-chrome-layers" viewBox="0 0 240 128" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g fill="none" stroke="#3a3a3a" stroke-width="1.5" stroke-dasharray="1"><rect class="t" x="4" y="4" width="232" height="120" rx="22" pathLength="1"></rect><rect class="t" style="--i:1" x="28" y="20" width="184" height="88" rx="14" pathLength="1"></rect><rect class="t" style="--i:2" x="52" y="36" width="136" height="56" rx="6" pathLength="1"></rect><rect class="t" style="--i:3" x="76" y="52" width="88" height="24" rx="4" pathLength="1"></rect></g><circle class="h" cx="120" cy="64" r="7.5" fill="#E32772" fill-opacity=".2"></circle><circle class="n" cx="120" cy="64" r="3.5" fill="#E32772"></circle><circle class="p" cx="120" cy="64" r="3.5" fill="none" stroke="#E32772" opacity="0"></circle></svg>
       <div class="tel">¿Prefieres llamar?<strong><a href="tel:+34938147380">+34 938 147 380</a></strong></div>
     </aside>
   </div>
@@ -253,14 +253,14 @@
   <div class="mobile-menu" id="mobile-menu">
     <details><summary>Servicios <svg width="14" height="14" aria-hidden="true"><use href="#i-chev"></use></svg></summary>
       <div class="sub">
-        <a href="/web-adqa/ciberseguridad/">Ciberseguridad</a>
-        <a href="/web-adqa/redes/">Redes y WiFi</a>
-        <a href="/web-adqa/telecomunicaciones/">Telecomunicaciones</a>
-        <a href="/web-adqa/sistemas-cloud/">Sistemas y cloud</a>
-        <a href="/web-adqa/soporte-it/">Soporte IT</a>
-        <a href="/web-adqa/diseno-programacion-web/">Diseño web y software</a>
-        <a href="/web-adqa/google-workspace/">Google Workspace</a>
-        <a href="/web-adqa/microsoft-365/">Microsoft 365</a>
+        <a href="/web-adqa/ciberseguridad/"><span class="ico" aria-hidden="true"><svg><use href="#i-shield"></use></svg></span>Ciberseguridad</a>
+        <a href="/web-adqa/redes/"><span class="ico" aria-hidden="true"><svg><use href="#i-net"></use></svg></span>Redes y WiFi</a>
+        <a href="/web-adqa/telecomunicaciones/"><span class="ico" aria-hidden="true"><svg><use href="#i-signal"></use></svg></span>Telecomunicaciones</a>
+        <a href="/web-adqa/sistemas-cloud/"><span class="ico" aria-hidden="true"><svg><use href="#i-cloud"></use></svg></span>Sistemas y cloud</a>
+        <a href="/web-adqa/soporte-it/"><span class="ico" aria-hidden="true"><svg><use href="#i-tool"></use></svg></span>Soporte IT</a>
+        <a href="/web-adqa/diseno-programacion-web/"><span class="ico" aria-hidden="true"><svg><use href="#i-code"></use></svg></span>Diseño web y software</a>
+        <a href="/web-adqa/google-workspace/"><span class="ico" aria-hidden="true"><svg><use href="#i-grid"></use></svg></span>Google Workspace</a>
+        <a href="/web-adqa/microsoft-365/"><span class="ico" aria-hidden="true"><svg><use href="#i-grid"></use></svg></span>Microsoft 365</a>
       </div>
     </details>
     <a href="/web-adqa/casos-de-exito/" aria-current="page">Casos de éxito</a>
@@ -719,9 +719,9 @@
       <a class="btn btn-ghost rv" href="/web-adqa/recursos/">Ver todos los recursos <svg><use href="#i-arrow"></use></svg></a>
     </div>
     <div class="res">
-      <a class="card rv" style="--s:0" href="/web-adqa/recursos/wifi-en-naves-industriales/"><span class="cat">Redes y WiFi</span><h3>WiFi en naves industriales</h3><p>Metal, maquinaria y techos altos: por qué tu nave no se cubre como una oficina.</p></a>
-      <a class="card rv" style="--s:1" href="/web-adqa/recursos/wifi-multisede/"><span class="cat">Redes y WiFi</span><h3>WiFi multisede</h3><p>Cómo gestionar el WiFi de tus sedes como una sola red, con una configuración común.</p></a>
-      <a class="card rv" style="--s:2" href="/web-adqa/recursos/migrar-servidores-sin-parar-la-produccion/"><span class="cat">Cloud y datacenter</span><h3>Migrar servidores sin parar la producción</h3><p>Para que tu fábrica no pare: dependencias documentadas, datos en paralelo y un corte final breve y controlado.</p></a>
+      <a class="card rv" style="--s:0" data-cat="redes" href="/web-adqa/recursos/wifi-en-naves-industriales/"><span class="cat">Redes y WiFi</span><h3>WiFi en naves industriales</h3><p>Metal, maquinaria y techos altos: por qué tu nave no se cubre como una oficina.</p></a>
+      <a class="card rv" style="--s:1" data-cat="redes" href="/web-adqa/recursos/wifi-multisede/"><span class="cat">Redes y WiFi</span><h3>WiFi multisede</h3><p>Cómo gestionar el WiFi de tus sedes como una sola red, con una configuración común.</p></a>
+      <a class="card rv" style="--s:2" data-cat="cloud" href="/web-adqa/recursos/migrar-servidores-sin-parar-la-produccion/"><span class="cat">Cloud y datacenter</span><h3>Migrar servidores sin parar la producción</h3><p>Para que tu fábrica no pare: dependencias documentadas, datos en paralelo y un corte final breve y controlado.</p></a>
     </div>
   </div>
 </section>
@@ -828,13 +828,24 @@
   btns.forEach(b=>{const s=b.querySelector('small');if(s)s.textContent=cases.filter(c=>has(c,b.dataset.f)).length});
   const alt=()=>{let i=0;cases.forEach(c=>{if(!c.hidden)c.classList.toggle('alt',i++%2===1)})};
   bar.hidden=false;if(list)list.classList.add('js');alt();
-  btns.forEach(b=>b.addEventListener('click',()=>{
+  const apply=b=>{
     const f=b.dataset.f;let n=0;
     btns.forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
     cases.forEach(c=>{const on=has(c,f);c.hidden=!on;if(on){n++;c.classList.add('in')}});
     alt();
     st.textContent=f==='all'?'Mostrando los '+n+' proyectos':'Mostrando '+n+' proyectos con '+b.dataset.l;
+  };
+  /* El filtro que desliza (View Transitions): todos aparecidos y sin transición a medias (nada de desenfoque), un nombre por
+     caso solo mientras dura (si no, cada navegación entre páginas capturaría 9 grupos). Sin soporte o con reduced-motion, como siempre. */
+  const vt=document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches;let last;
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    if(!vt)return apply(b);
+    cases.forEach(c=>{c.classList.add('in');c.querySelector('.hl')?.classList.replace('p-armed','p-in');c.getAnimations({subtree:true}).forEach(a=>a.finish());c.style.viewTransitionName='p-proof-case-'+c.id});
+    const t=last=document.startViewTransition(()=>apply(b));
+    t.finished.finally(()=>{if(last===t){last=0;cases.forEach(c=>c.style.viewTransitionName='')}});
   }));
+  /* Mientras desliza, la página no recibe clics (llegan a <html>): se corta la transición y el clic va a la cápsula de debajo. */
+  document.addEventListener('click',e=>{if(!last||e.target!==document.documentElement)return;last.skipTransition();const k=document.elementFromPoint(e.clientX,e.clientY);if(k&&k.closest('[data-f]'))k.closest('[data-f]').click()});
 })();
 </script>
 
