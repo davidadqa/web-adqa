@@ -395,9 +395,9 @@ faq:
       <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="proj-grid">
-      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/kuka-robots.webp" alt="Robots industriales KUKA" loading="lazy" width="980" height="560"></figure><div class="body"><span class="kind">Mantenimiento · Dirección TIC · Ciberseguridad</span><h3>KUKA Robots Iberia</h3><p>Multinacional alemana de robótica. Mantenemos y mejoramos sus infraestructuras y llevamos la dirección de su servicio TIC. En su central de España, la red es Ruckus. En delegaciones como Argentina y el País Vasco, dirigimos la implantación de la red.</p><div class="hl"><svg><use href="#i-tool"/></svg>Dirección del servicio TIC</div></div></article>
-      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/consell-comarcal-garraf.webp" alt="Sede del Consell Comarcal del Garraf" loading="lazy" width="1333" height="1000"></figure><div class="body"><span class="kind">Mantenimiento · Networking · Ciberseguridad</span><h3>Consell Comarcal del Garraf</h3><p>Trabaja con ADQA desde hace más de 15 años. Mantenemos sus sistemas informáticos, resolvemos sus incidencias y gestionamos su ciberseguridad de forma activa. También llevamos su red interna, el radioenlace entre sus dos sedes administrativas y su Google Workspace.</p><div class="hl"><svg><use href="#i-clock"/></svg>Más de 15 años trabajando juntos</div></div></article>
-      <article class="proj rv" style="--s:2"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Mantenimiento · Suministro · Cloud</span><h3>PIMEC</h3><p>Llevamos todo su mantenimiento, sus telecomunicaciones y su WiFi, con Ruckus, la marca que representamos. Somos su proveedor continuado de microinformática, servidores, networking y software. En su sede hemos creado un nuevo CPD, su sala de servidores.</p><div class="hl"><svg><use href="#i-box"/></svg>Suministro continuado de equipos</div></div></article>
+      {{ m.caseCard(casos | byId("kuka"), cls="rv", style="--s:0") }}
+      {{ m.caseCard(casos | byId("consell-comarcal-garraf"), cls="rv", style="--s:1") }}
+      {{ m.caseCard(casos | byId("pimec"), cls="rv", style="--s:2") }}
     </div>
   </div>
 </section>

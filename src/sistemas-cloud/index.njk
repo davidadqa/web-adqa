@@ -353,9 +353,9 @@ faq:
       <p class="lead">Servidores y aplicaciones en manos del mismo equipo que lleva la red y las telecomunicaciones de cada empresa.</p>
     </div>
     <div class="proj-grid">
-      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/hitecsa-fabrica.webp" alt="Vista aérea de la fábrica de HITECSA" loading="lazy" width="800" height="437"></figure><div class="body"><span class="kind">Software a medida · Cloud · Networking</span><h3>HITECSA</h3><p>Desde hace años nos confía la gestión de toda su infraestructura informática, de telecomunicaciones y de cloud. Alojamos sus aplicaciones corporativas en nuestro cloud y desarrollamos sus programas de gestión a medida.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Infraestructura y cloud en las mismas manos</div></div></article>
-      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/pimec-sede.webp" alt="Auditorio de la sede de PIMEC" loading="lazy" width="900" height="485"></figure><div class="body"><span class="kind">Instalaciones · Cloud · Ciberseguridad</span><h3>PIMEC</h3><p>Creamos un nuevo CPD junto con las reformas de su sede y alojamos en el cloud sus aplicaciones corporativas. Les suministramos de forma continuada servidores, microinformática, networking y software.</p><div class="hl"><svg><use href="#i-grid"/></svg>Nuevo CPD e interconexión de sedes</div></div></article>
-      <article class="proj rv" style="--s:2"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Instalaciones · Mantenimiento · Telecom · Cloud</span><h3>Granier</h3><p>Alojamiento cloud de diferentes aplicaciones corporativas. Además, llevamos la informática y las telecomunicaciones de la nueva sede central y las redes de oficinas, fábricas y tiendas.</p><div class="hl"><svg><use href="#i-cloud"/></svg>Cloud para aplicaciones corporativas</div></div></article>
+      {{ m.caseCard(casos | byId("hitecsa"), cls="rv", style="--s:0") }}
+      {{ m.caseCard(casos | byId("pimec"), cls="rv", style="--s:1") }}
+      {{ m.caseCard(casos | byId("granier"), cls="rv", style="--s:2") }}
     </div>
 
     <h3 class="sub-head rv">Más casos, con resultados medibles</h3>

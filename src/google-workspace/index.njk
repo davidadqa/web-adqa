@@ -293,8 +293,8 @@ faq:
       <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="proj-grid two">
-      <article class="proj rv" style="--s:0"><figure><img src="/assets/proyectos/granier-tienda.webp" alt="Tienda Granier" loading="lazy" width="768" height="540"></figure><div class="body"><span class="kind">Google Workspace · Soporte · Formación</span><h3>Granier</h3><p>Gestionamos sus servicios de Google, damos soporte a sus administradores y formamos a sus usuarios. Es solo una parte. También llevamos la informática y las telecomunicaciones de su sede central. Y nos ocupamos de las redes de sus oficinas, fábricas y tiendas, y del cloud de sus aplicaciones corporativas.</p><div class="hl"><svg><use href="#i-grid"/></svg>Gestión de Google Workspace y formación</div></div></article>
-      <article class="proj rv" style="--s:1"><figure><img src="/assets/proyectos/consell-comarcal-garraf.webp" alt="Sede del Consell Comarcal del Garraf" loading="lazy" width="1333" height="1000"></figure><div class="body"><span class="kind">Google Workspace · Mantenimiento · Ciberseguridad</span><h3>Consell Comarcal del Garraf</h3><p>Trabajamos juntos desde hace más de 15 años. Gestionamos su Google Workspace y el mantenimiento de sus sistemas. También llevamos su seguridad, su red interna y el radioenlace entre sus dos sedes administrativas.</p><div class="hl"><svg><use href="#i-clock"/></svg>Más de 15 años trabajando juntos</div></div></article>
+      {{ m.caseCard(casos | byId("granier"), cls="rv", style="--s:0") }}
+      {{ m.caseCard(casos | byId("consell-comarcal-garraf"), cls="rv", style="--s:1") }}
     </div>
     <div class="cases-wp rv">
       {{ m.anonCase(
