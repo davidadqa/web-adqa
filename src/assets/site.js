@@ -65,6 +65,7 @@
   addEventListener('beforeprint',()=>{document.querySelectorAll('.rv:not(.in)').forEach(el=>{
     el.classList.add('in');el.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
   });
+    document.querySelectorAll('.p-armed').forEach(el=>el.classList.add('p-in')); /* sellos, ficha, cotas: en papel, enteros */
     /* P2-09: la celda central del cajetín de cada hoja (@page, CSS de chrome): titular · dirección · fecha */
     const d=new Date().toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'});
     const t=[(document.querySelector('h1')||{}).textContent||document.title,location.host+location.pathname,d].map(x=>x.replace(/\s+/g,' ').trim()).join(' · ').replace(/["\\]/g,'\\$&');
