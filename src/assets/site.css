@@ -1027,7 +1027,8 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .shot{aspect-ratio:21/9}
   :is(.dark-sec,.svc.dark,.st,.contact-info,body>footer),:is(.dark-sec,.svc.dark,.st,.contact-info,body>footer) *{background:none!important;color:var(--ink)!important;border-color:var(--line)!important;box-shadow:none!important}
   :is(.dark-sec,.svc.dark,.st,.contact-info){border:1px solid var(--line);position:static}
-  body>footer{border-top:1px solid var(--line);border-radius:0;margin-top:6mm;padding-top:6mm}
+  body>footer{border-top:1px solid var(--line);border-radius:0;margin-top:3mm;padding-top:3mm}
+  .foot+.legal{margin-top:3mm;padding-top:2mm}
   body>footer img{filter:invert(1)}
   .card,.cmp,.case-anon,.metric,.stat,.quote,.steps li,.st{break-inside:avoid}
   :is(.prose,.doc,.cert-txt) a[href^="http"]::after{content:" (" attr(href) ")";font-size:.85em;color:var(--muted);overflow-wrap:anywhere}
@@ -1793,15 +1794,6 @@ a.card[data-cat=telecomunicaciones]{--p-blog-cs:64px 32px;--p-blog-cp:left 0 bot
 .toc a[aria-current]::after{transform:none;transition:transform .35s var(--ease) .25s}
 /* Con reduced-motion, la regla global de la base (*,*::before,*::after{transition:none!important}) deja los cambios instantáneos. */
 
-/* ---------- Móvil (≤ 720 px) ---------- */
-@media (max-width:720px){
-  /* En cajas bajas el motivo se asoma desde la esquina: 32 px fuera (2 módulos, sigue en la rejilla). Redes (el punto de
-     acceso está en la esquina) y telecom (tira a lo ancho) no se mueven. */
-  .ph{--p-blog-mp:right -32px bottom -32px}
-  /* Una franja libre bajo el pie (40 px) para que se vea la base del motivo: el punto de acceso, las fibras. */
-  .art-ph{padding-bottom:40px}
-}
-
 /* — 2a passada: P2-06 · .art-meta, el cajetín del plano (los «·» eran pseudos); ≤ 1060 px, el número del h2 leído es un nodo */
 .art-hero .art-meta{display:inline-grid;grid-auto-flow:column;gap:1px;border:1px solid var(--line-2);background:var(--line-2);line-height:1.35;text-align:left;font-variant-numeric:tabular-nums}
 .art-meta span{padding:6px 14px;background:var(--surface)}
@@ -1810,11 +1802,20 @@ a.card[data-cat=telecomunicaciones]{--p-blog-cs:64px 32px;--p-blog-cp:left 0 bot
 .art-meta span:first-child::after,.art-main .prose h2::after{content:"";position:absolute;left:12px;top:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:var(--p-halo)}
 .art-hero>.hero-inner::after{background-size:calc(100% - 16px) 1px,1px 9px,1px 9px,0 0,0 0,0 0,0 0,0 0,0 0} /* heroes: sin su cajetín vacío */
 @media (max-width:999px){
-  .art-hero .art-meta{grid-auto-flow:row;grid-template-columns:1fr 1fr;width:100%;font-size:.8rem}
+  .art-hero .art-meta{grid-auto-flow:row;grid-template-columns:1fr 1fr;width:100%;font-size:var(--fs-sm,.8rem)}
   .art-meta span:nth-child(3):last-child{grid-column:span 2}
 }
 @media (prefers-reduced-motion:no-preference){.art-hero .art-meta{animation:p-heroes-unveil .9s var(--ease) 1.2s backwards}}
 .art-main .prose h2{position:relative}
 .art-main .prose h2::before{transition:color .2s}
-.art-main .prose h2::after{left:4.5px;top:calc(.525rem - 3px);transform:scale(0);transition:transform .35s var(--ease)}
+.art-main .prose h2::after{font-size:var(--fs-sm,.75rem);left:calc(.62em - 3px);top:calc(.7em - 3px);transform:scale(0);transition:transform .35s var(--ease)}
 @media (max-width:1060px){.prose h2.p-blog-now::before{color:transparent}.prose h2.p-blog-now::after{transform:none}}
+
+/* ---------- Móvil (≤ 720 px) ---------- */
+@media (max-width:720px){
+  /* En cajas bajas el motivo se asoma desde la esquina: 32 px fuera (2 módulos, sigue en la rejilla). Redes (el punto de
+     acceso está en la esquina) y telecom (tira a lo ancho) no se mueven. */
+  .ph{--p-blog-mp:right -32px bottom -32px}
+  /* Una franja libre bajo el pie (40 px) para que se vea la base del motivo: el punto de acceso, las fibras. */
+  .art-ph{padding-bottom:40px}
+}
