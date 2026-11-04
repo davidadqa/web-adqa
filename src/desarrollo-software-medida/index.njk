@@ -265,9 +265,7 @@ faq:
       <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="proj-grid two">
-      {%- for p in projects %}{% if p.id == "hitecsa" %}
-      <div class="rv" style="display:grid">{{ m.projectCard(p) }}</div>
-      {%- endif %}{% endfor %}
+      <div class="rv" style="display:grid">{{ m.caseCard(casos | byId("hitecsa")) }}</div>
       <div class="rv" style="--s:1;display:grid"><article class="proj" id="proj-extranet"><figure><img src="/assets/proyectos/extranet.webp" alt="Pantalla de alta de incidencias en la extranet de ADQA" loading="lazy" width="1260" height="608" style="object-position:left top"></figure><div class="body"><span class="kind">Software propio · Mantenimiento</span><h3>Extranet de ADQA</h3><p>Nuestro sistema de ticketing es el centro de operaciones de las instalaciones y los mantenimientos. Los clientes dan de alta, controlan y verifican en tiempo real las incidencias y actuaciones de sus sedes. Como lo hemos desarrollado nosotros, lo adaptamos a la forma de trabajar de cada cliente.</p><div class="hl"><svg><use href="#i-tool"/></svg>Desarrollada y mantenida por ADQA</div></div></article></div>
     </div>
     <div class="res" style="margin-top:14px">
@@ -293,8 +291,7 @@ faq:
         ["Trazabilidad clínica del 100%", "Historial completo por paciente"], {n: "100%", l: "de trazabilidad clínica", i: 0}
       ) }}</div>
     </div>
-    <!-- FASE 3: cuando exista /casos-de-exito/software-a-medida-para-gestion-de-expedientes/, volver a «Lee el caso de los expedientes completo» con ese enlace. -->
-    <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="cases-foot rv"><a class="btn btn-ghost" href="/casos-de-exito/software-a-medida-para-gestion-de-expedientes/">Lee el caso de los expedientes completo <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
