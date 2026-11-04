@@ -90,6 +90,7 @@
   addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>4)moved=true;rail.scrollLeft=sl-dx});
   addEventListener('pointerup',()=>{if(!down)return;down=false;rail.style.scrollSnapType='';rail.style.cursor=''});
   rail.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation()}},true);
+  rail.addEventListener('dragstart',e=>e.preventDefault()); /* el enlace y la foto de la tarjeta no se arrastran */
   }
 
   /* client tabs */
