@@ -36,7 +36,8 @@ description: "La página que buscas no existe o ha cambiado de sitio."
 .p-heroes-404-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:8px 0 clamp(64px,8vw,104px)}
 .p-heroes-404-keys .svc{grid-column:auto;flex-direction:row;align-items:center;min-height:0;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:600;line-height:1.25}
 @media (hover:hover) and (pointer:fine){.page-hero:has(.btn-primary:hover){--p4: }}
-@media (max-width:720px){.p-heroes-404-keys{grid-template-columns:1fr 1fr}.p-heroes-404-keys .svc{flex-direction:column;align-items:flex-start;gap:10px}}
+@media (max-width:1060px){.p-heroes-404-keys{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.p-heroes-404-keys .svc{flex-direction:column;align-items:flex-start;gap:10px}}
 </style>
 {% endblock %}
 {% block content %}
