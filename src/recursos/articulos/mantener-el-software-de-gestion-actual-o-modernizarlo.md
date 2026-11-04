@@ -5,6 +5,7 @@ h1: "Mantener el software de gestión actual o modernizarlo: cómo decidir sin p
 lead: "Cuándo compensa seguir con el sistema que tienes, qué señales dicen que se queda atrás y cómo renovarlo por partes."
 keyword: "mantener el software de gestión actual o modernizarlo"
 category: web
+tipo: elegir
 etiquetas: ["Software a medida", "Migración"]
 date: 2026-07-05
 updated: 2026-11-02
@@ -96,7 +97,7 @@ En los tres casos, la migración de datos se prepara y se prueba antes del cambi
 
 Una pista útil: pon la factura anual de mantenimiento junto a los cambios que se quedaron sin hacer.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Mantenerlo** si recibe actualizaciones, se mantiene sin dificultad y no frena a tu negocio.
 - **Modernizarlo** si ha perdido el soporte de seguridad o no se conecta con lo que necesitas. También si cada vez cuesta más encontrar quien lo mantenga.

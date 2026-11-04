@@ -5,6 +5,7 @@ h1: "Colaboración en equipo: cómo se trabaja cada día en Google Workspace y e
 lead: "Coeditar, comentar, chatear y reunirse: cómo resuelve cada suite lo que un equipo hace a diario."
 keyword: "colaboración en equipo"
 category: workspace
+tipo: entender
 etiquetas: ["Colaboración", "Google Workspace", "Microsoft 365"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -75,7 +76,7 @@ Piensa en una semana normal de tu equipo y responde con lo que pasa de verdad:
 | Se parte de cero y se busca una adopción rápida | Google Workspace | Su curva de aprendizaje suele ser más suave |
 | Ya se dominan Office y Teams | Microsoft 365 | Cambiar de hábitos tiene un coste que no siempre compensa |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Google Workspace**, cuando colaborar consiste sobre todo en editar a la vez, comentar y reunirse desde el navegador.
 - **Microsoft 365**, cuando pesan los documentos complejos y un chat de equipo organizado por canales.

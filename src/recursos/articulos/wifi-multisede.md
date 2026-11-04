@@ -5,6 +5,7 @@ h1: "WiFi multisede: gestionar el WiFi de varias oficinas como una sola red"
 lead: "Cada sede tiene su propio espacio, pero todas pueden compartir configuración, credenciales y consola."
 keyword: "WiFi multisede"
 category: redes
+tipo: hacer
 etiquetas: ["WiFi"]
 date: 2026-07-05
 updated: 2026-11-02
@@ -70,7 +71,7 @@ Dos proyectos reales lo muestran a escalas muy distintas. En KUKA Robots Iberia,
 | Resolución de incidencias | Más lenta: cada sede es distinta | Más rápida: base común conocida |
 | Añadir una sede | Un proyecto nuevo cada vez | Se suma a lo que ya existe |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Gestión centralizada** casi siempre que haya más de una sede y el número pueda crecer.
 - **Con prioridad** si tu personal se mueve a menudo entre sedes o las reuniones rotan de oficina.

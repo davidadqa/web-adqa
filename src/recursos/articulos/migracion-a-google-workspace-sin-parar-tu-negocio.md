@@ -5,6 +5,7 @@ h1: "Migrar a Google Workspace sin parar tu negocio: cómo se hace bien"
 lead: "Fases, comprobaciones y comunicación: lo que permite cambiar de sistema sin que el correo se detenga."
 keyword: "migración a Google Workspace"
 category: workspace
+tipo: hacer
 etiquetas: ["Google Workspace", "Migración"]
 date: 2026-07-03
 updated: 2026-11-02

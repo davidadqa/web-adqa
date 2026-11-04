@@ -5,6 +5,7 @@ h1: "Plugin de seguridad o mantenimiento web gestionado: qué protege cada uno"
 lead: "Qué protege cada opción, qué alertas conviene revisar a mano y por qué lo habitual es combinar las dos."
 keyword: "plugin de seguridad o mantenimiento web gestionado"
 category: web
+tipo: elegir
 etiquetas: ["Mantenimiento", "WordPress", "Seguridad"]
 date: 2026-07-05
 updated: 2026-11-02
@@ -81,7 +82,7 @@ Un plugin compara la web con amenazas conocidas, de forma parecida a un escaneo 
 | Respuesta ante un incidente | No incluida | Limpieza, corrección y restauración |
 | Copias de seguridad comprobadas | Según el plugin | De forma sistemática |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Plugin de seguridad** como base en cualquier web con gestor de contenidos, también cuando hay mantenimiento.
 - **Mantenimiento gestionado** si tu web recoge datos de clientes, vende o tiene formularios con información personal.

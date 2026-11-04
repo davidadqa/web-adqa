@@ -4,6 +4,6 @@ export default {
     title: (data) => data.cat.title,
     description: (data) => data.cat.description,
     noindex: (data) => data.cat.noindex,
-    breadcrumbs: (data) => [{ name: "Recursos", url: "/recursos/" }, { name: data.cat.name }],
+    breadcrumbs: (data) => [{ name: "Respuestas", url: "/recursos/" }, { name: data.cat.name }],
   },
 };

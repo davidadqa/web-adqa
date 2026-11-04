@@ -8,7 +8,7 @@ export default {
     breadcrumbs: (data) => {
       const c = data.blog.bySlug[data.category];
       return [
-        { name: "Recursos", url: "/recursos/" },
+        { name: "Respuestas", url: "/recursos/" },
         ...(c ? [{ name: c.name, url: c.url }] : []),
         { name: data.crumb || data.h1 || data.title },
       ];

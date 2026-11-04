@@ -5,6 +5,7 @@ h1: "Certificación de redes: qué es, qué comprueba y cuándo se pide"
 lead: "Una red puede dar conexión y no cumplir su categoría. La certificación lo mide y lo deja por escrito."
 keyword: "certificación de redes"
 category: redes
+tipo: entender
 etiquetas: ["Certificación", "Cableado"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -76,7 +77,7 @@ Y te conviene aunque nadie te la pida. Tiene sentido al estrenar una red, antes 
 | Cortes o lentitud sin causa clara | Útil para confirmar o descartar un problema físico |
 | Oficina muy pequeña y sin requisitos | Normalmente no es necesario |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Certifica siempre una instalación nueva**, antes de darla por recibida.
 - **Certifica antes de firmar** un contrato que lo exija, con margen para corregir lo que salga.

@@ -5,6 +5,7 @@ h1: "Backup y continuidad de negocio: qué preguntar para saber si tus copias te
 lead: "Tener copias es el punto de partida. Lo que importa es cuánto se tarda en volver a trabajar con ellas."
 keyword: "backup y continuidad de negocio"
 category: cloud
+tipo: hacer
 etiquetas: ["Backup"]
 date: 2026-07-03
 updated: 2026-11-02

@@ -5,6 +5,7 @@ h1: "Cuándo tiene sentido cambiar de Microsoft 365 a Google Workspace (o al rev
 lead: "Antes de cambiar de suite, conviene saber si el problema es la plataforma o cómo está configurada."
 keyword: "cambiar de Microsoft 365 a Google Workspace"
 category: workspace
+tipo: elegir
 etiquetas: ["Migración", "Google Workspace", "Microsoft 365"]
 date: 2026-07-05
 updated: 2026-11-02
@@ -71,7 +72,7 @@ En los dos sentidos se sigue un método parecido. Primero, inventario y grupo pi
 | Cambio consolidado en la forma de colaborar | Sí, si es una tendencia estable | Probar la otra suite con un grupo piloto antes de decidir |
 | Fusión con una empresa que usa la otra suite | Sí, si se busca unificar | Convivencia temporal y migración por fases hacia una sola |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Si el motivo es el precio**, ajusta primero las licencias. Después, compara el coste ya ajustado de las dos suites.
 - **Si el motivo es un problema concreto**, revisa la configuración y el soporte antes de migrar.

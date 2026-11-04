@@ -48,7 +48,7 @@ export default {
   ],
   main: [
     { label: "Casos de éxito", url: "/casos-de-exito/" },
-    { label: "Recursos", url: "/recursos/" },
+    { label: "Respuestas", url: "/recursos/" },
     { label: "Quiénes somos", url: "/quienes-somos/" },
   ],
 };

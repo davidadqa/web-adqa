@@ -5,6 +5,7 @@ h1: "Política de seguridad y cumplimiento normativo: por dónde empieza una pym
 lead: "No hace falta un documento de cien páginas. Hace falta cubrir bien cuatro bloques y revisarlos."
 keyword: "política de seguridad y cumplimiento normativo"
 category: ciberseguridad
+tipo: hacer
 etiquetas: ["Cumplimiento", "Gestión de la seguridad"]
 date: 2026-07-04
 updated: 2026-11-02

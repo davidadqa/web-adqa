@@ -5,6 +5,7 @@ h1: "Switch gestionado o no gestionado: qué diferencia hay y cuál necesita tu 
 lead: "Los dos conectan equipos. La diferencia está en lo que puedes ver, ordenar y priorizar dentro de la red."
 keyword: "switch gestionado o no gestionado"
 category: redes
+tipo: elegir
 etiquetas: ["Switching", "Segmentación", "Monitorización"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -64,7 +65,7 @@ Al revisar una red, es habitual descubrir que nadie eligió el switch no gestion
 | Coste | Bajo | Mayor, según puertos y funciones |
 | Encaja en | Despachos pequeños sin sistemas críticos | Empresas con varios departamentos, telefonía IP, cámaras o servidores |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **No gestionado** para una red muy pequeña, sin telefonía IP, cámaras ni necesidad de separar tráfico.
 - **Gestionado** si tienes varios departamentos, telefonía IP, videovigilancia, WiFi de invitados o servidores que dependen de la red.

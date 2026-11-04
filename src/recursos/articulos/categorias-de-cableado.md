@@ -5,6 +5,7 @@ h1: "Categorías de cableado: Cat 5e, Cat 6, Cat 6A y fibra, y qué se certifica
 lead: "La categoría marca hasta dónde puede llegar un enlace. La instalación decide si lo consigue."
 keyword: "categorías de cableado de red"
 category: redes
+tipo: entender
 etiquetas: ["Cableado", "Certificación"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -68,7 +69,7 @@ Por eso la [certificación del cableado](/redes/certificacion-redes/) no se limi
 | Fibra multimodo | Muy alta, a distancias medias | Troncales entre plantas o edificios cercanos |
 | Fibra monomodo | Muy alta, a largas distancias | Enlaces entre edificios distantes o entre sedes |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Cat 6A para obra nueva**, salvo presupuesto muy ajustado. Te da margen para los próximos años sin un gran sobrecoste frente a Cat 6.
 - **Fibra para los troncales** entre plantas, edificios o sedes, y donde las distancias superan lo que admite el cobre.

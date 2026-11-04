@@ -5,6 +5,7 @@ h1: "Mantenimiento web propio o externalizado: cómo elegir quién cuida tu web"
 lead: "Llevarlo dentro da cercanía. Encargarlo fuera da constancia. Muchas empresas acaban combinando las dos cosas."
 keyword: "mantenimiento web propio o externalizado"
 category: web
+tipo: elegir
 etiquetas: ["Mantenimiento", "WordPress"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -77,7 +78,7 @@ Ninguna de las dos opciones sustituye al alojamiento, que es otra pieza. Qué cu
 | Continuidad en vacaciones o cambios de equipo | Requiere un relevo | Cubierta por el servicio |
 | Coste | Tiempo interno | Cuota de servicio |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Mantenimiento propio** si la web es sencilla, cambia poco y hay alguien con tiempo y conocimiento real para cuidarla.
 - **Mantenimiento externalizado** si la web es una vía de negocio activa y nadie puede dedicarle tiempo técnico constante.

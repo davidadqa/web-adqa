@@ -5,6 +5,7 @@ h1: "Mantenimiento web reactivo o preventivo: cuándo basta con arreglar y cuán
 lead: "Qué cubre cada enfoque, qué incidencias detecta antes cada uno y cómo decidir cuál necesita tu web."
 keyword: "mantenimiento web reactivo o preventivo"
 category: web
+tipo: elegir
 etiquetas: ["Mantenimiento", "Backup"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -80,7 +81,7 @@ Fíjate en la columna del enfoque reactivo: en casi todas las filas te enteras t
 | Copias de seguridad comprobadas | Si alguien se ocupa | De forma sistemática |
 | Tipo de web adecuado | Informativa, sencilla y con poco tráfico | Web que genera contactos, reservas o ventas |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Mantenimiento reactivo** si tu web es informativa, cambia poco y un día de caída no afecta al negocio.
 - **Mantenimiento preventivo** si tu web genera contactos, reservas o ventas, o tiene formularios y áreas privadas de uso diario.

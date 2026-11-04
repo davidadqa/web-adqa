@@ -5,6 +5,7 @@ h1: "Contratar diseño y programación por separado o con un mismo equipo: cómo
 lead: "El punto delicado no es el diseño ni el código. Es el traspaso entre quien piensa el mensaje y quien lo construye."
 keyword: "contratar diseño y programación web por separado o con un mismo equipo"
 category: web
+tipo: elegir
 etiquetas: ["Diseño web"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -78,7 +79,7 @@ La misma lógica sirve para las aplicaciones de gestión, como se explica en [de
 | Responsable ante un problema | Compartido entre dos proveedores | Uno |
 | Comparación de presupuestos | Por partes | Del proyecto completo |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Por separado** si ya tienes un diseño o una identidad de marca definida y necesitas quien la programe. También si quieres seguir con una agencia de diseño de confianza.
 - **Un mismo equipo** si el mensaje y la web se tienen que definir a la vez y prefieres un solo interlocutor.

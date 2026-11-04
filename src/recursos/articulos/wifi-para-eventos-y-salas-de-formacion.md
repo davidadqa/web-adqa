@@ -5,6 +5,7 @@ h1: "WiFi para eventos y salas de formación: cuando decenas de personas se cone
 lead: "Con la sala llena, el reto no es que la señal llegue. Es que alcance para todos a la vez."
 keyword: "WiFi para eventos y salas de formación"
 category: redes
+tipo: hacer
 etiquetas: ["WiFi"]
 date: 2026-07-04
 updated: 2026-11-02
@@ -73,7 +74,7 @@ Una jornada con mucha gente se prepara como cualquier otro montaje: con tiempo y
 
 El calendario de la sala te da media respuesta. No es lo mismo una jornada al año que un curso cada semana.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Cálculo de capacidad** siempre que esperes decenas de dispositivos en el mismo espacio y al mismo tiempo.
 - **Refuerzo temporal** si es un evento puntual y el resto del año la ocupación es normal.

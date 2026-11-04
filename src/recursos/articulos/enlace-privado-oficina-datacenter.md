@@ -5,6 +5,7 @@ h1: "Enlace privado oficina-datacenter: qué es y en qué se diferencia de una V
 lead: "Cuando los servidores están fuera de la oficina, el camino que siguen los datos también cuenta."
 keyword: "enlace privado oficina-datacenter"
 category: telecomunicaciones
+tipo: entender
 etiquetas: ["Conectividad", "Datacenter"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -70,7 +71,7 @@ Tiene más sentido si tus sistemas de producción críticos están alojados fuer
 | Configuración | Túnel en el router o cliente en cada equipo | Enlace fijo integrado en la red corporativa |
 | Uso típico | Sedes pequeñas, uso esporádico y teletrabajo | Oficinas que trabajan todo el día con el datacenter |
 
-Para situarte, fíjate en cuánto rato pasa tu equipo dentro de las aplicaciones del datacenter. Una guía rápida:
+Para situarte, fíjate en cuánto rato pasa tu equipo dentro de las aplicaciones del datacenter. Para decidir rápido:
 
 - **VPN sobre internet** si usas los servidores de forma esporádica, tienes pocos usuarios o se trata de acceso remoto.
 - **Enlace privado** si tu oficina depende a diario de aplicaciones del datacenter y necesita una respuesta estable.

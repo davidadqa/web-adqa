@@ -1,44 +1,47 @@
 ---
-title: "Recursos: guías de informática y telecom para empresas | ADQA"
-description: "Guías prácticas de ADQA sobre redes y WiFi, ciberseguridad, cloud, telecomunicaciones, soporte IT, web, Google Workspace y Microsoft 365 para empresas."
-keyword: "guías de informática para empresas"
+title: "Respuestas de informática y telecom para empresas | ADQA"
+description: "Respuestas prácticas de ADQA a las dudas de las empresas sobre redes y WiFi, ciberseguridad, cloud, telecom, soporte IT, web, Google Workspace y Microsoft 365."
+keyword: "dudas de informática para empresas"
 breadcrumbs:
-  - { name: "Recursos" }
+  - { name: "Respuestas" }
 pageType: "CollectionPage"
 ---
+{#- Índice de /recursos/ («Respuestas»): las preguntas por tema, no un muro de tarjetas. Orden: los destacados
+    (blog.featured) y, debajo, todas las respuestas de cada tema en lista compacta (entender → elegir → hacer).
+    El claim, una sola vez: en el bloque de contacto. -#}
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
 
-{% block jsonld %}{{ { url: page.url, title: title, description: description, pageType: pageType, breadcrumbs: breadcrumbs, blog: { name: "Recursos de ADQA" }, itemList: collections.articulos | newestFirst | itemList } | jsonld | safe }}{% endblock %}
+{% block jsonld %}{{ { url: page.url, title: title, description: description, pageType: pageType, breadcrumbs: breadcrumbs, itemList: collections.articulos | byTema | itemList } | jsonld | safe }}{% endblock %}
 
 {% block content %}
-{%- set arts = collections.articulos | newestFirst %}
+{%- set arts = collections.articulos %}
 
 <!-- ============ HERO ============ -->
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.1s">Recursos</span>
-    <h1 id="h-hero" data-words>Guías claras para decidir sobre la <em>tecnología</em> de tu empresa</h1>
-    <p class="lead fade-in" style="--d:.9s">Artículos prácticos que escriben nuestros equipos de redes, ciberseguridad, cloud, telecomunicaciones, soporte, web y Workspace. Antes de aprobar un presupuesto o de cambiar de proveedor, conviene tener algunas cosas claras. Te las contamos sin tecnicismos de más.</p>
+    <span class="eyebrow fade-in" style="--d:.1s">Respuestas</span>
+    <h1 id="h-hero" data-words>Tus dudas de <em>tecnología</em>, respondidas antes de decidir</h1>
+    <p class="lead fade-in" style="--d:.9s">{{ arts.length }} respuestas a lo que nos preguntan las empresas antes de aprobar un presupuesto o cambiar de proveedor. ¿Cable o WiFi? ¿Pentesting o escaneo? ¿Datacenter propio o nube? Las escriben nuestros equipos de redes, ciberseguridad, cloud, telecomunicaciones, soporte, web y Workspace. Cada una empieza por la respuesta corta.</p>
   </div>
 </section>
 
 {{ m.crumbs(breadcrumbs) }}
 
-<!-- ============ EN RESUMEN + CATEGORÍAS ============ -->
+<!-- ============ EN RESUMEN + TEMAS ============ -->
 <section class="sec blog-intro" aria-label="En resumen">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">En resumen</span>
-      <p class="tldr"><strong>ADQA publica en Recursos {{ arts.length }} guías prácticas para empresas</strong>, escritas por sus equipos de especialistas. Unas tratan de redes y WiFi, ciberseguridad, cloud y datacenter, y telecomunicaciones. Otras hablan de soporte IT, desarrollo web y software, Google Workspace y Microsoft 365. Cada guía empieza con la respuesta resumida. Después explica las opciones y da criterios para decidir cuál encaja en cada caso.</p>
+      <p class="tldr"><strong>ADQA publica en Respuestas {{ arts.length }} artículos que responden preguntas concretas de las empresas sobre tecnología.</strong> Los escriben sus equipos de especialistas. Tratan de redes y WiFi, ciberseguridad, cloud y datacenter, y telecomunicaciones. También de soporte IT, web y software, Google Workspace y Microsoft 365. Cada artículo empieza por la respuesta corta. Después explica las opciones y da criterios para decidir cuál encaja en cada caso.</p>
     </div>
-    {{ m.catChips("") }}
+    {{ m.catChips("", true) }}
   </div>
 </section>
 
-<!-- ============ PARA EMPEZAR ============ -->
-{%- set feat = collections.articulos | bySlugs(blog.featured) %}
+<!-- ============ LAS MÁS CONSULTADAS ============ -->
+{%- set feat = arts | bySlugs(blog.featured) %}
 {%- if feat.length %}
 <section class="sec" aria-labelledby="h-feat" style="padding-top:0">
   <div class="wrap">
@@ -53,26 +56,34 @@ pageType: "CollectionPage"
 </section>
 {%- endif %}
 
-<!-- ============ POR CATEGORÍA ============ -->
-{%- for c in blog.categories %}
-{%- set items = arts | byCategory(c.slug) %}
-{%- if items.length %}
-<section class="sec blog-cat" id="{{ c.slug }}" aria-labelledby="h-{{ c.slug }}" style="padding-top:0">
+<!-- ============ TODAS, POR TEMA (lista compacta: titular + minutos) ============ -->
+<section class="sec" id="todas" aria-labelledby="h-todas" style="padding-top:0">
   <div class="wrap">
-    <div class="blog-cat-head rv">
-      <div>
-        <h2 id="h-{{ c.slug }}">{{ c.name }}</h2>
-        <p>{{ c.intro }}</p>
-      </div>
-      <a class="btn btn-ghost" href="{{ c.url }}">Ver {{ items.length }} {{ "guía" if items.length == 1 else "guías" }} <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <div class="sec-head rv">
+      <span class="eyebrow">Por tema</span>
+      <h2 id="h-todas">Todas las respuestas, por tema</h2>
+      <p>En cada tema, primero lo que conviene entender. Después, cómo elegir entre las opciones y, al final, cómo se hace.</p>
     </div>
-    <div class="res">
-      {%- for p in items %}{% if loop.index <= 6 %}{{ m.articleCard(p, loop.index0, false) }}{% endif %}{% endfor %}
+    <div class="qa-topics">
+      {%- for c in blog.categories %}
+      {%- set items = arts | byCategory(c.slug) | byTipo %}
+      {%- if items.length %}
+      <div class="qa-topic rv" id="{{ c.slug }}">
+        <div class="qa-head">
+          <h3 id="h-{{ c.slug }}">{{ c.name }} <span>{{ items.length }}</span></h3>
+          <a class="txt-link" href="{{ c.url }}">Ver el tema<span class="sr">: {{ c.name }}</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="qa-list" aria-labelledby="h-{{ c.slug }}">
+          {%- for p in items %}
+          <li><a href="{{ p.url }}"><span>{{ p.data.h1 }}</span> <span class="qa-min">{{ p.content | readingTime }} min<span class="sr"> de lectura</span></span></a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endif %}
+      {%- endfor %}
     </div>
   </div>
 </section>
-{%- endif %}
-{%- endfor %}
 
-{{ m.contactBlock(title="¿No encuentras lo que buscas?", text="Si tu pregunta no está aquí, escríbenos. Vale también esa duda que lleva semanas rondando por la oficina. Te respondemos con criterio técnico y sin compromiso.", eyebrow="¿Hablamos?", area="Varias / no lo sé") }}
+{{ m.contactBlock(title="¿Tu pregunta no está aquí?", text="Cuéntanosla y te damos la respuesta ADQAda. Vale también esa duda que lleva semanas rondando por la oficina: la estudiamos con calma y sin compromiso.", eyebrow="¿Hablamos?", area="Varias / no lo sé") }}
 {% endblock %}

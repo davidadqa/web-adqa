@@ -12,16 +12,16 @@ pageType: "CollectionPage"
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
 
-{% block jsonld %}{{ { url: page.url, title: title, description: description, pageType: pageType, breadcrumbs: breadcrumbs, itemList: collections.articulos | byCategory(cat.slug) | newestFirst | itemList } | jsonld | safe }}{% endblock %}
+{% block jsonld %}{{ { url: page.url, title: title, description: description, pageType: pageType, breadcrumbs: breadcrumbs, itemList: collections.articulos | byCategory(cat.slug) | byTipo | itemList } | jsonld | safe }}{% endblock %}
 
 {% block content %}
-{%- set items = collections.articulos | byCategory(cat.slug) | newestFirst %}
+{%- set items = collections.articulos | byCategory(cat.slug) | byTipo %}
 
 <!-- ============ HERO ============ -->
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.1s">Recursos · {{ cat.name }}</span>
+    <span class="eyebrow fade-in" style="--d:.1s">Respuestas · {{ cat.name }}</span>
     <h1 id="h-hero" data-words>{{ cat.h1 }}</h1>
     <p class="lead fade-in" style="--d:.9s">{{ cat.intro }}</p>
   </div>
@@ -29,19 +29,19 @@ pageType: "CollectionPage"
 
 {{ m.crumbs(breadcrumbs) }}
 
-<section class="sec blog-intro" aria-label="Categorías">
+<section class="sec blog-intro" aria-label="Temas">
   <div class="wrap">
     {{ m.catChips(cat.slug) }}
   </div>
 </section>
 
-<!-- ============ ARTÍCULOS ============ -->
+<!-- ============ RESPUESTAS DEL TEMA (entender → elegir → hacer) ============ -->
 <section class="sec" aria-labelledby="h-list" style="padding-top:0">
   <div class="wrap">
     <div class="blog-cat-head rv">
       <div>
-        <h2 id="h-list">{{ items.length }} {{ "guía" if items.length == 1 else "guías" }} de {{ cat.name }}</h2>
-        <p>Autoría: {{ cat.author }}. Revisamos las guías para que lo que lees siga vigente.</p>
+        <h2 id="h-list">{{ items.length }} {{ "respuesta" if items.length == 1 else "respuestas" }} sobre {{ cat.lower }}</h2>
+        <p>Autoría: {{ cat.author }}. Revisamos cada respuesta para que siga vigente.</p>
       </div>
       <a class="btn btn-ghost" href="{{ cat.service.url }}">{{ cat.service.label }} <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>

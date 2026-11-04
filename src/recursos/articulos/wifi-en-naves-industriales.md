@@ -5,6 +5,7 @@ h1: "WiFi en naves industriales: por qué el entorno industrial pide otro diseñ
 lead: "El metal, la maquinaria y la altura cambian las reglas del WiFi. Se pueden medir y tener en cuenta desde el principio."
 keyword: "WiFi en naves industriales"
 category: redes
+tipo: entender
 etiquetas: ["WiFi"]
 date: 2026-07-03
 updated: 2026-11-02
@@ -73,7 +74,7 @@ Puedes leer los tres, con más contexto, en [casos de éxito](/casos-de-exito/).
 | Equipamiento | Estándar | Preparado para polvo, humedad y temperatura |
 | Diseño de cobertura | Estudio por planta, con criterios de oficina | Estudio específico sobre el terreno |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Estudio de cobertura específico siempre** que vayas a instalar WiFi en una nave. El diseño de oficina no se traslada bien.
 - **Equipos con la protección adecuada** si hay polvo, humedad, frío o calor.

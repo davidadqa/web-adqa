@@ -5,6 +5,7 @@ h1: "Web estática o web con gestor de contenidos (CMS): cómo elegir según qui
 lead: "La diferencia se nota cada vez que quieres cambiar un texto, una foto o un precio."
 keyword: "web estática o web con gestor de contenidos"
 category: web
+tipo: elegir
 etiquetas: ["Diseño web", "WordPress"]
 date: 2026-07-05
 updated: 2026-11-02
@@ -85,7 +86,7 @@ Antes de responder, repasa los últimos cambios que pediste en tu web. El teléf
 
 Fíjate en quién escribe hoy tus textos. Si ya los redacta alguien de tu equipo, con un panel también podría publicarlos.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Web estática** si el contenido apenas cambia y nadie de tu equipo necesita editarlo.
 - **CMS** si vas a actualizar contenido a menudo, publicar artículos o repartir la edición entre varias personas.

@@ -5,6 +5,7 @@ h1: "Software de gestión a medida o programa estándar: cómo elegir según có
 lead: "La pregunta no es cuál es mejor. Es cuánto se parece tu forma de trabajar a la que el programa da por supuesta."
 keyword: "software de gestión a medida o programa estándar"
 category: web
+tipo: elegir
 etiquetas: ["Software a medida"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -96,7 +97,7 @@ Para que funcione, el programa estándar tiene que dejar que te conectes a él. 
 
 Una prueba sencilla: en la demostración del programa, pide que te enseñen tu proceso más particular. Si hacen falta rodeos, apúntalo.
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Programa estándar** si tus procesos son sencillos y comunes en tu sector.
 - **Software a medida** si tus procesos tienen particularidades que ningún estándar recoge bien y eso ya genera trabajo manual.

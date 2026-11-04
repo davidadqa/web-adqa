@@ -5,6 +5,7 @@ h1: "Qué incluye Microsoft 365 para empresas y cómo elegir el plan adecuado"
 lead: "Mucho más que Word y Excel: correo, archivos, reuniones, identidades y seguridad, repartidos en varios planes."
 keyword: "qué incluye Microsoft 365 para empresas"
 category: workspace
+tipo: entender
 etiquetas: ["Microsoft 365", "Licencias"]
 date: 2026-07-01
 updated: 2026-11-02

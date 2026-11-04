@@ -5,6 +5,7 @@ h1: "Seguridad en Google Workspace: qué protege por defecto y qué hay que conf
 lead: "Lo que ya viene activado, lo que conviene ajustar en la consola y los descuidos más habituales."
 keyword: "seguridad en Google Workspace"
 category: workspace
+tipo: entender
 etiquetas: ["Google Workspace", "Seguridad"]
 date: 2026-07-04
 updated: 2026-11-02

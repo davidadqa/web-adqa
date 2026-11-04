@@ -5,6 +5,7 @@ h1: "Actualizar WordPress tú mismo o con mantenimiento profesional: cómo elegi
 lead: "La diferencia no está en el clic de «actualizar». Está en lo que haces antes y después."
 keyword: "actualizar WordPress tú mismo o con mantenimiento profesional"
 category: web
+tipo: elegir
 etiquetas: ["WordPress", "Mantenimiento"]
 date: 2026-07-01
 updated: 2026-11-02
@@ -76,7 +77,7 @@ El registro parece un trámite hasta el día en que alguien pregunta desde cuán
 | Fallos que pasan desapercibidos | Más probables con muchos plugins | Menos probables, por la revisión posterior |
 | Resolución si algo falla | Depende de quién lo detecte | Con el contexto de la web ya conocido |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Actualizar tú mismo** si la web tiene pocos plugins, cambia poco y alguien la revisa tras cada actualización.
 - **Mantenimiento profesional** si tu web tiene personalización, muchos plugins activos o es una vía de negocio activa.

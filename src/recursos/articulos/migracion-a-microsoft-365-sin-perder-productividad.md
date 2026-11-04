@@ -5,6 +5,7 @@ h1: "Migrar a Microsoft 365 sin perder productividad: qué hay que planificar"
 lead: "La técnica de una migración está muy rodada. Lo que decide si el equipo lo nota es todo lo que se prepara alrededor."
 keyword: "migración a Microsoft 365"
 category: workspace
+tipo: hacer
 etiquetas: ["Microsoft 365", "Migración"]
 date: 2026-07-02
 updated: 2026-11-02

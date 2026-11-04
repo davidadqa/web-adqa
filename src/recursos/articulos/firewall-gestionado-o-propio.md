@@ -5,6 +5,7 @@ h1: "Firewall gestionado o propio: qué modelo encaja con tu empresa"
 lead: "Qué trabajo pide un firewall cuando ya está instalado, qué cambia si lo gestiona un especialista y cómo decidir."
 keyword: "firewall gestionado o propio"
 category: ciberseguridad
+tipo: elegir
 etiquetas: ["Firewall", "Gestión de la seguridad"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -87,7 +88,7 @@ Puedes hacérselas tal cual a quien lleve hoy la informática de tu empresa. Si 
 | Visibilidad | Depende de que alguien revise los registros | Informes periódicos |
 | Control de las decisiones | Total, dentro de la empresa | Compartido: el negocio decide y el especialista ejecuta |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **Firewall propio** si tu equipo técnico tiene tiempo asignado y conocimiento actualizado para sostenerlo.
 - **Firewall gestionado** si prefieres que un especialista lleve la actualización y la supervisión, sin gastar horas internas.

@@ -2,6 +2,7 @@ import { HtmlBasePlugin } from "@11ty/eleventy";
 import { existsSync, readFileSync } from "node:fs";
 import site from "./src/_data/site.js";
 import nav from "./src/_data/nav.js";
+import blog from "./src/_data/blog.js";
 
 // Imagen para compartir de una página: src/assets/og/<slug>.jpg si existe (la genera tools/og.mjs) y, si no, la general.
 // alt: «ADQA · <lo que se lee en la imagen>» (src/assets/og/alt.json, que escribe la misma herramienta).
@@ -90,24 +91,11 @@ function jsonldGraph(d) {
     ...(d.itemList ? { mainEntity: { "@id": `${url}#itemlist` } } : {}),
   });
 
-  // Blog: índice /recursos/.
-  if (d.blog) {
-    graph.push({
-      "@type": "Blog",
-      "@id": `${base}/recursos/#blog`,
-      url: `${base}/recursos/`,
-      name: d.blog.name,
-      description: d.description,
-      inLanguage: "es-ES",
-      publisher: org,
-    });
-  }
-
-  // Artículo del blog.
+  // Artículo de /recursos/ («Respuestas»): contenido de consulta revisado, no entradas de blog (Article, no BlogPosting).
   if (d.article) {
     const a = d.article;
     graph.push({
-      "@type": "BlogPosting",
+      "@type": "Article",
       "@id": `${url}#article`,
       headline: a.headline,
       description: d.description,
@@ -122,7 +110,7 @@ function jsonldGraph(d) {
         parentOrganization: org,
       },
       publisher: org,
-      isPartOf: { "@id": `${base}/recursos/#blog` },
+      isPartOf: { "@id": `${base}/recursos/#webpage` },
       articleSection: a.section,
       ...(a.keywords && a.keywords.length ? { keywords: a.keywords.join(", ") } : {}),
       ...(a.wordCount ? { wordCount: a.wordCount } : {}),
@@ -263,9 +251,16 @@ export default function (eleventyConfig) {
   const plain = (html) => String(html || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   eleventyConfig.addFilter("wordCount", (html) => plain(html).split(" ").filter(Boolean).length);
   eleventyConfig.addFilter("readingTime", (html) => Math.max(1, Math.round(plain(html).split(" ").filter(Boolean).length / 200)));
-  // Artículos de una categoría, del más reciente al más antiguo.
+  // Artículos de una categoría.
   eleventyConfig.addFilter("byCategory", (items, slug) => (items || []).filter((p) => p.data.category === slug));
-  eleventyConfig.addFilter("newestFirst", (items) => [...(items || [])].sort((a, b) => b.date - a.date || a.url.localeCompare(b.url)));
+  // Orden editorial (índice y categorías): entender → elegir → hacer (campo «tipo»); dentro de cada tipo, por titular.
+  const tipoRank = (p) => { const i = blog.tipos.indexOf(p.data.tipo); return i < 0 ? blog.tipos.length : i; };
+  eleventyConfig.addFilter("byTipo", (items) => [...(items || [])].sort((a, b) =>
+    tipoRank(a) - tipoRank(b) || String(a.data.h1).localeCompare(String(b.data.h1), "es") || a.url.localeCompare(b.url)));
+  // Todas, tema a tema (orden de blog.categories) y, dentro de cada tema, el orden editorial: el ItemList del índice.
+  const temaRank = (p) => blog.categories.findIndex((c) => c.slug === p.data.category);
+  eleventyConfig.addFilter("byTema", (items) => [...(items || [])].sort((a, b) =>
+    temaRank(a) - temaRank(b) || tipoRank(a) - tipoRank(b) || String(a.data.h1).localeCompare(String(b.data.h1), "es")));
   // Busca artículos por slug (los que no existen se ignoran).
   eleventyConfig.addFilter("bySlugs", (items, slugs) =>
     (slugs || []).map((s) => (items || []).find((p) => p.page.fileSlug === s)).filter(Boolean));

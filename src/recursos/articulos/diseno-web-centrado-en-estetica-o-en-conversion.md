@@ -5,6 +5,7 @@ h1: "Diseño web centrado en estética o en conversión: cómo combinar los dos"
 lead: "Una web puede gustar mucho y generar pocos contactos. La clave es pensar a la vez la imagen y el recorrido del visitante."
 keyword: "diseño web centrado en estética o en conversión"
 category: web
+tipo: elegir
 etiquetas: ["Diseño web"]
 date: 2026-07-02
 updated: 2026-11-02
@@ -81,7 +82,7 @@ Que la marca y la estructura vayan de la mano depende también de quién diseña
 | Testimonios y casos | Decorativos | Colocados donde el visitante duda |
 | Contactos generados | Variables | Medibles y mejorables |
 
-Una guía rápida:
+Para decidir rápido:
 
 - **La estética como prioridad** si la web es una carta de presentación sin un objetivo comercial directo.
 - **La conversión como prioridad** si tu web tiene que generar contactos o ventas de forma activa.
