@@ -450,22 +450,24 @@
 
 /* ======================= Poesía · blog: «el índice sigue la lectura» (.toc del artículo).
    Marca con aria-current="location" el enlace de la sección que se está leyendo (el último h2 que ha pasado del 35 %
-   superior de la pantalla) y da a --p la fracción del hilo del índice hasta ella. Sin JS, el índice de siempre. */
+   superior de la pantalla) y da a --p la fracción del hilo del índice hasta ella. Sin JS, el índice de siempre.
+   P2-06: ese h2 lleva .p-blog-now (≤ 1060 px, sin índice, su número es el nodo); también en los artículos sin .toc. */
 (() => {
   const ol = document.querySelector(".toc ol");
   const hs = [...document.querySelectorAll(".art-main .prose h2[id]")];
-  if (!ol || !hs.length) return;
-  const links = new Map([...ol.querySelectorAll('a[href^="#"]')].map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
+  if (!hs.length) return;
+  const links = new Map(ol ? [...ol.querySelectorAll('a[href^="#"]')].map((a) => [decodeURIComponent(a.hash.slice(1)), a]) : []);
   let cur = null;
   const fill = () => {
     // El hilo va del centro del primer número (16 px) al del último (16 px antes del final): ver el CSS de blog en site.css.
     const p = cur ? (cur.parentElement.offsetTop - ol.firstElementChild.offsetTop) / Math.max(1, ol.clientHeight - 32) : 0;
-    ol.style.setProperty("--p", Math.min(1, Math.max(0, p)).toFixed(4));
+    if (ol) ol.style.setProperty("--p", Math.min(1, Math.max(0, p)).toFixed(4));
   };
   const set = () => {
     const y = innerHeight * 0.35;
     let h = null;
     for (const x of hs) { if (x.getBoundingClientRect().top < y) h = x; else break; }
+    hs.forEach((x) => x.classList.toggle("p-blog-now", x === h));
     const a = (h && links.get(h.id)) || null;
     if (a === cur) return;
     if (cur) cur.removeAttribute("aria-current");
