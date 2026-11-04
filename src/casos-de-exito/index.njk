@@ -464,8 +464,10 @@ faq:
     if(!vt)return apply(b);
     cases.forEach(c=>{c.classList.add('in');c.querySelector('.hl')?.classList.replace('p-armed','p-in');c.getAnimations({subtree:true}).forEach(a=>a.finish());c.style.viewTransitionName='p-proof-case-'+c.id});
     const t=last=document.startViewTransition(()=>apply(b));
-    t.finished.finally(()=>{if(last===t)cases.forEach(c=>c.style.viewTransitionName='')});
+    t.finished.finally(()=>{if(last===t){last=0;cases.forEach(c=>c.style.viewTransitionName='')}});
   }));
+  /* Mientras desliza, la página no recibe clics (llegan a <html>): se corta la transición y el clic va a la cápsula de debajo. */
+  document.addEventListener('click',e=>{if(!last||e.target!==document.documentElement)return;last.skipTransition();const k=document.elementFromPoint(e.clientX,e.clientY);if(k&&k.closest('[data-f]'))k.closest('[data-f]').click()});
 })();
 </script>
 {% endblock %}
