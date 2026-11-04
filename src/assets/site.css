@@ -997,7 +997,7 @@ main section[id],main article[id]{scroll-margin-top:96px}
   .mega.open .p-chrome-layers .p{animation:p-chrome-ping 1.1s var(--ease) 1.5s}
 }
 
-/* — 2a passada: P2-06 · seleccionar es subrayar (la banda de .tldr); sobre --pink-50, un tono más; sobre oscuro y sobre rosa */
+/* — 2a passada: P2-06 · seleccionar es subrayar (la banda de .tldr) */
 ::selection{background:var(--pink-50);color:var(--ink)}
 :is(.art-summary,.form-ok,.fit) ::selection,.form-ok::selection{background:#f6cfdf}
 :is(.dark-sec,body>footer,.svc.dark,.mega-feature) ::selection{background:rgba(227,39,114,.35);color:#fff}
@@ -1509,13 +1509,11 @@ body .case .hl b,body .case .tags a:hover{color:var(--pink-600)} /* /casos-de-ex
   .cert-facts.p-armed:not(.p-in) :is(dt,dd){opacity:0;transform:translateY(6px);background-size:0 1px}
 }
 
-/* — 2a passada: P2-07 · «Los casos, medidos»: la cifra de .hl cuelga de una cota (línea y dos ticks de 9 px, en el sitio del
-   borde) que se abre desde el centro al entrar; el filtro de /casos-de-exito/ desliza (su <script>); llegar a #caso enciende
-   un momento la vista del técnico. */
+/* — 2a passada: P2-07 · la cota de .hl, el filtro que desliza (<script> de /casos-de-exito/) y la llegada a #caso */
 .proj .hl{position:relative;border-top-color:transparent}
 .proj .hl::before{content:"";position:absolute;left:0;right:0;top:-5px;height:9px;pointer-events:none;--m:linear-gradient(var(--line-2) 0 0);
   background:var(--m) 0 4px/100% 1px,var(--m) 0 0/1px 9px,var(--m) 100% 0/1px 9px;background-repeat:no-repeat}
-.adqa-js .case:target{opacity:1;transform:none;filter:none} /* el caso al que se llega ya está a la vista, sin desenfoque */
+.adqa-js .case:target{opacity:1;transform:none;filter:none} /* llegar: ya visible */
 .cases .case{view-transition-class:p-proof-case}
 ::view-transition-group(*.p-proof-case){animation-duration:.6s;animation-timing-function:var(--ease)}
 ::view-transition-old(*.p-proof-case):only-child{animation:p-proof-out .3s var(--ease) both}
@@ -1804,8 +1802,7 @@ a.card[data-cat=telecomunicaciones]{--p-blog-cs:64px 32px;--p-blog-cp:left 0 bot
   .art-ph{padding-bottom:40px}
 }
 
-/* — 2a passada: P2-06 · .art-meta es el cajetín del plano (dibujado por, fecha, revisión y escala); los «·» eran pseudos.
-   Filetes = gap de 1 px sobre --line-2. Sin índice (≤ 1060 px), el número del h2 que se lee es el nodo del .toc (.p-blog-now). */
+/* — 2a passada: P2-06 · .art-meta, el cajetín del plano (los «·» eran pseudos); ≤ 1060 px, el número del h2 leído es un nodo */
 .art-hero .art-meta{display:inline-grid;grid-auto-flow:column;gap:1px;border:1px solid var(--line-2);background:var(--line-2);line-height:1.35;text-align:left;font-variant-numeric:tabular-nums}
 .art-meta span{padding:6px 14px;background:var(--surface)}
 .art-meta span+span::before{content:none}
@@ -1819,5 +1816,5 @@ a.card[data-cat=telecomunicaciones]{--p-blog-cs:64px 32px;--p-blog-cp:left 0 bot
 @media (prefers-reduced-motion:no-preference){.art-hero .art-meta{animation:p-heroes-unveil .9s var(--ease) 1.2s backwards}}
 .art-main .prose h2{position:relative}
 .art-main .prose h2::before{transition:color .2s}
-.art-main .prose h2::after{left:4.5px;top:calc(.525rem - 3px);transform:scale(0);transition:transform .35s var(--ease)} /* centro del «01» */
+.art-main .prose h2::after{left:4.5px;top:calc(.525rem - 3px);transform:scale(0);transition:transform .35s var(--ease)}
 @media (max-width:1060px){.prose h2.p-blog-now::before{color:transparent}.prose h2.p-blog-now::after{transform:none}}
