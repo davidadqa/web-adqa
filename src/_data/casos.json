@@ -9,7 +9,7 @@
   "cliente": "Consorci Sanitari Alt Penedès-Garraf",
   "corto": "Consorci Sanitari Alt Penedès-Garraf",
   "titulo": "Consorci Sanitari Alt Penedès-Garraf: hospitales conectados entre sí",
-  "sector": "Sanidad · Institución pública · Varios hospitales",
+  "sector": "Sanidad · Consorcio público, varios hospitales",
   "sectorTag": "sanidad",
   "resumen": "Proyecto y mantenimiento 24/7 de informática y telecomunicaciones para conectar entre sí los hospitales del consorcio. Es uno de los proyectos más grandes que hemos hecho.",
   "highlight": {
@@ -67,18 +67,10 @@
     {
      "n": "100 Gb/s",
      "l": "de capacidad entre sedes, con fibra oscura MUX-DEMUX"
-    },
-    {
-     "n": "Todos",
-     "l": "los centros, con WiFi para pacientes y usuarios"
-    },
-    {
-     "n": "Julio de 2021",
-     "l": "fin del proyecto; el mantenimiento sigue en curso"
     }
    ],
    "texto": [
-    "Los hospitales del consorcio están conectados entre sí y todos sus centros tienen WiFi para pacientes y usuarios. El proyecto terminó en julio de 2021 y el mantenimiento sigue en curso."
+    "Los hospitales del consorcio están conectados entre sí y todos sus centros tienen WiFi para pacientes y usuarios."
    ]
   },
   "antesDespues": null,
@@ -119,7 +111,7 @@
   "cliente": "Iberpotash, Mines de Súria",
   "corto": "Iberpotash, Mines de Súria",
   "titulo": "Iberpotash, Mines de Súria: fibra óptica a 1.000 m de profundidad",
-  "sector": "Minería · Mina de Súria",
+  "sector": "Industria y minería · Mina de Súria",
   "sectorTag": "industria",
   "resumen": "Fibra óptica y servicios de telecomunicaciones en el interior de la mina, de la instalación al mantenimiento.",
   "highlight": {
@@ -219,9 +211,9 @@
   "cliente": null,
   "corto": "Detección y respuesta gestionada para una cadena hotelera",
   "titulo": "Detección y respuesta gestionada para una cadena hotelera internacional",
-  "sector": "Hostelería · Sedes en varios países",
+  "sector": "Hostelería y HORECA · Cadena hotelera internacional",
   "sectorTag": "horeca",
-  "resumen": "Equipos, red, identidad y Microsoft 365 en un mismo modelo, con WatchGuard EPDR, NDR y Total MDR. Lo desplegamos sede a sede en un plan de 8 semanas y somos su punto de contacto.",
+  "resumen": "Equipos, red y Microsoft 365 en un mismo modelo, con WatchGuard EPDR, NDR y Total MDR. Lo desplegamos sede a sede en un plan de 8 semanas y somos su punto de contacto.",
   "highlight": {
    "n": "8 semanas",
    "l": "de plan por fases, sede a sede"
@@ -242,8 +234,7 @@
   ],
   "reto": [
    "Una cadena hotelera internacional, con sedes en varios países, quería unificar la seguridad de sus equipos, su red, su identidad corporativa y Microsoft 365. Un mismo modelo gestionado y un solo interlocutor.",
-   "Las herramientas de cada capa funcionaban por separado. Faltaba relacionar lo que pasaba en cada una para ver el conjunto.",
-   "Antes de empezar, un pentest sirvió para medir el nivel real de protección y fijar prioridades."
+   "Las herramientas de cada capa funcionaban por separado. Faltaba relacionar lo que pasaba en cada una para ver el conjunto."
   ],
   "hicimos": [
    {
@@ -274,12 +265,12 @@
      "l": "de plan por fases"
     },
     {
-     "n": "4 capas",
-     "l": "en un mismo modelo: equipos, red, identidad y Microsoft 365"
+     "n": "3 servicios",
+     "l": "de WatchGuard en un mismo modelo: EPDR, NDR y Total MDR"
     }
    ],
    "texto": [
-    "La seguridad de los equipos, la red, la identidad y Microsoft 365 funciona ahora en un mismo modelo, con un mismo contacto para todo.",
+    "La seguridad de los equipos, la red y Microsoft 365 funciona ahora en un mismo modelo, con un mismo contacto para todo.",
     "El trabajo sigue después de la puesta en marcha. En una de las revisiones periódicas propusimos añadir la gestión de parches, y la cadena la incorporó."
    ]
   },
@@ -293,7 +284,7 @@
     [
      "Herramientas de seguridad",
      "Cada capa funcionaba por separado",
-     "Equipos, red, identidad y Microsoft 365 en un mismo modelo"
+     "Equipos, red y Microsoft 365 en un mismo modelo"
     ],
     [
      "Lo que pasa en cada capa",
@@ -306,7 +297,7 @@
   "foto": {
    "tipo": "equipo",
    "slug": "equipo-oficina-logo-adqa",
-   "pos": "50% 50%"
+   "pos": "100% 50%"
   },
   "otros": [
    "salud",
@@ -336,7 +327,7 @@
   "cliente": "KUKA Robots Iberia",
   "corto": "KUKA Robots Iberia",
   "titulo": "KUKA Robots Iberia: dirección TIC y networking internacional",
-  "sector": "Robótica · Multinacional alemana",
+  "sector": "Industria y minería · Robótica, multinacional alemana",
   "sectorTag": "industria",
   "resumen": "Esta multinacional alemana de robótica nos confía el mantenimiento y la mejora de sus infraestructuras. Además, ha puesto en nuestras manos la dirección de su servicio TIC.",
   "highlight": {
@@ -430,7 +421,7 @@
   "cliente": "Consell Comarcal del Garraf",
   "corto": "Consell Comarcal del Garraf",
   "titulo": "Consell Comarcal del Garraf: sistemas, seguridad y radioenlace",
-  "sector": "Administración pública · Dos sedes administrativas",
+  "sector": "Administración e instituciones · Consell comarcal, dos sedes",
   "sectorTag": "administracion",
   "resumen": "Mantenimiento, seguridad y telecomunicaciones para una institución que trabaja con ADQA desde hace más de 15 años.",
   "highlight": {
@@ -540,12 +531,12 @@
   "anon": true,
   "cliente": null,
   "corto": "Licenciamiento mixto de Google Workspace",
-  "titulo": "Licenciamiento mixto: −34 % en los 40 puestos de Google Workspace",
-  "sector": "Pyme · 40 puestos de Google Workspace",
+  "titulo": "Licenciamiento mixto: −34 % en los 40 puestos de Google Workspace",
+  "sector": "Empresas y entidades · Pyme, 40 puestos",
   "sectorTag": "empresas",
-  "resumen": "Revisamos el uso real de cada persona. La mitad de los 40 puestos pasó a Business Starter sin perder nada de lo que usaba, y el coste anual de esas licencias bajó un 34 %.",
+  "resumen": "Revisamos el uso real de cada persona. La mitad de los 40 puestos pasó a Business Starter sin perder nada de lo que usaba, y el coste anual de esas licencias bajó un 34 %.",
   "highlight": {
-   "n": "−34 %",
+   "n": "−34 %",
    "l": "en las licencias de los 40 puestos existentes"
   },
   "icon": "i-cloud",
@@ -587,7 +578,7 @@
   "resultado": {
    "cifras": [
     {
-     "n": "−34 %",
+     "n": "−34 %",
      "l": "de coste anual en las licencias de los 40 puestos existentes"
     },
     {
@@ -596,8 +587,8 @@
     }
    ],
    "texto": [
-    "El coste anual de las licencias de los 40 puestos que ya tenía bajó un 34 %. Nadie perdió una función que estuviera usando.",
-    "Las 20 altas nuevas y la IA avanzada se contrataron aparte, cada una en el plan que le correspondía."
+    "El coste anual de las licencias de los 40 puestos que ya tenía bajó un 34 %. Nadie perdió una función que estuviera usando.",
+    "Las 20 altas y el complemento de IA se contrataron aparte, cada uno en el plan que le correspondía."
    ]
   },
   "antesDespues": {
@@ -614,8 +605,8 @@
     ],
     [
      "Coste anual de esos 40 puestos",
-     "100 %",
-     "66 % (−34 %)"
+     "100 %",
+     "66 % (−34 %)"
     ],
     [
      "Incorporaciones",
@@ -642,16 +633,16 @@
   ],
   "pendiente": [
    "Decidir si es publiquen els imports anuals dels 40 llocs (abans i després), amb la data de les tarifes, o només els percentatges, com ara.",
-   "Sector de la pime (sectorTag provisional: servicios).",
+   "Sector de la pime (sectorTag provisional: empresas, «Empresas y entidades»).",
    "Any del canvi de llicències.",
    "Les dades de Google (5 TB a Business Plus, 30 GB a Business Starter) són de quan es va fer el cas: revisar si han canviat.",
    "Complement d'IA: no se'n diu el nom comercial (el del WP ja no existeix). Confirmar quin complement tenen ara aquestes 10 persones.",
-   "El −34 % només val per als 40 llocs existents. A /google-workspace/licenciamiento-mixto-google-workspace/, l'h3 del cas i el TL;DR encara el generalitzen a tota la factura.",
+   "El −34 % només val per als 40 llocs existents. A /google-workspace/licenciamiento-mixto-google-workspace/, l'h3 del cas i el TL;DR encara el generalitzen a tota la factura.",
    "301 de l'URL amb «-2» només si existeix a www.adqa.com (D12)."
   ],
   "seo": {
-   "title": "Google Workspace: −34 % en 40 puestos | ADQA",
-   "description": "Licenciamiento mixto de Google Workspace en una pyme: 20 de sus 40 puestos pasaron a Business Starter y el coste anual de esas licencias bajó un 34 %."
+   "title": "Google Workspace: −34 % en 40 puestos | ADQA",
+   "description": "Licenciamiento mixto de Google Workspace en una pyme: 20 de sus 40 puestos pasaron a Business Starter y el coste anual de esas licencias bajó un 34 %."
   },
   "publicado": "2026-11-04"
  },
@@ -665,7 +656,7 @@
   "cliente": "Granier",
   "corto": "Granier",
   "titulo": "Granier: redes y centralita virtual, de la sede a las tiendas",
-  "sector": "Multisede · Sede central, oficinas, fábricas y tiendas",
+  "sector": "Empresas y entidades · Sede central, fábricas y tiendas",
   "sectorTag": "empresas",
   "resumen": "Informática, telecomunicaciones y cloud para toda la organización, de la nueva sede central a cada tienda.",
   "highlight": {
@@ -721,7 +712,7 @@
    },
    {
     "titulo": "Cloud para aplicaciones corporativas",
-    "texto": "Alojamos en nuestro cloud distintas aplicaciones corporativas."
+    "texto": "Alojamos en cloud distintas aplicaciones corporativas."
    },
    {
     "titulo": "Google Workspace",
@@ -735,7 +726,7 @@
   "resultado": {
    "cifras": [],
    "texto": [
-    "Llevamos el mantenimiento completo de todas las instalaciones, de la sede central a las tiendas. Las sedes comparten una centralita virtual y las aplicaciones corporativas están alojadas en nuestro cloud."
+    "Llevamos el mantenimiento completo de todas las instalaciones, de la sede central a las tiendas. Las sedes comparten una centralita virtual y las aplicaciones corporativas están alojadas en cloud."
    ]
   },
   "antesDespues": null,
@@ -757,9 +748,10 @@
   ],
   "pendiente": [
    "Falta un resultat amb xifra: p. ex. quantes botigues, fàbriques i oficines gestionem, quantes extensions té la centraleta virtual o quants usuaris de Google Workspace hem format.",
-   "Sector d'activitat de Granier: no surt a les fonts; ara diem només «Multisede».",
+   "Sector d'activitat de Granier: no surt a les fonts; ara diem «Empresas y entidades · Sede central, fábricas y tiendas» (el sector, provisional).",
    "Any d'inici de la relació i any de la nova seu central.",
-   "Foto: 768 px d'ample; ja és a la llista de fotos (la botiga o la seu central en alta resolució, amb permís)."
+   "Foto: 768 px d'ample; ja és a la llista de fotos (la botiga o la seu central en alta resolució, amb permís).",
+   "Cloud: si les aplicacions són al cloud d'ADQA (el nostre datacenter), es pot dir «en nuestro cloud»; ara diem només «en cloud», com la font. Atenció: /sistemas-cloud/ («Los dos modelos a la vez») i /sistemas-cloud/datacenter/ («Aplicaciones que ya viven en nuestro cloud») ja ho afirmen: alinear-ho tot amb el que es confirmi."
   ],
   "seo": {
    "title": "Granier: redes y centralita virtual entre sedes | ADQA",
@@ -872,7 +864,7 @@
   "foto": {
    "tipo": "equipo",
    "slug": "soporte-tecnico-pantallas",
-   "pos": "50% 50%"
+   "pos": "100% 50%"
   },
   "otros": [
    "pimec",
@@ -880,7 +872,8 @@
    "deteccion-hotel"
   ],
   "pendiente": [
-   "Confirmar que és un sol client (no un cas compost) i que no és el Consorci Sanitari Alt Penedès-Garraf, ni Sant Joan de Déu, ni cap altre client amb nom.",
+   "Confirmar que és un sol client real, no un cas compost (si fos compost, no es pot publicar com a cas d'èxit), i que no és el Consorci Sanitari Alt Penedès-Garraf, ni Sant Joan de Déu, ni cap altre client amb nom.",
+   "Amb el filtre «Sanidad» només queden aquest cas i el del Consorci, i al mur de clients surten el Consorci i Sant Joan de Déu: si el client és al mur, cal treure'l del sector «Sanidad» o del mur, perquè no es pugui deduir qui és.",
    "Data de posada en marxa i període observat per a «0 caídas totales de conectividad» i «sin incidencias de telefonía IP» (font: monitoratge o client). Mentrestant no es publiquen.",
    "Xifra d'amenaces bloquejades per WatchGuard EPDR, amb període, treta de la consola (el WP deia «miles»). Fins llavors no es publica.",
    "Quants proveïdors d'internet hi ha ara a la seu principal (el WP deia «dos» al punt de partida i «varios» a la solució).",
@@ -903,7 +896,7 @@
   "cliente": "MIDBAN",
   "corto": "MIDBAN",
   "titulo": "MIDBAN: WiFi en cámaras frigoríficas",
-  "sector": "Sector HORECA · Cámaras frigoríficas",
+  "sector": "Hostelería y HORECA · Cámaras frigoríficas",
   "sectorTag": "horeca",
   "resumen": "WiFi en las cámaras frigoríficas de su delegación Congelats Romero, con mantenimiento permanente del WiFi y de la telefonía.",
   "highlight": {
@@ -995,12 +988,12 @@
   "anon": true,
   "cliente": null,
   "corto": "Software a medida para la gestión de expedientes",
-  "titulo": "Software a medida para expedientes: −75 % de tiempo administrativo",
-  "sector": "Institución · Apoyo a emprendedores",
+  "titulo": "Software a medida para expedientes: −75 % de tiempo administrativo",
+  "sector": "Administración e instituciones · Apoyo a emprendedores",
   "sectorTag": "administracion",
   "resumen": "Una aplicación a medida para una entidad que tramita unos 300 expedientes al año. Las memorias se generan solas y cada expediente pide una cuarta parte del tiempo administrativo.",
   "highlight": {
-   "n": "−75 %",
+   "n": "−75 %",
    "l": "de tiempo de gestión administrativa por expediente"
   },
   "icon": "i-code",
@@ -1043,11 +1036,11 @@
   "resultado": {
    "cifras": [
     {
-     "n": "−75 %",
+     "n": "−75 %",
      "l": "de tiempo de gestión administrativa por expediente"
     },
     {
-     "n": "> 1.000",
+     "n": "> 1.000",
      "l": "expedientes gestionados desde la puesta en marcha"
     }
    ],
@@ -1102,17 +1095,17 @@
    "licenciamiento"
   ],
   "pendiente": [
-   "Què mesura el −75 %: el temps de gestió administrativa per expedient (com diu ara el text) o el temps total. Si és el total, no quadra amb que el temps alliberat passi a assessorament.",
+   "Què mesura el −75 %: el temps de gestió administrativa per expedient (com diu ara el text) o el temps total. Si és el total, no quadra amb que el temps alliberat passi a assessorament.",
    "«De ~10 h a ~2,5 h per expedient» no surt a la fitxa: les 10 h surten de 3.000 h / 300 expedients, que són hores totals (amb assessorament). Decidir si es corregeix també a l'anonCase de /desarrollo-software-medida/ (xifra destacada «~2,5 h») i a l'stat «-75%» del resum de la mateixa pàgina.",
    "Confirmar les xifres del client: uns 300 expedients l'any, unes 3.000 hores anuals dels tècnics i més de 1.000 expedients gestionats.",
    "Any de posada en marxa (el WP deia «cuatro años después de la implantación», sense data).",
-   "Si l'entitat és pública (sectorTag administracion, provisional) o privada / associació.",
+   "Si l'entitat és pública (sectorTag administracion, provisional) o privada / associació. Ara surt al filtre «Administración e instituciones»; si és privada, passar-la a «Empresas y entidades».",
    "Base legal del tractament de dades: confirmar que és el consentiment (en una entitat pública pot ser una altra). El text ja no parla de «datos sensibles».",
    "Testimoni del WP sense autor («Antes dedicábamos gran parte del tiempo…»): demanar-ne l'autoria i el permís, o descartar-lo."
   ],
   "seo": {
-   "title": "Software a medida: −75 % de tiempo administrativo | ADQA",
-   "description": "Aplicación a medida para una entidad de apoyo a emprendedores: memorias automáticas, consentimiento RGPD y un 75 % menos de tiempo administrativo."
+   "title": "Software a medida: −75 % de tiempo administrativo | ADQA",
+   "description": "Aplicación a medida para una entidad de apoyo a emprendedores: memorias automáticas, consentimiento RGPD y un 75 % menos de tiempo administrativo."
   },
   "publicado": "2026-11-04"
  },
@@ -1126,7 +1119,7 @@
   "cliente": "HITECSA",
   "corto": "HITECSA",
   "titulo": "HITECSA: WiFi en la fábrica y programas a medida",
-  "sector": "Industria · Fábrica en Vilanova i la Geltrú",
+  "sector": "Industria y minería · Fábrica en Vilanova i la Geltrú",
   "sectorTag": "industria",
   "resumen": "Desde hace años, HITECSA nos confía toda la gestión de su informática, sus telecomunicaciones y su cloud.",
   "highlight": {
@@ -1225,7 +1218,7 @@
   "cliente": null,
   "corto": "Pentesting web y APIs para una cadena hotelera",
   "titulo": "Pentest de web y APIs: un hallazgo crítico cerrado en menos de 72 horas",
-  "sector": "Hostelería · Cadena hotelera con varias marcas",
+  "sector": "Hostelería y HORECA · Cadena hotelera con varias marcas",
   "sectorTag": "horeca",
   "resumen": "Revisamos con un pentest la web, las APIs de reservas y los micrositios de una cadena hotelera. Un hallazgo crítico quedó corregido y verificado en menos de 72 horas.",
   "highlight": {
@@ -1321,7 +1314,7 @@
   "foto": {
    "tipo": "equipo",
    "slug": "equipo-soporte-auriculares",
-   "pos": "50% 50%"
+   "pos": "100% 50%"
   },
   "otros": [
    "salud",
@@ -1352,7 +1345,7 @@
   "cliente": "PIMEC",
   "corto": "PIMEC",
   "titulo": "PIMEC: un nuevo CPD junto con la reforma de su sede",
-  "sector": "Sede corporativa · Varias sedes",
+  "sector": "Empresas y entidades · Sede corporativa y varias sedes",
   "sectorTag": "empresas",
   "resumen": "Mantenimiento, telecomunicaciones, WiFi y un nuevo CPD junto con la reforma de su sede. También llevamos su cloud, su seguridad y el suministro continuado de tecnología.",
   "highlight": {
@@ -1417,7 +1410,7 @@
    },
    {
     "titulo": "Cloud",
-    "texto": "Alojamos sus aplicaciones corporativas en nuestro cloud."
+    "texto": "Alojamos en cloud sus aplicaciones corporativas."
    },
    {
     "titulo": "Suministro continuado",
@@ -1427,7 +1420,7 @@
   "resultado": {
    "cifras": [],
    "texto": [
-    "PIMEC tiene su CPD en su propia sede y aloja sus aplicaciones corporativas en nuestro cloud: los dos modelos a la vez. Seguimos con su mantenimiento y con el suministro continuado de equipos."
+    "Creamos un nuevo CPD junto con la reforma de su sede, y alojamos en cloud sus aplicaciones corporativas. Seguimos con su mantenimiento y con el suministro continuado de equipos."
    ]
   },
   "antesDespues": null,
@@ -1449,9 +1442,10 @@
   ],
   "pendiente": [
    "Falta un resultat amb xifra: p. ex. quantes seus hi ha interconnectades, quants punts d'accés WiFi mantenim, quants equips subministrem a l'any o l'any del nou CPD.",
-   "Tipus d'organització de PIMEC: no surt a les fonts; ara diem «Sede corporativa · Varias sedes».",
+   "Tipus d'organització de PIMEC: no surt a les fonts; ara diem «Empresas y entidades · Sede corporativa y varias sedes» (el sector, provisional).",
    "Confirmar que la reforma i el CPD ja estan acabats: la presentació en parlava en present («las reformas que están desarrollando»).",
-   "Foto: 900 px d'ample; ja és a la llista de fotos (el nou CPD o l'auditori en alta resolució, amb permís)."
+   "Foto: 900 px d'ample; ja és a la llista de fotos (el nou CPD o l'auditori en alta resolució, amb permís).",
+   "Cloud: si les aplicacions són al cloud d'ADQA (el nostre datacenter), es pot dir «en nuestro cloud»; ara diem només «en cloud», com la font. Atenció: /sistemas-cloud/ («Los dos modelos a la vez») i /sistemas-cloud/datacenter/ («Aplicaciones que ya viven en nuestro cloud») ja ho afirmen: alinear-ho tot amb el que es confirmi."
   ],
   "seo": {
    "title": "PIMEC: nuevo CPD, WiFi Ruckus y mantenimiento | ADQA",
@@ -1469,7 +1463,7 @@
   "cliente": "Ajuntament de Vilanova i la Geltrú",
   "corto": "Ajuntament de Vilanova i la Geltrú",
   "titulo": "Ajuntament de Vilanova i la Geltrú: la web municipal",
-  "sector": "Administración pública · Web municipal",
+  "sector": "Administración e instituciones · Web municipal",
   "sectorTag": "administracion",
   "resumen": "La web municipal, de la ordenación del contenido a la programación, y telecomunicaciones e instalaciones para empresas municipales.",
   "highlight": {
@@ -1556,12 +1550,12 @@
   "anon": true,
   "cliente": null,
   "corto": "Servidores y almacenamiento a la medida de la carga real",
-  "titulo": "Servidores a la medida de la carga real: más de un 25 % de ahorro",
-  "sector": "Industria · Fabricante de maquinaria",
+  "titulo": "Servidores a la medida de la carga real: más de un 25 % de ahorro",
+  "sector": "Industria y minería · Fabricante de maquinaria",
   "sectorTag": "industria",
-  "resumen": "Tres servidores según su función, almacenamiento con la ampliación prevista, copias con Veeam y red interna a 20 Gbps. Más de un 25 % de ahorro frente a la propuesta previa.",
+  "resumen": "Tres servidores según su función, almacenamiento con la ampliación prevista, copias con Veeam y red interna a 20 Gbps. Más de un 25 % de ahorro frente a la propuesta previa.",
   "highlight": {
-   "n": "> 25 %",
+   "n": "> 25 %",
    "l": "de ahorro frente a la propuesta previa"
   },
   "icon": "i-tool",
@@ -1608,7 +1602,7 @@
   "resultado": {
    "cifras": [
     {
-     "n": "> 25 %",
+     "n": "> 25 %",
      "l": "de ahorro frente a la propuesta previa"
     },
     {
@@ -1621,7 +1615,7 @@
     }
    ],
    "texto": [
-    "Ajustamos el proyecto a lo que la empresa necesitaba, con margen para crecer. El coste quedó más de un 25 % por debajo de la propuesta que ya tenía.",
+    "Ajustamos el proyecto a lo que la empresa necesitaba, con margen para crecer. El coste quedó más de un 25 % por debajo de la propuesta que ya tenía.",
     "Cuando necesite más espacio, el almacenamiento crece con las bandejas ya previstas. Las copias y la red interna están preparadas para ese crecimiento."
    ]
   },
@@ -1667,7 +1661,7 @@
   ],
   "pendiente": [
    "Confirmar qui és el client i que no és KUKA Robots Iberia ni HITECSA (ni cap client amb nom). Si ho fos, no es pot publicar com a cas anònim al costat del cas amb nom.",
-   "Base de càlcul del «més d'un 25 %» respecte de la proposta prèvia.",
+   "Base de càlcul del «més d'un 25 %» respecte de la proposta prèvia.",
    "Any de posada en marxa (el WP deia «año y medio después», sense data). Si es pot dir que el client continua satisfet, o que en fem el manteniment.",
    "Edició de Veeam: el WP deia «Premium Universal» al text i «Premium» a la taula. El text nou diu només «Veeam Data Platform».",
    "Marca i model dels servidors i de les cabines: no es publiquen (D9) tret que el client ho autoritzi.",
@@ -1676,7 +1670,7 @@
   ],
   "seo": {
    "title": "Servidores a la medida de la carga real | ADQA",
-   "description": "Renovación de servidores y almacenamiento para una empresa industrial: copias con Veeam, red a 20 Gbps y más de un 25 % de ahorro."
+   "description": "Renovación de servidores y almacenamiento para una empresa industrial: copias con Veeam, red a 20 Gbps y más de un 25 % de ahorro."
   },
   "publicado": "2026-11-04"
  },
@@ -1690,7 +1684,7 @@
   "cliente": null,
   "corto": "Nueva web para un museo",
   "titulo": "Nueva web para un museo: un acceso claro para cada tipo de público",
-  "sector": "Cultura · Museo",
+  "sector": "Administración e instituciones · Museo",
   "sectorTag": "administracion",
   "resumen": "Ordenamos la web de un museo con un acceso para cada tipo de público. Diseño nuevo con su identidad de siempre, base técnica actualizada y dos idiomas en lugar de tres.",
   "highlight": {
@@ -1755,7 +1749,7 @@
     [
      "Mensajes",
      "Secciones sin un mensaje propio",
-     "Un claim que presenta cada sección"
+     "Un mensaje propio en cada sección"
     ],
     [
      "Diseño",
@@ -1783,7 +1777,7 @@
   "foto": {
    "tipo": "equipo",
    "slug": "equipo-programando-dos-monitores",
-   "pos": "55% 50%"
+   "pos": "0% 50%"
   },
   "otros": [
    "expedientes",
@@ -1797,7 +1791,8 @@
    "Any del projecte.",
    "Nombre d'extensions (plugins) abans i després, si es vol una xifra per a la targeta (ara la dada destacada és només text).",
    "Quin idioma es va deixar i per què (el WP deia que «no aportaba tráfico real», sense cap dada). Confirmar que la web continua en català i castellà.",
-   "Estabilitat: el WP deia «Problemas constantes» → «Web estable», sense mètrica. Si es vol dir, cal una dada d'incidències i el vistiplau del museu."
+   "Estabilitat: el WP deia «Problemas constantes» → «Web estable», sense mètrica. Si es vol dir, cal una dada d'incidències i el vistiplau del museu.",
+   "Si el museu és una entitat pública: ara surt al filtre «Administración e instituciones» (sectorTag administracion, provisional). Si és privat, passar-lo a «Empresas y entidades»."
   ],
   "seo": {
    "title": "Nueva web para un museo, con accesos por público | ADQA",
