@@ -62,9 +62,15 @@
   }),{threshold:.15,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   window.__adqaRv=1; /* el script del <head> deja html.adqa-js (contenido oculto hasta aparecer) solo si llegamos aquí */
-  addEventListener('beforeprint',()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>{
+  addEventListener('beforeprint',()=>{document.querySelectorAll('.rv:not(.in)').forEach(el=>{
     el.classList.add('in');el.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
-  }));
+  });
+    /* P2-09: la celda central del cajetín de cada hoja (@page, CSS de chrome): titular · dirección · fecha */
+    const d=new Date().toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'});
+    const t=[(document.querySelector('h1')||{}).textContent||document.title,location.host+location.pathname,d].map(x=>x.replace(/\s+/g,' ').trim()).join(' · ').replace(/["\\]/g,'\\$&');
+    let s=document.getElementById('p-chrome-print');if(!s){s=document.createElement('style');s.id='p-chrome-print';document.head.append(s)}
+    s.textContent='@media print{@page{@bottom-center{content:"'+t+'"}}}';
+  });
 
   /* card spotlight follows pointer */
   document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{

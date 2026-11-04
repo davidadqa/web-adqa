@@ -1003,6 +1003,36 @@ main section[id],main article[id]{scroll-margin-top:96px}
 :is(.dark-sec,body>footer,.svc.dark,.mega-feature) ::selection{background:rgba(227,39,114,.35);color:#fff}
 :is(.contact-info,.btn-primary) ::selection,.btn-primary::selection{background:#fff;color:var(--pink-600)}
 
+/* — 2a passada: P2-09 · imprimir es un plano. Cajetín (texto central: JS, beforeprint) en cajas de margen: Chromium ≥ 131 */
+@media print{
+  @page{size:A4;margin:14mm 14mm 26mm;
+    @top-left-corner{content:"";border:solid #bdb7b2;border-width:0 .75pt .75pt 0;margin:6mm 3mm 3mm 6mm}
+    @top-right-corner{content:"";border:solid #bdb7b2;border-width:0 0 .75pt .75pt;margin:6mm 6mm 3mm 3mm}
+    @bottom-left-corner{content:"";border:solid #bdb7b2;border-width:.75pt .75pt 0 0;margin:3mm 3mm 18mm 6mm}
+    @bottom-right-corner{content:"";border:solid #bdb7b2;border-width:.75pt 0 0 .75pt;margin:3mm 6mm 18mm 3mm}
+    @bottom-left{content:"A·D·Q·A";font:700 8pt Figtree,sans-serif;letter-spacing:.06em;color:#E32772;border:.75pt solid #bdb7b2;margin:5mm 0 8mm;padding:0 3mm;width:22mm}
+    @bottom-center{font:500 7.5pt/1.3 Figtree,sans-serif;color:#444;border:solid #bdb7b2;border-width:.75pt 0;margin:5mm 0 8mm;padding:0 3mm;text-align:left}
+    @bottom-right{content:counter(page) " / " counter(pages);font:600 7.5pt Figtree,sans-serif;color:#444;border:.75pt solid #bdb7b2;margin:5mm 0 8mm;padding:0 3mm;width:22mm;text-align:center}
+  }
+  .nav-shell,.skip,.glow,.p-heroes-art,.p-heroes-mark,.p-heroes-404,.form,.hero-ctas,.btn,.proj-nav,.p-proof-rail,.marquee,.orbit-wrap,.p-content-loop,[class*=revisio-],footer nav,.foot-claim,.ph,
+  :is(.contact-info,.svc.dark,.st)::after,.contact-info::before{display:none!important}
+  *,::before,::after{animation:none!important;transition:none!important}
+  .adqa-js .rv,.fade-in,.hero h1 .w{opacity:1!important;transform:none!important;filter:none!important}
+  html{font-size:14px}
+  body{zoom:.84}
+  .hero,.page-hero{padding:4mm 0}
+  .sec{padding:7mm 0}
+  .card,.st,.cmp,.metric,.stat{padding:16px 18px}
+  .svc{min-height:0}
+  .shot{aspect-ratio:21/9}
+  :is(.dark-sec,.svc.dark,.st,.contact-info,body>footer),:is(.dark-sec,.svc.dark,.st,.contact-info,body>footer) *{background:none!important;color:var(--ink)!important;border-color:var(--line)!important;box-shadow:none!important}
+  :is(.dark-sec,.svc.dark,.st,.contact-info){border:1px solid var(--line);position:static}
+  body>footer{border-top:1px solid var(--line);border-radius:0;margin-top:6mm;padding-top:6mm}
+  body>footer img{filter:invert(1)}
+  .card,.cmp,.case-anon,.metric,.stat,.quote,.steps li,.st{break-inside:avoid}
+  :is(.prose,.doc,.cert-txt) a[href^="http"]::after{content:" (" attr(href) ")";font-size:.85em;color:var(--muted);overflow-wrap:anywhere}
+}
+
 /* ======================= Poesía · heroes — heros, ilustración por área, «En resumen» y cabeceras de sección.
    El estado de base es el final; lo que «antes» está oculto cuelga de no-preference. */
 
