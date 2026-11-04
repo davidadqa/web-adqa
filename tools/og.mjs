@@ -17,9 +17,9 @@
 // y con --icons, cuando cambia favicon.svg.
 //
 // Variantes: portada (el lema con la tecla «una» y la órbita), servicio y categoría del blog (H1 a la izquierda e
-// ilustración del área a la derecha), artículo («Recursos · <categoría>», minutos de lectura y la ilustración de la
+// ilustración del área a la derecha), artículo («Respuestas · <categoría>», minutos de lectura y la ilustración de la
 // categoría arriba a la derecha), empresa (órbita), certificados y legal (una hoja dibujada con su sello) e índice de
-// recursos (las baldosas de las categorías). JPEG de calidad 82; si pasa de 100 KB, baja la calidad.
+// /recursos/, «Respuestas» (las baldosas de las categorías). JPEG de calidad 82; si pasa de 100 KB, baja la calidad.
 import { mkdtemp, mkdir, readFile, readdir, writeFile, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -172,7 +172,7 @@ function describe(url, html) {
     let art = c && CAT_ART[c.slug];
     if (c?.slug === "workspace" && /Microsoft 365/.test(d.text) && !/Google/.test(d.text)) art = "microsoft-365";
     if (c?.slug === "web" && /software/i.test(d.text)) art = "desarrollo-software-medida";
-    return { kind: "article", eyebrow: c ? `Recursos · ${c.name}` : "Recursos", art, foot: mins ? `Guía · ${mins} min de lectura` : "Guía" };
+    return { kind: "article", eyebrow: c ? `Respuestas · ${c.name}` : "Respuestas", art, foot: mins ? `${mins} min de lectura` : "Respuestas" };
   };
 
   if (area === "home") {
@@ -191,8 +191,8 @@ function describe(url, html) {
     const seg = url.split("/").filter(Boolean);
     const c = blog.bySlug[cat] || null, catPage = !cat && seg.length === 2 && blog.bySlug[seg[1]];
     if (cat) Object.assign(d, article(c)); // artículo (la categoría la marca <body data-cat>)
-    else if (catPage) Object.assign(d, { kind: "service", eyebrow: `Recursos · ${catPage.name}`, art: CAT_ART[catPage.slug], foot: "Guías prácticas" });
-    else if (seg.length === 1) Object.assign(d, { kind: "blog", eyebrow: "Recursos", deco: "tiles", foot: "Guías prácticas para empresas",
+    else if (catPage) Object.assign(d, { kind: "service", eyebrow: `Respuestas · ${catPage.name}`, art: CAT_ART[catPage.slug], foot: "Preguntas y respuestas" });
+    else if (seg.length === 1) Object.assign(d, { kind: "blog", eyebrow: "Respuestas", deco: "tiles", foot: "Respuestas prácticas para empresas",
       tiles: blog.categories.map((x) => x.icon.replace(/^i-/, "")) });
     else Object.assign(d, article(null)); // un artículo sin categoría reconocible
   } else {
