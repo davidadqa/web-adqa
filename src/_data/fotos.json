@@ -1,4 +1,71 @@
 {
+ "Técnico de soporte revisando en una pantalla el estado de los servidores y los equipos de una empresa": {
+  "base": "/assets/fotos/tecnico-soporte-revisando-pantalla-estado-servidores-equipos",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "21/9",
+  "w": 1920,
+  "h": 823,
+  "alt": "Un técnico de soporte de ADQA, con auriculares, revisa varias pantallas en su puesto de trabajo",
+  "altRevisado": true,
+  "archivo": "foto-058.jpg",
+  "pagina": "/recursos/soporte-it-reactivo-o-proactivo/"
+ },
+ "equipo-folleto-anxanet": {
+  "base": "/assets/fotos/equipo-folleto-anxanet",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Tres personas del equipo de ADQA miran sonriendo un folleto de Anxanet",
+  "altRevisado": true,
+  "archivo": "equipo-9.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "equipo-grupo-reunion": {
+  "base": "/assets/fotos/equipo-grupo-reunion",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Cinco personas del equipo de ADQA, de pie en la oficina, escuchan con atención",
+  "altRevisado": true,
+  "archivo": "equipo-7.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "equipo-llamada-oficina": {
+  "base": "/assets/fotos/equipo-llamada-oficina",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Una persona del equipo de ADQA atiende una llamada en su mesa, delante del ordenador",
+  "altRevisado": true,
+  "archivo": "equipo-10.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
  "equipo-oficina-logo-adqa": {
   "base": "/assets/fotos/equipo-oficina-logo-adqa",
   "widths": [
@@ -71,6 +138,40 @@
   "alt": "Una persona del equipo de ADQA habla por el móvil frente a dos monitores, uno con código y otro con un documento",
   "altRevisado": true,
   "archivo": "equipo-6.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "oficina-rotulo-adqa": {
+  "base": "/assets/fotos/oficina-rotulo-adqa",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Las letras de ADQA en relieve en una pared de la oficina",
+  "altRevisado": true,
+  "archivo": "equipo-8.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo"
+ },
+ "soporte-tecnico-pantallas": {
+  "base": "/assets/fotos/soporte-tecnico-pantallas",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de soporte de ADQA, con auriculares, trabaja con dos monitores, un portátil y un teléfono",
+  "altRevisado": true,
+  "archivo": "equipo-11.jpg",
   "pagina": "(equipo)",
   "tipo": "equipo"
  }

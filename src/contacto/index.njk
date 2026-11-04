@@ -32,14 +32,14 @@ faq:
 .reach .card{display:grid;gap:10px;align-content:start;padding:26px}
 .reach .ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
 .reach .ico svg{width:20px;height:20px}
-.reach .k{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.reach .v{font-size:1.08rem;font-weight:600;color:var(--ink);line-height:1.35;overflow-wrap:anywhere}
+.reach .k{font-size:var(--fs-sm);font-weight:600;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--muted)}
+.reach .v{font-size:var(--fs-lead);font-weight:600;color:var(--ink);line-height:1.35;overflow-wrap:anywhere}
 .reach a.v:hover{color:var(--pink)}
-.reach p{font-size:.93rem}
-.reach .txt-link{font-size:.93rem}
-.contact-info .small{font-size:.95rem}
+.reach p{font-size:var(--fs-body)}
+.reach .txt-link{font-size:var(--fs-sm)}
+.contact-info .small{font-size:var(--fs-sm)}
 .contact-info .small a{text-decoration:underline;text-underline-offset:3px;font-weight:600}
-.layer{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:.86rem}
+.layer{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:var(--fs-sm)}
 .layer summary{cursor:pointer;padding:12px 14px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
 .layer summary::-webkit-details-marker{display:none}
 .layer summary svg{width:12px;height:12px;flex:none;transition:transform .3s var(--ease)}
@@ -181,6 +181,7 @@ faq:
       <li><b>Te proponemos el siguiente paso</b><p>Qué haríamos, cómo y con qué alcance, para que lo valores con calma.</p></li>
     </ol>
   </div>
+  <div class="wrap team-band rv">{{ m.teamPhoto("equipo-llamada-oficina") }}</div>
 </section>
 
 <!-- ============ CÓMO LLEGAR ============ -->
@@ -215,6 +216,7 @@ faq:
         </div>
       </div>
     </div>
+    <div class="team-band rv">{{ m.teamPhoto("oficina-rotulo-adqa") }}</div>
   </div>
 </section>
 

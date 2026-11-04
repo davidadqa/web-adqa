@@ -34,11 +34,11 @@ faq:
 /* Soporte IT: columna de tarjetas y catálogo de hardware */
 .col-cards{display:grid;gap:14px}
 .catalog{margin-top:56px;padding:34px;display:grid;gap:22px}
-.catalog h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.catalog h3{font-size:var(--fs-sm);text-transform:uppercase;letter-spacing:var(--ls-caps);color:var(--muted)}
 .defs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .defs div{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px}
 .defs dt{font-weight:600;color:var(--ink);margin-bottom:4px}
-.defs dd{font-size:.93rem;color:var(--gray)}
+.defs dd{font-size:var(--fs-body);color:var(--gray)}
 @media (max-width:900px){.defs{grid-template-columns:1fr}}
 @media (max-width:720px){.catalog{padding:26px}}
 </style>
@@ -97,7 +97,7 @@ faq:
       <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-file"/></svg></span><h3>Renovaciones sin sorpresas</h3><p>Sabemos qué licencias, suscripciones y dominios tienes y cuándo vencen. Preparamos cada renovación antes de que llegue el correo de «último aviso».</p></div>
       <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Una sola llamada para todo</h3><p>Equipos, red, telecomunicaciones y seguridad, en las mismas manos. Si algo falla entre el router y el portátil, no tienes que adivinar de quién es el problema.</p></div>
     </div>
-    <div class="team-band rv">{{ m.teamPhoto("equipo-soporte-auriculares") }}</div>
+    <div class="team-band rv">{{ m.teamPhoto("soporte-tecnico-pantallas") }}</div>
   </div>
 </section>
 

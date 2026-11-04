@@ -1,6 +1,20 @@
 import { HtmlBasePlugin } from "@11ty/eleventy";
+import { existsSync, readFileSync } from "node:fs";
 import site from "./src/_data/site.js";
 import nav from "./src/_data/nav.js";
+
+// Imagen para compartir de una página: src/assets/og/<slug>.jpg si existe (la genera tools/og.mjs) y, si no, la general.
+// alt: «ADQA · <lo que se lee en la imagen>» (src/assets/og/alt.json, que escribe la misma herramienta).
+const ogDir = new URL("./src/assets/og/", import.meta.url);
+const OG_DEFAULT = { src: "/assets/og-adqa.jpg", alt: "ADQA · Informática, telecomunicaciones y ciberseguridad para empresas en Barcelona" };
+function ogImage(url, title) {
+  const slug = String(url || "/").replace(/^\/|\/$/g, "").replace(/\//g, "-") || "home";
+  if (!existsSync(new URL(`${slug}.jpg`, ogDir))) return OG_DEFAULT;
+  let alt = {};
+  try { alt = JSON.parse(readFileSync(new URL("alt.json", ogDir), "utf8")); } catch {}
+  const text = alt[url] || String(title || "").replace(/\s*\|\s*ADQA$/, "");
+  return { src: `/assets/og/${slug}.jpg`, alt: text ? `ADQA · ${text}` : OG_DEFAULT.alt };
+}
 
 // Builds the schema.org @graph for a page from its front matter.
 function jsonldGraph(d) {
@@ -112,7 +126,7 @@ function jsonldGraph(d) {
       articleSection: a.section,
       ...(a.keywords && a.keywords.length ? { keywords: a.keywords.join(", ") } : {}),
       ...(a.wordCount ? { wordCount: a.wordCount } : {}),
-      image: `${base}/assets/og-adqa.jpg`,
+      image: base + ogImage(d.url).src,
       inLanguage: "es-ES",
     });
   }
@@ -189,6 +203,7 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addFilter("jsonld", jsonldGraph);
   eleventyConfig.addFilter("absUrl", (path) => site.url + path);
+  eleventyConfig.addFilter("ogImage", ogImage);
   eleventyConfig.addFilter("startsWith", (str, prefix) => String(str || "").startsWith(prefix));
   eleventyConfig.addFilter("year", () => String(new Date().getFullYear()));
 

@@ -26,7 +26,7 @@ faq:
 {% block head %}
 <style>
 /* Trabaja con nosotros: cifras con palabra y perfiles */
-.stat b.word{font-size:clamp(1.45rem,5.4vw,2.2rem)}
+.stat b.word{font-size:var(--fs-xl)} /* un paso por debajo de las cifras: «Datacenter» cabe a 1061 px */
 .profiles .svc{min-height:0}
 .profiles .svc .more{margin-top:4px}
 </style>
@@ -85,6 +85,7 @@ faq:
       <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-pin"/></svg></span><h3>Proyectos con historia</h3><p>Fibra a 1.000 metros bajo tierra, WiFi dentro de cámaras frigoríficas o la red entre los centros de un consorcio sanitario.</p></div>
       <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-award"/></svg></span><h3>Método y certificaciones</h3><p>Trabajamos con procesos ISO 9001:2015 y con la certificación del Esquema Nacional de Seguridad (ENS) en categoría ALTA. Los procedimientos son claros y están documentados. Tu primer día no tienes que adivinar cómo se hace cada cosa.</p></div>
     </div>
+    <div class="team-band rv">{{ m.teamPhoto("equipo-folleto-anxanet") }}</div>
   </div>
 </section>
 

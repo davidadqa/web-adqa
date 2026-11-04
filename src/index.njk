@@ -32,8 +32,8 @@ faq:
 .home-cases{padding-bottom:clamp(80px,11vw,140px)}
 /* Home: enlace bajo el bloque «ADQA es…» */
 .intro .txt-link{justify-self:start}
-/* Home: H1 en tres líneas en escritorio (la frase en rosa, entera en la última) */
-.hero h1{max-width:1060px}
+/* Home: H1 en tres líneas en escritorio (la frase en rosa, entera en la última); 1120 px con el h1 a 80 px */
+.hero h1{max-width:1120px}
 </style>
 {% endblock %}
 {% block content %}
@@ -42,16 +42,16 @@ faq:
 <section class="hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.05s">Más de 30 años · ENS categoría ALTA · ISO&nbsp;9001:2015</span>
+    <span class="eyebrow fade-in" style="--d:.05s" lang="en"><span>We make <span class="eyebrow-accent">I.T.</span> better</span></span>
     <h1 id="h-hero" data-words>Informática, telecom y ciberseguridad para tu empresa.<br> <span class="accent">Todo en un solo equipo.</span></h1>
-    <p class="lead fade-in" style="--d:.9s">Para empresas e instituciones de Barcelona y de toda España. Llevamos tu soporte IT, tus redes, tus conexiones con nuestro propio operador, tus servidores en nuestro datacenter y tu ciberseguridad. Una sola llamada para todo, y al otro lado alguien que ya conoce tu caso.</p>
+    <p class="lead fade-in" style="--d:.9s">Para empresas e instituciones de Barcelona y de toda España. Llevamos tu soporte IT, tus redes, tus telecomunicaciones, tus servidores, tu ciberseguridad y tus necesidades web.<br>Una sola llamada a ADQA, y al otro lado un equipo al completo que conoce totalmente tu empresa.</p>
     <div class="hero-ctas fade-in" style="--d:1.05s">
       <a class="btn btn-primary" href="#contacto">Explícanos tu caso <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+      <a class="btn btn-ghost" href="#servicios">Todos nuestros servicios</a>
     </div>
     <div class="trust fade-in" style="--d:1.2s">
       <span><svg><use href="#i-check"/></svg>Operador de telecomunicaciones propio</span>
-      <span><svg><use href="#i-check"/></svg>Datacenter propio en Barcelona</span>
+      <span><svg><use href="#i-check"/></svg>Datacenter en Barcelona</span>
       <span><svg><use href="#i-check"/></svg>Equipo técnico propio</span>
     </div>
   </div>
@@ -121,14 +121,14 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">Un minuto para presentarnos</span>
       <h2 id="h-intro" class="sr">Qué es ADQA</h2>
-      <p class="answer" data-scrub><strong>ADQA es una empresa TIC de Vilanova i la Geltrú (Barcelona) que lleva, con el mismo equipo, la informática, las redes, las telecomunicaciones, el cloud y la ciberseguridad de empresas e instituciones públicas de toda España.</strong> Tiene operador de telecomunicaciones propio, Anxanet, y datacenter propio y de proximidad en Barcelona. <span class="dim">Suma más de 30 años de experiencia, el certificado ISO 9001:2015 y la certificación ENS en categoría ALTA.</span></p>
+      <p class="answer" data-scrub><strong>ADQA es una empresa TIC de Barcelona que lleva, con el mismo equipo, la informática, las redes, las telecomunicaciones, el cloud y la ciberseguridad de empresas e instituciones públicas de toda España.</strong> Anxanet es nuestro propio operador de telecomunicaciones, y disponemos de nuestro datacenter de proximidad en Barcelona. <span class="dim">Sumamos más de 30 años de experiencia, disponemos del certificado ISO 9001:2015 en calidad y de la certificación ENS en categoría ALTA.</span></p>
       <a class="txt-link" href="/quienes-somos/">Conoce al equipo y cómo trabajamos <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="stats">
-      <div class="stat rv" style="--s:0"><b><span data-count="30">30</span><small>+</small></b><span>años haciendo funcionar la tecnología de empresas e instituciones</span></div>
+      <div class="stat rv" style="--s:0"><b><span data-count="30">30</span><small> años</small></b><span>haciendo funcionar la tecnología de empresas e instituciones</span></div>
       <div class="stat rv" style="--s:1"><b><span data-count="18">18</span></b><span>personas en un equipo propio, con especialistas en cada área</span></div>
-      <div class="stat rv" style="--s:2"><b><span data-count="10">10</span><small> Gb</small></b><span>de conexión a Internet con Anxanet, nuestro operador</span></div>
-      <div class="stat rv" style="--s:3"><b>ISO</b><span>9001:2015: medimos lo que hacemos para mejorarlo</span></div>
+      <div class="stat rv" style="--s:2"><b>ENS</b><span>Esquema Nacional de Seguridad en categoría ALTA</span></div>
+      <div class="stat rv" style="--s:3"><b>ISO 9001</b><span>Medimos todo lo que hacemos para mejorarlo</span></div>
     </div>
   </div>
   <div class="wrap team-band rv">{{ m.teamPhoto("equipo-teclado-auriculares") }}</div>
@@ -140,7 +140,7 @@ faq:
     <div class="sec-head rv">
       <span class="eyebrow">Servicios</span>
       <h2 id="h-serv">Tocamos todas las teclas para que solo tengas que tocar una</h2>
-      <p class="lead">Del cable que pasa por el falso techo a la copia de seguridad de tus datos. Contrata una sola pieza o toda tu tecnología: trabajamos por áreas, pero pensamos en el conjunto.</p>
+      <p class="lead">Del cable que pasa por el falso techo a los servidores virtuales en nuestro propio cloud. Contrátanos un servicio o toda tu tecnología: trabajamos por áreas, pero pensamos en tu empresa como un conjunto.</p>
     </div>
     <div class="services">
       <a class="card svc dark rv" href="/ciberseguridad/" style="--s:0">
@@ -255,13 +255,12 @@ faq:
         <span class="num">02 · EXTRANET</span>
         <h3>Tus incidencias, a la vista y en tiempo real</h3>
         <p>Un sistema de ticketing desarrollado por nuestro equipo. Desde él das de alta, sigues y verificas las incidencias y actuaciones de todas tus sedes. ¿Ya han cambiado el switch del almacén? Lo compruebas ahí, sin llamar a nadie. Y lo adaptamos a tu forma de trabajar.</p>
-        <figure><img src="/assets/proyectos/extranet.webp" alt="Pantalla de alta de incidencias en la extranet de ADQA" loading="lazy" width="1260" height="608"></figure>
       </article>
       <article class="st" style="--n:2">
         <span class="num">03 · OPERADOR PROPIO</span>
         <h3>Anxanet, nuestro operador de telecomunicaciones</h3>
         <p>Fibra, líneas y centralita: las llevamos nosotros a través de Anxanet. Si un día la conexión hace algo raro, no tienes que averiguar si es cosa del operador o de la red. Lo miramos todo junto y damos antes con la solución.</p>
-        <div class="row"><a class="badge" href="https://anxanet.com/" rel="noopener"><img src="/assets/sellos/anxanet.jpg" alt="Anxanet" loading="lazy"></a></div>
+        <a class="go" href="https://anxanet.com/" rel="noopener">Anxanet <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="st" style="--n:3">
         <span class="num">04 · DATACENTER PROPIO</span>
