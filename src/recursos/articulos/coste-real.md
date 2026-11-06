@@ -31,7 +31,7 @@ faq:
 ---
 Al comparar Google Workspace y Microsoft 365, lo primero que sueles mirar es el precio por usuario. Normalmente, el del plan más conocido de cada una. Es un buen punto de partida, pero deja fuera casi todo lo que mueve la factura. ¿Cuántos planes distintos necesita tu plantilla? ¿Cuántas licencias siguen activas sin que nadie las use? ¿Y quién se ocupa de revisarlas?
 
-Este artículo trata solo del coste. Para el resto de diferencias, tienes la [comparativa entre Google Workspace y Microsoft 365](/google-workspace/google-workspace-vs-microsoft-365/).
+Este artículo trata solo del coste. Para el resto de diferencias, tienes la [comparativa entre Google Workspace y Microsoft 365](/recursos/google-workspace-o-microsoft-365/).
 
 ## Qué entra en el coste real de una suite
 

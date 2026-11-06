@@ -9,7 +9,7 @@ tipo: entender
 etiquetas: ["Colaboración", "Google Workspace", "Microsoft 365"]
 date: 2026-07-03
 updated: 2026-11-02
-servicio: "/google-workspace/google-workspace-vs-microsoft-365/"
+servicio: "/google-workspace/"
 related: ["google-workspace-para-equipos-remotos-e-hibridos", "cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves", "que-incluye-microsoft-365-para-empresas"]
 imagen: "Dos personas comentando a la vez un mismo documento compartido, una desde un portátil y otra desde la pantalla de una sala de reuniones"
 tldr: "Google Workspace nació alrededor de la edición simultánea en el navegador. Varias personas trabajan en el mismo documento y ven los cambios al instante. Microsoft 365 también permite coeditar. Sus puntos fuertes son las aplicaciones de escritorio para documentos complejos y Teams como centro de la comunicación. La elección depende de cómo colabora el equipo cada día."
@@ -31,7 +31,7 @@ faq:
 ---
 Más allá del correo y del almacenamiento, Google Workspace y Microsoft 365 se diferencian en las tareas pequeñas. Son las que repites decenas de veces al día: revisar un documento entre varios, resolver una duda por chat o montar una reunión rápida. Ahí es donde cada suite encaja mejor o peor con la forma de trabajar de tu equipo.
 
-Aquí el foco está en la colaboración. La comparación completa, con licencias, integración y seguridad, la tienes en [Google Workspace vs Microsoft 365](/google-workspace/google-workspace-vs-microsoft-365/).
+Aquí el foco está en la colaboración. La comparación completa, con licencias, integración y seguridad, la tienes en [Google Workspace o Microsoft 365: cuál elegir](/recursos/google-workspace-o-microsoft-365/).
 
 ## Cómo colabora un equipo en Google Workspace
 

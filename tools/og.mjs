@@ -54,7 +54,6 @@ const AREA = {
 const SUB = {
   "/desarrollo-software-medida/": "Web y software · Software a medida",
   "/diseno-programacion-web/mantenimiento-web-para-empresas/": "Diseño web · Mantenimiento web",
-  "/google-workspace/google-workspace-vs-microsoft-365/": "Google Workspace · Microsoft 365",
 };
 const navLabel = (url) => {
   for (const g of nav.groups) for (const l of g.links) if (l.url === url) return l.label;

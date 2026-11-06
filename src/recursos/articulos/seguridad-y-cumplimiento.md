@@ -9,7 +9,7 @@ tipo: entender
 etiquetas: ["Cumplimiento", "Google Workspace", "Microsoft 365"]
 date: 2026-07-04
 updated: 2026-11-02
-servicio: "/google-workspace/google-workspace-vs-microsoft-365/"
+servicio: "/microsoft-365/"
 related: ["politica-de-seguridad-y-cumplimiento-normativo", "seguridad-en-microsoft-365", "seguridad-en-google-workspace-que-protege-y-que-configurar"]
 imagen: "Responsable de cumplimiento revisando en un portátil las políticas de retención y el registro de actividad de la suite de su empresa"
 tldr: "Google Workspace y Microsoft 365 pueden usarse cumpliendo el RGPD y el Esquema Nacional de Seguridad. Cada proveedor responde solo de su infraestructura. La empresa sigue siendo responsable de sus datos. Debe aceptar las condiciones de tratamiento, saber dónde se almacenan y fijar cuánto tiempo se conservan. También debe controlar quién accede y demostrarlo con registros. Las dos suites ofrecen herramientas para ello, con más alcance en los planes superiores."

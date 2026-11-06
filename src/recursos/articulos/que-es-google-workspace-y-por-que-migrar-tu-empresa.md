@@ -82,6 +82,6 @@ Migrar el correo y los documentos de tu empresa es algo más que activar un serv
 - Un **periodo de convivencia** entre el sistema antiguo y el nuevo. Así nadie se queda sin correo durante la transición.
 - La **edición adecuada para cada perfil** desde el principio, para no pagar funciones que nadie usa. Para ver qué más entra en la factura, lee [el coste real de la suite](/recursos/coste-real/).
 
-Las fases, del inventario al cambio final del correo, están en [Migración a Google Workspace sin parar tu negocio](/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/). Si dudas entre Google Workspace y Microsoft 365, la [comparativa entre las dos suites](/google-workspace/google-workspace-vs-microsoft-365/) te ayuda a ordenar los criterios.
+Las fases, del inventario al cambio final del correo, están en [Migración a Google Workspace sin parar tu negocio](/recursos/migracion-a-google-workspace-sin-parar-tu-negocio/). Si dudas entre Google Workspace y Microsoft 365, la [comparativa entre las dos suites](/recursos/google-workspace-o-microsoft-365/) te ayuda a ordenar los criterios.
 
 <!-- PENDIENTE: el WordPress decía que una migración de pyme «suele resolverse en días, no en semanas». Se ha retirado hasta que ADQA confirme si quiere dar un plazo orientativo («habitualmente…»). -->
