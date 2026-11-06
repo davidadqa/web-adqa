@@ -50,7 +50,7 @@ Con una o dos personas, las urgencias del día a día suelen comerse el tiempo d
 Un servicio de [ciberseguridad gestionada](/ciberseguridad/) reparte ese trabajo entre especialistas:
 
 - **Varias especialidades en un mismo servicio**, sin contratar una persona para cada una.
-- **Vigilancia organizada.** El servicio define quién revisa las alertas, en qué horario y cómo se responde. Si una alerta salta un sábado por la noche, ya sabes qué está previsto para ella. En la detección y respuesta gestionada, la vigilancia continua suele hacerla el centro de operaciones de seguridad (SOC) del fabricante de la tecnología. El proveedor integra el servicio y responde ante tu empresa.
+- **Vigilancia organizada.** El servicio define quién revisa las alertas, en qué horario y cómo se responde. Si una alerta salta un sábado por la noche, ya sabes qué está previsto para ella. En la [detección y respuesta gestionada](/ciberseguridad/soc/), la vigilancia continua suele hacerla el centro de operaciones de seguridad (SOC) del fabricante de la tecnología. El proveedor integra el servicio y responde ante tu empresa.
 - **Actualización frente a amenazas nuevas.** El proveedor trabaja con muchos entornos. Lo que aprende en uno lo aplica en los demás.
 - **Coste más previsible**: una cuota periódica en lugar de nóminas, formación continua y herramientas.
 

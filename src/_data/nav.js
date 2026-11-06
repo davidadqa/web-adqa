@@ -4,6 +4,7 @@ export default {
     { title: "Seguridad", icon: "i-shield", links: [
       { label: "Ciberseguridad", url: "/ciberseguridad/" },
       { label: "Pentesting", url: "/ciberseguridad/pentesting/" },
+      { label: "SOC y detección gestionada", url: "/ciberseguridad/soc/" },
       { label: "Certificado ENS", url: "/ciberseguridad/certificado-ens/" },
     ] },
     { title: "Redes", icon: "i-net", links: [
