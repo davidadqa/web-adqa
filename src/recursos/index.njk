@@ -21,9 +21,9 @@ pageType: "CollectionPage"
 <section class="hero page-hero" aria-labelledby="h-hero">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow fade-in" style="--d:.1s">Respuestas</span>
+    <span class="eyebrow fade-in" style="--d:.1s">La respuesta ADQAda</span>
     <h1 id="h-hero" data-words>Tus dudas de <em>tecnología</em>, respondidas antes de decidir</h1>
-    <p class="lead fade-in" style="--d:.9s">{{ arts.length }} respuestas a lo que nos preguntan las empresas antes de aprobar un presupuesto o cambiar de proveedor. ¿Cable o WiFi? ¿Pentesting o escaneo? ¿Datacenter propio o nube? Las escriben nuestros equipos de redes, ciberseguridad, cloud, telecomunicaciones, soporte, web y Workspace. Cada una empieza por la respuesta corta.</p>
+    <p class="lead fade-in" style="--d:.9s">Respuestas a lo que nos preguntan las empresas antes de aprobar un presupuesto o cambiar de proveedor. ¿Cable o WiFi? ¿Correctivo o predictivo? ¿Datacenter propio o nube? Las escriben nuestros equipos de redes, ciberseguridad, cloud, telecomunicaciones, soporte, web y Workspace.</p>
   </div>
 </section>
 
@@ -47,7 +47,7 @@ pageType: "CollectionPage"
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Para empezar</span>
-      <h2 id="h-feat">Las preguntas que más nos hacen</h2>
+      <h2 id="h-feat">Las dudas más frecuentes</h2>
     </div>
     <div class="res">
       {%- for p in feat %}{{ m.articleCard(p, loop.index0) }}{% endfor %}
@@ -85,5 +85,5 @@ pageType: "CollectionPage"
   </div>
 </section>
 
-{{ m.contactBlock(title="¿Tu pregunta no está aquí?", text="Cuéntanosla y te damos la respuesta ADQAda. Vale también esa duda que lleva semanas rondando por la oficina: la estudiamos con calma y sin compromiso.", eyebrow="¿Hablamos?", area="Varias / no lo sé") }}
+{{ m.contactBlock(title="¿Tu pregunta no está aquí?", text="Cuéntanosla y te respondemos para tu caso. Vale también esa duda que lleva semanas rondando por la oficina: la estudiamos con calma y sin compromiso.", eyebrow="¿Hablamos?", area="Varias / no lo sé") }}
 {% endblock %}
