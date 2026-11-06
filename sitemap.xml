@@ -121,6 +121,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/ciberseguridad/pentesting/"/>
   </url>
   <url>
+    <loc>https://adqa.com/ciberseguridad/soc/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/ciberseguridad/soc/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/ciberseguridad/soc/"/>
+  </url>
+  <url>
     <loc>https://adqa.com/contacto/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/contacto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/contacto/"/>
@@ -144,11 +149,6 @@
     <loc>https://adqa.com/google-workspace/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/google-workspace/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/google-workspace/"/>
-  </url>
-  <url>
-    <loc>https://adqa.com/google-workspace/google-workspace-vs-microsoft-365/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/google-workspace/google-workspace-vs-microsoft-365/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/google-workspace/google-workspace-vs-microsoft-365/"/>
   </url>
   <url>
     <loc>https://adqa.com/google-workspace/licenciamiento-mixto-google-workspace/</loc>
@@ -309,6 +309,11 @@
     <loc>https://adqa.com/recursos/firewall-gestionado-o-propio/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/firewall-gestionado-o-propio/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/firewall-gestionado-o-propio/"/>
+  </url>
+  <url>
+    <loc>https://adqa.com/recursos/google-workspace-o-microsoft-365/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://adqa.com/recursos/google-workspace-o-microsoft-365/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adqa.com/recursos/google-workspace-o-microsoft-365/"/>
   </url>
   <url>
     <loc>https://adqa.com/recursos/google-workspace-para-equipos-remotos-e-hibridos/</loc>
