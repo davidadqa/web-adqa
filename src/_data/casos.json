@@ -224,6 +224,10 @@
   ],
   "servicios": [
    {
+    "label": "SOC y detección gestionada",
+    "href": "/ciberseguridad/soc/"
+   },
+   {
     "label": "Ciberseguridad",
     "href": "/ciberseguridad/"
    },

@@ -9,7 +9,7 @@ tipo: elegir
 etiquetas: ["Migración", "Google Workspace", "Microsoft 365"]
 date: 2026-07-05
 updated: 2026-11-02
-servicio: "/google-workspace/google-workspace-vs-microsoft-365/"
+servicio: "/google-workspace/"
 related: ["coste-real", "migracion-a-google-workspace-sin-parar-tu-negocio", "migracion-a-microsoft-365-sin-perder-productividad"]
 imagen: "Equipo de dirección en una sala de reuniones valorando un cambio de suite, con dos portátiles abiertos, uno con Outlook y otro con Gmail"
 tldr: "Cambiar de suite tiene sentido cuando hay un motivo de fondo y duradero. Puede ser un cambio en el ecosistema tecnológico de la empresa o en la forma de trabajar del equipo. También puede ser una fusión con una empresa que usa la otra plataforma. Una incidencia puntual, una preferencia aislada o una factura de licencias sin revisar son otra cosa. Suelen resolverse en la suite actual, sin migrar."

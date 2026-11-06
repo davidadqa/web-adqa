@@ -4,6 +4,7 @@ export default {
     { title: "Seguridad", icon: "i-shield", links: [
       { label: "Ciberseguridad", url: "/ciberseguridad/" },
       { label: "Pentesting", url: "/ciberseguridad/pentesting/" },
+      { label: "SOC y detección gestionada", url: "/ciberseguridad/soc/" },
       { label: "Certificado ENS", url: "/ciberseguridad/certificado-ens/" },
     ] },
     { title: "Redes", icon: "i-net", links: [
@@ -31,7 +32,6 @@ export default {
     { title: "Workspace", icon: "i-grid", wide: true, links: [
       { label: "Google Workspace", url: "/google-workspace/" },
       { label: "Microsoft 365", url: "/microsoft-365/" },
-      { label: "Google Workspace vs Microsoft 365", url: "/google-workspace/google-workspace-vs-microsoft-365/" },
       { label: "Licenciamiento mixto", url: "/google-workspace/licenciamiento-mixto-google-workspace/" },
     ] },
   ],

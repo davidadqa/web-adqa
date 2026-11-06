@@ -1,0 +1,314 @@
+---
+title: "SOC para empresas: detección y respuesta gestionada | ADQA"
+description: "SOC para empresas: el SOC de WatchGuard vigila equipos, red, identidades y correo. ADQA, Partner Gold de WatchGuard, guía la implantación y es tu interlocutor."
+keyword: "SOC para empresas"
+breadcrumbs:
+  - { name: "Ciberseguridad", url: "/ciberseguridad/" }
+  - { name: "SOC y detección gestionada" }
+service:
+  name: "Detección y respuesta gestionada (SOC) para empresas"
+  serviceType: "Detección y respuesta gestionada"
+faq:
+  manager:
+    - q: "¿Quién vigila mis sistemas, ADQA o WatchGuard?"
+      a: "La vigilancia la hace el SOC de WatchGuard, el centro de operaciones de seguridad del fabricante. Trabaja las 24 horas, todos los días. Sus analistas revisan las alertas, investigan y contienen los ataques. ADQA es Partner Gold de WatchGuard y guía la implantación del servicio. Lo integramos con tu red, tus equipos y Microsoft 365, somos tu interlocutor y hacemos las revisiones periódicas."
+    - q: "¿Qué pasa si hay un ataque a las tres de la madrugada?"
+      a: "El SOC de WatchGuard está mirando a esa hora. Si una alerta resulta ser un ataque, el analista lo investiga y puede aislar el equipo afectado en remoto, para que no llegue al resto de la red. La detección queda documentada con lo que se vio y lo que se hizo. Lo que quede por hacer en tus sistemas, como restaurar un equipo o cambiar una contraseña, lo coordinamos contigo."
+    - q: "¿Es mejor montar un SOC propio o contratar un servicio gestionado?"
+      a: "Un SOC propio exige analistas especializados, turnos de noche y de fin de semana, y herramientas para relacionar lo que pasa en cada sistema. Eso solo se justifica en organizaciones grandes. Para la mayoría de empresas, un servicio gestionado da esa cobertura con un coste previsible. Tu equipo de informática, si lo tienes, sigue llevando el día a día."
+    - q: "¿Qué veo yo del servicio?"
+      a: "Tienes acceso a un portal con las detecciones, las investigaciones y las acciones de respuesta. Cada detección llega con un informe: qué pasó, qué se hizo y qué conviene cambiar. Además, en las revisiones periódicas repasamos contigo lo que ha ocurrido y te proponemos mejoras."
+  tecnico:
+    - q: "¿Tengo que cambiar de antivirus para contratar el servicio?"
+      a: "Depende de la modalidad. Core MDR y Total MDR parten de la protección de equipos de WatchGuard, con detección y respuesta (EPDR). Core MDR también puede funcionar sobre Microsoft Defender for Endpoint. Open MDR trabaja con herramientas de otros fabricantes que ya tengas, con tus propias licencias. Revisamos contigo qué tienes antes de proponer nada."
+    - q: "¿Qué información analiza el SOC?"
+      a: "La actividad de los equipos y servidores, el tráfico de la red y los firewalls, y los inicios de sesión. También la de los servicios cloud: Microsoft 365, Google Workspace, Azure o AWS. Lo que entra depende de la modalidad. Cuantas más fuentes, mejor se relaciona un acceso raro con lo que pasa después en un equipo."
+    - q: "¿Cómo encaja con el RGPD y el Esquema Nacional de Seguridad?"
+      a: "El servicio trata datos de actividad de tus sistemas, así que se regula con un contrato de encargo de tratamiento. Ayuda a cubrir la detección y la gestión de incidentes que piden el ENS y otras normas. No sustituye al resto de medidas: copias, permisos, políticas y formación. ADQA tiene la certificación ENS en categoría ALTA y aplica ese mismo criterio en la implantación."
+    - q: "¿Cuánto se tarda en ponerlo en marcha?"
+      a: "Depende del número de equipos, de sedes y de la modalidad. Se hace por fases: inventario, pilotos, despliegue y activación de la vigilancia. En una cadena hotelera internacional con varias sedes fue un plan de 8 semanas. En una empresa con una sola oficina es bastante menos."
+---
+{% extends "layouts/base.njk" %}
+{% import "macros.njk" as m with context %}
+{% block head %}{% endblock %}
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero page-hero" aria-labelledby="h-hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow fade-in" style="--d:.05s">Ciberseguridad · SOC y detección gestionada</span>
+    <h1 id="h-hero" data-words>Detección y respuesta gestionada, <span class="accent">con el SOC de WatchGuard</span></h1>
+    <p class="lead fade-in" style="--d:.8s">El SOC de WatchGuard vigila día y noche tus equipos, tu red, tus identidades y tu correo. Si detecta un ataque, lo investiga y lo contiene. Nosotros guiamos la implantación, la integramos con lo que ya tienes y somos tu interlocutor.</p>
+    <div class="hero-ctas fade-in" style="--d:.95s">
+      <a class="btn btn-primary" href="#contacto">Habla con el equipo de seguridad <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#como-funciona">Cómo funciona</a>
+    </div>
+    <div class="trust fade-in" style="--d:1.1s">
+      <span><svg><use href="#i-check"/></svg>Partner Gold de WatchGuard</span>
+      <span><svg><use href="#i-check"/></svg>ISO 9001:2015</span>
+      <span><svg><use href="#i-check"/></svg>ENS categoría ALTA</span>
+    </div>
+  </div>
+</section>
+
+{{ m.crumbs(breadcrumbs) }}
+
+<!-- ============ EN RESUMEN ============ -->
+<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding-top:clamp(56px,7vw,88px)">
+  <div class="wrap intro">
+    <div class="rv" style="display:grid;gap:22px">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="h-resumen" class="sr">¿Qué es el servicio de SOC y detección gestionada de ADQA?</h2>
+      <p class="tldr"><strong>ADQA implanta la detección y respuesta gestionada de WatchGuard en empresas e instituciones de Barcelona y de toda España. La vigilancia la hace el SOC de WatchGuard, su centro de operaciones de seguridad, las 24 horas.</strong> El SOC detecta, investiga y contiene los ataques en equipos, red, identidades, correo y cloud. ADQA, Partner Gold de WatchGuard, guía la implantación, integra el servicio con tu red, tus equipos y Microsoft 365 y es tu interlocutor. <span class="dim">En las revisiones periódicas te propone mejoras concretas.</span></p>
+    </div>
+    <div class="stats">
+      <div class="stat rv" style="--s:0"><b><span data-count="5">5</span><small> pasos</small></b><span>ante cada alerta: detectar, investigar, contener, informar y revisar</span></div>
+      <div class="stat rv" style="--s:1"><b><span data-count="3">3</span><small> niveles</small></b><span>de servicio: Core, Total y Open MDR</span></div>
+      <div class="stat rv" style="--s:2"><b><span data-count="1">1</span><small> contacto</small></b><span>para todo el conjunto: ADQA, también ante WatchGuard</span></div>
+      <div class="stat rv" style="--s:3"><b><span data-count="8">8</span><small> semanas</small></b><span>de implantación por fases en una cadena hotelera con varias sedes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LO QUE CAMBIA ============ -->
+<section class="sec" aria-labelledby="h-pos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Lo que cambia</span>
+      <h2 id="h-pos">Alguien mira cuando tu equipo no puede</h2>
+      <p class="lead">La protección de los equipos frena la mayoría de ataques. Pero uno bien hecho puede parecer actividad normal. El servicio añade analistas que revisan las alertas, las relacionan y actúan.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-search"/></svg></span><h3>Alertas que alguien revisa</h3><p>Cada alerta la mira un analista del SOC. Tu equipo no tiene que interpretar avisos técnicos un domingo por la noche.</p></div>
+      <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Todo el entorno a la vez</h3><p>Un inicio de sesión extraño y un equipo que se comporta distinto dejan de ser dos avisos sueltos. El SOC los relaciona.</p></div>
+      <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-shield"/></svg></span><h3>Ataques contenidos</h3><p>Si confirma un ataque, el SOC aísla el equipo afectado en remoto. Así no se extiende al resto de la red.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-file"/></svg></span><h3>Informes que se entienden</h3><p>Cada detección queda documentada: qué pasó, qué se hizo y qué conviene cambiar. Lo repasamos contigo.</p></div>
+    </div>
+    <div class="team-band rv">{{ m.teamPhoto("equipo-soporte-auriculares") }}</div>
+  </div>
+</section>
+
+<!-- ============ QUÉ VIGILA ============ -->
+<section class="sec" id="que-vigila" aria-labelledby="h-vig" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Qué vigila</span>
+      <h2 id="h-vig">¿Qué vigila el SOC en tu empresa?</h2>
+      <p class="lead">Cada capa ve una parte del ataque. El SOC junta lo que pasa en todas, según la modalidad que elijas.</p>
+    </div>
+    <div class="services svc-grid">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-server"/></svg></span>
+        <h3>Equipos y servidores</h3>
+        <p>Ordenadores, portátiles y servidores con Windows, macOS o Linux. Es la base del servicio: ahí empiezan la mayoría de ataques.</p>
+        <ul class="tags"><li>Comportamientos anómalos</li><li>Ransomware</li><li>Aislamiento remoto</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-net"/></svg></span>
+        <h3>Red</h3>
+        <p>El tráfico entre sedes, equipos y servidores, y los firewalls. Detecta a quien ya ha entrado e intenta moverse por dentro.</p>
+        <ul class="tags"><li>Firewall</li><li>Tráfico interno</li><li>Movimientos laterales</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-user"/></svg></span>
+        <h3>Identidades</h3>
+        <p>Los inicios de sesión de tus usuarios. Un acceso desde otro país con una contraseña robada se ve aunque no haya malware.</p>
+        <ul class="tags"><li>Credenciales robadas</li><li>Accesos anómalos</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-mail"/></svg></span>
+        <h3>Correo y Microsoft 365</h3>
+        <p>Buzones, reglas de reenvío y accesos a la suite. Una cuenta comprometida suele notarse primero en el correo.</p>
+        <ul class="tags"><li>Microsoft 365</li><li>Reglas sospechosas</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-cloud"/></svg></span>
+        <h3>Cloud</h3>
+        <p>Google Workspace, Azure o AWS, según lo que use tu empresa. Permisos que cambian y accesos que no encajan.</p>
+        <ul class="tags"><li>Google Workspace</li><li>Azure</li><li>AWS</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-search"/></svg></span>
+        <h3>Búsqueda proactiva</h3>
+        <p>Los analistas buscan indicios débiles de ataque antes de que salte ninguna alerta. Es lo que en el sector se llama <i>threat hunting</i>.</p>
+        <ul class="tags"><li>Caza de amenazas</li><li>Indicios débiles</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA (sección oscura) ============ -->
+<section class="sec dark-sec" id="como-funciona" aria-labelledby="h-meto">
+  <div class="wrap strengths">
+    <div class="sticky rv">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2 id="h-meto">¿Qué pasa cuando el SOC detecta algo?</h2>
+      <p class="lead" style="color:#bdbdbd">Cinco pasos, de la alerta a la mejora. Los cuatro primeros los hace el SOC de WatchGuard. El quinto lo hacemos contigo.</p>
+      <div><a class="btn btn-primary" href="#contacto">Hablemos de tu caso <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="stack">
+      <article class="st" style="--n:0">
+        <span class="num">01 · DETECTAR</span>
+        <h3>Solo llega lo que merece atención</h3>
+        <p>La tecnología de WatchGuard recoge la actividad de tus equipos, tu red, tus identidades y tu cloud. La automatización filtra el ruido y deja pasar lo que un analista tiene que mirar.</p>
+      </article>
+      <article class="st" style="--n:1">
+        <span class="num">02 · INVESTIGAR</span>
+        <h3>Un analista mira el contexto</h3>
+        <p>Qué equipo, qué usuario, qué pasó antes y qué pasó después. Con eso, el analista del SOC decide si es un ataque o una falsa alarma.</p>
+      </article>
+      <article class="st" style="--n:2">
+        <span class="num">03 · CONTENER</span>
+        <h3>El ataque no llega más lejos</h3>
+        <p>Si es un ataque, el SOC actúa. Por ejemplo, aísla de la red el equipo afectado mientras se investiga. Según el caso, la contención es automática.</p>
+      </article>
+      <article class="st" style="--n:3">
+        <span class="num">04 · INFORMAR</span>
+        <h3>Sabes qué ha pasado</h3>
+        <p>Cada detección queda en el portal del servicio, con lo que se vio, lo que se investigó y lo que se hizo. Si hay que actuar en tus sistemas, lo coordinamos contigo.</p>
+      </article>
+      <article class="st" style="--n:4">
+        <span class="num">05 · REVISAR</span>
+        <h3>Cada incidente deja una mejora</h3>
+        <p>En las revisiones periódicas repasamos contigo lo ocurrido y te proponemos cambios concretos. En una cadena hotelera, una de esas revisiones sumó la gestión de parches.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NIVELES ============ -->
+<section class="sec" id="niveles" aria-labelledby="h-niv">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Niveles de servicio</span>
+      <h2 id="h-niv">¿Qué niveles de servicio hay?</h2>
+      <p class="lead">WatchGuard ofrece el servicio en tres modalidades. Elegimos contigo la que encaja con lo que ya tienes y con lo que quieres vigilar.</p>
+    </div>
+    <div class="services">
+      <div class="card svc rv" style="--s:0">
+        <span class="ico"><svg><use href="#i-server"/></svg></span>
+        <h3>Core MDR: equipos y correo</h3>
+        <p>El SOC vigila tus ordenadores y servidores, y la actividad de Microsoft 365. Es el punto de partida habitual.</p>
+        <ul class="tags"><li>Equipos</li><li>Microsoft 365</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:1">
+        <span class="ico"><svg><use href="#i-grid"/></svg></span>
+        <h3>Total MDR: todo el entorno</h3>
+        <p>Equipos, red, identidades y cloud en una sola vista. Es la modalidad que implantamos en la cadena hotelera.</p>
+        <ul class="tags"><li>Equipos</li><li>Red</li><li>Identidades</li><li>Cloud</li></ul>
+      </div>
+      <div class="card svc rv" style="--s:2">
+        <span class="ico"><svg><use href="#i-tool"/></svg></span>
+        <h3>Open MDR: con lo que ya tienes</h3>
+        <p>El SOC trabaja sobre herramientas de otros fabricantes que ya usas: protección de equipos, firewalls o autenticación. Con tus propias licencias.</p>
+        <ul class="tags"><li>Otros fabricantes</li><li>Sin cambiar de herramientas</li></ul>
+      </div>
+    </div>
+    <div class="card note rv">
+      <p><strong>Antes de elegir, miramos qué tienes.</strong> Core y Total parten de una protección de equipos con detección y respuesta (EPDR). Si ya usas otra, valoramos contigo si conviene cambiarla o aprovecharla con Open MDR.</p>
+      <a class="btn btn-ghost" href="#contacto">Revisemos tu punto de partida <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIÉN HACE QUÉ ============ -->
+<section class="sec" id="quien-hace-que" aria-labelledby="h-cmp" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Quién hace qué</span>
+      <h2 id="h-cmp">¿Qué hace el SOC de WatchGuard y qué hace ADQA?</h2>
+      <p class="lead">El SOC vigila y responde. Nosotros nos aseguramos de que el servicio esté bien montado y de que sepas qué pasa en todo momento.</p>
+    </div>
+    <div class="compare">
+      <div class="cmp plain rv">
+        <h3>El SOC de WatchGuard</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Vigila las alertas las 24 horas, todos los días del año.</li>
+          <li><svg><use href="#i-check"/></svg>Investiga cada alerta y descarta las falsas alarmas.</li>
+          <li><svg><use href="#i-check"/></svg>Contiene los ataques confirmados, por ejemplo aislando un equipo.</li>
+          <li><svg><use href="#i-check"/></svg>Busca indicios de ataque antes de que salte una alerta.</li>
+        </ul>
+        <p class="q">Responde a: ¿está pasando algo ahora en mis sistemas?</p>
+      </div>
+      <div class="cmp good rv" style="--s:1">
+        <h3>ADQA</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Guía la implantación: inventario, pilotos y despliegue por fases, sede a sede.</li>
+          <li><svg><use href="#i-check"/></svg>Integra el servicio con tu red, tus equipos y Microsoft 365.</li>
+          <li><svg><use href="#i-check"/></svg>Es tu interlocutor para todo el conjunto, también ante WatchGuard.</li>
+          <li><svg><use href="#i-check"/></svg>Hace revisiones periódicas y te propone mejoras concretas.</li>
+        </ul>
+        <p class="q">Responde a: ¿está bien montado y qué mejoro ahora?</p>
+      </div>
+    </div>
+    <div class="card note rv">
+      <p><strong>El mismo equipo que lleva tu red.</strong> Si ya mantenemos tu red, tus equipos o tu Microsoft 365, el servicio se integra con quien los conoce. Si no, trabajamos con tu equipo técnico o con tu proveedor.</p>
+      <a class="btn btn-ghost" href="/ciberseguridad/">Servicios de ciberseguridad <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="card note rv">
+      <p><strong>El mismo marco, en cada implantación.</strong> ADQA tiene la certificación ENS en categoría ALTA. Aplicamos el criterio de gestión del riesgo del ENS en cada proyecto. Eso supone prioridades por impacto, decisiones trazables y evidencias documentadas.</p>
+      <a class="btn btn-ghost" href="/ciberseguridad/certificado-ens/">Qué implica la certificación <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section class="sec" aria-labelledby="h-aud">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Para quién es</span>
+      <h2 id="h-aud">Cuándo tiene sentido un SOC gestionado</h2>
+      <p class="lead">Para empresas e instituciones que no pueden permitirse descubrir un ataque días después.</p>
+    </div>
+    <div class="aud">
+      <div class="card rv" style="--s:0"><span class="n">01</span><h3>Sin equipo de seguridad propio</h3><p>Tienes informática, interna o externa, pero nadie que revise alertas de seguridad fuera del horario de oficina.</p></div>
+      <div class="card rv" style="--s:1"><span class="n">02</span><h3>Con varias sedes</h3><p>Delegaciones, hoteles o tiendas con equipos repartidos. Todo queda bajo la misma vigilancia.</p></div>
+      <div class="card rv" style="--s:2"><span class="n">03</span><h3>Con datos que no pueden salir</h3><p>Salud, despachos, industria o servicios con datos de clientes. Una intrusión que nadie ve puede durar semanas.</p></div>
+      <div class="card rv" style="--s:3"><span class="n">04</span><h3>Con requisitos de terceros</h3><p>Sector público, ENS o grandes clientes que piden detección y respuesta ante incidentes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS ============ -->
+<section class="sec" id="casos" aria-labelledby="h-caso" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Casos reales</span>
+        <h2 id="h-caso">Vigilancia y protección en proyectos reales</h2>
+        <p>Una cadena hotelera con el servicio completo y una organización sanitaria con la protección de equipos que le sirve de base.</p>
+      </div>
+      <a class="btn btn-ghost rv" href="/casos-de-exito/">Ver todos los casos de éxito <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="proj-grid two">
+      {{ m.caseCard(casos | byId("deteccion-hotel"), cls="rv", style="--s:0") }}
+      {{ m.caseCard(casos | byId("salud"), cls="rv", style="--s:1") }}
+    </div>
+  </div>
+</section>
+
+{{ m.faqSection(faq, title="Preguntas frecuentes sobre el SOC y la detección gestionada") }}
+
+<!-- ============ RESPUESTAS ============ -->
+<section class="sec" id="recursos" aria-labelledby="h-res" style="padding-top:0">
+  <div class="wrap">
+    <div class="proj-head" style="padding:0">
+      <div class="sec-head rv" style="margin:0">
+        <span class="eyebrow">Respuestas</span>
+        <h2 id="h-res">Para seguir profundizando</h2>
+        <p>Servicio gestionado, equipo propio o un poco de cada: la respuesta ADQAda a cada duda.</p>
+      </div>
+      <a class="btn btn-ghost rv" href="/recursos/ciberseguridad/">Más respuestas sobre ciberseguridad <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="res">
+      <a class="card rv" style="--s:0" data-cat="ciberseguridad" href="/recursos/ciberseguridad-gestionada-o-equipo-interno/"><span class="cat">Ciberseguridad</span><h3>Ciberseguridad gestionada o equipo interno</h3><p>Qué aporta cada modelo, quién vigila las alertas fuera de la jornada y cómo repartir el trabajo sin dejar huecos.</p></a>
+      <a class="card rv" style="--s:1" data-cat="ciberseguridad" href="/recursos/ciberseguridad-sin-departamento-it-propio/"><span class="cat">Ciberseguridad</span><h3>Ciberseguridad sin departamento IT propio</h3><p>Una lista de comprobación para saber qué tiene cubierto tu empresa, qué falta y por dónde empezar.</p></a>
+      <a class="card rv" style="--s:2" data-cat="ciberseguridad" href="/recursos/firewall-gestionado-o-propio/"><span class="cat">Ciberseguridad</span><h3>Firewall gestionado o propio</h3><p>Qué exige mantenerlo con tu equipo, qué aporta delegarlo y cómo decidir según tus recursos.</p></a>
+    </div>
+  </div>
+</section>
+
+{{ m.contactBlock(title="Hablemos de la vigilancia de tu empresa", text="Cuéntanos qué equipos, sedes y servicios cloud tienes, y qué protección usas hoy. Te proponemos la modalidad que encaja y cómo implantarla por fases, sin compromiso.", area="Ciberseguridad") }}
+
+{% endblock %}

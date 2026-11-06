@@ -78,4 +78,4 @@ La última pregunta es la que más mueve la factura. Microsoft 365 permite asign
 | Requisitos de cumplimiento exigentes | Enterprise (E3 o E5) | Más herramientas de seguridad, auditoría y retención |
 | Perfiles muy distintos en la plantilla | Combinación de planes | Cada persona con el plan que corresponde a su uso real |
 
-Si en tu equipo hay de todo, mira primero la última fila. ¿Todavía dudas entre suites, y no solo entre planes? La [comparativa entre Google Workspace y Microsoft 365](/google-workspace/google-workspace-vs-microsoft-365/) repasa en qué se parecen y en qué se diferencian.
+Si en tu equipo hay de todo, mira primero la última fila. ¿Todavía dudas entre suites, y no solo entre planes? La [comparativa entre Google Workspace y Microsoft 365](/recursos/google-workspace-o-microsoft-365/) repasa en qué se parecen y en qué se diferencian.
