@@ -70,68 +70,6 @@
           "item": "https://adqa.com/contacto/"
         }
       ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://adqa.com/contacto/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿La primera conversación tiene algún coste o compromiso?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. La primera conversación es sin compromiso. Sirve para entender qué tienes y qué necesitas. Si después tiene sentido avanzar, ADQA te propone el siguiente paso para que lo valores con calma."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué conviene explicar en el primer mensaje?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Lo que tengas a mano. Por ejemplo, qué tecnología usa hoy tu empresa y cuántas personas y sedes tiene. Cuéntanos también qué te preocupa o qué quieres cambiar, y si hay alguna fecha que condicione el proyecto. No hace falta usar términos técnicos. Con un mensaje concreto, la respuesta también lo será."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Trabajáis en toda España?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. ADQA trabaja con empresas e instituciones de toda España. Tiene la sede en Vilanova i la Geltrú y un datacenter propio y de proximidad en Barcelona. El soporte remoto, el cloud y buena parte de la ciberseguridad se prestan a distancia. Para las instalaciones y las visitas, el equipo va a tu sede, estés donde estés."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Atendéis también a administraciones públicas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. Entre los clientes de ADQA hay ayuntamientos, consejos comarcales y centros sanitarios públicos. La empresa tiene el certificado ISO 9001:2015 y la certificación del Esquema Nacional de Seguridad (ENS) en categoría ALTA. Son dos certificados que suelen pedirse en los expedientes de contratación de la administración."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ya soy cliente: ¿dónde abro una incidencia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "En el área de clientes de ADQA, en extranet.adqa.com. Es nuestro sistema de ticketing. Desde allí das de alta las incidencias de cada una de tus sedes y sigues su estado y el de cada actuación. Si lo prefieres, también puedes llamar al +34 938 147 380."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo enviar planos, inventarios o facturas de telecomunicaciones?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, y ayudan mucho. El formulario sirve para una primera descripción. Después puedes enviar a info@adqa.com los planos de la oficina, un inventario de equipos o las últimas facturas de telefonía y conexión. Con esos datos reales, ADQA puede revisar tu infraestructura o hacer una auditoría de telecomunicaciones."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Con quién voy a hablar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Con una persona del equipo de ADQA que conoce el área de tu consulta. A veces la consulta toca varias áreas, por ejemplo la red, la conexión y la centralita. Entonces lo coordinamos por dentro. Tú tienes un solo interlocutor desde la primera conversación."
-          }
-        }
-      ]
     }
   ]
 }
@@ -139,7 +77,7 @@
 
 <style>
 /* Contacto: vías de contacto y primera capa de protección de datos (propios de esta página) */
-.reach{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
+.reach{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .reach .card{display:grid;gap:10px;align-content:start;padding:26px}
 .reach .ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--pink-50);color:var(--pink)}
 .reach .ico svg{width:20px;height:20px}
@@ -278,8 +216,7 @@
     </div>
     <div class="trust fade-in" style="--d:1.1s">
       <span><svg><use href="#i-check"></use></svg>Sin compromiso</span>
-      <span><svg><use href="#i-check"></use></svg>Un mismo equipo para todo</span>
-      <span><svg><use href="#i-check"></use></svg>ISO 9001:2015</span>
+      <span><svg><use href="#i-check"></use></svg>Con total confianza</span>
     </div>
   </div>
 </section>
@@ -293,14 +230,9 @@
 </nav>
 
 
-<!-- ============ EN RESUMEN + VÍAS DE CONTACTO ============ -->
-<section class="sec" id="en-resumen" aria-labelledby="h-resumen" style="padding:clamp(56px,7vw,88px) 0 0">
+<!-- ============ VÍAS DE CONTACTO ============ -->
+<section class="sec" id="vias" aria-label="Vías de contacto" style="padding:clamp(56px,7vw,88px) 0 0">
   <div class="wrap">
-    <div class="rv" style="display:grid;gap:22px;max-width:860px">
-      <span class="eyebrow">En resumen</span>
-      <h2 id="h-resumen" class="sr">¿Cómo contactar con ADQA?</h2>
-      <p class="tldr"><strong>ADQA atiende a empresas e instituciones de Barcelona y de toda España. Trabaja en informática, telecomunicaciones, ciberseguridad, cloud y desarrollo web.</strong> Se le puede escribir con el formulario de esta página o a info@adqa.com. Su teléfono es el +34 938 147 380. <span class="dim">Su sede está en el Polígono Masia d'en Frederic, en Vilanova i la Geltrú (Barcelona). Sus clientes gestionan las incidencias desde el área de clientes.</span></p>
-    </div>
     <div class="reach">
       <div class="card rv" style="--s:0">
         <span class="ico"><svg><use href="#i-phone"></use></svg></span>
@@ -385,122 +317,6 @@
     </form>
   </div>
 </section>
-
-<!-- ============ QUÉ PASA DESPUÉS ============ -->
-<section class="sec" id="despues" aria-labelledby="h-despues" style="padding-top:0">
-  <div class="wrap split">
-    <div class="txt rv">
-      <span class="eyebrow">Después de escribirnos</span>
-      <h2 id="h-despues">¿Qué pasa cuando nos escribes?</h2>
-      <p>Al otro lado hay un equipo que trabaja junto. Sistemas, redes, telecomunicaciones, ciberseguridad y web están en la misma casa. Si tu mensaje empieza por la web y acaba en el correo, no tienes que elegir destinatario. Lo coordinamos entre nosotros y tú hablas con una sola persona.</p>
-      <p>A partir de ahí, seguimos estos pasos. El ritmo lo marcas tú.</p>
-    </div>
-    <ol class="steps rv" style="--s:1">
-      <li><b>Leemos tu mensaje</b><p>Lo revisa la persona del equipo que lleva el área de tu consulta.</p></li>
-      <li><b>Te contactamos</b><p>Te llamamos o te escribimos para entender bien tu situación y resolver las primeras dudas.</p></li>
-      <li><b>Primera conversación</b><p>Sin compromiso. Si hace falta ver algo en persona o revisar tu infraestructura, lo acordamos contigo.</p></li>
-      <li><b>Te proponemos el siguiente paso</b><p>Qué haríamos, cómo y con qué alcance, para que lo valores con calma.</p></li>
-    </ol>
-  </div>
-  <div class="wrap team-band rv">
-<figure class="foto team-photo " style="aspect-ratio:1146/400">
-  
-<picture>
-    <source type="image/avif" srcset="/web-adqa/assets/fotos/equipo-llamada-oficina-640.avif 640w, /web-adqa/assets/fotos/equipo-llamada-oficina-960.avif 960w, /web-adqa/assets/fotos/equipo-llamada-oficina-1280.avif 1280w, /web-adqa/assets/fotos/equipo-llamada-oficina-1920.avif 1920w" sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)">
-    <source type="image/webp" srcset="/web-adqa/assets/fotos/equipo-llamada-oficina-640.webp 640w, /web-adqa/assets/fotos/equipo-llamada-oficina-960.webp 960w, /web-adqa/assets/fotos/equipo-llamada-oficina-1280.webp 1280w, /web-adqa/assets/fotos/equipo-llamada-oficina-1920.webp 1920w" sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)">
-    <img src="/web-adqa/assets/fotos/equipo-llamada-oficina-1920.jpg" srcset="/web-adqa/assets/fotos/equipo-llamada-oficina-640.jpg 640w, /web-adqa/assets/fotos/equipo-llamada-oficina-960.jpg 960w, /web-adqa/assets/fotos/equipo-llamada-oficina-1280.jpg 1280w, /web-adqa/assets/fotos/equipo-llamada-oficina-1920.jpg 1920w" sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)" width="1920" height="670" alt="Una persona del equipo de ADQA atiende una llamada en su mesa, delante del ordenador" decoding="async" loading="lazy">
-  </picture>
-</figure></div>
-</section>
-
-<!-- ============ CÓMO LLEGAR ============ -->
-<section class="sec" id="como-llegar" aria-labelledby="h-llegar" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Dónde estamos</span>
-      <h2 id="h-llegar">Nuestras oficinas</h2>
-    </div>
-    <div class="where">
-      <div class="card addr rv">
-        <div class="info">
-          <address>Ingeniería y Suministros Profesionales, S.L.<br>C. Masia d'en Notari 23, Nave 3<br>Polígono Masia d'en Frederic<br>08800 Vilanova i la Geltrú, Barcelona</address>
-          <!-- PENDIENTE: horario de atención de la sede (no consta en las fuentes). No inventarlo. -->
-          <p>Si quieres venir a vernos, llámanos antes y así te atiende la persona que lleva tu caso.</p>
-          <a class="txt-link" href="https://maps.app.goo.gl/rPo6eAyhCnEQhMjm8" rel="noopener">Abrir en Google Maps <svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        </div>
-        <a class="pinbox" href="https://maps.app.goo.gl/rPo6eAyhCnEQhMjm8" rel="noopener" aria-label="Ver la ubicación de ADQA en Google Maps">
-          <span class="pin"><i><svg aria-hidden="true"><use href="#i-pin"></use></svg></i><span>ADQA · Nave 3</span></span>
-        </a>
-      </div>
-      <div class="side">
-        <div class="card rv" style="--s:1">
-          <h3>¿Ya eres cliente?</h3>
-          <p>Las incidencias se abren y se siguen en el área de clientes. Es el sistema de ticketing que hemos desarrollado nosotros. Ahí ves el estado de cada actuación en tus sedes.</p>
-          <a class="txt-link" href="https://extranet.adqa.com/">Ir al área de clientes <svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        </div>
-        <div class="card rv" style="--s:2">
-          <h3>¿Quieres trabajar con nosotros?</h3>
-          <p>Si te dedicas a sistemas, redes, telecomunicaciones o desarrollo, envíanos tu candidatura.</p>
-          <a class="txt-link" href="/web-adqa/trabaja-con-nosotros/">Trabaja con nosotros <svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="team-band rv">
-<figure class="foto team-photo " style="aspect-ratio:1146/400">
-  
-<picture>
-    <source type="image/avif" srcset="/web-adqa/assets/fotos/oficina-rotulo-adqa-640.avif 640w, /web-adqa/assets/fotos/oficina-rotulo-adqa-960.avif 960w, /web-adqa/assets/fotos/oficina-rotulo-adqa-1280.avif 1280w, /web-adqa/assets/fotos/oficina-rotulo-adqa-1920.avif 1920w" sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)">
-    <source type="image/webp" srcset="/web-adqa/assets/fotos/oficina-rotulo-adqa-640.webp 640w, /web-adqa/assets/fotos/oficina-rotulo-adqa-960.webp 960w, /web-adqa/assets/fotos/oficina-rotulo-adqa-1280.webp 1280w, /web-adqa/assets/fotos/oficina-rotulo-adqa-1920.webp 1920w" sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)">
-    <img src="/web-adqa/assets/fotos/oficina-rotulo-adqa-1920.jpg" srcset="/web-adqa/assets/fotos/oficina-rotulo-adqa-640.jpg 640w, /web-adqa/assets/fotos/oficina-rotulo-adqa-960.jpg 960w, /web-adqa/assets/fotos/oficina-rotulo-adqa-1280.jpg 1280w, /web-adqa/assets/fotos/oficina-rotulo-adqa-1920.jpg 1920w" sizes="(min-width: 1212px) 1180px, calc(100vw - 32px)" width="1920" height="670" alt="Las letras de ADQA en relieve en una pared de la oficina" decoding="async" loading="lazy">
-  </picture>
-</figure></div>
-  </div>
-</section>
-
-<!-- ============ ÁREAS ============ -->
-<section class="sec" id="areas" aria-labelledby="h-areas" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Sobre qué podemos hablar</span>
-      <h2 id="h-areas">Un mismo equipo para toda tu tecnología</h2>
-      <p class="lead">Si tu consulta toca varias áreas, mejor: lo vemos todo junto. Estas son las que llevamos.</p>
-    </div>
-    <div class="res">
-      <a class="card rv" style="--s:0" href="/web-adqa/soporte-it/"><span class="cat">Soporte IT</span><h3>Soporte y mantenimiento informático</h3><p>Para que alguien que ya conoce tus equipos atienda las incidencias y haga el preventivo.</p></a>
-      <a class="card rv" style="--s:1" href="/web-adqa/redes/"><span class="cat">Redes y WiFi</span><h3>Redes informáticas y WiFi</h3><p>Del punto de red de cada mesa a la cobertura WiFi de una nave.</p></a>
-      <a class="card rv" style="--s:2" href="/web-adqa/telecomunicaciones/"><span class="cat">Telecomunicaciones</span><h3>Fibra, líneas y centralita</h3><p>Con Anxanet, nuestro operador de telecomunicaciones propio.</p></a>
-      <a class="card rv" style="--s:0" href="/web-adqa/sistemas-cloud/"><span class="cat">Sistemas y cloud</span><h3>Servidores y cloud</h3><p>Tus sistemas en nuestro datacenter propio y de proximidad en Barcelona.</p></a>
-      <a class="card rv" style="--s:1" href="/web-adqa/ciberseguridad/"><span class="cat">Ciberseguridad</span><h3>Ciberseguridad para empresas</h3><p>Protección de conexiones, equipos, servidores y correo, con un método claro.</p></a>
-      <a class="card rv" style="--s:2" href="/web-adqa/diseno-programacion-web/"><span class="cat">Web y software</span><h3>Webs y software a medida</h3><p>Diseño, programación y mantenimiento hechos por nuestro equipo.</p></a>
-    </div>
-  </div>
-</section>
-
-
-<section class="sec" id="faq" aria-labelledby="h-faq" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Preguntas frecuentes</span>
-      <h2 id="h-faq">Antes de escribirnos</h2>
-    </div>
-    <div class="faq">
-      <div class="rv">
-        <h3>Para el manager</h3>
-        <details open=""><summary>¿La primera conversación tiene algún coste o compromiso? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>No. La primera conversación es sin compromiso. Sirve para entender qué tienes y qué necesitas. Si después tiene sentido avanzar, ADQA te propone el siguiente paso para que lo valores con calma.</p></details>
-        <details><summary>¿Qué conviene explicar en el primer mensaje? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Lo que tengas a mano. Por ejemplo, qué tecnología usa hoy tu empresa y cuántas personas y sedes tiene. Cuéntanos también qué te preocupa o qué quieres cambiar, y si hay alguna fecha que condicione el proyecto. No hace falta usar términos técnicos. Con un mensaje concreto, la respuesta también lo será.</p></details>
-        <details><summary>¿Trabajáis en toda España? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Sí. ADQA trabaja con empresas e instituciones de toda España. Tiene la sede en Vilanova i la Geltrú y un datacenter propio y de proximidad en Barcelona. El soporte remoto, el cloud y buena parte de la ciberseguridad se prestan a distancia. Para las instalaciones y las visitas, el equipo va a tu sede, estés donde estés.</p></details>
-        <details><summary>¿Atendéis también a administraciones públicas? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Sí. Entre los clientes de ADQA hay ayuntamientos, consejos comarcales y centros sanitarios públicos. La empresa tiene el certificado ISO 9001:2015 y la certificación del Esquema Nacional de Seguridad (ENS) en categoría ALTA. Son dos certificados que suelen pedirse en los expedientes de contratación de la administración.</p></details>
-      </div>
-      <div class="rv" style="--s:1">
-        <h3>Para el responsable técnico</h3>
-        <details><summary>Ya soy cliente: ¿dónde abro una incidencia? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>En el área de clientes de ADQA, en extranet.adqa.com. Es nuestro sistema de ticketing. Desde allí das de alta las incidencias de cada una de tus sedes y sigues su estado y el de cada actuación. Si lo prefieres, también puedes llamar al +34 938 147 380.</p></details>
-        <details><summary>¿Puedo enviar planos, inventarios o facturas de telecomunicaciones? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Sí, y ayudan mucho. El formulario sirve para una primera descripción. Después puedes enviar a info@adqa.com los planos de la oficina, un inventario de equipos o las últimas facturas de telefonía y conexión. Con esos datos reales, ADQA puede revisar tu infraestructura o hacer una auditoría de telecomunicaciones.</p></details>
-        <details><summary>¿Con quién voy a hablar? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Con una persona del equipo de ADQA que conoce el área de tu consulta. A veces la consulta toca varias áreas, por ejemplo la red, la conexión y la centralita. Entonces lo coordinamos por dentro. Tú tienes un solo interlocutor desde la primera conversación.</p></details>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
 </main>
