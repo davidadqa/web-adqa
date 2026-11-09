@@ -1258,7 +1258,7 @@
    },
    {
     "titulo": "Hallazgos documentados y ordenados",
-    "texto": "Documentamos cada hallazgo con evidencias, impacto y recomendaciones, y lo clasificamos con CVSS 3.1. Después los ordenamos por riesgo: correcciones rápidas, de medio plazo y estratégicas."
+    "texto": "Documentamos cada hallazgo con evidencias, impacto y recomendaciones, y lo clasificamos con la escala CVSS. Después los ordenamos por riesgo: correcciones rápidas, de medio plazo y estratégicas."
    },
    {
     "titulo": "Aviso del hallazgo crítico",
@@ -1300,7 +1300,7 @@
     [
      "Hallazgos",
      "Por descubrir",
-     "Documentados con evidencias y clasificados con CVSS 3.1"
+     "Documentados con evidencias y clasificados con la escala CVSS"
     ],
     [
      "Hallazgo crítico",
