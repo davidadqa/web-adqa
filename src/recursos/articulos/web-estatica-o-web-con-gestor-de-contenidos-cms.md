@@ -12,7 +12,7 @@ updated: 2026-11-02
 servicio: "/diseno-programacion-web/"
 related: ["web-a-medida-o-plantilla", "actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional", "hosting-basico-o-mantenimiento-web-completo"]
 imagen: "Persona editando el texto de una página web desde el panel de un gestor de contenidos en un portátil"
-tldr: "Una web estática carga rápido, expone menos puntos de entrada y necesita poco mantenimiento técnico. Eso sí, cada cambio de contenido pasa por quien la programó. En una web con gestor de contenidos (CMS), como WordPress, el propio equipo actualiza textos, imágenes o artículos sin programar. A cambio, el gestor y sus extensiones deben estar al día. La elección depende de cuánto cambiará el contenido y de quién lo gestionará."
+tldr: "Una web estática carga rápido, expone menos puntos de entrada y necesita poco mantenimiento técnico. Eso sí, si no tiene un editor conectado, cada cambio de contenido pasa por quien la programó. En una web con gestor de contenidos (CMS), como WordPress, el propio equipo actualiza textos, imágenes o artículos sin programar. A cambio, el gestor y sus extensiones deben estar al día. La elección depende de cuánto cambiará el contenido y de quién lo gestionará."
 faq:
   manager:
     - q: "¿Una web estática da peor imagen que una web con CMS?"
@@ -29,7 +29,7 @@ faq:
     - q: "¿Qué hay que tener en cuenta al pasar de una web estática a un CMS?"
       a: "Es una migración habitual. Conserva las URL o redirígelas a las nuevas. Traslada el contenido que ya posiciona en los buscadores. Y comprueba que los formularios y las integraciones siguen funcionando después del cambio."
 ---
-Cambiar un texto en una web estática significa, casi siempre, pedírselo a quien la programó. En una web con gestor de contenidos, entras, editas y publicas. Toca poner el horario de agosto en la portada. Con la estática, escribes un correo y esperas. Con el gestor, lo cambias tú.
+Cambiar un texto en una web estática sin editor conectado significa pedírselo a quien la programó. En una web con gestor de contenidos, entras, editas y publicas. Toca poner el horario de agosto en la portada. Con la estática, escribes un correo y esperas. Con el gestor, lo cambias tú.
 
 Parece una diferencia pequeña. Se hace grande cuando la multiplicas por todos los cambios de un año.
 
@@ -79,7 +79,7 @@ Antes de responder, repasa los últimos cambios que pediste en tu web. El teléf
 | Criterio | Web estática | Web con CMS |
 |---|---|---|
 | Velocidad de carga de partida | Alta | Depende de la configuración |
-| Autonomía para cambiar el contenido | Pasa por quien la programó | El equipo edita desde el panel |
+| Autonomía para cambiar el contenido | Pasa por quien la programó, salvo que tenga un editor conectado | El equipo edita desde el panel |
 | Mantenimiento técnico | Mínimo | Continuo |
 | Superficie de ataque | Baja | Mayor; pide actualizaciones al día |
 | Blog o sección de noticias | Posible, pero cada entrada pasa por un técnico | Lo publica tu equipo desde el panel |
