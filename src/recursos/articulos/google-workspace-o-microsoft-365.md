@@ -1,6 +1,6 @@
 ---
 title: "Google Workspace o Microsoft 365: cuál elegir | ADQA"
-description: "Google Workspace o Microsoft 365: en qué se parecen, las siete diferencias que pesan en la decisión y cuándo encaja cada suite según cómo trabaja tu equipo."
+description: "Google Workspace o Microsoft 365: en qué se parecen, las ocho diferencias que pesan en la decisión y cuándo encaja cada suite según cómo trabaja tu equipo."
 h1: "Google Workspace o Microsoft 365: cuál elegir para tu empresa"
 lead: "No hay una suite mejor para todos. Hay una que encaja mejor con cómo trabaja tu equipo cada día."
 keyword: "Google Workspace o Microsoft 365"
@@ -44,7 +44,7 @@ En lo esencial. Las dos reúnen en la nube el correo, la agenda, los archivos y 
 
 Si tu empresa solo necesita correo, documentos y reuniones, cualquiera de las dos te funcionará. Piensa en un técnico que rellena el parte desde el móvil. Y en alguien de contabilidad que cierra el mes con una base de datos de Access. No necesitan lo mismo. Ahí empiezan las diferencias.
 
-## Las siete diferencias que pesan en la decisión
+## Las ocho diferencias que pesan en la decisión
 
 Ninguna es mejor o peor por sí misma. Léelas pensando en un martes normal en tu oficina.
 
@@ -54,6 +54,7 @@ Ninguna es mejor o peor por sí misma. Léelas pensando en un martes normal en t
 | Colaboración en tiempo real | Pensada desde el principio para editar a la vez en el navegador. | Coautoría en la web y en el escritorio, con los archivos en OneDrive o SharePoint. |
 | Comunicación interna | Meet y Chat, sencillos e integrados en Gmail y Calendar. | Teams reúne chat, reuniones, llamadas y documentos. |
 | Integración con otros sistemas | APIs abiertas que se integran bien con herramientas externas. | Integración nativa con Azure, Dynamics, Power BI y Power Automate. |
+| Asistente de IA | Gemini, integrado en las aplicaciones. Qué puede hacer depende de la edición. | Copilot, integrado en las aplicaciones. Una parte viene incluida y las funciones avanzadas se contratan aparte. |
 | Seguridad y cumplimiento | Sólida para la mayoría de empresas, con controles avanzados en las ediciones superiores. | Herramientas más amplias para requisitos exigentes, con Microsoft Purview. |
 | Adopción | Curva de aprendizaje suave. El equipo suele adoptarla rápido. | Más opciones y más formación inicial para quien no conoce Office. |
 | Licencias | Ediciones combinables en el mismo dominio a través de un partner oficial. | Planes combinables de forma estándar en el mismo tenant. |
