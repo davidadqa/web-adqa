@@ -35,8 +35,8 @@ A continuación verás qué diferencia a cada categoría de cobre y cuándo entr
 
 ## Categorías de cobre: qué diferencia hay
 
-- **Cat 5e (clase D).** Hasta 100 MHz y 1 Gb/s. Sigue presente en muchas instalaciones existentes. Para una obra nueva ya no es lo aconsejable.
-- **Cat 6 (clase E).** Hasta 250 MHz. Da 1 Gb/s con más margen que Cat 5e, y 10 Gb/s solo en tramos cortos. Es una opción equilibrada para oficinas sin grandes previsiones de crecimiento.
+- **Cat 5e (clase D).** Hasta 100 MHz y 1 Gb/s y, en la mayoría de enlaces, 2,5 Gb/s. Sigue presente en muchas instalaciones existentes. Para una obra nueva ya no es lo aconsejable.
+- **Cat 6 (clase E).** Hasta 250 MHz. Da hasta 5 Gb/s en los 100 metros, y 10 Gb/s solo en tramos cortos. Es una opción equilibrada para oficinas sin grandes previsiones de crecimiento.
 - **Cat 6A (clase EA).** Hasta 500 MHz y 10 Gb/s en los 100 metros de un enlace estándar. Además, se comporta mejor frente a interferencias. Es la que conviene para obra nueva y para conectar puntos de acceso WiFi recientes.
 
 La categoría no es solo del cable. Es la del enlace completo, con tomas, paneles y conectores. Si una pieza es de categoría inferior, todo el enlace queda limitado a ella. Imagina un cable Cat 6A dentro de la pared y una toma Cat 5e junto a tu mesa. Ese punto rinde como Cat 5e.
@@ -63,8 +63,8 @@ Por eso la [certificación del cableado](/redes/certificacion-redes/) no se limi
 
 | Categoría | Velocidad de referencia | Uso recomendado |
 |---|---|---|
-| Cat 5e | 1 Gb/s | Instalaciones existentes; no recomendada para obra nueva |
-| Cat 6 | 1 Gb/s; 10 Gb/s solo en tramos cortos | Oficinas sin grandes previsiones de crecimiento |
+| Cat 5e | 1 Gb/s; 2,5 Gb/s en la mayoría de enlaces | Instalaciones existentes; no recomendada para obra nueva |
+| Cat 6 | Hasta 5 Gb/s; 10 Gb/s solo en tramos cortos | Oficinas sin grandes previsiones de crecimiento |
 | Cat 6A | 10 Gb/s hasta 100 m | Obra nueva y puntos de acceso WiFi recientes |
 | Fibra multimodo | Muy alta, a distancias medias | Troncales entre plantas o edificios cercanos |
 | Fibra monomodo | Muy alta, a largas distancias | Enlaces entre edificios distantes o entre sedes |
