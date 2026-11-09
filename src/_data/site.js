@@ -31,7 +31,7 @@ export default {
     { type: "Country", name: "España" },
   ],
   credentials: [
-    "ISO 9001:2015 — Gestión de la calidad",
+    "ISO 9001 — Gestión de la calidad",
     "Esquema Nacional de Seguridad (ENS), categoría ALTA",
   ],
   knowsAbout: [
