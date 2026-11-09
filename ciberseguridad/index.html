@@ -145,7 +145,7 @@
           "name": "¿Cómo sabemos si nuestras copias de seguridad funcionan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Restaurándolas. Que el proceso de copia termine sin errores no basta. Hay que recuperar datos en un entorno de prueba y comprobar que todo funciona. Diseñamos las copias con la regla 3-2-1: tres copias, en dos soportes distintos y una fuera de la oficina. Usamos Veeam cuando el entorno lo requiere y programamos pruebas de restauración periódicas."
+            "text": "Restaurándolas. Que el proceso de copia termine sin errores no basta. Hay que recuperar datos en un entorno de prueba y comprobar que todo funciona. Recomendamos la regla 3-2-1-1-0: tres copias, en dos soportes distintos y una fuera de la oficina. Una de ellas, además, que nadie pueda borrar ni cifrar. Y cero errores al restaurar. Usamos Veeam cuando el entorno lo requiere y programamos pruebas de restauración periódicas."
           }
         },
         {
@@ -297,7 +297,7 @@
     </div>
     <div class="trust fade-in" style="--d:1.1s">
       <span><svg><use href="#i-check"></use></svg>Partner Gold de WatchGuard</span>
-      <span><svg><use href="#i-check"></use></svg>ISO 9001:2015</span>
+      <span><svg><use href="#i-check"></use></svg>ISO 9001</span>
       <span><svg><use href="#i-check"></use></svg>ENS categoría ALTA</span>
     </div>
   </div>
@@ -322,9 +322,9 @@
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b>4<small> capas</small></b><span>conexiones, equipos, servidores y cloud, en las mismas manos</span></div>
-      <div class="stat rv" style="--s:1"><b><span data-count="30">30</span><small>+</small></b><span>años de experiencia y certificado de calidad ISO 9001:2015</span></div>
+      <div class="stat rv" style="--s:1"><b><span data-count="30">30</span><small>+</small></b><span>años de experiencia y certificado de calidad ISO 9001</span></div>
       <div class="stat rv" style="--s:2"><b><span data-count="12">12</span></b><span>servicios de seguridad que combinamos según tu punto de partida</span></div>
-      <div class="stat rv" style="--s:3"><b>3-2-1</b><span>copias de seguridad con pruebas de restauración periódicas</span></div>
+      <div class="stat rv" style="--s:3"><b>3-2-1-1-0</b><span>la regla de copias de seguridad que recomendamos, con pruebas de restauración</span></div>
     </div>
   </div>
 </section>
@@ -401,7 +401,7 @@
         <span class="num">03 · SERVIDORES, DATOS Y CLOUD</span>
         <h3>Sabes dónde están tus datos y cómo recuperarlos</h3>
         <p>Alojamos sistemas y copias en nuestro datacenter propio y de proximidad en Barcelona, o en tu propia sala si lo prefieres. Aplicamos la misma exigencia a Microsoft 365, Google Workspace y los servicios cloud que ya usas.</p>
-        <ul><li>Copias 3-2-1 con Veeam y pruebas de restauración</li><li>Copia de Microsoft 365 con Hornetsecurity</li><li>Permisos y accesos del cloud revisados</li></ul>
+        <ul><li>Copias según la regla 3-2-1-1-0, con Veeam y pruebas de restauración</li><li>Copia de Microsoft 365 con Hornetsecurity</li><li>Permisos y accesos del cloud revisados</li></ul>
         <a class="go" href="/web-adqa/sistemas-cloud/">Sistemas y cloud <svg><use href="#i-arrow"></use></svg></a>
       </article>
       <article class="st" style="--n:3">
@@ -474,7 +474,7 @@
       <div class="card svc rv" style="--s:0">
         <span class="ico"><svg><use href="#i-server"></use></svg></span>
         <h3>Copias y recuperación</h3>
-        <p>Estrategia 3-2-1 con replicación externa y pruebas periódicas de restauración.</p>
+        <p>Estrategia 3-2-1-1-0, la que recomendamos, con replicación externa y pruebas periódicas de restauración.</p>
       </div>
       <div class="card svc rv" style="--s:1">
         <span class="ico"><svg><use href="#i-cloud"></use></svg></span>
@@ -633,7 +633,7 @@
       <div class="rv" style="--s:1">
         <h3>Para el responsable técnico</h3>
         <details><summary>¿Qué diferencia hay entre un antivirus, un EDR y un XDR? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Un antivirus tradicional (EPP) bloquea el software malicioso conocido en cada equipo. Un EDR va más allá: registra lo que ocurre en el equipo. Con esa información detecta comportamientos anómalos, como el uso indebido de herramientas legítimas del sistema o el robo de credenciales. Además, permite aislar el equipo y responder. Un XDR amplía esa visión a la red, el correo y el cloud. Correlaciona los eventos de todas las fuentes en una misma consola.</p></details>
-        <details><summary>¿Cómo sabemos si nuestras copias de seguridad funcionan? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Restaurándolas. Que el proceso de copia termine sin errores no basta. Hay que recuperar datos en un entorno de prueba y comprobar que todo funciona. Diseñamos las copias con la regla 3-2-1: tres copias, en dos soportes distintos y una fuera de la oficina. Usamos Veeam cuando el entorno lo requiere y programamos pruebas de restauración periódicas.</p></details>
+        <details><summary>¿Cómo sabemos si nuestras copias de seguridad funcionan? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Restaurándolas. Que el proceso de copia termine sin errores no basta. Hay que recuperar datos en un entorno de prueba y comprobar que todo funciona. Recomendamos la regla 3-2-1-1-0: tres copias, en dos soportes distintos y una fuera de la oficina. Una de ellas, además, que nadie pueda borrar ni cifrar. Y cero errores al restaurar. Usamos Veeam cuando el entorno lo requiere y programamos pruebas de restauración periódicas.</p></details>
         <details><summary>¿Cómo se implanta la autenticación multifactor sin frenar al equipo? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Adaptándola a cómo trabaja tu equipo. Se exige siempre en los accesos de más riesgo: el acceso remoto, el correo y las cuentas de administración. Para la verificación usamos métodos cómodos, como la aplicación del móvil. También podemos definir ubicaciones y dispositivos de confianza. Así la segunda verificación protege sin convertirse en un obstáculo diario.</p></details>
         <details><summary>¿Cómo se integra la ciberseguridad con la red, las telecomunicaciones y el cloud? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>En ADQA somos operador de telecomunicaciones propio, a través de Anxanet. Tenemos datacenter propio y de proximidad en Barcelona. También mantenemos la red y los sistemas de nuestros clientes. Por eso diseñamos a la vez la conectividad, los servidores y su protección. Eso incluye el firewall, la segmentación, la interconexión de sedes, el alojamiento y las copias. De todo responde el mismo equipo.</p></details>
       </div>

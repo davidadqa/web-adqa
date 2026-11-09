@@ -153,7 +153,7 @@
           "name": "¿Cómo diseñáis y probáis las copias de seguridad?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Seguimos la regla 3-2-1. Son tres copias de los datos, en dos soportes distintos, y una de ellas fuera de tus instalaciones. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica."
+            "text": "Recomendamos la regla 3-2-1-1-0: tres copias de tus datos, en dos soportes distintos y una fuera de tus instalaciones. Una de ellas, además, que nadie pueda borrar ni cifrar. Y cero errores: lo comprobamos restaurando. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica."
           }
         },
         {
@@ -283,7 +283,7 @@
     <div class="trust fade-in" style="--d:1.1s">
       <span><svg><use href="#i-check"></use></svg>Datacenter propio en Barcelona</span>
       <span><svg><use href="#i-check"></use></svg>Copias Veeam con pruebas de restauración</span>
-      <span><svg><use href="#i-check"></use></svg>ISO 9001:2015 · ENS categoría ALTA</span>
+      <span><svg><use href="#i-check"></use></svg>ISO 9001 · ENS categoría ALTA</span>
     </div>
   </div>
 </section>
@@ -308,7 +308,7 @@
     <div class="stats">
       <div class="stat rv" style="--s:0"><b><span data-count="30">30</span><small>+</small></b><span>años de experiencia en tecnología para empresas e instituciones</span></div>
       <div class="stat rv" style="--s:1"><b>Propio</b><span>datacenter de proximidad en Barcelona, gestionado por nuestro equipo</span></div>
-      <div class="stat rv" style="--s:2"><b>3-2-1</b><span>copias de seguridad, con una fuera de tu oficina y restauraciones de prueba</span></div>
+      <div class="stat rv" style="--s:2"><b>3-2-1-1-0</b><span>la regla de copias de seguridad que recomendamos, con restauraciones de prueba</span></div>
       <div class="stat rv" style="--s:3"><b><span data-count="10">10</span><small> Gb</small></b><span>de capacidad máxima de conexión con Anxanet, nuestro operador, para tus sedes y tus servidores</span></div>
     </div>
   </div>
@@ -344,7 +344,7 @@
         <h3><span class="ico"><svg><use href="#i-grid"></use></svg></span>En tus instalaciones</h3>
         <ul>
           <li><svg><use href="#i-check"></use></svg><span>Instalamos y mantenemos tus servidores físicos y virtuales. Van en tu sala o en tu centro de proceso de datos (CPD).</span></li>
-          <li><svg><use href="#i-check"></use></svg><span>Suministramos servidores Lenovo y HP, sistemas de alimentación ininterrumpida Salicru, almacenamiento NAS y licencias.</span></li>
+          <li><svg><use href="#i-check"></use></svg><span>Suministramos servidores Lenovo y HPE, sistemas de alimentación ininterrumpida Salicru, almacenamiento NAS y licencias.</span></li>
           <li><svg><use href="#i-check"></use></svg><span>Tiene sentido cuando una máquina de producción necesita el servidor a su lado.</span></li>
           <li><svg><use href="#i-check"></use></svg><span>Mantenimiento preventivo, asistencia remota y reparaciones in situ.</span></li>
         </ul>
@@ -529,7 +529,7 @@
       <a class="card svc rv" href="#copias" style="--s:0">
         <span class="ico"><svg><use href="#i-clock"></use></svg></span>
         <h3>Copias de seguridad y continuidad</h3>
-        <p>Estrategia 3-2-1 con Veeam y Hornetsecurity, adaptada a lo crítico que es cada sistema y probada con restauraciones.</p>
+        <p>Copias según la regla 3-2-1-1-0 que recomendamos, con Veeam y Hornetsecurity, adaptadas a lo crítico que es cada sistema y probadas con restauraciones.</p>
         <ul class="tags"><li>Veeam</li><li>Microsoft 365</li><li>Restauración</li></ul>
         <span class="more">Copias de seguridad <svg><use href="#i-arrow"></use></svg></span>
       </a>
@@ -550,8 +550,8 @@
       <div class="card svc wide rv" style="--s:0">
         <span class="ico"><svg><use href="#i-box"></use></svg></span>
         <h3>Suministro de servidores, SAI y almacenamiento</h3>
-        <p>Llevamos más de 30 años en la cadena de suministro tecnológico. Te proponemos el equipo adecuado, con servidores Lenovo y HP, SAI Salicru, NAS para el almacenamiento y licencias de software.</p>
-        <ul class="tags"><li>Lenovo</li><li>HP</li><li>Salicru</li><li>Licencias</li></ul>
+        <p>Llevamos más de 30 años en la cadena de suministro tecnológico. Te proponemos el equipo adecuado, con servidores Lenovo y HPE, SAI Salicru, NAS para el almacenamiento y licencias de software.</p>
+        <ul class="tags"><li>Lenovo</li><li>HPE</li><li>Salicru</li><li>Licencias</li></ul>
       </div>
       <a class="card svc wide rv" href="/web-adqa/soporte-it/" style="--s:1">
         <span class="ico"><svg><use href="#i-tool"></use></svg></span>
@@ -675,7 +675,7 @@
         <h3>Para el responsable técnico</h3>
         <details><summary>¿Cómo decidís entre servidores locales, cloud o arquitectura híbrida? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Partimos del análisis de tu entorno. Miramos lo crítico que es cada sistema, la latencia que necesita y si se integra con maquinaria o aplicaciones específicas. Tenemos en cuenta también qué normativa aplica y cómo prevés crecer. Con eso decidimos qué se queda en local, qué va al datacenter de ADQA y qué al cloud público. No hay una respuesta que sirva para todos. Muchas empresas acaban combinando dos o tres de estas opciones.</p></details>
         <details><summary>¿Cómo se migra un entorno a servidores virtuales con las mínimas paradas? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Primero se documentan las dependencias entre servidores, aplicaciones y usuarios. Después se prepara el nuevo entorno y se replican los datos. Se prueba en paralelo mientras el sistema actual sigue funcionando. El cambio definitivo se hace en una ventana acordada, con un plan de vuelta atrás. Así las paradas se reducen al mínimo y se pueden planificar.</p></details>
-        <details><summary>¿Cómo diseñáis y probáis las copias de seguridad? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Seguimos la regla 3-2-1. Son tres copias de los datos, en dos soportes distintos, y una de ellas fuera de tus instalaciones. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica.</p></details>
+        <details><summary>¿Cómo diseñáis y probáis las copias de seguridad? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Recomendamos la regla 3-2-1-1-0: tres copias de tus datos, en dos soportes distintos y una fuera de tus instalaciones. Una de ellas, además, que nadie pueda borrar ni cifrar. Y cero errores: lo comprobamos restaurando. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica.</p></details>
         <details><summary>¿Qué es el edge computing y cuándo tiene sentido? <span class="pm"><svg aria-hidden="true"><use href="#i-plus"></use></svg></span></summary><p>Es procesar los datos cerca de donde se generan, en lugar de enviarlos todos a un servidor central. Por ejemplo, en una planta de producción o en una tienda. Tiene sentido cuando una máquina o una aplicación necesita respuesta inmediata. Lo tiene también cuando la conexión con la sede no puede ser un punto de parada. Lo habitual es combinarlo con el datacenter, que consolida los datos y guarda las copias.</p></details>
       </div>
     </div>
