@@ -12,7 +12,7 @@ updated: 2026-11-02
 servicio: "/diseno-programacion-web/"
 related: ["web-a-medida-o-plantilla", "actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional", "hosting-basico-o-mantenimiento-web-completo"]
 imagen: "Persona editando el texto de una página web desde el panel de un gestor de contenidos en un portátil"
-tldr: "Una web estática carga rápido, expone menos puntos de entrada y necesita poco mantenimiento técnico. Eso sí, si no tiene un editor conectado, cada cambio de contenido pasa por quien la programó. En una web con gestor de contenidos (CMS), como WordPress, el propio equipo actualiza textos, imágenes o artículos sin programar. A cambio, el gestor y sus extensiones deben estar al día. La elección depende de cuánto cambiará el contenido y de quién lo gestionará."
+tldr: "Una web estática carga rápido, expone menos puntos de entrada y necesita poco mantenimiento técnico. Sin un editor conectado, cada cambio pasa por quien la programó. En una web con gestor de contenidos (CMS), como WordPress, el propio equipo actualiza textos, imágenes o artículos sin programar. A cambio, el gestor y sus extensiones deben estar al día. La elección depende de cuánto cambiará el contenido y de quién lo gestionará."
 faq:
   manager:
     - q: "¿Una web estática da peor imagen que una web con CMS?"
