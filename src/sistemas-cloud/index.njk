@@ -23,7 +23,7 @@ faq:
     - q: "¿Cómo se migra un entorno a servidores virtuales con las mínimas paradas?"
       a: "Primero se documentan las dependencias entre servidores, aplicaciones y usuarios. Después se prepara el nuevo entorno y se replican los datos. Se prueba en paralelo mientras el sistema actual sigue funcionando. El cambio definitivo se hace en una ventana acordada, con un plan de vuelta atrás. Así las paradas se reducen al mínimo y se pueden planificar."
     - q: "¿Cómo diseñáis y probáis las copias de seguridad?"
-      a: "Seguimos la regla 3-2-1. Son tres copias de los datos, en dos soportes distintos, y una de ellas fuera de tus instalaciones. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica."
+      a: "Recomendamos la regla 3-2-1-1-0: tres copias de tus datos, en dos soportes distintos y una fuera de tus instalaciones. Una de ellas, además, que nadie pueda borrar ni cifrar. Y cero errores: lo comprobamos restaurando. Trabajamos con Veeam para servidores y máquinas virtuales, y con Hornetsecurity para las copias de Microsoft 365. La frecuencia y el tiempo de recuperación se definen para cada sistema. Las copias se prueban restaurando datos de forma periódica."
     - q: "¿Qué es el edge computing y cuándo tiene sentido?"
       a: "Es procesar los datos cerca de donde se generan, en lugar de enviarlos todos a un servidor central. Por ejemplo, en una planta de producción o en una tienda. Tiene sentido cuando una máquina o una aplicación necesita respuesta inmediata. Lo tiene también cuando la conexión con la sede no puede ser un punto de parada. Lo habitual es combinarlo con el datacenter, que consolida los datos y guarda las copias."
 ---
@@ -64,7 +64,7 @@ faq:
     <div class="stats">
       <div class="stat rv" style="--s:0"><b><span data-count="30">30</span><small>+</small></b><span>años de experiencia en tecnología para empresas e instituciones</span></div>
       <div class="stat rv" style="--s:1"><b>Propio</b><span>datacenter de proximidad en Barcelona, gestionado por nuestro equipo</span></div>
-      <div class="stat rv" style="--s:2"><b>3-2-1</b><span>copias de seguridad, con una fuera de tu oficina y restauraciones de prueba</span></div>
+      <div class="stat rv" style="--s:2"><b>3-2-1-1-0</b><span>la regla de copias de seguridad que recomendamos, con restauraciones de prueba</span></div>
       <div class="stat rv" style="--s:3"><b><span data-count="10">10</span><small> Gb</small></b><span>de capacidad máxima de conexión con Anxanet, nuestro operador, para tus sedes y tus servidores</span></div>
     </div>
   </div>
@@ -285,7 +285,7 @@ faq:
       <a class="card svc rv" href="#copias" style="--s:0">
         <span class="ico"><svg><use href="#i-clock"/></svg></span>
         <h3>Copias de seguridad y continuidad</h3>
-        <p>Estrategia 3-2-1 con Veeam y Hornetsecurity, adaptada a lo crítico que es cada sistema y probada con restauraciones.</p>
+        <p>Copias según la regla 3-2-1-1-0 que recomendamos, con Veeam y Hornetsecurity, adaptadas a lo crítico que es cada sistema y probadas con restauraciones.</p>
         <ul class="tags"><li>Veeam</li><li>Microsoft 365</li><li>Restauración</li></ul>
         <span class="more">Copias de seguridad <svg><use href="#i-arrow"/></svg></span>
       </a>

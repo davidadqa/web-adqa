@@ -50,11 +50,13 @@ Por eso, más que «¿tenemos backup?», la pregunta útil es otra: «¿cuánto 
 
 **¿Con qué frecuencia se hace la copia?** Una copia diaria no es lo mismo que una semanal. Si tu operativa genera datos importantes cada hora, la frecuencia de la copia debería reflejarlo.
 
-**¿Dónde se guarda?** Si la copia está junto a los datos originales, un mismo incidente puede afectar a los dos. El caso típico es el disco externo que vive enchufado al servidor. La referencia habitual es la regla 3-2-1:
+**¿Dónde se guarda?** Si la copia está junto a los datos originales, un mismo incidente puede afectar a los dos. El caso típico es el disco externo que vive enchufado al servidor. La referencia actual es la regla 3-2-1-1-0:
 
 - tres versiones de los datos, el original incluido;
 - en dos tipos de soporte distintos;
-- y una de ellas fuera del edificio, por ejemplo en un [datacenter de proximidad](/recursos/datacenter-de-proximidad/).
+- una de ellas fuera del edificio, por ejemplo en un [datacenter de proximidad](/recursos/datacenter-de-proximidad/);
+- otra que nadie pueda borrar ni cifrar, porque es inmutable o está desconectada;
+- y cero errores, comprobado restaurando.
 
 **¿Cuánto se tarda en restaurar?** Tener la copia te sirve de poco si recuperarla lleva días. Importa tanto el tiempo de restauración como la frecuencia de copia.
 
