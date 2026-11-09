@@ -58,7 +58,7 @@ Qué planes incluyen estas herramientas lo tienes en [Qué incluye Microsoft 365
 ### Datos y correo
 
 - **Uso compartido externo.** OneDrive, SharePoint y Teams permiten compartir con personas de fuera e invitar a usuarios externos. Decide hasta dónde y déjalo configurado para toda la organización.
-- **Protección frente a amenazas.** Microsoft Defender, incluido en Business Premium, revisa los adjuntos y los enlaces del correo y protege los equipos.
+- **Protección frente a amenazas.** Microsoft 365 comprueba los enlaces del correo en el momento del clic. Microsoft Defender, incluido en Business Premium, va más allá: analiza los adjuntos y protege los equipos.
 - **Autenticación del correo del dominio** (SPF, DKIM y DMARC). Son registros de tu dominio que demuestran que un correo sale de verdad de tu empresa. Así nadie puede hacerse pasar por ti con facilidad.
 - **Aplicaciones de terceros.** Revisa qué aplicaciones tienen permisos sobre las cuentas y quién puede autorizar nuevas.
 
