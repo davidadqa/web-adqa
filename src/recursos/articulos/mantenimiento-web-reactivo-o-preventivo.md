@@ -11,7 +11,7 @@ date: 2026-07-04
 updated: 2026-11-02
 servicio: "/diseno-programacion-web/mantenimiento-web-para-empresas/"
 related: ["mantenimiento-web-propio-o-externalizado", "actualizar-wordpress-tu-mismo-o-con-mantenimiento-profesional", "plugin-de-seguridad-o-mantenimiento-web-gestionado"]
-imagen: "Calendario de revisiones de una web con tareas marcadas (actualizaciones, copias, certificado SSL) junto a un panel que muestra la web funcionando con normalidad"
+imagen: "Calendario de revisiones de una web con tareas marcadas (actualizaciones, copias, certificado HTTPS) junto a un panel que muestra la web funcionando con normalidad"
 tldr: "El mantenimiento web reactivo interviene cuando algo ya ha fallado: una caída, un formulario que no envía o un plugin que deja de funcionar. El preventivo revisa la web de forma periódica: actualizaciones, copias, certificado y formularios. Así detecta esos problemas antes de que los note un visitante. El reactivo puede bastar en webs informativas sencillas. Cuando la web genera contactos o ventas, el preventivo suele compensar."
 faq:
   manager:
@@ -23,7 +23,7 @@ faq:
       a: "Cuando tu web empieza a generar contactos, reservas o ventas de forma regular. También cuando tiene formularios o áreas privadas que se usan a diario. Y cuando en tu empresa nadie sabe qué versiones hay instaladas ni de cuándo es la última copia."
   tecnico:
     - q: "¿Qué revisa un mantenimiento preventivo de forma periódica?"
-      a: "Se revisan las actualizaciones del núcleo, la plantilla y los plugins. Se comprueba el estado de las copias de seguridad, con una restauración de prueba cada cierto tiempo. Se vigila la caducidad del certificado SSL y del dominio. Y se miden los tiempos de carga y se prueban los formularios y las funciones críticas."
+      a: "Se revisan las actualizaciones del núcleo, la plantilla y los plugins. Se comprueba el estado de las copias de seguridad, con una restauración de prueba cada cierto tiempo. Se vigila que el certificado de seguridad (HTTPS) y el dominio estén siempre al día. Y se miden los tiempos de carga y se prueban los formularios y las funciones críticas."
     - q: "¿Con qué frecuencia se hacen esas revisiones?"
       a: "Depende de cuánto cambie la web y de su peso en el negocio. Como referencia, las copias suelen ser diarias en webs con actividad. Las actualizaciones se revisan cada pocas semanas. La comprobación completa se hace de forma periódica, a menudo mensual. Y se suman avisos automáticos si la web deja de responder."
     - q: "¿Cómo se actúa ante una incidencia grave si ya hay mantenimiento preventivo?"
@@ -60,7 +60,7 @@ Ninguna de estas situaciones es rara ni grave por sí sola. La tabla te muestra 
 
 | Incidencia | Con mantenimiento reactivo | Con mantenimiento preventivo |
 |---|---|---|
-| Certificado SSL a punto de caducar | Lo descubre el navegador del visitante | Se renueva antes de la fecha |
+| Certificado de seguridad (HTTPS) caducado | Lo descubre el navegador del visitante | Se vigila que esté siempre al día |
 | Plugin con un fallo de seguridad ya publicado | Se corrige si alguien se da cuenta | Se actualiza en la revisión |
 | Copia de seguridad que no se completa | Se descubre al intentar restaurar | Se detecta al comprobar las copias |
 | Formulario que deja de enviar | Se nota cuando faltan contactos | Se ve en la prueba de formularios |

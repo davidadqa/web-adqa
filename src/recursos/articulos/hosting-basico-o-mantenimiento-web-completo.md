@@ -27,7 +27,7 @@ faq:
     - q: "¿Qué se revisa en la optimización de la velocidad?"
       a: "Se miran el peso y la compresión de las imágenes. Se cuentan las extensiones activas y se valora su calidad. Se revisa la configuración de la caché y, si el hosting lo permite, algunos parámetros del propio servidor."
     - q: "¿Qué conviene pedirle a un hosting para una web con gestor de contenidos?"
-      a: "Lo básico son versiones actuales del software del servidor y de la base de datos, y certificado SSL. Pide también copias automáticas con varios días de historial y un panel para gestionar el dominio y el correo. Con esa base, el mantenimiento trabaja con más margen."
+      a: "Lo básico son versiones actuales del software del servidor y de la base de datos, y certificado de seguridad (HTTPS). Pide también copias automáticas con varios días de historial y un panel para gestionar el dominio y el correo. Con esa base, el mantenimiento trabaja con más margen."
 ---
 Contratar un hosting es el primer paso para tener una web, no el último. Es fácil confundir «la web está alojada» con «la web está cuidada». Pagas la renovación del hosting cada año y das por hecho que alguien vigila lo demás.
 
@@ -42,7 +42,7 @@ Cumple su función, que es alojar la web:
 - **Coste bajo**, sobre todo en los planes compartidos pensados para webs pequeñas.
 - **Contratación sencilla**, sin gestión adicional para tenerlo activo.
 
-Algunos planes añaden copias automáticas o un certificado SSL básico. El certificado es el que pone el candado junto a la dirección de tu web. Fuera queda lo que funciona por encima del servidor: el gestor de contenidos, la plantilla y las extensiones. Tampoco entran la seguridad de la propia web ni su rendimiento.
+Algunos planes añaden copias automáticas o un certificado de seguridad básico. Es el que hace que la web se abra con HTTPS y el navegador no avise de que no es segura. Fuera queda lo que funciona por encima del servidor: el gestor de contenidos, la plantilla y las extensiones. Tampoco entran la seguridad de la propia web ni su rendimiento.
 
 Escribes al soporte del hosting porque tu web muestra un error. Lo normal es que te digan que el servidor funciona bien. Y suele ser cierto: el fallo está una capa más arriba.
 
@@ -68,7 +68,7 @@ Unas preguntas sencillas para saber qué tienes cubierto hoy:
 
 - ¿Dónde se guardan las copias de la web y cuántos días se conservan?
 - ¿Quién actualiza el gestor de contenidos y las extensiones?
-- ¿Quién renueva el certificado SSL y el dominio?
+- ¿Quién vigila que el certificado de seguridad y el dominio estén al día?
 - ¿Quién lo resuelve si la web falla por un error de la propia web y no del servidor?
 - ¿Alguien revisa la velocidad de carga?
 
