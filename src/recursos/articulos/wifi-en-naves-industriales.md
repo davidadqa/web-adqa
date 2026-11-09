@@ -23,7 +23,7 @@ faq:
       a: "Lo habitual es que sea la maquinaria la que interfiere en el WiFi, sobre todo los motores y los variadores de frecuencia. Un WiFi profesional emite con potencias bajas y en bandas reguladas. Normalmente no afecta a los equipos industriales. Si tienes maquinaria sensible a la radiofrecuencia, durante el estudio se revisan las indicaciones de su fabricante."
   tecnico:
     - q: "¿Qué banda funciona mejor con interferencias industriales?"
-      a: "Depende del tipo de interferencia que detecte el estudio de cobertura. A menudo se combinan 2,4 y 5 GHz según la zona y los equipos que generan más ruido. La banda de 2,4 GHz llega más lejos, pero es la más expuesta a interferencias."
+      a: "Depende del tipo de interferencia que detecte el estudio de cobertura. A menudo se combinan 2,4, 5 y 6 GHz según la zona, el ruido de la maquinaria y lo que admitan tus terminales. La de 6 GHz tiene más canales libres, pero llega menos lejos. La de 2,4 GHz llega más lejos, pero es la más expuesta a interferencias."
     - q: "¿Cómo se resuelven las zonas de sombra detrás de estanterías o maquinaria?"
       a: "Con puntos de acceso adicionales o con antenas orientadas específicamente a esas zonas. El estudio de cobertura indica dónde hacen falta. Añadirlos después a ciegas suele crear interferencias nuevas."
     - q: "¿Qué protección debe tener el equipamiento en zonas con polvo, humedad o frío?"
