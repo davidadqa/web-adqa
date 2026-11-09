@@ -43,7 +43,7 @@ Esta lista sirve para comprobarlo. Para cada punto, intenta responder dos cosas:
 
 - **¿Se dan de baja las cuentas cuando alguien deja la empresa?** Con un procedimiento, no de memoria.
 - **¿Cada persona tiene su propia contraseña?** Las contraseñas compartidas impiden saber quién ha entrado en cada sistema.
-- **¿El correo y los accesos remotos piden una segunda verificación?** Es el código que te llega al móvil, además de la contraseña, para confirmar que eres tú. En esos puntos, la autenticación multifactor es de las medidas con más efecto por menos esfuerzo.
+- **¿El correo y los accesos remotos piden una segunda verificación?** Es un segundo paso, además de la contraseña, para confirmar que eres tú: normalmente, aprobar el acceso en una app del móvil. En esos puntos, la autenticación multifactor es de las medidas con más efecto por menos esfuerzo.
 
 ## Equipos, copias y correo
 
