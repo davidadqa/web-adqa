@@ -161,7 +161,7 @@
    },
    {
     "titulo": "Diseño de la red WiFi",
-    "texto": "Diseñamos una red WiFi Ruckus Resilience para el interior de la mina, con conectividad y geolocalización."
+    "texto": "Diseñamos una red WiFi Ruckus para el interior de la mina, con conectividad y geolocalización."
    }
   ],
   "resultado": {
@@ -191,7 +191,7 @@
   ],
   "pendiente": [
    "Falta un resultat amb xifra a part dels 1.000 m: p. ex. quants quilòmetres de fibra hem instal·lat, quantes galeries o punts de la mina queden connectats, o des de quin any en fem el manteniment.",
-   "Confirmar si la xarxa WiFi Ruckus Resilience es va arribar a implantar o només se'n va fer el disseny (ara el text diu «diseño»).",
+   "Confirmar si la xarxa WiFi Ruckus es va arribar a implantar o només se'n va fer el disseny (ara el text diu «diseño»).",
    "Confirmar que el manteniment de la fibra segueix en curs.",
    "Foto: 704 px d'ample i amb compressió de vídeo; cal confirmar-ne els drets d'ús. Ideal: la feina d'ADQA dins la mina (la fibra o un punt d'accés a la galeria), amb permís del client i sense cares."
   ],
@@ -905,7 +905,7 @@
   "resumen": "WiFi en las cámaras frigoríficas de su delegación Congelats Romero, con mantenimiento permanente del WiFi y de la telefonía.",
   "highlight": {
    "n": "Cámaras frigoríficas",
-   "l": "con WiFi Ruckus Resilience"
+   "l": "con WiFi Ruckus"
   },
   "icon": "i-signal",
   "filtros": [
@@ -942,7 +942,7 @@
   "hicimos": [
    {
     "titulo": "WiFi en frío",
-    "texto": "Implantamos una solución Ruckus Resilience en las cámaras frigoríficas de Congelats Romero."
+    "texto": "Implantamos una solución WiFi Ruckus en las cámaras frigoríficas de Congelats Romero."
    },
    {
     "titulo": "Telecomunicaciones y networking",
@@ -979,7 +979,7 @@
   ],
   "seo": {
    "title": "MIDBAN: WiFi en cámaras frigoríficas | ADQA",
-   "description": "WiFi Ruckus Resilience en las cámaras frigoríficas de Congelats Romero, delegación de MIDBAN, con mantenimiento permanente del WiFi y la telefonía."
+   "description": "WiFi Ruckus en las cámaras frigoríficas de Congelats Romero, delegación de MIDBAN, con mantenimiento permanente del WiFi y la telefonía."
   },
   "publicado": "2026-11-04"
  },
@@ -1167,7 +1167,7 @@
   "hicimos": [
    {
     "titulo": "WiFi en la fábrica",
-    "texto": "Implantamos una red WiFi Ruckus Resilience en su fábrica de Vilanova i la Geltrú, con equipos pensados para entornos exigentes."
+    "texto": "Implantamos una red WiFi Ruckus en su fábrica de Vilanova i la Geltrú, con equipos pensados para entornos exigentes."
    },
    {
     "titulo": "Programas a medida",
@@ -1208,7 +1208,7 @@
   ],
   "seo": {
    "title": "HITECSA: WiFi en la fábrica y programas a medida | ADQA",
-   "description": "WiFi Ruckus Resilience en la fábrica de HITECSA, programas de gestión y control a medida y aplicaciones corporativas en nuestro cloud. Desde hace años."
+   "description": "WiFi Ruckus en la fábrica de HITECSA, programas de gestión y control a medida y aplicaciones corporativas en nuestro cloud. Desde hace años."
   },
   "publicado": "2026-11-04"
  },
