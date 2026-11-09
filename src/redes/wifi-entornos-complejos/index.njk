@@ -17,16 +17,16 @@ faq:
     - q: "¿Se puede dar WiFi a invitados sin poner en riesgo la red de la empresa?"
       a: "Sí. Los invitados tienen su propia red WiFi y su propia VLAN, una red virtual separada. Entran por un portal cautivo, esa página de bienvenida que ves en los hoteles. Tienen accesos temporales y un límite de ancho de banda por usuario. En el firewall, esa red solo tiene salida a internet. Así los invitados no ven tus servidores, tus equipos ni tus aplicaciones internas."
     - q: "¿Qué diferencia hay entre un WiFi doméstico y uno profesional?"
-      a: "Un punto de acceso profesional está pensado para muchas personas conectadas a la vez. Admite varias redes separadas, cada una con su propia VLAN. Se gestiona desde una controladora central junto con el resto de puntos de acceso, y funciona de forma continua sin degradarse. Un router doméstico está diseñado para una casa: pocas personas, una sola red y gestión equipo a equipo."
+      a: "Un punto de acceso profesional está pensado para muchas personas conectadas a la vez. Admite varias redes separadas, cada una con su propia VLAN. Se gestiona desde una consola central junto con el resto de puntos de acceso. Un router doméstico está diseñado para una casa: pocas personas, una sola red y gestión equipo a equipo."
   tecnico:
     - q: "¿Con qué marcas de WiFi trabajáis?"
       a: "Con Ruckus, la marca que ADQA representa. Eso incluye puntos de acceso preparados para entornos exigentes, como fábricas, cámaras frigoríficas o minas. También trabajamos con Aruba y Huawei. Depende del entorno, del equipamiento que ya tengas y de cómo quieras gestionar la red. Primero va el estudio de cobertura; la elección del equipo viene después."
     - q: "¿Cómo se integra el WiFi con la red cableada?"
       a: "Cada red WiFi, o SSID, se asocia a una VLAN que viaja por los switches hasta el firewall. Allí se aplican las mismas políticas de seguridad que a la red cableada. Los puntos de acceso se alimentan por PoE desde los switches: la corriente les llega por el mismo cable de datos. Su conexión se calcula para el tráfico que van a soportar."
-    - q: "¿Qué aporta una controladora WiFi centralizada?"
-      a: "Una sola consola para todos los puntos de acceso, también de varias sedes. Desde ella se aplica la misma configuración en todos, se actualiza el firmware y se ajustan canales y potencias. También se coordina la itinerancia: que cada dispositivo pase de un punto de acceso a otro sin cortes. En la misma pantalla ves el estado de cada punto, los usuarios conectados y la carga por zonas. Ampliar la red es añadir puntos de acceso a la misma controladora."
+    - q: "¿Qué aporta gestionar el WiFi desde una consola central?"
+      a: "Una sola consola para todos los puntos de acceso, también de varias sedes. Desde ella se aplica la misma configuración en todos, se actualiza el firmware y se ajustan canales y potencias. También se coordina la itinerancia: que cada dispositivo pase de un punto de acceso a otro sin cortes. En la misma pantalla ves el estado de cada punto, los usuarios conectados y la carga por zonas. Ampliar la red es añadir puntos de acceso a la misma consola central."
     - q: "¿Cómo se evita que los dispositivos en movimiento pierdan la conexión?"
-      a: "Con un diseño que deje solape suficiente entre puntos de acceso. Las potencias se ajustan para que el dispositivo cambie de punto de acceso a tiempo, y una controladora coordina la itinerancia. Si los terminales lo admiten, se activan los mecanismos de itinerancia rápida 802.11k, 802.11v y 802.11r. Los terminales y lectores suelen ir en su propia red, separada del resto."
+      a: "Con un diseño que deje solape suficiente entre puntos de acceso. Las potencias se ajustan para que el dispositivo cambie de punto de acceso a tiempo, y la consola central coordina la itinerancia. Si los terminales lo admiten, se activan los mecanismos de itinerancia rápida 802.11k, 802.11v y 802.11r. Los terminales y lectores suelen ir en su propia red, separada del resto."
 ---
 {% extends "layouts/base.njk" %}
 {% import "macros.njk" as m with context %}
@@ -60,7 +60,7 @@ faq:
     <div class="rv" style="display:grid;gap:22px">
       <span class="eyebrow">En resumen</span>
       <h2 id="h-resumen" class="sr">¿Qué hace ADQA en WiFi profesional?</h2>
-      <p class="tldr"><strong>ADQA diseña, instala y mantiene WiFi profesional para empresas e instituciones de Barcelona y de toda España.</strong> Lo hace también en entornos difíciles, como naves industriales, cámaras frigoríficas, centros sanitarios o el interior de una mina. Cada proyecto empieza con un estudio de cobertura. El WiFi se gestiona desde una controladora centralizada y se integra con la red cableada. Trabaja con Ruckus, su marca representada, y con Aruba y Huawei.</p>
+      <p class="tldr"><strong>ADQA diseña, instala y mantiene WiFi profesional para empresas e instituciones de Barcelona y de toda España.</strong> Lo hace también en entornos difíciles, como naves industriales, cámaras frigoríficas, centros sanitarios o el interior de una mina. Cada proyecto empieza con un estudio de cobertura. El WiFi se gestiona desde una consola central y se integra con la red cableada. Trabaja con Ruckus, su marca representada, y con Aruba y Huawei.</p>
     </div>
     <div class="stats">
       <div class="stat rv" style="--s:0"><b>Ruckus</b><span>nuestra marca representada, con Aruba y Huawei según el entorno</span></div>
@@ -83,7 +83,7 @@ faq:
       <div class="card rv" style="--s:0"><span class="ico"><svg><use href="#i-signal"/></svg></span><h3>Cobertura donde se trabaja</h3><p>En los pasillos de tu nave, en el muelle de carga, dentro de la cámara o en la última sala de la planta.</p></div>
       <div class="card rv" style="--s:1"><span class="ico"><svg><use href="#i-arrow"/></svg></span><h3>Movilidad sin cortes</h3><p>Terminales, lectores y portátiles pasan de un punto de acceso a otro sin perder la sesión. Cruzas la nave de punta a punta y sigues conectado.</p></div>
       <div class="card rv" style="--s:2"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Cada perfil en su red</h3><p>Plantilla, invitados, máquinas y cámaras. Cada uno va en su red, con sus propias reglas de acceso.</p></div>
-      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Gestión desde un solo sitio</h3><p>Todos los puntos de acceso y todas las sedes, en una controladora. En la misma consola ves el estado y los avisos. Y un cambio, como la contraseña de invitados, llega a todas tus sedes a la vez.</p></div>
+      <div class="card rv" style="--s:3"><span class="ico"><svg><use href="#i-grid"/></svg></span><h3>Gestión desde un solo sitio</h3><p>Todos los puntos de acceso y todas las sedes, en una consola central. En la misma consola ves el estado y los avisos. Y un cambio, como la contraseña de invitados, llega a todas tus sedes a la vez.</p></div>
     </div>
   </div>
 </section>
@@ -141,7 +141,7 @@ faq:
       <article class="st" style="--n:4">
         <span class="num">05 · VARIOS CENTROS</span>
         <h3>Centros sanitarios y redes multisede</h3>
-        <p>Creamos redes WiFi para pacientes y usuarios en todos los centros del Consorci Sanitari Alt Penedès-Garraf. Cuando hay varias sedes, una controladora centralizada aplica la misma configuración en todas, y las gestionas desde un solo sitio.</p>
+        <p>Creamos redes WiFi para pacientes y usuarios en todos los centros del Consorci Sanitari Alt Penedès-Garraf. Cuando hay varias sedes, una consola central aplica la misma configuración en todas, y las gestionas desde un solo sitio.</p>
       </article>
     </div>
   </div>
@@ -160,12 +160,12 @@ faq:
     <div class="cmp good rv" style="--s:1">
       <h3>Alta densidad, en detalle</h3>
       <ul>
-        <li><svg><use href="#i-check"/></svg><span><strong>Controladora centralizada</strong> para todos los puntos de acceso.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Consola central</strong> para todos los puntos de acceso.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Canales y potencias planificados</strong> para que los puntos de acceso no se interfieran.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Itinerancia transparente</strong> para dispositivos en movimiento.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Prioridad para el tráfico de tu equipo</strong> frente al de invitados.</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Portal cautivo y límites</strong> de ancho de banda por usuario.</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Crecer sin rediseñar:</strong> nuevos puntos de acceso en la misma controladora.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Crecer sin rediseñar:</strong> nuevos puntos de acceso en la misma consola central.</span></li>
       </ul>
     </div>
   </div>
@@ -224,7 +224,7 @@ faq:
       </div>
       <div class="card svc rv" style="--s:2">
         <span class="ico"><svg><use href="#i-server"/></svg></span>
-        <h3>Controladora centralizada</h3>
+        <h3>Consola central</h3>
         <p>Configuración común, actualizaciones y estado de todos tus puntos de acceso desde una sola consola.</p>
         <ul class="tags"><li>Gestión unificada</li><li>Multisede</li></ul>
       </div>
