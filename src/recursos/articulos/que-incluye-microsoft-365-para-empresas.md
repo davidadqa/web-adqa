@@ -1,6 +1,6 @@
 ---
 title: "Qué incluye Microsoft 365 para empresas y sus planes | ADQA"
-description: "Qué incluye Microsoft 365 para empresas: Office, correo, Teams, OneDrive, SharePoint y Entra ID, y cómo elegir el plan que necesita cada perfil de tu equipo."
+description: "Qué incluye Microsoft 365 para empresas: Word y Excel, correo, Teams, OneDrive, SharePoint y Entra ID, y cómo elegir el plan que necesita cada perfil de tu equipo."
 h1: "Qué incluye Microsoft 365 para empresas y cómo elegir el plan adecuado"
 lead: "Mucho más que Word y Excel: correo, archivos, reuniones, identidades y seguridad, repartidos en varios planes."
 keyword: "qué incluye Microsoft 365 para empresas"
@@ -50,7 +50,7 @@ Entra ID es la pieza que menos se ve, pero pesa mucho en seguridad. Decide quié
 Los planes para empresas varían en tres ejes. El primero, si traen las aplicaciones de escritorio. El segundo, cuánta seguridad y gestión de dispositivos aportan. El tercero, qué herramientas de cumplimiento normativo ofrecen.
 
 - **Business Basic.** Correo, Teams, OneDrive y SharePoint, con las aplicaciones en versión web y móvil.
-- **Business Standard.** Todo lo anterior más las aplicaciones de Office instaladas en el ordenador, con todas sus funciones.
+- **Business Standard.** Todo lo anterior más Word, Excel, PowerPoint y Outlook instalados en el ordenador, con todas sus funciones.
 - **Business Premium.** Suma la gestión de portátiles y móviles con Intune y la protección de Microsoft Defender frente a amenazas. Trae, además, el acceso condicional de Entra ID.
 - **Enterprise (E3 y E5).** Para organizaciones con requisitos más exigentes de seguridad, auditoría y retención. Qué aportan cuando hay normativa de por medio se repasa en [Seguridad y cumplimiento](/recursos/seguridad-y-cumplimiento/).
 
@@ -60,7 +60,7 @@ Imagina a tu jefe de obra consultando planos y correo desde el móvil, lejos de 
 
 Antes de comparar planes, repasa tu equipo mesa a mesa y hazte estas preguntas:
 
-- ¿Quién necesita las aplicaciones de Office instaladas y a quién le basta la versión web?
+- ¿Quién necesita Word, Excel, PowerPoint y Outlook instalados y a quién le basta la versión web?
 - ¿Trabajas con datos que piden más control de acceso o cumplir una normativa concreta?
 - ¿Tienes portátiles y móviles de empresa que convenga gestionar desde un mismo sitio, con bloqueo, cifrado y borrado a distancia?
 - ¿El espacio de correo y de almacenamiento de cada plan encaja con lo que ya usas hoy?
@@ -73,7 +73,7 @@ La última pregunta es la que más mueve la factura. Microsoft 365 permite asign
 | Necesidad | Plan orientativo | Qué aporta |
 |---|---|---|
 | Correo, Teams y documentos en el navegador | Business Basic | Lo esencial, sin aplicaciones de escritorio |
-| Trabajo intensivo con documentos | Business Standard | Las aplicaciones de Office instaladas en el ordenador |
+| Trabajo intensivo con documentos | Business Standard | Word, Excel, PowerPoint y Outlook instalados en el ordenador |
 | Datos sensibles o equipos que salen de la oficina | Business Premium | Intune, Microsoft Defender y acceso condicional |
 | Requisitos de cumplimiento exigentes | Enterprise (E3 o E5) | Más herramientas de seguridad, auditoría y retención |
 | Perfiles muy distintos en la plantilla | Combinación de planes | Cada persona con el plan que corresponde a su uso real |
