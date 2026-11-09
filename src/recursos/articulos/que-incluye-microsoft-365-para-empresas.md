@@ -1,6 +1,6 @@
 ---
 title: "Qué incluye Microsoft 365 para empresas y sus planes | ADQA"
-description: "Qué incluye Microsoft 365 para empresas: Word y Excel, correo, Teams, OneDrive, SharePoint y Entra ID, y cómo elegir el plan que necesita cada perfil de tu equipo."
+description: "Qué incluye Microsoft 365 para empresas: Word, Excel, correo, Teams, OneDrive, SharePoint y Entra ID, y cómo elegir el plan para cada perfil de tu equipo."
 h1: "Qué incluye Microsoft 365 para empresas y cómo elegir el plan adecuado"
 lead: "Mucho más que Word y Excel: correo, archivos, reuniones, identidades y seguridad, repartidos en varios planes."
 keyword: "qué incluye Microsoft 365 para empresas"
