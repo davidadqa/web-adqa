@@ -48,7 +48,7 @@ La política de seguridad es la base. La normativa añade requisitos concretos s
 
 - **RGPD (Reglamento General de Protección de Datos).** Se aplica a cualquier empresa que trate datos personales de clientes, empleados o proveedores. Además de proteger esos datos, obliga a justificar cada tratamiento, a informar a las personas y a atender sus derechos.
 - **Esquema Nacional de Seguridad (ENS).** Lo deben cumplir los organismos públicos y las empresas que les prestan servicios o les suministran soluciones. Si trabajas con la administración o quieres hacerlo, revisa [si tu empresa necesita la certificación ENS](/recursos/certificacion-ens-categoria-alta/) y en qué categoría.
-- **Exigencias de sector y de clientes.** Algunos sectores tienen requisitos propios, y cada vez más clientes piden a sus proveedores pruebas de que protegen la información. La petición suele llegar cuando un cliente grande te da de alta como proveedor.
+- **Exigencias de sector y de clientes.** Algunos sectores tienen requisitos propios, como la directiva europea NIS2 o el reglamento DORA en banca y seguros. Y cada vez más clientes piden a sus proveedores pruebas de que protegen la información. La petición suele llegar cuando un cliente grande te da de alta como proveedor.
 
 En todos los casos, la política de seguridad suele ser el primer documento que se pide. Sin ella, cada exigencia nueva obliga a empezar de cero. Con ella, cada exigencia nueva parte de lo que ya tienes.
 
