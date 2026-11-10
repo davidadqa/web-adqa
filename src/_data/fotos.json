@@ -15,6 +15,48 @@
   "archivo": "foto-058.jpg",
   "pagina": "/recursos/soporte-it-reactivo-o-proactivo/"
  },
+ "equipo-camiseta-anxanet": {
+  "base": "/assets/fotos/equipo-camiseta-anxanet",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Una camiseta de Anxanet con el lema «Construïm xarxes» colgada en una silla; al fondo, un técnico frente a sus monitores",
+  "altRevisado": true,
+  "archivo": "equipo-16.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.55
+  ]
+ },
+ "equipo-explicacion-pizarra": {
+  "base": "/assets/fotos/equipo-explicacion-pizarra",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Una persona del equipo de ADQA explica un esquema en la pizarra con un rotulador en la mano",
+  "altRevisado": true,
+  "archivo": "equipo-33.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.38
+  ]
+ },
  "equipo-folleto-anxanet": {
   "base": "/assets/fotos/equipo-folleto-anxanet",
   "widths": [
@@ -31,6 +73,48 @@
   "archivo": "equipo-9.jpg",
   "pagina": "(equipo)",
   "tipo": "equipo"
+ },
+ "equipo-folleto-anxanet-grupo": {
+  "base": "/assets/fotos/equipo-folleto-anxanet-grupo",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Tres compañeras de ADQA miran sonriendo un folleto de Anxanet en la oficina",
+  "altRevisado": true,
+  "archivo": "equipo-31.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.45
+  ]
+ },
+ "equipo-folleto-anxanet-risas": {
+  "base": "/assets/fotos/equipo-folleto-anxanet-risas",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Tres compañeras de ADQA se ríen mientras miran juntas un folleto de Anxanet",
+  "altRevisado": true,
+  "archivo": "equipo-12.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.36
+  ]
  },
  "equipo-grupo-reunion": {
   "base": "/assets/fotos/equipo-grupo-reunion",
@@ -66,6 +150,69 @@
   "pagina": "(equipo)",
   "tipo": "equipo"
  },
+ "equipo-manos-alfombrilla-adqa": {
+  "base": "/assets/fotos/equipo-manos-alfombrilla-adqa",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Manos sobre el teclado y el ratón, encima de una alfombrilla de ADQA, junto a una calculadora y un móvil",
+  "altRevisado": true,
+  "archivo": "equipo-21.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.6
+  ]
+ },
+ "equipo-manos-teclado-anillo": {
+  "base": "/assets/fotos/equipo-manos-teclado-anillo",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Primer plano de unas manos tecleando en un teclado",
+  "altRevisado": true,
+  "archivo": "equipo-29.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.6
+  ]
+ },
+ "equipo-mochila-watchguard": {
+  "base": "/assets/fotos/equipo-mochila-watchguard",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de ADQA, de espaldas, con una mochila de WatchGuard y ADQA; detrás, la furgoneta de la empresa",
+  "altRevisado": true,
+  "archivo": "equipo-23.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.56
+  ]
+ },
  "equipo-oficina-logo-adqa": {
   "base": "/assets/fotos/equipo-oficina-logo-adqa",
   "widths": [
@@ -81,6 +228,48 @@
   "pagina": "(equipo)",
   "tipo": "equipo"
  },
+ "equipo-pizarra-cliente-factura": {
+  "base": "/assets/fotos/equipo-pizarra-cliente-factura",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Tres compañeras de ADQA delante de una pizarra con un esquema de datos que relaciona clientes y facturas",
+  "altRevisado": true,
+  "archivo": "equipo-30.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.3
+  ]
+ },
+ "equipo-pizarra-esquema": {
+  "base": "/assets/fotos/equipo-pizarra-esquema",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Dos personas del equipo de ADQA repasan un esquema en la pizarra; una, con el polo de ADQA, señala un punto",
+  "altRevisado": true,
+  "archivo": "equipo-13.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.38
+  ]
+ },
  "equipo-programando-dos-monitores": {
   "base": "/assets/fotos/equipo-programando-dos-monitores",
   "widths": [
@@ -95,6 +284,90 @@
   "archivo": "equipo-3.jpg",
   "pagina": "(equipo)",
   "tipo": "equipo"
+ },
+ "equipo-puesto-dos-monitores": {
+  "base": "/assets/fotos/equipo-puesto-dos-monitores",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Una persona del equipo de ADQA trabaja frente a dos monitores en la oficina; al fondo, una compañera en su puesto",
+  "altRevisado": true,
+  "archivo": "equipo-22.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.5
+  ]
+ },
+ "equipo-retrato-conversacion": {
+  "base": "/assets/fotos/equipo-retrato-conversacion",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Una persona del equipo de ADQA explica algo durante una conversación, junto a una ventana",
+  "altRevisado": true,
+  "archivo": "equipo-25.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.33
+  ]
+ },
+ "equipo-reunion-papeles": {
+  "base": "/assets/fotos/equipo-reunion-papeles",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Dos personas de ADQA revisan unos documentos en una mesa, una sentada frente al ordenador y otra de pie",
+  "altRevisado": true,
+  "archivo": "equipo-32.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.4
+  ]
+ },
+ "equipo-reunion-tabletas": {
+  "base": "/assets/fotos/equipo-reunion-tabletas",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Dos personas de ADQA revisan un proyecto en unas tabletas, sentadas a una mesa",
+  "altRevisado": true,
+  "archivo": "equipo-27.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.48
+  ]
  },
  "equipo-soporte-auriculares": {
   "base": "/assets/fotos/equipo-soporte-auriculares",
@@ -126,20 +399,110 @@
   "pagina": "(equipo)",
   "tipo": "equipo"
  },
+ "equipo-teclado-raton-vertical": {
+  "base": "/assets/fotos/equipo-teclado-raton-vertical",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Manos tecleando junto a un ratón vertical, unos auriculares con micrófono y dos móviles",
+  "altRevisado": true,
+  "archivo": "equipo-36.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.45
+  ]
+ },
+ "equipo-teclado-telefono": {
+  "base": "/assets/fotos/equipo-teclado-telefono",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Manos tecleando junto al teléfono de la oficina y una botella de ADQA",
+  "altRevisado": true,
+  "archivo": "equipo-28.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.5
+  ]
+ },
  "equipo-telefono-codigo": {
   "base": "/assets/fotos/equipo-telefono-codigo",
   "widths": [
    640,
-   1146
+   960,
+   1280,
+   1920
   ],
   "ratio": "1146/400",
-  "w": 1146,
-  "h": 400,
+  "w": 1920,
+  "h": 670,
   "alt": "Una persona del equipo de ADQA habla por el móvil frente a dos monitores, uno con código y otro con un documento",
   "altRevisado": true,
-  "archivo": "equipo-6.jpg",
+  "archivo": "equipo-19.jpg",
   "pagina": "(equipo)",
-  "tipo": "equipo"
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.453
+  ]
+ },
+ "oficina-diplomas-certificados": {
+  "base": "/assets/fotos/oficina-diplomas-certificados",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Pasillo de la oficina de ADQA con diplomas y certificados de formación enmarcados en la pared",
+  "altRevisado": true,
+  "archivo": "equipo-14.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.5
+  ]
+ },
+ "oficina-fachada-furgoneta": {
+  "base": "/assets/fotos/oficina-fachada-furgoneta",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "La furgoneta de ADQA, con el lema «we do I.T. better», aparcada delante de la nave de la empresa",
+  "altRevisado": true,
+  "archivo": "equipo-17.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.62
+  ]
  },
  "oficina-rotulo-adqa": {
   "base": "/assets/fotos/oficina-rotulo-adqa",
@@ -158,6 +521,90 @@
   "pagina": "(equipo)",
   "tipo": "equipo"
  },
+ "oficina-sala-reuniones-adqa": {
+  "base": "/assets/fotos/oficina-sala-reuniones-adqa",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Dos personas del equipo conversan sonriendo en la sala de reuniones, bajo las letras de ADQA",
+  "altRevisado": true,
+  "archivo": "equipo-15.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.42
+  ]
+ },
+ "soporte-auriculares-monitores": {
+  "base": "/assets/fotos/soporte-auriculares-monitores",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de ADQA con auriculares y micrófono atiende desde su puesto, rodeado de monitores",
+  "altRevisado": true,
+  "archivo": "equipo-35.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.42
+  ]
+ },
+ "soporte-auriculares-perfil": {
+  "base": "/assets/fotos/soporte-auriculares-perfil",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de ADQA con auriculares y micrófono trabaja de perfil frente a su monitor",
+  "altRevisado": true,
+  "archivo": "equipo-26.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.48
+  ]
+ },
+ "soporte-auriculares-portatil": {
+  "base": "/assets/fotos/soporte-auriculares-portatil",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de ADQA con auriculares y la camisa de la empresa trabaja con un portátil y un monitor",
+  "altRevisado": true,
+  "archivo": "equipo-34.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.42
+  ]
+ },
  "soporte-tecnico-pantallas": {
   "base": "/assets/fotos/soporte-tecnico-pantallas",
   "widths": [
@@ -174,5 +621,47 @@
   "archivo": "equipo-11.jpg",
   "pagina": "(equipo)",
   "tipo": "equipo"
+ },
+ "soporte-tres-pantallas": {
+  "base": "/assets/fotos/soporte-tres-pantallas",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de ADQA, de espaldas, trabaja con tres pantallas, un portátil y el teléfono de la oficina",
+  "altRevisado": true,
+  "archivo": "equipo-20.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.4
+  ]
+ },
+ "tecnico-furgoneta-adqa": {
+  "base": "/assets/fotos/tecnico-furgoneta-adqa",
+  "widths": [
+   640,
+   960,
+   1280,
+   1920
+  ],
+  "ratio": "1146/400",
+  "w": 1920,
+  "h": 670,
+  "alt": "Un técnico de ADQA con ropa de trabajo, de pie delante de la furgoneta de la empresa",
+  "altRevisado": true,
+  "archivo": "equipo-24.jpg",
+  "pagina": "(equipo)",
+  "tipo": "equipo",
+  "foco": [
+   0.5,
+   0.48
+  ]
  }
 }
