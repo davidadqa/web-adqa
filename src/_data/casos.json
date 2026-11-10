@@ -300,7 +300,7 @@
   "nota": null,
   "foto": {
    "tipo": "equipo",
-   "slug": "equipo-oficina-logo-adqa",
+   "slug": "soporte-tecnico-pantallas",
    "pos": "100% 50%"
   },
   "otros": [
@@ -867,7 +867,7 @@
   "nota": null,
   "foto": {
    "tipo": "equipo",
-   "slug": "soporte-tecnico-pantallas",
+   "slug": "equipo-oficina-logo-adqa",
    "pos": "100% 50%"
   },
   "otros": [
@@ -1090,8 +1090,8 @@
   "nota": null,
   "foto": {
    "tipo": "equipo",
-   "slug": "equipo-telefono-codigo",
-   "pos": "50% 50%"
+   "slug": "equipo-programando-dos-monitores",
+   "pos": "0% 50%"
   },
   "otros": [
    "hitecsa",
@@ -1317,8 +1317,8 @@
   "nota": null,
   "foto": {
    "tipo": "equipo",
-   "slug": "equipo-soporte-auriculares",
-   "pos": "100% 50%"
+   "slug": "equipo-explicacion-pizarra",
+   "pos": "30% 50%"
   },
   "otros": [
    "salud",
@@ -1780,8 +1780,8 @@
   "nota": null,
   "foto": {
    "tipo": "equipo",
-   "slug": "equipo-programando-dos-monitores",
-   "pos": "0% 50%"
+   "slug": "equipo-retrato-conversacion",
+   "pos": "35% 50%"
   },
   "otros": [
    "expedientes",
