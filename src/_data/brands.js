@@ -12,7 +12,7 @@ export default {
     centralitas: ["Wildix"],
     hardware: ["Lenovo", "HP"],
     sai: ["Salicru"],
-    networking: ["MikroTik", "Huawei", "Aruba"],
+    networking: ["Huawei", "Aruba"],
   },
   // Marcas que NO se citan: Fortinet, Fluke, Cisco, Ubiquiti, HPE. Microsoft no es partner oficial: «Expertos en Microsoft 365».
 };
