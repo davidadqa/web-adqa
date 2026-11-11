@@ -35,7 +35,7 @@ Datos clave:
 - [Datacenter de proximidad en Barcelona](https://adqa.com/sistemas-cloud/datacenter/): Datacenter de proximidad en Barcelona: housing, servidores virtuales y backup remoto, unidos a tu oficina por un enlace privado que no pasa por Internet.
 - [Soporte IT para empresas en Barcelona: mantenimiento](https://adqa.com/soporte-it/): Soporte IT para empresas en Barcelona: mantenimiento preventivo, asistencia remota e in situ, licencias e inventario, y cada incidencia en nuestra extranet.
 - [Telecomunicaciones para empresas en Barcelona](https://adqa.com/telecomunicaciones/): Telecomunicaciones para empresas en Barcelona con operador propio, Anxanet: Internet hasta 10 Gb, enlaces entre sedes, SD-WAN, SASE y centralitas IP Wildix.
-- [Networking empresarial en Barcelona](https://adqa.com/telecomunicaciones/networking/): Networking empresarial en Barcelona: arquitectura de red, VLAN, routing, QoS, VPN, SD-WAN y alta disponibilidad con MikroTik, Huawei y Aruba, todo documentado.
+- [Networking empresarial en Barcelona](https://adqa.com/telecomunicaciones/networking/): Networking empresarial en Barcelona: arquitectura de red, VLAN, routing, QoS, VPN, SD-WAN y alta disponibilidad con Huawei y Aruba, todo documentado.
 
 ## Empresa
 
