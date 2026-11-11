@@ -23,7 +23,7 @@ faq:
       a: "En cuanto los puntos de acceso nuevos están instalados y configurados. Lo primero que sueles notar es que desaparecen las zonas sin señal y los cortes al moverte por la oficina."
   tecnico:
     - q: "¿Qué diferencia hay entre la itinerancia de un router doméstico y la de un sistema profesional?"
-      a: "En un sistema profesional, los puntos de acceso trabajan coordinados desde una controladora o desde la nube. Ayudan al dispositivo a pasar al más adecuado sin perder la sesión. Con routers sueltos o repetidores, el dispositivo tiende a quedarse pegado al primero, aunque la señal sea peor. Y el corte se nota."
+      a: "En un sistema profesional, los puntos de acceso trabajan coordinados desde una consola central. Ayudan al dispositivo a pasar al más adecuado sin perder la sesión. Con routers sueltos o repetidores, el dispositivo tiende a quedarse pegado al primero, aunque la señal sea peor. Y el corte se nota."
     - q: "¿Se pueden aislar los dispositivos IoT o de producción del resto de la red?"
       a: "Sí. Cada uso va en su propia red WiFi, asociada a una VLAN, que es una red virtual separada. El firewall tiene reglas sobre qué puede comunicarse con qué. Así, un problema en la red de producción se queda en ella y no llega a la de oficina, y al revés."
     - q: "¿Cómo se alimentan los puntos de acceso de un sistema profesional?"

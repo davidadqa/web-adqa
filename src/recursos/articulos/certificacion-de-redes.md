@@ -75,7 +75,7 @@ Y te conviene aunque nadie te la pida. Tiene sentido al estrenar una red, antes 
 | Contrato o pliego que lo exige | Sí, forma parte de la entrega |
 | Auditoría que revisa la infraestructura | Recomendable, como documentación de la red física |
 | Cortes o lentitud sin causa clara | Útil para confirmar o descartar un problema físico |
-| Oficina muy pequeña y sin requisitos | Normalmente no es necesario |
+| Oficina muy pequeña, con la red ya instalada y sin requisitos | Puede bastar una verificación básica |
 
 Para decidir rápido:
 

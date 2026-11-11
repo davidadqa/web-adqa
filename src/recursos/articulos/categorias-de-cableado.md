@@ -73,4 +73,4 @@ Para decidir rápido:
 
 - **Cat 6A para obra nueva**, salvo presupuesto muy ajustado. Te da margen para los próximos años sin un gran sobrecoste frente a Cat 6.
 - **Fibra para los troncales** entre plantas, edificios o sedes, y donde las distancias superan lo que admite el cobre.
-- **Certificación siempre**, sea cual sea la categoría. Es la forma de saber si lo instalado rinde lo que promete. Si quieres verlo paso a paso, lee [así se certifica una red](/recursos/asi-se-certifica-una-red/).
+- **Certificación en toda instalación nueva o ampliación**, sea cual sea la categoría. Es la forma de saber si lo instalado rinde lo que promete. Si quieres verlo paso a paso, lee [así se certifica una red](/recursos/asi-se-certifica-una-red/).

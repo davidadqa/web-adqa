@@ -80,7 +80,7 @@ Si varias respuestas son «nadie» o «no lo sé», esas tareas están pendiente
 |---|---|---|
 | Servidor, espacio y disponibilidad | Sí | Incluido o coordinado con el hosting |
 | Actualizaciones del gestor y las extensiones | No incluidas | Incluidas y probadas |
-| Copias verificadas fuera del servidor | Rara vez | Incluidas |
+| Copias verificadas fuera del servidor | Depende del proveedor | Incluidas |
 | Seguridad de la propia web | No: cubre el servidor | Incluida |
 | Optimización de la velocidad | Solo la del servidor | Incluida |
 | Coste | Bajo | Cuota de servicio más amplia |

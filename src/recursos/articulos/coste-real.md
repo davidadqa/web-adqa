@@ -48,15 +48,15 @@ Entre planes de nivel parecido, las tarifas de las dos suites no se alejan mucho
 
 ### Google Workspace: licenciamiento mixto
 
-Google Workspace permite asignar ediciones distintas a usuarios distintos dentro del mismo dominio. Por ejemplo, Business Starter para unos y Business Standard o Business Plus para otros. Se llama licenciamiento mixto (Partial Domain Licensing, PDL). Con las condiciones actuales de Google, esta opción requiere gestionar el dominio a través de un partner oficial. Comprando directamente, todo el dominio comparte una misma edición. La tarifa de cada licencia no cambia por contratarla con un partner.
+Google Workspace permite asignar ediciones distintas a usuarios distintos dentro del mismo dominio. Por ejemplo, Business Starter para unos y Business Standard o Business Plus para otros. Se llama licenciamiento mixto (Partial Domain Licensing, PDL). Con las condiciones actuales de Google, combinar ediciones requiere contratarlas a través de un partner o del equipo comercial de Google. Con la contratación en línea, todo el dominio comparte una misma edición. Cada usuario paga la tarifa de la edición que tiene asignada.
 
 <!-- PENDIENTE: la condición del PDL (compra directa = una sola edición por dominio) es una política comercial de Google que puede cambiar (informe, apartado 9); revisarla periódicamente. -->
 
 Ordena tu lista de usuarios según lo que usa cada uno. Enseguida ves quién necesita las funciones avanzadas y quién no. El ahorro depende de cuántas personas tienen un uso básico y de la edición de partida. Habitualmente, la factura de licencias baja entre un 20% y un 40%.
 
-Un caso real, publicado en agosto de 2026, te sirve como referencia. Una empresa con 40 puestos en Business Plus pasó 20 de ellos a Business Starter. Así redujo un 34% el coste anual de esas licencias. Las tarifas de Google cambian, así que cada cálculo se rehace con las vigentes.
+Un caso real te sirve como referencia. Una empresa con 40 puestos en Business Plus pasó 20 de ellos a Business Starter. Así redujo un 34% el coste anual de esas licencias. Las tarifas de Google cambian, así que cada cálculo se rehace con las vigentes.
 
-<!-- PENDIENTE: comprobar que los datos del caso (40 puestos en Business Plus, 20 pasados a Business Starter, -34%, publicado en agosto de 2026) coinciden con la ficha del caso cuando se publique en la Fase 3. -->
+<!-- PENDIENTE: comprobar que los datos del caso (40 puestos en Business Plus, 20 pasados a Business Starter, -34%) coinciden con la ficha del caso cuando se publique en la Fase 3. -->
 
 En [licenciamiento mixto de Google Workspace](/google-workspace/licenciamiento-mixto-google-workspace/) tienes el funcionamiento paso a paso, un ejemplo con 10 usuarios y el caso completo.
 
@@ -80,7 +80,7 @@ Con esos datos ves en cuánto tiempo se recupera la inversión del cambio. Mucha
 | Factor de coste | Google Workspace | Microsoft 365 |
 |---|---|---|
 | Precio de planes equivalentes | Similar | Similar |
-| Combinar planes por persona | Con un partner oficial (licenciamiento mixto) | Función estándar en el mismo tenant |
+| Combinar planes por persona | Con licenciamiento mixto, a través de un partner o del comercial de Google | Función estándar en el mismo tenant |
 | Dónde suele estar el margen | Pasar a una edición inferior a quien tiene un uso básico | Revisar quién necesita escritorio o seguridad avanzada |
 | Ahorro orientativo al ajustar | Habitualmente, entre un 20% y un 40% de la factura de licencias | Depende del sobrecoste de partida |
 | Licencias sin uso | Revisión periódica de altas y bajas | Revisión periódica de altas y bajas |

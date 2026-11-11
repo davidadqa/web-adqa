@@ -54,7 +54,7 @@ Los planes para empresas varían en tres ejes. El primero, si traen las aplicaci
 - **Business Premium.** Suma la gestión de portátiles y móviles con Intune y la protección de Microsoft Defender frente a amenazas. Trae, además, el acceso condicional de Entra ID.
 - **Enterprise (E3 y E5).** Para organizaciones con requisitos más exigentes de seguridad, auditoría y retención. Qué aportan cuando hay normativa de por medio se repasa en [Seguridad y cumplimiento](/recursos/seguridad-y-cumplimiento/).
 
-Imagina a tu jefe de obra consultando planos y correo desde el móvil, lejos de la oficina. Gestionar ese móvil con Intune desde un mismo sitio ya es terreno de Business Premium. Microsoft fija las funciones de cada plan y las revisa de vez en cuando. Compruébalas al contratar o al renovar.
+Imagina a tu jefe de obra consultando planos y correo desde el móvil, lejos de la oficina. Gestionar ese móvil con Intune desde un mismo sitio ya es terreno de Business Premium. Microsoft fija las funciones de cada plan y las revisa de vez en cuando. Hay planes con Teams y sin Teams. Compruébalas al contratar o al renovar.
 
 ## Qué preguntarse antes de elegir plan
 

@@ -27,7 +27,7 @@ faq:
     - q: "¿Dónde se organiza la documentación de un proyecto en cada suite?"
       a: "En Google Workspace, habitualmente en una unidad compartida de Drive, con permisos por equipo o proyecto. En Microsoft 365, en un canal de Teams vinculado a una biblioteca de SharePoint. Ahí se guardan los archivos del equipo."
     - q: "¿Se pueden integrar Google Chat o Teams con otras herramientas de la empresa?"
-      a: "Sí, las dos admiten integraciones con aplicaciones de terceros. Si tu empresa ya trabaja con otras herramientas de Microsoft, el ecosistema de Teams suele ser más amplio. Google Workspace ofrece APIs abiertas, es decir, interfaces documentadas para enlazarlo con herramientas externas."
+      a: "Sí, las dos admiten integraciones con aplicaciones de terceros. Si tu empresa ya trabaja con otras herramientas de Microsoft, el ecosistema de Teams suele ser más amplio. Las dos ofrecen APIs, es decir, interfaces documentadas para enlazarlas con herramientas externas."
 ---
 Más allá del correo y del almacenamiento, Google Workspace y Microsoft 365 se diferencian en las tareas pequeñas. Son las que repites decenas de veces al día: revisar un documento entre varios, resolver una duda por chat o montar una reunión rápida. Ahí es donde cada suite encaja mejor o peor con la forma de trabajar de tu equipo.
 
@@ -74,7 +74,7 @@ Piensa en una semana normal de tu equipo y responde con lo que pasa de verdad:
 | La comunicación interna gira alrededor de un chat por proyectos | Microsoft 365 | Teams agrupa por equipo los canales, las reuniones y los archivos |
 | El equipo trabaja repartido, desde el navegador o el móvil | Google Workspace | Todo funciona igual desde cualquier dispositivo con navegador |
 | Se parte de cero y se busca una adopción rápida | Google Workspace | Su curva de aprendizaje suele ser más suave |
-| Ya se dominan Office y Teams | Microsoft 365 | Cambiar de hábitos tiene un coste que no siempre compensa |
+| Ya se dominan Word, Excel y Teams | Microsoft 365 | Cambiar de hábitos tiene un coste que no siempre compensa |
 
 Para decidir rápido:
 

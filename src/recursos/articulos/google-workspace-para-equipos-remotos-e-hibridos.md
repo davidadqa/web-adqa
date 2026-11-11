@@ -25,7 +25,7 @@ faq:
     - q: "¿Se puede limitar el acceso según el dispositivo o la ubicación?"
       a: "Sí, en las ediciones que incluyen el acceso según el contexto. Estas políticas miran algo más que el usuario y la contraseña. Pueden exigir que el dispositivo esté gestionado. También pueden tener en cuenta la ubicación u otros factores."
     - q: "¿Cómo se cierran las sesiones de alguien que deja la empresa?"
-      a: "Desde la consola de administración. Al dar de baja la cuenta, se cierran a la vez todas sus sesiones activas. No tienes que esperar a que cada dispositivo se desconecte por sí solo."
+      a: "Desde la consola de administración. Además de suspender o eliminar la cuenta, conviene cerrar todas sus sesiones activas. Así no tienes que esperar a que cada dispositivo se desconecte por sí solo."
     - q: "¿El historial de versiones de Docs y Sheets sustituye a una copia de seguridad?"
       a: "No del todo. Sirve para recuperar una versión anterior de un documento concreto. Para el conjunto de los datos de la empresa, conviene completarlo con una política de copias de seguridad."
 ---

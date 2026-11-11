@@ -62,7 +62,7 @@ Busca en esta tabla la situación que más se parece a la tuya:
 |---|---|
 | Quieres presentarte a licitaciones públicas de servicios tecnológicos | Depende del pliego: suele pedir el ENS y fija la categoría |
 | Das servicio a sistemas públicos clasificados como ALTA | Sí, es lo habitual |
-| Un cliente privado la exige por contrato | Sí, con el alcance que fije el contrato |
+| Un cliente privado exige el ENS por contrato | Solo si el contrato pide la categoría ALTA |
 | Gestionas información especialmente sensible | Recomendable, aunque no sea obligatoria |
 | Eres una pyme sin relación con el sector público ni requisitos normativos | No es obligatoria; alinear los procesos con el ENS ayuda a ordenar la seguridad |
 

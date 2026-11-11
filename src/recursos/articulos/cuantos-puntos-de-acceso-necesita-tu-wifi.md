@@ -68,7 +68,7 @@ Solo la aprovechan los dispositivos compatibles. Tu portátil nuevo quizá la ve
 
 | Situación | Qué suele hacer falta |
 |---|---|
-| Oficina pequeña, una planta y pocos obstáculos | Habitualmente, uno o dos puntos de acceso bien ubicados |
+| Oficina pequeña, una planta y pocos obstáculos | Un estudio sencillo; habitualmente, uno o dos puntos de acceso bien ubicados |
 | Oficina de varias plantas o con muchas divisiones | Estudio de cobertura por planta |
 | Nave con maquinaria y estructura metálica | Estudio de cobertura específico: la atenuación es alta |
 | Mucha gente conectada a la vez (formación, eventos) | Cálculo de capacidad, no solo de cobertura |
@@ -80,6 +80,6 @@ Si vas a pedir un estudio, ten a mano el plano de tu planta. Y apunta cuánta ge
 
 Para decidir rápido:
 
-- **Estudio de cobertura siempre** que haya más de una planta, estructura industrial o materiales que frenan la señal.
+- **Estudio de cobertura antes de instalar**, sencillo en una oficina pequeña y más detallado si hay varias plantas, estructura industrial o materiales que frenan la señal.
 - **Revisión antes de ampliar** si ya tienes puntos de acceso y el WiFi sigue fallando. Puede ser un problema de ubicación, no de cantidad.
 - **Nada de añadir a ciegas.** Un punto de acceso de más puede aumentar las interferencias en lugar de mejorar la cobertura.

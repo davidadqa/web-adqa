@@ -25,7 +25,7 @@ faq:
     - q: "¿Qué protocolos se usan para monitorizar una red?"
       a: "Sobre todo SNMP, para leer el estado de los equipos. También se usan sondas activas que comprueban disponibilidad y latencia, y registros syslog. Para ver qué consume el ancho de banda se usa el análisis de flujos, como NetFlow o sFlow. Todo se reúne en un panel con alertas por umbral."
     - q: "¿Se puede monitorizar el WiFi con la misma herramienta que el resto de la red?"
-      a: "Sí. La controladora WiFi ya recoge el estado de los puntos de acceso, los clientes conectados y las interferencias. Esos datos se pueden integrar en el mismo panel que los switches y el firewall. Así sabes si el fallo viene de la radio o del cable que llega al punto de acceso."
+      a: "Sí. La consola central del WiFi ya recoge el estado de los puntos de acceso, los clientes conectados y las interferencias. Esos datos se pueden integrar en el mismo panel que los switches y el firewall. Así sabes si el fallo viene de la radio o del cable que llega al punto de acceso."
     - q: "¿La monitorización sustituye al mantenimiento preventivo?"
       a: "No, se complementan. La monitorización detecta síntomas en tiempo real. El mantenimiento preventivo corrige las causas de fondo antes de que generen esos síntomas. Es el caso de un firmware desactualizado o de unos equipos al final de su vida útil."
 ---

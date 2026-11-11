@@ -50,7 +50,7 @@ Antes de renovar, comprueba dónde está el cuello de botella. Puede estar en la
 
 Renovar la red no siempre significa recablear. Switches, routers y puntos de acceso se quedan cortos mucho antes que un cableado estructurado bien instalado. El cable de tus paredes puede seguir sirviendo cuando el switch del armario ya no da más. Antes de decidir rehacer el cableado, pide una [certificación de la red](/recursos/certificacion-de-redes/). Te dirá qué enlaces siguen cumpliendo y cuáles hay que corregir.
 
-La excepción son las instalaciones antiguas de Cat 5e o inferiores. ¿Prevés necesitar 10 Gb/s en los puestos o en los puntos de acceso WiFi? Ahí la [categoría del cableado](/recursos/categorias-de-cableado/) puede ser el límite.
+La excepción son las instalaciones de Cat 5e o inferiores, y las de Cat 6, que solo llegan a 10 Gb/s en tramos cortos. ¿Prevés necesitar 10 Gb/s en los puestos o en los puntos de acceso WiFi? Ahí la [categoría del cableado](/recursos/categorias-de-cableado/) puede ser el límite.
 
 ## Por qué planificar sale mejor que parchear
 

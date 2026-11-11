@@ -75,4 +75,4 @@ El día del cambio, alguien abre el portátil y no sabe con qué contraseña ent
 | Poder deshacer un paso | Plan de vuelta atrás definido antes de empezar |
 | La duración total | Fases acotadas, con un calendario conocido de antemano |
 
-Si el destino es Microsoft 365, el orden es parecido. La diferencia es que los accesos a cada carpeta compartida se revisan uno a uno. Lo explica [Migración a Microsoft 365 sin perder productividad](/recursos/migracion-a-microsoft-365-sin-perder-productividad/).
+Si el destino es Microsoft 365, el orden es parecido. Cambia sobre todo dónde va cada archivo: OneDrive, SharePoint o Teams. Y, como aquí, los permisos de las carpetas compartidas se revisan antes de dar el paso. Lo explica [Migración a Microsoft 365 sin perder productividad](/recursos/migracion-a-microsoft-365-sin-perder-productividad/).

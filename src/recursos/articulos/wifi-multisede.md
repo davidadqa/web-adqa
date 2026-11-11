@@ -23,9 +23,9 @@ faq:
       a: "Que el portátil y el móvil se conectan solos en cualquier sede, sin pedir contraseñas. Y que las incidencias se resuelven con el mismo criterio en todas las oficinas."
   tecnico:
     - q: "¿Qué arquitectura permite gestionar varias sedes desde una consola?"
-      a: "Habitualmente, una controladora WiFi en la nube o virtualizada. Centraliza la configuración y aplica políticas comunes a los puntos de acceso de todas las sedes, estén donde estén."
+      a: "Habitualmente, una consola central en la nube o virtualizada. Centraliza la configuración y aplica políticas comunes a los puntos de acceso de todas las sedes, estén donde estén."
     - q: "¿Cómo se usan las mismas credenciales si las sedes no están conectadas por una red privada?"
-      a: "Con una contraseña compartida, basta con que todas las sedes reciban la misma configuración desde la controladora. Otra opción es que cada persona entre con su propio usuario, por ejemplo con 802.1X. Entonces los puntos de acceso de cada sede tienen que llegar al servidor de autenticación. Pueden hacerlo a través de una VPN o con un servicio de autenticación en la nube. La VPN es un túnel cifrado a través de internet."
+      a: "Con una contraseña compartida, basta con que todas las sedes reciban la misma configuración desde la consola central. Otra opción es que cada persona entre con su propio usuario, por ejemplo con 802.1X. Entonces los puntos de acceso de cada sede tienen que llegar al servidor de autenticación. Pueden hacerlo a través de una VPN o con un servicio de autenticación en la nube. La VPN es un túnel cifrado a través de internet."
     - q: "¿Se puede aplicar una política distinta en una sede concreta?"
       a: "Sí. La gestión centralizada admite reglas comunes con excepciones donde hagan falta. Puede ser una red adicional para el almacén de una sede o un horario distinto para la red de invitados."
 ---
@@ -45,13 +45,13 @@ Con dos sedes se nota poco. Con cinco, cada cambio se convierte en cinco cambios
 - **Una configuración para todas las sedes.** Los cambios de política se hacen una vez y se aplican en todas.
 - **Las mismas credenciales en cualquier oficina.** Llegas a otra sede, abres el portátil y ya estás conectado, sin contraseñas nuevas.
 - **Una consola para todo.** Los puntos de acceso de todas las sedes se ven en la misma pantalla. Un equipo caído en una oficina lejana avisa igual que uno de la central. Es la base de una buena [monitorización de red](/recursos/monitorizacion-de-red/).
-- **Crecer es sumar.** Una sede nueva se añade a la [controladora centralizada](/redes/wifi-entornos-complejos/) en lugar de montarse desde cero.
+- **Crecer es sumar.** Una sede nueva se añade a la [consola central](/redes/wifi-entornos-complejos/) en lugar de montarse desde cero.
 
 Centralizar la gestión no significa que todas las sedes sean idénticas. Cada una necesita su propio [estudio de cobertura](/recursos/cuantos-puntos-de-acceso-necesita-tu-wifi/), porque los espacios y los usos cambian. Lo que comparten es lo demás: la configuración, las políticas y la consola.
 
 ## El WiFi y la conexión entre sedes
 
-Con una controladora en la nube, gestionar el WiFi de forma centralizada no exige conectar tus sedes entre sí. Cada punto de acceso habla con la controladora a través de internet. Otra cosa es lo que necesita tu equipo una vez conectado.
+Si la consola central está en la nube, gestionar el WiFi de forma centralizada no exige conectar tus sedes entre sí. Cada punto de acceso habla con la consola a través de internet. Otra cosa es lo que necesita tu equipo una vez conectado.
 
 ¿Y si desde la delegación alguien abre cada mañana una carpeta del servidor de la central? Llegar a los servidores, a la telefonía o a las aplicaciones de la central es otra pieza. Esa [interconexión de sedes](/telecomunicaciones/networking/) se diseña a la vez que el WiFi. Así cada red WiFi lleva a los mismos segmentos, con las mismas reglas en todas partes.
 

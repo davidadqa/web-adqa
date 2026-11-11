@@ -44,7 +44,7 @@ La seguridad de la plataforma depende de Microsoft. La de tu tenant (el espacio 
 
 ### Identidades, en Microsoft Entra ID
 
-- **Verificación en dos pasos para todos.** Los tenants recientes suelen tener activados los valores de seguridad predeterminados, que la exigen. En tenants más antiguos, o si se han desactivado, compruébalo. Sin ella, una contraseña filtrada basta para entrar en una cuenta.
+- **Verificación en dos pasos para todos.** Los tenants recientes suelen tener activados los valores de seguridad predeterminados, que la exigen. En tenants más antiguos, o si se han desactivado, compruébalo. Microsoft ya la exige para entrar en sus centros de administración, pero no al resto de usuarios. Sin ella, una contraseña filtrada basta para entrar en una cuenta.
 - **Acceso condicional.** Permite exigir condiciones para iniciar sesión, como un dispositivo gestionado o una ubicación conocida. Supón que alguien prueba la contraseña de tu administrativa desde otro país. Con una directiva bien puesta, no entra aunque la acierte. Está disponible en Business Premium y en los planes Enterprise. Pero las directivas hay que diseñarlas para cada empresa.
 - **Pocas cuentas de administrador.** Las cuentas con el rol de administrador global deberían ser las mínimas. Conviene, además, separarlas de las de uso diario.
 
@@ -58,7 +58,7 @@ Qué planes incluyen estas herramientas lo tienes en [Qué incluye Microsoft 365
 ### Datos y correo
 
 - **Uso compartido externo.** OneDrive, SharePoint y Teams permiten compartir con personas de fuera e invitar a usuarios externos. Decide hasta dónde y déjalo configurado para toda la organización.
-- **Protección frente a amenazas.** Microsoft 365 comprueba los enlaces del correo en el momento del clic. Microsoft Defender, incluido en Business Premium, va más allá: analiza los adjuntos y protege los equipos.
+- **Protección frente a amenazas.** Todos los planes filtran el correo malicioso. Business Premium añade Microsoft Defender: comprueba los enlaces en el momento del clic, analiza los adjuntos y protege los equipos.
 - **Autenticación del correo del dominio** (SPF, DKIM y DMARC). Son registros de tu dominio que demuestran que un correo sale de verdad de tu empresa. Así nadie puede hacerse pasar por ti con facilidad.
 - **Aplicaciones de terceros.** Revisa qué aplicaciones tienen permisos sobre las cuentas y quién puede autorizar nuevas.
 

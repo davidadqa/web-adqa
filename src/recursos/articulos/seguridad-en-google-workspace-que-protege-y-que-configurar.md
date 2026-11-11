@@ -67,7 +67,7 @@ Todos se corrigen desde la consola y apenas cambian la forma de trabajar de tu e
 
 | Aspecto | Configuración de serie | Configuración recomendada para una empresa |
 |---|---|---|
-| Verificación en dos pasos | Opcional para cada usuario | Obligatoria para toda la organización |
+| Verificación en dos pasos | Obligatoria para los administradores; opcional para el resto | Obligatoria para toda la organización |
 | Compartir documentos fuera | Permitido de forma amplia | Restringido por defecto, con excepciones definidas |
 | Dispositivos móviles | Gestión básica, sin requisitos propios de la empresa | Bloqueo, cifrado y borrado a distancia exigidos |
 | Aplicaciones conectadas | Sin revisión periódica | Revisión periódica de los accesos de terceros |

@@ -56,7 +56,7 @@ Ninguna es mejor o peor por sí misma. Léelas pensando en un martes normal en t
 | Integración con otros sistemas | APIs abiertas que se integran bien con herramientas externas. | Integración nativa con Azure, Dynamics, Power BI y Power Automate. |
 | Asistente de IA | Gemini, integrado en las aplicaciones. Qué puede hacer depende de la edición. | Copilot, integrado en las aplicaciones. Una parte viene incluida y las funciones avanzadas se contratan aparte. |
 | Seguridad y cumplimiento | Sólida para la mayoría de empresas, con controles avanzados en las ediciones superiores. | Herramientas más amplias para requisitos exigentes, con Microsoft Purview. |
-| Adopción | Curva de aprendizaje suave. El equipo suele adoptarla rápido. | Más opciones y más formación inicial para quien no conoce Office. |
+| Adopción | Curva de aprendizaje suave. El equipo suele adoptarla rápido. | Más opciones y más formación inicial para quien no conoce Word, Excel y Outlook. |
 | Licencias | Ediciones combinables en el mismo dominio a través de un partner oficial. | Planes combinables de forma estándar en el mismo tenant. |
 
 La fila de la colaboración es la que más se nota en el día a día. La tienes desarrollada en [colaboración en equipo en las dos suites](/recursos/colaboracion-en-equipo/). La de seguridad depende mucho de cómo se configure cada suite. Qué le toca a tu empresa lo explica [RGPD y ENS en Google Workspace y Microsoft 365](/recursos/seguridad-y-cumplimiento/).
@@ -79,13 +79,13 @@ Qué incluye y por qué tantas empresas pasan su correo y sus documentos a esta 
 - Ya usas **Azure, Dynamics o Power BI**, o gestionas los equipos con Intune.
 - Quieres que **Teams** sea el centro de la comunicación interna.
 - Tu sector tiene requisitos de **cumplimiento normativo** exigentes.
-- El equipo está muy hecho al **entorno Office** y no quieres cambiarlo.
+- El equipo está muy hecho a **Word, Excel y Outlook** y no quieres cambiarlo.
 
 Qué trae cada plan y cuál conviene a cada perfil lo repasa [qué incluye Microsoft 365 para empresas](/recursos/que-incluye-microsoft-365-para-empresas/).
 
 ## Si te encajan las dos
 
-Pasa más de lo que parece. Finanzas trabaja con sus informes en Power BI y el equipo comercial vive en el navegador. Las dos suites pueden convivir en la misma empresa, con unos usuarios en cada una. Es posible, pero supone dos consolas, dos políticas de seguridad y dos facturas. En general recomendamos unificar.
+Pasa más de lo que parece. Finanzas trabaja con sus informes en Power BI y el equipo comercial vive en el navegador. Las dos suites pueden convivir en la misma empresa, con unos usuarios en cada una. Es posible, pero supone dos consolas, dos políticas de seguridad y dos facturas. En general, conviene unificar.
 
 Si ya tienes una suite y te planteas cambiar, el análisis es otro. Antes de migrar conviene saber si el problema es la plataforma o cómo está configurada. Lo explica [cuándo tiene sentido cambiar de suite](/recursos/cuando-tiene-sentido-cambiar-de-microsoft-365-a-google-workspace-o-al-reves/).
 
